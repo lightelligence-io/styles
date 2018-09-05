@@ -1,0 +1,63 @@
+// Colors
+$primary-01: #FF6600;
+$primary-02: #000;
+$primary-03: #58585A;
+$primary-04: #A7A8AA;
+$primary-05: #D0D1D3;
+$primary-06: #E3E4E5;
+$primary-07: #F5F6F8;
+$primary-08: #FFFFFF;
+$primary-09: #0D122C;
+$secondary-01: #46B4CD;
+$secondary-02: #0F465A;
+$secondary-03: #88F67F;
+$secondary-04: #F0F082;
+$alert: #FD5952;
+$success: #02BF1B;
+
+// Color, Text-Color, Hover-Background-Color
+$colors: (
+    'primary-01': ($primary-01, #FFF),
+    'primary-02': ($primary-02, #FFF),
+    'primary-03': ($primary-03, #FFF),
+    'primary-04': ($primary-04, #000),
+    'primary-05': ($primary-05, #000),
+    'primary-06': ($primary-06, #000),
+    'primary-07': ($primary-07, #000),
+    'primary-08': ($primary-08, #000),
+    'primary-09': ($primary-09, #FFF),
+    'secondary-01': ($secondary-01, #000),
+    'secondary-02': ($secondary-02, #FFF),
+    'secondary-03': ($secondary-03, #000),
+    'secondary-04': ($secondary-04, #000),
+    'alert': ($alert, #000),
+    'success': ($success, #000),
+);
+
+// Spacings
+$spacing-desktop-xxs: 4px;
+$spacing-desktop-xs: 8px;
+$spacing-desktop-s: 16px;
+$spacing-desktop-m: 24px;
+$spacing-desktop-l: 32px;
+$spacing-desktop-xl: 48px;
+$spacing-desktop-xxl: 72px;
+$spacing-desktop-xxxl: 160px;
+
+$spacing-tablet-xxs: 4px;
+$spacing-tablet-xs: 8px;
+$spacing-tablet-s: 16px;
+$spacing-tablet-m: 24px;
+$spacing-tablet-l: 32px;
+$spacing-tablet-xl: 48px;
+$spacing-tablet-xxl: 72px;
+$spacing-tablet-xxxl: 120px;
+
+$spacing-mobile-xxs: 4px;
+$spacing-mobile-xs: 8px;
+$spacing-mobile-s: 16px;
+$spacing-mobile-m: 16px;
+$spacing-mobile-l: 24px;
+$spacing-mobile-xl: 32px;
+$spacing-mobile-xxl: 40px;
+$spacing-mobile-xxxl: 48px;

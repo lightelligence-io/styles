@@ -1,0 +1,11 @@
+@mixin responsive-spacing ($spacing-type, $spacing-desktop, $spacing-tablet, $spacing-mobile) {
+    @include screen('mobile') {
+        #{$spacing-type}: $spacing-mobile;
+    }
+    @include screen('tablet') {
+        #{$spacing-type}: $spacing-tablet;
+    }
+    @include screen('desktop') {
+        #{$spacing-type}: $spacing-desktop;
+    }
+}
