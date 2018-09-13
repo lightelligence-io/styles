@@ -1,2 +1,0 @@
-import './ready';
-import './onDomChange';
