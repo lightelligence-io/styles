@@ -1,0 +1,34 @@
+.olt-tag {
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
+    padding: {
+        left: 8px;
+        right: 8px;
+    }
+    font-family: 'Overpass Mono', monospace;
+    text-transform: uppercase;
+    background: $primary-01;
+    color: #FFF;
+
+    @include foreach-color('background', 'olt-tag-');
+    @include foreach-color('border-color', 'olt-tag--bordered'){
+        background: transparent;
+        border: solid 1px;
+        height: 24px;
+        line-height: 24px;
+    };
+
+    &.olt-tag--has-trailing-icon {
+        cursor: pointer;
+        transition: all 300ms;
+        .olt-tag--icon {
+            margin-left: 8px;
+        }
+
+        &:hover {
+            opacity: .87;
+        }
+    }
+}

@@ -1,0 +1,143 @@
+.body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif !important;
+}
+
+.doc-tabs {
+    margin-top: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.16);
+}
+.tab-items {
+    width: 100%;
+}
+.tab-items .item {
+    display: inline-block;
+    min-width: 88px;
+    padding: 8px 16px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+.tab-items .item.is-active {
+    background: #E3E4E5;
+    color: #000;
+}
+.doc-tabs .tab {
+    margin-top: 16px;
+    min-height: 128px;
+}
+
+
+/* General Theming */
+a:not(.sidebar-link):not(.nav-link) {
+    color: #FF6600 !important;
+}
+
+a.sidebar-link:hover {
+    color: #FF6600 !important;
+}
+
+a.sidebar-link.active {
+    color: #FF6600 !important;
+    border-left-color: #FF6600 !important;
+}
+
+.search-box input{
+    border-radius: 4px;
+    border-width: 2px;
+    border-color: #fff;
+}
+
+.search-box input:focus {
+    border-width: 2px;
+    border-color: #FF6600 !important;
+    width: 15rem;
+}
+
+.search-box .suggestion {
+    line-height: 1.4;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.search-box .suggestion a {
+    white-space: normal;
+    color: #5d82a6;
+}
+.search-box .suggestion a .page-title {
+    font-weight: 600;
+}
+.search-box .suggestion a .header {
+    font-size: 0.9em;
+    margin-left: 0.25em;
+}
+.search-box .suggestion.focused {
+    background-color: #f3f4f5 !important;
+}
+.search-box .suggestion.focused a {
+    color: #ff6600 !important;
+}
+
+.sidebar-open .sidebar-button .icon {
+    color: #FF6600 !important;
+}
+
+.sidebar-button {
+    cursor: pointer;
+}
+
+.sidebar-button .icon {
+    color: #fff !important;
+}
+
+.navbar {
+    background: #000 !important;
+}
+
+.navbar .site-name {
+    color: #FFF !important;
+}
+
+.navbar .links {
+    background-color: transparent !important;
+}
+
+.nav-links a:hover {
+    color: #FF6600 !important;
+}
+
+.navbar .nav-item {
+    color: #fff !important;
+}
+
+.navbar .nav-item a:hover {
+    color: #FF6600 !important;
+}
+
+.content pre, .content pre[class*="language-"] {
+    white-space: pre;
+    word-break: keep-all;
+}
+
+.rectangle {
+    border-radius: 4px;
+    min-height: 120px;
+    width: 100%;
+    line-height: 120px;
+    text-align: center;
+    margin-bottom: 16px;
+    border: solid 2px #CFCFCF;
+}
+
+.rectangle.is-grey {
+    background: #CFCFCF;
+}

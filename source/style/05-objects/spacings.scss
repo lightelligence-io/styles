@@ -1,0 +1,265 @@
+.olt-spacing {
+    &--xxs {
+        @include responsive-spacing('margin', $spacing-desktop-xxs, $spacing-tablet-xxs, $spacing-mobile-xxs);
+        &-top {
+            @include responsive-spacing('margin-top', $spacing-desktop-xxs, $spacing-tablet-xxs, $spacing-mobile-xxs);
+        }
+        &-bottom {
+            @include responsive-spacing('margin-bottom', $spacing-desktop-xxs, $spacing-tablet-xxs, $spacing-mobile-xxs);
+        }
+        &-left {
+            @include responsive-spacing('margin-left', $spacing-desktop-xxs, $spacing-tablet-xxs, $spacing-mobile-xxs);
+        }
+        &-right {
+            @include responsive-spacing('margin-right', $spacing-desktop-xxs, $spacing-tablet-xxs, $spacing-mobile-xxs);
+        }
+        &__as-padding {
+            margin: 0;
+            @include responsive-spacing('padding', $spacing-desktop-xxs, $spacing-tablet-xxs, $spacing-mobile-xxs);
+
+            &-top {
+                @include responsive-spacing('padding-top', $spacing-desktop-xxs, $spacing-tablet-xxs, $spacing-mobile-xxs);
+            }
+            &-bottom {
+                @include responsive-spacing('padding-bottom', $spacing-desktop-xxs, $spacing-tablet-xxs, $spacing-mobile-xxs);
+            }
+            &-left {
+                @include responsive-spacing('padding-left', $spacing-desktop-xxs, $spacing-tablet-xxs, $spacing-mobile-xxs);
+            }
+            &-right {
+                @include responsive-spacing('padding-right', $spacing-desktop-xxs, $spacing-tablet-xxs, $spacing-mobile-xxs);
+            }
+        }
+    }
+    
+    &--xs {
+        @include responsive-spacing('margin', $spacing-desktop-xs, $spacing-tablet-xs, $spacing-mobile-xs);
+        &-top {
+            @include responsive-spacing('margin-top', $spacing-desktop-xs, $spacing-tablet-xs, $spacing-mobile-xs);
+        }
+        &-bottom {
+            @include responsive-spacing('margin-bottom', $spacing-desktop-xs, $spacing-tablet-xs, $spacing-mobile-xs);
+        }
+        &-left {
+            @include responsive-spacing('margin-left', $spacing-desktop-xs, $spacing-tablet-xs, $spacing-mobile-xs);
+        }
+        &-right {
+            @include responsive-spacing('margin-right', $spacing-desktop-xs, $spacing-tablet-xs, $spacing-mobile-xs);
+        }
+        &__as-padding {
+            margin: 0;
+            @include responsive-spacing('padding', $spacing-desktop-xs, $spacing-tablet-xs, $spacing-mobile-xs);
+
+            &-top {
+                @include responsive-spacing('padding-top', $spacing-desktop-xs, $spacing-tablet-xs, $spacing-mobile-xs);
+            }
+            &-bottom {
+                @include responsive-spacing('padding-bottom', $spacing-desktop-xs, $spacing-tablet-xs, $spacing-mobile-xs);
+            }
+            &-left {
+                @include responsive-spacing('padding-left', $spacing-desktop-xs, $spacing-tablet-xs, $spacing-mobile-xs);
+            }
+            &-right {
+                @include responsive-spacing('padding-right', $spacing-desktop-xs, $spacing-tablet-xs, $spacing-mobile-xs);
+            }
+        }
+    }
+
+    &--s {
+        @include responsive-spacing('margin', $spacing-desktop-s, $spacing-tablet-s, $spacing-mobile-s);
+        &-top {
+            @include responsive-spacing('margin-top', $spacing-desktop-s, $spacing-tablet-s, $spacing-mobile-s);
+        }
+        &-bottom {
+            @include responsive-spacing('margin-bottom', $spacing-desktop-s, $spacing-tablet-s, $spacing-mobile-s);
+        }
+        &-left {
+            @include responsive-spacing('margin-left', $spacing-desktop-s, $spacing-tablet-s, $spacing-mobile-s);
+        }
+        &-right {
+            @include responsive-spacing('margin-right', $spacing-desktop-s, $spacing-tablet-s, $spacing-mobile-s);
+        }
+        &__as-padding {
+            margin: 0;
+            @include responsive-spacing('padding', $spacing-desktop-s, $spacing-tablet-s, $spacing-mobile-s);
+
+            &-top {
+                @include responsive-spacing('padding-top', $spacing-desktop-s, $spacing-tablet-s, $spacing-mobile-s);
+            }
+            &-bottom {
+                @include responsive-spacing('padding-bottom', $spacing-desktop-s, $spacing-tablet-s, $spacing-mobile-s);
+            }
+            &-left {
+                @include responsive-spacing('padding-left', $spacing-desktop-s, $spacing-tablet-s, $spacing-mobile-s);
+            }
+            &-right {
+                @include responsive-spacing('padding-right', $spacing-desktop-s, $spacing-tablet-s, $spacing-mobile-s);
+            }
+        }
+    }
+
+    &--m {
+        @include responsive-spacing('margin', $spacing-desktop-m, $spacing-tablet-m, $spacing-mobile-m);
+        &-top {
+            @include responsive-spacing('margin-top', $spacing-desktop-m, $spacing-tablet-m, $spacing-mobile-m);
+        }
+        &-bottom {
+            @include responsive-spacing('margin-bottom', $spacing-desktop-m, $spacing-tablet-m, $spacing-mobile-m);
+        }
+        &-left {
+            @include responsive-spacing('margin-left', $spacing-desktop-m, $spacing-tablet-m, $spacing-mobile-m);
+        }
+        &-right {
+            @include responsive-spacing('margin-right', $spacing-desktop-m, $spacing-tablet-m, $spacing-mobile-m);
+        }
+        &__as-padding {
+            margin: 0;
+            @include responsive-spacing('padding', $spacing-desktop-m, $spacing-tablet-m, $spacing-mobile-m);
+
+            &-top {
+                @include responsive-spacing('padding-top', $spacing-desktop-m, $spacing-tablet-m, $spacing-mobile-m);
+            }
+            &-bottom {
+                @include responsive-spacing('padding-bottom', $spacing-desktop-m, $spacing-tablet-m, $spacing-mobile-m);
+            }
+            &-left {
+                @include responsive-spacing('padding-left', $spacing-desktop-m, $spacing-tablet-m, $spacing-mobile-m);
+            }
+            &-right {
+                @include responsive-spacing('padding-right', $spacing-desktop-m, $spacing-tablet-m, $spacing-mobile-m);
+            }
+        }
+    }
+
+    &--l {
+        @include responsive-spacing('margin', $spacing-desktop-l, $spacing-tablet-l, $spacing-mobile-l);
+        &-top {
+            @include responsive-spacing('margin-top', $spacing-desktop-l, $spacing-tablet-l, $spacing-mobile-l);
+        }
+        &-bottom {
+            @include responsive-spacing('margin-bottom', $spacing-desktop-l, $spacing-tablet-l, $spacing-mobile-l);
+        }
+        &-left {
+            @include responsive-spacing('margin-left', $spacing-desktop-l, $spacing-tablet-l, $spacing-mobile-l);
+        }
+        &-right {
+            @include responsive-spacing('margin-right', $spacing-desktop-l, $spacing-tablet-l, $spacing-mobile-l);
+        }
+        &__as-padding {
+            margin: 0;
+            @include responsive-spacing('padding', $spacing-desktop-l, $spacing-tablet-l, $spacing-mobile-l);
+
+            &-top {
+                @include responsive-spacing('padding-top', $spacing-desktop-l, $spacing-tablet-l, $spacing-mobile-l);
+            }
+            &-bottom {
+                @include responsive-spacing('padding-bottom', $spacing-desktop-l, $spacing-tablet-l, $spacing-mobile-l);
+            }
+            &-left {
+                @include responsive-spacing('padding-left', $spacing-desktop-l, $spacing-tablet-l, $spacing-mobile-l);
+            }
+            &-right {
+                @include responsive-spacing('padding-right', $spacing-desktop-l, $spacing-tablet-l, $spacing-mobile-l);
+            }
+        }
+    }
+
+    &--xl {
+        @include responsive-spacing('margin', $spacing-desktop-xl, $spacing-tablet-xl, $spacing-mobile-xl);
+        &-top {
+            @include responsive-spacing('margin-top', $spacing-desktop-xl, $spacing-tablet-xl, $spacing-mobile-xl);
+        }
+        &-bottom {
+            @include responsive-spacing('margin-bottom', $spacing-desktop-xl, $spacing-tablet-xl, $spacing-mobile-xl);
+        }
+        &-left {
+            @include responsive-spacing('margin-left', $spacing-desktop-xl, $spacing-tablet-xl, $spacing-mobile-xl);
+        }
+        &-right {
+            @include responsive-spacing('margin-right', $spacing-desktop-xl, $spacing-tablet-xl, $spacing-mobile-xl);
+        }
+        &__as-padding {
+            margin: 0;
+            @include responsive-spacing('padding', $spacing-desktop-xl, $spacing-tablet-xl, $spacing-mobile-xl);
+
+            &-top {
+                @include responsive-spacing('padding-top', $spacing-desktop-xl, $spacing-tablet-xl, $spacing-mobile-xl);
+            }
+            &-bottom {
+                @include responsive-spacing('padding-bottom', $spacing-desktop-xl, $spacing-tablet-xl, $spacing-mobile-xl);
+            }
+            &-left {
+                @include responsive-spacing('padding-left', $spacing-desktop-xl, $spacing-tablet-xl, $spacing-mobile-xl);
+            }
+            &-right {
+                @include responsive-spacing('padding-right', $spacing-desktop-xl, $spacing-tablet-xl, $spacing-mobile-xl);
+            }
+        }
+    }
+
+    &--xxl {
+        @include responsive-spacing('margin', $spacing-desktop-xxl, $spacing-tablet-xxl, $spacing-mobile-xxl);
+        &-top {
+            @include responsive-spacing('margin-top', $spacing-desktop-xxl, $spacing-tablet-xxl, $spacing-mobile-xxl);
+        }
+        &-bottom {
+            @include responsive-spacing('margin-bottom', $spacing-desktop-xxl, $spacing-tablet-xxl, $spacing-mobile-xxl);
+        }
+        &-left {
+            @include responsive-spacing('margin-left', $spacing-desktop-xxl, $spacing-tablet-xxl, $spacing-mobile-xxl);
+        }
+        &-right {
+            @include responsive-spacing('margin-right', $spacing-desktop-xxl, $spacing-tablet-xxl, $spacing-mobile-xxl);
+        }
+        &__as-padding {
+            margin: 0;
+            @include responsive-spacing('padding', $spacing-desktop-xxl, $spacing-tablet-xxl, $spacing-mobile-xxl);
+
+            &-top {
+                @include responsive-spacing('padding-top', $spacing-desktop-xxl, $spacing-tablet-xxl, $spacing-mobile-xxl);
+            }
+            &-bottom {
+                @include responsive-spacing('padding-bottom', $spacing-desktop-xxl, $spacing-tablet-xxl, $spacing-mobile-xxl);
+            }
+            &-left {
+                @include responsive-spacing('padding-left', $spacing-desktop-xxl, $spacing-tablet-xxl, $spacing-mobile-xxl);
+            }
+            &-right {
+                @include responsive-spacing('padding-right', $spacing-desktop-xxl, $spacing-tablet-xxl, $spacing-mobile-xxl);
+            }
+        }
+    }
+
+    &--xxxl {
+        @include responsive-spacing('margin', $spacing-desktop-xxxl, $spacing-tablet-xxxl, $spacing-mobile-xxxl);
+        &-top {
+            @include responsive-spacing('margin-top', $spacing-desktop-xxxl, $spacing-tablet-xxxl, $spacing-mobile-xxxl);
+        }
+        &-bottom {
+            @include responsive-spacing('margin-bottom', $spacing-desktop-xxxl, $spacing-tablet-xxxl, $spacing-mobile-xxxl);
+        }
+        &-left {
+            @include responsive-spacing('margin-left', $spacing-desktop-xxxl, $spacing-tablet-xxxl, $spacing-mobile-xxxl);
+        }
+        &-right {
+            @include responsive-spacing('margin-right', $spacing-desktop-xxxl, $spacing-tablet-xxxl, $spacing-mobile-xxxl);
+        }
+        &__as-padding {
+            margin: 0;
+            @include responsive-spacing('padding', $spacing-desktop-xxxl, $spacing-tablet-xxxl, $spacing-mobile-xxxl);
+
+            &-top {
+                @include responsive-spacing('padding-top', $spacing-desktop-xxxl, $spacing-tablet-xxxl, $spacing-mobile-xxxl);
+            }
+            &-bottom {
+                @include responsive-spacing('padding-bottom', $spacing-desktop-xxxl, $spacing-tablet-xxxl, $spacing-mobile-xxxl);
+            }
+            &-left {
+                @include responsive-spacing('padding-left', $spacing-desktop-xxxl, $spacing-tablet-xxxl, $spacing-mobile-xxxl);
+            }
+            &-right {
+                @include responsive-spacing('padding-right', $spacing-desktop-xxxl, $spacing-tablet-xxxl, $spacing-mobile-xxxl);
+            }
+        }
+    }
+}

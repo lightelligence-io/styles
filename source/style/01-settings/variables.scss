@@ -1,0 +1,68 @@
+// Colors
+$primary-01: #FF6600;
+$primary-02: #000;
+$primary-03: #58585A;
+$primary-04: #A7A8AA;
+$primary-05: #D0D1D3;
+$primary-06: #E3E4E5;
+$primary-07: #F5F6F8;
+$primary-08: #FFFFFF;
+$primary-09: #0D122C;
+$secondary-01: #46B4CD;
+$secondary-02: #0F465A;
+$secondary-03: #88F67F;
+$secondary-04: #F0F082;
+$alert: #FD5952;
+$notify: #F20C02;
+$success: #02BF1B;
+
+// Color, Text-Color, Hover-Background-Color
+$colors: (
+    'primary-01': ($primary-01, #FFF),
+    'primary-02': ($primary-02, #FFF),
+    'primary-03': ($primary-03, #FFF),
+    'primary-04': ($primary-04, #000),
+    'primary-05': ($primary-05, #000),
+    'primary-06': ($primary-06, #000),
+    'primary-07': ($primary-07, #000),
+    'primary-08': ($primary-08, #000),
+    'primary-09': ($primary-09, #FFF),
+    'secondary-01': ($secondary-01, #000),
+    'secondary-02': ($secondary-02, #FFF),
+    'secondary-03': ($secondary-03, #000),
+    'secondary-04': ($secondary-04, #000),
+    'alert': ($alert, #000),
+    'notify': ($notify, #FFF),
+    'success': ($success, #000),
+);
+
+// Spacings
+$spacing-desktop-xxs: 4px;
+$spacing-desktop-xs: 8px;
+$spacing-desktop-s: 16px;
+$spacing-desktop-m: 24px;
+$spacing-desktop-l: 32px;
+$spacing-desktop-xl: 48px;
+$spacing-desktop-xxl: 72px;
+$spacing-desktop-xxxl: 160px;
+
+$spacing-tablet-xxs: 4px;
+$spacing-tablet-xs: 8px;
+$spacing-tablet-s: 16px;
+$spacing-tablet-m: 24px;
+$spacing-tablet-l: 32px;
+$spacing-tablet-xl: 48px;
+$spacing-tablet-xxl: 72px;
+$spacing-tablet-xxxl: 120px;
+
+$spacing-mobile-xxs: 4px;
+$spacing-mobile-xs: 8px;
+$spacing-mobile-s: 16px;
+$spacing-mobile-m: 16px;
+$spacing-mobile-l: 24px;
+$spacing-mobile-xl: 32px;
+$spacing-mobile-xxl: 40px;
+$spacing-mobile-xxxl: 48px;
+
+// Icons
+$info-icon: "data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='UTF-8'?%3e%3csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3eicon%3c/title%3e%3cdefs%3e%3cpath d='M12.951068,6.52 L11.32,6.52 L11.32,13.743301 L12.951068,13.743301 L12.951068,6.52 L12.951068,6.52 Z M12,0 C5.4,0 0,5.4 0,12 C0,18.6 5.4,24 12,24 C18.6,24 24,18.6 24,12 C24,5.4 18.6,0 12,0 L12,0 Z M12,22.5242718 C6.21165049,22.5242718 1.47572816,17.7883495 1.47572816,12 C1.47572816,6.21165049 6.21165049,1.47572816 12,1.47572816 C17.7883495,1.47572816 22.5242718,6.21165049 22.5242718,12 C22.5242718,17.7883495 17.7883495,22.5242718 12,22.5242718 L12,22.5242718 Z M12.951068,16 L11.32,16 L11.32,17.631068 L12.951068,17.631068 L12.951068,16 L12.951068,16 Z' id='path-1'%3e%3c/path%3e%3c/defs%3e%3cg id='🆘-Errors-&amp;-Warnings' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg id='error-conceptual_overview' transform='translate(-833.000000, -1553.000000)'%3e%3cg id='module/toastbar/error/l' transform='translate(793.000000, 1533.000000)'%3e%3cg id='attention' transform='translate(40.000000, 20.000000)'%3e%3cmask id='mask-2' fill='white'%3e%3cuse xlink:href='%23path-1'%3e%3c/use%3e%3c/mask%3e%3cuse id='Mask' fill='%23000000' fill-rule='evenodd' xlink:href='%23path-1'%3e%3c/use%3e%3cg id='colors/primary/08' mask='url(%23mask-2)' fill='%23FFFFFF' fill-rule='evenodd'%3e%3crect id='Rectangle-7-Copy' x='0' y='0' width='24' height='24'%3e%3c/rect%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e";

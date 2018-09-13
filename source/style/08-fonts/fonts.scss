@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'PT Sans';
+    src: url('./08-fonts/PTSans-BoldItalic.woff2') format('woff2'),
+        url('./08-fonts/PTSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('./08-fonts/PTSans-Regular.woff2') format('woff2'),
+        url('./08-fonts/PTSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('./08-fonts/PTSans-Bold.woff2') format('woff2'),
+        url('./08-fonts/PTSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Overpass Mono';
+    src: url('./08-fonts/OverpassMono-Light.woff2') format('woff2'),
+        url('./08-fonts/OverpassMono-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Overpass Mono';
+    src: url('./08-fonts/OverpassMono-Bold.woff2') format('woff2'),
+        url('./08-fonts/OverpassMono-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Overpass Mono';
+    src: url('./08-fonts/OverpassMono-Regular.woff2') format('woff2'),
+        url('./08-fonts/OverpassMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Overpass Mono';
+    src: url('./08-fonts/OverpassMono-SemiBold.woff2') format('woff2'),
+        url('./08-fonts/OverpassMono-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
