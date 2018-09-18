@@ -1,7 +1,10 @@
 # LIGHTELLIGENCE UI Styleguide
 
+[User Documentation](https://lightelligence-styleguide.azurewebsites.net/)
+
 ## Folder structure
-````
+
+```
 |- build // destination for compiled js and css files
 |- build-styleguide // destination for static documentation sites in html
 |- source
@@ -21,21 +24,27 @@
   |- .vuepress // vuepress config files
   |- development // markdown documentation files for ui-framework
   |- design // markdown documentation files for design-guide
-````
+```
 
 ## Getting Started
+
 ### Installation
-````
+
+```
 // Install npm packages
 $ npm install
-````
+```
+
 ### Local Serving
-````
-$ npm run dev 
+
+```
+$ npm run dev
 // serves compiled css and js at localhost:8080 with hot-reload and serves styleguide @localhost:8081
-````
+```
+
 ### Build for usage
-````
-$ npm run build 
+
+```
+$ npm run build
 // build compiled css and js and save in build-folder && build styleguide and save in build-styleguide
-````
+```
