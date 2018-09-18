@@ -4,7 +4,7 @@ Monetize, e-tailers virtual, seize e-commerce compelling sexy cutting-edge visio
 
 ### Via CDN
 ::: warning
-Lightelligence UI didn't need external libraries like jQuery.
+Lightelligence UI don't need external libraries like jQuery.
 :::
 ```html
 <!-- Style -->

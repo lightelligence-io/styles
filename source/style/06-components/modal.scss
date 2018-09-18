@@ -12,6 +12,14 @@
     opacity: 0;
     width: 150px;
     transition: z-index 0ms ease 350ms, opacity 300ms ease 100ms, width 200ms ease 200ms, transform 500ms ease-in-out 0ms;
+    min-width: 320px;
+    text-align: center;
+    min-height: 224px;
+    
+    @include screen('mobile') {
+        width: 95%;
+        max-width: 320px;
+    }
 
     &--notification {
         max-width: 95%;
@@ -60,7 +68,43 @@
             }
         }
     }
+    &--fullscreen {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        transform: translateY(10%);
+        border-radius: 0;
+        padding: 0;
+        text-align: left;
 
+        .olt-modal--header {
+            min-height: 25vh;
+            padding: 36px;
+        }
+
+        .olt-modal--content {
+            min-height: 75vh;
+            background: $primary-07;
+            padding: 36px;
+        }
+
+        .olt-modal--close-button {
+            position: absolute;
+            top: 36px;
+            right: 36px;
+            background: $primary-07;
+            border:0;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            line-height: 40px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    }
+    
     &--backdrop {
         position: fixed;
         top: 0;
@@ -78,6 +122,7 @@
     }
 
     &--actions {
+        margin-top: 40px;
         display: none;
     }
 
@@ -91,6 +136,15 @@
             &--notification {
                 width: 440px;
                 //transition: width 200ms ease 0ms;
+            }
+
+            &--fullscreen {
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                transform: unset;
             }
         }
 

@@ -1,0 +1,25 @@
+.olt-tabs {
+    display: block;
+    width: 100%;
+    border-bottom: solid 1px $primary-04;
+    margin-bottom: $spacing-mobile-s;
+
+    .olt-tabs--item {
+        background: transparent;
+        border: 0;
+        border-bottom: solid 1px transparent;
+        margin-bottom: -1px;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 20px;
+        min-width: 64px;
+        color: $primary-04;
+        padding: 4px 0;
+        transition: all 150ms;
+
+        &__is-active {
+            color: $primary-01;
+            border-bottom: solid 2px $primary-01;
+        }
+    }
+}

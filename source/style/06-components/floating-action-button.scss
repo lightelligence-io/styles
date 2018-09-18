@@ -13,6 +13,10 @@
 
     &--paginator {
         background: $primary-08;
+        color: $primary-02;
+        vertical-align: middle;
+        line-height: 16px;
+        text-align: center;
     }
 
     .add-icon {
