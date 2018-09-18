@@ -1,0 +1,134 @@
+.olt-card {
+    padding: $spacing-desktop-s $spacing-desktop-m;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.12), 0 1px 2px 0 rgba(0,0,0,0.24);
+    margin-bottom: $spacing-desktop-s;
+    border-radius: 4px;
+    min-height: 120px;
+    position: relative;
+    cursor: pointer;
+    transition: box-shadow 150ms;
+    background: $primary-08;
+
+    &--header {
+        .olt-card--headline {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 28px;
+            display: block;
+        }
+        .olt-card--subtitle {
+            font-size: 12px;
+            line-height: 20px;
+            display: block;
+            color: $primary-03;
+        }
+    }
+
+    &--menu {
+        position: absolute;
+        top: 24px;
+        right: 16px;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            background: url($menu-icon) no-repeat;
+            background-size: contain;
+            width: 8px;
+            height: 16px;
+            display: block;
+        }
+    }
+
+    &--actions {
+        .arrow-icon {
+            &::before {
+                content: '';
+                background: url($chevron-right-icon) no-repeat;
+                background-size: contain;
+                width: 10px;
+                height: 16px;
+                display: block;
+            }
+        }
+    }
+
+    &--small {
+        min-height: 64px;
+        height: 64px;
+        padding-right: 48px;
+
+        .olt-card--header {
+            .olt-card--headline {
+                font-size: 24px;
+                line-height: 32px;
+                font-weight: normal;
+            }
+            .olt-card--subtitle {
+                display: none;
+            }
+        }
+
+        .olt-card--menu {
+            display: none;
+        }
+
+        .olt-card--actions {
+            position: absolute;
+            top: 24px;
+            right: 16px;
+        }
+    }
+
+    &--header__bottom {
+        padding-top: 72px;
+        padding-right: 48px;
+        .olt-card--header {
+            .olt-card--headline {
+                font-size: 24px;
+                line-height: 32px;
+                font-weight: normal;
+            }
+            .olt-card--subtitle {
+                display: none;
+            }
+        }
+
+        .olt-card--menu {
+            display: none;
+        }
+
+        .olt-card--actions {
+            position: absolute;
+            top: 80px;
+            right: 16px;
+        }
+    }
+
+    &--primary-01 {
+        background: $primary-01;
+        color: $primary-08;
+
+        .olt-card--header {
+            .olt-card--subtitle {
+                color: $primary-06;
+            }
+        }
+
+        .olt-card--actions {
+            .arrow-icon {
+                &::before {
+                    background: url($chevron-right-icon-white) no-repeat;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 14px 28px 0 rgba(0,0,0,0.25), 0 10px 10px 0 rgba(0,0,0,0.22);
+    }
+
+    &:active {
+        box-shadow: 0 3px 6px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.24);
+    }
+}

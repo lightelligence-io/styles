@@ -21,7 +21,7 @@
 
     .olt-textfield--input {
         border: 0;
-        border-bottom: solid 1.5px $primary-04;
+        border-bottom: solid .075rem $primary-04;
         padding: 8px 0;
         transition: all 150ms;
         min-width: 100%;
@@ -81,7 +81,7 @@
         }
 
         &:not(.has-floating-label) {
-            border-bottom: solid 1.5px $primary-04;
+            border-bottom: solid .075rem $primary-04;
             & ~ .olt-textfield--input__label {
                 display: block;
                 font-size: 16px;
@@ -97,6 +97,7 @@
 
         &:focus {
             border-bottom-color: $primary-01;
+            caret-color: $primary-01;
 
             & ~ .olt-textfield--input__label {
                 color: $primary-01;
@@ -115,7 +116,7 @@
         }
 
         &:disabled {
-            border-bottom: 1.5px dashed $primary-05;
+            border-bottom: .075rem dotted $primary-05;
 
             & ~ .olt-textfield--input__label {
                 color: $primary-05;

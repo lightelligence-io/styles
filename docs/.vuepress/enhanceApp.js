@@ -1,13 +1,15 @@
-import upperFirst from 'lodash/upperFirst'
+  import upperFirst from 'lodash/upperFirst'
   import camelCase from 'lodash/camelCase'
+  import LightelligenceUi from '../../source/';
+  
   export default ({
     Vue, // the version of Vue being used in the VuePress app
     options, // the options for the root Vue instance
     router, // the router instance for the app
-    siteData // site metadata
+    siteData, // site metadata
+    LightelligenceUi
   }) => {
     // ...apply enhancements to the app
-
     const requireComponent = require.context(
       // The relative path of the components folder
       '../_components',

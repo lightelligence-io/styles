@@ -17,9 +17,9 @@
   "author": "Phil Schaffarzyk",
   "main": "index.js",
   "scripts": {
-    "prebuild": "rm -rf build",
-    "build": "webpack -p && NODE_ENV=production vuepress build docs && gulp images --compress",
-    "dev": "concurrently --kill-others \"webpack-dev-server --mode=development\" \"NODE_ENV=development vuepress dev docs --port=8081\""
+    "prebuild": "rm -rf dist",
+    "build": "webpack -p && NODE_ENV=production vuepress build docs",
+    "dev": "NODE_ENV=development vuepress dev docs --port=8081"
   },
   "devDependencies": {
     "autoprefixer": "^8.5.0",

@@ -27,7 +27,7 @@
         <option value="EtVersus">Et versus</option>
     </select>
     <label class="olt-select--label">Select</label>
-</div>    
+</div>
 ````
 
 ## Textfields
@@ -36,6 +36,12 @@
 You have to set a placeholder. Otherwise floating label is buggy.<br>
 We recommend empty placeholder!
 :::
+
+First you have to initialize the textfields javascript component.
+````javascript
+import LightelligenceUi from 'lightelligence-ui';
+new LightelligenceUi.Textfield();
+````
 
 ### Input
 <div class="olt-textfield--wrapper is-fullwidth">
@@ -71,6 +77,8 @@ We recommend empty placeholder!
     <label class="olt-textfield--input__label" for="input-with-icon">Input with Icon</label>
     <span class="olt-textfield--input__icon">•</span>
 </div>
+
+<textfields-helper></textfields-helper>
 
 ````html
 <div class="olt-textfield--wrapper">

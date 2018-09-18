@@ -1,6 +1,8 @@
-// HELPERS
-import './helpers/_index';
-
 // COMPONENTS
-import Textfield from './components/textfields';
-import './components/snackbar';
+import { OltComponent } from './olt-base/index';
+import { OltTextfield } from './olt-textfield/index';
+
+export {
+    OltComponent,
+    OltTextfield,
+};

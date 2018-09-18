@@ -28,15 +28,14 @@ module.exports = {
           [ '/development/form-controls', 'Form Controls' ],
           [ '/development/selection-controls', 'Selection Controls' ],
           [ '/development/tags', 'Tags' ],
-          [ '/development/notifications', 'Notifications' ],
+          [ '/development/notifications', 'Error Notifications' ],
+          [ '/development/cards', 'Cards' ],
+          [ '/development/tooltips', 'Tooltips' ],
+          [ '/development/floating-action-button', 'Floating Action Button' ],
         ],
       },
     ],
   },
-  head: [
-    ['link', { rel: 'stylesheet', href: process.env.NODE_ENV === 'development' ? `http://localhost:8080/lightelligence-ui.css` : '../build/lightelligence-ui.css' }],
-    ['script', { src: process.env.NODE_ENV === 'development' ? `http://localhost:8080/lightelligence-ui.js` : '../build/lightelligence-ui.js' }]
-  ],
   title: 'LIGHTELLIGENCE® UI',
   base: '/',
 };

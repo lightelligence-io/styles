@@ -1,0 +1,72 @@
+.olt-banner-notification {
+    background: rgba($alert, 0.6);
+    color: $notify;
+
+    .olt-banner-notification--content {
+        &::before {
+            background-image: url($info-icon-red) !important;
+        }
+    }
+}
+
+.olt-banner-notification--action-required {
+    background: $notify;
+    color: $primary-08;
+}
+
+.olt-banner-notification,
+.olt-banner-notification--action-required {
+    border-radius: 4px;
+    height: 64px;
+    display: flex;
+    padding: 0 24px;
+    position: relative;
+    margin-bottom: 8px;
+    transition-delay: 0ms;
+    transition-property: height;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(.91,.01,.58,1);
+
+    .olt-banner-notification--content {
+        flex: 1 1 auto;
+        padding: 20px 32px;
+        line-height: 24px;
+        transition-delay: 350ms;
+        transition-property: opacity;
+        transition-duration: 150ms;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            background-image: url($info-icon);
+        }
+    }
+
+    .olt-banner-notification--actions {
+        flex: 0 0 auto;
+        padding-top: 13px;
+        transition-delay: 350ms;
+        transition-property: opacity;
+        transition-duration: 150ms;
+    }
+
+    &--is-dismissed {
+        height: 0px;
+        transition-delay: 200ms;
+        transition-property: height;
+        transition-duration: 300ms;
+
+        .olt-banner-notification--content,
+        .olt-banner-notification--actions {
+            opacity: 0;
+            transition-delay: 0ms;
+            transition-property: opacity;
+            transition-duration: 150ms;
+        }
+    }
+}
