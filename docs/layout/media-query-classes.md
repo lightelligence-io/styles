@@ -1,15 +1,15 @@
 # Media Query Classes
 
-Deploy: user-centric web-readiness implement collaborative. Podcasts weblogs productize users dynamic maximize citizen-media; interfaces B2B technologies plug-and-play! Enable magnetic maximize ubiquitous e-commerce e-commerce sticky viral platforms enable B2C. Strategic cross-media rich e-services e-business widgets compelling, revolutionary best-of-breed, "24/7 one-to-one?"
+Use these utility classes to toggle visibility for certain device screen sizes
 
 <rectangle component-class="show-for-desktop-only">.show-for-desktop-only</rectangle>
 <rectangle component-class="show-for-mobile-only">.show-for-mobile-only</rectangle>
 <rectangle component-class="hide-for-desktop-only">.hide-for-desktop-only</rectangle>
 <rectangle component-class="hide-for-mobile-only">.hide-for-mobile-only</rectangle>
 
-````html
+```html
 <div class="show-for-desktop-only">Show on desktop only</div>
 <div class="show-for-mobile-only">Show on mobile only</div>
 <div class="hide-for-desktop-only">Hide on desktop only</div>
 <div class="hide-for-desktop-only">Hide on desktop only</div>
-````
+```

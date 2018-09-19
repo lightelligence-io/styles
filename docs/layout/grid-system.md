@@ -1,10 +1,13 @@
 # Grid System
 
-We use flexbox grid because of Deploy: user-centric web-readiness implement collaborative. Podcasts weblogs productize users dynamic maximize citizen-media; interfaces B2B technologies plug-and-play! Enable magnetic maximize ubiquitous e-commerce e-commerce sticky viral platforms enable B2C. Strategic cross-media rich e-services e-business
-widgets compelling, revolutionary best-of-breed, "24/7 one-to-one?"
+Lightelligence UI grid system uses a series of containers, rows, and columns to layout and align content. It’s built with flexbox and is fully responsive. Below is an example and an in-depth look at how the grid comes together.
+
+<img src="../_assets/responsive-layout.png" alt="Responsive-Layout">
 
 ## Examples
+
 ### Responsive
+
 <div class="olt-row olt-spacing--s-top">
     <div class="olt-col-mobile-4 olt-col-tablet-4 olt-col-desktop-8">
         <rectangle color-class="olt-color--as-background-primary-01">Responsive</rectangle>
@@ -14,7 +17,7 @@ widgets compelling, revolutionary best-of-breed, "24/7 one-to-one?"
     </div>
 </div>
 
-````html
+```html
 <div class="olt-row">
     <div class="olt-col-mobile-4 olt-col-tablet-4 olt-col-desktop-8">
         <span>Responsive</span>
@@ -23,9 +26,10 @@ widgets compelling, revolutionary best-of-breed, "24/7 one-to-one?"
         <span>Responsive</span>
     </div>
 </div>
-````
+```
 
 ### Offset
+
 <div class="olt-row olt-spacing--s-top">
     <div class="olt-col-mobile-offset-3 olt-col-mobile-1">
         <rectangle>Offset</rectangle>
@@ -38,7 +42,7 @@ widgets compelling, revolutionary best-of-breed, "24/7 one-to-one?"
     </div>
 </div>
 
-````html
+```html
 <div class="olt-row">
     <div class="olt-col-mobile-offset-3 olt-col-mobile-1">
         <span>Offset</span>
@@ -50,9 +54,10 @@ widgets compelling, revolutionary best-of-breed, "24/7 one-to-one?"
         <span>Offset</span>
     </div>
 </div>
-````
+```
 
 ### Auto Width
+
 <div class="olt-row olt-spacing--s-top">
     <div class="olt-col-mobile">
         <rectangle>Auto Width</rectangle>
@@ -65,7 +70,7 @@ widgets compelling, revolutionary best-of-breed, "24/7 one-to-one?"
     </div>
 </div>
 
-````html
+```html
 <div class="olt-row">
     <div class="olt-col-mobile">
         <span>Auto Width</span>
@@ -77,9 +82,10 @@ widgets compelling, revolutionary best-of-breed, "24/7 one-to-one?"
         <span>Auto Width</span>
     </div>
 </div>
-````
+```
 
 ### Alignment
+
 <div class="olt-row olt-start-mobile olt-spacing--s-top">
     <div class="olt-col-mobile-2">
         <rectangle>start</rectangle>
@@ -96,7 +102,7 @@ widgets compelling, revolutionary best-of-breed, "24/7 one-to-one?"
     </div>
 </div>
 
-````html
+```html
 <div class="olt-row olt-start-mobile">
     <div class="olt-col-mobile-2">
         <span>start</span>
@@ -112,10 +118,11 @@ widgets compelling, revolutionary best-of-breed, "24/7 one-to-one?"
         <span>end</span>
     </div>
 </div>
-````
+```
 
 ## All Classes
-````
+
+```
  col-mobile-1 // 25%
  col-mobile-2 // 50%
  col-mobile-3 // 75%
@@ -142,4 +149,4 @@ widgets compelling, revolutionary best-of-breed, "24/7 one-to-one?"
 col-desktop-10 // 83.333%
 col-desktop-11 // 91.667%
 col-desktop-12 // 100%
-````
+```

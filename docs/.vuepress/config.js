@@ -1,45 +1,47 @@
 module.exports = {
-  dest: 'build-styleguide',
+  dest: "build-styleguide",
   serviceWorker: true,
   themeConfig: {
-    nav: [
-      { text: 'Back to Homepage', link: 'https://lightelligence.io/' },
-    ],
-    sidebar: [ 
-      [ '/', 'Introduction' ],
+    nav: [{ text: "Back to Homepage", link: "https://lightelligence.io/" }],
+    sidebar: [
+      ["/", "Introduction"],
       {
-        title: 'Design',
+        title: "Layout",
         collapsable: true,
         children: [
-          [ '/design/responsive-layout.md', 'Responsive Layout' ],
+          ["/layout/grid-system", "Grid System"],
+          ["/layout/media-query-classes", "Media Query Classes"],
+          ["/layout/spacings", "Responsive Spacings"]
         ]
       },
       {
-        title: 'Development',
+        title: "Content",
         collapsable: true,
         children: [
-          [ '/development/getting-started', 'Getting Started' ],
-          [ '/development/grid-system', 'Grid System' ],
-          [ '/development/media-query-classes', 'Media Query Classes' ],
-          [ '/development/typography', 'Typography & Fonts' ],
-          [ '/development/colors', 'Colors' ],
-          [ '/development/spacings', 'Responsive Spacings' ],
-          [ '/development/buttons', 'Buttons' ],
-          [ '/development/form-controls', 'Form Controls' ],
-          [ '/development/selection-controls', 'Selection Controls' ],
-          [ '/development/tags', 'Tags' ],
-          [ '/development/notifications', 'Error Notifications' ],
-          [ '/development/cards', 'Cards' ],
-          [ '/development/tooltips', 'Tooltips' ],
-          [ '/development/floating-action-button', 'Floating Action Button' ],
-          [ '/development/modals', 'Modal' ],
-          [ '/development/tabs', 'Tabs' ],
-          [ '/development/toggle-buttons', 'Toggle-Buttons' ],
-          [ '/development/stepper', 'Stepper' ],
-        ],
+          ["/content/typography", "Typography & Fonts"],
+          ["/content/colors", "Colors"]
+        ]
       },
-    ],
+      {
+        title: "Components",
+        collapsable: true,
+        children: [
+          ["/components/buttons", "Buttons"],
+          ["/components/form-controls", "Form Controls"],
+          ["/components/selection-controls", "Selection Controls"],
+          ["/components/tags", "Tags"],
+          ["/components/notifications", "Error Notifications"],
+          ["/components/cards", "Cards"],
+          ["/components/tooltips", "Tooltips"],
+          ["/components/floating-action-button", "Floating Action Button"],
+          ["/components/modals", "Modal"],
+          ["/components/tabs", "Tabs"],
+          ["/components/toggle-buttons", "Toggle-Buttons"],
+          ["/components/stepper", "Stepper"]
+        ]
+      }
+    ]
   },
-  title: 'LIGHTELLIGENCE® UI',
-  base: '/',
+  title: "LIGHTELLIGENCE® UI",
+  base: "/"
 };
