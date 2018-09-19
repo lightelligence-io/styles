@@ -48,5 +48,8 @@
     "webpack-dev-server": "^3.1.4",
     "webpackbar": "^2.6.1",
     "yargs": "^11.0.0"
+  },
+  "dependencies": {
+    "material-design-icons-iconfont": "^3.0.3"
   }
 }
