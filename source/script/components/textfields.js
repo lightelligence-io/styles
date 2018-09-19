@@ -10,7 +10,7 @@ export default class Textfield {
             // Needed for Web-Apps which render content dynamically without dom-reload
             const oldLocation = this.location;
             this.getLocation();
-            // 
+            //
             if (this.location !== oldLocation) {
                 this.elementsLoaded(className);
             }
@@ -32,7 +32,7 @@ export default class Textfield {
 
             // check if value is already existing
             this.checkForValue(element);
-    
+
             // Event Listener
             element.onfocus = () => {
                 this.onFocus(element);
@@ -66,12 +66,12 @@ export default class Textfield {
             el.classList.add('has-floating-label');
         }
     }
-    
+
     onFocus(el) {
         el.classList.add('has-floating-label');
         el.classList.add('is-focused');
     }
-    
+
     onBlur(el) {
         if (el.value.length <= 0) {
             el.classList.remove('has-floating-label');

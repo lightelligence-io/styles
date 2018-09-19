@@ -1,18 +1,18 @@
 .show {
     &-for-desktop-only {
         @include screen('mobile') {
-            display: none;
+            display: none !important;
         }
         @include screen('tablet') {
-            display: none;
+            display: none !important;
         }
     }
     &-for-mobile-only {
         @include screen('desktop') {
-            display: none;
+            display: none !important;
         }
         @include screen('tablet') {
-            display: none;
+            display: none !important;
         }
     }
 }
@@ -20,12 +20,12 @@
 .hide {
     &-for-mobile-only {
         @include screen('mobile') {
-            display: none;
+            display: none !important;
         }
     }
     &-for-desktop-only {
         @include screen('desktop') {
-            display: none;
+            display: none !important;
         }
     }
 }

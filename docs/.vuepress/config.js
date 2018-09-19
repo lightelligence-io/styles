@@ -19,8 +19,8 @@ module.exports = {
         collapsable: true,
         children: [
           ["/content/typography", "Typography & Fonts"],
-          ["/content/colors", "Colors"]
-        ]
+          ["/content/colors", "Colors"],
+        ],
       },
       {
         title: "Components",
@@ -37,7 +37,9 @@ module.exports = {
           ["/components/modals", "Modal"],
           ["/components/tabs", "Tabs"],
           ["/components/toggle-buttons", "Toggle-Buttons"],
-          ["/components/stepper", "Stepper"]
+          ["/components/stepper", "Stepper"],
+          ["/components/avatar", "Avatar" ],
+          ["/components/navbar", "Navigation Bar" ],
         ]
       }
     ]

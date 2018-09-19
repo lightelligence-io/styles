@@ -1,0 +1,22 @@
+.olt-navbar-submenu {
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+	@include responsive-spacing-s("padding");
+
+	.olt-navbar-submenu__item {
+		font-size: 12px;
+		line-height: 20px;
+		&:not(:last-of-type) {
+			@include responsive-spacing-s("margin-bottom");
+		}
+
+		cursor:pointer;
+
+		&:hover {
+			color:rgba(black, 0.7);
+		}
+
+		&--is-active {
+			color:rgba(black, 0.5);
+		}
+	}
+}

@@ -32,7 +32,7 @@ export default {
             if (showClose) {
                 this.showClose = showClose;
             } else {
-                setTimeout(() => { 
+                setTimeout(() => {
                     this.open = false;
                 }, 3000);
             }

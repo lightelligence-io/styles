@@ -9,3 +9,27 @@
         #{$spacing-type}: $spacing-desktop;
     }
 }
+
+@mixin responsive-spacing-xxs($spacing-type) {
+    @include responsive-spacing($spacing-type, $spacing-desktop-xxs, $spacing-tablet-xxs, $spacing-mobile-xxs);
+}
+
+@mixin responsive-spacing-xs($spacing-type) {
+    @include responsive-spacing($spacing-type, $spacing-desktop-xs, $spacing-tablet-xs, $spacing-mobile-xs);
+}
+
+@mixin responsive-spacing-s($spacing-type) {
+    @include responsive-spacing($spacing-type, $spacing-desktop-s, $spacing-tablet-s, $spacing-mobile-s);
+}
+
+@mixin responsive-spacing-m($spacing-type) {
+    @include responsive-spacing($spacing-type, $spacing-desktop-m, $spacing-tablet-m, $spacing-mobile-m);
+}
+
+@mixin responsive-spacing-l($spacing-type) {
+    @include responsive-spacing($spacing-type, $spacing-desktop-l, $spacing-tablet-l, $spacing-mobile-l);
+}
+
+@mixin responsive-spacing-xl($spacing-type) {
+    @include responsive-spacing($spacing-type, $spacing-desktop-xl, $spacing-tablet-xl, $spacing-mobile-xl);
+}
