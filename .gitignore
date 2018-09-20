@@ -3,7 +3,6 @@ node_modules
 /build
 /build-styleguide
 /styleguide/build
-/dist
 
 # local env files
 .env.local
