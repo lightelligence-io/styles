@@ -40,6 +40,7 @@ module.exports = {
           ["/components/stepper", "Stepper"],
           ["/components/avatar", "Avatar" ],
           ["/components/navigation", "Navigation" ],
+          ["/components/pageblock", "Page Blocks" ],
         ]
       }
     ]
