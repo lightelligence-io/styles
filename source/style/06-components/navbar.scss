@@ -8,8 +8,8 @@ $olt-navbar-separator-color-bg:rgba(white, 0.4);
 	justify-content: space-between;
 	align-items: center;
 	width:100%;
-	background-color:$primary-02;
-	color: nth(map-get($colors, 'primary-02'), 2);
+	background-color:$olt-navbar-color-bg;
+	color: $olt-navbar-color-font;
 
 	&__left {
 		display:flex;
@@ -46,28 +46,16 @@ $olt-navbar-separator-color-bg:rgba(white, 0.4);
 		line-height: 22px;
 		display:flex;
 		height:100%;
-
-		&-body {
-			display:flex;
-			align-items: center;
-			@include responsive-spacing-s('padding');
-		}
-
-		&-toggle {
-			display:flex;
-			align-items: center;
-			margin-left:10px;
-		}
-
-		&-icon-label {
-			margin-left:10px;
-		}
+		align-items: center;
+		@include responsive-spacing-s('padding');
 
 		&--is-active {
 			background-color:rgba(white, 0.3);
 		}
-
 		&--is-button {
+			text-decoration: none !important;
+			color: $olt-navbar-color-font;
+
 			cursor:pointer;
 			&:hover {
 				background-color:rgba(white, 0.2);

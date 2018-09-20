@@ -1,5 +1,0 @@
-@function icon-url($icon, $color: black) {
-    $template: $icon;
-    $icon-code: str-replace($template, 'fill-color', $color);
-    @return url($icon-code);
-}

@@ -1,4 +1,3 @@
-
 $olt-navdrawer-color-bg: nth(map-get($colors, 'primary-02'), 1);
 $olt-navdrawer-color-font-active: nth(map-get($colors, 'primary-02'), 2);
 $olt-navdrawer-color-font-hover: $olt-navdrawer-color-font-active;
@@ -9,25 +8,11 @@ $olt-navdrawer-separator-color-bg:$olt-navdrawer-color-font;
 @mixin navdrawer-item() {
 	position: relative;
 	display:flex;
-	justify-content: space-between;
-
-	&-toggle {
-		display:flex;
-		align-items: center;
-		margin-left:10px;
-	}
-
-	&-icon-label {
-		margin-left:10px;
-	}
-
-	&-body {
-		display:flex;
-		align-items: center;
-		display:flex;
-	}
+	align-items: center;
 
 	&--is-button {
+		text-decoration: none !important;
+		color: $olt-navdrawer-color-font;
 		cursor:pointer;
 		&:hover {
 			color:$olt-navdrawer-color-font-hover;

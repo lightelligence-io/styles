@@ -39,7 +39,7 @@ module.exports = {
           ["/components/toggle-buttons", "Toggle-Buttons"],
           ["/components/stepper", "Stepper"],
           ["/components/avatar", "Avatar" ],
-          ["/components/navbar", "Navigation Bar" ],
+          ["/components/navigation", "Navigation" ],
         ]
       }
     ]

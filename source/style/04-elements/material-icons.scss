@@ -1,16 +1,14 @@
+$material-design-icons-font-path:"../../node_modules/material-design-icons-iconfont/dist/fonts/";
 @font-face {
-    $material-base-path: "../../node_modules/material-design-icons-iconfont/dist/fonts/";
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
-    src: url(#{$material-base-path}MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: url(#{$material-design-icons-font-path}MaterialIcons-Regular.eot); /* For IE6-8 */
     src: local('Material Icons'),
         local('MaterialIcons-Regular'),
-        url(#{$material-base-path}MaterialIcons-Regular.woff2) format('woff2'),
-        url(#{$material-base-path}MaterialIcons-Regular.woff) format('woff'),
-        url(#{$material-base-path}MaterialIcons-Regular.ttf) format('truetype');
+        url(#{$material-design-icons-font-path}MaterialIcons-Regular.woff2) format('woff2'),
+        url(#{$material-design-icons-font-path}MaterialIcons-Regular.woff) format('woff'),
+        url(#{$material-design-icons-font-path}MaterialIcons-Regular.ttf) format('truetype');
 }
 
-
-$material-design-icons-font-path:"~/material-design-icons-iconfont/dist/fonts";
 @import "~material-design-icons-iconfont/dist/material-design-icons";

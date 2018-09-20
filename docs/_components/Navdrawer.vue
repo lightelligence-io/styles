@@ -1,74 +1,54 @@
 <template>
     <div class="olt-navdrawer">
-        <div class="olt-navdrawer__item olt-navdrawer__item--is-button"
+        <a class="olt-navdrawer__item olt-navdrawer__item--is-button"
             v-bind:class="{ 'olt-navdrawer__item--is-active' : active === 'personal_dashboard'}"
             v-on:click="setActive('personal_dashboard')"
             >
-            <div class="olt-navdrawer__item-body">
-                Personal Dashboard
-            </div>
-        </div>
-        <div v-on:click="toggleExpand()" class="olt-navdrawer__item olt-navdrawer__item--is-button">
-            <div class="olt-navdrawer__item-body">
-                <span class="olt-navdrawer__item-icon">
-                    <i class="olt-tenant-avatar ">T</i>
-                </span>
-                <span class="olt-navdrawer__item-icon-label">
-                    MyTenant
-                </span>
-                <span class="olt-navdrawer__item-toggle olt-navdrawer__item-toggle--is-expanded">
-                    <i class="material-icons">{{ expanded ? 'keyboard_arrow_down' : 'keyboard_arrow_right'}}</i>
-                </span>
-            </div>
-        </div>
+            Personal Dashboard
+        </a>
+        <a v-on:click="toggleExpand()" class="olt-navdrawer__item olt-navdrawer__item--is-button">
+            <i class="olt-tenant-avatar ">T</i>
+            <span class="olt-spacing--xs-left">
+                MyTenant
+            </span>
+            <i class="material-icons olt-spacing--xs-left">{{ expanded ? 'keyboard_arrow_down' : 'keyboard_arrow_right'}}</i>
+        </a>
         <div class="olt-navdrawer__submenu" v-if="expanded">
-            <div class="olt-navdrawer__submenu-item olt-navdrawer__submenu-item--is-button"
+            <a class="olt-navdrawer__submenu-item olt-navdrawer__submenu-item--is-button"
                 v-bind:class="{ 'olt-navdrawer__submenu-item--is-active' : active === 'dashboard'}"
                 v-on:click="setActive('dashboard')"
             >
-                <div class="olt-navdrawer__submenu-item-body">
-                    Dashboard
-                </div>
-            </div>
-            <div class="olt-navdrawer__submenu-item olt-navdrawer__submenu-item--is-button"
+                Dashboard
+            </a>
+            <a class="olt-navdrawer__submenu-item olt-navdrawer__submenu-item--is-button"
                 v-bind:class="{ 'olt-navdrawer__submenu-item--is-active' : active === 'tenant_device_types'}"
                 v-on:click="setActive('tenant_device_types')"
             >
-                <div class="olt-navdrawer__submenu-item-body">
-                    Device Types
-                </div>
-            </div>
-            <div class="olt-navdrawer__submenu-item olt-navdrawer__submenu-item--is-button"
+                Device Types
+            </a>
+            <a class="olt-navdrawer__submenu-item olt-navdrawer__submenu-item--is-button"
                 v-bind:class="{ 'olt-navdrawer__submenu-item--is-active' : active === 'tenant_devices'}"
                 v-on:click="setActive('tenant_devices')"
             >
-                <div class="olt-navdrawer__submenu-item-body">
-                    Manage Devices
-                </div>
-            </div>
-            <div class="olt-navdrawer__submenu-item olt-navdrawer__submenu-item--is-button"
+                Manage Devices
+            </a>
+            <a class="olt-navdrawer__submenu-item olt-navdrawer__submenu-item--is-button"
                 v-bind:class="{ 'olt-navdrawer__submenu-item--is-active' : active === 'tenant_users'}"
                 v-on:click="setActive('tenant_users')"
             >
-                <div class="olt-navdrawer__submenu-item-body">
-                    Tenant Users
-                </div>
-            </div>
+                Tenant Users
+            </a>
         </div>
         <div class="olt-navdrawer__separator"></div>
-        <div class="olt-navdrawer__item olt-navdrawer__item--is-button"
+        <a class="olt-navdrawer__item olt-navdrawer__item--is-button"
             v-bind:class="{ 'olt-navdrawer__item--is-active' : active === 'documentation'}"
             v-on:click="setActive('documentation')"
         >
-            <div class="olt-navdrawer__item-body">
-                Documentation
-            </div>
-        </div>
-        <div class="olt-navdrawer__item olt-navdrawer__item--is-button">
-            <div class="olt-navdrawer__item-body">
-                Logout
-            </div>
-        </div>
+            Documentation
+        </a>
+        <a class="olt-navdrawer__item olt-navdrawer__item--is-button">
+            Logout
+        </a>
     </div>
 </template>
 
