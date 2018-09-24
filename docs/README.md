@@ -76,4 +76,4 @@ import "lightelligence-ui/dist/olt-ui.css";
 
 ## Next steps
 
-Start exploring from [Grid system](/development/grid-system.html)
+Start exploring from [Grid system](/layout/grid-system.html)

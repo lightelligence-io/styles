@@ -4,7 +4,6 @@
     border: 0;
     width: 40px;
     height: 40px;
-    padding: 12px;
     border-radius: 20px;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.12), 0 1px 2px 0 rgba(0,0,0,0.24);
     position: relative;
@@ -14,46 +13,11 @@
     &--paginator {
         background: $primary-08;
         color: $primary-02;
-        vertical-align: middle;
-        line-height: 16px;
         text-align: center;
     }
 
-    .add-icon {
-        &::before {
-            content: '';
-            background: url($add-icon-white) no-repeat;
-            background-size: contain;
-            width: 16px;
-            height: 16px;
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }   
-    }
-
-    .chevron-icon-left,
-    .chevron-icon-right {
-        &::before {
-            content: '';
-            background: url($chevron-right-icon-primary-01) no-repeat;
-            background-size: contain;
-            width: 10px;
-            height: 16px;
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }   
-    }
-
-    .chevron-icon-left {
-        &::before {
-            transform: translate(-50%, -50%) rotate(180deg);
-        }
+    .material-icons {
+        line-height: 40px;
     }
 
     &:hover {

@@ -1,5 +1,5 @@
 /* The container */
-.checkbox--wrapper {
+.olt-checkbox__wrapper {
     display: inline-block;
     position: relative;
     padding-left: $spacing-desktop-s + $spacing-desktop-s;
@@ -23,7 +23,7 @@
     }
 
     /* Create a custom checkbox */
-    .olt-checkbox--checked-icon {
+    .olt-checkbox__checked-icon {
         position: absolute;
         top: 0;
         left: 0;
@@ -47,11 +47,11 @@
         }
     }
 
-    &:hover input ~ .olt-checkbox--checked-icon {
+    &:hover input ~ .olt-checkbox__checked-icon {
         border-color: $primary-04;
     }
 
-    input:checked ~ .olt-checkbox--checked-icon {
+    input:checked ~ .olt-checkbox__checked-icon {
         background-color: $primary-01;
         border-color: $primary-01;
 
@@ -68,7 +68,7 @@
         }
     }
 
-    input:disabled ~ .olt-checkbox--checked-icon {
+    input:disabled ~ .olt-checkbox__checked-icon {
         border: 2px dashed;
         background-color: transparent;
         border-color: $primary-05;

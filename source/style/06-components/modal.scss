@@ -39,22 +39,23 @@
             background: $notify;
         }
 
-        .olt-modal--content {
+        .olt-modal__content {
             text-align: center;
-            &::before {
-                content: '';
+            
+            .olt-modal__notification-icon {
                 position: absolute;
-                top: 59px;
+                top: 56px;
                 left: 50%;
                 transform: translateX(-50%);
-                width: 40px;
-                height: 40px;
-                background: url($info-icon);
-                background-size: cover;
+
+                .material-icons {
+                    font-size: 50px;
+                    color: $primary-08;
+                }
             }
         }
 
-        .olt-modal--actions {
+        .olt-modal__actions {
             text-align: center;
             margin-top: 40px;
 
@@ -79,18 +80,18 @@
         padding: 0;
         text-align: left;
 
-        .olt-modal--header {
+        .olt-modal__header {
             min-height: 25vh;
             padding: 36px;
         }
 
-        .olt-modal--content {
+        .olt-modal__content {
             min-height: 75vh;
             background: $primary-07;
             padding: 36px;
         }
 
-        .olt-modal--close-button {
+        .olt-modal__close-button {
             position: absolute;
             top: 36px;
             right: 36px;
@@ -102,10 +103,14 @@
             line-height: 40px;
             font-size: 24px;
             cursor: pointer;
+
+            .material-icons {
+                line-height: 40px;
+            }
         }
     }
     
-    &--backdrop {
+    &__backdrop {
         position: fixed;
         top: 0;
         left: 0;
@@ -117,11 +122,11 @@
         transition: z-index 0ms ease 350ms, opacity 300ms ease 100ms;
     }
 
-    &--content {
+    &__content {
         display: none;
     }
 
-    &--actions {
+    &__actions {
         margin-top: 40px;
         display: none;
     }
@@ -148,15 +153,15 @@
             }
         }
 
-        .olt-modal--content {
+        .olt-modal__content {
             display: block
         }
 
-        .olt-modal--actions {
+        .olt-modal__actions {
             display: block;
         }
 
-        ~ .olt-modal--backdrop {
+        ~ .olt-modal__backdrop {
             opacity: 1;
             z-index: 999;
             transition: z-index 0ms ease 0ms, opacity 300ms ease 100ms;

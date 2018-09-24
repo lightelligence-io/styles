@@ -6,7 +6,7 @@ export default {
 
     mounted() {
         // register lightelligence-ui--textfields
-        Array.from(document.querySelectorAll(".olt-textfield--input")).map(x => new OltTextfield(x));
+        Array.from(document.querySelectorAll(".olt-textfield__input")).map(x => new OltTextfield(x));
     },
 
     render() {

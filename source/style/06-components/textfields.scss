@@ -1,4 +1,4 @@
-.olt-textfield--wrapper {
+.olt-textfield__wrapper {
     display: inline-block;
     min-width: 160px;
     position: relative;
@@ -14,12 +14,12 @@
         margin-bottom: 8px;
     }
 
-    textarea.olt-textfield--input {
+    textarea.olt-textfield__input {
         max-width: 100%;
         min-height:33.5px;
     }
 
-    .olt-textfield--input {
+    .olt-textfield__input {
         border: 0;
         border-bottom: solid .075rem $primary-04;
         padding: 8px 0;
@@ -29,7 +29,7 @@
         background: transparent;
         z-index: 2;
 
-        &__label {
+        &-label {
             position: absolute;
             display: block;
             color: $primary-04;
@@ -41,7 +41,7 @@
             cursor: text;
         }
 
-        &__info-right {
+        &-info-right {
             position: absolute;
             top: 100%;
             right: 0;
@@ -49,7 +49,7 @@
             color: $primary-03;
         }
 
-        &__info-left {
+        &-info-left {
             position: absolute;
             top: 100%;
             left: 0;
@@ -57,7 +57,7 @@
             color: $primary-03;
         }
 
-        &__error-message {
+        &-error-message {
             position: absolute;
             top: 100%;
             left: 0;
@@ -66,7 +66,7 @@
             display: none;
         }
 
-        &__icon {
+        &-icon {
             position: absolute;
             top: 12px;
             right: 0;
@@ -82,7 +82,7 @@
 
         &:not(.has-floating-label) {
             border-bottom: solid .075rem $primary-04;
-            & ~ .olt-textfield--input__label {
+            & ~ .olt-textfield__input-label {
                 display: block;
                 font-size: 16px;
                 position: absolute;
@@ -99,16 +99,16 @@
             border-bottom-color: $primary-01;
             caret-color: $primary-01;
 
-            & ~ .olt-textfield--input__label {
+            & ~ .olt-textfield__input-label {
                 color: $primary-01;
             }
-            & ~ .olt-textfield--input__icon {
+            & ~ .olt-textfield__input-icon {
                 color: $primary-01;
             }
         }
 
         &:required {
-            & ~ .olt-textfield--input__label {
+            & ~ .olt-textfield__input-label {
                 &:after {
                     content: ' *';
                 }
@@ -118,11 +118,11 @@
         &:disabled {
             border-bottom: .075rem dotted $primary-05;
 
-            & ~ .olt-textfield--input__label {
+            & ~ .olt-textfield__input-label {
                 color: $primary-05;
             }
 
-            & ~ .olt-textfield--input__icon {
+            & ~ .olt-textfield__input-icon {
                 color: $primary-05;
             }
         }
@@ -132,15 +132,15 @@
         {
             border-bottom-color: $alert;
 
-            & ~ .olt-textfield--input__label {
+            & ~ .olt-textfield__input-label {
                 color: $alert;
             }
 
-            & ~ .olt-textfield--input__error-message {
+            & ~ .olt-textfield__input-error-message {
                 display: block;
             }
 
-            & ~ .olt-textfield--input__icon {
+            & ~ .olt-textfield__input-icon {
                 color: $alert;
             }
         }

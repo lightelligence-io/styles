@@ -8,15 +8,17 @@
     cursor: pointer;
     transition: box-shadow 150ms;
     background: $primary-08;
+    display: flex;
 
-    &--header {
-        .olt-card--headline {
+    &__header {
+        flex: 1 1 auto;
+        .olt-card__headline {
             font-size: 20px;
             font-weight: bold;
             line-height: 28px;
             display: block;
         }
-        .olt-card--subtitle {
+        .olt-card__subtitle {
             font-size: 12px;
             line-height: 20px;
             display: block;
@@ -24,84 +26,55 @@
         }
     }
 
-    &--menu {
-        position: absolute;
-        top: 24px;
-        right: 16px;
-        cursor: pointer;
-
-        &::before {
-            content: '';
-            background: url($menu-icon) no-repeat;
-            background-size: contain;
-            width: 8px;
-            height: 16px;
-            display: block;
-        }
+    &__menu {
+        flex: 0 0 auto;
     }
 
-    &--actions {
-        .arrow-icon {
-            &::before {
-                content: '';
-                background: url($chevron-right-icon) no-repeat;
-                background-size: contain;
-                width: 10px;
-                height: 16px;
-                display: block;
-            }
+    &__actions {
+        flex: 0 0 auto;
+        text-align: right;
+        margin-left: $spacing-desktop-s;
+
+        .material-icons {
+            font-size: 32px;
         }
     }
 
     &--small {
         min-height: 64px;
         height: 64px;
-        padding-right: 48px;
 
-        .olt-card--header {
-            .olt-card--headline {
+        .olt-card__header {
+            .olt-card__headline {
                 font-size: 24px;
                 line-height: 32px;
                 font-weight: normal;
             }
-            .olt-card--subtitle {
+            .olt-card__subtitle {
                 display: none;
             }
         }
 
-        .olt-card--menu {
+        .olt-card__menu {
             display: none;
-        }
-
-        .olt-card--actions {
-            position: absolute;
-            top: 24px;
-            right: 16px;
         }
     }
 
     &--header__bottom {
         padding-top: 72px;
-        padding-right: 48px;
-        .olt-card--header {
-            .olt-card--headline {
+        .olt-card__header {
+            .olt-card__headline {
                 font-size: 24px;
                 line-height: 32px;
                 font-weight: normal;
             }
-            .olt-card--subtitle {
+            .olt-card__subtitle {
                 display: none;
             }
         }
 
-        .olt-card--menu {
+        .olt-card__menu {
             display: none;
-        }
-
-        .olt-card--actions {
-            position: absolute;
-            top: 80px;
-            right: 16px;
         }
     }
 
@@ -109,17 +82,9 @@
         background: $primary-01;
         color: $primary-08;
 
-        .olt-card--header {
-            .olt-card--subtitle {
+        .olt-card__header {
+            .olt-card__subtitle {
                 color: $primary-06;
-            }
-        }
-
-        .olt-card--actions {
-            .arrow-icon {
-                &::before {
-                    background: url($chevron-right-icon-white) no-repeat;
-                }
             }
         }
     }

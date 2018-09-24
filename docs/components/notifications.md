@@ -11,14 +11,14 @@ and remove to open and close the snackbar.
 ````html
 <div class="olt-snackbar">
     Snackbar Content
-    <div class="olt-snackbar--actions">
+    <div class="olt-snackbar__actions">
         <button class="olt-button is-bordered--primary-08">Close</button>
     </div>
 </div>
 <!-- opened snackbar -->
 <div class="olt-snackbar olt-snackbar--is-open">
     Snackbar Content
-    <div class="olt-snackbar--actions">
+    <div class="olt-snackbar__actions">
         <button class="olt-button is-bordered--primary-08">Close</button>
     </div>
 </div>
@@ -33,10 +33,11 @@ and remove to open and close the snackbar.
 ### No action required, can be dismissed
 
 <div class="olt-banner-notification olt-spacing--s-top">
-    <div class="olt-banner-notification--content">
+    <div class="olt-banner-notification__content">
+        <i class="material-icons">error_outline</i>
         Oh snap! You really need to change a few things up to move
     </div>
-    <div class="olt-banner-notification--actions">
+    <div class="olt-banner-notification__actions">
         <button class="olt-button is-bordered--notify">Dismiss</button>
     </div>
 </div>
@@ -44,10 +45,11 @@ and remove to open and close the snackbar.
 ### Action required, can't be dismissed until error is resolved
 
 <div class="olt-banner-notification--action-required olt-spacing--s-top">
-    <div class="olt-banner-notification--content">
+    <div class="olt-banner-notification__content">
+        <i class="material-icons">error_outline</i>
         Oh snap! You really need to change a few things up to move
     </div>
-    <div class="olt-banner-notification--actions">
+    <div class="olt-banner-notification__actions">
         <button class="olt-button is-bordered--primary-08">Fix it now</button>
     </div>
 </div>
@@ -62,18 +64,20 @@ and remove to dismiss the alert.
 
 ````html
 <div class="olt-banner-notification">
-    <div class="olt-banner-notification--content">
+    <div class="olt-banner-notification__content">
+        <i class="material-icons">error_outline</i>
         Oh snap! You really need to change a few things up to move
     </div>
-    <div class="olt-banner-notification--actions">
+    <div class="olt-banner-notification__actions">
         <button class="olt-button is-bordered--notify">Dismiss</button>
     </div>
 </div>
 <div class="olt-banner-notification--action-required">
-    <div class="olt-banner-notification--content">
+    <div class="olt-banner-notification__content">
+        <i class="material-icons">error_outline</i>
         Oh snap! You really need to change a few things up to move
     </div>
-    <div class="olt-banner-notification--actions">
+    <div class="olt-banner-notification__actions">
         <button class="olt-button is-bordered--primary-08">Fix it now</button>
     </div>
 </div>
@@ -90,23 +94,23 @@ You have to implement the open/close logic by your own. Just the class `olt-moda
 and remove to open or close the modal.
 :::
 
-If you search for other modals go to <a href="./modals.html">Modals Section</a>.
+If you search for other modals go to [Modals Section](/components/modals.html).
 
 <modal-notification class="olt-spacing--s-top"></modal-notification>
 
 ````html
 <section>
     <div class="olt-modal olt-modal--notification"><!-- <- put here open-class -->
-        <div class="olt-modal--content">
+        <div class="olt-modal__content">
             <div class="olt-headline--s">Oh No! A Device Is in A Critical State</div>
             <div class="olt-copy--l">You should really check the configuration</div>
         </div>
-        <div class="olt-modal--actions">
+        <div class="olt-modal__actions">
             <button class="olt-button is-bordered--primary-01">I'll do this later</button>
             <button class="olt-button is-raised--primary-01">Yes, show me</button>
         </div>
     </div>
-    <div class="olt-modal--backdrop"></div>
+    <div class="olt-modal__backdrop"></div>
 </section>
 ````
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="large-container">
+    <div v-bind:class="{'large-container' : isLarge }">
         <div class="olt-navbar">
             <div class="olt-navbar__left hide-for-mobile-only">
                 <a class="olt-navbar__item">
@@ -87,7 +87,12 @@ export default {
     data() {
         return data1;
     },
-
+    props: {
+        'isLarge' : {
+            type: Boolean,
+            default: true
+        }
+    },
     methods: {
        toggleExpand: () => {
             data1.expanded = !data1.expanded;

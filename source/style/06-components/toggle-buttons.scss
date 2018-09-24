@@ -1,4 +1,4 @@
-.olt-toggle-button--group {
+.olt-toggle-button__group {
     display: block;
     .olt-toggle-button {
         background: transparent;
@@ -21,7 +21,7 @@
             margin-right: 0px;
         }
 
-        &__is-active {
+        &--is-active {
             color: $primary-01;
         }
     }

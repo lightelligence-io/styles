@@ -1,12 +1,6 @@
 .olt-banner-notification {
     background: rgba($alert, 0.6);
     color: $notify;
-
-    .olt-banner-notification--content {
-        &::before {
-            background-image: url($info-icon-red) !important;
-        }
-    }
 }
 
 .olt-banner-notification--action-required {
@@ -27,27 +21,21 @@
     transition-duration: 300ms;
     transition-timing-function: cubic-bezier(.91,.01,.58,1);
 
-    .olt-banner-notification--content {
+    .material-icons {
+        display: inline;
+        vertical-align: -6px;
+    }
+
+    .olt-banner-notification__content {
         flex: 1 1 auto;
-        padding: 20px 32px;
+        padding: 20px 0px;
         line-height: 24px;
         transition-delay: 350ms;
         transition-property: opacity;
         transition-duration: 150ms;
-
-        &::before {
-            content: '';
-            position: absolute;
-            left: 24px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 24px;
-            height: 24px;
-            background-image: url($info-icon);
-        }
     }
 
-    .olt-banner-notification--actions {
+    .olt-banner-notification__actions {
         flex: 0 0 auto;
         padding-top: 13px;
         transition-delay: 350ms;
@@ -62,7 +50,7 @@
         transition-duration: 300ms;
 
         .olt-banner-notification--content,
-        .olt-banner-notification--actions {
+        .olt-banner-notification__actions {
             opacity: 0;
             transition-delay: 0ms;
             transition-property: opacity;

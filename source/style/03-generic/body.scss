@@ -8,3 +8,9 @@ body {
 * {
     box-sizing: border-box;
 }
+
+::selection,
+::-moz-selection {
+    color: $primary-08;
+    background: $primary-01;
+}

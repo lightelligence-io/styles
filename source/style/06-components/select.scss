@@ -1,10 +1,10 @@
-.olt-select--wrapper {
+.olt-select__wrapper {
     display: inline-block;
     min-width: 160px;
     position: relative;
     padding-top: 10px;
 
-    .olt-select--label {
+    .olt-select__label {
         display: block;
         font-size: 16px;
         position: absolute;
@@ -30,7 +30,7 @@
         &:focus {
             border-bottom-color: $primary-01 !important;
 
-            & ~ .olt-select--label {
+            & ~ .olt-select__label {
                 color: $primary-01 !important;
                 font-size: 12px;
                 top: 0;
@@ -41,7 +41,7 @@
         &:not(:empty) {
             border-bottom-color: $primary-04;
 
-            & ~ .olt-select--label {
+            & ~ .olt-select__label {
                 color: $primary-04;
                 font-size: 12px;
                 top: 0;
@@ -52,7 +52,7 @@
         &:disabled {
             border-bottom: dotted 1.5px $primary-05;
 
-            & ~ .olt-select--label {
+            & ~ .olt-select__label {
                 color: $primary-05;
             }
         }

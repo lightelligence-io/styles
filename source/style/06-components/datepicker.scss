@@ -1,0 +1,141 @@
+.olt-datepicker {
+    color: $primary-02;
+    &__panel {
+        background: $primary-08;
+        position: absolute;
+        z-index: 950;
+        border-radius: 4px;
+        padding: 0;
+        box-shadow: 0;
+        width: 264px;
+        height: 0;
+        display: inline-block;
+        transition: all 150ms;
+    }
+    &__day-header {
+        display: none;
+        float: none;
+        height: 19px;
+        padding-bottom: 6px;
+        padding-left: 12px;
+        padding-right: 12px;
+        border-bottom: solid 2px $primary-06;
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+    &__day-header-item {
+        display: inline-block;
+        float: left;
+        width: calc(100% / 7);
+        font-family: "Overpass Mono", monospace;
+        font-size: 12px;
+        text-align: center;
+    }
+    &__current-month {
+        display: none;
+        font-size: 12px;
+        line-height: 16px;
+        padding-top: 16px;
+        padding-bottom: 12px; 
+        padding-left: 4px;
+    }
+    &__day-selection {
+        display: none;
+    }
+    &__day-select {
+        cursor: pointer;
+        display: inline-block;
+        float: left;
+        width: calc(100% / 7);
+        font-family: "Overpass Mono", monospace;
+        font-size: 12px;
+        padding: 10px 4px;
+        border-radius: 50%;
+        text-align: center;
+        transition: all 150ms;
+
+        &--is-active {
+            background: $primary-01;
+            color: $primary-08;
+        }
+
+        &:hover {
+            background: rgba($primary-02, 0.16);
+        }
+    }
+    &__month-year-switch {
+        display: none;
+        height: 40px;
+    }
+    &__year-select {
+        min-width: unset;
+        width: 50%;
+        display: inline-block;
+        float: left;
+        position: relative;
+        padding-top: 0;
+        text-align: center;
+
+        &::after {
+            top: 50%;
+            transform: translateY(-50%);
+            left: 75%;
+        }
+
+        span {
+            width: 30%;
+        }
+
+        .olt-select {
+            min-width: unset;
+            border-bottom: 0;
+            padding-right: 8px;
+        }
+    }
+    &__month-switch {
+        cursor: pointer;
+        display: inline-block;
+        width: 25%;
+        float: left;
+        color: $primary-01;
+        line-height: 32px;
+        transition: all 150ms;
+
+        .material-icons {
+            line-height: 32px;
+        }
+
+        &:first-child {
+            text-align: left;
+        }
+        &:last-child {
+            text-align: right;
+        }
+
+        &:hover {
+            color: rgba($primary-02, 0.32);
+        }
+    }
+
+    &--is-open {
+        .olt-datepicker {
+            &__panel {
+                padding: 12px;
+                height: 292px;
+                box-shadow: 0 2px 20px 0 rgba(0,0,0,0.3);
+            }
+            &__day-header {
+                display: block;
+            }
+            &__month-year-switch {
+                display: block;
+            }
+            &__day-selection {
+                display: block;
+            }
+            &__current-month {
+                display: block;
+            }
+        }
+    }
+}

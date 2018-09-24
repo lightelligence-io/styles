@@ -1,5 +1,5 @@
-/* The olt-radio-button--wrapper */
-.olt-radio-button--wrapper {
+/* The olt-radio-button__wrapper */
+.olt-radio-button__wrapper {
     display: block;
     position: relative;
     padding-left: 35px;
@@ -17,7 +17,7 @@
         opacity: 0;
         cursor: pointer;
 
-        &:checked ~ .olt-radio-button--checkmark {
+        &:checked ~ .olt-radio-button__checkmark {
             background-color: $primary-08;
             border-color: $primary-01;
 
@@ -38,14 +38,14 @@
             cursor: default;
         }
 
-        &:disabled ~ .olt-radio-button--checkmark {
+        &:disabled ~ .olt-radio-button__checkmark {
             cursor: default;
             border: 2px dashed;
             border-color: $primary-05;
         }
     }
 
-    .olt-radio-button--checkmark {
+    .olt-radio-button__checkmark {
         position: absolute;
         top: 0;
         left: 0;
@@ -68,7 +68,7 @@
         }
     }
 
-    &:hover input ~ .olt-radio-button--checkmark {
+    &:hover input ~ .olt-radio-button__checkmark {
         opacity: .8;
     }
 }

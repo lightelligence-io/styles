@@ -9,40 +9,28 @@
     transform: translateY(100%);
     transition: transform 300ms cubic-bezier(.91,.01,.58,1);
     padding-left: 48px;
+    padding-right: 48px;
     line-height: 64px;
     z-index: 900;
+    display: flex;
+    flex-wrap: wrap;
+
+    .material-icons {
+        display: inline;
+        vertical-align: -12px;
+        font-size: 36px;
+        margin-right: $spacing-desktop-s;
+    }
 
     &--is-open {
         transform: translateY(0);
     }
 
-    &:before {
-        content: '';
-        position: absolute;
-        left: 8px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 24px;
-        height: 24px;
-        background: url($info-icon);
+    &__content {
+        flex: 1 1 auto;
     }
 
-    &--actions {
-        position: absolute;
-        right: 8px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    @include screen('tablet') {
-        &:before {
-            left: 16px;
-        }
-        &--actions {
-            position: absolute;
-            right: 16px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
+    &__actions {
+        flex: 0 0 auto;
     }
 }

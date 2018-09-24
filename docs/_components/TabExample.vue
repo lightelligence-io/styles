@@ -1,9 +1,9 @@
 <template>
     <section>
         <div class="olt-tabs">
-            <button class="olt-tabs--item" :class="{'olt-tabs--item__is-active': activeIndex === 0}" @click="activeIndex = 0">Tab 1</button>
-            <button class="olt-tabs--item" :class="{'olt-tabs--item__is-active': activeIndex === 1}" @click="activeIndex = 1">Tab 2</button>
-            <button class="olt-tabs--item" :class="{'olt-tabs--item__is-active': activeIndex === 2}" @click="activeIndex = 2">Tab 3</button>
+            <button class="olt-tabs__item" :class="{'olt-tabs__item--is-active': activeIndex === 0}" @click="activeIndex = 0">Tab 1</button>
+            <button class="olt-tabs__item" :class="{'olt-tabs__item--is-active': activeIndex === 1}" @click="activeIndex = 1">Tab 2</button>
+            <button class="olt-tabs__item" :class="{'olt-tabs__item--is-active': activeIndex === 2}" @click="activeIndex = 2">Tab 3</button>
         </div>
         <div v-show="activeIndex === 0">
             E-services utilize; magnetic scale: capture dynamic long-tail solutions interfaces, "e-services proactive synergies embrace vortals innovative." Peer-to-peer, embedded, podcasting transition wikis relationships implement maximize.

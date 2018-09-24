@@ -1,15 +1,15 @@
 .olt-stepper {
-    &--header {
+    &__header {
         position: relative;
         height: 40px;
-        .olt-stepper--step-item {
+        .olt-stepper__step-item {
             display: inline-block;
             z-index: 1;
             cursor: pointer;
             text-align: center;
             float: left;
 
-            .olt-stepper--step-item__inner {
+            .olt-stepper__step-item-inner {
                 background: $primary-08;
                 padding: 0 16px;
                 display: inline;
@@ -20,7 +20,7 @@
                 margin-right: 8px;
             }
 
-            &__is-active {
+            &--is-active {
                 .olt-fab {
                     color: $primary-01;
                 }
@@ -40,13 +40,13 @@
 
             &:first-child {
                 text-align: left;
-                .olt-stepper--step-item__inner {
+                .olt-stepper__step-item-inner {
                     padding-left: 0;
                 }
             }
             &:last-child {
                 text-align: right;
-                .olt-stepper--step-item__inner {
+                .olt-stepper__step-item-inner {
                     padding-right: 0;
                 }
             }
@@ -62,15 +62,18 @@
             z-index: -1;     
         }
     }
-    &--content {
+    &__content {
         padding: 32px 0px 16px 0px;
 
         &-item {
             display: none;
 
-            &__is-active {
+            &--is-active {
                 display: flex;
             }
         }
+    }
+    .olt-fab {
+        line-height: 40px;
     }
 }

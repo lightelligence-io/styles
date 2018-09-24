@@ -11,7 +11,8 @@ module.exports = {
         children: [
           ["/layout/grid-system", "Grid System"],
           ["/layout/media-query-classes", "Media Query Classes"],
-          ["/layout/spacings", "Responsive Spacings"]
+          ["/layout/spacings", "Responsive Spacings"],
+          ["/layout/app-layout", "App Layout"]
         ]
       },
       {
@@ -20,6 +21,7 @@ module.exports = {
         children: [
           ["/content/typography", "Typography & Fonts"],
           ["/content/colors", "Colors"],
+          ["/content/icons", "Icons"],
         ],
       },
       {
@@ -38,9 +40,11 @@ module.exports = {
           ["/components/tabs", "Tabs"],
           ["/components/toggle-buttons", "Toggle-Buttons"],
           ["/components/stepper", "Stepper"],
-          ["/components/avatar", "Avatar" ],
-          ["/components/navigation", "Navigation" ],
-          ["/components/pageblock", "Page Blocks" ],
+          ["/components/datepicker", "Datepicker"],
+          ["/components/footer", "Footer"],
+          ["/components/avatar", "Avatar"],
+          ["/components/navigation", "Navigation Bar"],
+          ["/components/pageblock", "Page Blocks"]
         ]
       }
     ]
