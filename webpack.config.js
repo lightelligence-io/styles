@@ -6,7 +6,6 @@ const processHTMLPages = require("./processHTMLHelper.js");
 const extractCSS = new ExtractTextPlugin("lightelligence-ui.css");
 const ProgressBar = new WebpackBar();
 const plugins = [ProgressBar, extractCSS];
-// ].concat(processHTMLPages());
 
 module.exports = {
   entry: [
@@ -22,16 +21,11 @@ module.exports = {
           use: ["css-loader", "postcss-loader", "sass-loader"]
         })
       },
-      // {
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   loader: 'babel-loader'
-      // },
       {
         test: /\.(ttf|eot|svg|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: "file-loader",
         query: {
-          name: "[path][name].[ext]",
+          name: "fonts/[name].[ext]",
           context: "./source"
         }
       }
@@ -48,8 +42,7 @@ module.exports = {
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-      "Access-Control-Allow-Headers":
-        "X-Requested-With, content-type, Authorization"
+      "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
     },
     contentBase: "./source"
   },
