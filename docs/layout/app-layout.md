@@ -45,7 +45,7 @@
             <a href="#" class="olt-footer__item">Terms of Use</a>
             <a href="#" class="olt-footer__item">Privacy Policy</a>
         </div>
-        <div class="olt-footer__middle">
+        <div class="olt-footer__center">
             <span class="olt-footer__item">© 2018 App-Developer-XY GmbH</span>
         </div>
         <div class="olt-footer__right">
@@ -147,7 +147,7 @@
         <a href="#" class="olt-footer__item">Terms of Use</a>
         <a href="#" class="olt-footer__item">Privacy Policy</a>
     </div>
-    <div class="olt-footer__middle">
+    <div class="olt-footer__center">
         <span class="olt-footer__item">© 2018 App-Developer-XY GmbH</span>
     </div>
     <div class="olt-footer__right">

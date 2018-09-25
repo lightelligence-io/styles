@@ -7,7 +7,7 @@
     &__left {
         flex: 0 0 auto;
     }
-    &__middle {
+    &__center {
         flex: 0 0 auto;
         .olt-footer__item {
             &:first-child {
@@ -38,7 +38,7 @@
             flex: 1 0 100%;
             padding-bottom: $spacing-desktop-s;
         }
-        &__middle {
+        &__center {
             .olt-footer__item {
                 &:first-child {
                     padding-left: 0;
