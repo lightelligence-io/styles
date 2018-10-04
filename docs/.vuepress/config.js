@@ -3,6 +3,9 @@ module.exports = {
   serviceWorker: true,
   themeConfig: {
     nav: [{ text: "Back to Homepage", link: "https://lightelligence.io/" }],
+    serviceWorker: {
+      updatePopup: true
+    },
     sidebar: [
       ["/", "Introduction"],
       {
