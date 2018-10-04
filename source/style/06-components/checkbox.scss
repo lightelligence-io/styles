@@ -1,5 +1,5 @@
 /* The container */
-.olt-checkbox__wrapper {
+.olt-checkbox {
     display: inline-block;
     position: relative;
     padding-left: $spacing-desktop-s + $spacing-desktop-s;
@@ -21,18 +21,22 @@
             cursor: default;
         }
     }
-
+    .olt-checkbox__label {
+        margin:0;
+        font-size: 16px;
+        line-height: 24px;
+    }
     /* Create a custom checkbox */
     .olt-checkbox__checked-icon {
         position: absolute;
-        top: 0;
+        top: 3px;
         left: 0;
         height: 20px;
         width: 20px;
         border: solid 2px $primary-03;
         border-radius: 2px;
         transition: border-color 150ms;
-        
+
         &:after {
             content: "";
             position: absolute;
