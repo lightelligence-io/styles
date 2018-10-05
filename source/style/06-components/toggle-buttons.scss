@@ -1,6 +1,6 @@
 .olt-toggle-button__group {
-    display: block;
-    .olt-toggle-button {
+    display:flex;
+    > .olt-toggle-button {
         background: transparent;
         border: solid 1px $primary-04;
         color: $primary-04;
@@ -9,7 +9,6 @@
         padding: $spacing-desktop-xs 20px;
         font-size: 14px;
         line-height: 18px;
-        margin-right: -5px;
         cursor: pointer;
         transition: color 150ms;
 
