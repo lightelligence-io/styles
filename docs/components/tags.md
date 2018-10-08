@@ -23,13 +23,13 @@
 ````
 
 ## Clickable with Trailing Icon
-<span class="olt-tag olt-tag--primary-01 olt-tag--has-trailing-icon olt-spacing--s-right">Tag Trailing Icon<span class="olt-tag--icon material-icons">close</span></span>
-<span class="olt-tag olt-tag--primary-02 olt-tag--has-trailing-icon olt-spacing--s-right">Tag Trailing Icon<span class="olt-tag--icon material-icons">close</span></span>
-<span class="olt-tag olt-tag--primary-04 olt-tag--has-trailing-icon olt-spacing--s-right">Tag Trailing Icon<span class="olt-tag--icon material-icons">close</span></span>
+<button class="olt-tag olt-tag--primary-01 olt-tag--has-trailing-icon olt-spacing--s-right">Tag Trailing Icon<span class="olt-tag--icon material-icons">close</span></button>
+<button class="olt-tag olt-tag--primary-02 olt-tag--has-trailing-icon olt-spacing--s-right">Tag Trailing Icon<span class="olt-tag--icon material-icons">close</span></button>
+<button class="olt-tag olt-tag--primary-04 olt-tag--has-trailing-icon olt-spacing--s-right">Tag Trailing Icon<span class="olt-tag--icon material-icons">close</span></button>
 <div class="olt-spacing--s-top"></div>
-<span class="olt-tag olt-tag--bordered-primary-01 olt-tag--has-trailing-icon olt-spacing--s-right">Tag Trailing Icon<span class="olt-tag--icon material-icons">close</span></span>
-<span class="olt-tag olt-tag--bordered-primary-02 olt-tag--has-trailing-icon olt-spacing--s-right">Tag Trailing Icon<span class="olt-tag--icon material-icons">close</span></span>
-<span class="olt-tag olt-tag--bordered-primary-04 olt-tag--has-trailing-icon olt-spacing--s-right">Tag Trailing Icon<span class="olt-tag--icon material-icons">close</span></span>
+<button class="olt-tag olt-tag--bordered-primary-01 olt-tag--has-trailing-icon olt-spacing--s-right">Tag Trailing Icon<span class="olt-tag--icon material-icons">close</span></button>
+<button class="olt-tag olt-tag--bordered-primary-02 olt-tag--has-trailing-icon olt-spacing--s-right">Tag Trailing Icon<span class="olt-tag--icon material-icons">close</span></button>
+<button class="olt-tag olt-tag--bordered-primary-04 olt-tag--has-trailing-icon olt-spacing--s-right">Tag Trailing Icon<span class="olt-tag--icon material-icons">close</span></button>
 
 ````html
 <span class="olt-tag olt-tag--primary-01 olt-tag--has-trailing-icon">
