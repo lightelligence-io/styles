@@ -16,8 +16,6 @@
     @include foreach-color('border-color', 'olt-tag--bordered'){
         background: transparent;
         border: solid 1px;
-        height: 24px;
-        line-height: 24px;
     };
 
     &.olt-tag--has-trailing-icon {
