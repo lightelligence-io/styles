@@ -1,7 +1,7 @@
 # App Layout
 
 
-<div class="olt-color--as-background-primary-07" style="border: solid 2px #EEE; border-radius: 2px; position: relative;">
+<div class="olt-color--as-background-primary-07 large-container" style="border: solid 2px #EEE; border-radius: 2px; position: relative;">
     <navbar :is-large="false" />
     <main class="olt-app-content">
         <div class="olt-row">

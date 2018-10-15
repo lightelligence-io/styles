@@ -82,13 +82,20 @@
 
         .olt-modal__header {
             min-height: 25vh;
-            padding: 36px;
+            padding: 36px 0px;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .olt-modal__content {
             min-height: 75vh;
             background: $primary-07;
             padding: 36px;
+
+            &--inner {
+                max-width: 600px;
+                margin: 0 auto;
+            }
         }
 
         .olt-modal__close-button {
