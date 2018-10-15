@@ -1,15 +1,11 @@
 <template>
     <section>
-        <button class="olt-button is-raised--primary-01" @click="toggle(true)">Toggle Snackbar</button>
-        <button class="olt-button is-raised--primary-01" @click="toggle(false)">Toggle Snackbar self disappear</button>
+        <button class="olt-button is-raised--primary-01" @click="toggle(false)">Toggle Snackbar</button>
         <div class="olt-snackbar" :class="{'olt-snackbar--is-open': open}">
             <span class="olt-snackbar__content">
                 <i class="material-icons">error_outline</i>
                 Snackbar Content
             </span>
-            <div class="olt-snackbar--actions" v-if="showClose">
-                <button class="olt-button is-bordered--primary-08" @click="toggle(true)">Close</button>
-            </div>
         </div>
     </section>
 </template>

@@ -11,16 +11,10 @@ and remove to open and close the snackbar.
 ````html
 <div class="olt-snackbar">
     Snackbar Content
-    <div class="olt-snackbar__actions">
-        <button class="olt-button is-bordered--primary-08">Close</button>
-    </div>
 </div>
 <!-- opened snackbar -->
 <div class="olt-snackbar olt-snackbar--is-open">
     Snackbar Content
-    <div class="olt-snackbar__actions">
-        <button class="olt-button is-bordered--primary-08">Close</button>
-    </div>
 </div>
 ````
 #### State Classes
