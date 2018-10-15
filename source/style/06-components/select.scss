@@ -3,6 +3,7 @@
     min-width: 160px;
     position: relative;
     padding-top: 10px;
+    margin-top: 8px;
 
     .olt-select__label {
         display: block;
@@ -68,5 +69,9 @@
         border-left: 4px solid transparent;
         border-right: 4px solid transparent;
         border-top: 4px solid $primary-03;
+    }
+
+    &.is-fullwidth {
+        width: 100%;
     }
 }
