@@ -19,7 +19,9 @@
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "webpack -p && NODE_ENV=production vuepress build docs",
-    "dev": "NODE_ENV=development vuepress dev docs --port=8081"
+    "dev": "NODE_ENV=development vuepress dev docs --port=8081",
+    "lint": "eslint source/",
+    "lint:fix": "eslint --fix source/"
   },
   "devDependencies": {
     "autoprefixer": "^8.5.0",
@@ -28,6 +30,13 @@
     "babel-preset-env": "^1.7.0",
     "concurrently": "^4.0.1",
     "css-loader": "^0.28.11",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-loader": "1.9.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
     "fs": "0.0.1-security",
@@ -36,9 +45,11 @@
     "gulp-if-else": "^1.0.3",
     "gulp-imagemin": "^4.1.0",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.1.1",
     "node-sass": "^4.9.0",
     "normalize.css": "^8.0.0",
     "postcss-loader": "^2.0.9",
+    "prettier": "^1.14.2",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
     "url-loader": "^1.0.1",
@@ -51,5 +62,17 @@
   },
   "dependencies": {
     "material-design-icons-iconfont": "^3.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,scss}": [
+      "npm run lint:fix -- --max-warnings 0",
+      "prettier --write",
+      "git add"
+    ]
   }
 }
