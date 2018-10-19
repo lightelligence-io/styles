@@ -1,30 +1,32 @@
-# Stepper
+# Stepper and Stepper Navigation
+
+## Stepper
 
 :::warning
-You have to implement the active/inactive logic by your own. Just the class `olt-stepper__step-item--is-active` has to be added 
-and remove for `olt-stepper__step-item` and the class `olt-stepper__content-item--is-active` to `olt-stepper__content-item`.
+You have to implement the active/inactive logic by your own. Just the class `olt-stepper-nav__step-item--is-active` has to be added 
+and remove for `olt-stepper-nav__step-item` and the class `olt-stepper__content-item--is-active` to `olt-stepper__content-item`.
 :::
 
 <stepper></stepper>
 
 ````html
 <section class="olt-stepper">
-    <div class="olt-stepper__header">
-        <div class="olt-stepper__step-item olt-stepper__step-item--is-active">
-            <div class="olt-stepper__step-item-inner">
-                <div class="olt-fab olt-fab--paginator">1</div>
+    <div class="olt-stepper-nav">
+        <div class="olt-stepper-nav__step-item olt-stepper-nav__step-item--is-active">
+            <div class="olt-stepper-nav__step-item-inner">
+                <div class="olt-fab olt-fab--mini olt-fab--paginator">1</div>
                 <span>Step</span>
             </div>
         </div>
-        <div class="olt-stepper__step-item">
-            <div class="olt-stepper__step-item-inner">
-                <div class="olt-fab olt-fab--paginator">2</div>
+        <div class="olt-stepper-nav__step-item">
+            <div class="olt-stepper-nav__step-item-inner">
+                <div class="olt-fab olt-fab--mini olt-fab--paginator">2</div>
                 <span>Step</span>
             </div>
         </div>
-        <div class="olt-stepper__step-item">
-            <div class="olt-stepper__step-item-inner">
-                <div class="olt-fab olt-fab--paginator">3</div>
+        <div class="olt-stepper-nav__step-item">
+            <div class="olt-stepper-nav__step-item-inner">
+                <div class="olt-fab olt-fab--mini olt-fab--paginator">3</div>
                 <span>Step</span>
             </div>
         </div>
@@ -51,10 +53,10 @@ and remove for `olt-stepper__step-item` and the class `olt-stepper__content-item
 </section>
 ````
 
-We use following script to calculate the dynamic width of `olt-stepper__step-item`.
+We use following script to calculate the dynamic width of `olt-stepper-nav__step-item`.
 
 ````javascript
-const elements = document.querySelectorAll('.olt-stepper__step-item');
+const elements = document.querySelectorAll('.olt-stepper-nav__step-item');
 const length = elements.length;
 elements.forEach((element) => {
     // Each item should have the width of 100% / Number of elements
@@ -65,5 +67,35 @@ elements.forEach((element) => {
 #### State Classes 
 | Class                                        |                                      |
 | -------------------------------------------- | ------------------------------------ |
-| `olt-stepper__step-item--is-active`          | set step item to active              |
+| `olt-stepper-nav__step-item--is-active`      | set step item to active              |
 | `olt-stepper__content-item--is-active`       | set step content item to active      |
+
+
+## StepperNav
+
+The Stepper Navigation `olt-stepper-nav` can be used standalone.
+
+<stepper-nav />
+
+```html
+<div class="olt-stepper-nav">
+    <div class="olt-stepper-nav__step-item olt-stepper-nav__step-item--is-active">
+        <div class="olt-stepper-nav__step-item-inner">
+            <div class="olt-fab olt-fab--mini olt-fab--paginator">1</div>
+            <span>Step</span>
+        </div>
+    </div>
+    <div class="olt-stepper-nav__step-item">
+        <div class="olt-stepper-nav__step-item-inner">
+            <div class="olt-fab olt-fab--mini olt-fab--paginator">2</div>
+            <span>Step</span>
+        </div>
+    </div>
+    <div class="olt-stepper-nav__step-item">
+        <div class="olt-stepper-nav__step-item-inner">
+            <div class="olt-fab olt-fab--mini olt-fab--paginator">3</div>
+            <span>Step</span>
+        </div>
+    </div>
+</div>
+```

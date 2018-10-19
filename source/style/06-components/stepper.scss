@@ -1,67 +1,4 @@
 .olt-stepper {
-    &__header {
-        position: relative;
-        height: 40px;
-        .olt-stepper__step-item {
-            display: inline-block;
-            z-index: 1;
-            cursor: pointer;
-            text-align: center;
-            float: left;
-
-            .olt-stepper__step-item-inner {
-                background: $primary-08;
-                padding: 0 16px;
-                display: inline;
-            }
-
-            .olt-fab {
-                display: inline-block;
-                margin-right: 8px;
-            }
-
-            &--is-active {
-                .olt-fab {
-                    color: $primary-01;
-                }
-            }
-            
-            &:hover {
-                .olt-fab {
-                    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.12), 0 5px 12px 0 rgba(0,0,0,0.24);
-                }
-            }
-
-            &:active {
-                .olt-fab {
-                    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.12), 0 2px 12px 0 rgba(0,0,0,0.24);
-                }
-            }
-
-            &:first-child {
-                text-align: left;
-                .olt-stepper__step-item-inner {
-                    padding-left: 0;
-                }
-            }
-            &:last-child {
-                text-align: right;
-                .olt-stepper__step-item-inner {
-                    padding-right: 0;
-                }
-            }
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 100%;
-            border-bottom: solid 1px $primary-04;
-            z-index: -1;     
-        }
-    }
     &__content {
         padding: 32px 0px 16px 0px;
 
@@ -72,8 +9,5 @@
                 display: flex;
             }
         }
-    }
-    .olt-fab {
-        line-height: 40px;
     }
 }
