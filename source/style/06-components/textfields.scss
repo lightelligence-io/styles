@@ -6,7 +6,7 @@
     margin-top: 8px;
 
     &.is-fullwidth {
-       width: 100%; 
+        width: 100%;
     }
 
     &.has-error-message,
@@ -142,6 +142,15 @@
 
             & ~ .olt-textfield__input-icon {
                 color: $alert;
+            }
+        }
+    }
+
+    &--no-border-bottom {
+        .olt-textfield__input {
+            border-bottom:none;
+            &.has-error, &:disabled, &:focus, &:not(.has-floating-label) {
+                border-bottom: none;
             }
         }
     }
