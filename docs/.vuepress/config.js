@@ -47,7 +47,8 @@ module.exports = {
           ["/components/footer", "Footer"],
           ["/components/avatar", "Avatar"],
           ["/components/navigation", "Navigation Bar"],
-          ["/components/pageblock", "Page Blocks"]
+          ["/components/pageblock", "Page Blocks"],
+          ["/components/table", "Table"],
         ]
       }
     ]

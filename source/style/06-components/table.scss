@@ -1,0 +1,44 @@
+.olt-table {
+    width: 100%;
+    border: 0;
+
+    &__header {
+        width: 100%;
+        background: $primary-07;
+        border: 0;
+        border-bottom: solid 1px $primary-06;
+        
+        th {
+            font-family: 'Overpass Mono', monospace;
+            border: 0;
+            color: $primary-03;
+            font-size: 12px;
+            padding: {
+                top: 12px;
+                bottom: 12px;
+                left: 16px;
+                right: 16px;
+            }
+        }
+    }
+
+    tr:not(.olt-table__header) {
+        background: $primary-08;
+        border: 0;
+        border-bottom: solid 1px $primary-06;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    td {
+        border: 0;
+        padding: {
+            top: 12px;
+            bottom: 12px;
+            left: 16px;
+            right: 16px;
+        }
+    }
+}
