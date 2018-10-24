@@ -75,10 +75,16 @@
         right: 0;
         bottom: 0;
         width: 100%;
+        min-height: 100vh;
+        overflow: auto;
         transform: translateY(10%);
         border-radius: 0;
         padding: 0;
         text-align: left;
+
+        @include screen('mobile') {
+            max-width: unset;
+        }
 
         .olt-modal__header {
             min-height: 25vh;
@@ -174,4 +180,7 @@
             transition: z-index 0ms ease 0ms, opacity 300ms ease 100ms;
         }
     }
+}
+body.olt-modal--in-body-open {
+    overflow: hidden;
 }

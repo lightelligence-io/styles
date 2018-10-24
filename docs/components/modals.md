@@ -6,6 +6,7 @@ and remove to open or close the modal.
 :::
 
 We have an explicit modal to notify the user about an error [here](/components/notifications.html#as-modal).
+If you want to disable the scrollability of the whole body you have to set the class `olt-modal--in-body-open` to the body element.
 
 <fullscreen-modal></fullscreen-modal>
 
@@ -52,3 +53,4 @@ We have an explicit modal to notify the user about an error [here](/components/n
 | Class                                        |                                 |
 | -------------------------------------------- | ------------------------------- |
 | `olt-modal--is-open`                         | opens the modal                 |
+| `olt-modal--in-body-open`                    | disable scroll in body          |
