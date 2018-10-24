@@ -17,6 +17,14 @@
             }
         }
     }
+    @if ($type == 'border-color-only') {
+        @each $color in $colors {
+            &.#{$prefix}-#{nth($color, 1)} {
+                border-color: nth(nth($color, 2), 1);
+                @content;
+            }
+        }
+    }
     @if ($type == 'color') {
         @each $color in $colors {
             &.#{$prefix}-#{nth($color, 1)} {
