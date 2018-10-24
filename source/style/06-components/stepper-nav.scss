@@ -1,6 +1,7 @@
 .olt-stepper-nav {
     position: relative;
     height: 40px;
+    z-index: 0;
     .olt-stepper-nav__step-item {
         display: inline-block;
         z-index: 1;
