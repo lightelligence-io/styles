@@ -64,6 +64,11 @@ Array.from(document.querySelectorAll(".olt-textfield__input")).map(x => new OltT
     <label class="olt-textfield__input-label" for="input-disabled">Disabled</label>
 </div>
 
+<div class="olt-textfield__wrapper is-fullwidth">
+    <input class="olt-textfield__input" name="input" value="Readonly value in here" id="input-readonly" readonly/>
+    <label class="olt-textfield__input-label" for="input-readonly">Readonly</label>
+</div>
+
 <input-counter></input-counter>
 
 <div class="olt-textfield__wrapper">
@@ -96,6 +101,11 @@ Array.from(document.querySelectorAll(".olt-textfield__input")).map(x => new OltT
 <div class="olt-textfield__wrapper">
     <input class="olt-textfield__input" name="input" id="input-disabled" disabled/>
     <label class="olt-textfield__input-label" for="input-disabled">Disabled</label>
+</div>
+
+<div class="olt-textfield__wrapper is-fullwidth">
+    <input class="olt-textfield__input" name="input" value="Readonly value in here" id="input-readonly" readonly/>
+    <label class="olt-textfield__input-label" for="input-readonly">Readonly</label>
 </div>
 
 <div class="olt-textfield__wrapper has-info">

@@ -17,7 +17,7 @@
   position: relative;
   margin-bottom: 8px;
   transition-delay: 0ms;
-  transition-property: height;
+  transition-property: min-height;
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.91, 0.01, 0.58, 1);
 
@@ -46,8 +46,9 @@
 
   &--is-dismissed {
     height: 0px;
+    min-height: 0px;
     transition-delay: 200ms;
-    transition-property: height;
+    transition-property: min-height;
     transition-duration: 300ms;
 
     .olt-banner-notification--content,

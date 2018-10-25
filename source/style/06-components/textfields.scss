@@ -115,7 +115,8 @@
       }
     }
 
-    &:disabled {
+    &:disabled,
+    &:read-only {
       border-bottom: 0.075rem dotted $primary-05;
 
       & ~ .olt-textfield__input-label {
