@@ -5,8 +5,8 @@ import 'material-design-icons-iconfont';
 import { OltTextfield } from './script/framework';
 
 export {
-    normalizeStyle,
-    style,
-    // Components
-    OltTextfield,
+  normalizeStyle,
+  style,
+  // Components
+  OltTextfield,
 };

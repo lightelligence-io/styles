@@ -1,47 +1,48 @@
-@mixin foreach-color($type, $prefix) { // type could be background, border-color, color
-    @if ($type == 'background') {
-        @each $color in $colors {
-            &.#{$prefix}-#{nth($color, 1)} {
-                #{$type}: nth(nth($color, 2), 1);
-                color: nth(nth($color, 2), 2);
-                @content;
-            }
-        }
+@mixin foreach-color($type, $prefix) {
+  // type could be background, border-color, color
+  @if ($type == 'background') {
+    @each $color in $colors {
+      &.#{$prefix}-#{nth($color, 1)} {
+        #{$type}: nth(nth($color, 2), 1);
+        color: nth(nth($color, 2), 2);
+        @content;
+      }
     }
-    @if ($type == 'border-color') {
-        @each $color in $colors {
-            &.#{$prefix}-#{nth($color, 1)} {
-                #{$type}: nth(nth($color, 2), 1);
-                color: nth(nth($color, 2), 1);
-                @content;
-            }
-        }
+  }
+  @if ($type == 'border-color') {
+    @each $color in $colors {
+      &.#{$prefix}-#{nth($color, 1)} {
+        #{$type}: nth(nth($color, 2), 1);
+        color: nth(nth($color, 2), 1);
+        @content;
+      }
     }
-    @if ($type == 'border-color-only') {
-        @each $color in $colors {
-            &.#{$prefix}-#{nth($color, 1)} {
-                border-color: nth(nth($color, 2), 1);
-                @content;
-            }
-        }
+  }
+  @if ($type == 'border-color-only') {
+    @each $color in $colors {
+      &.#{$prefix}-#{nth($color, 1)} {
+        border-color: nth(nth($color, 2), 1);
+        @content;
+      }
     }
-    @if ($type == 'color') {
-        @each $color in $colors {
-            &.#{$prefix}-#{nth($color, 1)} {
-                #{$type}: nth(nth($color, 2), 1);
-                @content;
-            }
-        }
+  }
+  @if ($type == 'color') {
+    @each $color in $colors {
+      &.#{$prefix}-#{nth($color, 1)} {
+        #{$type}: nth(nth($color, 2), 1);
+        @content;
+      }
     }
-    @if ($type == 'bordered-hover') {
-        @each $color in $colors {
-            &.#{$prefix}-#{nth($color, 1)}:hover {
-                background: nth(nth($color, 2), 1);
-                color: nth(nth($color, 2), 2);
-                border-color: nth(nth($color, 2), 1);
-                filter: brightness(100%);
-                @content;
-            }
-        }
+  }
+  @if ($type == 'bordered-hover') {
+    @each $color in $colors {
+      &.#{$prefix}-#{nth($color, 1)}:hover {
+        background: nth(nth($color, 2), 1);
+        color: nth(nth($color, 2), 2);
+        border-color: nth(nth($color, 2), 1);
+        filter: brightness(100%);
+        @content;
+      }
     }
+  }
 }

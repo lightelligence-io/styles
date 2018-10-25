@@ -1,31 +1,31 @@
 .show {
-    &-for-desktop-only {
-        @include screen('mobile') {
-            display: none !important;
-        }
-        @include screen('tablet') {
-            display: none !important;
-        }
+  &-for-desktop-only {
+    @include screen('mobile') {
+      display: none !important;
     }
-    &-for-mobile-only {
-        @include screen('desktop') {
-            display: none !important;
-        }
-        @include screen('tablet') {
-            display: none !important;
-        }
+    @include screen('tablet') {
+      display: none !important;
     }
+  }
+  &-for-mobile-only {
+    @include screen('desktop') {
+      display: none !important;
+    }
+    @include screen('tablet') {
+      display: none !important;
+    }
+  }
 }
 
 .hide {
-    &-for-mobile-only {
-        @include screen('mobile') {
-            display: none !important;
-        }
+  &-for-mobile-only {
+    @include screen('mobile') {
+      display: none !important;
     }
-    &-for-desktop-only {
-        @include screen('desktop') {
-            display: none !important;
-        }
+  }
+  &-for-desktop-only {
+    @include screen('desktop') {
+      display: none !important;
     }
+  }
 }

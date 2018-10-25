@@ -1,186 +1,187 @@
-
 .olt-modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,40%);
-    box-shadow: $box-shadow-deep;
-    background: $primary-08;
-    border-radius: 4px;
-    padding: 36px;
-    z-index: -1;
-    opacity: 0;
-    width: 150px;
-    transition: z-index 0ms ease 350ms, opacity 300ms ease 100ms, width 200ms ease 200ms, transform 500ms ease-in-out 0ms;
-    min-width: 320px;
-    text-align: center;
-    min-height: 224px;
-    
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 40%);
+  box-shadow: $box-shadow-deep;
+  background: $primary-08;
+  border-radius: 4px;
+  padding: 36px;
+  z-index: -1;
+  opacity: 0;
+  width: 150px;
+  transition: z-index 0ms ease 350ms, opacity 300ms ease 100ms,
+    width 200ms ease 200ms, transform 500ms ease-in-out 0ms;
+  min-width: 320px;
+  text-align: center;
+  min-height: 224px;
+
+  @include screen('mobile') {
+    width: 95%;
+    max-width: 320px;
+  }
+
+  &--notification {
+    max-width: 95%;
+    min-height: 288px;
+    padding-top: $spacing-desktop-s + 112px;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 112px;
+      width: 64px;
+      border-radius: 0 0 32px 32px;
+      background: $notify;
+    }
+
+    .olt-modal__content {
+      text-align: center;
+
+      .olt-modal__notification-icon {
+        position: absolute;
+        top: 56px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .material-icons {
+          font-size: 50px;
+          color: $primary-08;
+        }
+      }
+    }
+
+    .olt-modal__actions {
+      text-align: center;
+      margin-top: 40px;
+
+      .olt-button {
+        display: inline;
+
+        &:first-child {
+          margin-right: $spacing-desktop-xs;
+          margin-bottom: $spacing-desktop-s;
+        }
+      }
+    }
+  }
+  &--fullscreen {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow: auto;
+    transform: translateY(10%);
+    border-radius: 0;
+    padding: 0;
+    text-align: left;
+
     @include screen('mobile') {
-        width: 95%;
-        max-width: 320px;
+      max-width: unset;
     }
 
-    &--notification {
-        max-width: 95%;
-        min-height: 288px;
-        padding-top: $spacing-desktop-s + 112px;
-        overflow: hidden;
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            height: 112px;
-            width: 64px;
-            border-radius: 0 0 32px 32px;
-            background: $notify;
-        }
-
-        .olt-modal__content {
-            text-align: center;
-            
-            .olt-modal__notification-icon {
-                position: absolute;
-                top: 56px;
-                left: 50%;
-                transform: translateX(-50%);
-
-                .material-icons {
-                    font-size: 50px;
-                    color: $primary-08;
-                }
-            }
-        }
-
-        .olt-modal__actions {
-            text-align: center;
-            margin-top: 40px;
-
-            .olt-button {
-                display: inline;
-
-                &:first-child {
-                    margin-right: $spacing-desktop-xs;
-                    margin-bottom: $spacing-desktop-s;
-                }
-            }
-        }
+    .olt-modal__header {
+      min-height: 25vh;
+      padding: 36px 0px;
+      max-width: 600px;
+      margin: 0 auto;
     }
-    &--fullscreen {
+
+    .olt-modal__content {
+      min-height: 75vh;
+      background: $primary-07;
+      padding: 36px;
+
+      &--inner {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    }
+
+    .olt-modal__close-button {
+      position: absolute;
+      top: 36px;
+      right: 36px;
+      background: $primary-07;
+      border: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      line-height: 40px;
+      font-size: 24px;
+      cursor: pointer;
+
+      .material-icons {
+        line-height: 40px;
+      }
+    }
+  }
+
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: rgba($primary-08, 0.7);
+    opacity: 0;
+    transition: z-index 0ms ease 350ms, opacity 300ms ease 100ms;
+  }
+
+  &__content {
+    display: none;
+  }
+
+  &__actions {
+    margin-top: 40px;
+    display: none;
+  }
+
+  &.olt-modal--is-open {
+    &.olt-modal {
+      z-index: 1000;
+      opacity: 1;
+      transform: translate(-50%, -50%);
+      transition: z-index 0ms ease 0ms, opacity 300ms ease 100ms,
+        width 200ms ease 0ms, transform 500ms ease-in-out 0ms;
+
+      &--notification {
+        width: 440px;
+        //transition: width 200ms ease 0ms;
+      }
+
+      &--fullscreen {
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         width: 100%;
-        min-height: 100vh;
-        overflow: auto;
-        transform: translateY(10%);
-        border-radius: 0;
-        padding: 0;
-        text-align: left;
-
-        @include screen('mobile') {
-            max-width: unset;
-        }
-
-        .olt-modal__header {
-            min-height: 25vh;
-            padding: 36px 0px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .olt-modal__content {
-            min-height: 75vh;
-            background: $primary-07;
-            padding: 36px;
-
-            &--inner {
-                max-width: 600px;
-                margin: 0 auto;
-            }
-        }
-
-        .olt-modal__close-button {
-            position: absolute;
-            top: 36px;
-            right: 36px;
-            background: $primary-07;
-            border:0;
-            width: 40px;
-            height: 40px;
-            border-radius: 20px;
-            line-height: 40px;
-            font-size: 24px;
-            cursor: pointer;
-
-            .material-icons {
-                line-height: 40px;
-            }
-        }
-    }
-    
-    &__backdrop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
-        background: rgba($primary-08, 0.7);
-        opacity: 0; 
-        transition: z-index 0ms ease 350ms, opacity 300ms ease 100ms;
+        transform: unset;
+      }
     }
 
-    &__content {
-        display: none;
+    .olt-modal__content {
+      display: block;
     }
 
-    &__actions {
-        margin-top: 40px;
-        display: none;
+    .olt-modal__actions {
+      display: block;
     }
 
-    &.olt-modal--is-open {
-        &.olt-modal {
-            z-index: 1000;
-            opacity: 1;
-            transform: translate(-50%,-50%);
-            transition: z-index 0ms ease 0ms, opacity 300ms ease 100ms, width 200ms ease 0ms, transform 500ms ease-in-out 0ms;
-
-            &--notification {
-                width: 440px;
-                //transition: width 200ms ease 0ms;
-            }
-
-            &--fullscreen {
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                width: 100%;
-                transform: unset;
-            }
-        }
-
-        .olt-modal__content {
-            display: block
-        }
-
-        .olt-modal__actions {
-            display: block;
-        }
-
-        ~ .olt-modal__backdrop {
-            opacity: 1;
-            z-index: 999;
-            transition: z-index 0ms ease 0ms, opacity 300ms ease 100ms;
-        }
+    ~ .olt-modal__backdrop {
+      opacity: 1;
+      z-index: 999;
+      transition: z-index 0ms ease 0ms, opacity 300ms ease 100ms;
     }
+  }
 }
 body.olt-modal--in-body-open {
-    overflow: hidden;
+  overflow: hidden;
 }

@@ -1,9 +1,10 @@
-
 body {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: 'PT Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'PT Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
 
 button,
@@ -16,11 +17,11 @@ textarea {
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ::selection,
 ::-moz-selection {
-    color: $primary-08;
-    background: $primary-01;
+  color: $primary-08;
+  background: $primary-01;
 }

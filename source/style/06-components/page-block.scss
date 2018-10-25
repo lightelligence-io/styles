@@ -1,25 +1,23 @@
 .olt-page-block {
+  @include responsive-spacing-m('padding');
 
-	@include responsive-spacing-m("padding");
+  &--no-padding-top {
+    padding-top: 0;
+  }
+  &--no-padding-bottom {
+    padding-bottom: 0;
+  }
+  &--no-padding-left {
+    padding-left: 0;
+  }
+  &--no-padding-right {
+    padding-right: 0;
+  }
 
-	&--no-padding-top {
-		padding-top:0;
-	}
-	&--no-padding-bottom {
-		padding-bottom:0;
-	}
-	&--no-padding-left {
-		padding-left:0;
-	}
-	&--no-padding-right {
-		padding-right:0;
-	}
-
-	&__body {
-		margin:0;
-	}
-	&__headline {
-		@include responsive-spacing-s("margin-bottom");
-	}
-
+  &__body {
+    margin: 0;
+  }
+  &__headline {
+    @include responsive-spacing-s('margin-bottom');
+  }
 }

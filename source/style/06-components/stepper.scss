@@ -1,13 +1,13 @@
 .olt-stepper {
-    &__content {
-        padding: 32px 0px 16px 0px;
+  &__content {
+    padding: 32px 0px 16px 0px;
 
-        &-item {
-            display: none;
+    &-item {
+      display: none;
 
-            &--is-active {
-                display: flex;
-            }
-        }
+      &--is-active {
+        display: flex;
+      }
     }
+  }
 }

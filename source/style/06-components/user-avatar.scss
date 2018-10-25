@@ -1,9 +1,9 @@
 .olt-user-avatar {
-	&:not(&--size-large) {
-		@include avatar-letter('m', $primary-01, transparent);
-	}
+  &:not(&--size-large) {
+    @include avatar-letter('m', $primary-01, transparent);
+  }
 
-	&--size-large {
-		@include avatar-letter('l', $primary-01, transparent);
-	}
+  &--size-large {
+    @include avatar-letter('l', $primary-01, transparent);
+  }
 }

@@ -1,6 +1,2 @@
 // COMPONENTS
-import { OltComponent } from './component';
-
-export default {
-    OltComponent
-};
+export { OltComponent } from './component';

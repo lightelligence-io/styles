@@ -1,93 +1,93 @@
 // Headlines
 
 .olt-headline- {
-    &-xxl {
-        font-size: 70px;
-        line-height: 90px;
-        font-weight: bold;
-        margin: 0;
-    }
-    &-xl {
-        font-size: 40px;
-        line-height: 48px;
-        font-weight: bold;
-        margin: 0;
+  &-xxl {
+    font-size: 70px;
+    line-height: 90px;
+    font-weight: bold;
+    margin: 0;
+  }
+  &-xl {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: bold;
+    margin: 0;
 
-        &__regular {
-            font-size: 40px;
-            line-height: 48px;
-            font-weight: bold;
-            font-weight: normal;
-            margin: 0;
-        }
+    &__regular {
+      font-size: 40px;
+      line-height: 48px;
+      font-weight: bold;
+      font-weight: normal;
+      margin: 0;
     }
-    &-l {
-        font-size: 32px;
-        line-height: 40px;
-        font-weight: bold;
-        margin: 0;
-    }
-    &-m {
-        font-size: 24px;
-        line-height: 32px;
-        font-weight: normal;
-        margin: 0;
-    }
-    &-s {
-        font-size: 20px;
-        line-height: 28px;
-        font-weight: bold;
-        margin: 0;
-    }
+  }
+  &-l {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: bold;
+    margin: 0;
+  }
+  &-m {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: normal;
+    margin: 0;
+  }
+  &-s {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: bold;
+    margin: 0;
+  }
 }
 .olt-copy- {
-    &-l {
-        font-size: 16px;
-        line-height: 24px;
-    }
-    &-m {
-        font-size: 14px;
-        line-height: 22px;
-    }
-    &-s {
-        font-size: 12px;
-        line-height: 20px;
-    }
+  &-l {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &-m {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  &-s {
+    font-size: 12px;
+    line-height: 20px;
+  }
 }
 .olt-form- {
-    &-l {
-        font-size: 16px;
-        line-height: 20px;
-    }
-    &-m {
-        font-size: 14px;
-        line-height: 16px;
-    }
-    &-s {
-        font-size: 12px;
-        line-height: 14px;
-    }
+  &-l {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  &-m {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  &-s {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 .olt-mono- {
-    &-xl {
-        font-family: 'Overpass Mono', monospace;
-        font-size: 24px;
-        line-height: 32px;
-        font-weight: bold;
-    }
-    &-l {
-        font-family: 'Overpass Mono', monospace;
-        font-size: 16px;
-        line-height: 22px;
-    }
-    &-m {
-        font-family: 'Overpass Mono', monospace;
-        font-size: 12px;
-        line-height: 18px;
-    }
-    &-s {
-        font-family: 'Overpass Mono', monospace;
-        font-size: 10px;
-        line-height: 16px;
-    }
+  &-xl {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+  }
+  &-l {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  &-m {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  &-s {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 10px;
+    line-height: 16px;
+  }
 }

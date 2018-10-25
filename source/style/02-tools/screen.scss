@@ -1,31 +1,26 @@
-@mixin screen($size) { //size could be 'desktop', 'mobile', 'tablet'
-    @if ($size == 'desktop') {
-        @media screen and (min-width: 1440px) {
-            @content;
-        }
+@mixin screen($size) {
+  //size could be 'desktop', 'mobile', 'tablet'
+  @if ($size == 'desktop') {
+    @media screen and (min-width: 1440px) {
+      @content;
     }
-    @else if ($size == 'tablet') {
-        @media screen and (min-width: 768px) and (max-width: 1439px) {
-            @content;
-        }
+  } @else if ($size == 'tablet') {
+    @media screen and (min-width: 768px) and (max-width: 1439px) {
+      @content;
     }
-    @else if ($size == 'mobile') {
-        @media screen and (max-width: 767px) {
-            @content;
-        }
+  } @else if ($size == 'mobile') {
+    @media screen and (max-width: 767px) {
+      @content;
     }
-
-    @else if ($size == 'not mobile') {
-        @media screen and (min-width: 768px) {
-            @content;
-        }
+  } @else if ($size == 'not mobile') {
+    @media screen and (min-width: 768px) {
+      @content;
     }
-    @else if ($size == 'not desktop') {
-        @media screen and (max-width: 1439px) {
-            @content;
-        }
+  } @else if ($size == 'not desktop') {
+    @media screen and (max-width: 1439px) {
+      @content;
     }
-    @else {
-        @error("invalid value for $size " + $size);
-    }
+  } @else {
+    @error ("invalid value for $size " + $size);
+  }
 }

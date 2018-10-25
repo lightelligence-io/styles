@@ -1,43 +1,45 @@
 .olt-fab {
-    background: $primary-01;
-    color: $primary-08;
-    border: 0;
-    width: 56px;
-    height: 56px;
-    border-radius: 28px;
+  background: $primary-01;
+  color: $primary-08;
+  border: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
 
-    &--mini {
-        width: 40px;
-        height: 40px;
-        border-radius: 20px;
-    }
+  &--mini {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+  }
 
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.12), 0 1px 2px 0 rgba(0,0,0,0.24);
-    position: relative;
-    cursor: pointer;
-    transition: box-shadow 150ms;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 150ms;
 
-    &--paginator {
-        background: $primary-08;
-        color: $primary-02;
-        text-align: center;
-    }
+  &--paginator {
+    background: $primary-08;
+    color: $primary-02;
+    text-align: center;
+  }
 
-    .material-icons {
-        line-height: 40px;
-    }
+  .material-icons {
+    line-height: 40px;
+  }
 
-    &:hover {
-        box-shadow: 0 3px 8px 0 rgba(0,0,0,0.12), 0 5px 12px 0 rgba(0,0,0,0.24);
-    }
+  &:hover {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.12),
+      0 5px 12px 0 rgba(0, 0, 0, 0.24);
+  }
 
-    &:active {
-        box-shadow: 0 3px 8px 0 rgba(0,0,0,0.12), 0 2px 12px 0 rgba(0,0,0,0.24);
-    }
+  &:active {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.12),
+      0 2px 12px 0 rgba(0, 0, 0, 0.24);
+  }
 
-    &:focus {
-        outline: 0;
-    }
+  &:focus {
+    outline: 0;
+  }
 
-    @include foreach-color('background', 'olt-fab-');
+  @include foreach-color('background', 'olt-fab-');
 }
