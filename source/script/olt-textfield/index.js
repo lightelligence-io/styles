@@ -2,14 +2,13 @@ import { OltComponent } from '../olt-base/component';
 
 const addClass = (el, cl) => {
   el.classList.add(cl);
-}
+};
 
 const removeClass = (el, cl) => {
   el.classList.remove(cl);
-}
+};
 
 export class OltTextfield extends OltComponent {
-
   initialize() {
     // Add Event Listeners
     this.listeners = [
@@ -50,8 +49,6 @@ export class OltTextfield extends OltComponent {
   hasText() {
     return this.root.value.length > 0;
   }
-
-
 
   onFocus() {
     const el = this.root;

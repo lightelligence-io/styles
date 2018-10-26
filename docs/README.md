@@ -35,29 +35,57 @@ Import css and js files from dist folder
 
 ```javascript
 // CSS
-import "lightelligence-ui/dist/olt-ui.css";
+import "lightelligence-ui/dist/lightelligence-ui.css";
 // Script
-import "lightelligence-ui/dist/olt-ui.js";
+import "lightelligence-ui/dist/lightelligence-ui.js";
 ```
 
 ### Via CDN
 
 ::: warning
-Not supported at the moment
+Source not available yet
 :::
 
 ```html
-<!-- Style -->
-<link href="//lightelligence.io/ui-framework/v0.0.1/olt-ui.css" rel="stylesheet">
+<!-- Style ( should be inside the head tag)-->
+<link href="//lightelligence.io/ui-framework/v0.0.1/lightelligence-ui.css" rel="stylesheet">
 
-<!-- Script -->
-<script src="//lightelligence.io/ui-framework/v0.0.1/olt-ui.js"></script>
+
+
+<!-- Script (at last node in body) -->
+<script src="//lightelligence.io/ui-framework/v0.0.1/lightelligence-ui.js"></script>
+<!-- init component (take one option) -->
+<script>
+    // A. bind all components on document
+    lightelligence.bind();
+    
+    // B. bind all in div container
+    const div = document.getElementById('container');
+    lightelligence.bind(div);
+    
+    // B. bind a single component, example with textfield use bind helper
+    lightelligence.bind(document, {
+        mappingComponents: [
+            { selector: '.olt-textfield__input', component: lightelligence.OltTextfield }
+        ]
+    });
+    
+    // C. bind with vanilla code ES3
+    var nodes = document.querySelectorAll('.olt-textfield__input');
+    var components = Array.prototype.map.call(nodes, function(node) {
+        return new lightelligence.OltTextfield(node);
+    });
+</script>
+
+
 ```
+
+
 
 ### Via NPM
 
 ::: warning
-Not supported at the moment
+Not testet yet
 :::
 
 ```
@@ -66,12 +94,12 @@ $ npm install lightelligence-ui --save
 
 ```javascript
 // Script
-import "lightelligence-ui/dist/olt-ui.js";
+import lightelligence from "lightelligence-ui/dist/lightelligence-ui.js";
 
 // Style
-import "lightelligence-ui/dist/olt-ui.scss";
+import "lightelligence-ui/source/style/framework.scss";
 // or
-import "lightelligence-ui/dist/olt-ui.css";
+import "lightelligence-ui/dist/lightelligence-ui.css";
 ```
 
 ## Next steps
