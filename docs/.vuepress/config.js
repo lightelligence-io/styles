@@ -49,6 +49,7 @@ module.exports = {
           ["/components/navigation", "Navigation Bar"],
           ["/components/pageblock", "Page Blocks"],
           ["/components/table", "Table"],
+          ["/components/key-value-list", "Key-Value-List"],
         ]
       }
     ]
