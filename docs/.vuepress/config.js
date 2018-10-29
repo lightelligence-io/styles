@@ -25,6 +25,7 @@ module.exports = {
           ["/content/typography", "Typography & Fonts"],
           ["/content/colors", "Colors"],
           ["/content/icons", "Icons"],
+          ["/content/links", "Links"],
         ],
       },
       {

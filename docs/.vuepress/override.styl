@@ -1,3 +1,5 @@
+$link-color = #FF6600
+
 .body {
     overflow-x: hidden;
     overflow-y: scroll;
@@ -38,23 +40,23 @@ body {
 
 
 /* General Theming */
-a:not(.sidebar-link
-    ):not(.nav-link
-    ):not(.olt-navbar__item
-    ):not(.olt-navbar-submenu__item
-    ):not(.olt-navdrawer__item
-    ):not(.olt-navdrawer__submenu-item
-    ):not(.olt-footer__item) {
-    color:#FF6600 !important;
+
+.page-nav {
+    .prev,
+    .next {
+        > a {
+            color: $link-color;
+        }
+    }
 }
 
 a.sidebar-link:hover {
-    color: #FF6600 !important;
+    color: $link-color !important;
 }
 
 a.sidebar-link.active {
-    color: #FF6600 !important;
-    border-left-color: #FF6600 !important;
+    color: $link-color !important;
+    border-left-color: $link-color !important;
 }
 
 .search-box input{

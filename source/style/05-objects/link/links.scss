@@ -1,0 +1,5 @@
+@import "definition";
+
+.olt-links {
+  @include olt-link-childs(true, true);
+}
