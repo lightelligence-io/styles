@@ -147,6 +147,12 @@
     }
   }
 
+  &.has-icon .olt-textfield__input {
+    padding-right: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   &--no-border-bottom {
     .olt-textfield__input {
       border-bottom: none;
