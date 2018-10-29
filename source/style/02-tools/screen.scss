@@ -4,6 +4,10 @@
     @media screen and (min-width: 1440px) {
       @content;
     }
+  } @else if ($size == 'extra-large') {
+    @media screen and (min-width: 1920px) {
+      @content;
+    }
   } @else if ($size == 'tablet') {
     @media screen and (min-width: 768px) and (max-width: 1439px) {
       @content;

@@ -120,6 +120,46 @@ Lightelligence UI grid system uses a series of containers, rows, and columns to 
 </div>
 ```
 
+## Container
+<div class="large-container">
+    <div class="olt-row olt-container olt-spacing--s-top">
+        <div class="olt-col-mobile-4 olt-col-tablet-4 olt-col-desktop-8">
+            <rectangle color-class="olt-color--as-background-primary-01">Responsive</rectangle>
+        </div>
+        <div class="olt-col-mobile-4 olt-col-tablet-4 olt-col-desktop-4">
+            <rectangle>Responsive</rectangle>
+        </div>
+    </div>
+    <div class="olt-row olt-container-small olt-spacing--s-top">
+        <div class="olt-col-mobile-4 olt-col-tablet-4 olt-col-desktop-8">
+            <rectangle color-class="olt-color--as-background-primary-01">Responsive</rectangle>
+        </div>
+        <div class="olt-col-mobile-4 olt-col-tablet-4 olt-col-desktop-4">
+            <rectangle>Responsive</rectangle>
+        </div>
+    </div>
+</div>
+
+```html
+<div class="olt-row olt-container olt-spacing--s-top">
+    <div class="olt-col-mobile-4 olt-col-tablet-4 olt-col-desktop-8">
+        <rectangle color-class="olt-color--as-background-primary-01">Responsive</rectangle>
+    </div>
+    <div class="olt-col-mobile-4 olt-col-tablet-4 olt-col-desktop-4">
+        <rectangle>Responsive</rectangle>
+    </div>
+</div>
+<div class="olt-row olt-container-small olt-spacing--s-top">
+    <div class="olt-col-mobile-4 olt-col-tablet-4 olt-col-desktop-8">
+        <rectangle color-class="olt-color--as-background-primary-01">Responsive</rectangle>
+    </div>
+    <div class="olt-col-mobile-4 olt-col-tablet-4 olt-col-desktop-4">
+        <rectangle>Responsive</rectangle>
+    </div>
+</div>
+```
+
+
 ## All Classes
 
 ```
@@ -149,4 +189,7 @@ Lightelligence UI grid system uses a series of containers, rows, and columns to 
 col-desktop-10 // 83.333%
 col-desktop-11 // 91.667%
 col-desktop-12 // 100%
+
+olt-container
+olt-container-small // max-width: 600px
 ```
