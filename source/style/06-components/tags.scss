@@ -1,40 +1,10 @@
-.olt-tag {
+$olt-tags-gutter: 1px;
+
+.olt-tags {
   display: inline-block;
-  height: 26px;
-  line-height: 26px;
-  font-size: 12px;
-  padding: {
-    left: 8px;
-    right: 8px;
-  }
-  font-family: 'Overpass Mono', monospace;
-  text-transform: uppercase;
-  background: $primary-01;
-  color: #fff;
-  border: solid 1px;
-  @include foreach-color('background', 'olt-tag-');
-  @include foreach-color('border-color-only', 'olt-tag-');
-  @include foreach-color('border-color', 'olt-tag--bordered') {
-    background: transparent;
-    border: solid 1px;
-  }
+  margin: -$olt-tags-gutter;
 
-  &.olt-tag--has-trailing-icon {
-    cursor: pointer;
-    transition: all 300ms;
-    .olt-tag--icon {
-      margin-left: 8px;
-    }
-
-    .material-icons {
-      display: inline;
-      vertical-align: -3px;
-      line-height: 24px;
-      font-size: 16px;
-    }
-
-    &:hover {
-      opacity: 0.87;
-    }
+  > .olt-tag {
+    margin: $olt-tags-gutter;
   }
 }

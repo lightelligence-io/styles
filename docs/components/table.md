@@ -135,3 +135,8 @@
     </tr>
   </tbody>
 </table>
+
+::: warning 
+The gutter between the tags will be smaller on dom generator, 
+because the white space not exists between two and more tags
+:::
