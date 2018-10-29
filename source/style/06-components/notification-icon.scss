@@ -1,0 +1,10 @@
+.olt-notification-icon {
+  position: relative;
+
+  &__count {
+    position: absolute;
+    font-size: 10px;
+    top: -70%;
+    right: -27%;
+  };
+}

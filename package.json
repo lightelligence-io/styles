@@ -58,13 +58,13 @@
     "vuepress": "^0.14.3",
     "yargs": "^11.0.0"
   },
-  "dependencies" : {
+  "dependencies": {
     "material-design-icons-iconfont": "^3.0.3",
     "normalize.css": "^8.0.0"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint:fix && git add"
+      "pre-commit": "npm run lint:fix && git add"
     }
   }
 }

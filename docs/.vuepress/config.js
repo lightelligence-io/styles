@@ -42,6 +42,7 @@ module.exports = {
           ["/components/floating-action-button", "Floating Action Button"],
           ["/components/modals", "Modal"],
           ["/components/tabs", "Tabs"],
+          ["/components/notification-icon", "Notification Icon"],
           ["/components/toggle-buttons", "Toggle-Buttons"],
           ["/components/stepper", "Stepper"],
           ["/components/datepicker", "Datepicker"],
