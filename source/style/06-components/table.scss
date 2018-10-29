@@ -1,28 +1,38 @@
+$olt-table-cell-spacing: 12px 16px;
+$olt-table-hover-line-color: $notify !default;
+$olt-table-hover-line-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+
 .olt-table {
   width: 100%;
   border: 0;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  display: table;
+  overflow-x: auto;
 
-  &__header {
-    width: 100%;
-    background: $primary-07;
+  td {
     border: 0;
-    border-bottom: solid 1px $primary-06;
+    padding: $olt-table-cell-spacing;
+  }
 
-    th {
-      font-family: 'Overpass Mono', monospace;
-      border: 0;
-      color: $primary-03;
-      font-size: 12px;
-      padding: {
-        top: 12px;
-        bottom: 12px;
-        left: 16px;
-        right: 16px;
-      }
+  th {
+    font: {
+      family: 'Overpass Mono', monospace;
+      weight: normal;
+    }
+    border: 0;
+    color: $primary-03;
+    font-size: 12px;
+    padding: $olt-table-cell-spacing;
+    text-align: left;
+
+    &.olt-table--primary-label {
+      font-weight: bold;
+      color: $primary-02;
     }
   }
 
-  tr:not(.olt-table__header) {
+  > tbody > tr {
     background: $primary-08;
     border: 0;
     border-bottom: solid 1px $primary-06;
@@ -32,13 +42,55 @@
     }
   }
 
-  td {
+  // elements
+  &__header {
+    width: 100%;
+    background: $primary-07;
     border: 0;
-    padding: {
-      top: 12px;
-      bottom: 12px;
-      left: 16px;
-      right: 16px;
+    border-bottom: solid 1px $primary-06;
+
+    td,
+    th {
+      text-align: left;
+    }
+  }
+
+  // modifire
+  &--middle-aligned {
+    th, td {
+      text-align: center;
+
+      &:first-child {
+        text-align: left;
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+
+
+  &--line-hover {
+    > tbody > tr:hover {
+        box-shadow: $olt-table-hover-line-shadow;
+        position: relative;
+        z-index: 10;
+
+        > td:first-child {
+          position: relative;
+
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: $olt-table-hover-line-color;
+          }
+        }
     }
   }
 }

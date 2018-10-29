@@ -91,3 +91,20 @@
     line-height: 16px;
   }
 }
+
+// general modifire for text
+.olt-text {
+  &--upper {
+    text-transform: uppercase;
+  }
+
+  &--bold {
+    font-weight: bold;
+  }
+
+  &--line {
+    > * {
+      vertical-align: middle;
+    }
+  }
+}

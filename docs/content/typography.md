@@ -84,3 +84,10 @@
             'class': 'olt-mono--s'
         },
 ]"></typography>
+
+### modifire olt-text--upper
+<span class="olt-text--upper">I am upper case</span>
+
+
+### modifire olt-text--bold
+<span class="olt-text--bold">I am bold</span>
