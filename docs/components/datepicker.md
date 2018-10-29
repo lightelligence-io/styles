@@ -8,17 +8,17 @@ add the class `olt-datepicker__day-select--is-active` to the `olt-datepicker__da
 <datepicker-example></datepicker-example>
 
 ````html
-<div class="olt-datepicker olt-datepicker--is-open">
+<div class="olt-datepicker">
     <div class="olt-textfield__wrapper has-icon is-fullwidth">
-        <input class="olt-textfield__input" id="input-with-icon" name="input" readonly/>
-        <label class="olt-textfield__input__label" for="input-with-icon">Select your date</label>
+        <input class="olt-textfield__input" id="input-with-icon" v-model="date" name="input" readonly/>
+        <label class="olt-textfield__input-label" for="input-with-icon">Start Date</label>
         <i class="olt-textfield__input-icon material-icons">event</i>
     </div>
     <div class="olt-datepicker__panel">
         <div class="olt-datepicker__panel-header">
             <div class="olt-datepicker__month-year-switch">
                 <div class="olt-datepicker__month-switch">
-                    <span><</span>
+                    <span class="material-icons">chevron_left</span>
                 </div>
                 <div class="olt-select__wrapper olt-datepicker__year-select">
                     <span>Jan</span>
@@ -30,7 +30,7 @@ add the class `olt-datepicker__day-select--is-active` to the `olt-datepicker__da
                     </select>
                 </div>
                 <div class="olt-datepicker__month-switch">
-                    <span>></span>
+                    <span class="material-icons">chevron_right</span>
                 </div>
             </div>
             <div class="olt-datepicker__day-header">

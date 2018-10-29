@@ -1,6 +1,6 @@
   import upperFirst from 'lodash/upperFirst'
   import camelCase from 'lodash/camelCase'
-  import LightelligenceUi from '../../source/framework';
+  import LightelligenceUi from '../../source';
   
   export default ({
     Vue, // the version of Vue being used in the VuePress app
