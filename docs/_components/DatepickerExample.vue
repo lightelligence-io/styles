@@ -78,7 +78,7 @@
     </section>
 </template>
 <script>
-import { OltTextfield } from '../../source/';
+import { OltTextfield } from '../../source/framework';
 
 export default {
     name: 'datepicker-example',

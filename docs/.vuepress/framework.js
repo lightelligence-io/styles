@@ -1,2 +1,2 @@
-import LightelligenceUi from '../../source/';
+import LightelligenceUi from '../../source/framework';
 export default LightelligenceUi;
