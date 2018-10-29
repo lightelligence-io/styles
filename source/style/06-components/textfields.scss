@@ -20,6 +20,7 @@
   }
 
   .olt-textfield__input {
+    position: relative;
     border: 0;
     border-bottom: solid 0.075rem $primary-04;
     padding: 8px 0;
@@ -72,6 +73,7 @@
       right: 0;
       font-size: 24px;
       color: $primary-04;
+      z-index: 1;
     }
 
     &:placeholder-shown:not(:focus)::-webkit-input-placeholder,
