@@ -48,7 +48,7 @@ $olt-link-selector: '.olt-link';
   }
 
   // not allow to use wihtout any defintion
-  @if ($tag-defintion = false and $class-defintion = false) {
+  @if ($tag-defintion == false and $class-defintion == false) {
     @warn 'olt-link class definition without effect';
   }
 }
