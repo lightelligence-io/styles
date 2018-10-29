@@ -56,13 +56,21 @@ $olt-navdrawer-separator-color-bg: $olt-navdrawer-color-font;
     width: 100%;
   }
 
-  &__item {
+
+  button.olt-navdrawer__item, button.olt-navdrawer__submenu-item {
+    background:none;
+    border:none;
+    text-align: left;
+    padding-left:0;
+    padding-right:0;
+  }
+  button.olt-navdrawer__item, &__item {
     @include navdrawer-item();
     font-size: 14px;
     line-height: 22px;
   }
 
-  &__submenu-item {
+  button.olt-navdrawer__submenu-item, &__submenu-item {
     @include navdrawer-item();
     font-size: 12px;
     line-height: 20px;
