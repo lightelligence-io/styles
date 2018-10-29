@@ -32,7 +32,7 @@ const plugins = [
 ];
 
 export default {
-    input: 'source/index.js',
+    input: 'source/framework.js',
     treeshake: false,
     plugins,
     output: [
