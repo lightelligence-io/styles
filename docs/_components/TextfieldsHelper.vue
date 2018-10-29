@@ -1,5 +1,5 @@
 <script>
-import { OltTextfield } from '../../source/framework';
+import { OltTextfield } from '../../source';
 
 export default {
     name: 'textfields-helper',
