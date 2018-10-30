@@ -38,27 +38,6 @@ body {
     min-height: 128px;
 }
 
-
-/* General Theming */
-
-.page-nav {
-    .prev,
-    .next {
-        > a {
-            color: $link-color;
-        }
-    }
-}
-
-a.sidebar-link:hover {
-    color: $link-color !important;
-}
-
-a.sidebar-link.active {
-    color: $link-color !important;
-    border-left-color: $link-color !important;
-}
-
 .search-box input{
     border-radius: 4px;
     border-width: 2px;
@@ -95,48 +74,37 @@ a.sidebar-link.active {
 .search-box .suggestion.focused a {
     color: #ff6600 !important;
 }
-
 .sidebar-open .sidebar-button .icon {
     color: #FF6600 !important;
 }
-
 .sidebar-button {
     cursor: pointer;
 }
-
 .sidebar-button .icon {
     color: #fff !important;
 }
-
 .navbar {
     background: #000 !important;
 }
-
 .navbar .site-name {
     color: #FFF !important;
 }
-
 .navbar .links {
     background-color: transparent !important;
 }
-
 .nav-links a:hover {
     color: #FF6600 !important;
 }
-
 .navbar .nav-item {
     color: #fff !important;
 }
-
 .navbar .nav-item a:hover {
     color: #FF6600 !important;
 }
-
 .content pre, .content pre[class*="language-"] {
     white-space: pre;
     word-break: keep-all;
 }
-
 .circle {
     border-radius: 50%;
     min-height: 18px;
@@ -145,7 +113,6 @@ a.sidebar-link.active {
     text-align: center;
     border: none;
 }
-
 .rectangle {
     border-radius: 4px;
     min-height: 120px;
@@ -155,11 +122,9 @@ a.sidebar-link.active {
     margin-bottom: 16px;
     border: solid 2px #CFCFCF;
 }
-
 .rectangle.is-grey {
     background: #CFCFCF;
 }
-
 .large-container {
 
     @media screen and (min-width: 1120px) {
@@ -180,3 +145,4 @@ a.sidebar-link.active {
         width:180%;
     }
 }
+@import './palette.styl';

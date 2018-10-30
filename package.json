@@ -49,6 +49,7 @@
     "prettier": "^1.14.2",
     "rollup": "^0.66.6",
     "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-copy": "^0.2.3",
     "rollup-plugin-insert": "^0.2.0",
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-postcss": "^1.6.2",
