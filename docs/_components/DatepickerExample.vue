@@ -36,9 +36,6 @@
                     </div>
                 </div>
                 <div class="olt-datepicker__panel-content">
-                    <div class="olt-datepicker__current-month">
-                        Januar
-                    </div>
                     <div class="olt-datepicker__day-selection">
                         <div class="olt-datepicker__day-select olt-datepicker__day-select--is-active" @click="open = false">1</div>
                         <div class="olt-datepicker__day-select" @click="open = false">2</div>

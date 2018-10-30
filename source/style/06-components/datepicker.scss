@@ -48,7 +48,7 @@
     width: calc(100% / 7);
     font-family: 'Overpass Mono', monospace;
     font-size: 12px;
-    padding: 10px 4px;
+    padding: 11px 4px;
     border-radius: 50%;
     text-align: center;
     transition: all 150ms;
@@ -61,6 +61,9 @@
     &:hover {
       background: rgba($primary-02, 0.16);
     }
+  }
+  &__panel-content {
+    margin-top: 12px;
   }
   &__month-year-switch {
     display: none;
@@ -121,7 +124,7 @@
     .olt-datepicker {
       &__panel {
         padding: 12px;
-        height: 292px;
+        height: 273px;
         box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.3);
       }
       &__day-header {

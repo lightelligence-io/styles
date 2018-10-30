@@ -44,9 +44,6 @@ add the class `olt-datepicker__day-select--is-active` to the `olt-datepicker__da
             </div>
         </div>
         <div class="olt-datepicker__panel-content">
-            <div class="olt-datepicker__current-month">
-                Januar
-            </div>
             <div class="olt-datepicker__day-selection">
                 <div class="olt-datepicker__day-select olt-datepicker__day-select--is-active">1</div>
                 <div class="olt-datepicker__day-select">2</div>
