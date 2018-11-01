@@ -1,10 +1,12 @@
-button.olt-card {
-  border-style: none;
-}
 .olt-card {
-  padding: $spacing-desktop-s $spacing-desktop-m;
+  $name: olt-card;
+  $radius: 4px;
+  $padding-x: $spacing-desktop-s;
+  $padding-y: $spacing-desktop-m;
+  $padding: $padding-x $padding-y;
+  padding: $padding;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
-  border-radius: 4px;
+  border-radius: $radius;
 
   position: relative;
   text-align: left;
@@ -18,6 +20,8 @@ button.olt-card {
     padding: 0;
   }
 
+  // sub elements
+
   &-content {
     flex: 1 1 auto;
     &__content {
@@ -29,24 +33,24 @@ button.olt-card {
     flex: 0 1 auto;
     display: flex;
     justify-content: space-between;
-    .olt-card-header__title-wrapper {
+
+    &__headline {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      display: block;
+    }
+    &__subtitle {
+      font-size: 12px;
+      line-height: 20px;
+      display: block;
+      color: $primary-03;
+    }
+
+    &__title-wrapper {
       display: flex;
       flex-direction: column;
-
-      .olt-card-header__headline {
-        font-size: 20px;
-        font-weight: bold;
-        line-height: 28px;
-        display: block;
-      }
-      .olt-card-header__subtitle {
-        font-size: 12px;
-        line-height: 20px;
-        display: block;
-        color: $primary-03;
-      }
     }
-    .olt-card-header__action-wrapper {
+    &__action-wrapper {
       padding-top: 3px;
     }
   }
@@ -56,12 +60,12 @@ button.olt-card {
     height: 64px;
 
     .olt-card-header {
-      .olt-card-header__headline {
+      &__headline {
         font-size: 24px;
         line-height: 32px;
         font-weight: normal;
       }
-      .olt-card-header__subtitle {
+      &__subtitle {
         display: none;
       }
     }
@@ -71,15 +75,48 @@ button.olt-card {
     padding-top: 72px;
     min-height: 120px;
     height: 120px;
-    .olt-card-header {
-      .olt-card-header__headline {
-        font-size: 24px;
-        line-height: 32px;
-        font-weight: normal;
+
+    .olt-card-header__headline {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: normal;
+    }
+    .olt-card-header__subtitle {
+      display: none;
+    }
+  }
+
+  &--teaser-stage {
+    padding: 0;
+
+    .#{$name} {
+      &__stage {
+        margin-bottom: $spacing-desktop-xs;
+
+        > img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          max-height: 160px;
+          border-top: {
+            left-radius: $radius;
+            right-radius: $radius;
+          }
+        }
       }
-      .olt-card-header__subtitle {
-        display: none;
+
+      &-header,
+      &-content {
+        padding: {
+          left: $padding-x;
+          right: $padding-x;
+        }
       }
+    }
+
+    > *:last-child {
+      padding-bottom: $padding-y;
     }
   }
 
@@ -98,12 +135,18 @@ button.olt-card {
     cursor: pointer;
     &:hover {
       box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25),
-        0 10px 10px 0 rgba(0, 0, 0, 0.22);
+      0 10px 10px 0 rgba(0, 0, 0, 0.22);
     }
 
     &:active {
       box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.12),
-        0 2px 4px 0 rgba(0, 0, 0, 0.24);
+      0 2px 4px 0 rgba(0, 0, 0, 0.24);
     }
   }
+
+}
+
+// tag type overwrites
+button.olt-card {
+  border-style: none;
 }

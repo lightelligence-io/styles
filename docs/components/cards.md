@@ -217,3 +217,40 @@ Teaser Card Large
     </div>
 </div>
 ```
+
+
+## Image Teaser
+
+<div class="olt-card olt-card--teaser-stage">
+    <div class="olt-card__stage">
+      <img src="../_assets/placeholder/4-3.png">
+    </div>
+    <div class="olt-card-header">
+        <div class="olt-card-header__title-wrapper">
+            <span class="olt-card-header__headline">
+                Headline M - Title
+            </span>
+        </div>
+        <div class="olt-card-header__action-wrapper">
+            <i class="material-icons">chevron_right</i>
+        </div>
+    </div>
+</div>
+
+```html
+<div class="olt-card olt-card--teaser-stage">
+    <div class="olt-card__stage">
+      <img src="../_assets/placeholder/4-3.png">
+    </div>
+    <div class="olt-card-header">
+        <div class="olt-card-header__title-wrapper">
+            <span class="olt-card-header__headline">
+                Headline M - Title
+            </span>
+        </div>
+        <div class="olt-card-header__action-wrapper">
+            <i class="material-icons">chevron_right</i>
+        </div>
+    </div>
+</div>
+```
