@@ -4,14 +4,10 @@
   position: relative;
   padding-top: 10px;
   margin-top: 8px;
+  margin-bottom: 8px;
 
   &.is-fullwidth {
     width: 100%;
-  }
-
-  &.has-error-message,
-  &.has-info {
-    margin-bottom: 8px;
   }
 
   textarea.olt-textfield__input {
@@ -64,7 +60,7 @@
       left: 0;
       font-size: 12px;
       color: $alert;
-      display: none;
+      visibility: hidden;
     }
 
     &-icon {
@@ -140,7 +136,7 @@
       }
 
       & ~ .olt-textfield__input-error-message {
-        display: block;
+        visibility: visible;
       }
 
       & ~ .olt-textfield__input-icon {
