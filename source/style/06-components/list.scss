@@ -1,7 +1,7 @@
 @mixin olt-list-normalize($type: disc) {
   list-style: #{$type} outside;
   padding-left: 1.2rem;
-
+  margin: 0;
   > * {
     display: list-item;
     line-height: 1.7;
