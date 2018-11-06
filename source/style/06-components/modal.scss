@@ -86,16 +86,9 @@
       max-width: unset;
     }
 
-    .olt-modal__header {
-      min-height: 25vh;
-      padding: 36px 0px;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
     .olt-modal__content {
-      min-height: 75vh;
-      background: $primary-07;
+      min-height: 100vh;
+      background: $primary-08;
       padding: 36px;
 
       &--inner {

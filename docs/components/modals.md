@@ -1,7 +1,7 @@
 # Modals
 
 :::warning
-You have to implement the open/close logic by your own. Just the class `olt-modal--is-open` has to be added 
+You have to implement the open/close logic by your own. Just the class `olt-modal--is-open` has to be added
 and remove to open or close the modal.
 :::
 
@@ -16,17 +16,14 @@ If you want to disable the scrollability of the whole body you have to set the c
         <button class="olt-modal--close-button">
             <i class="material-icons">close</i>
         </button>
-        <div class="olt-modal__header">
-            <div class="olt-headline--l">Headline</div>
-        </div>
         <div class="olt-modal__content">
             <div class="olt-modal__content--inner">
                 <div class="olt-copy--l">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
-                    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo 
-                    dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit 
-                    amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
-                    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                    dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                    amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
                     et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                 </div>
             </div>
@@ -49,7 +46,7 @@ If you want to disable the scrollability of the whole body you have to set the c
 </section>
 ````
 
-#### State Classes 
+#### State Classes
 | Class                                        |                                 |
 | -------------------------------------------- | ------------------------------- |
 | `olt-modal--is-open`                         | opens the modal                 |
