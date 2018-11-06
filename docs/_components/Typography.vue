@@ -73,6 +73,9 @@ export default {
 .typo-example:first-child hr {
     display: none;
 }
+h1, h2, h3, h4, h5, h6 {
+    padding-bottom: 0;
+}
 h2 {
     border: 0;
 }
