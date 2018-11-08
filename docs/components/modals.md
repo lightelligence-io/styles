@@ -5,10 +5,9 @@ You have to implement the open/close logic by your own. Just the class `olt-moda
 and remove to open or close the modal.
 :::
 
-We have an explicit modal to notify the user about an error [here](/components/notifications.html#as-modal).
-If you want to disable the scrollability of the whole body you have to set the class `olt-modal--in-body-open` to the body element.
-
 <fullscreen-modal></fullscreen-modal>
+
+If you want to disable the scrollability of the whole body you have to set the class `olt-modal--in-body-open` to the body element.
 
 ````html
 <section>
@@ -36,10 +35,14 @@ If you want to disable the scrollability of the whole body you have to set the c
     <div class="olt-modal">
         <div class="olt-modal__content">
             <div class="olt-headline--s">Oh No! A Devicee</div>
-            <div class="olt-copy--l">You should really check the configuration</div>
+            <div class="olt-copy--l">
+                You should really check the configuration
+            </div>
         </div>
         <div class="olt-modal__actions">
-            <button class="olt-button is-raised--primary-01">Yes, show me</button>
+            <button class="olt-button is-raised--primary-01">
+                Yes, show me
+            </button>
         </div>
     </div>
     <div class="olt-modal__backdrop"></div>
@@ -51,3 +54,36 @@ If you want to disable the scrollability of the whole body you have to set the c
 | -------------------------------------------- | ------------------------------- |
 | `olt-modal--is-open`                         | opens the modal                 |
 | `olt-modal--in-body-open`                    | disable scroll in body          |
+
+## Displaying errors with modals
+:::warning
+You have to implement the open/close logic by your own. Just the class `olt-modal--is-open` has to be added
+and remove to open or close the modal.
+:::
+
+
+<modal-notification class="olt-spacing--s-top"></modal-notification>
+
+````html
+<section>
+    <div class="olt-modal olt-modal--notification">
+        <div class="olt-modal__content">
+            <div class="olt-headline--s">
+                Oh No! A Device Is in A Critical State
+            </div>
+            <div class="olt-copy--l">
+                You should really check the configuration
+            </div>
+        </div>
+        <div class="olt-modal__actions">
+            <button class="olt-button is-bordered--primary-01">
+                I'll do this later
+            </button>
+            <button class="olt-button is-raised--primary-01">
+                Yes, show me
+            </button>
+        </div>
+    </div>
+    <div class="olt-modal__backdrop"></div>
+</section>
+````

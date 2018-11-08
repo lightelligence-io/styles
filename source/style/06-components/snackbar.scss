@@ -16,8 +16,9 @@
   flex-wrap: wrap;
 
   .material-icons {
-    display: inline;
+    display: inline-block;
     vertical-align: -12px;
+    width: 36px;
     font-size: 36px;
     margin-right: $spacing-desktop-s;
   }
@@ -32,5 +33,9 @@
 
   &__actions {
     flex: 0 0 auto;
+  }
+
+  &--is-success {
+    background: $success;
   }
 }

@@ -36,7 +36,6 @@ module.exports = {
           ["/components/form-controls", "Form Controls"],
           ["/components/selection-controls", "Selection Controls"],
           ["/components/tags", "Tags"],
-          ["/components/notifications", "Error Notifications"],
           ["/components/cards", "Cards"],
           ["/components/tooltips", "Tooltips"],
           ["/components/floating-action-button", "Floating Action Button"],
@@ -53,6 +52,8 @@ module.exports = {
           ["/components/table", "Table"],
           ["/components/list", "List"],
           ["/components/key-value-list", "Key-Value-List"],
+          ["/components/snackbar", "Snackbar"],
+          ["/components/banner", "Banner"],
         ]
       }
     ]
