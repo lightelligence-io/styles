@@ -120,6 +120,34 @@ Lightelligence UI grid system uses a series of containers, rows, and columns to 
 </div>
 ```
 
+### Item alignment
+
+<div class="olt-row olt-spacing--s-top">
+    <div class="olt-col-mobile-1 olt-col-start-mobile">
+        <rectangle>start</rectangle>
+    </div>
+    <div class="olt-col-mobile-1 olt-col-center-mobile">
+        <rectangle>center</rectangle>
+    </div>
+    <div class="olt-col-mobile-1 olt-col-end-mobile">
+        <rectangle>end</rectangle>
+    </div>
+</div>
+
+```html
+<div class="olt-row">
+    <div class="olt-col-mobile-1 olt-col-start-mobile">
+        <rectangle>start</rectangle>
+    </div>
+    <div class="olt-col-mobile-1 olt-col-center-mobile">
+        <rectangle>center</rectangle>
+    </div>
+    <div class="olt-col-mobile-1 olt-col-end-mobile">
+        <rectangle>end</rectangle>
+    </div>
+</div>
+```
+
 ## Container
 <div class="large-container">
     <div class="olt-row olt-container olt-spacing--s-top">

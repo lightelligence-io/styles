@@ -1,5 +1,9 @@
 /* Uncomment and set these variables to customize the grid. */
 
+// NOTE: Consistently make use of ampersand operator for improvement of structure and readability.
+// Or even better: Create mixin and use sass map for responsive variables
+// Should column have bottom space by default?
+// TODO: Add utility classes for vertical alignment
 .olt-container-fluid {
   margin-right: auto;
   margin-left: auto;
@@ -100,27 +104,44 @@
   margin-left: 75%;
 }
 
+// Row alignment
 .olt-start-mobile {
   -ms-flex-pack: start;
   -webkit-box-pack: start;
   justify-content: flex-start;
-  text-align: start;
+  text-align: start;  // NOTE: `text-align: start` is invalid. Furthermore, usually you don't want the content to be aligned in the same way
 }
 
 .olt-center-mobile {
   -ms-flex-pack: center;
   -webkit-box-pack: center;
   justify-content: center;
-  text-align: center;
+  text-align: center; // FIXME: Usually you don't want the content to be aligned in the same way. Instead extra classes for text-alignment should be added.
 }
 
 .olt-end-mobile {
   -ms-flex-pack: end;
   -webkit-box-pack: end;
   justify-content: flex-end;
-  text-align: end;
+  text-align: end; // NOTE: `text-align: end` is invalid. Furthermore, usually you don't want the content to be aligned in the same way
 }
 
+// Item alignment
+.olt-col-start-mobile {
+  margin-right: auto;
+}
+
+.olt-col-center-mobile {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.olt-col-end-mobile {
+  margin-left: auto;
+}
+
+// Row vertical alignment
+// NOTE: Lacking olt-namespace
 .top-mobile {
   -ms-flex-align: start;
   -webkit-box-align: start;
@@ -271,27 +292,44 @@
     margin-left: 87.5%;
   }
 
+  // Row horizontal alignment
   .olt-start-tablet {
     -ms-flex-pack: start;
     -webkit-box-pack: start;
     justify-content: flex-start;
-    text-align: start;
+    text-align: start; // NOTE: `text-align: start` is invalid. Furthermore, usually you don't want the content to be aligned in the same way
   }
 
   .olt-center-tablet {
     -ms-flex-pack: center;
     -webkit-box-pack: center;
     justify-content: center;
-    text-align: center;
+    text-align: center; // FIXME: Usually you don't want the content to be aligned in the same way. Instead extra classes for text-alignment should be added.
   }
 
   .olt-end-tablet {
     -ms-flex-pack: end;
     -webkit-box-pack: end;
     justify-content: flex-end;
-    text-align: end;
+    text-align: end; // NOTE: `text-align: end` is invalid. Furthermore, usually you don't want the content to be aligned in the same way
   }
 
+  // Item horizontal alignment
+  .olt-col-start-tablet {
+    margin-right: auto;
+  }
+
+  .olt-col-center-tablet {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .olt-col-end-tablet {
+    margin-left: auto;
+  }
+
+  // Row vertical alignment
+  // NOTE: Lacking olt-namespace
   .top-tablet {
     -ms-flex-align: start;
     -webkit-box-align: start;
@@ -487,27 +525,44 @@
     margin-left: 91.667%;
   }
 
+  // Row alignment
   .olt-start-desktop {
     -ms-flex-pack: start;
     -webkit-box-pack: start;
     justify-content: flex-start;
-    text-align: start;
+    text-align: start; // NOTE: `text-align: start` is invalid. Furthermore, usually you don't want the content to be aligned in the same way
   }
 
   .olt-center-desktop {
     -ms-flex-pack: center;
     -webkit-box-pack: center;
     justify-content: center;
-    text-align: center;
+    text-align: center; // FIXME: Usually you don't want the content to be aligned in the same way. Instead extra classes for text-alignment should be added.
   }
 
   .olt-end-desktop {
     -ms-flex-pack: end;
     -webkit-box-pack: end;
     justify-content: flex-end;
-    text-align: end;
+    text-align: end; // NOTE: `text-align: end` is invalid. Furthermore, usually you don't want the content to be aligned in the same way
   }
 
+  // Item horizontal alignment
+  .olt-col-start-desktop {
+    margin-right: auto;
+  }
+
+  .olt-col-center-desktop {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .olt-col-end-desktop {
+    margin-left: auto;
+  }
+
+  // Row vertical alignment
+  // NOTE: Lacking olt-namespace
   .top-desktop {
     -ms-flex-align: start;
     -webkit-box-align: start;

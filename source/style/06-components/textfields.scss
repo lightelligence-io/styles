@@ -3,11 +3,14 @@
   min-width: 160px;
   position: relative;
   padding-top: 10px;
-  margin-top: 8px;
   margin-bottom: 8px;
 
   &.is-fullwidth {
     width: 100%;
+  }
+
+  &.has-floating-label {
+    margin-top: 8px;
   }
 
   textarea.olt-textfield__input {
