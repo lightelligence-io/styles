@@ -3,12 +3,32 @@ $olt-navdrawer-color-font-active: nth(map-get($colors, 'primary-02'), 2);
 $olt-navdrawer-color-font-hover: $olt-navdrawer-color-font-active;
 $olt-navdrawer-color-font: rgba($olt-navdrawer-color-font-active, 0.7);
 
-$olt-navdrawer-separator-color-bg: $olt-navdrawer-color-font;
+$olt-navdrawer-separator-color-bg: rgba($olt-navdrawer-color-font, 0.1);
 
 @mixin navdrawer-item() {
+  border:0;
+  background: none;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 0;
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
+  border-bottom: 1px solid $olt-navdrawer-separator-color-bg;
+  padding-bottom: 10px;
+  font-size: 24px;
+  line-height: 32px;
+
+
+  &:not(:first-child) {
+    margin-top: 16px;
+  }
+
+  &--secondary {
+    font-size: 20px;
+    line-height: 32px;
+  }
 
   &--is-button {
     text-decoration: none !important;
@@ -21,61 +41,27 @@ $olt-navdrawer-separator-color-bg: $olt-navdrawer-color-font;
 
   &--is-active {
     color: $olt-navdrawer-color-font-active;
-    &:before {
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      left: #{0 - 10px};
-      content: '|';
-    }
   }
 }
 
-.olt-navdrawer {
-  @include responsive-spacing-xl('padding');
+$component: 'olt-navdrawer';
+
+.#{$component} {
+  padding: 32px 64px;
+  z-index:1300;
   width: 100%;
+  overflow-y:auto;
+
+  position: absolute;
+  // FIXME: ios fix required here
+  height: calc(100% - #{$navigation-bar-height}px);
+  top: #{$navigation-bar-height}px;
+
   background-color: $olt-navdrawer-color-bg;
   color: $olt-navdrawer-color-font;
 
-  &__item,
-  &__separator {
-    &:not(:first-child) {
-      margin-top: 40px;
-    }
-  }
-
-  &__submenu {
-    margin-top: 20px;
-  }
-
-  &__separator {
-    height: 1px;
-    background-color: $olt-navdrawer-separator-color-bg;
-    width: 100%;
-  }
-
-
-  button.olt-navdrawer__item, button.olt-navdrawer__submenu-item {
-    background:none;
-    border:none;
-    text-align: left;
-    padding-left:0;
-    padding-right:0;
-  }
-  button.olt-navdrawer__item, &__item {
+  &__item {
     @include navdrawer-item();
-    font-size: 14px;
-    line-height: 22px;
   }
 
-  button.olt-navdrawer__submenu-item, &__submenu-item {
-    @include navdrawer-item();
-    font-size: 12px;
-    line-height: 20px;
-    &:not(:first-child) {
-      @include responsive-spacing-s('margin-top');
-    }
-  }
 }

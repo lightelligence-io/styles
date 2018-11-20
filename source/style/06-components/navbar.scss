@@ -2,37 +2,37 @@ $olt-navbar-color-bg: nth(map-get($colors, 'primary-02'), 1);
 $olt-navbar-color-font: nth(map-get($colors, 'primary-02'), 2);
 $olt-navbar-separator-color-bg: rgba(white, 0.4);
 
-.olt-navbar {
+$component:'olt-navbar';
+
+.#{$component} {
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  z-index:998;
+  z-index: 998;
   background-color: $olt-navbar-color-bg;
   color: $olt-navbar-color-font;
+  height: $navigation-bar-height;
 
   &__left {
     display: flex;
-    justify-self: flex-start;
-    align-self: stretch;
+    height:100%;
+    flex: 1 1 0;
   }
 
   &__center {
     display: flex;
-    align-self: stretch;
-    justify-self: center;
     justify-content: center;
-
-    @include screen('not mobile') {
-      display: none;
-    }
+    height:100%;
+    flex: 1 1 0;
   }
 
   &__right {
     display: flex;
-    align-self: stretch;
-    justify-self: right;
-    justify-content: center;
+    justify-content: flex-end;
+    height:100%;
+    flex: 1 1 0;
   }
 
   &__separator {
@@ -41,20 +41,21 @@ $olt-navbar-separator-color-bg: rgba(white, 0.4);
     height: 100%;
   }
 
-  button.olt-navbar__item {
+  &__item {
     border: none;
     background: none;
     text-align: left;
-  }
-
-  button.olt-navbar__item,
-  &__item {
+    padding:0;
+    white-space:nowrap;
     font-size: 14px;
     line-height: 22px;
     display: flex;
     height: 100%;
     align-items: center;
-    @include responsive-spacing-s('padding');
+
+    @include responsive-spacing-s('padding-left');
+    @include responsive-spacing-s('padding-right');
+
 
     &--is-active {
       background-color: rgba(white, 0.3);
