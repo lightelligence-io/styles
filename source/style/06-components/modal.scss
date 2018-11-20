@@ -140,24 +140,31 @@
 
   &.olt-modal--is-open {
     &.olt-modal {
-      z-index: 1000;
+      z-index: 1100;
       opacity: 1;
       transform: translate(-50%, -50%);
       transition: z-index 0ms ease 0ms, opacity 300ms ease 100ms,
         width 200ms ease 0ms, transform 500ms ease-in-out 0ms;
 
+      ~ .olt-modal__backdrop {
+        z-index: 1099;
+      }
       &--notification {
         width: 440px;
         //transition: width 200ms ease 0ms;
       }
 
       &--fullscreen {
+        z-index: 1000;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         width: 100%;
         transform: unset;
+        ~ .olt-modal__backdrop {
+          z-index: 999;
+        }
       }
     }
 
@@ -171,7 +178,7 @@
 
     ~ .olt-modal__backdrop {
       opacity: 1;
-      z-index: 999;
+
       transition: z-index 0ms ease 0ms, opacity 300ms ease 100ms;
     }
   }
