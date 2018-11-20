@@ -13,7 +13,7 @@ $component:'olt-navbar';
   z-index: 998;
   background-color: $olt-navbar-color-bg;
   color: $olt-navbar-color-font;
-  height: $navigation-bar-height;
+  height: #{$navigation-bar-height}px;
 
   &__left {
     display: flex;
