@@ -1,28 +1,28 @@
 .olt-key-value-list {
-    margin: 0;
-    &__item {
-        dd {
-            margin: 0;
-            padding: 0 0 0.5em 0;
-            font-size: 0.875rem;
-            line-height: 1.375rem;
-        }
-        dt {
-            color: $primary-04;
-            margin: 0;
-            padding: 0;
-            display: block;
-            font-size: 0.75rem;
-            line-height: 1.25rem;
-        }
+  margin: 0;
+  &__item {
+    dd {
+      margin: 0;
+      padding: 0 0 0.5em 0;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
     }
-
-    &.has-columns {
-        display: flex;
-        flex-flow: row wrap;
-
-        .olt-key-value-list__item {
-            flex: 50%;
-        }
+    dt {
+      color: $primary-04;
+      margin: 0;
+      padding: 0;
+      display: block;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
     }
+  }
+
+  &.has-columns {
+    display: flex;
+    flex-flow: row wrap;
+
+    .olt-key-value-list__item {
+      flex: 50%;
+    }
+  }
 }

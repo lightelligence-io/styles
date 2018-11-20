@@ -1,6 +1,7 @@
 $olt-table-cell-spacing: 12px 16px;
 $olt-table-hover-line-color: $notify !default;
-$olt-table-hover-line-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+$olt-table-hover-line-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+  0 1px 2px 0 rgba(0, 0, 0, 0.24);
 
 .olt-table {
   width: 100%;
@@ -58,7 +59,8 @@ $olt-table-hover-line-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(
 
   // modifire
   &--middle-aligned {
-    th, td {
+    th,
+    td {
       text-align: center;
 
       &:first-child {
@@ -71,27 +73,26 @@ $olt-table-hover-line-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(
     }
   }
 
-
   &--line-hover {
     > tbody > tr:hover {
-        box-shadow: $olt-table-hover-line-shadow;
+      box-shadow: $olt-table-hover-line-shadow;
+      position: relative;
+      z-index: 10;
+
+      > td:first-child {
         position: relative;
-        z-index: 10;
 
-        > td:first-child {
-          position: relative;
-
-          &::before {
-            content: '';
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background-color: $olt-table-hover-line-color;
-          }
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 2px;
+          background-color: $olt-table-hover-line-color;
         }
+      }
     }
   }
 }

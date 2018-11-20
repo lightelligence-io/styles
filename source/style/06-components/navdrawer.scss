@@ -6,7 +6,7 @@ $olt-navdrawer-color-font: rgba($olt-navdrawer-color-font-active, 0.7);
 $olt-navdrawer-separator-color-bg: rgba($olt-navdrawer-color-font, 0.1);
 
 @mixin navdrawer-item() {
-  border:0;
+  border: 0;
   background: none;
   text-align: left;
   padding-left: 0;
@@ -19,7 +19,6 @@ $olt-navdrawer-separator-color-bg: rgba($olt-navdrawer-color-font, 0.1);
   padding-bottom: 10px;
   font-size: 24px;
   line-height: 32px;
-
 
   &:not(:first-child) {
     margin-top: 16px;
@@ -48,9 +47,9 @@ $component: 'olt-navdrawer';
 
 .#{$component} {
   padding: 32px 64px;
-  z-index:1300;
+  z-index: 1300;
   width: 100%;
-  overflow-y:auto;
+  overflow-y: auto;
 
   position: absolute;
   // FIXME: ios fix required here
@@ -63,5 +62,4 @@ $component: 'olt-navdrawer';
   &__item {
     @include navdrawer-item();
   }
-
 }
