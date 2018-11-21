@@ -1,23 +1,23 @@
 .olt-stepper-nav {
   position: relative;
-  height: 40px;
   z-index: 0;
+  display: flex;
   .olt-stepper-nav__step-item {
     display: inline-block;
     z-index: 1;
     cursor: pointer;
-    text-align: center;
-    float: left;
 
     .olt-stepper-nav__step-item-inner {
-      background: $primary-08;
-      padding: 0 16px;
-      display: inline;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
     .olt-fab {
-      display: inline-block;
-      margin-right: 8px;
+      display: block;
+      margin-bottom: 16px;
       line-height: 40px;
     }
 
@@ -40,25 +40,13 @@
           0 2px 12px 0 rgba(0, 0, 0, 0.24);
       }
     }
-
-    &:first-child {
-      text-align: left;
-      .olt-stepper-nav__step-item-inner {
-        padding-left: 0;
-      }
-    }
-    &:last-child {
-      text-align: right;
-      .olt-stepper-nav__step-item-inner {
-        padding-right: 0;
-      }
-    }
   }
   &::after {
     content: '';
     position: absolute;
-    left: 0;
-    top: 50%;
+    left: 0px;
+    top: 20px;
+
     transform: translateY(-50%);
     width: 100%;
     border-bottom: solid 1px $primary-04;
