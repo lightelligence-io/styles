@@ -52,7 +52,7 @@ $component: 'olt-navdrawer';
   overflow-y: auto;
 
   position: absolute;
-  // FIXME: ios fix required here
+
   height: calc(100% - #{$navigation-bar-height}px);
   top: #{$navigation-bar-height}px;
 

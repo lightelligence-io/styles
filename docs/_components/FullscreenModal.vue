@@ -56,9 +56,9 @@ export default {
     watch: {
         open(newVal, oldVal) {
             if (newVal) {
-                document.body.classList.add('olt-modal--in-body-open');
+                document.documentElement.classList.add('olt-modal--in-body-open-fullscreen');
             } else {
-                document.body.classList.remove('olt-modal--in-body-open');
+                document.documentElement.classList.remove('olt-modal--in-body-open-fullscreen');
             }
         },
     },

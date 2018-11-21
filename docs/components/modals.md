@@ -7,7 +7,7 @@ and remove to open or close the modal.
 
 <fullscreen-modal></fullscreen-modal>
 
-If you want to disable the scrollability of the whole body you have to set the class `olt-modal--in-body-open` to the body element.
+If you want to disable the scrollability of the whole body you have to set the class `olt-modal--in-body-open` or `olt-modal--in-body-open-fullscreen` (for fullscreen modals) to the documentElement (html) element.
 
 ````html
 <section>
