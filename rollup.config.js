@@ -1,10 +1,10 @@
-import pack from './package.json';
 import postcss from 'rollup-plugin-postcss';
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
-import {uglify} from 'rollup-plugin-uglify';
+import { uglify } from 'rollup-plugin-uglify';
 import comments from 'postcss-discard-comments';
 import copy from 'rollup-plugin-copy';
+import pack from './package.json';
 import { exportFonts } from './build-font-files-helper';
 
 const debug = false; // internal debug mode to check your output
@@ -15,34 +15,32 @@ const moduleName = 'lightelligence';
 const targetDir = 'dist';
 
 const plugins = [
-    resolve({}),
-    babel({
-        exclude: [
-            'source/style/**',
-            'node_modules/**',
-        ]
-    }),
-    debug ? null : uglify(), // minify
-    postcss({
-        extract: true,
-        minimize: true,
-        sourceMap: false,
-        plugins: [
-            debug ? null : comments({removeAll: true}),
-        ]
-    }),
-    copy(exportFonts)
+  resolve({}),
+  babel({
+    exclude: ['source/style/**', 'node_modules/**'],
+  }),
+  debug ? null : uglify(), // minify
+  postcss({
+    extract: true,
+    minimize: true,
+    sourceMap: false,
+    plugins: [debug ? null : comments({ removeAll: true })],
+  }),
+  copy(exportFonts),
+  copy({
+    'node_modules/material-design-icons-iconfont/dist/fonts': 'dist/fonts/',
+  }),
 ];
 
 export default {
-    input: 'source/index.js',
-    treeshake: false,
-    plugins,
-    output: [
-        {
-            file: `${targetDir}/${packageName}.js`,
-            name: moduleName, // export module name
-            format: 'umd' // umd package type for best support
-        }
-    ]
+  input: 'source/index.js',
+  treeshake: false,
+  plugins,
+  output: [
+    {
+      file: `${targetDir}/${packageName}.js`,
+      name: moduleName, // export module name
+      format: 'umd', // umd package type for best support
+    },
+  ],
 };
