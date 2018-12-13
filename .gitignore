@@ -1,8 +1,7 @@
 .DS_Store
 /node_modules
-/build
-/build-styleguide
-/styleguide/build
+/dist
+/docs
 
 # local env files
 .env.local

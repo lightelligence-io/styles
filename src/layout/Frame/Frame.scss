@@ -1,0 +1,28 @@
+.#{$namespace}Frame {
+  font-family: $font-family-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  //min-height: 100%;
+  position: relative;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &-header {
+    flex: 0 0 auto;
+  }
+
+  &-main {
+    flex: 0 1 100%;
+  }
+
+  &-footer {
+    margin-top: map-get($spacers, 4);
+    flex: 0 0 auto;
+  }
+}

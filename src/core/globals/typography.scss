@@ -1,0 +1,118 @@
+// TODO: Add `default!` directive
+
+// Font sizes
+$font-size-root: 16px;
+
+$font-medium: (
+  size: 1rem, // 16px
+  line-height: 1.5rem
+);
+$font-xx-small:(
+  size:  0.65rem, // 10.4px
+  line-height: 1rem
+);
+$font-x-small:(
+  size:  0.75rem, // 12px
+  line-height: 1.25rem
+);
+$font-small: (
+  size: 0.8rem, // 12.8px
+  line-height: 1.35rem
+);
+$font-large: (
+  size: 1.5rem, // 20px
+  line-height: 2rem,
+);
+$font-x-large:(
+  size:  1.8rem, // 28.8px
+  line-height: 2.3rem,
+);
+$font-xx-large:(
+  size:  2.2rem, // 35.2px
+  line-height: 2.6rem
+);
+
+$font-smaller: (
+  size: 80%,
+  line-height: 80%,
+);
+
+$font-larger: (
+  size: 150%,
+  line-height: 150%
+);
+
+$font-size-medium: map-get($font-medium, 'size');
+$font-size-xx-small: map-get($font-xx-small, 'size');
+$font-size-x-small: map-get($font-x-small, 'size');
+$font-size-small: map-get($font-small, 'size');
+$font-size-large: map-get($font-large, 'size');
+$font-size-x-large: map-get($font-x-large, 'size');
+$font-size-xx-large: map-get($font-xx-large, 'size');
+$font-size-smaller: map-get($font-smaller, 'size');
+$font-size-larger: map-get($font-larger, 'size');
+
+$line-height-medium: map-get($font-medium, 'line-height');
+$line-height-xx-small: map-get($font-xx-small, 'line-height');
+$line-height-x-small: map-get($font-x-small, 'line-height');
+$line-height-small: map-get($font-small, 'line-height');
+$line-height-large: map-get($font-large, 'line-height');
+$line-height-x-large: map-get($font-x-large, 'line-height');
+$line-height-xx-large: map-get($font-xx-large, 'line-height');
+$line-height-smaller: map-get($font-smaller, 'line-height');
+$line-height-larger: map-get($font-larger, 'line-height');
+
+
+
+$font-sizes: (
+  medium: $font-size-medium,
+  xx-small: $font-size-xx-small,
+  x-small: $font-size-x-small,
+  small: $font-size-small,
+  large: $font-size-large,
+  x-large: $font-size-x-large,
+  xx-large: $font-size-xx-large,
+  smaller: $font-size-smaller,
+  larger: $font-size-larger
+) !default;
+
+$fonts: (
+  medium: $font-medium,
+  xx-small: $font-xx-small,
+  x-small: $font-x-small,
+  small: $font-small,
+  large: $font-large,
+  x-large: $font-x-large,
+  xx-large: $font-xx-large,
+  smaller: $font-smaller,
+  larger: $font-larger
+) !default;
+
+// Font families
+$font-family-base: 'PT Sans', Arial;
+$font-family-mono: 'Overpass Mono', monospace;
+
+// Font weights
+$font-weight-light: 400;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-mono: 300;
+
+// Line height
+$line-height: 1.5;
+
+// Copy
+$font-size-base: $font-size-root;
+$font-weight-base: $font-weight-normal;
+$text-color: $black;
+
+// Headings
+$font-family-heading: $font-family-base;
+$font-weight-heading: $font-weight-bold;
+
+
+// Links
+$link-color: $primary;
+$link-hover-contrast: 10%;
+$link-decoration: none;
+$link-hover-decoration: none;

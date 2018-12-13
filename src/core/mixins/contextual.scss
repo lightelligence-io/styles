@@ -1,0 +1,70 @@
+@mixin contextual-colors(
+  $props: ('background-color', 'color', 'border-color'),
+  $named-colors: $context-colors,
+  $threshold: $context-threshold,
+  $selector: &
+) {
+  $light: map-get($context-colors, 'light') or '#fff';
+  $dark: map-get($context-colors, 'dark') or '#000';
+
+  @each $name, $value in $context-colors {
+    $s: selector-append('#{&}--#{$name}', $selector);
+    &#{$s} {
+      $background-color: null;
+      $color: null;
+      @if index($props, 'color') != null and index($props, 'background-color') != null {
+        @if $name != 'light' and $name != 'dark' {
+          $background-color: $value;
+        }
+        @if (color-contrast($value, $threshold)) {
+          $color: $light;
+        } @else {
+          $color: $dark;
+        }
+      }
+
+      @each $prop in $props {
+        @if ($prop == 'background-color' and $background-color != null) {
+          background-color: $background-color;
+        } @elseif ($prop == 'color' and $color == null) {
+          $color: $value;
+        } @else {
+          #{$prop}: $value;
+        }
+      }
+
+      @if $color != null {
+        color: $color;
+        /*a {
+          color: inherit;
+
+          &.is-active,
+          &:visited,
+          &:hover,
+          &:focus {
+            filter: brightness(#{100% - $link-hover-contrast});
+          }
+        }*/
+      }
+      @content;
+    }
+  }
+}
+
+@mixin contextual-component {
+  @include contextual-colors();
+
+  &:hover,
+  &:visited {
+    filter: brightness(#{100% - $link-hover-contrast});
+    text-decoration: none;
+  }
+
+  &--outline {
+    background-color: $white;
+    &:hover,
+    &:visited {
+      filter: none;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.#{$namespace}Tag {
+  // NOTE: tag color was previously set to $gray-300 through $border-color, but outline tags were barely visible
+  $tag-color: $gray-500 !default; // prev $border-color
+  $tag-background: $white !default; // prev $border-color
+  $tag-border-color: currentColor !default; // prev $border-color
+  $tag-border-width: $border-width !default;
+  $tag-border-radius: 0 !default;
+  $tag-padding-x: map-get($spacers, 2) !default;
+  $tag-padding-y: map-get($spacers, 1) !default;
+
+  $self: &;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  height: 1.625rem;
+  font-size: $font-size-small;
+  padding: $tag-padding-y $tag-padding-x;
+  font-family: $font-family-mono;
+  text-transform: uppercase;
+  border-radius: $tag-border-radius;
+  background-color: $tag-background;
+  border-style: solid;
+  border-color: $tag-border-color;
+  border-width: $tag-border-width;
+  border-radius: $tag-border-radius;
+  color: $tag-color;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover,
+  &:visited {
+    filter: brightness(#{100% - $link-hover-contrast});
+    text-decoration: none;
+  }
+
+  @include contextual-colors();
+
+  &--outline {
+    background-color: $white;
+    &:hover,
+    &:visited {
+      filter: none;
+    }
+  }
+
+  @include contextual-colors('color', 'border-color', $selector: '#{&}--outline:not(:hover)') {
+    background-color: $white;
+  }
+
+
+  @at-root {
+    #{$self}--selectable,
+    button#{$self},
+    #{$self}[type='button'],
+    a:link#{$self} {
+      cursor: pointer;
+    }
+  }
+
+  &[data-icon],
+  &[data-close] {
+    vertical-align: middle;
+
+    &:after,
+    &:before {
+      display: inline-flex;
+      font-size: initial;
+      vertical-align: text-top;
+    }
+
+    &[data-icon] {
+      &:before {
+        @extend .#{$namespace}Icon:before;
+        content: attr(data-icon);
+      }
+    }
+
+    &[data-close] {
+      &:after {
+        @extend .#{$namespace}Icon:before;
+        content: 'close'
+      }
+    }
+  }
+
+  &-icon {
+    display: inline-flex;
+    vertical-align: middle;
+
+    &:before {
+      font-size: initial;
+      vertical-align: text-top;
+    }
+  }
+}

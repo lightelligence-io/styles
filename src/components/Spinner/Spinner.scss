@@ -1,0 +1,56 @@
+.#{$namespace}Spinner {
+  @-webkit-keyframes lds-dual-ring {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes lds-dual-ring {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @at-root {
+    %#{$namespace}spinner {
+      display: inline-block;
+
+      width: 1.5em;
+      height: 1.5em;
+      vertical-align: text-top;
+
+      border-radius: 50%;
+      border: .375em solid currentColor;
+      border: 1.5px solid currentColor;
+      border-color: currentColor transparent currentColor transparent;
+      transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+      transform-origin: center;
+      animation: lds-dual-ring 1s linear infinite;
+    }
+  }
+
+  &:empty {
+    @extend %#{$namespace}spinner;
+  }
+
+  &:not(:empty) {
+    &:before {
+      content: '';
+      @extend %#{$namespace}spinner;
+    }
+  }
+
+
+
+  @include contextual-colors('color');
+}

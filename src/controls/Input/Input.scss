@@ -1,0 +1,25 @@
+.#{$namespace}Input {
+  @extend %control;
+  border: 0;
+  border-bottom: $control-border-width solid $control-border-color;
+  border-radius: 0;
+
+  &:focus {
+    outline: none;
+    border-color: $primary;
+  }
+
+  &:disabled {
+    background-color: unset;
+  }
+
+  @include control-placeholder();
+
+  &--block {
+    display: block;
+  }
+
+  &.is-error {
+    border-color: $error;
+  }
+}

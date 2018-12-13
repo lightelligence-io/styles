@@ -1,0 +1,16 @@
+.#{$namespace}Container {
+  $container-padding-x: 2rem;
+  $container-padding-y: null;
+
+  @include make-container($container-padding-x, $container-padding-y);
+  @include make-container-max-widths();
+
+  &--fluid {
+    max-width: none;
+  }
+
+  &--noPadding {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

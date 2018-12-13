@@ -1,0 +1,110 @@
+@mixin make-2columns ($self) {
+  grid-gap: 0px;
+    grid-template-columns: 50% 50%;
+    #{$self}-term {
+      grid-column: 1;
+      &:nth-of-type(2n) {
+        grid-column: 2;
+
+      }
+    }
+    #{$self}-item {
+      grid-column: 1;
+      &:nth-of-type(2n) {
+        grid-column: 2;
+      }
+      // no margin bottom for the last two items
+      &:not(:nth-last-of-type(2)):not(:last-of-type) {
+        margin-bottom: map-get($spacers, 2);
+      }
+    }
+}
+
+@mixin make-vertical ($self) {
+    grid-gap: 0px;
+    grid-template-columns: 100%;
+    #{$self}-term {
+      grid-column: 1;
+    }
+    #{$self}-item {
+      grid-column: 1;
+      // no margin bottom for the last two items
+      &:not(:last-of-type) {
+        margin-bottom: map-get($spacers, 2);
+      }
+    }
+}
+
+
+.#{$namespace}List {
+  $self: &;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  list-style: disc inside;
+  margin-bottom: $spacer;
+
+  &-item {
+    display: list-item;
+    margin: 0 0 map-get($spacers, 2);
+    padding: 0;
+    counter-increment: list-item-counter;
+  }
+
+  &--ordered {
+    counter-reset: list-item-counter;
+    list-style-type: decimal;
+  }
+
+  &--definition {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 120px calc(100% - 120px);
+    grid-gap: map-get($spacers, 2);
+    grid-auto-flow: dense;
+  }
+
+  &-term {
+    grid-column: 1;
+    color: $gray-500;
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-size: $font-size-x-small;
+    line-height: 1.7;
+  }
+
+  &-term {
+    grid-column: 1;
+  }
+
+  &-item {
+    grid-column: 2;
+    margin-bottom:0;
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @include screen-up($breakpoint, $breakpoints) {
+
+      &--#{$infix}vertical {
+        @include make-vertical($self);
+      }
+    }
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @include screen-up($breakpoint, $breakpoints) {
+
+      &--#{$infix}2columns {
+        @include make-2columns($self);
+      }
+    }
+  }
+}

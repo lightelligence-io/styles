@@ -1,0 +1,7 @@
+.#{$namespace}Paragraph {
+  margin: 0 0 $spacer 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

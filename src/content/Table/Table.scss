@@ -1,0 +1,89 @@
+.#{$namespace}Table {
+  $table-cell-width: 200px;
+
+  $self: &;
+  min-width: 100%;
+  border: 0;
+  margin: 1rem 0;
+  display: table;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  &-header {
+    background: $gray-100;
+    border: 0;
+    border-bottom: solid 1px $gray-300;
+    width: $table-cell-width;
+    white-space: nowrap;
+  }
+
+  &-data {
+    border: 0;
+    padding: $table-cell-spacing;
+    text-align: left;
+    vertical-align: middle;
+    width: $table-cell-width;
+
+    * {
+      margin-bottom: 0;
+    }
+  }
+
+  &-header {
+    font: {
+      family: 'Overpass Mono', monospace;
+      weight: normal;
+    }
+    border: 0;
+    color: $gray-600;
+    font-size: $font-size-small;
+    padding: $table-cell-spacing;
+    text-align: left;
+    text-transform: uppercase;
+    border-bottom: solid 1px $gray-300;
+  }
+
+  &-row + &-row &-data {
+    border: 0;
+    border-top: solid 1px $gray-300;
+  }
+
+  &--justify &-header,
+  &--justify &-data {
+    text-align: center;
+
+    &:first-child {
+      text-align: left;
+    }
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  &--selectable *:not(#{&}-head) &-row {
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: $table-hover-shadow;
+      position: relative;
+      z-index: 10;
+      cursor: pointer;
+
+      #{$self}-data:first-child {
+        position: relative;
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 2px;
+          background-color: $table-hover-color;
+        }
+      }
+    }
+  }
+}

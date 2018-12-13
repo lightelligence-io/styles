@@ -1,0 +1,154 @@
+.#{$namespace}Button {
+  $button-padding-x: 1rem !default;
+  $button-padding-y: 0 !default;
+  $button-border-color: $border-color !default;
+  $button-background: $border-color !default;
+  $button-border-width: $border-width !default;
+  $button-border-radius: 2.5rem !default;
+  $button-color: $text-color !default;
+
+  $button-pending-opacity: 0.4;
+
+  $self: &;
+  position: relative;
+  line-height: 2.25rem;
+  background-color: $button-background;
+  border-style: solid;
+  border-color: $button-border-color;
+  border-width: $button-border-width;
+  border-radius: $button-border-radius;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 300ms;
+  min-width: 120px;
+  -webkit-appearance: none;
+  color: $button-color;
+  padding: $button-padding-y $button-padding-x;
+
+  &.is-active,
+  &:focus {
+    outline-width: 0;
+  }
+
+  &:not(.is-disabled):not(:disabled):not(.is-pending) {
+    &:not(:active):not(.is-active) {
+      &:hover,
+      &:focus {
+        filter: brightness(#{100% - $link-hover-contrast});
+        text-decoration: none;
+      }
+    }
+
+    &.is-active,
+    &:focus {
+      box-shadow: 0 0.125rem 0.33rem 0 rgba(0, 0, 0, 0.12), 0 3px 6px 0 rgba(0, 0, 0, 0.24);
+    }
+  }
+
+  &--outline {
+    background-color: $white;
+    &:hover,
+    &:visited {
+      filter: none;
+    }
+  }
+
+  @include contextual-colors($selector: '#{$self}:not(.is-disabled)') {
+    &.is-pending {
+      color: rgba($white, $button-pending-opacity);
+    }
+    &:hover {
+      color: $white;
+    }
+  }
+
+  @include contextual-colors(
+    'color',
+    'border-color',
+    $selector: '#{$self}--outline:not(:hover):not(:focus):not(:disabled):not(.is-disabled)') {
+      background-color: $white;
+
+      &.is-pending {
+        @each $name, $value in $context-colors {
+          &#{$self}--#{$name} {
+            color: rgba($value, $button-pending-opacity);
+          }
+        }
+      }
+    }
+
+  &--icon,
+  &[data-icon] {
+    @extend .#{$namespace}Icon;
+
+    &:before {
+      font-size: 150%;
+    }
+  }
+
+  &--icon,
+  &--count,
+  &[data-icon],
+  &[data-count] {
+    padding: 0;
+    display: inline-flex;
+    min-width: 38px;
+    height: 38px;
+
+    &:empty {
+      padding: 0;
+    }
+  }
+
+  &.is-disabled,
+  &:disabled {
+    user-select: none;
+    cursor: default;
+    background-color: initial;
+    color: $gray-500;
+    border-style: dashed;
+    border-color: $gray-500;
+    filter: none;
+
+    &:hover {
+      color: $gray-500;
+      filter: none;
+    }
+  }
+
+  &.is-pending {
+    pointer-events: none;
+    color: rgba($button-color, $button-pending-opacity);
+
+    &:after {
+      content: '';
+      @extend %#{$namespace}spinner;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      color: $button-color;
+    }
+  }
+
+  @each $name, $value in $context-colors {
+    &--#{$name}.is-pending {
+      &:after {
+        color: $white; // TODO: Color contrast
+      }
+    }
+
+    &--#{$name}.is-pending {
+      &#{$self}--outline {
+        &:after {
+          color: $value;
+        }
+      }
+    }
+  }
+}

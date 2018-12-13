@@ -1,0 +1,58 @@
+%Grid-item {
+  position: relative;
+  width: 100%;
+  min-height: 1px; // Prevent columns from collapsing when empty
+}
+
+.#{$namespace}Grid {
+  $self: &;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: ($grid-gutter / -2);
+  margin-left: ($grid-gutter / -2);
+  margin-top: ($grid-gutter * -1);
+
+  &-item {
+    @extend %Grid-item;
+    margin-top: $grid-gutter;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    padding-right: ($grid-gutter / 2);
+    padding-left: ($grid-gutter / 2);
+  }
+
+  // columns
+
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @include screen-up($breakpoint, $breakpoints) {
+      #{$self}-item--#{$infix}auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: none; // Reset earlier grid tiers
+      }
+
+      @for $i from 1 through $grid-columns {
+        #{$self}-item--#{$infix}#{$i} {
+          @include make-col($i, $grid-columns);
+        }
+      }
+    }
+  }
+
+  // offsets
+
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @include screen-up($breakpoint, $breakpoints) {
+      @for $i from 1 through $grid-columns {
+        #{$self}-item--#{$infix}offset#{$i} {
+          @include make-col-offset($i, $grid-columns);
+        }
+      }
+    }
+  }
+}

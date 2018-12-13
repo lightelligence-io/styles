@@ -1,0 +1,46 @@
+// TODO: Use maps for property names and values
+.#{$namespace}u-alignItemsStart {
+  align-items: flex-start !important;
+}
+
+.#{$namespace}u-alignItemsCenter {
+  align-items: center !important;
+}
+
+.#{$namespace}u-alignItemsEnd {
+  align-items: flex-end !important;
+}
+
+.#{$namespace}u-alignItemsStretch {
+  align-items: stretch !important;
+}
+
+.#{$namespace}u-alignItemsBaseline {
+  align-items: baseline !important;
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+  @include screen-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    .#{$namespace}u-#{$infix}alignItemsStart {
+      align-items: flex-start !important;
+    }
+
+    .#{$namespace}u-#{$infix}alignItemsCenter {
+      align-items: center !important;
+    }
+
+    .#{$namespace}u-#{$infix}alignItemsEnd {
+      align-items: flex-end !important;
+    }
+
+    .#{$namespace}u-#{$infix}alignItemsStretch {
+      align-items: stretch !important;
+    }
+
+    .#{$namespace}u-#{$infix}alignItemsBaseline {
+      align-items: baseline !important;
+    }
+  }
+}

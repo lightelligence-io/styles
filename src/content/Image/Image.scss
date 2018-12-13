@@ -1,0 +1,12 @@
+.#{$namespace}Image {
+  $image-border-radius: $border-radius;
+
+  &:not(#{&}--natural) {
+    width: 100%;
+    height: auto;
+  }
+
+  &--round {
+    border-radius: $image-border-radius;
+  }
+}

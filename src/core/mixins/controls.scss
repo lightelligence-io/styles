@@ -1,0 +1,27 @@
+@mixin control-placeholder-style($opacity: 1) {
+  font-size: $control-font-size;
+  font-weight: $control-font-weight;
+  color: $control-placeholder;
+  opacity: $opacity;
+}
+
+@mixin control-placeholder($args...) {
+  *:-moz-placeholder { @include control-placeholder-style($args...); }
+  *::-moz-placeholder { @include control-placeholder-style($args...); }
+  *::-webkit-input-placeholder { @include control-placeholder-style($args...); }
+
+  :-moz-placeholder { @include control-placeholder-style($args...); }
+  ::-moz-placeholder { @include control-placeholder-style($args...); }
+  ::-webkit-input-placeholder { @include control-placeholder-style($args...); }
+
+  &:-moz-placeholder { @include control-placeholder-style($args...); }
+  &::-moz-placeholder { @include control-placeholder-style($args...); }
+  &::-webkit-input-placeholder { @include control-placeholder-style($args...); }
+}
+
+@mixin control() {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: currentColor;
+}

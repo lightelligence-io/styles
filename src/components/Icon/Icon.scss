@@ -1,0 +1,55 @@
+.#{$namespace}Icon {
+  $icon-font-family: 'Material Icons' !default;
+  $icon-font-size: 150%;
+  $icon-sizes: (
+    small: 1rem,
+    medium: 2rem,
+    large: 3rem
+  ) !default;
+
+  display: inline-flex;
+  vertical-align: middle;
+
+  &:before {
+    content: '';
+    font-family: $icon-font-family;
+    font-weight: normal;
+    font-style: normal;
+    font-size: $icon-font-size;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+    font-display: block;
+  }
+
+  @include contextual-colors('color');
+
+  @each $name, $value in $icon-sizes {
+    &--#{$name} {
+      font-size: $value;
+    }
+  }
+
+  &:after {
+    font-family: 'Material Icons';
+    font-style: normal;
+    //font-size: 140%;
+    content: attr(data-description);
+  }
+
+  &[data-icon] {
+    &:before {
+      content: attr(data-icon);
+    }
+  }
+}

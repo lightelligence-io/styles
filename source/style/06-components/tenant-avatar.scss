@@ -1,9 +1,0 @@
-.olt-tenant-avatar {
-  &:not(&--size-large) {
-    @include avatar-letter('m', $secondary-01, transparent);
-  }
-
-  &--size-large {
-    @include avatar-letter('l', $secondary-01, transparent);
-  }
-}
