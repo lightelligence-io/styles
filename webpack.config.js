@@ -62,10 +62,9 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               ident: 'postcss',
-              plugins: [
-                require('autoprefixer'),
-                // require('cssnano'), // TODO: Minify in production
-              ]
+              config: {
+                path: __dirname
+              }
             }
           }, {
             loader: 'fast-sass-loader',

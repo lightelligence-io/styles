@@ -61,6 +61,7 @@ Please note that this doesn't work with inputs of button type.
 <button class="olt-Button is-active">Active</button>
 ```
 
+<!--
 ### Pending
 
 ```html
@@ -69,3 +70,4 @@ Please note that this doesn't work with inputs of button type.
 <button class="olt-Button olt-Button--primary is-pending">Pending</button>
 <button class="olt-Button olt-Button--primary olt-Button--outline is-pending">Pending</button>
 ```
+-->

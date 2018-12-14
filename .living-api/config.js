@@ -88,11 +88,11 @@ module.exports = {
             path: '/components/Icon/Icon.html',
             items: []
           },
-          {
+          /*{
             label: 'Spinner',
             path: '/components/Spinner/Spinner.html',
             items: []
-          },
+          },*/
           {
             label: 'Dropdown',
             path: '/components/Dropdown/Dropdown.html',

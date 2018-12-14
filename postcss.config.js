@@ -1,7 +1,9 @@
-console.log('post css config');
+const mode = process.env.NODE_ENV || 'development';
+
+
 module.exports = {
   plugins: [
     require('autoprefixer'),
-    // require('cssnano'), // TODO: Minify in production
+    mode === 'production' && require('cssnano'), // TODO: Minify in production
   ],
 };
