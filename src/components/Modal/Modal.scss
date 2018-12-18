@@ -2,8 +2,8 @@
   $modal-border-radius: $border-radius !default;
   $modal-backdrop: rgba(255, 255, 255, 0.7) !default;
   $modal-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3) !default;
-  $modal-padding-x: 2.25rem;
-  $modal-padding-y: 2.25rem;
+  $modal-padding-x: 1.5rem;
+  $modal-padding-y: 1.5rem;
 
   $modal-content-padding-x: 0;
   $modal-content-padding-y: map-get($spacers, 3) !default;
@@ -201,7 +201,6 @@
     background: transparent;
     box-shadow: none;
     flex-wrap:unset;
-    padding: 1rem;
   }
 
   &--fullscreen &-close {
