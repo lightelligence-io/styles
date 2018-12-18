@@ -2,7 +2,7 @@
 
 Enable scroll behavior.
 
-`olt-u-[xs|sm|lg|xl]-overflow[X|Y]{Auto|Visible|Hidden|Scroll|Initial}`
+`olt-u-[sm-|md-|lg-|xl-]overflow[X|Y]{Auto|Visible|Hidden|Scroll|Initial}`
 
 
 ```html

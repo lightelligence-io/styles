@@ -3,8 +3,11 @@
   $link-decoration: none !default;
 
   cursor: pointer;
+
+  // potential button overrides
   padding-left: 0;
   padding-right: 0;
+
   text-decoration: $link-decoration;
   background-color: transparent;
   border: 0;

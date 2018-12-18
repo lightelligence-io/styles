@@ -2,7 +2,7 @@
 
 Text alignment.
 
-`olt-u-[xs|sm|lg|xl]-textAlign{Left|Center|Right|Justify|Initial}`
+`olt-u-[sm-|md-|lg-|xl-]textAlign{Left|Center|Right|Justify|Initial}`
 
 ```html
 <p class="olt-Paragraph olt-u-textAlignLeft">

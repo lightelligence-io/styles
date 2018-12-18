@@ -4,10 +4,10 @@
   $threshold: $context-threshold,
   $selector: &
 ) {
-  $light: map-get($context-colors, 'light') or '#fff';
-  $dark: map-get($context-colors, 'dark') or '#000';
+  $light: map-get($named-colors, 'light') or '#fff';
+  $dark: map-get($named-colors, 'dark') or '#000';
 
-  @each $name, $value in $context-colors {
+  @each $name, $value in $named-colors {
     $s: selector-append('#{&}--#{$name}', $selector);
     &#{$s} {
       $background-color: null;
@@ -26,7 +26,7 @@
       @each $prop in $props {
         @if ($prop == 'background-color' and $background-color != null) {
           background-color: $background-color;
-        } @elseif ($prop == 'color' and $color == null) {
+        } @else if ($prop == 'color' and $color == null) {
           $color: $value;
         } @else {
           #{$prop}: $value;

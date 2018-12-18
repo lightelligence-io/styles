@@ -1,11 +1,10 @@
-
 .#{$namespace}Select {
   @extend %control;
   font-size: 14px;
 
   /* styling */
   background-color: white;
-  display: inline-block;
+  display: block;
   padding: 0.25rem 1.25rem 0 0;
   /* reset */
 
@@ -50,6 +49,10 @@
 
   &.is-error {
     border-color: $error;
+  }
+
+  &--inline {
+    display: inline-block;
   }
 
   &--fullwidth {

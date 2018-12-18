@@ -6,17 +6,35 @@
 }
 
 @mixin control-placeholder($args...) {
-  *:-moz-placeholder { @include control-placeholder-style($args...); }
-  *::-moz-placeholder { @include control-placeholder-style($args...); }
-  *::-webkit-input-placeholder { @include control-placeholder-style($args...); }
+  *:-moz-placeholder {
+    @include control-placeholder-style($args...);
+  }
+  *::-moz-placeholder {
+    @include control-placeholder-style($args...);
+  }
+  *::-webkit-input-placeholder {
+    @include control-placeholder-style($args...);
+  }
 
-  :-moz-placeholder { @include control-placeholder-style($args...); }
-  ::-moz-placeholder { @include control-placeholder-style($args...); }
-  ::-webkit-input-placeholder { @include control-placeholder-style($args...); }
+  :-moz-placeholder {
+    @include control-placeholder-style($args...);
+  }
+  ::-moz-placeholder {
+    @include control-placeholder-style($args...);
+  }
+  ::-webkit-input-placeholder {
+    @include control-placeholder-style($args...);
+  }
 
-  &:-moz-placeholder { @include control-placeholder-style($args...); }
-  &::-moz-placeholder { @include control-placeholder-style($args...); }
-  &::-webkit-input-placeholder { @include control-placeholder-style($args...); }
+  &:-moz-placeholder {
+    @include control-placeholder-style($args...);
+  }
+  &::-moz-placeholder {
+    @include control-placeholder-style($args...);
+  }
+  &::-webkit-input-placeholder {
+    @include control-placeholder-style($args...);
+  }
 }
 
 @mixin control() {
@@ -24,4 +42,22 @@
   border: 0;
   background: transparent;
   color: currentColor;
+}
+
+@mixin form-field-footer() {
+  text-align: left;
+  font-size: $font-size-small;
+  height: $line-height-small;
+  margin-top: map-get($spacers, 1);
+  display: flex;
+  justify-content: space-between;
+
+  &-message {
+    text-align: left;
+    font-size: $font-size-small;
+  }
+
+  &-info {
+    margin-left: auto;
+  }
 }

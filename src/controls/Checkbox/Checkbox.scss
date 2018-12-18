@@ -1,7 +1,11 @@
 // TODO: Recheck what's possible today regarding styling native inputs. What about IE11?
 .#{$namespace}Checkbox {
   $self: &;
-  display: inline-flex;
+  display: flex;
+
+  &--inline {
+    display: inline-flex;
+  }
 
   &-input {
     position: absolute;

@@ -13,11 +13,6 @@
     margin-bottom: 0;
   }
 
-  &-info {
-    order: 3;
-    margin-left:auto;
-  }
-
   &-icon {
     position: absolute;
     right: 0;
@@ -34,7 +29,7 @@
   // TODO: rethink naming
   &.has-noLabel {
     #{$self}-icon {
-      top:0;
+      top: 0;
     }
   }
 
@@ -61,22 +56,11 @@
     }
   }
 
-  &-message {
-    text-align: left;
-    font-size: $font-size-small;
-  }
-
   &-footer {
-    text-align: left;
-    font-size: $font-size-small;
-    margin-top: map-get($spacers, 1);
-    margin-bottom: -$control-spacer;
-    display: flex;
-    justify-content: space-between;
+    @include form-field-footer();
   }
 
   &--float {
-
     #{$self}-footer {
       order: 2;
     }
@@ -97,11 +81,13 @@
         vertical-align: middle;
       }
 
-      &:focus, .has-value {
+      &:focus,
+      .has-value {
         @include control-placeholder(1);
       }
 
-      &:focus + #{$self}-label, &.has-value + #{$self}-label {
+      &:focus + #{$self}-label,
+      &.has-value + #{$self}-label {
         transform: translate3d(0, 0, 0);
         @extend %label;
         color: initial;

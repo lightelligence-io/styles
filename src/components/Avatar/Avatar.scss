@@ -25,7 +25,7 @@
   border: 0.2em solid currentColor;
   line-height: 100%;
 
-  @include contextual-colors('color');
+  @include contextual-colors(('color'));
 
   @each $name, $value in $avatar-sizes {
     &--#{$name} {

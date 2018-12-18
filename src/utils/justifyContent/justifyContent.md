@@ -2,7 +2,7 @@
 
 Justify content in flex grids.
 
-`olt-u-[xs|sm|lg|xl]-justifyContent{Start|Center|End|Between|Around|Evenly}`
+`olt-u-[sm-|md-|lg-|xl-]justifyContent{Start|Center|End|Between|Around|Evenly}`
 
 
 ```html

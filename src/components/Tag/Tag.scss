@@ -44,7 +44,7 @@
     }
   }
 
-  @include contextual-colors('color', 'border-color', $selector: '#{&}--outline:not(:hover)') {
+  @include contextual-colors(('color', 'border-color'), $selector: '#{&}--outline:not(:hover)') {
     background-color: $white;
   }
 

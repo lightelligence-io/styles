@@ -2,7 +2,7 @@
 
 Control font-size.
 
-`olt-u-[xs|sm|lg|xl]-fontSize{XxSmall|XSmall|Small|Medium|Large|XLarge|XxLarge|Smaller|Larger}`
+`olt-u-[sm-|md-|lg-|xl-]fontSize{XxSmall|XSmall|Small|Medium|Large|XLarge|XxLarge|Smaller|Larger}`
 
 
 ```html

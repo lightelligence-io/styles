@@ -2,7 +2,7 @@
 
 Apply theme colors to text.
 
-`olt-u-[xs|sm|lg|xl]-color{Primary|Secondary|Info|Error|Success}`
+`olt-u-[sm-|md-|lg-|xl-]color{Primary|Secondary|Info|Error|Success}`
 
 ```html
 <p class="olt-Paragraph olt-u-colorPrimary">Primary</p>

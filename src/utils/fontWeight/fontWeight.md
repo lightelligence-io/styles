@@ -2,7 +2,7 @@
 
 Control `font-weight`.
 
-`olt-u-[xs|sm|lg|xl]-fontWeight{Lighter|Normal|Bold|Bolder|Initial|100-900}`
+`olt-u-[sm-|md-|lg-|xl-]fontWeight{Lighter|Normal|Bold|Bolder|Initial|100-900}`
 
 
 ```html

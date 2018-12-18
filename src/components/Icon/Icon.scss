@@ -32,7 +32,7 @@
     font-display: block;
   }
 
-  @include contextual-colors('color');
+  @include contextual-colors(('color'));
 
   @each $name, $value in $icon-sizes {
     &--#{$name} {

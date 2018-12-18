@@ -12,6 +12,7 @@ module.exports = {
     components: 'src/components/*/*.md',
     controls: 'src/controls/*/*.md',
     utilities: 'src/utils/*/*.md',
+    examples: 'src/examples/**/*.md',
   },
   template: path.join(__dirname, 'template.ejs'),
   webpack: require('../webpack.config.js')

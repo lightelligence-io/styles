@@ -2,7 +2,7 @@
 
 Apply context colors to background.
 
-`olt-u-[sm-|lg-|xl-]backgroundColor<Primary|Secondary|Info|Error|Success>`
+`olt-u-[sm-|md-|lg-|xl-]backgroundColor{Primary|Secondary|Info|Error|Success}`
 
 
 ```html

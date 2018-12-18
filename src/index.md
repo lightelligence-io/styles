@@ -70,7 +70,7 @@ All utility classes are `camelcase` and prefixed with `u-`.
 You may target particular screens by adding a breakpoint-infix, e.g. `md-` targets everything above.
 Combine multiple classes in order
 
-Syntax: `olt-u-[sm-|md-|lg-|xl-]<utility>[Value1|Value2|...]`.
+Syntax: `olt-u-[sm-|md-|lg-|xl-]<utility>{Value1|Value2|...}`.
 
 
 ### CSS Interaction API

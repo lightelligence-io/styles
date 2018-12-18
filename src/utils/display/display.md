@@ -2,7 +2,7 @@
 
 Hide or show certain elements by breakpoint.
 
-`olt-u-[xs|sm|lg|xl]-display{None|Inline|InlineBlock|Block|Table|TableRow|TableCell|Flex|InlineFlex}`
+`olt-u-[sm-|md-|lg-|xl-]display{None|Inline|InlineBlock|Block|Table|TableRow|TableCell|Flex|InlineFlex}`
 
 Open in new window for taking effect properly.
 

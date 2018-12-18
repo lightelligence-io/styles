@@ -68,8 +68,8 @@
   }
 
   @include contextual-colors(
-    'color',
-    'border-color',
+    ('color',
+    'border-color'),
     $selector: '#{$self}--outline:not(:hover):not(:focus):not(:disabled):not(.is-disabled)') {
       background-color: $white;
 

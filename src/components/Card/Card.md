@@ -13,7 +13,7 @@
 </div>
 ```
 
-## Card with headline and subline.
+## Card with headline and description.
 
 ```html
 <div class="olt-Card">
@@ -31,7 +31,7 @@
 </div>
 ```
 
-## Card with headline, subline and content.
+## Card with headline, description and content.
 
 ```html
 <div class="olt-Card">

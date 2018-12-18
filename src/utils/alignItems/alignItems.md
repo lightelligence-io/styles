@@ -2,7 +2,7 @@
 
 Align items in flex grids.
 
-`olt-u-[sm-|lg-|xl-]alignItems<Start|Center|End|Stretch|Baseline>`
+`olt-u-[sm-|lg-|md-|xl-]alignItems{Start|Center|End|Stretch|Baseline}`
 
 ```html
 <div class="olt-u-displayFlex olt-u-alignItemsCenter">

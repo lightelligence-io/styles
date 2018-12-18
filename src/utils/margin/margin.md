@@ -2,7 +2,7 @@
 
 Add margins per breakpoint.
 
-`olt-u-[xs|sm|lg|xl]-margin{Top|Right|Bottom|Left}{1-5|Auto}`
+`olt-u-[|sm-|md-|lg-|xl-]margin{Top|Right|Bottom|Left}{1-8|Auto}`
 
 ```html
 <section class="olt-u-marginBottom4 olt-u-border">

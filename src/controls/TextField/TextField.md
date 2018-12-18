@@ -24,6 +24,21 @@ Provide error message
 <div class="olt-TextField">
   <label class="olt-Label olt-TextField-label">Label</label>
   <input class="olt-Input olt-TextField-input is-error" placeholder="Enter your life..."/>
-  <div class="olt-TextField-message olt-u-textError">Something went horribly wrong</div>
+  <div class="olt-TextField-footer">
+    <div class="olt-TextField-message olt-u-textError">Something went horribly wrong</div>
+  </div>
+</div>
+```
+
+Info Message
+
+```html
+<div class="olt-TextField">
+  <label class="olt-Label olt-TextField-label">Label</label>
+  <input class="olt-Input olt-TextField-input is-error" placeholder="Enter your life..."/>
+  <div class="olt-TextField-footer">
+    <div class="olt-TextField-message olt-u-textError">Something went horribly wrong</div>
+    <div class="olt-TextField-info">max. 200 Chars</div>
+  </div>
 </div>
 ```

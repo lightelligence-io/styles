@@ -2,7 +2,7 @@
 
 Specify flex flow.
 
-`olt-u-[xs|sm|lg|xl]-flex{Row|RowReverse|Column|ColumnReverse|Wrap|WrapReverse|Nowrap}`
+`olt-u-[sm-|md-|lg-|xl-]flex{Row|RowReverse|Column|ColumnReverse|Wrap|WrapReverse|Nowrap}`
 
 
 ```html
