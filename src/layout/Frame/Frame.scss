@@ -3,14 +3,22 @@
   font-weight: $font-weight-base;
   line-height: $line-height;
   -webkit-font-smoothing: antialiased;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  //min-height: 100%;
-  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 
   * {
     box-sizing: border-box;
+  }
+
+  &-body  {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
   }
 
   &-header {
@@ -18,7 +26,7 @@
   }
 
   &-main {
-    flex: 0 1 100%;
+    flex: 1 0 100%;
   }
 
   &-footer {

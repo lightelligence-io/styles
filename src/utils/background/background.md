@@ -12,3 +12,18 @@ Apply context colors to background.
 <div class="olt-u-backgroundColorError olt-u-padding2 olt-u-marginBottom2">Error</div>
 <div class="olt-u-backgroundColorSuccess olt-u-padding2 olt-u-marginBottom2">Success</div>
 ```
+
+## Grayscale colors
+
+
+```html
+<div class="olt-u-backgroundColorGray100 olt-u-padding2 olt-u-marginBottom2">Gray 100</div>
+<div class="olt-u-backgroundColorGray200 olt-u-padding2 olt-u-marginBottom2">Gray 200</div>
+<div class="olt-u-backgroundColorGray300 olt-u-padding2 olt-u-marginBottom2">Gray 300</div>
+<div class="olt-u-backgroundColorGray400 olt-u-padding2 olt-u-marginBottom2">Gray 400</div>
+<div class="olt-u-backgroundColorGray500 olt-u-padding2 olt-u-marginBottom2">Gray 500</div>
+<div class="olt-u-backgroundColorGray600 olt-u-textLight olt-u-padding2 olt-u-marginBottom2">Gray 600</div>
+<div class="olt-u-backgroundColorGray700 olt-u-textLight olt-u-padding2 olt-u-marginBottom2">Gray 700</div>
+<div class="olt-u-backgroundColorGray800 olt-u-textLight olt-u-padding2 olt-u-marginBottom2">Gray 800</div>
+<div class="olt-u-backgroundColorGray900 olt-u-textLight olt-u-padding2 olt-u-marginBottom2">Gray 900</div>
+```
