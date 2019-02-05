@@ -1,0 +1,10 @@
+
+labels:
+  buildingBlock: styleguide
+  component: styleguide
+
+replicaCount: 1
+
+cert:
+  request: true
+  secretName: styleguide-tls
