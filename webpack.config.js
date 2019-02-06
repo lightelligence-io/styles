@@ -2,6 +2,7 @@ const path = require('path');
 const { sync: glob } = require('glob');
 
 const mode = process.env.NODE_ENV || 'development';
+const isDev = mode === 'development';
 const context = path.resolve(__dirname, 'src');
 
 const browsers = [
@@ -17,7 +18,7 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: isDev ? '/' : '/styleguide/',
     filename: 'main.js',
   },
   module: {
@@ -82,7 +83,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: 'fonts/[name].[ext]',
-          publicPath: './'
+          publicPath: isDev ? '/' : '/styleguide/',
         }
       }]
     }, {

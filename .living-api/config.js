@@ -1,9 +1,13 @@
 const path = require('path');
+const webpackConfig = require('../webpack.config');
+
+const env = process.env.NODE_ENV || 'development';
+const isDev = env === 'development';
 
 module.exports = {
   title: 'LIGHTELLIGENCE® UI',
   output: 'docs',
-  publicPath: '/',
+  publicPath: isDev ? '/' : '/styleguide/',
   index: 'README.md',
   ignore: '**/Spinner.md',
   contents: {
@@ -15,5 +19,5 @@ module.exports = {
     examples: 'src/examples/**/*.md',
   },
   template: path.join(__dirname, 'template.ejs'),
-  webpack: require('../webpack.config.js')
+  webpack: webpackConfig
 };

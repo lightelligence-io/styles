@@ -23,7 +23,7 @@
     "build": "npm run clean && cross-env NODE_ENV=production webpack --mode=production",
     "watch": "webpack --mode=development --watch",
     "start": "living-api -s",
-    "build:docs": "living-api",
+    "build:docs": "NODE_ENV=production living-api",
     "watch:docs": "living-api -w",
     "test": ""
   },
@@ -44,8 +44,10 @@
     "file-loader": "^2.0.0",
     "glob": "^7.0.6",
     "highlight.js": "^9.13.1",
-    "living-api": "git+https://github.com/benignware-labs/living-api.git#v0.1.0-alpha.16",
+    "living-api": "git+https://github.com/benignware-labs/living-api.git#v0.1.0-alpha.25",
+    "material-design-icons-iconfont": "^3.0.3",
     "node-sass": "^4.9.2",
+    "normalize.css": "^8.0.0",
     "postcss": "^7.0.6",
     "postcss-copy": "^7.1.0",
     "postcss-easy-import": "^3.0.0",
@@ -55,14 +57,12 @@
     "sass-loader": "^7.0.1",
     "style-loader": "^0.23.1",
     "svg-url-loader": "^2.3.2",
+    "typeface-overpass-mono": "0.0.54",
+    "typeface-pt-sans": "0.0.54",
     "url-loader": "^1.1.2",
     "webpack": "^4.27.0",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10",
-    "yargs": "^11.0.0",
-    "material-design-icons-iconfont": "^3.0.3",
-    "normalize.css": "^8.0.0",
-    "typeface-overpass-mono": "0.0.54",
-    "typeface-pt-sans": "0.0.54"
+    "yargs": "^11.0.0"
   }
 }
