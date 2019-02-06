@@ -11,12 +11,6 @@
     position: absolute;
     opacity: 0;
 
-    &:disabled + #{$self}-label:before {
-      border: $control-border-width dashed $control-disabled;
-      background-color: transparent;
-      cursor: default;
-    }
-
     &:checked + #{$self}-label {
       position: relative;
       cursor: pointer;
@@ -38,6 +32,19 @@
         font-size: 1.2em;
         transition: width 150ms, height 150ms, top 150ms; // NOTE cant figure out how to do this
       }
+    }
+
+    &:disabled + #{$self}-label {
+      cursor: not-allowed;
+    }
+
+    &:disabled + #{$self}-label:before {
+      border: $control-border-width dashed $control-disabled;
+      background-color: transparent;
+    }
+
+    &:checked:disabled + #{$self}-label:before {
+      background-color: $control-disabled;
     }
 
     &:focus + &-label:before {
