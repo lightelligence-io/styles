@@ -1,4 +1,4 @@
-image: node:carbon
+image: node:dubnium
 
 definitions:
   steps:
