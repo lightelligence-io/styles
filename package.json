@@ -23,7 +23,7 @@
     "build": "npm run clean && cross-env NODE_ENV=production webpack --mode=production",
     "watch": "webpack --mode=development --watch",
     "start": "living-api -s",
-    "build:docs": "NODE_ENV=production living-api",
+    "build:docs": "PROD_DOCS=true NODE_ENV=production living-api",
     "watch:docs": "living-api -w",
     "test": ""
   },

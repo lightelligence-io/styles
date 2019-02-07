@@ -2,7 +2,7 @@ const path = require('path');
 const { sync: glob } = require('glob');
 
 const mode = process.env.NODE_ENV || 'development';
-const isDev = mode === 'development';
+const isProdDocs = JSON.parse(process.env.PROD_DOCS || 'false');
 const context = path.resolve(__dirname, 'src');
 
 const browsers = [
@@ -18,7 +18,7 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, 'dist'),
-    publicPath: isDev ? '/' : '/styleguide/',
+    publicPath: isProdDocs ? '/styleguide/' : '/',
     filename: 'main.js',
   },
   module: {
@@ -42,7 +42,7 @@ module.exports = {
     }, {
       test: /\.scss$/,
       exclude: /node_modules/,
-      use: (mode === 'production'
+      use: (mode === 'production' && !isProdDocs
         ? [{
             loader: "file-loader",
             options: {
@@ -83,7 +83,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: 'fonts/[name].[ext]',
-          publicPath: isDev ? '/' : '/styleguide/',
+          publicPath: isProdDocs ? '/styleguide/' : './',
         }
       }]
     }, {
