@@ -1,1 +1,1 @@
-@include util-make(('font-size': $font-sizes));
+@include util-make(('font-size': var-get('fontSize')));

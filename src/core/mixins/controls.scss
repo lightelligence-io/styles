@@ -46,15 +46,15 @@
 
 @mixin form-field-footer() {
   text-align: left;
-  font-size: $font-size-small;
-  height: $line-height-small;
-  margin-top: map-get($spacers, 1);
+  font-size: var-get('fontSizeSmall');
+  height: var-get('lineHeightSmall');
+  margin-top: var-get('spacing1');
   display: flex;
   justify-content: space-between;
 
   &-message {
     text-align: left;
-    font-size: $font-size-small;
+    font-size: var-get('fontSizeSmall');
   }
 
   &-info {

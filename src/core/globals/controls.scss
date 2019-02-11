@@ -1,6 +1,6 @@
-$control-border-width: $border-width;
-$control-border-color: $border-color;
-$control-border-radius: $border-radius;
+$control-border-width: var-get('borderWidth');
+$control-border-color: var-get('borderColor');
+$control-border-radius: var-get('borderRadius');
 $control-padding-y: 0.125rem;
 $control-padding-x: 0;
 $control-font-size: 0.9rem;
@@ -9,9 +9,9 @@ $control-font-weight: 400;
 $control-label: #a7a8aa;
 $control-width: 160px;
 $control-height: 2rem;
-$control-placeholder: $gray-500;
-$control-spacer: $spacer;
-$control-disabled: $gray-400;
+$control-placeholder: var-get('gray500');
+$control-spacer: var-get('spacing3');
+$control-disabled: var-get('gray300');
 
 $label-font-size: 0.8rem;
 $label-font-weight: 400;
@@ -22,7 +22,7 @@ $label-color: $control-label;
   font-weight: $label-font-weight;
   color: $label-color;
   padding: 0;
-  margin-bottom: map-get($spacers, 1);
+  margin-bottom: var-get('spacing1');
 }
 
 %control {

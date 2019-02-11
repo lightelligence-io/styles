@@ -1,3 +1,5 @@
+# Input
+
 Represents a simple text-input.
 
 Input can only be used with `<input>`.

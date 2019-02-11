@@ -1,12 +1,5 @@
-// Vendor
-@import 'typeface-pt-sans/index.css';
-@import 'typeface-overpass-mono/index.css';
-@import 'material-design-icons-iconfont/dist/material-design-icons.css';
-
 // Core
 @import './core';
-
-
 
 // Layout
 @import './layout/Frame/Frame.scss';
@@ -21,24 +14,20 @@
 @import './content/Table/Table.scss';
 @import './content/Link/Link.scss';
 
-
-
-// basic components
-@import './components/Icon/Icon.scss';
-
 // Controls
+@import './controls/Label/Label.scss';
 @import './controls/Input/Input.scss';
 @import './controls/Select/Select.scss';
 @import './controls/FormField/FormField.scss';
 @import './controls/TextField/TextField.scss';
-@import './controls/Label/Label.scss';
 @import './controls/Checkbox/Checkbox.scss';
 
 // Components
+@import './components/Icon/Icon.scss';
+@import './components/Spinner/Spinner.scss';
 @import './components/Avatar/Avatar.scss';
 @import './components/Button/Button.scss';
 @import './components/Card/Card.scss';
-
 @import './components/Menu/Menu.scss';
 @import './components/Dropdown/Dropdown.scss';
 @import './components/Tabs/Tabs.scss';
@@ -48,16 +37,12 @@
 @import './components/Navbar/Navbar.scss';
 @import './components/Tag/Tag.scss';
 @import './components/Snackbar/Snackbar.scss';
-@import './components/Spinner/Spinner.scss';
-
 
 // Utilities
 @import './utils/display/display';
 @import './utils/margin/margin';
 @import './utils/padding/padding';
 @import './utils/border/border';
-@import './utils/gridColumn/gridColumn';
-@import './utils/gridOffset/gridOffset';
 @import './utils/justifyContent/justifyContent';
 @import './utils/flex/flex';
 @import './utils/alignItems/alignItems';

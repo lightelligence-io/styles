@@ -11,7 +11,7 @@ In Forms use TextField or FormFields in conjunction with Select in order to layo
     <option value="EtVersus">Et Versus</option>
   </select>
   <div class="olt-FormField-footer">
-    <div class="olt-FormField-message olt-u-textError">Here we go</div>
+    <div class="olt-FormField-message olt-u-colorError">Here we go</div>
   </div>
 </div>
 ```

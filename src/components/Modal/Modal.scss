@@ -1,18 +1,15 @@
 .#{$namespace}Modal {
-  $modal-border-radius: $border-radius !default;
-  $modal-backdrop: rgba(255, 255, 255, 0.7) !default;
-  $modal-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3) !default;
+  $modal-border-radius: var-get('borderRadius');
+  $modal-backdrop: rgba(255, 255, 255, 0.7);
+  $modal-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
   $modal-padding-x: 1.5rem;
   $modal-padding-y: 1.5rem;
-
   $modal-content-padding-x: 0;
-  $modal-content-padding-y: map-get($spacers, 3) !default;
-
-  $modal-background: $white !default;
-  $modal-dialog-width: 440px !default;
-  $modal-transition-duration: 0.2s !default;
-  $modal-transition-timing-function: ease-in !default;
-
+  $modal-content-padding-y: var-get('spacing3');
+  $modal-background: var-get('colorLight');
+  $modal-dialog-width: 440px;
+  $modal-transition-duration: 0.2s;
+  $modal-transition-timing-function: ease-in;
   $self: &;
   height: 0;
   width: 0;
@@ -34,7 +31,7 @@
   z-index: 1002;
   display: flex;
   clip: rect(0, 0, 0, 0);
-  font-family: $font-family-base;
+  font-family: var-get('fontFamilyBase');
 
   &-dialog {
     background: $modal-background;
@@ -141,8 +138,8 @@
     margin: 0;
     color: #666;
     position: fixed; // TODO: Get it of the overflow stuff
-    right: $spacer;
-    top: $spacer;
+    right: var-get('spacing3');
+    top: var-get('spacing3');
     z-index: 1003;
   }
 
@@ -161,17 +158,17 @@
 
   &--error &-dialog:before {
     content: 'error_outline';
-    background: map-get($context-colors, 'error');
+    background: var-get('colorError');
   }
 
   &--info &-dialog:before {
     content: 'info_outline';
-    background: map-get($context-colors, 'info');
+    background: var-get('colorInfo');
   }
 
   &--success &-dialog:before {
     content: 'done';
-    background: map-get($context-colors, 'success');
+    background: var-get('colorSuccess');
   }
 
   &--fullscreen {
@@ -252,8 +249,8 @@
     &.is-open &-dialog &-close {
       color: #666;
       position: absolute;
-      right: $spacer;
-      top: $spacer;
+      right: var-get('spacing3');
+      top: var-get('spacing3');
       background: #fff;
       font-size: 16px;
       font-weight: bold;

@@ -11,7 +11,7 @@
   border-radius: $card-border-radius;
   text-align: left;
   transition: box-shadow 150ms;
-  background: $white;
+  background: var-get('colorLight');
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -37,7 +37,7 @@
     padding: $card-padding-y $card-padding-x;
     width: 100%;
     display: grid;
-    grid-gap: $spacer / 4;
+    grid-gap: calc(var(--spacer) / 4);
   }
 
   &-content {
@@ -57,15 +57,15 @@
   }
 
   &-description {
-    font-size: $font-size-small;
-    font-weight: $font-weight-normal;
+    font-size: var-get('fontSizeSmall');
+    font-weight: var-get('fontWeightRegular');
     margin: 0;
     grid-column: 1;
 		grid-row: 2 / 2;
   }
 
   &:not(#{$self}--primary):not(#{$self}--secondary) &-description {
-    color: $gray-600;
+    color: var-get('gray600');
   }
 
   &-action {

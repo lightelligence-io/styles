@@ -15,7 +15,7 @@ Here is an example how to layout a common form with a grid, textfield, formfield
         <option value="EtVersus">Et Versus</option>
       </select>
       <div class="olt-FormField-footer">
-        <div class="olt-FormField-message olt-u-textError">Here we go</div>
+        <div class="olt-FormField-message olt-u-colorError">Here we go</div>
       </div>
     </div>
   </div>
@@ -32,7 +32,7 @@ Here is an example how to layout a common form with a grid, textfield, formfield
         placeholder="Enter your life..."
       />
       <div class="olt-TextField-footer">
-        <div class="olt-TextField-message olt-u-textError">
+        <div class="olt-TextField-message olt-u-colorError">
           Something went wrong
         </div>
         <div class="olt-TextField-info">max. 200 Chars</div>

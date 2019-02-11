@@ -1,12 +1,9 @@
-# Getting started
+# Concepts
 
-## Key concepts
-
-### Modular CSS Notation
+## Modular Notation
 
 Lightelligence UI relies on [SUIT](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md) css naming patterns.
 If you got used to lowercase and dashes, it might look unfamiliar at first, but this will change very quickly because SUIT just makes sense where classic BEM either gets messy or just isn't suited, i.e. responsive utilities aren't covered by classic BEM.
-
 
 #### Namespace
 
@@ -45,10 +42,3 @@ You may target particular screens by adding a breakpoint-infix, e.g. `md-` targe
 Combine multiple classes in order
 
 Syntax: `olt-u-[sm-|md-|lg-|xl-]<utility>{Value1|Value2|...}`.
-
-
-### CSS Interaction API
-
-All interactive components work out of the box without the need of Javascript.
-Have a look at the examples to find out what is particularly needed in order to make it happen.
-However, you could always opt-out of this behavior by simply omitting trigger elements and control state classes via Javascript.

@@ -1,14 +1,12 @@
 const path = require('path');
 const { sync: glob } = require('glob');
+const yaml = require('js-yaml');
+const template = require('es6-template-strings');
+const { decamelize, pascalize } = require('humps');
 
 const mode = process.env.NODE_ENV || 'development';
 const isProdDocs = JSON.parse(process.env.PROD_DOCS || 'false');
 const context = path.resolve(__dirname, 'src');
-
-const browsers = [
-  'last 2 versions',
-  'safari >= 7'
-];
 
 module.exports = {
   mode,
@@ -23,23 +21,6 @@ module.exports = {
   },
   module: {
     rules: [{
-      test: /\.js$/,
-      loader: 'babel-loader',
-      options: {
-        presets: [
-          [
-            '@babel/preset-env', {
-              targets: {
-                browsers
-              }
-            }
-          ]
-        ],
-        plugins: [
-          "@babel/plugin-transform-spread"
-        ]
-      }
-    }, {
       test: /\.scss$/,
       exclude: /node_modules/,
       use: (mode === 'production' && !isProdDocs
@@ -72,7 +53,51 @@ module.exports = {
             options: {
               includePaths: [
                 path.resolve(__dirname, 'node_modules')
-              ]
+              ],
+              transformers: [{
+                extensions: ['.yml'],
+                transform: (source) => {
+                  const theme = yaml.load(source);
+                  const getters = Object.assign(
+                    {},
+                    ...Object.entries(theme)
+                      .map(([ prop, value ]) => ({
+                        [prop]: typeof value === 'object'
+                          ? Object.assign(
+                            {},
+                            ...Object.entries(value)
+                              .map(([ key, value ]) => ({
+                                [key]: `#{var-get('${prop}${pascalize(key)}')}`
+                              }))
+                          )
+                          : `#{var-get('${prop}')}`
+                      }))
+                  );
+                  const variables = {
+                    varPrefix: 'olt-',
+                    varStyle: 'camelCase'
+                  };
+                  const content = `\n${
+                    Object.entries(variables)
+                      .map(([ key, value ]) => `\t$${decamelize(key)}: '${value}'`)
+                      .join(';\n')
+                  }\n:root {\n${
+                    Object.entries(theme)
+                      .map(([ key, value ]) => {
+                        value = typeof value === 'object' ? `(\n${
+                          Object.entries(value)
+                            .map(([ key, value ]) => `\t\t${key}: ${value}`)
+                            .join(',\n')
+                        }\n)` : `${value}`;
+                        value = template(value, getters);
+
+                        return `\t@include var-set('${key}', ${value})`;
+                      }).join(';\n')
+                  }}`;
+
+                  return content;
+                }
+              }]
             }
           }
         ])
@@ -98,23 +123,5 @@ module.exports = {
       path.resolve(__dirname, './'),
       path.resolve(__dirname, './node_modules'),
     ]
-  },
-  /*optimization: {
-    splitChunks: {
-      cacheGroups: {
-        commons: {
-          test: /[\\/](node_modules)[\\/]/,
-          name: "vendor",
-          chunks: "all",
-          priority: 5
-        },
-        svgxuse: {
-          test: /svgxuse/,
-          name: "svgxuse",
-          chunks: "all",
-          priority: 10
-        }
-      }
-    }
-  }*/
+  }
 };

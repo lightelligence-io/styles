@@ -1,21 +1,21 @@
 .#{$namespace}Tag {
-  // NOTE: tag color was previously set to $gray-300 through $border-color, but outline tags were barely visible
-  $tag-color: $gray-500 !default; // prev $border-color
-  $tag-background: $white !default; // prev $border-color
-  $tag-border-color: currentColor !default; // prev $border-color
-  $tag-border-width: $border-width !default;
-  $tag-border-radius: 0 !default;
-  $tag-padding-x: map-get($spacers, 2) !default;
-  $tag-padding-y: map-get($spacers, 1) !default;
-
+  $tag-color: var-get('gray500');
+  $tag-background: var-get('colorLight');
+  $tag-border-color: currentColor;
+  $tag-border-width: var-get('borderWidth');
+  $tag-border-radius: 0;
+  $tag-padding-x: var-get('spacing2');
+  $tag-padding-y: var-get('spacing1');
+  $tag-font-size: var-get('fontSizeSmall');
+  $tag-font-family: var-get('fontFamilyMono');
   $self: &;
   display: inline-flex;
   align-items: center;
   line-height: 1;
   height: 1.625rem;
-  font-size: $font-size-small;
+  font-size: $tag-font-size;
   padding: $tag-padding-y $tag-padding-x;
-  font-family: $font-family-mono;
+  font-family: $tag-font-family;
   text-transform: uppercase;
   border-radius: $tag-border-radius;
   background-color: $tag-background;
@@ -30,14 +30,14 @@
 
   &:hover,
   &:visited {
-    filter: brightness(#{100% - $link-hover-contrast});
+    filter: brightness(calc(100% - #{var-get('linkHoverContrast')}));
     text-decoration: none;
   }
 
   @include contextual-colors();
 
   &--outline {
-    background-color: $white;
+    background-color: var-get('primaryLight');
     &:hover,
     &:visited {
       filter: none;
@@ -45,7 +45,7 @@
   }
 
   @include contextual-colors(('color', 'border-color'), $selector: '#{&}--outline:not(:hover)') {
-    background-color: $white;
+    background-color: var-get('colorLight');;
   }
 
 

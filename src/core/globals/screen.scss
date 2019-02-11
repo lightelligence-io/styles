@@ -1,8 +1,12 @@
-// Ordered asc, please!
-$breakpoints: (
+// Screen
+$screen-prefix: 'olt-';
+$screen-style: kebabCase;
+
+// Breakpoints
+@include screen-set((
   xs: 0,
   sm: 576px,
   md: 768px,
   lg: 992px,
   xl: 1200px
-) !default;
+));

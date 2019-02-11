@@ -43,8 +43,6 @@
   &:after {
     font-family: 'Material Icons';
     font-style: normal;
-    //font-size: 140%;
-    content: attr(data-description);
   }
 
   &[data-icon] {

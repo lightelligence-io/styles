@@ -1,3 +1,4 @@
+// TODO: Refactor (respectively rename) to something more generic like 'set' or - more specifically - 'screen'
 @function breakpoint-next($name, $breakpoints: $breakpoints, $breakpoint-names: map-keys($breakpoints)) {
   $n: index($breakpoint-names, $name);
   @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);

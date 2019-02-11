@@ -32,7 +32,7 @@
   background-repeat: no-repeat;
 
   &:focus {
-    border-bottom-color: $primary !important;
+    border-bottom-color: var-get('colorPrimary') !important;
     outline-width: 0;
   }
 
@@ -43,12 +43,12 @@
   &.is-placeholder {
     @include control-placeholder-style;
     option {
-      color: $black;
+      color: var-get('colorDark');
     }
   }
 
   &.is-error {
-    border-color: $error;
+    border-color: var-get('colorError');
   }
 
   &--inline {

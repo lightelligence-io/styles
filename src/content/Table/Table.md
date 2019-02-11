@@ -103,7 +103,7 @@ Use `olt-Table--justify` for aligning cells from left to right
         <td class="olt-Table-data">test@osteron.com</td>
         <td class="olt-Table-data">
           <input data-toggle="modal" id="modal-toggle-1" type="checkbox">
-          <label class="olt-Link olt-u-textError" for="modal-toggle-1">Remove</label>
+          <label class="olt-Link olt-u-colorError" for="modal-toggle-1">Remove</label>
           <section class="olt-Modal olt-Modal--error">
             <div class="olt-Modal-dialog">
               <label class="olt-Modal-close" for="modal-toggle-1"></label>

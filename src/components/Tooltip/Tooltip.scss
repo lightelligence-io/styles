@@ -1,7 +1,7 @@
 .#{$namespace}Tooltip {
   $self: &;
 
-  position:relative;
+  position: relative;
   display: inline-block;
 
   &:hover {
@@ -12,10 +12,10 @@
   }
 
   &-content {
-    padding: 0.25rem; // TODO use global var for this
-    background: $primary;
+    padding: 0.25rem;
+    background: var-get('colorPrimary');
     font-size: 0.75rem;
-    color: $light;
+    color: var-get('colorLight');
     position: absolute;
     top: 0;
     left: 50%;
@@ -47,7 +47,7 @@
     }
   }
 
-  &--bottom { // why is neither of these working?
+  &--bottom { // FIXME: Why is neither of these working?
     #{$self}-content {
       top: 100%;
       transform: translate(-50%, 5px);

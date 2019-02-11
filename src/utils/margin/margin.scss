@@ -1,38 +1,37 @@
-@each $breakpoint in map-keys($breakpoints) {
+@each $breakpoint in map-keys(screen-get()) {
+  $infix: screen-infix($breakpoint);
+
   @include screen-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $breakpoints);
-
     @each $prop, $name in (margin: margin) {
-      @each $size, $length in $spacers {
-
+      @each $size, $value in var-get('spacing') {
         .#{$namespace}u-#{$infix}#{$name}#{$size} {
-          #{$prop}: $length !important;
+          #{$prop}: $value !important;
         }
 
         .#{$namespace}u-#{$infix}#{$name}Top#{$size} {
-          #{$prop}-top: $length !important;
+          #{$prop}-top: $value !important;
         }
 
         .#{$namespace}u-#{$infix}#{$name}Bottom#{$size} {
-          #{$prop}-bottom: $length !important;
+          #{$prop}-bottom: $value !important;
         }
 
         .#{$namespace}u-#{$infix}#{$name}Right#{$size} {
-          #{$prop}-right: $length !important;
+          #{$prop}-right: $value !important;
         }
 
         .#{$namespace}u-#{$infix}#{$name}Left#{$size} {
-          #{$prop}-left: $length !important;
+          #{$prop}-left: $value !important;
         }
 
         .#{$namespace}u-#{$infix}#{$name}Y#{$size} {
-          #{$prop}-top: $length !important;
-          #{$prop}-bottom: $length !important;
+          #{$prop}-top: $value !important;
+          #{$prop}-bottom: $value !important;
         }
 
         .#{$namespace}u-#{$infix}#{$name}X#{$size} {
-          #{$prop}-left: $length !important;
-          #{$prop}-right: $length !important;
+          #{$prop}-left: $value !important;
+          #{$prop}-right: $value !important;
         }
       }
     }

@@ -19,10 +19,10 @@
   align-items: baseline !important;
 }
 
-@each $breakpoint in map-keys($breakpoints) {
-  @include screen-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $breakpoints);
+@each $breakpoint in map-keys(screen-get()) {
+  $infix: screen-infix($breakpoint);
 
+  @include screen-up($breakpoint) {
     .#{$namespace}u-#{$infix}alignItemsStart {
       align-items: flex-start !important;
     }

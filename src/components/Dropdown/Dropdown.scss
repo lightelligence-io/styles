@@ -1,15 +1,14 @@
 .#{$namespace}Dropdown {
-  $dropdown-padding-x: 1rem !default;
-  $dropdown-padding-y: 0.5rem !default;
-  $dropdown-border-color: transparent !default;
-  $dropdown-border-width: 0 !default;
-  $dropdown-border-radius: $border-radius !default;
-  $dropdown-color: $text-color !default;
-  $dropdown-background: $border-color !default;
-  $dropdown-transition-duration: 0.25s !default;
-  $dropdown-transition-timing-function: ease-out !default;
-  $dropdown-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !default;
-
+  $dropdown-padding-x: 1rem;
+  $dropdown-padding-y: 0.5rem;
+  $dropdown-border-color: transparent;
+  $dropdown-border-width: 0;
+  $dropdown-border-radius: var-get('borderRadius');
+  $dropdown-color: var-get('colorLight');;
+  $dropdown-background: var-get('borderColor');
+  $dropdown-transition-timing-function: ease-out;
+  $dropdown-transition-duration: 0.3;
+  $dropdown-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   position: relative;
   display: inline-block;
   background: $dropdown-background;
@@ -19,6 +18,7 @@
   border-radius: $dropdown-border-radius;
   color: $dropdown-color;
 
+  // Colors
   @include contextual-colors();
 
   &-label {
@@ -78,7 +78,7 @@
     border-bottom-left-radius: $dropdown-border-radius;
     border-bottom-right-radius: $dropdown-border-radius;
     overflow: hidden;
-    background: $white;
+    background: var-get('colorLight');
     box-shadow: $dropdown-shadow;
   }
 

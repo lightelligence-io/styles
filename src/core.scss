@@ -1,29 +1,24 @@
+// Vendor
+@import 'sscreen/sscreen';
+@import 'varss/varss';
+@import 'typeface-pt-sans/index.css';
+@import 'typeface-overpass-mono/index.css';
+@import 'material-design-icons-iconfont/dist/material-design-icons.css';
+
+// Functions
+@import './core/functions/map';
+@import './core/functions/string';
+
+
+// Theme
+@import './theme.yml';
+
 // Globals
 @import './core/globals/bem';
 @import './core/globals/screen';
-@import './core/globals/container';
-@import './core/globals/colors';
-@import './core/globals/transitions';
-//@import './core/globals/fonts';
-@import './core/globals/typography';
-@import './core/globals/grid';
-@import './core/globals/spacings';
-@import './core/globals/border';
-@import './core/globals/badges';
-@import './core/globals/tables';
 @import './core/globals/controls';
-@import './core/globals/site';
-@import './core/globals/root';
-
-// Functions
-@import './core/functions/breakpoint';
-@import './core/functions/string';
-@import './core/functions/color';
 
 // Mixins
-@import './core/mixins/screen';
-@import './core/mixins/container';
-@import './core/mixins/grid';
 @import './core/mixins/controls';
 @import './core/mixins/util';
 @import './core/mixins/contextual';

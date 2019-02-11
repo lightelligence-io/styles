@@ -1,4 +1,4 @@
-# Border
+# border
 
 Add or remove border.
 
@@ -9,7 +9,7 @@ Add or remove border.
 <div style="border: 1px solid blue" class="olt-u-borderNone">An element without border</div>
 ```
 
-Border with a specific color.
+## borderColor
 
 `olt-u-[sm-|md-|lg-|xl-]borderColor{Primary|Secondary|Info|Error|Success}`
 

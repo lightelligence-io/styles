@@ -1,5 +1,7 @@
 // TODO: Recheck what's possible today regarding styling native inputs. What about IE11?
 .#{$namespace}Checkbox {
+  $checkbox-border-width: $control-border-width;
+  $checkbox-disabled: $control-disabled;
   $self: &;
   display: flex;
 
@@ -17,8 +19,8 @@
       padding: 0;
 
       &:before {
-        background: $primary;
-        border-color: $primary;
+        background: var-get('colorPrimary');
+        border-color: var-get('colorPrimary');
       }
 
       &:after {
@@ -27,10 +29,9 @@
         position: absolute;
         top: 1.5px;
         left: 1.5px;
-        color: $white;
+        color: var-get('colorLight');;
         z-index: 1;
         font-size: 1.2em;
-        transition: width 150ms, height 150ms, top 150ms; // NOTE cant figure out how to do this
       }
     }
 
@@ -57,13 +58,13 @@
     display: inline-block;
     position: relative;
     margin-bottom: $control-spacer;
-    font-size: $font-size-base;
+    font-size: var-get('fontSizeBase');
     line-height: 24px;
     user-select: none;
 
     &:before {
       content: '';
-      margin-right: map-get($spacers, 1);
+      margin-right: var-get('spacing1');
       display: inline-block;
       width: 1.25em;
       height: 1.25em;
@@ -71,6 +72,7 @@
       background: white;
       border: $control-border-width solid $control-border-color;
       border-radius: $control-border-radius;
+      transition: all var-get('transitionDuration') var-get('transitionTimingFunction');
     }
   }
 }

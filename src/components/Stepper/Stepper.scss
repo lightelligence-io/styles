@@ -1,21 +1,20 @@
 .#{$namespace}Stepper {
-	$stepper-border-color: $border-color;
-
-	margin-bottom: map-get($spacers, 4);
+	$stepper-border-color: var-get('borderColor');
+	margin-bottom: var-get('spacing4');
 
 	$self: &;
 	@extend .#{$namespace}Tabs;
   counter-reset: step-item-counter;
-	margin-top: -#{map-get($spacers, 2)};
+	margin-top: -#{var-get('spacing2')};
 
 	&-content {
 		@extend .#{$namespace}Tabs-content;
-		margin-top: map-get($spacers, 4);
+		margin-top: var-get('spacing4');
 	}
 
 	&-header {
 		@extend .#{$namespace}Tabs-header;
-		margin-top: map-get($spacers, 2);
+		margin-top: var-get('spacing2');
     counter-increment: step-item-counter;
 		display: inline-flex;
 		align-items: center;
@@ -27,7 +26,7 @@
       @extend .#{$namespace}Button--outline;
 			@extend .#{$namespace}Button[data-count];
 			color: currentColor;
-			margin-right: #{map-get($spacers, 2)};
+			margin-right: var-get('spacing2');
     }
 
 		&:after {
@@ -37,7 +36,7 @@
 			background: $stepper-border-color;
 			border: 0;
 			padding: 0;
-			margin-left: #{map-get($spacers, 2)};
+			margin-left: #{var-get('spacing2')};
 		}
 
 		~ #{&} {
@@ -65,7 +64,7 @@
 	input[type="radio"]:checked + &-header {
 		color: inherit;
 		&:before {
-			color: $primary;
+			color: var-get('colorPrimary');
 		}
 	}
 }

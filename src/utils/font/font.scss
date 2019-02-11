@@ -1,17 +1,18 @@
-@each $breakpoint in map-keys($breakpoints) {
-  @include screen-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $breakpoints);
+@each $breakpoint in map-keys(screen-get()) {
+  $infix: screen-infix($breakpoint);
 
+  @include screen-up($breakpoint) {
     .#{$namespace}u-#{$infix}fontBase {
-      font-family: $font-family-base !important;
+      font-family: var-get('fontFamilyBase');
     }
 
     .#{$namespace}u-#{$infix}fontMono {
-      font-family: $font-family-mono !important;
+      font-family: var-get('fontFamilyMono');
     }
 
+    // FIXME: Get rid of redundant stuff, either this or that
     .#{$namespace}u-#{$infix}fontInitial {
-      font-family: $font-family-base !important;
+      font-family: var-get('fontFamilyBase');
     }
   }
 }

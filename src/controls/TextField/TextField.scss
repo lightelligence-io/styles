@@ -18,12 +18,12 @@
     right: 0;
     top: 1.05rem;
     display: block;
-    margin-bottom: map-get($spacers, 1);
+    margin-bottom: var-get('spacing1');
   }
 
   &-input.is-error ~ &-message,
   &-input:invalid ~ &-message {
-    color: $error;
+    color: var-get('colorError');
   }
 
   // TODO: rethink naming
@@ -42,7 +42,7 @@
   &-label {
     text-align: left;
     display: block;
-    margin-bottom: map-get($spacers, 1);
+    margin-bottom: var-get('spacing1');
 
     &:required {
       outline: 3px solid green;
@@ -73,7 +73,7 @@
         pointer-events: none;
         cursor: text;
         transition: all 200ms;
-        transform: translate3d(0, calc(100% + #{map-get($spacers, 1)}), 0);
+        transform: translate3d(0, calc(100% + #{var-get('spacing1')}), 0);
         padding: 0 $control-padding-x;
         @include control-placeholder-style();
         height: #{$label-font-size};

@@ -1,74 +1,16 @@
-/// background is deprecated and will be removed later
+@each $breakpoint in map-keys(screen-get()) {
+  $infix: screen-infix($breakpoint);
 
-@each $name, $value in $context-colors {
-  .#{$namespace}u-background#{string-capitalize($name)} {
-    background: $value;
-  }
-}
-
-@each $breakpoint in map-keys($breakpoints) {
   @include screen-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $breakpoints);
-
-    @each $name, $value in $context-colors {
-      .#{$namespace}u-#{$infix}background#{string-capitalize($name)} {
-        background: $value !important;
-      }
-    }
-  }
-}
-
-
-@each $name, $value in $grays {
-  .#{$namespace}u-backgroundGray#{string-capitalize($name)} {
-    background: $value;
-  }
-}
-
-@each $breakpoint in map-keys($breakpoints) {
-  @include screen-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $breakpoints);
-
-    @each $name, $value in $grays {
-      .#{$namespace}u-#{$infix}backgroundGray#{string-capitalize($name)} {
-        background: $value !important;
-      }
-    }
-  }
-}
-
-/// backgroundColor
-
-@each $name, $value in $context-colors {
-  .#{$namespace}u-backgroundColor#{string-capitalize($name)} {
-    background-color: $value;
-  }
-}
-
-@each $breakpoint in map-keys($breakpoints) {
-  @include screen-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $breakpoints);
-
-    @each $name, $value in $context-colors {
+    // Colors
+    @each $name, $value in var-get('color') {
       .#{$namespace}u-#{$infix}backgroundColor#{string-capitalize($name)} {
         background-color: $value !important;
       }
     }
-  }
-}
 
-
-@each $name, $value in $grays {
-  .#{$namespace}u-backgroundColorGray#{string-capitalize($name)} {
-    background-color: $value;
-  }
-}
-
-@each $breakpoint in map-keys($breakpoints) {
-  @include screen-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $breakpoints);
-
-    @each $name, $value in $grays {
+    // Grays
+    @each $name, $value in var-get('gray') {
       .#{$namespace}u-#{$infix}backgroundColorGray#{string-capitalize($name)} {
         background-color: $value !important;
       }

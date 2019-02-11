@@ -16,9 +16,9 @@
 
 
 // For each breakpoint, define the maximum width of the container in a media query
-@mixin make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $breakpoints) {
+@mixin make-container-max-widths($max-widths: $container-max-widths) {
   @each $breakpoint, $container-max-width in $max-widths {
-    @include screen-up($breakpoint, $breakpoints) {
+    @include screen-up($breakpoint) {
       max-width: $container-max-width;
     }
   }

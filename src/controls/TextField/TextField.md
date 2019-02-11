@@ -1,6 +1,6 @@
 # TextField
 
-TextField is used with `<div>` elements that contain a text-input and optionally a label
+TextField is used with `<div>` elements that contain a text-input and optionally a label.
 
 ```html
 <div class="olt-TextField">
@@ -25,7 +25,7 @@ Provide error message
   <label class="olt-Label olt-TextField-label">Label</label>
   <input class="olt-Input olt-TextField-input is-error" placeholder="Enter your life..."/>
   <div class="olt-TextField-footer">
-    <div class="olt-TextField-message olt-u-textError">Something went horribly wrong</div>
+    <div class="olt-TextField-message olt-u-colorError">Something went horribly wrong</div>
   </div>
 </div>
 ```
@@ -37,7 +37,7 @@ Info Message
   <label class="olt-Label olt-TextField-label">Label</label>
   <input class="olt-Input olt-TextField-input is-error" placeholder="Enter your life..."/>
   <div class="olt-TextField-footer">
-    <div class="olt-TextField-message olt-u-textError">Something went horribly wrong</div>
+    <div class="olt-TextField-message olt-u-colorError">Something went horribly wrong</div>
     <div class="olt-TextField-info">max. 200 Chars</div>
   </div>
 </div>

@@ -1,50 +1,18 @@
-/// text is deprecated, use color instead
+@each $breakpoint in map-keys(screen-get()) {
+  $infix: screen-infix($breakpoint);
 
-@each $breakpoint in map-keys($breakpoints) {
   @include screen-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $breakpoints);
-
-    @each $name, $value in $context-colors {
-      .#{$namespace}u-#{$infix}text#{string-capitalize($name)} {
-        color: $value;
-      }
-    }
-  }
-}
-
-@each $breakpoint in map-keys($breakpoints) {
-  @include screen-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $breakpoints);
-
-    @each $name, $value in $grays {
-      .#{$namespace}u-#{$infix}textGray#{string-capitalize($name)} {
-        color: $value;
-      }
-    }
-  }
-}
-
-/// color variant
-
-@each $breakpoint in map-keys($breakpoints) {
-  @include screen-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $breakpoints);
-
-    @each $name, $value in $context-colors {
+    // Colors
+    @each $name, $value in var-get('color') {
       .#{$namespace}u-#{$infix}color#{string-capitalize($name)} {
-        color: $value;
+        color: $value !important;
       }
     }
-  }
-}
 
-@each $breakpoint in map-keys($breakpoints) {
-  @include screen-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $breakpoints);
-
-    @each $name, $value in $grays {
+    // Grays
+    @each $name, $value in var-get('gray') {
       .#{$namespace}u-#{$infix}colorGray#{string-capitalize($name)} {
-        color: $value;
+        color: $value !important;
       }
     }
   }

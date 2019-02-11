@@ -1,56 +1,54 @@
-%Grid-item {
-  position: relative;
-  width: 100%;
-  min-height: 1px; // Prevent columns from collapsing when empty
-}
-
 .#{$namespace}Grid {
+  $grid-gutter: var-get('containerPadding');
+  $grid-columns: 12;
   $self: &;
   display: flex;
   flex-wrap: wrap;
-  margin-right: ($grid-gutter / -2);
-  margin-left: ($grid-gutter / -2);
-  margin-top: ($grid-gutter * -1);
+  margin-right: calc(#{$grid-gutter} / -2);
+  margin-left: calc(#{$grid-gutter} / -2);
+  margin-top: calc(#{$grid-gutter} * -1);
 
   &-item {
-    @extend %Grid-item;
+    position: relative;
+    width: 100%;
+    min-height: 1px; // Prevent columns from collapsing when empty
     margin-top: $grid-gutter;
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
-    padding-right: ($grid-gutter / 2);
-    padding-left: ($grid-gutter / 2);
+    padding-right: calc(#{$grid-gutter} / 2);
+    padding-left: calc(#{$grid-gutter} / 2);
   }
 
-  // columns
+  // Columns
+  @each $breakpoint in map-keys(screen-get()) {
+    $infix: screen-infix($breakpoint);
 
-  @each $breakpoint in map-keys($breakpoints) {
-    $infix: breakpoint-infix($breakpoint, $breakpoints);
-
-    @include screen-up($breakpoint, $breakpoints) {
+    @include screen-up($breakpoint) {
       #{$self}-item--#{$infix}auto {
         flex: 0 0 auto;
         width: auto;
-        max-width: none; // Reset earlier grid tiers
+        max-width: none;
       }
 
-      @for $i from 1 through $grid-columns {
-        #{$self}-item--#{$infix}#{$i} {
-          @include make-col($i, $grid-columns);
+      @for $size from 1 through $grid-columns {
+        #{$self}-item--#{$infix}#{$size} {
+          flex: 0 0 percentage($size / $grid-columns);
+          max-width: percentage($size / $grid-columns);
         }
       }
     }
   }
 
-  // offsets
+  // Offsets
+  @each $breakpoint in map-keys(screen-get()) {
+    $infix: screen-infix($breakpoint);
 
-  @each $breakpoint in map-keys($breakpoints) {
-    $infix: breakpoint-infix($breakpoint, $breakpoints);
-
-    @include screen-up($breakpoint, $breakpoints) {
-      @for $i from 1 through $grid-columns {
-        #{$self}-item--#{$infix}offset#{$i} {
-          @include make-col-offset($i, $grid-columns);
+    @include screen-up($breakpoint) {
+      @for $size from 1 through $grid-columns {
+        #{$self}-item--#{$infix}offset#{$size} {
+          $num: $size / $grid-columns;
+          margin-left: if($num == 0, 0, percentage($num));
         }
       }
     }

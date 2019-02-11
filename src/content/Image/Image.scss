@@ -1,5 +1,5 @@
 .#{$namespace}Image {
-  $image-border-radius: $border-radius;
+  $image-border-radius: var-get('borderRadius');
 
   &:not(#{&}--natural) {
     width: 100%;

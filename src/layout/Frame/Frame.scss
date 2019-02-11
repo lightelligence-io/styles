@@ -1,7 +1,7 @@
 .#{$namespace}Frame {
-  font-family: $font-family-base;
-  font-weight: $font-weight-base;
-  line-height: $line-height;
+  font-family: var-get('fontFamilyBase');
+  font-weight: var-get('fontWeightRegular');
+  line-height: var-get('lineHeightBase');
   -webkit-font-smoothing: antialiased;
   height: 100%;
   margin: 0;
@@ -30,7 +30,7 @@
   }
 
   &-footer {
-    margin-top: map-get($spacers, 4);
+    margin-top: var-get('spacing4');
     flex: 0 0 auto;
   }
 }

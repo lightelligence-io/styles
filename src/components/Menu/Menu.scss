@@ -1,33 +1,26 @@
 .#{$namespace}Menu {
-  $menu-color: $text-color;
-  $menu-border-color: transparent !default;
-  $menu-background: $white !default;
-  $menu-border-width: 0 !default;
-  $menu-border-radius: $border-radius !default;
-  $menu-padding-x: 0 !default;
-  $menu-padding-y: 0 !default;
-  $menu-font-size: inherit !default;
-  $menu-font-size-submenu: $font-size-small;
-
-  $menu-item-padding-x: 1rem !default;
-  $menu-item-padding-y: 0.5rem !default;
-
-  $menu-item-color: rgba(0, 0, 0, 0.7) !default;
-  $menu-item-hover: $black !default;
-  $menu-item-active: $black !default;
-
-  $menu-item-color-light: $white !default;
-  $menu-item-hover-light: $primary !default;
-  $menu-item-active-light: $primary !default;
-
-  $menu-item-background-hover: transparent !default;
-  $menu-item-background-active: transparent !default;
-
+  $menu-color: var-get('colorLight');;
+  $menu-border-color: transparent;
+  $menu-background: var-get('colorLight');
+  $menu-border-width: 0;
+  $menu-border-radius: var-get('borderRadius');
+  $menu-padding-x: 0;
+  $menu-padding-y: 0;
+  $menu-font-size: inherit;
+  $menu-font-size-submenu: var-get('fontSizeSmall');
+  $menu-item-padding-x: 1rem;
+  $menu-item-padding-y: 0.5rem;
+  $menu-item-color: rgba(0, 0, 0, 0.7);
+  $menu-item-hover: var-get('colorDark');
+  $menu-item-active: var-get('colorDark');
+  $menu-item-color-light: var-get('colorLight');
+  $menu-item-hover-light: var-get('colorPrimary');
+  $menu-item-active-light: var-get('colorPrimary');
+  $menu-item-background-hover: transparent;
+  $menu-item-background-active: transparent;
   $menu-transition-duration: 0.2s;
   $menu-transition-timing-function: ease-in;
-
   $self: &;
-  //color: $menu-color;
   margin: 0;
   padding: $menu-padding-y $menu-padding-x;
   display: flex;
@@ -43,7 +36,7 @@
   @include contextual-colors();
 
   &--outline {
-    background-color: $white;
+    background-color: var-get('colorLight');;
     &:hover,
     &:visited {
       filter: none;

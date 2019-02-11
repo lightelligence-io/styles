@@ -1,5 +1,5 @@
 .#{$namespace}Paragraph {
-  margin: 0 0 $spacer 0;
+  margin: 0 0 var-get('spacing3') 0;
 
   &:last-child {
     margin-bottom: 0;

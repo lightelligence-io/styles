@@ -1,14 +1,12 @@
 .#{$namespace}Avatar {
-  $avatar-background: $site-bg;
-  $avatar-color: $primary;
+  $avatar-background: var-get('colorLight');
+  $avatar-color: var-get('colorPrimary');
   $avatar-sizes: (
     small: 2rem,
     medium: 4.25rem,
     large: 6.5rem
-  ) !default;
-
+  );
   $self: &;
-
   width: 2em;
   height: 2em;
   font-size: 1em;
@@ -25,8 +23,10 @@
   border: 0.2em solid currentColor;
   line-height: 100%;
 
+  // Colors
   @include contextual-colors(('color'));
 
+  // Sizes
   @each $name, $value in $avatar-sizes {
     &--#{$name} {
       width: $value;
@@ -36,13 +36,12 @@
     }
   }
 
-  // Preset modifiers
-  // NOTE: Since we already have context colors, do we really need them?
+  // Presets
   &--user {
-    @extend #{$self}--primary;
+    @extend #{$self}--primary !optional;
   }
 
   &--tenant {
-    @extend #{$self}--info;
+    @extend #{$self}--info !optional;
   }
 }

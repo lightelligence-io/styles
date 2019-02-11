@@ -1,14 +1,14 @@
 .#{$namespace}Button {
-  $button-padding-x: 1rem !default;
-  $button-padding-y: 0 !default;
-  $button-border-color: $border-color !default;
-  $button-background: $border-color !default;
-  $button-border-width: $border-width !default;
-  $button-border-radius: 2.5rem !default;
-  $button-color: $text-color !default;
-
+  $button-padding-x: 1rem;
+  $button-padding-y: 0;
+  $button-border-color: var-get('borderColor');
+  $button-background: var-get('borderColor');
+  $button-border-width: var-get('borderWidth');
+  $button-border-radius: 2.5rem;
+  $button-color: var-get('colorDark');
   $button-pending-opacity: 0.4;
-
+  $button-pending-dark: rgba(#000, $button-pending-opacity); // TODO: Hardcode button-pending-color for the sake of css variables
+  $button-pending-light: rgba(#fff, $button-pending-opacity); // TODO: Hardcode button-pending-color for the sake of css variables
   $self: &;
   position: relative;
   line-height: 2.25rem;
@@ -39,7 +39,7 @@
     &:not(:active):not(.is-active) {
       &:hover,
       &:focus {
-        filter: brightness(#{100% - $link-hover-contrast});
+        filter: brightness(calc(100% - #{var-get('linkHoverContrast')}));
         text-decoration: none;
       }
     }
@@ -51,7 +51,7 @@
   }
 
   &--outline {
-    background-color: $white;
+    background-color: var-get('colorLight');
     &:hover,
     &:visited {
       filter: none;
@@ -60,10 +60,10 @@
 
   @include contextual-colors($selector: '#{$self}:not(.is-disabled)') {
     &.is-pending {
-      color: rgba($white, $button-pending-opacity);
+      color: $button-pending-light;
     }
     &:hover {
-      color: $white;
+      color: var-get('colorLight');
     }
   }
 
@@ -71,15 +71,15 @@
     ('color',
     'border-color'),
     $selector: '#{$self}--outline:not(:hover):not(:focus):not(:disabled):not(.is-disabled)') {
-      background-color: $white;
-
-      &.is-pending {
-        @each $name, $value in $context-colors {
-          &#{$self}--#{$name} {
-            color: rgba($value, $button-pending-opacity);
-          }
-        }
-      }
+      background-color: var-get('colorLight');
+      // TODO: Button pending context colors
+      // &.is-pending {
+      //   @each $name, $value in $context-colors {
+      //     &#{$self}--#{$name} {
+      //       color: rgba($value, $button-pending-opacity);
+      //     }
+      //   }
+      // }
     }
 
   &--icon,
@@ -110,20 +110,20 @@
     user-select: none;
     cursor: default;
     background-color: initial;
-    color: $gray-500;
+    color: var-get('gray500');
     border-style: dashed;
-    border-color: $gray-500;
+    border-color: var-get('gray500');
     filter: none;
 
     &:hover {
-      color: $gray-500;
+      color: var-get('gray500');
       filter: none;
     }
   }
 
   &.is-pending {
     pointer-events: none;
-    color: rgba($button-color, $button-pending-opacity);
+    color: $button-pending-dark;
 
     &:after {
       content: '';
@@ -133,22 +133,6 @@
       align-items: center;
       position: absolute;
       color: $button-color;
-    }
-  }
-
-  @each $name, $value in $context-colors {
-    &--#{$name}.is-pending {
-      &:after {
-        color: $white; // TODO: Color contrast
-      }
-    }
-
-    &--#{$name}.is-pending {
-      &#{$self}--outline {
-        &:after {
-          color: $value;
-        }
-      }
     }
   }
 }

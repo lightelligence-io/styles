@@ -1,18 +1,18 @@
 .#{$namespace}Headline {
-  font-weight: $font-weight-heading;
-  margin: 0 0 map-get($spacers, 2);
+  font-weight: var-get('fontWeightHeading');
+  margin: 0 0 var-get('spacing2');
   word-break: break-word;
 
   &--1 {
-    font-size: 4.375rem; // NOTE: Used to be 70px
-    line-height: 5.625rem; // NOTE: Used to be 90px;
-    margin-bottom: map-get($spacers, 3);
+    font-size: 4.375rem;
+    line-height: 5.625rem;
+    margin-bottom: var-get('spacing3');
   }
 
   &--2 {
     font-size: 2.5rem;
     line-height: 3rem;
-    margin-bottom: map-get($spacers, 3);
+    margin-bottom: var-get('spacing3');
   }
 
   &--3 {
