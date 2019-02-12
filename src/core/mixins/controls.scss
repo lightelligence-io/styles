@@ -44,7 +44,7 @@
   color: currentColor;
 }
 
-@mixin form-field-footer() {
+@mixin form-field-footer($self) {
   text-align: left;
   font-size: var-get('fontSizeSmall');
   height: var-get('lineHeightSmall');
@@ -52,12 +52,12 @@
   display: flex;
   justify-content: space-between;
 
-  &-message {
+  #{$self}-message {
     text-align: left;
     font-size: var-get('fontSizeSmall');
   }
 
-  &-info {
+  #{$self}-info {
     margin-left: auto;
   }
 }

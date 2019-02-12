@@ -1,4 +1,5 @@
 .#{$namespace}FormField {
+  $self: &;
   display: flex;
   flex-direction: column;
 
@@ -9,6 +10,6 @@
   }
 
   &-footer {
-    @include form-field-footer();
+    @include form-field-footer($self);
   }
 }

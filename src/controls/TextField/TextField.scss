@@ -57,7 +57,7 @@
   }
 
   &-footer {
-    @include form-field-footer();
+    @include form-field-footer($self);
   }
 
   &--float {
