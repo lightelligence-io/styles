@@ -46,7 +46,6 @@ module.exports = {
 
         return json;
       },
-      camelCase: true
     }),
     require('autoprefixer'),
     mode === 'production' && require('cssnano'), // Minify in production
@@ -99,10 +98,14 @@ module.exports = {
       // Create index.js
       fs.writeFileSync(
         path.join(dest, 'index.js'),
-        [
-          `export * as theme from './theme.js';`,
-          `export * as components from './components.js';`
-        ].join('\n'),
+`const components = require('./components.js');
+const theme = require('./theme.js');
+
+module.exports = {
+  ...components,
+  theme
+};
+`,
         'utf-8'
       );
     }
