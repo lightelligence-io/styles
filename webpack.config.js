@@ -16,7 +16,7 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, 'dist'),
-    publicPath: isProdDocs ? '/styleguide/' : '/',
+    publicPath: isProdDocs ? '/styles/' : '/',
     filename: 'main.js',
   },
   module: {
@@ -108,7 +108,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: 'fonts/[name].[ext]',
-          publicPath: isProdDocs ? '/styleguide/' : './',
+          publicPath: isProdDocs ? '/styles/' : './',
         }
       }]
     }, {

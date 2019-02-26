@@ -6,7 +6,7 @@ const isProdDocs = JSON.parse(process.env.PROD_DOCS || 'false');
 module.exports = {
   title: 'LIGHTELLIGENCE® UI',
   output: 'docs',
-  publicPath: isProdDocs ? '/styleguide/' : '/',
+  publicPath: isProdDocs ? '/styles/' : '/',
   index: 'README.md',
   ignore: '**/Spinner.md',
   contents: {

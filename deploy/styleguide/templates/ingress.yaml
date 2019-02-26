@@ -12,7 +12,7 @@ spec:
     - host: {{ .Values.hostname }}
       http:
         paths:
-          - path: /styleguide
+          - path: /styles
             backend:
               serviceName: styleguide
               servicePort: 8080
