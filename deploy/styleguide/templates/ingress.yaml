@@ -6,7 +6,7 @@ metadata:
     buildingBlock: {{ .Values.labels.buildingBlock }}
     component: {{ .Values.labels.component }}
   annotations:
-    kubernetes.io/ingress.class: frontend-portal
+    kubernetes.io/ingress.class: default
 spec:
   rules:
     - host: {{ .Values.hostname }}
