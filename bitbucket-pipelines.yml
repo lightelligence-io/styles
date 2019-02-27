@@ -68,7 +68,6 @@ definitions:
         image: dtzar/helm-kubectl:2.9.0
 
 pipelines:
-
   default:
     - step: *Audit-Step
     - step: *Build-Step

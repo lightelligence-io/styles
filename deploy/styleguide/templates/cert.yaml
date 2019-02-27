@@ -17,7 +17,7 @@ spec:
   acme:
     config:
       - http01:
-          ingressClass: frontend-portal
+          ingressClass: default
         domains:
           - {{ .Values.hostname }}
   {{ end }}
