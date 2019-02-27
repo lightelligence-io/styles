@@ -40,7 +40,7 @@ module.exports = {
         })));
 
         const filename = path.resolve(dest, 'components.js');
-        const contents = Object.entries(json).map(([ key, value ]) => `export const ${key} = '${value}';`).join('\n');
+        const contents = Object.entries(json).map(([ key, value ]) => `exports.${key} = '${value}';`).join('\n');
 
         fs.writeFileSync(filename, contents);
 
@@ -85,7 +85,7 @@ module.exports = {
             value = `'${value}'`;
           }
 
-          return `export const ${key} = ${value};`;
+          return `exports.${key} = ${value};`;
         }).join('\n');
 
       // Create theme.js
@@ -101,10 +101,7 @@ module.exports = {
 `const components = require('./components.js');
 const theme = require('./theme.js');
 
-module.exports = {
-  ...components,
-  theme
-};
+module.exports = Object.assign({}, components, { theme : theme });
 `,
         'utf-8'
       );

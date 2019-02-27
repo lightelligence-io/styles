@@ -45,13 +45,13 @@ fontFamilyMono: !!str |
   'Overpass Mono', 'monospace'
 fontSizeBase: 16px
 fontSize:
-  xXSmall: calc(${fontSizeBase} * .65)
+  xxSmall: calc(${fontSizeBase} * .65)
   xSmall: calc(${fontSizeBase} * .75)
   small: calc(${fontSizeBase} * .8)
   medium: ${fontSizeBase}
   large: calc(${fontSizeBase} * 1.5)
   xLarge: calc(${fontSizeBase} * 1.8)
-  xXLarge: calc(${fontSizeBase} * 2.2)
+  xxLarge: calc(${fontSizeBase} * 2.2)
   smaller: 80%
   larger: 150%
 lineHeightBase: 1.5

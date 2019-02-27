@@ -77,13 +77,13 @@ $var-style: camelCase;
   // Font sizes
   @include var-set((
     fontSize: (
-      xXSmall: calc(#{var-get('fontSizeBase')} * .65),
+      xxSmall: calc(#{var-get('fontSizeBase')} * .65),
       xSmall: calc(#{var-get('fontSizeBase')} * .75),
       small: calc(#{var-get('fontSizeBase')} * .8),
       medium: var-get('fontSizeBase'),
       large: calc(#{var-get('fontSizeBase')} * 1.5),
       xLarge: calc(#{var-get('fontSizeBase')} * 1.8),
-      xXLarge: calc(#{var-get('fontSizeBase')} * 2.2),
+      xxLarge: calc(#{var-get('fontSizeBase')} * 2.2),
       smaller: 80%,
       larger: 150%
     )
@@ -92,13 +92,13 @@ $var-style: camelCase;
   // Line heights
   @include var-set((
     lineHeight: (
-      xXSmall: calc(#{var-get('lineHeightBase')} * .6667),
+      xxSmall: calc(#{var-get('lineHeightBase')} * .6667),
       xSmall: calc(#{var-get('lineHeightBase')} * .8333),
       small: calc(#{var-get('lineHeightBase')} * .9),
       medium: var-get('lineHeightBase'),
       large: calc(#{var-get('lineHeightBase')} * 1.3333),
       xLarge: calc(#{var-get('lineHeightBase')} * 1.5333),
-      xXLarge: calc(#{var-get('lineHeightBase')} * 1.7333),
+      xxLarge: calc(#{var-get('lineHeightBase')} * 1.7333),
       smaller: 80%,
       larger: 150%
     )

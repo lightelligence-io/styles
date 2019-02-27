@@ -44,13 +44,13 @@ Here's the hackable stuff:
   --olt-fontFamilyBase: PT Sans;
   --olt-fontFamilyMono: Overpass Mono;
   --olt-fontSizeBase: 16px;
-  --olt-fontSizeXXSmall: calc(var(--olt-fontSizeBase) * .65);
+  --olt-fontSizeXxSmall: calc(var(--olt-fontSizeBase) * .65);
   --olt-fontSizeXSmall: calc(var(--olt-fontSizeBase) * .75);
   --olt-fontSizeSmall: calc(var(--olt-fontSizeBase) * .8);
   --olt-fontSizeMedium: var(--olt-fontSizeBase);
   --olt-fontSizeLarge: calc(var(--olt-fontSizeBase) * 1.5);
   --olt-fontSizeXLarge: calc(var(--olt-fontSizeBase) * 1.8);
-  --olt-fontSizeXXLarge: calc(var(--olt-fontSizeBase) * 2.2);
+  --olt-fontSizeXxLarge: calc(var(--olt-fontSizeBase) * 2.2);
   --olt-fontSizeSmaller: 80%;
   --olt-fontSizeLarger: 150%;
   --olt-lineHeightBase: 1.5;
