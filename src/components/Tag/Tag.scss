@@ -28,33 +28,32 @@
   vertical-align: middle;
   white-space: nowrap;
 
-  &:hover,
-  &:visited {
-    filter: brightness(calc(100% - #{var-get('linkHoverContrast')}));
-    text-decoration: none;
-  }
+  @include contextual-colors(('color', 'background-color', 'border-color'));
 
-  @include contextual-colors();
-
-  &--outline {
+  @include contextual-colors(('border-color', 'color'), $baseSelector:'#{$self}--outline#{$self}') {
     background-color: var-get('primaryLight');
-    &:hover,
-    &:visited {
-      filter: none;
-    }
   }
-
-  @include contextual-colors(('color', 'border-color'), $selector: '#{&}--outline:not(:hover)') {
-    background-color: var-get('colorLight');;
-  }
-
 
   @at-root {
     #{$self}--selectable,
     button#{$self},
     #{$self}[type='button'],
     a:link#{$self} {
+
+      @include contextual-colors(('background-color', 'color'), $baseSelector:'#{$self}--outline#{$self}', $selector: ':hover');
+
       cursor: pointer;
+      &:hover,
+      &:visited {
+        filter: brightness(calc(100% - #{var-get('linkHoverContrast')}));
+        text-decoration: none;
+      }
+      &--outline {
+        &:hover,
+        &:visited {
+          filter: none;
+        }
+      }
     }
   }
 

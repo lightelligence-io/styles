@@ -1,13 +1,14 @@
 @mixin contextual-colors(
   $props: ('background-color', 'color', 'border-color'),
   $named-colors: var-get('color'),
-  $selector: &
+  $selector: &,
+  $baseSelector: &,
 ) {
   $light: map-get($named-colors, 'light') or '#fff';
   $dark: map-get($named-colors, 'dark') or '#000';
 
   @each $name, $value in $named-colors {
-    $s: selector-append('#{&}--#{$name}', $selector);
+    $s: selector-append('#{$baseSelector}--#{$name}', $selector);
     $var-value: $value;
 
     &#{$s} {

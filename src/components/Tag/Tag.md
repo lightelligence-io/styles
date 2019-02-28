@@ -37,4 +37,15 @@
 <button class="olt-Tag" data-icon="grade">Tag</button>
 <a class="olt-Tag" href="#">Tag</a>
 <span class="olt-Tag olt-Tag--selectable">Tag <i class="olt-Tag-icon olt-Icon" data-icon="close"></i></span>
+<span class="olt-Tag olt-Tag--selectable olt-Tag--primary">Tag <i class="olt-Tag-icon olt-Icon" data-icon="close"></i></span>
+<span class="olt-Tag olt-Tag--selectable olt-Tag--secondary">Tag <i class="olt-Tag-icon olt-Icon" data-icon="close"></i></span>
+```
+## Outline and Selectable
+
+```html
+<span class="olt-Tag olt-Tag--outline olt-Tag--selectable olt-Tag--primary">Primary</span>
+<span class="olt-Tag olt-Tag--outline olt-Tag--selectable olt-Tag--secondary">Secondary</span>
+<span class="olt-Tag olt-Tag--outline olt-Tag--selectable olt-Tag--info">Info</span>
+<span class="olt-Tag olt-Tag--outline olt-Tag--selectable olt-Tag--error">Error</span>
+<span class="olt-Tag olt-Tag--outline olt-Tag--selectable olt-Tag--success">Success</span>
 ```
