@@ -55,6 +55,16 @@ fontSize:
   smaller: 80%
   larger: 150%
 lineHeightBase: 1.5
+lineHeight:
+  xxSmall: calc(${lineHeightBase} * .6667)
+  xSmall: calc(${lineHeightBase} * .8333)
+  small: calc(${lineHeightBase} * .9)
+  medium: ${lineHeightBase}
+  large: calc(${lineHeightBase} * 1.3333)
+  xLarge: calc(${lineHeightBase} * 1.5333)
+  xxLarge: calc(${lineHeightBase} * 1.7333)
+  smaller: 80%
+  larger: 150%
 fontWeight:
   light: 400
   regular: 400

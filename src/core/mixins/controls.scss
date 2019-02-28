@@ -47,7 +47,7 @@
 @mixin form-field-footer($self) {
   text-align: left;
   font-size: var-get('fontSizeSmall');
-  height: var-get('lineHeightSmall');
+  height: calc(#{var-get('fontSizeSmall')} * #{var-get('lineHeightSmall')});
   margin-top: var-get('spacing1');
   display: flex;
   justify-content: space-between;

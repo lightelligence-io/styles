@@ -1,6 +1,6 @@
 {
   "name": "@lightelligence/lightelligence-ui",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "The UI-Framework of the lightelligence-platform.",
   "license": "UNLICENSED",
   "main": "dist/index.js",
