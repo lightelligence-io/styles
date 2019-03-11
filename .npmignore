@@ -1,3 +1,11 @@
+.living-api
+deploy
+Dockerfile
+.prettierrc
+postcss.config.js
+webpack.config.js
+.babelrc
+browserslist
 /node_modules
 bitbucket-pipelines.yml
 .npmrc
