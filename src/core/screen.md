@@ -11,7 +11,7 @@
 
 ## Custom media
 
-In order to make your own custom stuff responsive along the lines of this without hardcoding breakpoints in media-queries, `lightelligence-ui` provides suitable definitions as [@custom-media](https://drafts.csswg.org/mediaqueries-5/#custom-mq)-rules.
+In order to make your own custom stuff responsive along the lines of this without hardcoding breakpoints in media-queries, `@lightelligence/styles` provides suitable definitions as [@custom-media](https://drafts.csswg.org/mediaqueries-5/#custom-mq)-rules.
 
 
 ```css

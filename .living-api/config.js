@@ -4,7 +4,7 @@ const webpackConfig = require('../webpack.config');
 const isProdDocs = JSON.parse(process.env.PROD_DOCS || 'false');
 
 module.exports = {
-  title: 'LIGHTELLIGENCE® UI',
+  title: 'LIGHTELLIGENCE® Styles',
   output: 'docs',
   publicPath: isProdDocs ? '/styles/' : '/',
   index: 'README.md',

@@ -16,3 +16,6 @@ State of the art
 - Fix usage of context colors in various places
 - Improve Examples and Fix Documentation bugs
 - Update and improve styleguide generator
+
+#v0.4.0
+- NPM package renamed to @lightelligence/styles
