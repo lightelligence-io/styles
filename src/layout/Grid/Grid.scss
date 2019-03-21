@@ -4,9 +4,9 @@
   $self: &;
   display: flex;
   flex-wrap: wrap;
-  margin-right: calc(#{$grid-gutter} / -2);
-  margin-left: calc(#{$grid-gutter} / -2);
-  margin-top: calc(#{$grid-gutter} * -1);
+  margin-right: calc(-1 *#{$grid-gutter} / 2);
+  margin-left: calc(-1 *#{$grid-gutter} / 2);
+  margin-top: calc(-1 *#{$grid-gutter});
 
   &-item {
     position: relative;
