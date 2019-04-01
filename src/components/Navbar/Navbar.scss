@@ -3,6 +3,7 @@
   $navbar-padding-x: 1rem;
   $navbar-padding-y: 0;
   $navbar-backdrop: rgba(255, 255, 255, 0.7);
+  $navbar-content-z: 1000;
   $navbar-logo: './components/Navbar/lightelligence.svg';
 
   $self: &;
@@ -88,6 +89,7 @@
       right: 0;
       bottom: 0;
       background: $navbar-backdrop;
+      z-index: $navbar-content-z;
       display: none;
     }
 
@@ -98,7 +100,7 @@
 
   &-content {
     position: fixed;
-    z-index: 1000;
+    z-index: $navbar-content-z;
     left: 0;
     top: 0;
     bottom: 0;
