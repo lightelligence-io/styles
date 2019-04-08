@@ -10,6 +10,7 @@ browserslist
 bitbucket-pipelines.yml
 .npmrc
 docs-image.docker
+/scripts
 
 # Log files
 npm-debug.log*
