@@ -1,3 +1,8 @@
+---
+name: Concepts
+category: Core
+---
+
 # Concepts
 
 ## Modular Notation

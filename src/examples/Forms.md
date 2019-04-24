@@ -1,8 +1,13 @@
+---
+name: Forms
+category: Examples
+---
+
 # Forms
 
 Here is an example how to layout a common form with a grid, textfield, formfield, select and checkbox elements.
 
-```html
+```forms.html
 <div class="olt-Grid">
   <div
     class="olt-Grid-item olt-Grid-item--12 olt-Grid-item--md-6 olt-Grid-item--lg-6"

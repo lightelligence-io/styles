@@ -1,3 +1,8 @@
+---
+name: backgroundColor
+category: Utilities
+---
+
 # backgroundColor
 
 Apply context colors to background.
@@ -5,7 +10,7 @@ Apply context colors to background.
 `olt-u-[sm-|md-|lg-|xl-]backgroundColor{Primary|Secondary|Info|Error|Success}`
 
 
-```html
+```1.html
 <div class="olt-u-backgroundColorPrimary olt-u-padding2 olt-u-marginBottom2">Primary</div>
 <div class="olt-u-backgroundColorSecondary olt-u-colorLight olt-u-padding2 olt-u-marginBottom2">Secondary</div>
 <div class="olt-u-backgroundColorInfo olt-u-padding2 olt-u-marginBottom2">Info</div>
@@ -16,7 +21,7 @@ Apply context colors to background.
 ## Grayscale colors
 
 
-```html
+```gray.html
 <div class="olt-u-backgroundColorGray100 olt-u-padding2 olt-u-marginBottom2">Gray 100</div>
 <div class="olt-u-backgroundColorGray200 olt-u-padding2 olt-u-marginBottom2">Gray 200</div>
 <div class="olt-u-backgroundColorGray300 olt-u-padding2 olt-u-marginBottom2">Gray 300</div>

@@ -1,3 +1,8 @@
+---
+name: Frame
+category: Layout
+---
+
 # Frame
 
 A Frame represents the entry point of your application.
@@ -6,7 +11,7 @@ It is usually applied to the body of a document.
 
 Use Frame to inject fonts and basic typography into your site.
 
-```html
+```1.html
 <div class="olt-Frame">
   <h1 class="olt-Headline olt-Headline--1">Hello World</h1>
   <p class="olt-Paragraph">This is an arbitrary paragraph</p>
@@ -16,7 +21,7 @@ Use Frame to inject fonts and basic typography into your site.
 Frame also provides site layout building blocks like header and footer.
 The wrapping elements could also be `html` and `body` instead of divs.
 
-```html
+```layout.html
 <div class="olt-Frame" style="height: 400px">
   <div class="olt-Frame-body">
     <header class="olt-Frame-header olt-u-backgroundDark olt-u-textLight olt-u-padding3">

@@ -1,10 +1,15 @@
+---
+name: textAlign
+category: Utilities
+---
+
 # textAlign
 
 Text alignment.
 
 `olt-u-[sm-|md-|lg-|xl-]textAlign{Left|Center|Right|Justify|Initial}`
 
-```html
+```1.html
 <p class="olt-Paragraph olt-u-textAlignLeft">
   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 <p>

@@ -1,8 +1,13 @@
+---
+name: Button
+category: Component
+---
+
 # Button
 
 Buttons can be used with `<button>`, `<button>`, and `<input type="button">` elements.
 
-```html
+```button.html
 <a class="olt-Button">Link</a>
 <button class="olt-Button">Button</button>
 <input class="olt-Button" type="button" value="Input"/>
@@ -10,7 +15,7 @@ Buttons can be used with `<button>`, `<button>`, and `<input type="button">` ele
 
 ## Colors
 
-```html
+```colors.html
 <button class="olt-Button olt-Button--primary">Primary</button>
 <button class="olt-Button olt-Button--secondary">Secondary</button>
 <button class="olt-Button olt-Button--info">Info</button>
@@ -21,7 +26,7 @@ Buttons can be used with `<button>`, `<button>`, and `<input type="button">` ele
 ## Outline
 
 
-```html
+```outline.html
 <button class="olt-Button olt-Button--outline">Button</button>
 <button class="olt-Button olt-Button--outline olt-Button--primary">Outline</button>
 <button class="olt-Button olt-Button--outline olt-Button--secondary">Outline</button>
@@ -36,7 +41,7 @@ Make use of `data-icon` attribute in order to apply an icon to a button.
 
 Please note that this doesn't work with inputs of button type.
 
-```html
+```icon.html
 <a data-icon="close" class="olt-Button"></a>
 <a data-icon="close" class="olt-Button olt-Button--outline"></a>
 <button data-icon="close" class="olt-Button olt-Button--primary"></button>
@@ -48,7 +53,7 @@ Please note that this doesn't work with inputs of button type.
 
 ### Disabled
 
-```html
+```state-disabled.html
 <button disabled class="olt-Button">Disabled</button>
 <a class="olt-Button is-disabled">Disabled</a>
 <button class="olt-Button olt-Button--primary is-disabled">Primary</button>
@@ -57,7 +62,7 @@ Please note that this doesn't work with inputs of button type.
 
 ### Active
 
-```html
+```state-active.html
 <button class="olt-Button is-active">Active</button>
 ```
 

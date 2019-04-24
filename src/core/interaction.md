@@ -1,3 +1,8 @@
+---
+name: Interaction
+category: Core
+---
+
 # Interaction
 
 ## Vanilla API

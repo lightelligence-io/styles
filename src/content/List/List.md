@@ -1,3 +1,8 @@
+---
+name: List
+category: Content
+---
+
 # List
 
 List is normally used with `<ul>` elements in which `<li>` is contained but can be used with arbitrary elements as well.
@@ -5,7 +10,7 @@ List is normally used with `<ul>` elements in which `<li>` is contained but can 
 
 ## Unordered List
 
-```html
+```unordered.html
 <ul class="olt-List">
   <li class="olt-List-item">Item One</li>
   <li class="olt-List-item">Item Two</li>
@@ -15,7 +20,7 @@ List is normally used with `<ul>` elements in which `<li>` is contained but can 
 
 ## Ordered List
 
-```html
+```ordered.html
 <ol class="olt-List olt-List--ordered">
   <li class="olt-List-item">Item One</li>
   <li class="olt-List-item">Item Two</li>
@@ -25,7 +30,7 @@ List is normally used with `<ul>` elements in which `<li>` is contained but can 
 
 ## Definition List
 
-```html
+```definition-list.html
 <dl class="olt-List olt-List--definition">
   <dt class="olt-List-term">Device Name</dt>
   <dd class="olt-List-item">Waterproofed solar roof</dd>
@@ -52,7 +57,7 @@ The modifier is reponsive:
 
 `olt-List--[xs|sm|lg|xl]-2columns`
 
-```html
+```two-columns.html
 <dl class="olt-List olt-List--definition olt-List--sm-2columns">
   <dt class="olt-List-term">Device Name</dt>
   <dd class="olt-List-item">Waterproofed solar roof</dd>
@@ -79,7 +84,7 @@ The modifier is reponsive:
 
 `olt-List--[xs|sm|lg|xl]-vertical`
 
-```html
+```vertically-stacked.html
 <dl class="olt-List olt-List--definition olt-List--sm-vertical olt-List--lg-2columns">
   <dt class="olt-List-term">Device Name</dt>
   <dd class="olt-List-item">Waterproofed solar roof</dd>

@@ -1,8 +1,13 @@
+---
+name: TextField
+category: Controls
+---
+
 # TextField
 
 TextField is used with `<div>` elements that contain a text-input and optionally a label.
 
-```html
+```1.html
 <div class="olt-TextField">
   <label class="olt-Label olt-TextField-label">Label</label>
   <input class="olt-Input olt-TextField-input" placeholder="Enter your life..."/>
@@ -11,7 +16,7 @@ TextField is used with `<div>` elements that contain a text-input and optionally
 
 Enable floating labels by adding `--float` modifier and placing the label after the input in markup.
 
-```html
+```floating.html
 <div class="olt-TextField olt-TextField--float">
   <input id="input" class="olt-Input olt-TextField-input" placeholder="Enter your life..."/>
   <label for="input" class="olt-Label olt-TextField-label">Label</label>
@@ -20,7 +25,7 @@ Enable floating labels by adding `--float` modifier and placing the label after 
 
 Provide error message
 
-```html
+```error.html
 <div class="olt-TextField">
   <label class="olt-Label olt-TextField-label">Label</label>
   <input class="olt-Input olt-TextField-input is-error" placeholder="Enter your life..."/>
@@ -32,7 +37,7 @@ Provide error message
 
 Info Message
 
-```html
+```info.html
 <div class="olt-TextField">
   <label class="olt-Label olt-TextField-label">Label</label>
   <input class="olt-Input olt-TextField-input is-error" placeholder="Enter your life..."/>

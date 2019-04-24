@@ -1,6 +1,11 @@
+---
+name: Dropdown
+category: Component
+---
+
 # Dropdown
 
-```html
+```1.html
 <div class="olt-Dropdown olt-Dropdown--dark">
   <div class="olt-Dropdown-label" data-toggle="dropdown" tabindex="0" onclick="">
     Dropdown
@@ -22,7 +27,7 @@
 
 ## Inside Menus
 
-```html
+```inside-menu.html
 <ul class="olt-Menu olt-Menu--dark">
   <li class="olt-Menu-item active">
     <a class="olt-Menu-link" href="#">Item 1</a>

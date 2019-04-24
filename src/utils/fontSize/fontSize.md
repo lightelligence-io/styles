@@ -1,3 +1,8 @@
+---
+name: fontSize
+category: Utilities
+---
+
 # fontSize
 
 Control font-size.
@@ -5,7 +10,7 @@ Control font-size.
 `olt-u-[sm-|md-|lg-|xl-]fontSize{XxSmall|XSmall|Small|Medium|Large|XLarge|XxLarge|Smaller|Larger}`
 
 
-```html
+```1.html
 <div class="olt-u-fontSizeXxSmall">XxSmall</div>
 <div class="olt-u-fontSizeXSmall">XSmall</div>
 <div class="olt-u-fontSizeSmall">Small</div>

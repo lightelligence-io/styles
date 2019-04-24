@@ -10,7 +10,7 @@ definitions:
           username: $REGISTRY_USER
           password: $REGISTRY_PASSWORD
         script:
-          - npm install
+          - npm ci
           - /app/bin/npm-audit-ci -m
         caches:
           - node
@@ -18,7 +18,7 @@ definitions:
     - step: &Build-Step
         name: Build
         script:
-          - npm install
+          - npm ci
           - npm rebuild node-sass
           - npm run build
         caches:
@@ -29,7 +29,7 @@ definitions:
     - step: &Test-Step
         name: Run tests
         script:
-          - npm install
+          - npm ci
           - npm test
         caches:
           - node
@@ -37,7 +37,7 @@ definitions:
     - step: &Build-Docs-Container
         name: Build docs container
         script:
-          - npm install
+          - npm ci
           - npm run build:docs
           - docker build -t ${DOCKER_REPO}/${BITBUCKET_REPO_SLUG}:${BITBUCKET_BRANCH}_${BITBUCKET_BUILD_NUMBER} .
           - docker save --output docs-image.docker ${DOCKER_REPO}/${BITBUCKET_REPO_SLUG}:${BITBUCKET_BRANCH}_${BITBUCKET_BUILD_NUMBER}

@@ -1,10 +1,15 @@
+---
+name: Link
+category: Content
+---
+
 # Link
 
 Provide common link style.
 
 Links are usually made of `<a>` elements.
 
-```html
+```1.html
 <a href="#" class="olt-Link">Link</a>
 ```
 
@@ -12,6 +17,6 @@ Links are usually made of `<a>` elements.
 
 Buttons can also be used with Link style.
 
-```html
+```links.html
 <button onclick="javascript:alert('i am a button')" class="olt-Link">Link Button</button>
 ```

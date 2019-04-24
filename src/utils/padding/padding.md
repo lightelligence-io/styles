@@ -1,10 +1,15 @@
+---
+name: padding
+category: Utilities
+---
+
 # padding
 
 Add paddings per breakpoint.
 
 `olt-u-[sm-|md-|lg-|xl-]padding{Top|Right|Bottom|Left}{1-8}`
 
-```html
+```1.html
 <section class="olt-u-padding4 olt-u-border">
   <p class="olt-Paragraph">Some content</p>
 </section>
@@ -12,7 +17,7 @@ Add paddings per breakpoint.
 
 ## Responsive padding
 
-```html
+```responsive.html
 <section class="olt-u-padding2 olt-u-sm-padding4 olt-u-lg-padding6 olt-u-border">
   <p class="olt-Paragraph">Small padding on mobile</p>
   <p class="olt-Paragraph">Medium padding on tablet</p>

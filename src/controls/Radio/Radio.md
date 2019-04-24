@@ -1,10 +1,15 @@
+---
+name: Radio
+category: Controls
+---
+
 # Radio
 
 Represents a radio button field
 
 Radios can be used with `<input type="radio">` elements wrapped into a `<label>` element.
 
-```html
+```1.html
 <label class="olt-Radio">
   <input type="radio" />
   <span class="olt-Radio-button"></span>

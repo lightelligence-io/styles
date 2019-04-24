@@ -1,3 +1,8 @@
+---
+name: Variables
+category: Examples
+---
+
 # Variables
 
 

@@ -1,3 +1,8 @@
+---
+name: overflow
+category: Utilities
+---
+
 # overflow
 
 Enable scroll behavior.
@@ -5,7 +10,7 @@ Enable scroll behavior.
 `olt-u-[sm-|md-|lg-|xl-]overflow[X|Y]{Auto|Visible|Hidden|Scroll|Initial}`
 
 
-```html
+```1.html
 <div class="olt-u-overflowAuto olt-u-lg-overflowHidden">
   <table class="olt-Table olt-Table--selectable olt-Table--justify">
     <thead class="olt-Table-head">

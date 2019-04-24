@@ -1,8 +1,13 @@
+---
+name: Table
+category: Content
+---
+
 # Table
 
 Tables must be used with `<table>` and its relatives.
 
-```html
+```table.html
 <table class="olt-Table">
   <thead class="olt-Table-head">
     <tr class="olt-Table-row">
@@ -30,7 +35,7 @@ Tables must be used with `<table>` and its relatives.
 
 Use `olt-Table--selectable` if your rows may be selected.
 
-```html
+```selectable.html
 <table class="olt-Table olt-Table--selectable">
   <thead class="olt-Table-head">
     <tr class="olt-Table-row">
@@ -58,7 +63,7 @@ Use `olt-Table--selectable` if your rows may be selected.
 
 Use `olt-Table--justify` for aligning cells from left to right
 
-```html
+```justify.html
 <table class="olt-Table olt-Table--justify">
   <thead class="olt-Table-head">
     <tr class="olt-Table-row">
@@ -84,7 +89,7 @@ Use `olt-Table--justify` for aligning cells from left to right
 
 ## Responsive
 
-```html
+```responsive-1.html
 <div class="olt-u-overflowXAuto">
   <table class="olt-Table olt-Table--selectable">
     <thead class="olt-Table-head">
@@ -145,9 +150,16 @@ Use `olt-Table--justify` for aligning cells from left to right
 </div>
 ```
 
-## Example
+<script>
+window.tasks = window.tasks || [];
+window.tasks.push(function () { 
+  window.stylemark.convertToExternalOnlyExample("table-responsive-1");
+});
+</script>
 
-```html
+## Another Responsive Example
+
+```responsive-2.html
 <div class="olt-u-overflowXAuto">
   <table class="olt-Table olt-Table--selectable olt-Table--justify">
     <thead class="olt-Table-head">
@@ -181,3 +193,10 @@ Use `olt-Table--justify` for aligning cells from left to right
   </table>
 </div>
 ```
+
+<script>
+window.tasks = window.tasks || [];
+window.tasks.push(function () { 
+  window.stylemark.convertToExternalOnlyExample("table-responsive-2");
+});
+</script>

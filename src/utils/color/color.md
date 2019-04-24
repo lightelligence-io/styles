@@ -1,10 +1,15 @@
+---
+name: color
+category: Utilities
+---
+
 # color
 
 Apply theme colors to text.
 
 `olt-u-[sm-|md-|lg-|xl-]color{Primary|Secondary|Info|Error|Success}`
 
-```html
+```1.html
 <p class="olt-Paragraph olt-u-colorPrimary">Primary</p>
 <p class="olt-Paragraph olt-u-colorSecondary">Secondary</p>
 <p class="olt-Paragraph olt-u-colorInfo">Info</p>
@@ -14,7 +19,7 @@ Apply theme colors to text.
 
 ## Grayscale
 
-```html
+```2.html
 <p class="olt-Paragraph olt-u-backgroundColorDark olt-u-colorGray100">Gray100</p>
 <p class="olt-Paragraph olt-u-backgroundColorDark olt-u-colorGray200">Gray200</p>
 <p class="olt-Paragraph olt-u-backgroundColorDark olt-u-colorGray300">Gray300</p>

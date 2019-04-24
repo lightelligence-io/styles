@@ -1,10 +1,15 @@
+---
+name: margin
+category: Utilities
+---
+
 # margin
 
 Add margins per breakpoint.
 
 `olt-u-[|sm-|md-|lg-|xl-]margin{Top|Right|Bottom|Left}{1-8|Auto}`
 
-```html
+```1.html
 <section class="olt-u-border">
   <div class="olt-u-margin4">
     <p class="olt-Paragraph">Some content</p>
@@ -14,7 +19,7 @@ Add margins per breakpoint.
 
 ## Responsive margin
 
-```html
+```responsive.html
 <section class="olt-u-border">
   <div class="olt-u-margin2 olt-u-sm-margin4 olt-u-lg-margin6">
     <p class="olt-Paragraph">Small margin on mobile</p>

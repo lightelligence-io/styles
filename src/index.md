@@ -1,3 +1,8 @@
+---
+name: Getting started
+category: Core
+---
+
 # Getting started
 
 ## Key concepts

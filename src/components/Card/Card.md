@@ -1,6 +1,11 @@
+---
+name: Card
+category: Component
+---
+
 # Card
 
-```html
+```1.html
 <div class="olt-Card">
   <div class="olt-Card-header">
     <h4 class="olt-Card-title">
@@ -15,7 +20,7 @@
 
 ## Card with headline and description.
 
-```html
+```2.html
 <div class="olt-Card">
   <div class="olt-Card-header">
     <h4 class="olt-Card-title">
@@ -33,7 +38,7 @@
 
 ## Card with headline, description and content.
 
-```html
+```3.html
 <div class="olt-Card">
   <div class="olt-Card-header">
     <h4 class="olt-Card-title">
@@ -54,7 +59,7 @@
 
 ## Image
 
-```html
+```image.html
 <div class="olt-Card">
   <img class="olt-Card-image olt-Image olt-Image--fluid" src="https://picsum.photos/860/200"/>
   <div class="olt-Card-header">
@@ -68,7 +73,7 @@
 
 ## Colors
 
-```html
+```colors.html
 <div class="olt-Card olt-Card--primary">
   <div class="olt-Card-header">
     <h4 class="olt-Headline olt-Headline--4">Card header</h4>
@@ -81,7 +86,7 @@
 
 ## Links
 
-```html
+```links.html
 <a class="olt-Card" href="https://google.com" target="_blank">
   <div class="olt-Card-header">
     <div class="olt-Card-title">Title</div>
@@ -95,7 +100,7 @@
 
 ## Buttons
 
-```html
+```buttons.html
 <button class="olt-Card olt-Card--selectable">
   <div class="olt-Card-header">
     <div class="olt-Card-title">Title</div>

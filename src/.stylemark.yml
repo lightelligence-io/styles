@@ -1,0 +1,26 @@
+name: "Lightelligence Styles"
+assets:
+  - "dist"
+
+theme:
+  css:
+    - "./dist/index.css"
+  js:
+    - "./src/stylemark.js"
+  sidebar:
+    background: "#f60"
+
+examples:
+  bodyHtml: "<div class='olt-Frame'>{html}</div>"
+
+  css:
+    - "./dist/index.css"
+
+order:
+- Core
+- Components
+- Content
+- Layout
+- Controls
+- Examples
+- Utilities

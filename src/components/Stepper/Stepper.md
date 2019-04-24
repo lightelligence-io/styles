@@ -1,7 +1,12 @@
+---
+name: Stepper
+category: Component
+---
+
 # Stepper
 
 
-```html
+```1.html
 <div class="olt-Stepper">
   <input type="radio" name="steps" id="step-one" checked="checked"/>
   <label for="step-one" class="olt-Stepper-header">Step One</label>
@@ -36,7 +41,7 @@
 ## Navigation
 
 
-```html
+```navigation.html
 <div class="olt-Stepper olt-Stepper--navigation">
   <a class="olt-Stepper-header is-active">Link One</a>
   <a class="olt-Stepper-header">Link Two</a>

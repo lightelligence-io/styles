@@ -1,8 +1,13 @@
+---
+name: Menu
+category: Component
+---
+
 # Menu
 
 ## Light Menu
 
-```html
+```light.html
 <ul class="olt-Menu">
   <li class="olt-Menu-item">
     <a class="olt-Menu-link">
@@ -19,7 +24,7 @@
 
 ## Dark menu
 
-```html
+```dark.html
 <ul class="olt-Menu olt-Menu--dark">
   <li class="olt-Menu-item">
     <a class="olt-Menu-link is-active">
@@ -41,7 +46,7 @@
 
 ## Horizontal menu
 
-```html
+```horizontal.html
 <ul class="olt-Menu olt-Menu--horizontal">
   <li class="olt-Menu-item">
     <a class="olt-Menu-link">
@@ -61,7 +66,7 @@
 
 Nested menus get smaller font-size by a modifier
 
-```html
+```submenu.html
 <ul class="olt-Menu">
   <li class="olt-Menu-item">
     <a class="olt-Menu-link">

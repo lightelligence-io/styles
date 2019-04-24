@@ -1,3 +1,8 @@
+---
+name: Variables
+category: Core
+---
+
 ## Variables
 
 Core properties can be customized via CSS Variables.

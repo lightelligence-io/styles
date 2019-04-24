@@ -1,10 +1,15 @@
+---
+name: Select
+category: Controls
+---
+
 # Select
 
 Represents a select field
 
 Selects can be used with `<select>` elements and options can be added with `<option>` elements.
 
-```html
+```1.html
 <select class="olt-Select">
   <option value="LoremIpsum">Lorem Ipsum</option>
   <option value="DolorSitAmet">Dolor Sit Amet</option>
@@ -14,7 +19,7 @@ Selects can be used with `<select>` elements and options can be added with `<opt
 
 ## Label
 
-```html
+```label.html
 <label class="olt-Label">Select</label>
 <select class="olt-Select">
   <option value="LoremIpsum">Lorem Ipsum</option>
@@ -25,7 +30,7 @@ Selects can be used with `<select>` elements and options can be added with `<opt
 
 ## Error state
 
-```html
+```error.html
 <select class="olt-Select is-error">
   <option value="LoremIpsum">Lorem Ipsum</option>
   <option value="DolorSitAmet">Dolor Sit Amet</option>

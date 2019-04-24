@@ -1,6 +1,14 @@
+---
+name: Navbar
+category: Component
+---
+
 # Navbar
 
-```html
+
+
+
+```1.html
 <nav role="navigation" class="olt-Navbar olt-Navbar--dark">
   <input data-toggle="navbar" id="navbar-toggle" type="checkbox"/>
   <label class="olt-Navbar-toggle" for="navbar-toggle"></label>
@@ -43,3 +51,10 @@
   </ul>
 </nav>
 ```
+
+<script>
+window.tasks = window.tasks || [];
+window.tasks.push(function () { 
+  window.stylemark.convertToExternalOnlyExample("navbar-1");
+});
+</script>

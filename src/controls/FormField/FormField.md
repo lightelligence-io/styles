@@ -1,8 +1,13 @@
+---
+name: FormField
+category: Controls
+---
+
 # FormField
 
 In Forms use TextField or FormFields in conjunction with Select in order to layout form elements.
 
-```html
+```form-field.html
 <div class="olt-FormField">
   <label for="my-select-0" class="olt-Label">Select</label>
   <select id="my-select-0" class="olt-Select olt-Select--fullwidth">

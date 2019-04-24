@@ -1,8 +1,13 @@
+---
+name: Tabs
+category: Component
+---
+
 # Tabs
 
 ## Classic tabs
 
-```html
+```1.html
 <div class="olt-Tabs">
   <input type="radio" name="tabs" id="tabone" checked="checked"/>
   <label for="tabone" class="olt-Tabs-header">Tab One</label>
@@ -31,7 +36,7 @@
 ## Navigation
 
 
-```html
+```navigation.html
 <div class="olt-Tabs olt-Tabs--navigation">
   <a class="olt-Tabs-header is-active">Link One</a>
   <a class="olt-Tabs-header">Link Two</a>

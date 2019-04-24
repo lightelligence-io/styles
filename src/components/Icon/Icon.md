@@ -1,3 +1,8 @@
+---
+name: Icon
+category: Component
+---
+
 # Icon
 
 Interface for [material icons](https://jossef.github.io/material-design-icons-iconfont/).
@@ -6,7 +11,7 @@ Icons are typically used with `<i>` elements.
 
 Per default, icons adjust to current color and font-size.
 
-```html
+```1.html
 <i class="olt-Icon" data-icon="close"></i>
 <i class="olt-Icon" data-icon="chevron_left"></i>
 <i class="olt-Icon" data-icon="chevron_right"></i>
@@ -18,7 +23,7 @@ Per default, icons adjust to current color and font-size.
 
 ## Colors
 
-```html
+```colors.html
 <i class="olt-Icon olt-Icon--primary" data-icon="grade"></i>
 <i class="olt-Icon olt-Icon--secondary" data-icon="grade"></i>
 <i class="olt-Icon olt-Icon--info" data-icon="info"></i>
@@ -28,16 +33,18 @@ Per default, icons adjust to current color and font-size.
 
 ## Sizes
 
-For sizing, either use predefined modifiers or `fontSize`-utility.
+For sizing, either use predefined modifiers like `small`, `medium` or `large`.
 
-```html
+```sizes.html
 <i class="olt-Icon olt-Icon--small" data-icon="done"></i>
 <i class="olt-Icon olt-Icon--medium" data-icon="done"></i>
 <i class="olt-Icon olt-Icon--large" data-icon="done"></i>
 ```
 
+Or use the `fontSize`-utility.
 
-```html
+
+```font-size.html
 <i class="olt-Icon olt-u-fontSizeSmall" data-icon="done"></i>
 <i class="olt-Icon olt-u-fontSizeMedium" data-icon="done"></i>
 <i class="olt-Icon olt-u-fontSizeLarge" data-icon="done"></i>

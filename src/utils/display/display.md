@@ -1,3 +1,8 @@
+---
+name: display
+category: Utilities
+---
+
 # display
 
 Hide or show certain elements by breakpoint.
@@ -6,7 +11,7 @@ Hide or show certain elements by breakpoint.
 
 Open in new window for taking effect properly.
 
-```html
+```1.html
 <div class="olt-u-lg-displayNone">This element is hidden on desktop</div>
 <div class="olt-u-displayNone olt-u-sm-displayBlock">This element is hidden on mobile</div>
 ```

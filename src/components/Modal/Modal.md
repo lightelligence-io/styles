@@ -1,8 +1,13 @@
+---
+name: Modal
+category: Component
+---
+
 # Modal
 
 Modals are used with `<div>` elements.
 
-```html
+```1.html
 <input data-toggle="modal" id="modal-toggle-1" type="checkbox">
 <label class="olt-Button" for="modal-toggle-1">Open</label>
 <div class="olt-Modal">
@@ -22,9 +27,16 @@ Modals are used with `<div>` elements.
 </div>
 ```
 
+<script>
+window.tasks = window.tasks || [];
+window.tasks.push(function () { 
+  window.stylemark.convertToExternalOnlyExample("modal-1");
+});
+</script>
+
 ## Error modal
 
-```html
+```error.html
 <input data-toggle="modal" id="modal-toggle-2" type="checkbox">
 <label class="olt-Button" for="modal-toggle-2">Open</label>
 <div class="olt-Modal olt-Modal--error">
@@ -43,9 +55,16 @@ Modals are used with `<div>` elements.
 </div>
 ```
 
+<script>
+window.tasks = window.tasks || [];
+window.tasks.push(function () { 
+  window.stylemark.convertToExternalOnlyExample("modal-error");
+});
+</script>
+
 ## Info modal
 
-```html
+```info.html
 <input data-toggle="modal" id="modal-toggle-3" type="checkbox">
 <label class="olt-Button" for="modal-toggle-3">Open</label>
 <div class="olt-Modal olt-Modal--info">
@@ -62,9 +81,16 @@ Modals are used with `<div>` elements.
 </div>
 ```
 
+<script>
+window.tasks = window.tasks || [];
+window.tasks.push(function () { 
+  window.stylemark.convertToExternalOnlyExample("modal-info");
+});
+</script>
+
 ## Success modal
 
-```html
+```success.html
 <input data-toggle="modal" id="modal-toggle-4" type="checkbox">
 <label class="olt-Button" for="modal-toggle-4">Open</label>
 <div class="olt-Modal olt-Modal--success">
@@ -83,9 +109,16 @@ Modals are used with `<div>` elements.
 </div>
 ```
 
+<script>
+window.tasks = window.tasks || [];
+window.tasks.push(function () { 
+  window.stylemark.convertToExternalOnlyExample("modal-success");
+});
+</script>
+
 ## Fullscreen
 
-```html
+```fullscreen.html
 <input data-toggle="modal" id="modal-toggle-5" type="checkbox">
 <label class="olt-Button" for="modal-toggle-5">Open</label>
 <div class="olt-Modal olt-Modal--fullscreen olt-Modal--error">
@@ -132,3 +165,10 @@ Modals are used with `<div>` elements.
   <label class="olt-Modal-close" for="modal-toggle-5"></label>
 </div>
 ```
+
+<script>
+window.tasks = window.tasks || [];
+window.tasks.push(function () { 
+  window.stylemark.convertToExternalOnlyExample("modal-fullscreen");
+});
+</script>

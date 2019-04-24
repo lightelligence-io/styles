@@ -1,8 +1,18 @@
+---
+name: Tooltip
+category: Component
+---
+
 # Tooltip
 
 Tooltips can be used to display additional information to a user, when hovering over an element.
 
-```html
+```1.css
+body {
+  margin-top: 110px;
+}
+```
+```1.html
 <div class="olt-Tooltip">
     <button class="olt-Button olt-Button--outline olt-Button--primary">
       Normal Tooltip
@@ -24,7 +34,7 @@ Tooltips can be used to display additional information to a user, when hovering 
 
 ## Bottom Tooltip
 
-```html
+```bottom.html
 <div class="olt-Tooltip olt-Tooltip--bottom">
     <button class="olt-Button olt-Button--outline olt-Button--primary">
       Normal Tooltip

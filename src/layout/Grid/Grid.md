@@ -1,8 +1,13 @@
+---
+name: Grid
+category: Layout
+---
+
 # Grid
 
 Grid container.
 
-```html
+```1.html
 <div class="olt-Grid">
   <div class="olt-Grid-item olt-Grid-item--3">
     <div class="olt-Card">
@@ -37,7 +42,7 @@ Grid container.
 
 The grid applies the gutter vertically and horizontally by default.
 
-```html
+```2.html
 <div class="olt-Grid">
   <div class="olt-Grid-item olt-Grid-item--6">
     <div class="olt-Card">
@@ -72,7 +77,7 @@ The grid applies the gutter vertically and horizontally by default.
 
 With `olt-Grid-item--auto` your columns get a flexible width.
 
-```html
+```auto.html
 <div class="olt-Grid">
   <div class="olt-Grid-item olt-Grid-item--auto">
     <div class="olt-Card">
@@ -98,9 +103,9 @@ With `olt-Grid-item--auto` your columns get a flexible width.
 </div>
 ```
 
-The column utility has variants for every breakpoint to make the grid responsive. Usage: `olt-Grid-item--[xs|sm|lg|xl]-{1-12}`.
+The item modifier has variants for every breakpoint to make the grid responsive. Usage: `olt-Grid-item--[xs|sm|lg|xl]-{1-12}`.
 
-```html
+```item-modifier.html
 <div class="olt-Grid">
   <div class="olt-Grid-item olt-Grid-item--sm-12 olt-Grid-item--md-6 olt-Grid-item--lg-3">
     <div class="olt-Card">
@@ -139,7 +144,7 @@ Specify grid offset sizes per breakpoint.
 
 `olt-Grid-item--[xs|sm|lg|xl]-offset{1-12}`
 
-```html
+```offset.html
 <div class="olt-Grid">
   <div class="olt-Grid-item olt-Grid-item--sm-offset3 olt-Grid-item--sm-6 olt-Grid-item--md-offset3 olt-Grid-item--md-6 olt-Grid-item--lg-offset4 olt-Grid-item--lg-4">
     <div class="olt-Card">

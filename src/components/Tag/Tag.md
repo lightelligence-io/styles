@@ -1,11 +1,16 @@
+---
+name: Tag
+category: Component
+---
+
 # Tag
 
-```html
+```1.html
 <span class="olt-Tag">Tag</span>
 <span class="olt-Tag olt-Tag--outline">Tag Outline</span>
 ```
 
-```html
+```2.html
 <span class="olt-Tag olt-Tag--primary">Primary</span>
 <span class="olt-Tag olt-Tag--secondary">Secondary</span>
 <span class="olt-Tag olt-Tag--info">Info</span>
@@ -15,7 +20,7 @@
 
 ## Outline
 
-```html
+```outline.html
 <span class="olt-Tag olt-Tag--outline olt-Tag--primary">Primary</span>
 <span class="olt-Tag olt-Tag--outline olt-Tag--secondary">Secondary</span>
 <span class="olt-Tag olt-Tag--outline olt-Tag--info">Info</span>
@@ -25,7 +30,7 @@
 
 ## Icons
 
-```html
+```icons.html
 <span class="olt-Tag" data-icon="settings">Tag</span>
 <span class="olt-Tag" data-close>Tag</span>
 <span class="olt-Tag"><i class="olt-Tag-icon Icon" data-icon="ac_unit"></i> Tag</span>
@@ -33,7 +38,7 @@
 
 ## Selectable
 
-```html
+```selectable.html
 <button class="olt-Tag" data-icon="grade">Tag</button>
 <a class="olt-Tag" href="#">Tag</a>
 <span class="olt-Tag olt-Tag--selectable">Tag <i class="olt-Tag-icon olt-Icon" data-icon="close"></i></span>
@@ -42,7 +47,7 @@
 ```
 ## Outline and Selectable
 
-```html
+```outline-selectable.html
 <span class="olt-Tag olt-Tag--outline olt-Tag--selectable olt-Tag--primary">Primary</span>
 <span class="olt-Tag olt-Tag--outline olt-Tag--selectable olt-Tag--secondary">Secondary</span>
 <span class="olt-Tag olt-Tag--outline olt-Tag--selectable olt-Tag--info">Info</span>
