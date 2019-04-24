@@ -13,7 +13,8 @@
     position: absolute;
     opacity: 0;
 
-    &:checked + #{$self}-label {
+    &:checked + #{$self}-label,
+    &:indeterminate + #{$self}-label {
       position: relative;
       cursor: pointer;
       padding: 0;
@@ -35,6 +36,11 @@
       }
     }
 
+    &:checked + #{$self}--indeterminate#{$self}-label:after,
+    &:indeterminate + #{$self}-label:after {
+      content: 'remove';
+    }
+
     &:disabled + #{$self}-label {
       cursor: not-allowed;
     }
@@ -49,7 +55,8 @@
     }
 
     &:focus + &-label:before {
-      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12), 0 3px 6px 0 rgba(0, 0, 0, 0.24);
+      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12),
+        0 3px 6px 0 rgba(0, 0, 0, 0.24);
     }
   }
 
@@ -72,7 +79,8 @@
       background: white;
       border: $control-border-width solid $control-border-color;
       border-radius: $control-border-radius;
-      transition: all var-get('transitionDuration') var-get('transitionTimingFunction');
+      transition: all var-get('transitionDuration')
+        var-get('transitionTimingFunction');
     }
   }
 }
