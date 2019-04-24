@@ -21,7 +21,7 @@ Start dev-server by the following command:
 $ npm start
 ```
 
-This will serve the living styleguide on `http://localhost:8080` with hmr enabled
+This will serve the stylemark based styleguide on `http://localhost:3020` with hmr enabled
 
 
 ### Production
