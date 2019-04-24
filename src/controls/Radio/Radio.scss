@@ -1,8 +1,10 @@
 .#{$namespace}Radio {
+  $buttonSize: 24px;
+
   position: relative;
   display: flex;
-  align-items: center;
-  height: 32px;
+  align-items: flex-start;
+  min-height: 32px;
   padding: 4px 0;
 
   input {
@@ -10,8 +12,9 @@
   }
 
   &-button {
-    height: 24px;
-    width: 24px;
+    height: $buttonSize;
+    width: $buttonSize;
+    min-width: $buttonSize;
     background-color: transparent;
     border-radius: 50%;
     border: 2px solid var-get('gray600');
@@ -50,6 +53,7 @@
 
   &-label {
     margin: 0 8px;
+    line-height: $buttonSize;
     color: var-get('gray600');
     cursor: pointer;
   }
