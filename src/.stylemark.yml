@@ -1,0 +1,25 @@
+name: "Lightelligence Styles"
+assets:
+  - "dist"
+
+theme:
+  logo: "./src/theme-logo.png"
+  css:
+    - "./dist/index.css"
+    - "./src/theme.css"
+  js:
+    - "./src/stylemark.js"
+
+examples:
+  bodyHtml: "<div class='olt-Frame'>{html}</div>"
+  css:
+    - "./dist/index.css"
+
+order:
+  - +Getting Started
+  - +Component
+  - +Content
+  - +Controls
+  - +Examples
+  - +Layout
+  - +Utilities

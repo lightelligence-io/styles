@@ -1,0 +1,27 @@
+@mixin util-make($props: ()) {
+  @each $prop, $values in $props {
+    @each $name, $value in $values {
+      @if $value == null { // in case $values is an array
+        $value: $name;
+      }
+      @else if type-of($value) == 'list' {
+        $name: nth($value, 1);
+        $value: nth($value, 2);
+      }
+      $util: string-camelize($prop);
+      $name: string-capitalize(string-camelize($name));
+      $value: inspect($value);
+
+      @each $breakpoint in map-keys(screen-get()) {
+        $infix: screen-infix($breakpoint);
+
+        @include screen-up($breakpoint) {
+          .#{$namespace}u-#{$infix}#{$util}#{$name} {
+            #{$prop}: #{$value} !important;
+            @content;
+          }
+        }
+      }
+    }
+  }
+}

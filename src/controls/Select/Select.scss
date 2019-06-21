@@ -1,0 +1,81 @@
+.#{$namespace}Select {
+  @mixin selectBackgroundGradient ($color: gray) {
+    // use floats because of ugly google-chrome subpixel rendering
+    // 50.01 instead of 50% looks nicer in chrome.
+    // https://stackoverflow.com/questions/51850356/chrome-linear-gradient-bugs-when-dealing-with-subpixels
+    background-image:
+      linear-gradient(45deg, transparent 50.01%, $color 50.01%),
+      linear-gradient(135deg, $color 50.01%, transparent 50.01%),
+      linear-gradient(to right, #ccc, #ccc);
+  }
+
+  @extend %control;
+
+  font-size: 14px;
+
+  /* styling */
+  background-color: white;
+  display: block;
+  padding: 0.25rem 1.25rem 0 0;
+
+  /* reset */
+
+  margin: 0;
+  box-sizing: border-box;
+  appearance: none;
+  cursor: pointer;
+  border-radius: 0;
+
+  @include selectBackgroundGradient();
+
+  background-position:
+    calc(100% - 10px) calc(1em + 2px),
+    calc(100% - 5px) calc(1em + 2px),
+    calc(100% - 2.5em) 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 0;
+  background-repeat: no-repeat;
+
+  &:focus {
+    border-bottom-color: var-get('colorPrimary') !important;
+    outline-width: 0;
+  }
+
+  &.is-placeholder {
+    @include control-placeholder-style;
+
+    option {
+      color: var-get('colorDark');
+    }
+  }
+
+  &.is-error {
+    border-color: var-get('colorError');
+  }
+
+  &--inline {
+    display: inline-block;
+  }
+
+  &--fullwidth {
+    width: 100%;
+  }
+
+  &:not(.is-readonly):disabled,
+  &:not(.is-readonly).is-disabled {
+    color: $control-disabled;
+    cursor: not-allowed;
+    border-bottom: dotted $control-border-width $control-disabled;
+
+    @include selectBackgroundGradient($control-disabled);
+  }
+
+  &.is-readonly {
+    cursor: default;
+    color: currentColor;
+
+    @include selectBackgroundGradient($control-disabled);
+  }
+}

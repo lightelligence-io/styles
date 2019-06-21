@@ -1,0 +1,18 @@
+@each $breakpoint in map-keys(screen-get()) {
+  $infix: screen-infix($breakpoint);
+
+  @include screen-up($breakpoint) {
+    .#{$namespace}u-#{$infix}fontBase {
+      font-family: var-get('fontFamilyBase');
+    }
+
+    .#{$namespace}u-#{$infix}fontMono {
+      font-family: var-get('fontFamilyMono');
+    }
+
+    // FIXME: Get rid of redundant stuff, either this or that
+    .#{$namespace}u-#{$infix}fontInitial {
+      font-family: var-get('fontFamilyBase');
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.#{$namespace}Paragraph {
+  margin: 0 0 var-get('spacing2') 0;
+  word-break: break-word;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

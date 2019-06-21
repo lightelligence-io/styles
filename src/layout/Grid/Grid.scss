@@ -1,0 +1,58 @@
+.#{$namespace}Grid {
+  $grid-gutter: var-get('containerPadding');
+  $grid-columns: 12;
+  $self: &;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-1 *#{$grid-gutter} / 2);
+  margin-left: calc(-1 *#{$grid-gutter} / 2);
+  margin-top: calc(-1 *#{$grid-gutter});
+
+  &-item {
+    position: relative;
+    width: 100%;
+    min-height: 1px; // Prevent columns from collapsing when empty
+    margin-top: $grid-gutter;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    padding-right: calc(#{$grid-gutter} / 2);
+    padding-left: calc(#{$grid-gutter} / 2);
+  }
+
+  // Columns
+  @each $breakpoint in map-keys(screen-get()) {
+    $infix: screen-infix($breakpoint);
+
+    @include screen-up($breakpoint) {
+      #{$self}-item--#{$infix}auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: none;
+      }
+
+      @for $size from 1 through $grid-columns {
+        #{$self}-item--#{$infix}#{$size} {
+          flex: 0 0 percentage($size / $grid-columns);
+          max-width: percentage($size / $grid-columns);
+        }
+      }
+    }
+  }
+
+  // Offsets
+  @each $breakpoint in map-keys(screen-get()) {
+    $infix: screen-infix($breakpoint);
+
+    @include screen-up($breakpoint) {
+      @for $size from 1 through $grid-columns {
+        #{$self}-item--#{$infix}offset#{$size} {
+          $num: $size / $grid-columns;
+
+          margin-left: if($num == 0, 0, percentage($num));
+        }
+      }
+    }
+  }
+}

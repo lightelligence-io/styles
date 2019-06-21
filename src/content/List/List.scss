@@ -1,0 +1,111 @@
+@mixin make-2columns ($self) {
+  grid-gap: 0;
+  grid-template-columns: 50% 50%;
+
+  #{$self}-term {
+    grid-column: 1;
+
+    &:nth-of-type(2n) {
+      grid-column: 2;
+    }
+  }
+
+  #{$self}-item {
+    grid-column: 1;
+
+    &:nth-of-type(2n) {
+      grid-column: 2;
+    }
+    // no margin bottom for the last two items
+    &:not(:nth-last-of-type(2)):not(:last-of-type) {
+      margin-bottom: var-get('spacing2');
+    }
+  }
+}
+
+@mixin make-vertical ($self) {
+  grid-gap: 0;
+  grid-template-columns: 100%;
+
+  #{$self}-term {
+    grid-column: 1;
+  }
+
+  #{$self}-item {
+    grid-column: 1;
+    // no margin bottom for the last two items
+    &:not(:last-of-type) {
+      margin-bottom: var-get('spacing2');
+    }
+  }
+}
+
+
+.#{$namespace}List {
+  $self: &;
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  list-style: disc inside;
+  margin-bottom: var-get('spacing3');
+
+  &-item {
+    display: list-item;
+    margin: 0 0 var-get('spacing2');
+    padding: 0;
+    counter-increment: list-item-counter;
+    word-break: break-word;
+  }
+
+  &--ordered {
+    counter-reset: list-item-counter;
+    list-style-type: decimal;
+  }
+
+  &--definition {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 120px calc(100% - 120px);
+    grid-gap: var-get('spacing2');
+    grid-auto-flow: dense;
+  }
+
+  &-term {
+    grid-column: 1;
+    color: var-get('gray500');
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-size: var-get('fontSizeXSmall');
+    line-height: 1.7;
+  }
+
+  &-term {
+    grid-column: 1;
+  }
+
+  &-item {
+    grid-column: 2;
+    margin-bottom: 0;
+  }
+
+  @each $breakpoint in map-keys(screen-get()) {
+    @include screen-up($breakpoint) {
+      &--#{$breakpoint}-vertical {
+        @include make-vertical($self);
+      }
+    }
+  }
+
+  @each $breakpoint in map-keys(screen-get()) {
+    @include screen-up($breakpoint) {
+      &--#{$breakpoint}-2columns {
+        @include make-2columns($self);
+      }
+    }
+  }
+}

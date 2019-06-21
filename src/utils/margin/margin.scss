@@ -1,0 +1,70 @@
+@each $breakpoint in map-keys(screen-get()) {
+  $infix: screen-infix($breakpoint);
+
+  @include screen-up($breakpoint) {
+    @each $prop, $name in (margin: margin) {
+      @each $size, $value in var-get('spacing') {
+        .#{$namespace}u-#{$infix}#{$name}#{$size} {
+          #{$prop}: $value !important;
+        }
+
+        .#{$namespace}u-#{$infix}#{$name}Top#{$size} {
+          #{$prop}-top: $value !important;
+        }
+
+        .#{$namespace}u-#{$infix}#{$name}Bottom#{$size} {
+          #{$prop}-bottom: $value !important;
+        }
+
+        .#{$namespace}u-#{$infix}#{$name}Right#{$size} {
+          #{$prop}-right: $value !important;
+        }
+
+        .#{$namespace}u-#{$infix}#{$name}Left#{$size} {
+          #{$prop}-left: $value !important;
+        }
+
+        .#{$namespace}u-#{$infix}#{$name}Y#{$size} {
+          #{$prop}-top: $value !important;
+          #{$prop}-bottom: $value !important;
+        }
+
+        .#{$namespace}u-#{$infix}#{$name}X#{$size} {
+          #{$prop}-left: $value !important;
+          #{$prop}-right: $value !important;
+        }
+      }
+    }
+
+    // Provide `auto` for margins
+    .#{$namespace}u-#{$infix}marginAuto {
+      margin: auto !important;
+    }
+
+    .#{$namespace}u-#{$infix}marginTopAuto {
+      margin-top: auto !important;
+    }
+
+    .#{$namespace}u-#{$infix}marginRightAuto {
+      margin-right: auto !important;
+    }
+
+    .#{$namespace}u-#{$infix}marginBottomAuto {
+      margin-bottom: auto !important;
+    }
+
+    .#{$namespace}u-#{$infix}marginLeftAuto {
+      margin-left: auto !important;
+    }
+
+    .#{$namespace}u-#{$infix}marginYAuto {
+      margin-top: auto !important;
+      margin-bottom: auto !important;
+    }
+
+    .#{$namespace}u-#{$infix}marginXAuto {
+      margin-right: auto !important;
+      margin-left: auto !important;
+    }
+  }
+}

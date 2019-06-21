@@ -1,0 +1,13 @@
+Dockerfile
+.prettierrc
+postcss.config.js
+webpack.config.js
+.babelrc
+browserslist
+/node_modules
+.npmrc
+docs-image.docker
+/scripts
+
+# Log files
+npm-debug.log*

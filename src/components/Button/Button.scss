@@ -1,0 +1,146 @@
+.#{$namespace}Button {
+  $button-padding-x: 1rem;
+  $button-padding-y: 0;
+  $button-border-color: var-get('borderColor');
+  $button-background: var-get('borderColor');
+  $button-border-width: var-get('borderWidth');
+  $button-border-radius: 2.5rem;
+  $button-color: var-get('colorDark');
+  $button-pending-opacity: 0.4;
+  $button-pending-dark: rgba(#000, $button-pending-opacity); // TODO: Hardcode button-pending-color for the sake of css variables
+  $button-pending-light: rgba(#fff, $button-pending-opacity); // TODO: Hardcode button-pending-color for the sake of css variables
+  $self: &;
+
+  position: relative;
+  line-height: 2.25rem;
+  background-color: $button-background;
+  border-style: solid;
+  border-color: $button-border-color;
+  border-width: $button-border-width;
+  border-radius: $button-border-radius;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 300ms;
+  min-width: 120px;
+  -webkit-appearance: none;
+  color: $button-color;
+  padding: $button-padding-y $button-padding-x;
+
+  &.is-active,
+  &:focus {
+    outline-width: 0;
+    // safari fix, without setting this from auto to solid a blue outline is shown
+    // even if outline-width is set to 0
+    outline-style: solid;
+  }
+
+  &:not(.is-disabled):not(:disabled):not(.is-pending) {
+    &:not(:active):not(.is-active) {
+      &:hover,
+      &:focus {
+        filter: brightness(calc(100% - #{var-get('linkHoverContrast')}));
+        text-decoration: none;
+      }
+    }
+
+    &.is-active,
+    &:focus {
+      box-shadow: 0 0.125rem 0.33rem 0 rgba(0, 0, 0, 0.12), 0 3px 6px 0 rgba(0, 0, 0, 0.24);
+    }
+  }
+
+  &--outline {
+    background-color: var-get('colorLight');
+
+    &:hover,
+    &:visited {
+      filter: none;
+    }
+  }
+
+  @include contextual-colors($selector: '#{$self}:not(.is-disabled)') {
+    &.is-pending {
+      color: $button-pending-light;
+    }
+
+    &:hover {
+      color: var-get('colorLight');
+    }
+  }
+
+  @include contextual-colors(
+    ('color',
+    'border-color'),
+    $selector: '#{$self}--outline:not(:hover):not(:focus):not(:disabled):not(.is-disabled)') {
+    background-color: var-get('colorLight');
+    // TODO: Button pending context colors
+    // &.is-pending {
+    //   @each $name, $value in $context-colors {
+    //     &#{$self}--#{$name} {
+    //       color: rgba($value, $button-pending-opacity);
+    //     }
+    //   }
+    // }
+  }
+
+  &--icon,
+  &[data-icon] {
+    @extend .#{$namespace}Icon;
+
+    &:before {
+      font-size: 150%;
+    }
+  }
+
+  &--icon,
+  &--count,
+  &[data-icon],
+  &[data-count] {
+    padding: 0;
+    display: inline-flex;
+    min-width: 38px;
+    height: 38px;
+
+    &:empty {
+      padding: 0;
+    }
+  }
+
+  &.is-disabled,
+  &:disabled {
+    user-select: none;
+    cursor: default;
+    background-color: initial;
+    color: var-get('gray500');
+    border-style: dashed;
+    border-color: var-get('gray500');
+    filter: none;
+
+    &:hover {
+      color: var-get('gray500');
+      filter: none;
+    }
+  }
+
+  &.is-pending {
+    pointer-events: none;
+    color: $button-pending-dark;
+
+    &:after {
+      content: '';
+
+      @extend %#{$namespace}spinner;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      color: $button-color;
+    }
+  }
+}

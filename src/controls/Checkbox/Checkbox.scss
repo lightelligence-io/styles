@@ -1,0 +1,90 @@
+// TODO: Recheck what's possible today regarding styling native inputs. What about IE11?
+.#{$namespace}Checkbox {
+  $checkbox-border-width: $control-border-width;
+  $checkbox-disabled: $control-disabled;
+  $self: &;
+
+  display: flex;
+
+  &--inline {
+    display: inline-flex;
+  }
+
+  &-input {
+    position: absolute;
+    opacity: 0;
+
+    &:checked + #{$self}-label,
+    &:indeterminate + #{$self}-label {
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+
+      &:before {
+        background: var-get('colorPrimary');
+        border-color: var-get('colorPrimary');
+      }
+
+      &:after {
+        @include icon-font-material;
+
+        content: 'check';
+        position: absolute;
+        top: 1.5px;
+        left: 1.5px;
+        color: var-get('colorLight');
+        z-index: 1;
+        font-size: 1.2em;
+      }
+    }
+
+    &:checked + #{$self}--indeterminate#{$self}-label:after,
+    &:indeterminate + #{$self}-label:after {
+      content: 'remove';
+    }
+
+    &:disabled + #{$self}-label {
+      cursor: not-allowed;
+    }
+
+    &:disabled + #{$self}-label:before {
+      border: $control-border-width dashed $control-disabled;
+      background-color: transparent;
+    }
+
+    &:checked:disabled + #{$self}-label:before {
+      background-color: $control-disabled;
+    }
+
+    &:focus + &-label:before {
+      box-shadow:
+        0 2px 6px 0 rgba(0, 0, 0, 0.12),
+        0 3px 6px 0 rgba(0, 0, 0, 0.24);
+    }
+  }
+
+  &-label {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    margin-bottom: $control-spacer;
+    font-size: var-get('fontSizeBase');
+    line-height: 24px;
+    user-select: none;
+
+    &:before {
+      content: '';
+      margin-right: var-get('spacing1');
+      display: inline-block;
+      width: 1.25em;
+      height: 1.25em;
+      vertical-align: text-top;
+      background: white;
+      border: $control-border-width solid $control-border-color;
+      border-radius: $control-border-radius;
+      transition:
+        all var-get('transitionDuration')
+        var-get('transitionTimingFunction');
+    }
+  }
+}

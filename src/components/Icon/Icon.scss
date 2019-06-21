@@ -1,0 +1,38 @@
+.#{$namespace}Icon {
+  $icon-font-size: 150%;
+  $icon-sizes: (
+    small: 1rem,
+    medium: 2rem,
+    large: 3rem
+  ) !default;
+
+  display: inline-flex;
+  vertical-align: middle;
+
+  &:before {
+    @include icon-font-material;
+
+    content: '';
+    font-size: $icon-font-size;
+  }
+
+  @include contextual-colors(('color'));
+
+  @each $name, $value in $icon-sizes {
+    &--#{$name} {
+      font-size: $value;
+    }
+  }
+
+  // TODO check why this is defined at all ??
+  &:after {
+    font-family: 'Material Icons';
+    font-style: normal;
+  }
+
+  &[data-icon] {
+    &:before {
+      content: attr(data-icon);
+    }
+  }
+}

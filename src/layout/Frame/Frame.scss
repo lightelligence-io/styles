@@ -1,0 +1,36 @@
+.#{$namespace}Frame {
+  font-family: var-get('fontFamilyBase');
+  font-weight: var-get('fontWeightRegular');
+  line-height: var-get('lineHeightBase');
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  &-header {
+    flex: 0 0 auto;
+  }
+
+  &-main {
+    flex: 1 0 100%;
+  }
+
+  &-footer {
+    margin-top: var-get('spacing4');
+    flex: 0 0 auto;
+  }
+}

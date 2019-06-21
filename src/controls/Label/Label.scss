@@ -1,0 +1,6 @@
+.#{$namespace}Label {
+  @extend %label;
+
+  display: block;
+  vertical-align: middle;
+}

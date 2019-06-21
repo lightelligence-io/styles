@@ -1,0 +1,30 @@
+// Overflow
+@each $prop in ('overflow', 'overflow-x', 'overflow-y') {
+  @each $value in ('auto', 'visible', 'hidden', 'scroll', 'initial') {
+    $util: string-camelize($prop) + string-capitalize(string-camelize($value));
+
+    @each $breakpoint in map-keys(screen-get()) {
+      $infix: screen-infix($breakpoint);
+
+      @include screen-up($breakpoint) {
+        .#{$namespace}u-#{$infix}#{$util} {
+          -webkit-overflow-scrolling: touch;
+          #{$prop}: #{$value} !important;
+        }
+      }
+    }
+  }
+}
+
+// ScrollSnap
+@each $breakpoint in map-keys(screen-get()) {
+  $infix: screen-infix($breakpoint);
+
+  @include screen-up($breakpoint) {
+    .#{$namespace}u-#{$infix}overflowSnap {
+      scroll-snap-type: mandatory;
+      scroll-snap-points-y: repeat(100vw);
+      scroll-snap-type: x mandatory;
+    }
+  }
+}
