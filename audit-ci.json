@@ -1,0 +1,6 @@
+{
+  "whitelist": [
+    "marked",
+    "// The dependency is used for generating styles documentation. The advisory is relevant for backend applications only ( https://www.npmjs.com/advisories/812 )"
+  ]
+}

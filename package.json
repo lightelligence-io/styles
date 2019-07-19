@@ -9,6 +9,9 @@
     "type": "git",
     "url": "https://github.com/lightelligence-io/styles.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "sass",
     "es7",
@@ -26,11 +29,12 @@
     "build:docs": "npm run build && stylemark -i \"./src\" -o \"./docs\"",
     "lint": "stylelint \"src/**/*.scss\" && prettier --check \"{src,scripts}/**/*.js\"",
     "lint:fix": "stylelint --fix \"src/**/*.scss\" && prettier --write \"{src,scripts}/**/*.js\"",
+    "license-report": "legally",
     "test": ""
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && sh scripts/branch-name"
+      "pre-commit": "npm run lint"
     }
   },
   "stylelint": {
@@ -80,6 +84,7 @@
     "@babel/plugin-transform-spread": "^7.2.2",
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
+    "audit-ci": "^2.2.0",
     "autoprefixer": "^8.6.5",
     "babel-loader": "^8.0.4",
     "babel-plugin-external-helpers": "^6.22.0",
@@ -99,6 +104,7 @@
     "humps": "^2.0.1",
     "husky": "^2.2.0",
     "json5": "^2.1.0",
+    "legally": "^3.3.7",
     "material-design-icons-iconfont": "^3.0.3",
     "node-run-cmd": "^1.0.1",
     "node-sass": "^4.12.0",
