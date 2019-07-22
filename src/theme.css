@@ -1,8 +1,10 @@
 .theme-page {
-  font-family: "PT Sans", serif;
+  font-family: 'PT Sans', serif;
 }
 
-.theme-page, .theme-content, .theme-content-element {
+.theme-page,
+.theme-content,
+.theme-content-element {
   background: #f5f6f8;
 }
 
@@ -24,7 +26,7 @@
 
 .theme-sidebar-header-title {
   color: black;
-  font-family: "PT Sans", serif;
+  font-family: 'PT Sans', serif;
   font-weight: 600;
   font-size: 16px;
 }
@@ -33,14 +35,14 @@
   margin: 0 20px;
 }
 
-.theme-sidebar-search .i-search-input input[type="search"] {
+.theme-sidebar-search .i-search-input input[type='search'] {
   min-height: 2rem;
   vertical-align: middle;
   border: 0;
   border-bottom: 1px solid #e3e4e5;
   border-radius: 2px;
-  padding: .125rem 0;
-  font-size: .9rem;
+  padding: 0.125rem 0;
+  font-size: 0.9rem;
   line-height: 1.3rem;
   font-weight: 400;
   font-family: inherit;
@@ -48,7 +50,7 @@
   background: none;
 }
 
-.theme-sidebar-search .i-search-input input[type="search"]:focus {
+.theme-sidebar-search .i-search-input input[type='search']:focus {
   border-bottom-color: #f60;
 }
 
@@ -83,7 +85,6 @@
 }
 
 .theme-sidebar-category-title {
-
 }
 
 a.i-sidebar-list-item {
@@ -161,7 +162,7 @@ a.i-sidebar-list-item:hover b {
 }
 
 .theme-content-element-description tr th {
-  font-family: "Overpass Mono", serif;
+  font-family: 'Overpass Mono', serif;
   font-weight: 400;
   border: 0;
   color: #58585a;
@@ -179,51 +180,54 @@ a.i-sidebar-list-item:hover b {
 
 .table {
   border: 0;
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
-  border-radius: .25rem;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 0.25rem;
   text-align: left;
-  transition: box-shadow .15s;
+  transition: box-shadow 0.15s;
   background: #fff;
   display: table;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
   position: relative;
   padding: 10px;
   margin: 15px 0 20px 0;
 }
 
-.table th[align="left"] {
+.table th[align='left'] {
   text-align: left;
 }
 
-.table th[align="center"] {
+.table th[align='center'] {
   text-align: center;
 }
 
-.table th[align="right"] {
+.table th[align='right'] {
   text-align: right;
 }
 
-.table td[align="left"] {
+.table td[align='left'] {
   text-align: left;
 }
 
-.table td[align="center"] {
+.table td[align='center'] {
   text-align: center;
 }
 
-.table td[align="right"] {
+.table td[align='right'] {
   text-align: right;
 }
 
-.i-code-block, .i-example {
+.i-code-block,
+.i-example {
   border: 0;
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
-  border-radius: .25rem;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 0.25rem;
   text-align: left;
-  transition: box-shadow .15s;
+  transition: box-shadow 0.15s;
   background: #fff;
   display: block;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
   position: relative;
   padding: 10px;
   margin: 15px 0 20px 0;
@@ -254,4 +258,8 @@ a.i-sidebar-list-item:hover b {
   height: 40px;
   display: block;
   border-radius: 100%;
+}
+
+.i-example [data-src='data-cards-modifiers-small.html'] {
+  max-width: 500px;
 }

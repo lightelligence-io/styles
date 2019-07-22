@@ -1,0 +1,44 @@
+@mixin createFloatingList($size, $justifyEnd) {
+  margin-top: calc(-1 * #{var-get('spacing' + $size)});
+  $horizontalMargin: if($justifyEnd, 'margin-right', 'margin-left');
+
+  #{$horizontalMargin}: calc(-1 * #{var-get('spacing' + $size)});
+
+  // avoid margin-collapse
+  display: inline-flex;
+  vertical-align: top;
+  // end avoid margin collapse
+
+  flex-direction: row;
+  justify-content: if($justifyEnd, flex-end, flex-start);
+  flex-wrap: wrap;
+
+  > * {
+    margin-top: var-get('spacing' + $size);
+    #{$horizontalMargin}: var-get('spacing' + $size);
+  }
+}
+
+.#{$namespace}FloatingList {
+  $self: &;
+
+  &:not(&--justifyEnd) &-items {
+    // a default list
+    @include createFloatingList(1, false);
+  }
+
+  &--justifyEnd &-items {
+    // a default list
+    @include createFloatingList(1, true);
+  }
+
+  @for $size from 0 through 8 {
+    &:not(#{$self}--justifyEnd)#{$self}--gap#{$size} #{$self}-items {
+      @include createFloatingList($size, false);
+    }
+
+    #{$self}--justifyEnd#{$self}--gap#{$size} #{$self}-items {
+      @include createFloatingList($size, true);
+    }
+  }
+}
