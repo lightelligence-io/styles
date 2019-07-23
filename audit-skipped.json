@@ -1,9 +1,0 @@
-[
-  {
-    "path": "stylemark>marked",
-    "advisory": "812",
-    "comment": "The dependency is used for generating styles documentation",
-    "issue": "OLT-4840",
-    "severity": "moderate"
-  }
-]
