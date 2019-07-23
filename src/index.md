@@ -41,3 +41,28 @@ so you don't need to worry about adding those manually.
 Make sure that you also wrap your content in a `olt-Frame` class, which will
 set defaults for most of the common elements. Part of the properties set by
 `olt-Frame` are colors, fonts, `box-sizing`, etc.
+
+## Known issues
+
+Currently there is a bug with `cssnano`, which affects users of this styleguide
+to minify the output of their CSS files.
+
+The bug is [reported](https://github.com/postcss/postcss-calc/issues/77) and
+the following workaround needs to be used until the external library is updated :
+
+In `package.json` file of your application please include : 
+
+```json
+{
+ "name": "...",
+ ...
+ "cssnano": {
+    "preset": [
+      "default",
+      {
+        "calc": false
+      }
+    ]
+  }
+}
+``` 
