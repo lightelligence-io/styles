@@ -26,7 +26,7 @@
     "clean": "rm -rf dist && rm -rf docs",
     "build": "npm run clean && cross-env NODE_ENV=production webpack --mode=production",
     "start": "rm -rf docs && node scripts/start.js",
-    "build:docs": "npm run build && stylemark -i \"./src\" -o \"./docs\"",
+    "build:docs": "stylemark -i \"./src\" -o \"./docs\"",
     "lint": "stylelint \"src/**/*.scss\" && prettier --check \"{src,scripts}/**/*.js\"",
     "lint:fix": "stylelint --fix \"src/**/*.scss\" && prettier --write \"{src,scripts}/**/*.js\"",
     "license-report": "legally",
