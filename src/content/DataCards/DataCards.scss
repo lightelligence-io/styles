@@ -42,6 +42,7 @@
     font-size: var-get('fontSizeXSmall');
     font-weight: normal;
     font-size: 14px;
+    word-break: break-word;
   }
 
   @include dataCardsInTableMode {
@@ -149,6 +150,7 @@
 
     #{$self}-title {
       display: block;
+      word-break: break-word;
     }
 
     &#{$self}--largeCardPadding {

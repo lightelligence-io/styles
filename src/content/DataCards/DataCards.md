@@ -21,9 +21,7 @@ is represented as a list of cards on tablet and mobile. The component occupies
       <div class="olt-DataCards-card">
         <div class="olt-DataCards-cardItem">
           <div class="olt-DataCards-content">
-            <div class="olt-DataCards-text--bold">
-              Bernier, Josefina
-            </div>
+            Bernier, Josefina
           </div>
         </div>
         <div class="olt-DataCards-cardItem">
@@ -48,9 +46,7 @@ is represented as a list of cards on tablet and mobile. The component occupies
       <div class="olt-DataCards-card">
         <div class="olt-DataCards-cardItem">
           <div class="olt-DataCards-content">
-            <div class="olt-DataCards-text--bold">
-              Konopelski, Vinnie
-            </div>
+            Konopelski, Vinnie
           </div>
         </div>
         <div class="olt-DataCards-cardItem">
@@ -74,9 +70,7 @@ is represented as a list of cards on tablet and mobile. The component occupies
       <div class="olt-DataCards-card">
         <div class="olt-DataCards-cardItem">
           <div class="olt-DataCards-content">
-            <div class="olt-DataCards-text--bold">
-              Howell, Bessie
-            </div>
+            Howell, Bessie
           </div>
         </div>
         <div class="olt-DataCards-cardItem">
@@ -100,9 +94,7 @@ is represented as a list of cards on tablet and mobile. The component occupies
       <div class="olt-DataCards-card">
         <div class="olt-DataCards-cardItem">
           <div class="olt-DataCards-content">
-            <div class="olt-DataCards-text--bold">
-              Abernathy, Philip
-            </div>
+            Abernathy, Philip
           </div>
         </div>
         <div class="olt-DataCards-cardItem">
@@ -142,9 +134,7 @@ is represented as a list of cards on tablet and mobile. The component occupies
       <div class="olt-DataCards-card">
         <div class="olt-DataCards-cardItem">
           <div class="olt-DataCards-content">
-            <div class="olt-DataCards-text--bold">
-              Kyra Murphy
-            </div>
+            Kyra Murphy
           </div>
         </div>
         <div class="olt-DataCards-cardItem">
@@ -169,9 +159,7 @@ is represented as a list of cards on tablet and mobile. The component occupies
       <div class="olt-DataCards-card">
         <div class="olt-DataCards-cardItem">
           <div class="olt-DataCards-content">
-            <div class="olt-DataCards-text--bold">
-              Herbig, Robin
-            </div>
+            Herbig, Robin
           </div>
         </div>
         <div class="olt-DataCards-cardItem">
@@ -345,9 +333,7 @@ In order to support more complex use cases it is possible to enable **table layo
       <div class="olt-DataCards-card">
         <div class="olt-DataCards-cardItem">
           <div class="olt-DataCards-content">
-            <div class="olt-DataCards-text--bold">
-              Singh, Mishri
-            </div>
+            Singh, Mishri
           </div>
         </div>
         <div class="olt-DataCards-cardItem">
@@ -372,9 +358,7 @@ In order to support more complex use cases it is possible to enable **table layo
       <div class="olt-DataCards-card">
         <div class="olt-DataCards-cardItem">
           <div class="olt-DataCards-content">
-            <div class="olt-DataCards-text--bold">
-              Herbig, Robin
-            </div>
+            Herbig, Robin
           </div>
         </div>
         <div class="olt-DataCards-cardItem">
@@ -417,9 +401,7 @@ Cards do not react to mouse events by default. To make them behave like buttons,
       <div class="olt-DataCards-card">
         <div class="olt-DataCards-cardItem">
           <div class="olt-DataCards-content">
-            <div class="olt-DataCards-text--bold">
-              Olson, Terence
-            </div>
+            Olson, Terence
           </div>
         </div>
         <div class="olt-DataCards-cardItem">
@@ -444,9 +426,7 @@ Cards do not react to mouse events by default. To make them behave like buttons,
       <div class="olt-DataCards-card">
         <div class="olt-DataCards-cardItem">
           <div class="olt-DataCards-content">
-            <div class="olt-DataCards-text--bold">
-              Powlowski, Summer
-            </div>
+            Powlowski, Summer
           </div>
         </div>
         <div class="olt-DataCards-cardItem">
