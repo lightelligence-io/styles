@@ -6,6 +6,8 @@ browserslist
 /node_modules
 .npmrc
 /scripts
+/.travis.yml
+/resources
 
 # Log files
 npm-debug.log*
