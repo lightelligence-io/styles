@@ -2,32 +2,16 @@
   $infix: screen-infix($breakpoint);
 
   @include screen-up($breakpoint) {
-    .#{$namespace}u-#{$infix}flexColumn {
-      flex-direction: column !important;
+    @each $value in ('column', 'column-reverse', 'row', 'row-reverse') {
+      .#{$namespace}u-#{$infix}flex#{string-capitalize(string-camelize($value))} {
+        flex-direction: #{$value} !important;
+      }
     }
 
-    .#{$namespace}u-#{$infix}flexColumnReverse {
-      flex-direction: column-reverse !important;
-    }
-
-    .#{$namespace}u-#{$infix}flexRow {
-      flex-direction: row !important;
-    }
-
-    .#{$namespace}u-#{$infix}flexRowReverse {
-      flex-direction: row-reverse !important;
-    }
-
-    .#{$namespace}u-#{$infix}flexWrap {
-      flex-wrap: wrap !important;
-    }
-
-    .#{$namespace}u-#{$infix}flexWrapReverse {
-      flex-wrap: wrap-reverse !important;
-    }
-
-    .#{$namespace}u-#{$infix}flexNowrap {
-      flex-wrap: nowrap !important;
+    @each $value in ('wrap', 'wrap-reverse', 'nowrap') {
+      .#{$namespace}u-#{$infix}flex#{string-capitalize(string-camelize($value))} {
+        flex-wrap: #{$value} !important;
+      }
     }
   }
 }
