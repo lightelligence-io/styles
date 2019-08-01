@@ -63,7 +63,7 @@
     }
   }
 
-  @include contextual-colors($selector: '#{$self}:not(.is-disabled)') {
+  @include contextual-colors($selector: '#{$self}:not(.is-disabled):not(:disabled)') {
     &.is-pending {
       color: $button-pending-light;
     }
