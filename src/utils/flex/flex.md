@@ -20,9 +20,9 @@ layout without additional class names or inline styles.
 | `olt-u-flexRowReverse`    | `flex-direction: row-reverse`    |
 | `olt-u-flexColumn`        | `flex-direction: column`         |
 | `olt-u-flexColumnReverse` | `flex-direction: column-reverse` |
-| `olt-u-Wrap`              | `flex-wrap: wrap`                |
-| `olt-u-WrapReverse`       | `flex-wrap: wrap-reverse`        |
-| `olt-u-Nowrap`            | `flex-wrap: nowrap`              |
+| `olt-u-flexWrap`          | `flex-wrap: wrap`                |
+| `olt-u-flexWrapReverse`   | `flex-wrap: wrap-reverse`        |
+| `olt-u-flexNowrap`        | `flex-wrap: nowrap`              |
 
 ```example.html
 <div class="olt-u-displayFlex olt-u-flexColumn olt-u-flexWrap">
