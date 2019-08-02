@@ -94,7 +94,7 @@
   }
 
   @each $breakpoint in map-keys(screen-get()) {
-    @include screen-up($breakpoint) {
+    @include screen-down($breakpoint) {
       &--#{$breakpoint}-vertical {
         @include make-vertical($self);
       }
