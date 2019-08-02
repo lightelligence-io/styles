@@ -25,3 +25,7 @@ State of the art
 - added: new DataCards component
 - added: FloatingList component
 - fixed: add workaround for known css calc issue and cssnano
+
+#v0.8.0
+
+- breaking change: fixed vertical definition list stacking for screens bigger than defined
