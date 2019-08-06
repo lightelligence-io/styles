@@ -29,3 +29,7 @@ State of the art
 #v0.8.0
 
 - breaking change: fixed vertical definition list stacking for screens bigger than defined
+
+#v0.8.1
+
+- support Modal with type warning
