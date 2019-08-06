@@ -53,15 +53,16 @@ Modals are used with `<div>` elements and render a popup in full-screen mode.
 
 The *Modal* can be rendered with different variations based on the context.
 
-We support the following modifiers : 
+We support the following modifiers :
 
 - `olt-Modal--error`
+- `olt-Modal--warning`
 - `olt-Modal--info`
 - `olt-Modal--success`
 
 ### Error modal
 
-Use the error *Modal* whenever you want to communicate an error state to the 
+Use the error *Modal* whenever you want to communicate an error state to the
 user.
 
 <div class="olt-Card olt-u-padding5">
@@ -104,24 +105,24 @@ user.
 </div>
 ```
 
-### Info modal
+### Warning modal
 
-The info *Modal* can be used whenever an additional non-critical information 
+The warning *Modal* can be used whenever an additional critical information
 should be provided to the user.
 
 <div class="olt-Card olt-u-padding5">
   <div class="olt-u-marginAuto">
     <input data-toggle="modal" id="demo-3" type="checkbox">
     <label class="olt-Button" for="modal-demo-3">Open</label>
-    <div class="olt-Modal olt-Modal--info">
+    <div class="olt-Modal olt-Modal--warning">
       <div class="olt-Modal-dialog">
         <label class="olt-Modal-close" for="modal-demo-3"></label>
         <div class="olt-Modal-content">
-          <h5 class="olt-Modal-title Headline Headline--5">Oh! Here's some info for you</h5>
-          <p>You should really check the configuration</p>
+          <h5 class="olt-Modal-title Headline Headline--5">Attention! Here's a warning for you</h5>
+          <p>We detected a problem in your configuration</p>
         </div>
         <div class="olt-Modal-footer">
-          <label class="olt-Button olt-Button--info" for="modal-demo-3">Yes, show me</label>
+          <label class="olt-Button olt-Button--warning" for="modal-demo-3">Ok, show me</label>
         </div>
       </div>
     </div>
@@ -131,15 +132,56 @@ should be provided to the user.
 ```html
 <input data-toggle="modal" id="modal-toggle-3" type="checkbox">
 <label class="olt-Button" for="modal-toggle-3">Open</label>
-<div class="olt-Modal olt-Modal--info">
+<div class="olt-Modal olt-Modal--warning">
   <div class="olt-Modal-dialog">
     <label class="olt-Modal-close" for="modal-toggle-3"></label>
+    <div class="olt-Modal-content">
+      <h5 class="olt-Modal-title Headline Headline--5">Attention! Here's a warning for you</h5>
+      <p>We detected a problem in your configuration</p>
+    </div>
+    <div class="olt-Modal-footer">
+      <label class="olt-Button olt-Button--warning" for="modal-toggle-3">Ok, show me</label>
+    </div>
+  </div>
+</div>
+```
+
+### Info modal
+
+The info *Modal* can be used whenever an additional non-critical information
+should be provided to the user.
+
+<div class="olt-Card olt-u-padding5">
+  <div class="olt-u-marginAuto">
+    <input data-toggle="modal" id="demo-4" type="checkbox">
+    <label class="olt-Button" for="modal-demo-4">Open</label>
+    <div class="olt-Modal olt-Modal--info">
+      <div class="olt-Modal-dialog">
+        <label class="olt-Modal-close" for="modal-demo-4"></label>
+        <div class="olt-Modal-content">
+          <h5 class="olt-Modal-title Headline Headline--5">Oh! Here's some info for you</h5>
+          <p>You should really check the configuration</p>
+        </div>
+        <div class="olt-Modal-footer">
+          <label class="olt-Button olt-Button--info" for="modal-demo-4">Yes, show me</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+```html
+<input data-toggle="modal" id="modal-toggle-4" type="checkbox">
+<label class="olt-Button" for="modal-toggle-4">Open</label>
+<div class="olt-Modal olt-Modal--info">
+  <div class="olt-Modal-dialog">
+    <label class="olt-Modal-close" for="modal-toggle-4"></label>
     <div class="olt-Modal-content">
       <h5 class="olt-Modal-title Headline Headline--5">Oh! Here's some info for you</h5>
       <p>You should really check the configuration</p>
     </div>
     <div class="olt-Modal-footer">
-      <label class="olt-Button olt-Button--info" for="modal-toggle-3">Yes, show me</label>
+      <label class="olt-Button olt-Button--info" for="modal-toggle-4">Yes, show me</label>
     </div>
   </div>
 </div>
@@ -151,11 +193,11 @@ Use the success *Modal* when the actions of the user are successful.
 
 <div class="olt-Card olt-u-padding5">
   <div class="olt-u-marginAuto">
-    <input data-toggle="modal" id="demo-4" type="checkbox">
-    <label class="olt-Button" for="modal-demo-4">Open</label>
+    <input data-toggle="modal" id="demo-5" type="checkbox">
+    <label class="olt-Button" for="modal-demo-5">Open</label>
     <div class="olt-Modal olt-Modal--success">
       <div class="olt-Modal-dialog">
-        <label class="olt-Modal-close" for="modal-demo-4"></label>
+        <label class="olt-Modal-close" for="modal-demo-5"></label>
         <header class="olt-Modal-header">
           <h5 class="olt-Modal-title olt-Headline olt-Headline--5">Oh yes! Success occurred</h5>
         </header>
@@ -163,7 +205,7 @@ Use the success *Modal* when the actions of the user are successful.
           <p>Your configuration was approved</p>
         </div>
         <div class="olt-Modal-footer">
-          <label class="olt-Button olt-Button--success" for="modal-demo-4">Yes, show me</label>
+          <label class="olt-Button olt-Button--success" for="modal-demo-5">Yes, show me</label>
         </div>
       </div>
     </div>
@@ -171,11 +213,11 @@ Use the success *Modal* when the actions of the user are successful.
 </div>
 
 ```html
-<input data-toggle="modal" id="modal-toggle-4" type="checkbox">
-<label class="olt-Button" for="modal-toggle-4">Open</label>
+<input data-toggle="modal" id="modal-toggle-5" type="checkbox">
+<label class="olt-Button" for="modal-toggle-5">Open</label>
 <div class="olt-Modal olt-Modal--success">
   <div class="olt-Modal-dialog">
-    <label class="olt-Modal-close" for="modal-toggle-4"></label>
+    <label class="olt-Modal-close" for="modal-toggle-5"></label>
     <header class="olt-Modal-header">
       <h5 class="olt-Modal-title olt-Headline olt-Headline--5">Oh yes! Success occurred</h5>
     </header>
@@ -183,7 +225,7 @@ Use the success *Modal* when the actions of the user are successful.
       <p>Your configuration was approved</p>
     </div>
     <div class="olt-Modal-footer">
-      <label class="olt-Button olt-Button--success" for="modal-toggle-4">Yes, show me</label>
+      <label class="olt-Button olt-Button--success" for="modal-toggle-5">Yes, show me</label>
     </div>
   </div>
 </div>
@@ -192,7 +234,7 @@ Use the success *Modal* when the actions of the user are successful.
 ## Fullscreen
 
 There is an additional fullscreen *Modal* which takes the space of the whole
-screen when rendered. This *Modal* can be used for various wizards in a 
+screen when rendered. This *Modal* can be used for various wizards in a
 combination with [Stepper](/#stepper).
 
 <div class="olt-Card olt-u-padding5">
