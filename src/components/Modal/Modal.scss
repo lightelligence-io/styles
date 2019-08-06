@@ -151,7 +151,8 @@
 
   &--error:not(&--fullscreen) &-dialog,
   &--success:not(&--fullscreen) &-dialog,
-  &--info:not(&--fullscreen) &-dialog {
+  &--info:not(&--fullscreen) &-dialog,
+  &--warning:not(&--fullscreen) &-dialog {
     &:before {
       display: flex;
       margin-bottom: -20px;
@@ -166,6 +167,11 @@
   &--info &-dialog:before {
     content: 'info_outline';
     background: var-get('colorInfo');
+  }
+
+  &--warning &-dialog:before {
+    content: 'info_outline';
+    background: var-get('colorWarning');
   }
 
   &--success &-dialog:before {
