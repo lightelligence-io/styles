@@ -1,6 +1,6 @@
 .#{$namespace}Headline {
-  font-family: var-get('fontFamilyHeading');
-  font-weight: var-get('fontWeightHeading');
+  font-family: $olt-headline-font-family;
+  font-weight: $olt-headline-font-weight;
   margin: 0 0 var-get('spacing2');
   word-break: break-word;
 

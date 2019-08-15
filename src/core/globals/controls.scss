@@ -1,20 +1,15 @@
 $control-border-width: var-get('borderWidth');
 $control-border-color: var-get('borderColor');
 $control-border-radius: var-get('borderRadius');
-$control-font-size: var-get('controlFontSize');
-$control-line-height: var-get('controlLineHeight');
-$control-font-weight: var-get('controlFontWeight');
 $control-placeholder: var-get('controlPlaceholderColor');
 $control-spacer: var-get('spacing3');
 $control-disabled: var-get('gray300');
 
-$label-font-size: var-get('labelFontSize');
-$label-font-weight: var-get('labelFontWeight');
 $label-color: var-get('labelColor');
 
 %label {
-  font-size: $label-font-size;
-  font-weight: $label-font-weight;
+  font-size: $olt-label-font-size;
+  font-weight: $olt-label-font-weight;
   color: $label-color;
   padding: 0;
   margin-bottom: var-get('spacing1');
@@ -27,7 +22,7 @@ $label-color: var-get('labelColor');
   border-bottom: $control-border-width solid $control-border-color;
   border-radius: $control-border-radius;
   padding: $olt-control-padding-y $olt-control-padding-x;
-  font-size: $control-font-size;
-  line-height: $control-line-height;
-  font-weight: $control-font-weight;
+  font-size: $olt-control-font-size;
+  line-height: $olt-control-line-height;
+  font-weight: $olt-control-font-weight;
 }

@@ -67,7 +67,7 @@
   }
 
   &-link {
-    line-height: 1;
+    line-height: $olt-menu-link-line-height;
     white-space: nowrap;
     display: block;
     flex-basis: 100%;

@@ -81,7 +81,7 @@
 
         @include control-placeholder-style();
 
-        height: #{$label-font-size};
+        height: #{$olt-label-font-size};
         line-height: $olt-control-height;
         vertical-align: middle;
       }
