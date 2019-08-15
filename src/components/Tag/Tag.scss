@@ -6,7 +6,6 @@
   $tag-border-radius: 0;
   $tag-padding-x: var-get('spacing2');
   $tag-padding-y: var-get('spacing1');
-  $tag-font-size: var-get('fontSizeSmall');
   $tag-font-family: var-get('fontFamilyMono');
   $self: &;
 
@@ -14,7 +13,7 @@
   align-items: center;
   line-height: 1;
   height: 1.625rem;
-  font-size: $tag-font-size;
+  font-size: $olt-tag-font-size;
   padding: $tag-padding-y $tag-padding-x;
   font-family: $tag-font-family;
   text-transform: uppercase;

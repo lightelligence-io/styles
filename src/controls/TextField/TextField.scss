@@ -77,12 +77,12 @@
         cursor: text;
         transition: all 200ms;
         transform: translate3d(0, calc(100% + #{var-get('spacing1')}), 0);
-        padding: 0 $control-padding-x;
+        padding: 0 $olt-control-padding-x;
 
         @include control-placeholder-style();
 
         height: #{$label-font-size};
-        line-height: $control-height;
+        line-height: $olt-control-height;
         vertical-align: middle;
       }
 

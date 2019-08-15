@@ -14,7 +14,7 @@
   &-content {
     padding: 0.25rem;
     background: var-get('colorPrimary');
-    font-size: 0.75rem;
+    font-size: $olt-tooltip-font-size;
     color: var-get('colorLight');
     position: absolute;
     top: 0;
@@ -29,7 +29,7 @@
     p {
       padding: 0;
       width: 10rem;
-      line-height: 0.875rem;
+      line-height: $olt-tooltip-line-height;
       margin: 0;
     }
 

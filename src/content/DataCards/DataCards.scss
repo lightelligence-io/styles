@@ -39,9 +39,8 @@
 
   &-cardItem &-content {
     font-family: var-get('fontFamilyBase');
-    font-size: var-get('fontSizeXSmall');
     font-weight: normal;
-    font-size: 14px;
+    font-size: $olt-dataCards-cardItem-content-font-size;
     word-break: break-word;
   }
 
@@ -54,7 +53,7 @@
     #{$self}-headItem {
       color: var-get('gray500');
       font-family: var-get('fontFamilyBase');
-      font-size: 12px;
+      font-size: $olt-dataCards-headItem-content-font-size;
       font-weight: bold;
       padding: $card-padding-y $card-padding-x;
       white-space: nowrap;
@@ -95,9 +94,9 @@
     #{$self}-cardItem #{$self}-title {
       color: $title-color;
       font-family: var-get('fontFamilyBase');
-      font-size: 10px;
+      font-size: $olt-dataCards-cardItem-title-font-size;
       font-weight: bold;
-      line-height: 14px;
+      line-height: $olt-dataCards-cardItem-title-line-height;
       margin-bottom: $title-margin;
     }
 

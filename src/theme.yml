@@ -48,10 +48,11 @@ control:
   fontWeight: 400
   fontSize: 0.9rem
   lineHeight: 1.3rem
-  height: 2rem
+  placeholderColor: ${gray[500]}
 label:
   fontWeight: 400
   fontSize: 0.8rem
+  color: ${gray[500]}
 # Typography
 fontFamilyBase: !!str |
   'PT Sans', 'Arial'

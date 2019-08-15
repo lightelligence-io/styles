@@ -44,7 +44,7 @@
 
     border: 0;
     color: $table-header-color;
-    font-size: var-get('fontSizeSmall');
+    font-size: $olt-table-header-font-size;
     padding: $table-cell-spacing;
     text-align: left;
     text-transform: uppercase;

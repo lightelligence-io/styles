@@ -80,8 +80,8 @@
     margin: 0;
     padding: 0;
     display: block;
-    font-size: var-get('fontSizeXSmall');
-    line-height: 1.7;
+    font-size: $olt-list-term-font-size;
+    line-height: $olt-list-term-line-height;
   }
 
   &-term {

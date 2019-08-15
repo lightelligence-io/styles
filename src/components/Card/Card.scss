@@ -51,8 +51,8 @@
   }
 
   &-title {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
+    font-size: $olt-card-title-font-size;
+    line-height: $olt-card-title-line-height;
     margin: 0;
     grid-column: 1 / 2;
     grid-row: 1;

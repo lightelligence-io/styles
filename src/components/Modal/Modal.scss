@@ -61,7 +61,7 @@
       justify-content: center;
       align-items: flex-end;
       color: white;
-      font-size: 50px;
+      font-size: 50px; // icon size
       vertical-align: middle;
       line-height: 64px;
       margin-bottom: -20px;
@@ -121,8 +121,8 @@
     align-self: center;
     justify-content: center;
     margin: 0;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: $olt-modal-title-font-size;
+    line-height: $olt-modal-title-line-height;
     font-weight: bold;
     margin: 0;
   }
@@ -260,7 +260,7 @@
       right: var-get('spacing3');
       top: var-get('spacing3');
       background: #fff;
-      font-size: 16px;
+      font-size: 16px; // icon size
       font-weight: bold;
       text-align: center;
       cursor: pointer;

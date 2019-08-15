@@ -68,8 +68,8 @@
     display: inline-block;
     position: relative;
     margin-bottom: $control-spacer;
-    font-size: var-get('fontSizeBase');
-    line-height: 24px;
+    font-size: $olt-checkbox-label-font-size;
+    line-height: $olt-checkbox-label-line-height;
     user-select: none;
 
     &:before {
