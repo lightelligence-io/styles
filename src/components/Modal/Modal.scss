@@ -1,4 +1,4 @@
-.#{$namespace}Modal {
+.Modal {
   $modal-border-radius: var-get('borderRadius');
   $modal-backdrop: rgba(255, 255, 255, 0.7);
   $modal-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
@@ -107,7 +107,7 @@
     text-align: center;
   }
 
-  &-content .#{$namespace}Container {
+  &-content .Container {
     padding-left: 0;
     padding-right: 0;
   }
@@ -128,9 +128,9 @@
   }
 
   &-close {
-    @extend .#{$namespace}Button;
+    @extend .Button;
 
-    @extend .#{$namespace}Button[data-icon];
+    @extend .Button[data-icon];
 
     &:before {
       content: 'close';
@@ -146,7 +146,7 @@
   }
 
   &-dialog &-close {
-    @extend .#{$namespace}Button--outline;
+    @extend .Button--outline;
   }
 
   &--error:not(&--fullscreen) &-dialog,

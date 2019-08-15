@@ -5,27 +5,27 @@
   $infix: screen-infix($breakpoint);
 
   @include screen-up($breakpoint) {
-    .#{$namespace}u-#{$infix}justifyContentStart {
+    .u-#{$infix}justifyContentStart {
       justify-content: flex-start !important;
     }
 
-    .#{$namespace}u-#{$infix}justifyContentCenter {
+    .u-#{$infix}justifyContentCenter {
       justify-content: center !important;
     }
 
-    .#{$namespace}u-#{$infix}justifyContentEnd {
+    .u-#{$infix}justifyContentEnd {
       justify-content: flex-end !important;
     }
 
-    .#{$namespace}u-#{$infix}justifyContentBetween {
+    .u-#{$infix}justifyContentBetween {
       justify-content: space-between !important;
     }
 
-    .#{$namespace}u-#{$infix}justifyContentAround {
+    .u-#{$infix}justifyContentAround {
       justify-content: space-around !important;
     }
 
-    .#{$namespace}u-#{$infix}justifyContentEvenly {
+    .u-#{$infix}justifyContentEvenly {
       justify-content: space-evenly !important;
     }
   }

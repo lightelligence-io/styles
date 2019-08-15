@@ -1,23 +1,23 @@
-.#{$namespace}Stepper {
+.Stepper {
   $stepper-border-color: var-get('borderColor');
 
   margin-bottom: var-get('spacing4');
 
   $self: &;
 
-  @extend .#{$namespace}Tabs;
+  @extend .Tabs;
 
   counter-reset: step-item-counter;
   margin-top: -#{var-get('spacing2')};
 
   &-content {
-    @extend .#{$namespace}Tabs-content;
+    @extend .Tabs-content;
 
     margin-top: var-get('spacing4');
   }
 
   &-header {
-    @extend .#{$namespace}Tabs-header;
+    @extend .Tabs-header;
 
     margin-top: var-get('spacing2');
     counter-increment: step-item-counter;
@@ -28,11 +28,11 @@
     &:before {
       content: counter(step-item-counter);
 
-      @extend .#{$namespace}Button;
+      @extend .Button;
 
-      @extend .#{$namespace}Button--outline;
+      @extend .Button--outline;
 
-      @extend .#{$namespace}Button[data-count];
+      @extend .Button[data-count];
 
       color: currentColor;
       margin-right: var-get('spacing2');

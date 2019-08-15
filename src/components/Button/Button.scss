@@ -1,4 +1,4 @@
-.#{$namespace}Button {
+.Button {
   $button-padding-x: 1rem;
   $button-padding-y: 0;
   $button-border-color: var-get('borderColor');
@@ -89,7 +89,7 @@
 
   &--icon,
   &[data-icon] {
-    @extend .#{$namespace}Icon;
+    @extend .Icon;
 
     &:before {
       font-size: 150%;
@@ -133,7 +133,7 @@
     &:after {
       content: '';
 
-      @extend %#{$namespace}spinner;
+      @extend %spinner;
 
       display: flex;
       justify-content: center;

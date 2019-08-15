@@ -19,7 +19,7 @@
   }
 }
 
-.#{$namespace}FloatingList {
+.FloatingList {
   $self: &;
 
   &:not(&--justifyEnd) &-items {

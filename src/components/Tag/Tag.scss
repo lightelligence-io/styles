@@ -1,4 +1,4 @@
-.#{$namespace}Tag {
+.Tag {
   $tag-color: var-get('gray500');
   $tag-background: var-get('colorLight');
   $tag-border-color: currentColor;
@@ -80,7 +80,7 @@
 
     &[data-icon] {
       &:before {
-        @extend .#{$namespace}Icon:before;
+        @extend .Icon:before;
 
         content: attr(data-icon);
       }
@@ -88,7 +88,7 @@
 
     &[data-close] {
       &:after {
-        @extend .#{$namespace}Icon:before;
+        @extend .Icon:before;
 
         content: 'close';
       }

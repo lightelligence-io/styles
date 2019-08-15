@@ -4,14 +4,14 @@
   @include screen-up($breakpoint) {
     // Colors
     @each $name, $value in var-get('color') {
-      .#{$namespace}u-#{$infix}color#{string-capitalize($name)} {
+      .u-#{$infix}color#{string-capitalize($name)} {
         color: $value !important;
       }
     }
 
     // Grays
     @each $name, $value in var-get('gray') {
-      .#{$namespace}u-#{$infix}colorGray#{string-capitalize($name)} {
+      .u-#{$infix}colorGray#{string-capitalize($name)} {
         color: $value !important;
       }
     }

@@ -1,4 +1,4 @@
-.#{$namespace}Select {
+.Select {
   @mixin selectBackgroundGradient ($color: gray) {
     // use floats because of ugly google-chrome subpixel rendering
     // 50.01 instead of 50% looks nicer in chrome.

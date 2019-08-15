@@ -1,4 +1,4 @@
-.#{$namespace}Dropdown {
+.Dropdown {
   $dropdown-padding-x: 1rem;
   $dropdown-padding-y: 0.5rem;
   $dropdown-border-color: transparent;
@@ -52,7 +52,7 @@
     }
 
     &:after {
-      @extend .#{$namespace}Icon:before;
+      @extend .Icon:before;
 
       content: 'chevron_right';
       display: inline-block;

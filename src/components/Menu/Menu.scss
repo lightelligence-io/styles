@@ -1,4 +1,4 @@
-.#{$namespace}Menu {
+.Menu {
   $menu-color: var-get('colorLight');
   $menu-border-color: transparent;
   $menu-background: var-get('colorLight');
@@ -58,10 +58,10 @@
     display: flex;
   }
 
-  > .#{$namespace}Dropdown {
+  > .Dropdown {
     @extend #{$self}-item;
 
-    > .#{$namespace}Dropdown-label {
+    > .Dropdown-label {
       @extend #{$self}-link;
     }
   }
@@ -85,7 +85,7 @@
   }
 
   #{$self} > &-item > &-link,
-  #{$self} > .#{$namespace}Dropdown > .#{$namespace}Dropdown-label {
+  #{$self} > .Dropdown > .Dropdown-label {
     color: $menu-item-color;
 
     &:link,
@@ -106,7 +106,7 @@
   }
 
   #{$self}--dark > &-item > &-link,
-  #{$self}--dark > .#{$namespace}Dropdown > .#{$namespace}Dropdown-label {
+  #{$self}--dark > .Dropdown > .Dropdown-label {
     color: $menu-item-color-light;
 
     &:link,
@@ -124,7 +124,7 @@
     }
   }
 
-  &--dark > .#{$namespace}Dropdown {
+  &--dark > .Dropdown {
     display: flex;
     background: inherit;
     color: inherit;

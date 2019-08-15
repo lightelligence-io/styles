@@ -4,32 +4,32 @@
   @include screen-up($breakpoint) {
     @each $prop, $name in (margin: margin) {
       @each $size, $value in var-get('spacing') {
-        .#{$namespace}u-#{$infix}#{$name}#{$size} {
+        .u-#{$infix}#{$name}#{$size} {
           #{$prop}: $value !important;
         }
 
-        .#{$namespace}u-#{$infix}#{$name}Top#{$size} {
+        .u-#{$infix}#{$name}Top#{$size} {
           #{$prop}-top: $value !important;
         }
 
-        .#{$namespace}u-#{$infix}#{$name}Bottom#{$size} {
+        .u-#{$infix}#{$name}Bottom#{$size} {
           #{$prop}-bottom: $value !important;
         }
 
-        .#{$namespace}u-#{$infix}#{$name}Right#{$size} {
+        .u-#{$infix}#{$name}Right#{$size} {
           #{$prop}-right: $value !important;
         }
 
-        .#{$namespace}u-#{$infix}#{$name}Left#{$size} {
+        .u-#{$infix}#{$name}Left#{$size} {
           #{$prop}-left: $value !important;
         }
 
-        .#{$namespace}u-#{$infix}#{$name}Y#{$size} {
+        .u-#{$infix}#{$name}Y#{$size} {
           #{$prop}-top: $value !important;
           #{$prop}-bottom: $value !important;
         }
 
-        .#{$namespace}u-#{$infix}#{$name}X#{$size} {
+        .u-#{$infix}#{$name}X#{$size} {
           #{$prop}-left: $value !important;
           #{$prop}-right: $value !important;
         }
@@ -37,32 +37,32 @@
     }
 
     // Provide `auto` for margins
-    .#{$namespace}u-#{$infix}marginAuto {
+    .u-#{$infix}marginAuto {
       margin: auto !important;
     }
 
-    .#{$namespace}u-#{$infix}marginTopAuto {
+    .u-#{$infix}marginTopAuto {
       margin-top: auto !important;
     }
 
-    .#{$namespace}u-#{$infix}marginRightAuto {
+    .u-#{$infix}marginRightAuto {
       margin-right: auto !important;
     }
 
-    .#{$namespace}u-#{$infix}marginBottomAuto {
+    .u-#{$infix}marginBottomAuto {
       margin-bottom: auto !important;
     }
 
-    .#{$namespace}u-#{$infix}marginLeftAuto {
+    .u-#{$infix}marginLeftAuto {
       margin-left: auto !important;
     }
 
-    .#{$namespace}u-#{$infix}marginYAuto {
+    .u-#{$infix}marginYAuto {
       margin-top: auto !important;
       margin-bottom: auto !important;
     }
 
-    .#{$namespace}u-#{$infix}marginXAuto {
+    .u-#{$infix}marginXAuto {
       margin-right: auto !important;
       margin-left: auto !important;
     }
