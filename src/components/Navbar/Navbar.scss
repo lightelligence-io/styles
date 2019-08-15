@@ -93,8 +93,6 @@
       right: 0;
       bottom: 0;
       background: $navbar-backdrop;
-      // make sure that the backdrop is below the content,
-      // having both elements (backdrop + content) on z-index 1000 causes the backdrop to be rendered above the content on firefox (not chrome)
       z-index: $olt-z-index-navbar-backdrop;
       display: none;
     }
