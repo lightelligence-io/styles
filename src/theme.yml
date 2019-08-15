@@ -5,6 +5,12 @@ containerMaxWidth:
   md: 720px
   lg: 960px
   xl: 1140px
+breakpoint:
+  xs: 0
+  sm: 576px
+  md: 768px
+  lg: 992px
+  xl: 1200px
 # Colors
 color:
   primary: '#FF6600'
@@ -38,31 +44,69 @@ gray:
 borderRadius: 2px
 borderWidth: 1px
 borderColor: ${gray[300]}
+control:
+  fontWeight: 400
+  fontSize: 0.9rem
+  lineHeight: 1.3rem
+  height: 2rem
+label:
+  fontWeight: 400
+  fontSize: 0.8rem
 # Typography
 fontFamilyBase: !!str |
   'PT Sans', 'Arial'
 fontFamilyMono: !!str |
   'Overpass Mono', 'monospace'
 fontSizeBase: 16px
+fontSizeFactor:
+  xxSmall: .65
+  xSmall: .75
+  small: .8
+  medium: 1
+  large: 1.5
+  xLarge: 1.8
+  xxLarge: 2.2
 fontSize:
-  xxSmall: calc(${fontSizeBase} * .65)
-  xSmall: calc(${fontSizeBase} * .75)
-  small: calc(${fontSizeBase} * .8)
-  medium: ${fontSizeBase}
-  large: calc(${fontSizeBase} * 1.5)
-  xLarge: calc(${fontSizeBase} * 1.8)
-  xxLarge: calc(${fontSizeBase} * 2.2)
+  xxSmall: calc(${fontSizeBase} * ${fontSizeFactor.xxSmall})
+  xSmall: calc(${fontSizeBase} * ${fontSizeFactor.xSmall})
+  small: calc(${fontSizeBase} * ${fontSizeFactor.small})
+  medium: calc(${fontSizeBase} * ${fontSizeFactor.medium})
+  large: calc(${fontSizeBase} * ${fontSizeFactor.large})
+  xLarge: calc(${fontSizeBase} * ${fontSizeFactor.xLarge})
+  xxLarge: calc(${fontSizeBase} * ${fontSizeFactor.xxLarge})
   smaller: 80%
   larger: 150%
+headingFontSize:
+  1: 4.375rem
+  2: 2.5rem
+  3: 2.25rem
+  4: 2rem
+  5: 1.5rem
+  6: 1.25rem
+headingLineHeight:
+  1: 5.625rem
+  2: 3rem
+  3: 2.85rem
+  4: 2.5rem
+  5: 2rem
+  6: 1.75rem
 lineHeightBase: 1.5
+lineHeightFactor:
+  xxSmall: .6667
+  xSmall: .8333
+  small: .9
+  medium: 1
+  large: 1.3333
+  xLarge: 1.5333
+  xxLarge: 1.7333
 lineHeight:
-  xxSmall: calc(${lineHeightBase} * .6667)
-  xSmall: calc(${lineHeightBase} * .8333)
-  small: calc(${lineHeightBase} * .9)
-  medium: ${lineHeightBase}
-  large: calc(${lineHeightBase} * 1.3333)
-  xLarge: calc(${lineHeightBase} * 1.5333)
-  xxLarge: calc(${lineHeightBase} * 1.7333)
+  xxSmall: calc(${lineHeightBase} * ${lineHeightFactor.xxSmall})
+  xSmall: calc(${lineHeightBase} * ${lineHeightFactor.xSmall})
+  small: calc(${lineHeightBase} * ${lineHeightFactor.small})
+  medium: calc(${lineHeightBase} * ${lineHeightFactor.medium})
+  large: calc(${lineHeightBase} * ${lineHeightFactor.large})
+  xLarge: calc(${lineHeightBase} * ${lineHeightFactor.xLarge})
+  xxLarge: calc(${lineHeightBase} * ${lineHeightFactor.xxLarge})
   smaller: 80%
   larger: 150%
 fontWeight:
@@ -80,16 +124,26 @@ linkColor: ${color.primary}
 linkHoverContrast: 10%
 # Spacings
 spacer: ${fontSizeBase}
-spacing:
+spacingFactor:
   0: 0
-  1: calc(${spacer} * .25)
-  2: calc(${spacer} * .5)
-  3: ${spacer}
-  4: calc(${spacer} * 1.5)
-  5: calc(${spacer} * 2)
-  6: calc(${spacer} * 3)
-  7: calc(${spacer} * 4.5)
-  8: calc(${spacer} * 6)
+  1: .25
+  2: .5
+  3: 1
+  4: 1.5
+  5: 2
+  6: 3
+  7: 4.5
+  8: 6
+spacing:
+  0: calc(${spacer} * ${spacingFactor['0']})
+  1: calc(${spacer} * ${spacingFactor['1']})
+  2: calc(${spacer} * ${spacingFactor['2']})
+  3: calc(${spacer} * ${spacingFactor['3']})
+  4: calc(${spacer} * ${spacingFactor['4']})
+  5: calc(${spacer} * ${spacingFactor['5']})
+  6: calc(${spacer} * ${spacingFactor['6']})
+  7: calc(${spacer} * ${spacingFactor['7']})
+  8: calc(${spacer} * ${spacingFactor['8']})
 # Transitions
 transitionDuration: 150ms
 transitionTimingFunction: ease
