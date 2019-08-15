@@ -56,3 +56,6 @@ $olt-headline-font-weight: var-get('fontWeightHeading');
 
 $olt-link-color: var-get('colorPrimary');
 $olt-link-hover-contrast: var-get('linkHoverContrast');
+
+$olt-grid-gutter: var-get('containerPadding');
+$olt-grid-columns: 12;
