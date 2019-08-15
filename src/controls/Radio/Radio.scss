@@ -43,12 +43,12 @@
   }
 
   input:disabled ~ &-button {
-    border-color: $control-disabled;
+    border-color: $olt-control-disabled-color;
     cursor: not-allowed;
   }
 
   input:checked:disabled ~ &-button:after {
-    background: $control-disabled;
+    background: $olt-control-disabled-color;
   }
 
   &-label {
@@ -64,7 +64,7 @@
 
   input:disabled ~ &-label,
   input:checked:disabled ~ &-label {
-    color: $control-disabled;
+    color: $olt-control-disabled-color;
     cursor: not-allowed;
   }
 }

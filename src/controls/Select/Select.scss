@@ -65,17 +65,17 @@
 
   &:not(.is-readonly):disabled,
   &:not(.is-readonly).is-disabled {
-    color: $control-disabled;
+    color: $olt-control-disabled-color;
     cursor: not-allowed;
-    border-bottom: dotted $control-border-width $control-disabled;
+    border-bottom: dotted $control-border-width $olt-control-disabled-color;
 
-    @include selectBackgroundGradient($control-disabled);
+    @include selectBackgroundGradient($olt-control-disabled-color);
   }
 
   &.is-readonly {
     cursor: default;
     color: currentColor;
 
-    @include selectBackgroundGradient($control-disabled);
+    @include selectBackgroundGradient($olt-control-disabled-color);
   }
 }

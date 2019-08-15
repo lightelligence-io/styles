@@ -5,6 +5,7 @@ $olt-control-padding-x: 0;
 $olt-control-line-height: var-get('controlLineHeight');
 $olt-control-font-size: var-get('controlFontSize');
 $olt-control-font-weight: var-get('controlFontWeight');
+$olt-control-disabled-color: var-get('gray300');
 
 $olt-label-font-weight: var-get('labelFontWeight');
 $olt-label-font-size: var-get('labelFontSize');
@@ -29,10 +30,11 @@ $olt-tooltip-font-size: 0.75rem;
 $olt-tooltip-line-height: 0.875rem;
 
 $olt-dataCards-cardItem-content-font-size: 14px;
-$olt-dataCards-headItem-content-font-size: 12px;
 $olt-dataCards-cardItem-title-font-size: 10px;
 $olt-dataCards-cardItem-title-line-height: 14px;
 $olt-dataCards-cardItem-title-color: #46b4cd;
+
+$olt-dataCards-headItem-content-font-size: 12px;
 $olt-dataCards-card-padding-x: 16px;
 $olt-dataCards-card-gap: 8px;
 $olt-dataCards-card-item-gap: 16px;

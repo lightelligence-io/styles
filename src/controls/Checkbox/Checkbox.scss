@@ -1,7 +1,5 @@
 // TODO: Recheck what's possible today regarding styling native inputs. What about IE11?
 .Checkbox {
-  $checkbox-border-width: $control-border-width;
-  $checkbox-disabled: $control-disabled;
   $self: &;
 
   display: flex;
@@ -48,12 +46,12 @@
     }
 
     &:disabled + #{$self}-label:before {
-      border: $control-border-width dashed $control-disabled;
+      border: $control-border-width dashed $olt-control-disabled-color;
       background-color: transparent;
     }
 
     &:checked:disabled + #{$self}-label:before {
-      background-color: $control-disabled;
+      background-color: $olt-control-disabled-color;
     }
 
     &:focus + &-label:before {
