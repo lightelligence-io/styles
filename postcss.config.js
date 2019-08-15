@@ -10,6 +10,8 @@ const prefix = 'olt-';
 const src = path.resolve(__dirname, 'src');
 const dest = path.resolve(__dirname, 'dist');
 
+const minifyEnabled = mode === 'production'; // Minify in production
+
 module.exports = {
   plugins: [
     () => {
@@ -48,7 +50,7 @@ module.exports = {
       },
     }),
     require('autoprefixer'),
-    mode === 'production' && require('cssnano'), // Minify in production
+    minifyEnabled && require('cssnano'),
     () => {
       // Output theme variables
       const source = fs.readFileSync(path.resolve(src, 'theme.yml'), 'utf-8');
