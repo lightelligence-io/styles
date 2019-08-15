@@ -1,3 +1,7 @@
+// Screen
+$screen-prefix: 'olt-';
+$screen-style: kebabCase;
+
 // Breakpoints
 @include screen-set(
   (
