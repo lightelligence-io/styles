@@ -3,7 +3,6 @@
   $navbar-padding-x: 1rem;
   $navbar-padding-y: 0;
   $navbar-backdrop: rgba(255, 255, 255, 0.7);
-  $navbar-content-z: 1000;
   $navbar-logo: './components/Navbar/lightelligence.svg';
 
   $self: &;
@@ -96,7 +95,7 @@
       background: $navbar-backdrop;
       // make sure that the backdrop is below the content,
       // having both elements (backdrop + content) on z-index 1000 causes the backdrop to be rendered above the content on firefox (not chrome)
-      z-index: #{$navbar-content-z - 1};
+      z-index: $olt-z-index-navbar-backdrop;
       display: none;
     }
 
@@ -107,7 +106,7 @@
 
   &-content {
     position: fixed;
-    z-index: $navbar-content-z;
+    z-index: $olt-z-index-navbar-content;
     left: 0;
     top: 0;
     bottom: 0;

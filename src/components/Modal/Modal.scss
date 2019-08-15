@@ -29,7 +29,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 1002;
+  z-index: $olt-z-index-modal;
   display: flex;
   clip: rect(0, 0, 0, 0);
   font-family: var-get('fontFamilyBase');
@@ -45,7 +45,7 @@
     flex-wrap: wrap;
     transition: transform $modal-transition-duration $modal-transition-timing-function;
     transform: translateY(100%);
-    z-index: 999;
+    z-index: $olt-z-index-modal-dialog;
     //pointer-events: auto;
     cursor: auto;
     //box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
@@ -142,7 +142,7 @@
     position: fixed; // TODO: Get it of the overflow stuff
     right: var-get('spacing3');
     top: var-get('spacing3');
-    z-index: 1003;
+    z-index: $olt-z-index-modal-close;
   }
 
   &-dialog &-close {

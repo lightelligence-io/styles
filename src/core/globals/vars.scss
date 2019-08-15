@@ -61,3 +61,11 @@ $olt-link-hover-contrast: var-get('linkHoverContrast');
 
 $olt-grid-gutter: var-get('containerPadding');
 $olt-grid-columns: 12;
+
+$olt-z-index-modal: 1002;
+$olt-z-index-modal-close: 1003;
+$olt-z-index-modal-dialog: 999;
+$olt-z-index-snackbar: 1200;
+$olt-z-index-tooltip: 950;
+$olt-z-index-navbar-content: 1000;
+$olt-z-index-navbar-backdrop: 999;
