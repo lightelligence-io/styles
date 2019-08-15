@@ -68,4 +68,6 @@ $olt-z-index-modal-dialog: 999;
 $olt-z-index-snackbar: 1200;
 $olt-z-index-tooltip: 950;
 $olt-z-index-navbar-content: 1000;
-$olt-z-index-navbar-backdrop: 999;
+// make sure that the backdrop is below the content,
+// having both elements (backdrop + content) on z-index 1000 causes the backdrop to be rendered above the content on firefox (not chrome)
+$olt-z-index-navbar-backdrop: $olt-z-index-navbar-content - 1;
