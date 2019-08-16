@@ -1,15 +1,7 @@
-$control-border-width: var-get('borderWidth');
-$control-border-color: var-get('borderColor');
-$control-border-radius: var-get('borderRadius');
-$control-placeholder: var-get('controlPlaceholderColor');
-$control-spacer: var-get('spacing3');
-
-$label-color: var-get('labelColor');
-
 %label {
   font-size: $olt-label-font-size;
   font-weight: $olt-label-font-weight;
-  color: $label-color;
+  color: $olt-label-color;
   padding: 0;
   margin-bottom: var-get('spacing1');
 }
@@ -18,8 +10,8 @@ $label-color: var-get('labelColor');
   min-height: $olt-control-height;
   vertical-align: middle;
   border: 0;
-  border-bottom: $control-border-width solid $control-border-color;
-  border-radius: $control-border-radius;
+  border-bottom: $olt-control-border-width solid $olt-control-border-color;
+  border-radius: $olt-control-border-radius;
   padding: $olt-control-padding-y $olt-control-padding-x;
   font-size: $olt-control-font-size;
   line-height: $olt-control-line-height;

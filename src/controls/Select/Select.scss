@@ -67,7 +67,7 @@
   &:not(.is-readonly).is-disabled {
     color: $olt-control-disabled-color;
     cursor: not-allowed;
-    border-bottom: dotted $control-border-width $olt-control-disabled-color;
+    border-bottom: dotted $olt-control-border-width $olt-control-disabled-color;
 
     @include selectBackgroundGradient($olt-control-disabled-color);
   }

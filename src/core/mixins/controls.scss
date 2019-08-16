@@ -1,7 +1,7 @@
 @mixin control-placeholder-style($opacity: 1) {
   font-size: $olt-control-font-size;
   font-weight: $olt-control-font-weight;
-  color: $control-placeholder;
+  color: $olt-control-placeholder;
   opacity: $opacity;
 }
 

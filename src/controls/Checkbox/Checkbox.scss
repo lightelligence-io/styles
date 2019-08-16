@@ -46,7 +46,7 @@
     }
 
     &:disabled + #{$self}-label:before {
-      border: $control-border-width dashed $olt-control-disabled-color;
+      border: $olt-control-border-width dashed $olt-control-disabled-color;
       background-color: transparent;
     }
 
@@ -65,7 +65,7 @@
     cursor: pointer;
     display: inline-block;
     position: relative;
-    margin-bottom: $control-spacer;
+    margin-bottom: $olt-control-spacer;
     font-size: $olt-checkbox-label-font-size;
     line-height: $olt-checkbox-label-line-height;
     user-select: none;
@@ -78,8 +78,8 @@
       height: 1.25em;
       vertical-align: text-top;
       background: white;
-      border: $control-border-width solid $control-border-color;
-      border-radius: $control-border-radius;
+      border: $olt-control-border-width solid $olt-control-border-color;
+      border-radius: $olt-control-border-radius;
       transition:
         all var-get('transitionDuration')
         var-get('transitionTimingFunction');
