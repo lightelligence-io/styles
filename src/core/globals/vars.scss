@@ -9,12 +9,12 @@ $olt-control-disabled-color: var-get('gray300');
 $olt-control-border-width: var-get('borderWidth');
 $olt-control-border-color: var-get('borderColor');
 $olt-control-border-radius: var-get('borderRadius');
-$olt-control-placeholder: var-get('controlPlaceholderColor');
+$olt-control-placeholder: var-get('gray500');
 $olt-control-spacer: var-get('spacing3');
 
-$olt-label-font-weight: var-get('labelFontWeight');
-$olt-label-font-size: var-get('labelFontSize');
-$olt-label-color: var-get('labelColor');
+$olt-label-font-weight: 400;
+$olt-label-font-size: 0.8rem;
+$olt-label-color: var-get('gray500');
 
 $olt-button-font-size: 1rem;
 $olt-button-line-height: 2.25rem;
