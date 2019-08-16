@@ -2,9 +2,9 @@
 $olt-control-height: 2rem;
 $olt-control-padding-y: 0.125rem;
 $olt-control-padding-x: 0;
-$olt-control-line-height: var-get('controlLineHeight');
-$olt-control-font-size: var-get('controlFontSize');
-$olt-control-font-weight: var-get('controlFontWeight');
+$olt-control-line-height: 1.3rem;
+$olt-control-font-size: 0.9rem;
+$olt-control-font-weight: 400;
 $olt-control-disabled-color: var-get('gray300');
 $olt-control-border-width: var-get('borderWidth');
 $olt-control-border-color: var-get('borderColor');
