@@ -30,7 +30,7 @@
 }
 
 
-.#{$namespace}Snackbar {
+.Snackbar {
   width: 0;
   height: 0;
   overflow: hidden;
@@ -67,13 +67,9 @@
     padding-left: 48px;
     padding-right: 48px;
     line-height: 64px;
-    z-index: 1200;
+    z-index: $olt-z-index-snackbar;
     display: flex;
     flex-wrap: wrap;
     animation-duration: 400ms;
-  }
-
-  &.is-open &-dialog {
-
   }
 }

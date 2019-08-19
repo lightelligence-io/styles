@@ -1,38 +1,39 @@
-.#{$namespace}Headline {
-  font-weight: var-get('fontWeightHeading');
+.Headline {
+  font-family: $olt-headline-font-family;
+  font-weight: $olt-headline-font-weight;
   margin: 0 0 var-get('spacing2');
   word-break: break-word;
 
   &--1 {
-    font-size: 4.375rem;
-    line-height: 5.625rem;
+    font-size: var-get('headingFontSize1');
+    line-height: var-get('headingLineHeight1');
     margin-bottom: var-get('spacing3');
   }
 
   &--2 {
-    font-size: 2.5rem;
-    line-height: 3rem;
+    font-size: var-get('headingFontSize2');
+    line-height: var-get('headingLineHeight2');
     margin-bottom: var-get('spacing3');
   }
 
   &--3 {
-    font-size: 2.25rem;
-    line-height: 2.85rem;
+    font-size: var-get('headingFontSize3');
+    line-height: var-get('headingLineHeight3');
   }
 
   &--4 {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: var-get('headingFontSize4');
+    line-height: var-get('headingLineHeight4');
   }
 
   &--5 {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: var-get('headingFontSize5');
+    line-height: var-get('headingLineHeight5');
   }
 
   &--6 {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    font-size: var-get('headingFontSize6');
+    line-height: var-get('headingLineHeight6');
   }
 
   &--regular {

@@ -5,6 +5,12 @@ containerMaxWidth:
   md: 720px
   lg: 960px
   xl: 1140px
+breakpoint:
+  xs: 0
+  sm: 576px
+  md: 768px
+  lg: 992px
+  xl: 1200px
 # Colors
 color:
   primary: '#FF6600'
@@ -54,6 +60,20 @@ fontSize:
   xxLarge: calc(${fontSizeBase} * 2.2)
   smaller: 80%
   larger: 150%
+headingFontSize:
+  1: 4.375rem
+  2: 2.5rem
+  3: 2.25rem
+  4: 2rem
+  5: 1.5rem
+  6: 1.25rem
+headingLineHeight:
+  1: 5.625rem
+  2: 3rem
+  3: 2.85rem
+  4: 2.5rem
+  5: 2rem
+  6: 1.75rem
 lineHeightBase: 1.5
 lineHeight:
   xxSmall: calc(${lineHeightBase} * .6667)

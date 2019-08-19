@@ -1,38 +1,19 @@
-$control-border-width: var-get('borderWidth');
-$control-border-color: var-get('borderColor');
-$control-border-radius: var-get('borderRadius');
-$control-padding-y: 0.125rem;
-$control-padding-x: 0;
-$control-font-size: 0.9rem;
-$control-line-height: 1.3rem;
-$control-font-weight: 400;
-$control-label: #a7a8aa;
-$control-width: 160px;
-$control-height: 2rem;
-$control-placeholder: var-get('gray500');
-$control-spacer: var-get('spacing3');
-$control-disabled: var-get('gray300');
-
-$label-font-size: 0.8rem;
-$label-font-weight: 400;
-$label-color: $control-label;
-
 %label {
-  font-size: $label-font-size;
-  font-weight: $label-font-weight;
-  color: $label-color;
+  font-size: $olt-label-font-size;
+  font-weight: $olt-label-font-weight;
+  color: $olt-label-color;
   padding: 0;
   margin-bottom: var-get('spacing1');
 }
 
 %control {
-  min-height: $control-height;
+  min-height: $olt-control-height;
   vertical-align: middle;
   border: 0;
-  border-bottom: $control-border-width solid $control-border-color;
-  border-radius: $control-border-radius;
-  padding: $control-padding-y $control-padding-x;
-  font-size: $control-font-size;
-  line-height: $control-line-height;
-  font-weight: $control-font-weight;
+  border-bottom: $olt-control-border-width solid $olt-control-border-color;
+  border-radius: $olt-control-border-radius;
+  padding: $olt-control-padding-y $olt-control-padding-x;
+  font-size: $olt-control-font-size;
+  line-height: $olt-control-line-height;
+  font-weight: $olt-control-font-weight;
 }

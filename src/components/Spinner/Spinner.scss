@@ -1,4 +1,4 @@
-.#{$namespace}Spinner {
+.Spinner {
   @-webkit-keyframes lds-dual-ring {
     0% {
       -webkit-transform: rotate(0);
@@ -24,7 +24,7 @@
   }
 
   @at-root {
-    %#{$namespace}spinner {
+    %spinner {
       display: inline-block;
       width: 1.5em;
       height: 1.5em;
@@ -40,14 +40,14 @@
   }
 
   &:empty {
-    @extend %#{$namespace}spinner;
+    @extend %spinner;
   }
 
   &:not(:empty) {
     &:before {
       content: '';
 
-      @extend %#{$namespace}spinner;
+      @extend %spinner;
     }
   }
 

@@ -1,4 +1,4 @@
-.#{$namespace}Tag {
+.Tag {
   $tag-color: var-get('gray500');
   $tag-background: var-get('colorLight');
   $tag-border-color: currentColor;
@@ -6,7 +6,6 @@
   $tag-border-radius: 0;
   $tag-padding-x: var-get('spacing2');
   $tag-padding-y: var-get('spacing1');
-  $tag-font-size: var-get('fontSizeSmall');
   $tag-font-family: var-get('fontFamilyMono');
   $self: &;
 
@@ -14,7 +13,7 @@
   align-items: center;
   line-height: 1;
   height: 1.625rem;
-  font-size: $tag-font-size;
+  font-size: $olt-tag-font-size;
   padding: $tag-padding-y $tag-padding-x;
   font-family: $tag-font-family;
   text-transform: uppercase;
@@ -81,7 +80,7 @@
 
     &[data-icon] {
       &:before {
-        @extend .#{$namespace}Icon:before;
+        @extend .Icon:before;
 
         content: attr(data-icon);
       }
@@ -89,7 +88,7 @@
 
     &[data-close] {
       &:after {
-        @extend .#{$namespace}Icon:before;
+        @extend .Icon:before;
 
         content: 'close';
       }

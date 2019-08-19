@@ -7,7 +7,7 @@
       $infix: screen-infix($breakpoint);
 
       @include screen-up($breakpoint) {
-        .#{$namespace}u-#{$infix}#{$util} {
+        .u-#{$infix}#{$util} {
           -webkit-overflow-scrolling: touch;
           #{$prop}: #{$value} !important;
         }
@@ -21,7 +21,7 @@
   $infix: screen-infix($breakpoint);
 
   @include screen-up($breakpoint) {
-    .#{$namespace}u-#{$infix}overflowSnap {
+    .u-#{$infix}overflowSnap {
       scroll-snap-type: mandatory;
       scroll-snap-points-y: repeat(100vw);
       scroll-snap-type: x mandatory;

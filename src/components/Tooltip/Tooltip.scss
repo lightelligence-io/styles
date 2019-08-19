@@ -1,4 +1,4 @@
-.#{$namespace}Tooltip {
+.Tooltip {
   $self: &;
 
   position: relative;
@@ -14,7 +14,7 @@
   &-content {
     padding: 0.25rem;
     background: var-get('colorPrimary');
-    font-size: 0.75rem;
+    font-size: $olt-tooltip-font-size;
     color: var-get('colorLight');
     position: absolute;
     top: 0;
@@ -23,13 +23,13 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
     opacity: 0;
     display: none;
-    z-index: 950;
+    z-index: $olt-z-index-tooltip;
     border-radius: 2px;
 
     p {
       padding: 0;
       width: 10rem;
-      line-height: 0.875rem;
+      line-height: $olt-tooltip-line-height;
       margin: 0;
     }
 

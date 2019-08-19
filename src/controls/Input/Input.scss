@@ -1,8 +1,8 @@
-.#{$namespace}Input {
+.Input {
   @extend %control;
 
   border: 0;
-  border-bottom: $control-border-width solid $control-border-color;
+  border-bottom: $olt-control-border-width solid $olt-control-border-color;
   border-radius: 0;
 
   &:focus {

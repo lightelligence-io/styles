@@ -1,4 +1,4 @@
-.#{$namespace}Tabs {
+.Tabs {
   display: flex;
   flex-wrap: wrap;
   margin: 0 var-get('spacing1');
@@ -14,13 +14,13 @@
     appearance: none;
     display: block;
     cursor: pointer;
-    line-height: 1.25rem;
+    line-height: $olt-tabs-line-height;
     transition: all ease 0.2s;
     padding: 0 var-get('spacing1');
     text-decoration: none;
 
     @include screen-up(md) {
-      font-size: 1.25rem;
+      font-size: $olt-tabs-font-size-lg-up;
     }
 
     &:focus {

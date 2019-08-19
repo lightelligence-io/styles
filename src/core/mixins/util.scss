@@ -16,7 +16,7 @@
         $infix: screen-infix($breakpoint);
 
         @include screen-up($breakpoint) {
-          .#{$namespace}u-#{$infix}#{$util}#{$name} {
+          .u-#{$infix}#{$util}#{$name} {
             #{$prop}: #{$value} !important;
             @content;
           }

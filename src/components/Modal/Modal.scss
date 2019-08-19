@@ -1,4 +1,4 @@
-.#{$namespace}Modal {
+.Modal {
   $modal-border-radius: var-get('borderRadius');
   $modal-backdrop: rgba(255, 255, 255, 0.7);
   $modal-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
@@ -29,7 +29,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 1002;
+  z-index: $olt-z-index-modal;
   display: flex;
   clip: rect(0, 0, 0, 0);
   font-family: var-get('fontFamilyBase');
@@ -45,7 +45,7 @@
     flex-wrap: wrap;
     transition: transform $modal-transition-duration $modal-transition-timing-function;
     transform: translateY(100%);
-    z-index: 999;
+    z-index: $olt-z-index-modal-dialog;
     //pointer-events: auto;
     cursor: auto;
     //box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
@@ -61,7 +61,7 @@
       justify-content: center;
       align-items: flex-end;
       color: white;
-      font-size: 50px;
+      font-size: 50px; // icon size
       vertical-align: middle;
       line-height: 64px;
       margin-bottom: -20px;
@@ -107,7 +107,7 @@
     text-align: center;
   }
 
-  &-content .#{$namespace}Container {
+  &-content .Container {
     padding-left: 0;
     padding-right: 0;
   }
@@ -121,16 +121,16 @@
     align-self: center;
     justify-content: center;
     margin: 0;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: $olt-modal-title-font-size;
+    line-height: $olt-modal-title-line-height;
     font-weight: bold;
     margin: 0;
   }
 
   &-close {
-    @extend .#{$namespace}Button;
+    @extend .Button;
 
-    @extend .#{$namespace}Button[data-icon];
+    @extend .Button[data-icon];
 
     &:before {
       content: 'close';
@@ -142,11 +142,11 @@
     position: fixed; // TODO: Get it of the overflow stuff
     right: var-get('spacing3');
     top: var-get('spacing3');
-    z-index: 1003;
+    z-index: $olt-z-index-modal-close;
   }
 
   &-dialog &-close {
-    @extend .#{$namespace}Button--outline;
+    @extend .Button--outline;
   }
 
   &--error:not(&--fullscreen) &-dialog,
@@ -260,7 +260,7 @@
       right: var-get('spacing3');
       top: var-get('spacing3');
       background: #fff;
-      font-size: 16px;
+      font-size: 16px; // icon size
       font-weight: bold;
       text-align: center;
       cursor: pointer;

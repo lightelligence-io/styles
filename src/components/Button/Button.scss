@@ -1,10 +1,9 @@
-.#{$namespace}Button {
+.Button {
   $button-padding-x: 1rem;
   $button-padding-y: 0;
   $button-border-color: var-get('borderColor');
   $button-background: var-get('borderColor');
   $button-border-width: var-get('borderWidth');
-  $button-border-radius: 2.5rem;
   $button-color: var-get('colorDark');
   $button-pending-opacity: 0.4;
   $button-pending-dark: rgba(#000, $button-pending-opacity); // TODO: Hardcode button-pending-color for the sake of css variables
@@ -12,18 +11,18 @@
   $self: &;
 
   position: relative;
-  line-height: 2.25rem;
+  line-height: $olt-button-line-height;
   background-color: $button-background;
   border-style: solid;
   border-color: $button-border-color;
   border-width: $button-border-width;
-  border-radius: $button-border-radius;
+  border-radius: $olt-button-border-radius;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   white-space: nowrap;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: $olt-button-font-size;
   cursor: pointer;
   transition: all 300ms;
   min-width: 120px;
@@ -90,7 +89,7 @@
 
   &--icon,
   &[data-icon] {
-    @extend .#{$namespace}Icon;
+    @extend .Icon;
 
     &:before {
       font-size: 150%;
@@ -134,7 +133,7 @@
     &:after {
       content: '';
 
-      @extend %#{$namespace}spinner;
+      @extend %spinner;
 
       display: flex;
       justify-content: center;

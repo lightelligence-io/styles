@@ -1,4 +1,4 @@
-.#{$namespace}Table {
+.Table {
   $table-border-color: var-get('gray300');
   $table-header-color: var-get('gray600');
   $table-header-background: var-get('gray100');
@@ -44,7 +44,7 @@
 
     border: 0;
     color: $table-header-color;
-    font-size: var-get('fontSizeSmall');
+    font-size: $olt-table-header-font-size;
     padding: $table-cell-spacing;
     text-align: left;
     text-transform: uppercase;

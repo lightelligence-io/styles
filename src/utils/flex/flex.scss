@@ -3,13 +3,13 @@
 
   @include screen-up($breakpoint) {
     @each $value in ('column', 'column-reverse', 'row', 'row-reverse') {
-      .#{$namespace}u-#{$infix}flex#{string-capitalize(string-camelize($value))} {
+      .u-#{$infix}flex#{string-capitalize(string-camelize($value))} {
         flex-direction: #{$value} !important;
       }
     }
 
     @each $value in ('wrap', 'wrap-reverse', 'nowrap') {
-      .#{$namespace}u-#{$infix}flex#{string-capitalize(string-camelize($value))} {
+      .u-#{$infix}flex#{string-capitalize(string-camelize($value))} {
         flex-wrap: #{$value} !important;
       }
     }

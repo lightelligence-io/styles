@@ -3,10 +3,12 @@ $screen-prefix: 'olt-';
 $screen-style: kebabCase;
 
 // Breakpoints
-@include screen-set((
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-));
+@include screen-set(
+  (
+    xs: var-get-value(breakpoint xs),
+    sm: var-get-value(breakpoint sm),
+    md: var-get-value(breakpoint md),
+    lg: var-get-value(breakpoint lg),
+    xl: var-get-value(breakpoint xl),
+  )
+);

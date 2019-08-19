@@ -1,9 +1,8 @@
-.#{$namespace}Navbar {
+.Navbar {
   $navbar-height: 56px;
   $navbar-padding-x: 1rem;
   $navbar-padding-y: 0;
   $navbar-backdrop: rgba(255, 255, 255, 0.7);
-  $navbar-content-z: 1000;
   $navbar-logo: './components/Navbar/lightelligence.svg';
 
   $self: &;
@@ -15,15 +14,15 @@
   position: relative;
   min-height: $navbar-height;
   padding: $navbar-padding-y $navbar-padding-x;
-  font-size: 0.875rem;
+  font-size: $olt-navbar-font-size;
 
   @include screen-down('lg') {
-    font-size: 1.125rem;
+    font-size: $olt-navbar-font-size-lg-down;
   }
 
   @include contextual-colors();
 
-  .#{$namespace}Container & {
+  .Container & {
     padding-left: 0;
     padding-right: 0;
   }
@@ -79,10 +78,10 @@
     margin-left: auto;
 
     &:after {
-      @extend .#{$namespace}Icon:before;
+      @extend .Icon:before;
 
       content: 'menu';
-      font-size: 2.25rem;
+      font-size: 2.25rem; // icon size
     }
 
     &:before {
@@ -94,9 +93,7 @@
       right: 0;
       bottom: 0;
       background: $navbar-backdrop;
-      // make sure that the backdrop is below the content,
-      // having both elements (backdrop + content) on z-index 1000 causes the backdrop to be rendered above the content on firefox (not chrome)
-      z-index: #{$navbar-content-z - 1};
+      z-index: $olt-z-index-navbar-backdrop;
       display: none;
     }
 
@@ -107,7 +104,7 @@
 
   &-content {
     position: fixed;
-    z-index: $navbar-content-z;
+    z-index: $olt-z-index-navbar-content;
     left: 0;
     top: 0;
     bottom: 0;
@@ -126,8 +123,8 @@
       width: 100%;
     }
 
-    > .#{$namespace}Menu {
-      @extend .#{$namespace}Menu--dark;
+    > .Menu {
+      @extend .Menu--dark;
     }
   }
 
@@ -150,12 +147,12 @@
   }
 
   @include screen-down(lg) {
-    .#{$namespace}Menu.#{$namespace}Menu--sub {
+    .Menu.Menu--sub {
       font-size: inherit;
       background: inherit;
 
-      > .#{$namespace}Menu-item {
-        > .#{$namespace}Menu-link {
+      > .Menu-item {
+        > .Menu-link {
           color: var-get('colorLight');
 
           &:link,
@@ -175,7 +172,7 @@
       }
     }
 
-    .#{$namespace}Dropdown-content {
+    .Dropdown-content {
       background: inherit;
     }
   }
@@ -228,7 +225,7 @@
         }
       }
 
-      > .#{$namespace}Menu {
+      > .Menu {
         display: flex;
         flex-direction: row;
         align-items: stretch;

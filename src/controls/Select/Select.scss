@@ -1,4 +1,4 @@
-.#{$namespace}Select {
+.Select {
   @mixin selectBackgroundGradient ($color: gray) {
     // use floats because of ugly google-chrome subpixel rendering
     // 50.01 instead of 50% looks nicer in chrome.
@@ -11,7 +11,7 @@
 
   @extend %control;
 
-  font-size: 14px;
+  font-size: $olt-select-font-size;
 
   /* styling */
   background-color: white;
@@ -65,17 +65,17 @@
 
   &:not(.is-readonly):disabled,
   &:not(.is-readonly).is-disabled {
-    color: $control-disabled;
+    color: $olt-control-disabled-color;
     cursor: not-allowed;
-    border-bottom: dotted $control-border-width $control-disabled;
+    border-bottom: dotted $olt-control-border-width $olt-control-disabled-color;
 
-    @include selectBackgroundGradient($control-disabled);
+    @include selectBackgroundGradient($olt-control-disabled-color);
   }
 
   &.is-readonly {
     cursor: default;
     color: currentColor;
 
-    @include selectBackgroundGradient($control-disabled);
+    @include selectBackgroundGradient($olt-control-disabled-color);
   }
 }

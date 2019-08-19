@@ -1,7 +1,5 @@
-.#{$namespace}Link {
-  $link-color: var-get('colorPrimary');
+.Link {
   $link-decoration: none;
-  $link-hover-contrast: var-get('linkHoverContrast');
 
   cursor: pointer;
   padding-left: 0;
@@ -19,12 +17,12 @@
   &,
   &:link,
   &:visited {
-    color: $link-color;
+    color: $olt-link-color;
   }
 
   &:hover,
   &:focus {
-    filter: brightness(calc(100% - #{$link-hover-contrast)}));
+    filter: brightness(calc(100% - #{$olt-link-hover-contrast}));
   }
 
   &:focus {

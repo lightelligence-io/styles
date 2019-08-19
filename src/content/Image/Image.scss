@@ -1,4 +1,4 @@
-.#{$namespace}Image {
+.Image {
   $image-border-radius: var-get('borderRadius');
 
   &:not(#{&}--natural) {
