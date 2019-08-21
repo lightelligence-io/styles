@@ -603,4 +603,19 @@ $button-colors: (
       }
     }
   }
+
+  &--icon,
+  &[data-icon] {
+    vertical-align:bottom;
+    &:before {
+      @include icon-font-material;
+      font-size: 120%;
+      content: attr(data-icon);
+    }
+  }
+
+
+  &--iconRightAligned {
+    flex-direction: row-reverse;
+  }
 }

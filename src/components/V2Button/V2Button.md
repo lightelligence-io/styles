@@ -21,6 +21,21 @@ category: Component
 		olt-V2Button--primary 
 		olt-V2Button--light">Default</button>
 <button 
+	data-icon="close"
+	class="
+		olt-V2Button 
+		olt-V2Button--default 
+		olt-V2Button--primary 
+		olt-V2Button--light">Default with Icon</button>
+<button 
+	data-icon="close"
+	class="
+		olt-V2Button--iconRightAligned
+		olt-V2Button 
+		olt-V2Button--default 
+		olt-V2Button--primary 
+		olt-V2Button--light">Default with Icon</button>
+<button 
 	disabled
 	class="
 		olt-V2Button 
@@ -70,6 +85,21 @@ button {
 		olt-V2Button--default 
 		olt-V2Button--primary 
 		olt-V2Button--dark">Default</button>
+<button 
+	data-icon="close"
+	class="
+		olt-V2Button 
+		olt-V2Button--default 
+		olt-V2Button--primary 
+		olt-V2Button--dark">Default with Icon</button>
+<button 
+	data-icon="close"
+	class="
+		olt-V2Button--iconRightAligned
+		olt-V2Button 
+		olt-V2Button--default 
+		olt-V2Button--primary 
+		olt-V2Button--dark">Default with Icon</button>
 <button 
 	disabled
 	class="
@@ -127,6 +157,21 @@ button {
 		olt-V2Button--secondary 
 		olt-V2Button--light">Default</button>
 <button 
+	data-icon="close"
+	class="
+		olt-V2Button 
+		olt-V2Button--default 
+		olt-V2Button--secondary 
+		olt-V2Button--light">Default with Icon</button>
+<button 
+	data-icon="close"
+	class="
+		olt-V2Button--iconRightAligned
+		olt-V2Button 
+		olt-V2Button--default 
+		olt-V2Button--secondary 
+		olt-V2Button--light">Default with Icon</button>
+<button 
 	disabled
 	class="
 		olt-V2Button 
@@ -176,6 +221,21 @@ button {
 		olt-V2Button--default 
 		olt-V2Button--secondary 
 		olt-V2Button--dark">Default</button>
+<button 
+	data-icon="close"
+	class="
+		olt-V2Button 
+		olt-V2Button--default 
+		olt-V2Button--secondary 
+		olt-V2Button--dark">Default with Icon</button>
+<button 
+	data-icon="close"
+	class="
+		olt-V2Button--iconRightAligned
+		olt-V2Button 
+		olt-V2Button--default 
+		olt-V2Button--secondary 
+		olt-V2Button--dark">Default with Icon</button>
 <button 
 	disabled
 	class="
@@ -229,6 +289,21 @@ button {
 		olt-V2Button--default 
 		olt-V2Button--tertiary 
 		olt-V2Button--light">Default</button>
+<button 
+	data-icon="close"
+	class="
+		olt-V2Button 
+		olt-V2Button--default 
+		olt-V2Button--tertiary 
+		olt-V2Button--light">Default with Icon</button>
+<button 
+	data-icon="close"
+	class="
+		olt-V2Button--iconRightAligned
+		olt-V2Button 
+		olt-V2Button--default 
+		olt-V2Button--tertiary 
+		olt-V2Button--light">Default with Icon</button>
 <button 
 	disabled
 	class="
@@ -292,6 +367,21 @@ button {
 		olt-V2Button--default 
 		olt-V2Button--tertiary 
 		olt-V2Button--dark">Default</button>
+<button 
+	data-icon="close"
+	class="
+		olt-V2Button 
+		olt-V2Button--default 
+		olt-V2Button--tertiary 
+		olt-V2Button--dark">Default with Icon</button>
+<button 
+	data-icon="close"
+	class="
+		olt-V2Button--iconRightAligned
+		olt-V2Button 
+		olt-V2Button--default 
+		olt-V2Button--tertiary 
+		olt-V2Button--dark">Default with Icon</button>
 <button 
 	disabled
 	class="
