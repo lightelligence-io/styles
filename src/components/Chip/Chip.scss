@@ -70,6 +70,24 @@ $chip-colors: (
       disabled: #a7a8aa,
     ),
   ),
+  active: (
+    selectable: true,
+    disableable: true,
+    bubble-color: (
+      normal: #f60,
+    ),
+    color: (
+      normal: #f60,
+      disabled: #a7a8aa,
+    ),
+    background: (
+      normal: #ffe0cc,
+      hover: #ffc299,
+      press: #ffa366,
+      focus: #ffe0cc,
+      disabled: #f5f6f8,
+    ),
+  ),
   primary: (
     selectable: true,
     disableable: true,

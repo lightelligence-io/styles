@@ -363,7 +363,7 @@ modifiers :
 
 - `--dark`
 - `--light`
-- `--primary`
+- `--primary/--active`
 - `--error`
 - `--success`
 - `--info`
@@ -372,6 +372,7 @@ modifiers :
 <span class="olt-Chip">Default</span>
 <span class="olt-Chip olt-Chip--dark">Dark</span>
 <span class="olt-Chip olt-Chip--primary">Primary</span>
+<span class="olt-Chip olt-Chip--active">Active</span>
 <span class="olt-Chip olt-Chip--error">Error</span>
 <span class="olt-Chip olt-Chip--success">Success</span>
 <span class="olt-Chip olt-Chip--info">Info</span>
