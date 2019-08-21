@@ -336,7 +336,6 @@ $chip-colors: (
     }
 
     &--info {
-      // This not var-get('colorInfo');
       background-color: #46b4cd;
     }
 
@@ -345,7 +344,6 @@ $chip-colors: (
     }
 
     &--warning {
-      // This is not var-get('colorWarning');
       background-color: #ffc94d;
     }
   }
