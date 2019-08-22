@@ -4,11 +4,11 @@ $button-colors: (
     'default': (
       'light': (
         'bg': (
-          'normal': #ff6600,
+          'normal': #f60,
           'hover': #ff944d,
           'press': #cf5509,
-          'focus': #ff6600,
-          'progress': #ff6600,
+          'focus': #f60,
+          'progress': #f60,
           'disabled': #f5f6f8,
         ),
         'border': (),
@@ -94,7 +94,7 @@ $button-colors: (
       ),
       'dark': (
         'bg': (
-          'normal': #000000,
+          'normal': #000,
           'hover': #fff,
           'press': #b7b8c0,
           'focus': #b7b8c0,
@@ -136,10 +136,10 @@ $button-colors: (
       ),
       'dark': (
         'bg': (
-          'normal': #000000,
+          'normal': #000,
           'hover': #02bf1b,
           'press': #049c1e,
-          'focus': #000000,
+          'focus': #000,
           'progress': #02bf1b,
         ),
         'font': (
@@ -207,7 +207,7 @@ $button-colors: (
       ),
       'dark': (
         'bg': (
-          'normal': #000000,
+          'normal': #000,
         ),
         'border': (
           'normal': #58585a,
@@ -232,7 +232,7 @@ $button-colors: (
           'normal': transparent,
         ),
         'font': (
-          'normal': #ff6600,
+          'normal': #f60,
         ),
       ),
       'dark': (
@@ -247,7 +247,7 @@ $button-colors: (
           'normal': transparent,
         ),
         'font': (
-          'normal': #ff6600,
+          'normal': #f60,
         ),
       ),
     ),
@@ -383,6 +383,7 @@ $button-colors: (
   @if not $colors {
     @return $colors;
   }
+
   @if length($path) == 0 {
     @return $colors;
   }
@@ -390,15 +391,18 @@ $button-colors: (
   $p: nth($path, 1);
   $tail: remove-nth($path, 1);
   $next: map-get($colors, $p);
+
   @return get-button-value($tail, $next);
 }
 
 @function get-bg-value($base, $state, $theme) {
   $first: get-button-value(append-all($base, $theme 'bg' $state));
+
   @if ($first) {
     @return $first;
   }
   $second: get-button-value(append-all($base, $theme 'bg' 'normal'));
+
   @return $second;
 }
 
@@ -420,15 +424,18 @@ $button-colors: (
   @if $theme == 'light' {
     @return get-bg-light-value($base, $state);
   }
+
   @return get-bg-dark-value($base, $state);
 }
 
 @function get-font-value($base, $state, $theme) {
   $first: get-button-value(append-all($base, $theme 'font' $state));
+
   @if ($first) {
     @return $first;
   }
   $second: get-button-value(append-all($base, $theme 'font' 'normal'));
+
   @return $second;
 }
 
@@ -450,19 +457,23 @@ $button-colors: (
   @if $theme == 'light' {
     @return get-font-light-value($base, $state);
   }
+
   @return get-font-dark-value($base, $state);
 }
 
 @function get-border-value($base, $state, $theme) {
   $first: get-button-value(append-all($base, $theme 'border' $state));
+
   @if ($first) {
     @return $first;
   }
   $first: get-button-value(append-all($base, $theme 'bg' $state));
+
   @if ($first) {
     @return $first;
   }
   $first: get-button-value(append-all($base, $theme 'bg' 'normal'));
+
   @return $first;
 }
 
@@ -472,9 +483,11 @@ $button-colors: (
 
 @function get-border-dark-value($base, $state) {
   $first: get-border-value($base, $state, 'dark');
+
   @if ($first) {
     @return $first;
   }
+
   @return get-border-value($base, $state, 'light');
 }
 
@@ -482,6 +495,7 @@ $button-colors: (
   @if $theme == 'light' {
     @return get-border-light-value($base, $state);
   }
+
   @return get-border-dark-value($base, $state);
 }
 
