@@ -6,8 +6,8 @@
   @return radial-gradient(
     circle at top right,
     transparent,
-    transparent 11px,
-    $color 11px,
+    transparent 10.5px,
+    $color 11.5px,
     $color
   );
 }
@@ -60,7 +60,7 @@ $chip-colors: (
     ),
     color: (
       normal: var-get('colorDark'),
-      disabled: #58585a,
+      disabled: var-get('gray600'),
     ),
     background: (
       normal: var-get('colorLight'),
@@ -91,10 +91,10 @@ $chip-colors: (
   ),
   error: (
     bubble-color: (
-      normal: #fd5952,
+      normal: var-get('colorError'),
     ),
     color: (
-      normal: #fd5952,
+      normal: var-get('colorError'),
     ),
     background: (
       normal: #ffdedc,
@@ -287,16 +287,16 @@ $chip-colors: (
       }
 
       @if $disableable == true {
-        &#{$selector}--disabled {
+        &.is-disabled {
           background: map-get($background, 'disabled');
           color: map-get($color, 'disabled');
         }
 
-        &#{$selector}--disabled#{$self}--bubble {
+        &.is-disabled#{$self}--bubble {
           background: chip-bubble-background(map-get($background, 'disabled'));
         }
 
-        &#{$selector}--disabled #{$self}-bubble {
+        &.is-disabled #{$self}-bubble {
           background: map-get($background, 'disabled');
           color: map-get($color, 'disabled');
         }
@@ -332,7 +332,7 @@ $chip-colors: (
   &--selectable#{$self}--bubble:hover #{$self}-bubble,
   &--selectable#{$self}--bubble:active #{$self}-bubble,
   &--selectable#{$self}--bubble:focus #{$self}-bubble,
-  &--disabled#{$self}--bubble #{$self}-bubble {
+  &.is-disabled#{$self}--bubble #{$self}-bubble {
     &--success,
     &--info,
     &--error,

@@ -82,7 +82,7 @@ names.
               <span class="olt-Chip olt-Chip--selectable">Label</span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip--disabled">Disabled</span>
+              <span class="olt-Chip is-disabled">Disabled</span>
             </div>
           </div>
         </div>
@@ -125,7 +125,7 @@ names.
               <span class="olt-Chip olt-Chip--dark olt-Chip--selectable">Label</span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip--dark olt-Chip--disabled">Disabled</span>
+              <span class="olt-Chip olt-Chip--dark is-disabled">Disabled</span>
             </div>
           </div>
         </div>
@@ -168,7 +168,7 @@ names.
               <span class="olt-Chip olt-Chip--light olt-Chip--selectable">Label</span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip--light olt-Chip--disabled">Disabled</span>
+              <span class="olt-Chip olt-Chip--light is-disabled">Disabled</span>
             </div>
           </div>
         </div>
@@ -211,7 +211,7 @@ names.
               <span class="olt-Chip olt-Chip--primary olt-Chip--selectable">Label</span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip--primary olt-Chip--disabled">Disabled</span>
+              <span class="olt-Chip olt-Chip--primary is-disabled">Disabled</span>
             </div>
           </div>
         </div>
@@ -382,18 +382,18 @@ modifiers :
 
 ### Disabled
 
-_Chips_ which are not `--error`, `--success` or `--info` can have the `--disabled`
-modifier which will make them disabled
+_Chips_ which are not `--error`, `--success` or `--info` can have the `is-disabled`
+state which will make them disabled
 
 ```disabled.html
 <span class="olt-Chip">Default</span>
-<span class="olt-Chip olt-Chip--disabled">Default Disabled</span>
+<span class="olt-Chip is-disabled">Default Disabled</span>
 <br/><br />
 <span class="olt-Chip olt-Chip--dark">Dark</span>
-<span class="olt-Chip olt-Chip--dark olt-Chip--disabled">Dark Disabled</span>
+<span class="olt-Chip olt-Chip--dark is-disabled">Dark Disabled</span>
 <br/><br />
 <span class="olt-Chip olt-Chip--primary">Primary</span>
-<span class="olt-Chip olt-Chip--primary olt-Chip--disabled">Primary Disabled</span>
+<span class="olt-Chip olt-Chip--primary is-disabled">Primary Disabled</span>
 ```
 
 ### Selectable
