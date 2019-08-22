@@ -26,10 +26,10 @@ $button-colors: (
       'light': (
         'bg': (
           'normal': #fd5952,
-          'hover': #FD8A85,
-          'press': #CC4A49,
-          'focus': #FD5952,
-          'progress': #FD8A85,
+          'hover': #fd8a85,
+          'press': #cc4a49,
+          'focus': #fd5952,
+          'progress': #fd8a85,
         ),
         'font': (
           'normal': #fff,
@@ -37,7 +37,7 @@ $button-colors: (
       ),
       'dark': (),
     ),
-    'constructive': (
+    'confirmative': (
       'light': (
         'bg': (
           'normal': #02bf1b,
@@ -50,9 +50,7 @@ $button-colors: (
           'normal': #fff,
         ),
       ),
-      'dark': (
-
-      )
+      'dark': (),
     ),
     'disabled': (
       'light': (
@@ -115,7 +113,7 @@ $button-colors: (
         ),
       ),
     ),
-    'constructive': (
+    'confirmative': (
       'light': (
         'bg': (
           'normal': #fff,
@@ -162,37 +160,37 @@ $button-colors: (
         'bg': (
           'normal': #fff,
           'hover': #fd5952,
-          'press': #CC4A49,
+          'press': #cc4a49,
           'focus': #fff,
           'progress': #fd5952,
         ),
-        'border':(
+        'border': (
           'normal': #fd5952,
           'focus': #fd5952,
         ),
-        'font':(
+        'font': (
           'normal': #fd5952,
           'hover': #fff,
           'press': #fff,
-        )
+        ),
       ),
       'dark': (
         'bg': (
           'normal': #000,
           'hover': #fd5952,
-          'press': #CC4A49,
+          'press': #cc4a49,
           'focus': #000,
           'progress': #fd5952,
         ),
-        'border':(
+        'border': (
           'normal': #fd5952,
           'focus': #fd5952,
         ),
-        'font':(
+        'font': (
           'normal': #fd5952,
           'hover': #fff,
           'press': #fff,
-        )
+        ),
       ),
     ),
     'disabled': (
@@ -221,12 +219,12 @@ $button-colors: (
     ),
   ),
   'tertiary': (
-    'default': (
+    'action': (
       'light': (
         'bg': (
           'normal': transparent,
-          'hover': #FFEFE5,
-          'press': #FFD1B2,
+          'hover': #ffefe5,
+          'press': #ffd1b2,
           'focus': transparent,
           'progress': transparent,
         ),
@@ -240,11 +238,10 @@ $button-colors: (
       'dark': (
         'bg': (
           'normal': transparent,
-          'hover': #4D1F00,
+          'hover': #4d1f00,
           'press': #803300,
           'focus': transparent,
           'progress': transparent,
-
         ),
         'border': (
           'normal': transparent,
@@ -254,12 +251,12 @@ $button-colors: (
         ),
       ),
     ),
-    'constructive': (
+    'confirmative': (
       'light': (
         'bg': (
           'normal': transparent,
-          'hover': #F6F7F9,
-          'press': #CCF2D1,
+          'hover': #f6f7f9,
+          'press': #ccf2d1,
           'focus': transparent,
           'progress': transparent,
         ),
@@ -273,11 +270,10 @@ $button-colors: (
       'dark': (
         'bg': (
           'normal': transparent,
-          'hover': #2F2F30,
+          'hover': #2f2f30,
           'press': #013908,
           'focus': transparent,
           'progress': transparent,
-
         ),
         'border': (
           'normal': transparent,
@@ -291,8 +287,8 @@ $button-colors: (
       'light': (
         'bg': (
           'normal': transparent,
-          'hover': #F6F7F9,
-          'press': #FFDEDC,
+          'hover': #f6f7f9,
+          'press': #ffdedc,
           'focus': transparent,
           'progress': transparent,
         ),
@@ -306,11 +302,10 @@ $button-colors: (
       'dark': (
         'bg': (
           'normal': transparent,
-          'hover': #2F2F30,
-          'press': #4C1B19,
+          'hover': #2f2f30,
+          'press': #4c1b19,
           'focus': transparent,
           'progress': transparent,
-
         ),
         'border': (
           'normal': transparent,
@@ -320,12 +315,12 @@ $button-colors: (
         ),
       ),
     ),
-    'marginal': (
+    'default': (
       'light': (
         'bg': (
           'normal': transparent,
-          'hover': #F6F7F9,
-          'press': #E4E4E5,
+          'hover': #f6f7f9,
+          'press': #e4e4e5,
           'focus': transparent,
           'progress': transparent,
         ),
@@ -339,11 +334,10 @@ $button-colors: (
       'dark': (
         'bg': (
           'normal': transparent,
-          'hover': #2F2F30,
+          'hover': #2f2f30,
           'press': #434344,
           'focus': transparent,
           'progress': transparent,
-
         ),
         'border': (
           'normal': transparent,
@@ -386,7 +380,6 @@ $button-colors: (
 }
 
 @function get-button-value($path, $colors: $button-colors) {
-  // @debug $path;
   @if not $colors {
     @return $colors;
   }
@@ -401,8 +394,6 @@ $button-colors: (
 }
 
 @function get-bg-value($base, $state, $theme) {
-  @debug $base;
-  @debug append-all($base, $theme 'bg' $state);
   $first: get-button-value(append-all($base, $theme 'bg' $state));
   @if ($first) {
     @return $first;
@@ -494,6 +485,100 @@ $button-colors: (
   @return get-border-dark-value($base, $state);
 }
 
+
+@function toNotSelector ($modifiers, $self) {
+  $res: '';
+
+  @each $m in $modifiers {
+    $res: '#{$res}:not(#{$self}--#{$m})';
+  }
+
+  @return $res;
+}
+
+@mixin button-type ($self, $emphasis, $theme, $type) {
+  &:not(:disabled) {
+    background: get-bg-by-theme($emphasis $type, 'normal', $theme);
+    border-color: get-border-by-theme($emphasis $type, 'normal', $theme);
+    color: get-font-by-theme($emphasis $type, 'normal', $theme);
+
+    // TODO discuss with team-ui if we want to have the blue outlines for the
+    // focus state.
+
+    /*
+    &:focus {
+      &:after {
+        content: '';
+        position: absolute;
+        width: calc(100% + 8px);
+        height: calc(100% + 8px);
+        border-radius: $olt-button-border-radius;
+        border-style: solid;
+        border-color: map-get($button-colors, 'focus');
+        border-width: 2px;
+      }
+    }
+    */
+
+    &:hover {
+      background: get-bg-by-theme($emphasis $type, 'hover', $theme);
+      border-color: get-border-by-theme($emphasis $type, 'hover', $theme);
+      color: get-font-by-theme($emphasis $type, 'hover', $theme);
+    }
+
+    &:active {
+      background: get-bg-by-theme($emphasis $type, 'press', $theme);
+      border-color: get-border-by-theme($emphasis $type, 'press', $theme);
+      color: get-font-by-theme($emphasis $type, 'press', $theme);
+    }
+  }
+}
+
+@mixin button-theme ($self, $emphasis, $theme) {
+  &:disabled {
+    user-select: none;
+    cursor: default;
+    background: get-bg-by-theme($emphasis 'disabled', 'normal', $theme);
+    border-color: get-border-by-theme($emphasis 'disabled', 'normal', $theme);
+    color: get-font-by-theme($emphasis 'disabled', 'normal', $theme);
+  }
+  $types-base: ('default' 'destructive' 'confirmative');
+  $types: if(
+    $emphasis == 'tertiary',
+    append($types-base, 'action'),
+    $types-base
+  );
+
+  &#{toNotSelector($types, $self)} {
+    @include button-type($self, $emphasis, $theme, 'default');
+  }
+
+  @each $type in $types {
+    &#{$self}--#{$type} {
+      @include button-type($self, $emphasis, $theme, $type);
+    }
+  }
+}
+
+@mixin button-emphasis($self, $emphasis) {
+
+  $themes: ('light', 'dark');
+
+  // set default if no other style is set
+  &#{toNotSelector($themes, $self)} {
+    @include button-theme($self, $emphasis, 'light');
+  }
+
+  @each $theme in ('light' 'dark') {
+    &#{$self}--#{$theme} {
+      @include button-theme($self, $emphasis, $theme);
+    }
+  }
+}
+
+
+
+
 .V2Button {
   $button-padding-x: 1rem;
   $button-padding-y: 0;
@@ -513,10 +598,11 @@ $button-colors: (
   $self: &;
 
   position: relative;
-  line-height: $olt-button-line-height;
   // background-color: $button-background;
   background: none;
   border-style: solid;
+  vertical-align: middle;
+  line-height: $olt-button-line-height;
   // border-color: $button-border-color;
   border-width: $button-border-width;
   border-radius: $olt-button-border-radius;
@@ -533,6 +619,7 @@ $button-colors: (
   color: $button-color;
   padding: $button-padding-y $button-padding-x;
 
+  // reset focus state
   &.is-active,
   &:focus {
     outline-width: 0;
@@ -541,81 +628,36 @@ $button-colors: (
     outline-style: solid;
   }
 
-  @each $style in ('primary' 'secondary' 'tertiary') {
-    &--#{$style} {
-      @each $theme in ('light' 'dark') {
-        &#{$self}--#{$theme} {
-          &:disabled {
-            user-select: none;
-            cursor: default;
-            background: get-bg-by-theme($style 'disabled', 'normal', $theme);
-            border-color: get-border-by-theme(
-              $style 'disabled',
-              'normal',
-              $theme
-            );
+  $emphases: ('primary' 'secondary' 'tertiary');
+  // set default if no other emphasis is set
+  &#{toNotSelector($emphases, $self)} {
+    @include button-emphasis($self, 'primary');
+  }
 
-            color: get-font-by-theme($style 'disabled', 'normal', $theme);
-          }
-
-          $types: if($style == 'tertiary', ('marginal' 'default' 'destructive' 'constructive'), ('default' 'destructive' 'constructive'));
-
-          @each $type in $types {
-            &#{$self}--#{$type}:not(:disabled) {
-              background: get-bg-by-theme($style $type, 'normal', $theme);
-              border-color: get-border-by-theme($style $type, 'normal', $theme);
-              color: get-font-by-theme($style $type, 'normal', $theme);
-
-              &:focus {
-                &:after {
-                  content: '';
-                  position: absolute;
-                  width: calc(100% + 8px);
-                  height: calc(100% + 8px);
-                  border-radius: $olt-button-border-radius;
-                  border-style: solid;
-                  border-color: map-get($button-colors, 'focus');
-                  border-width: 2px;
-                }
-              }
-              &:hover {
-                background: get-bg-by-theme($style $type, 'hover', $theme);
-                border-color: get-border-by-theme(
-                  $style $type,
-                  'hover',
-                  $theme
-                );
-                color: get-font-by-theme($style $type, 'hover', $theme);
-              }
-              &:active {
-
-                background: get-bg-by-theme($style $type, 'press', $theme);
-                border-color: get-border-by-theme(
-                  $style $type,
-                  'press',
-                  $theme
-                );
-                color: get-font-by-theme($style $type, 'press', $theme);
-              }
-            }
-          }
-        }
-      }
+  @each $emphasis in $emphases {
+    &#{$self}--#{$emphasis} {
+      @include button-emphasis($self, $emphasis);
     }
   }
 
-  &--icon,
-  &[data-icon] {
-    vertical-align:bottom;
+  &[data-icon-left],
+  &[data-icon-right] {
     &:before {
       @include icon-font-material;
+
       font-size: 120%;
-      content: attr(data-icon);
     }
   }
 
+  &[data-icon-left]:before {
+    content: attr(data-icon-left);
+  }
 
-  &--iconRightAligned {
+  &[data-icon-right] {
     flex-direction: row-reverse;
+
+    &:before {
+      content: attr(data-icon-right);
+    }
   }
 }
