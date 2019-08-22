@@ -485,8 +485,7 @@ $button-colors: (
   @return get-border-dark-value($base, $state);
 }
 
-
-@function toNotSelector ($modifiers, $self) {
+@function toNotSelector($modifiers, $self) {
   $res: '';
 
   @each $m in $modifiers {
@@ -496,7 +495,7 @@ $button-colors: (
   @return $res;
 }
 
-@mixin button-type ($self, $emphasis, $theme, $type) {
+@mixin button-type($self, $emphasis, $theme, $type) {
   &:not(:disabled) {
     background: get-bg-by-theme($emphasis $type, 'normal', $theme);
     border-color: get-border-by-theme($emphasis $type, 'normal', $theme);
@@ -534,7 +533,7 @@ $button-colors: (
   }
 }
 
-@mixin button-theme ($self, $emphasis, $theme) {
+@mixin button-theme($self, $emphasis, $theme) {
   &:disabled {
     user-select: none;
     cursor: default;
@@ -561,7 +560,6 @@ $button-colors: (
 }
 
 @mixin button-emphasis($self, $emphasis) {
-
   $themes: ('light', 'dark');
 
   // set default if no other style is set
@@ -575,9 +573,6 @@ $button-colors: (
     }
   }
 }
-
-
-
 
 .V2Button {
   $button-padding-x: 1rem;

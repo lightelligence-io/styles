@@ -1059,14 +1059,3 @@ Buttons for confirmative actions are available with three levels of emphasis and
     </div>
   </div>
 </div>
-
-
-
-
-```primary-light.css
-    body {  padding: 10px; }
-    button {
-        margin-right: 10px;
-        margin-bottom:10px;
-    }
-```
