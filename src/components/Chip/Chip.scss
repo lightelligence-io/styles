@@ -70,27 +70,10 @@ $chip-colors: (
       disabled: #a7a8aa,
     ),
   ),
-  active: (
-    selectable: true,
-    disableable: true,
-    bubble-color: (
-      normal: #f60,
-    ),
-    color: (
-      normal: #f60,
-      disabled: #a7a8aa,
-    ),
-    background: (
-      normal: #ffe0cc,
-      hover: #ffc299,
-      press: #ffa366,
-      focus: #ffe0cc,
-      disabled: #f5f6f8,
-    ),
-  ),
   primary: (
     selectable: true,
     disableable: true,
+    alias: 'active',
     bubble-color: (
       normal: #f60,
     ),
@@ -328,6 +311,14 @@ $chip-colors: (
       @at-root {
         &--#{$label} {
           @include chip-colors($map, $self);
+        }
+
+        @if map-has_key($map, 'alias') {
+          $alias: map-get($map, 'alias');
+
+          &--#{$alias} {
+            @include chip-colors($map, $self);
+          }
         }
       }
     }
