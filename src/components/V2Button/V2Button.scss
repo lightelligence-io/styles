@@ -509,11 +509,21 @@ $button-colors: (
   @return $res;
 }
 
+@mixin setButtonStateDefaults($self, $emphasis, $theme, $type, $state) {
+  $borderColor: get-border-by-theme($emphasis $type, $state, $theme);
+
+  @if ($theme == 'dark') {
+    box-shadow: 0 0 0.5px 0 $borderColor, 0 0 0.5px $borderColor;
+  }
+
+  background: get-bg-by-theme($emphasis $type, $state, $theme);
+  border-color: $borderColor;
+  color: get-font-by-theme($emphasis $type, $state, $theme);
+}
+
 @mixin button-type($self, $emphasis, $theme, $type) {
   &:not(:disabled) {
-    background: get-bg-by-theme($emphasis $type, 'normal', $theme);
-    border-color: get-border-by-theme($emphasis $type, 'normal', $theme);
-    color: get-font-by-theme($emphasis $type, 'normal', $theme);
+    @include setButtonStateDefaults($self, $emphasis, $theme, $type, 'normal');
 
     // TODO discuss with team-ui if we want to have the blue outlines for the
     // focus state.
@@ -534,15 +544,11 @@ $button-colors: (
     */
 
     &:hover {
-      background: get-bg-by-theme($emphasis $type, 'hover', $theme);
-      border-color: get-border-by-theme($emphasis $type, 'hover', $theme);
-      color: get-font-by-theme($emphasis $type, 'hover', $theme);
+      @include setButtonStateDefaults($self, $emphasis, $theme, $type, 'hover');
     }
 
     &:active {
-      background: get-bg-by-theme($emphasis $type, 'press', $theme);
-      border-color: get-border-by-theme($emphasis $type, 'press', $theme);
-      color: get-font-by-theme($emphasis $type, 'press', $theme);
+      @include setButtonStateDefaults($self, $emphasis, $theme, $type, 'press');
     }
   }
 }
@@ -596,6 +602,8 @@ $button-colors: (
   $button-border-width: 1px; // var-get('borderWidth');
   $button-color: var-get('colorDark');
   $button-pending-opacity: 0.4;
+  $button-font-size: 14px;
+  $button-line-height: 18px;
   $button-pending-dark: rgba(
     #000,
     $button-pending-opacity
@@ -609,9 +617,10 @@ $button-colors: (
   position: relative;
   // background-color: $button-background;
   background: none;
+  min-height: 36px;
   border-style: solid;
   vertical-align: middle;
-  line-height: $olt-button-line-height;
+  line-height: $button-line-height;
   // border-color: $button-border-color;
   border-width: $button-border-width;
   border-radius: $olt-button-border-radius;
@@ -620,7 +629,7 @@ $button-colors: (
   justify-content: center;
   white-space: nowrap;
   text-decoration: none;
-  font-size: $olt-button-font-size;
+  font-size: $button-font-size;
   cursor: pointer;
   transition: all 300ms;
   // min-width: 120px;
