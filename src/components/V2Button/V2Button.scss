@@ -367,234 +367,197 @@ $button-colors: (
     ),
   ),
 );
-// $button-colors: ();
-
-@function append-all($list, $append_list) {
-  @if (length($append_list) == 0) {
-    @return $list;
-  }
-  $first: nth($append_list, 1);
-  $tail: remove-nth($append_list, 1);
-
-  @return append-all(append($list, $first), $tail);
-}
-
-@function get-button-value($path, $colors: $button-colors) {
-  @if not $colors {
-    @return $colors;
-  }
-
-  @if length($path) == 0 {
-    @return $colors;
-  }
-
-  $p: nth($path, 1);
-  $tail: remove-nth($path, 1);
-  $next: map-get($colors, $p);
-
-  @return get-button-value($tail, $next);
-}
-
-@function get-bg-value($base, $state, $theme) {
-  $first: get-button-value(append-all($base, $theme 'bg' $state));
-
-  @if ($first) {
-    @return $first;
-  }
-  $second: get-button-value(append-all($base, $theme 'bg' 'normal'));
-
-  @return $second;
-}
-
-@function get-bg-light-value($base, $state) {
-  @return get-bg-value($base, $state, 'light');
-}
-
-@function get-bg-dark-value($base, $state) {
-  $first: get-bg-value($base, $state, 'dark');
-
-  @if ($first) {
-    @return $first;
-  }
-
-  @return get-bg-light-value($base, $state);
-}
-
-@function get-bg-by-theme($base, $state, $theme) {
-  @if $theme == 'light' {
-    @return get-bg-light-value($base, $state);
-  }
-
-  @return get-bg-dark-value($base, $state);
-}
-
-@function get-font-value($base, $state, $theme) {
-  $first: get-button-value(append-all($base, $theme 'font' $state));
-
-  @if ($first) {
-    @return $first;
-  }
-  $second: get-button-value(append-all($base, $theme 'font' 'normal'));
-
-  @return $second;
-}
-
-@function get-font-light-value($base, $state) {
-  @return get-font-value($base, $state, 'light');
-}
-
-@function get-font-dark-value($base, $state) {
-  $first: get-font-value($base, $state, 'dark');
-
-  @if ($first) {
-    @return $first;
-  }
-
-  @return get-font-light-value($base, $state);
-}
-
-@function get-font-by-theme($base, $state, $theme) {
-  @if $theme == 'light' {
-    @return get-font-light-value($base, $state);
-  }
-
-  @return get-font-dark-value($base, $state);
-}
-
-@function get-border-value($base, $state, $theme) {
-  $first: get-button-value(append-all($base, $theme 'border' $state));
-
-  @if ($first) {
-    @return $first;
-  }
-  $first: get-button-value(append-all($base, $theme 'bg' $state));
-
-  @if ($first) {
-    @return $first;
-  }
-  $first: get-button-value(append-all($base, $theme 'bg' 'normal'));
-
-  @return $first;
-}
-
-@function get-border-light-value($base, $state) {
-  @return get-border-value($base, $state, 'light');
-}
-
-@function get-border-dark-value($base, $state) {
-  $first: get-border-value($base, $state, 'dark');
-
-  @if ($first) {
-    @return $first;
-  }
-
-  @return get-border-value($base, $state, 'light');
-}
-
-@function get-border-by-theme($base, $state, $theme) {
-  @if $theme == 'light' {
-    @return get-border-light-value($base, $state);
-  }
-
-  @return get-border-dark-value($base, $state);
-}
-
-@function toNotSelector($modifiers, $self) {
-  $res: '';
-
-  @each $m in $modifiers {
-    $res: '#{$res}:not(#{$self}--#{$m})';
-  }
-
-  @return $res;
-}
-
-@mixin setButtonStateDefaults($self, $emphasis, $theme, $type, $state) {
-  $borderColor: get-border-by-theme($emphasis $type, $state, $theme);
-
-  @if ($theme == 'dark') {
-    box-shadow: 0 0 0.5px 0 $borderColor, 0 0 0.5px $borderColor;
-  }
-
-  background: get-bg-by-theme($emphasis $type, $state, $theme);
-  border-color: $borderColor;
-  color: get-font-by-theme($emphasis $type, $state, $theme);
-}
-
-@mixin button-type($self, $emphasis, $theme, $type) {
-  &:not(:disabled) {
-    @include setButtonStateDefaults($self, $emphasis, $theme, $type, 'normal');
-
-    // TODO discuss with team-ui if we want to have the blue outlines for the
-    // focus state.
-
-    /*
-    &:focus {
-      &:after {
-        content: '';
-        position: absolute;
-        width: calc(100% + 8px);
-        height: calc(100% + 8px);
-        border-radius: $olt-button-border-radius;
-        border-style: solid;
-        border-color: map-get($button-colors, 'focus');
-        border-width: 2px;
-      }
-    }
-    */
-
-    &:hover {
-      @include setButtonStateDefaults($self, $emphasis, $theme, $type, 'hover');
-    }
-
-    &:active {
-      @include setButtonStateDefaults($self, $emphasis, $theme, $type, 'press');
-    }
-  }
-}
-
-@mixin button-theme($self, $emphasis, $theme) {
-  &:disabled {
-    user-select: none;
-    cursor: default;
-    background: get-bg-by-theme($emphasis 'disabled', 'normal', $theme);
-    border-color: get-border-by-theme($emphasis 'disabled', 'normal', $theme);
-    color: get-font-by-theme($emphasis 'disabled', 'normal', $theme);
-  }
-  $types-base: ('default' 'destructive' 'confirmative');
-  $types: if(
-    $emphasis == 'tertiary',
-    append($types-base, 'action'),
-    $types-base
-  );
-
-  &#{toNotSelector($types, $self)} {
-    @include button-type($self, $emphasis, $theme, 'default');
-  }
-
-  @each $type in $types {
-    &#{$self}--#{$type} {
-      @include button-type($self, $emphasis, $theme, $type);
-    }
-  }
-}
-
-@mixin button-emphasis($self, $emphasis) {
-  $themes: ('light', 'dark');
-
-  // set default if no other style is set
-  &#{toNotSelector($themes, $self)} {
-    @include button-theme($self, $emphasis, 'light');
-  }
-
-  @each $theme in ('light' 'dark') {
-    &#{$self}--#{$theme} {
-      @include button-theme($self, $emphasis, $theme);
-    }
-  }
-}
 
 .V2Button {
+  /**
+  * Returns the nested value specified by `$path` inside of `$object`.
+  * `get-nested-value(a b, (a: (b: 1))) => 1`
+  *
+  **/
+  @function get-nested-value($path, $object: $button-colors) {
+    @if not $object {
+      @return $object;
+    }
+
+    @if length($path) == 0 {
+      @return $object;
+    }
+
+    $p: nth($path, 1);
+    $tail: remove-nth($path, 1);
+    $next: map-get($object, $p);
+
+    @return get-nested-value($tail, $next);
+  }
+
+  @function button-get-bg-value($base, $state, $theme) {
+    $val: get-nested-value(concat($base, $theme 'bg' $state));
+
+    @if ($val) {
+      @return $val;
+    }
+
+    @return get-nested-value(concat($base, $theme 'bg' 'normal'));
+  }
+
+  @function button-get-bg-with-fallback($base, $state, $theme) {
+    @if $theme == 'dark' {
+      $val: button-get-bg-value($base, $state, 'dark');
+
+      @if ($val) {
+        @return $val;
+      }
+    }
+
+    @return button-get-bg-value($base, $state, 'light');
+  }
+
+  @function button-get-font-value($base, $state, $theme) {
+    $first: get-nested-value(concat($base, $theme 'font' $state));
+
+    @if ($first) {
+      @return $first;
+    }
+    $second: get-nested-value(concat($base, $theme 'font' 'normal'));
+
+    @return $second;
+  }
+
+  @function button-get-font-with-fallback($base, $state, $theme) {
+    @if $theme == 'dark' {
+      $val: button-get-font-value($base, $state, 'dark');
+
+      @if ($val) {
+        @return $val;
+      }
+    }
+
+    @return button-get-font-value($base, $state, 'light');
+  }
+
+  @function button-get-border-value($base, $state, $theme) {
+    $first: get-nested-value(concat($base, $theme 'border' $state));
+
+    @if ($first) {
+      @return $first;
+    }
+    $first: get-nested-value(concat($base, $theme 'bg' $state));
+
+    @if ($first) {
+      @return $first;
+    }
+    $first: get-nested-value(concat($base, $theme 'bg' 'normal'));
+
+    @return $first;
+  }
+
+  @function button-get-border-with-fallback($base, $state, $theme) {
+    @if $theme == 'dark' {
+      $val: button-get-border-value($base, $state, 'dark');
+
+      @if ($val) {
+        @return $val;
+      }
+    }
+
+    @return button-get-border-value($base, $state, 'light');
+  }
+
+  @function not-any-selector($modifiers, $self) {
+    $res: '';
+
+    @each $m in $modifiers {
+      $res: '#{$res}:not(#{$self}--#{$m})';
+    }
+
+    @return $res;
+  }
+
+  @mixin button-set-state-defaults($self, $emphasis, $theme, $type, $state) {
+    $borderColor: button-get-border-with-fallback($emphasis $type, $state, $theme);
+
+    @if ($theme == 'dark') {
+      box-shadow: 0 0 0.5px 0 $borderColor, 0 0 0.5px $borderColor;
+    }
+
+    background: button-get-bg-with-fallback($emphasis $type, $state, $theme);
+    border-color: $borderColor;
+    color: button-get-font-with-fallback($emphasis $type, $state, $theme);
+  }
+
+  @mixin button-type($self, $emphasis, $theme, $type) {
+    &:not(:disabled) {
+      @include button-set-state-defaults($self, $emphasis, $theme, $type, 'normal');
+
+      // TODO discuss with team-ui if we want to have the blue outlines for the
+      // focus state.
+
+      /*
+      &:focus {
+        &:after {
+          content: '';
+          position: absolute;
+          width: calc(100% + 8px);
+          height: calc(100% + 8px);
+          border-radius: $olt-button-border-radius;
+          border-style: solid;
+          border-color: map-get($button-colors, 'focus');
+          border-width: 2px;
+        }
+      }
+      */
+
+      &:hover {
+        @include button-set-state-defaults($self, $emphasis, $theme, $type, 'hover');
+      }
+
+      &:active {
+        @include button-set-state-defaults($self, $emphasis, $theme, $type, 'press');
+      }
+    }
+  }
+
+  @mixin button-theme($self, $emphasis, $theme) {
+    &:disabled {
+      user-select: none;
+      cursor: default;
+      background: button-get-bg-with-fallback($emphasis 'disabled', 'normal', $theme);
+      border-color: button-get-border-with-fallback($emphasis 'disabled', 'normal', $theme);
+      color: button-get-font-with-fallback($emphasis 'disabled', 'normal', $theme);
+    }
+    $types-base: ('default' 'destructive' 'confirmative');
+    $types: if(
+      $emphasis == 'tertiary',
+      append($types-base, 'action'),
+      $types-base
+    );
+
+    &#{not-any-selector($types, $self)} {
+      @include button-type($self, $emphasis, $theme, 'default');
+    }
+
+    @each $type in $types {
+      &#{$self}--#{$type} {
+        @include button-type($self, $emphasis, $theme, $type);
+      }
+    }
+  }
+
+  @mixin button-emphasis($self, $emphasis) {
+    $themes: ('light', 'dark');
+
+    // set default if no other style is set
+    &#{not-any-selector($themes, $self)} {
+      @include button-theme($self, $emphasis, 'light');
+    }
+
+    @each $theme in ('light' 'dark') {
+      &#{$self}--#{$theme} {
+        @include button-theme($self, $emphasis, $theme);
+      }
+    }
+  }
+
   $button-padding-x: 1rem;
   $button-padding-y: 0;
   $button-border-color: var-get('borderColor');
@@ -648,7 +611,7 @@ $button-colors: (
 
   $emphases: ('primary' 'secondary' 'tertiary');
   // set default if no other emphasis is set
-  &#{toNotSelector($emphases, $self)} {
+  &#{not-any-selector($emphases, $self)} {
     @include button-emphasis($self, 'primary');
   }
 
