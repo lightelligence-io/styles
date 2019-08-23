@@ -1,0 +1,359 @@
+/**
+ * Generates a background with a clipped circle on the top right position that
+ * will match the bubble's circle size
+ */
+@function chip-bubble-background($color) {
+  @return radial-gradient(
+    circle at top right,
+    transparent,
+    transparent 10.5px,
+    $color 11.5px,
+    $color
+  );
+}
+
+/**
+ * All contextual colors of the chip
+ */
+$chip-colors: (
+  default: (
+    selectable: true,
+    disableable: true,
+    bubble-color: (
+      normal: #495057,
+    ),
+    color: (
+      normal: var-get('colorDark'),
+      disabled: #a7a8aa,
+    ),
+    background: (
+      normal: var-get('gray200'),
+      hover: #f3f5f6,
+      press: #babcbf,
+      focus: #e9ecef,
+      disabled: #f3f5f7,
+    ),
+  ),
+  dark: (
+    selectable: true,
+    disableable: true,
+    bubble-color: (
+      normal: #d0d1d3,
+    ),
+    color: (
+      normal: var-get('colorLight'),
+      disabled: #a7a8aa,
+    ),
+    background: (
+      normal: var-get('colorDark'),
+      hover: #5b5b5b,
+      press: #c5c5c5,
+      focus: var-get('colorDark'),
+      disabled: #f3f5f7,
+    ),
+  ),
+  light: (
+    selectable: true,
+    disableable: true,
+    bubble-color: (
+      normal: var-get('colorDark'),
+    ),
+    color: (
+      normal: var-get('colorDark'),
+      disabled: var-get('gray600'),
+    ),
+    background: (
+      normal: var-get('colorLight'),
+      hover: #b2b2b2,
+      press: #666,
+      focus: var-get('colorLight'),
+      disabled: #a7a8aa,
+    ),
+  ),
+  primary: (
+    selectable: true,
+    disableable: true,
+    alias: 'active',
+    bubble-color: (
+      normal: #f60,
+    ),
+    color: (
+      normal: #f60,
+      disabled: #a7a8aa,
+    ),
+    background: (
+      normal: #ffe0cc,
+      hover: #ffc299,
+      press: #ffa366,
+      focus: #ffe0cc,
+      disabled: #f5f6f8,
+    ),
+  ),
+  error: (
+    bubble-color: (
+      normal: var-get('colorError'),
+    ),
+    color: (
+      normal: var-get('colorError'),
+    ),
+    background: (
+      normal: #ffdedc,
+    ),
+  ),
+  success: (
+    bubble-color: (
+      normal: #00bf1a,
+    ),
+    color: (
+      normal: #00bf1a,
+    ),
+    background: (
+      normal: #d9f5dd,
+    ),
+  ),
+  info: (
+    bubble-color: (
+      normal: #46b4cd,
+    ),
+    color: (
+      normal: #46b4cd,
+    ),
+    background: (
+      normal: #daf0f5,
+    ),
+  ),
+);
+
+.Chip {
+  $self: &;
+
+  display: inline-flex;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-family: var-get('fontFamilyBase');
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 18px;
+  border-radius: 12.5px;
+  background-size: cover;
+  padding: 3px 12px 4px 12px;
+  position: relative;
+
+  //
+  // Selectable
+  //
+
+  &--selectable {
+    cursor: pointer;
+  }
+
+  //
+  // Left & Right decorations
+  //
+
+  &:before,
+  &:after {
+    @include icon-font-material;
+
+    display: inline-flex;
+    vertical-align: middle;
+    font-size: 14px;
+  }
+
+  &[data-icon-left] {
+    padding-left: 8px;
+
+    &:before {
+      margin-right: 1px;
+      content: attr(data-icon-left);
+    }
+  }
+
+  &[data-icon-right] {
+    padding-right: 8px;
+
+    &:after {
+      margin-left: 1px;
+      content: attr(data-icon-right);
+    }
+  }
+
+  //
+  // Bubble
+  //
+
+  &--bubble {
+    padding-right: 13px;
+    margin-right: 8px;
+  }
+
+  &-bubble {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-weight: var-get('fontWeightBold');
+    font-size: 8px;
+    letter-spacing: 0;
+    line-height: 16px;
+    border-radius: 100%;
+    text-align: center;
+    width: 17px;
+    height: 17px;
+
+    &[data-icon] {
+      &:before {
+        @include icon-font-material;
+
+        display: inline-flex;
+        vertical-align: middle;
+        font-size: 11px;
+        font-weight: 900;
+        content: attr(data-icon);
+      }
+    }
+  }
+
+  //
+  // Colors
+  //
+
+  @mixin chip-colors($color-map, $selector) {
+    $color: map-get($color-map, 'color');
+    $background: map-get($color-map, 'background');
+    $bubble-color: map-get($color-map, 'bubble-color');
+    $selectable: map-get($color-map, 'selectable');
+    $disableable: map-get($color-map, 'disableable');
+
+    color: map-get($color, 'normal');
+    background: map-get($background, 'normal');
+
+    @if $selector == '' {
+      &-bubble {
+        background: map-get($background, 'normal');
+        color: map-get($bubble-color, 'normal');
+      }
+    } @else {
+      & #{$selector}-bubble {
+        background: map-get($background, 'normal');
+        color: map-get($bubble-color, 'normal');
+      }
+    }
+
+    @at-root {
+      &#{$selector}--bubble {
+        background: chip-bubble-background(map-get($background, 'normal'));
+      }
+
+      @if $selectable == true {
+        &#{$selector}--selectable {
+          &:hover {
+            background: map-get($background, 'hover');
+          }
+
+          &:active {
+            background: map-get($background, 'press');
+          }
+
+          &:focus {
+            background: map-get($background, 'focus');
+          }
+        }
+
+        &#{$selector}--selectable#{$self}--bubble {
+          &:hover {
+            background: chip-bubble-background(map-get($background, 'hover'));
+
+            #{$self}-bubble {
+              background: map-get($background, 'hover');
+            }
+          }
+
+          &:active {
+            background: chip-bubble-background(map-get($background, 'press'));
+
+            #{$self}-bubble {
+              background: map-get($background, 'press');
+            }
+          }
+
+          &:focus {
+            background: chip-bubble-background(map-get($background, 'focus'));
+
+            #{$self}-bubble {
+              background: map-get($background, 'focus');
+            }
+          }
+        }
+      }
+
+      @if $disableable == true {
+        &.is-disabled {
+          background: map-get($background, 'disabled');
+          color: map-get($color, 'disabled');
+        }
+
+        &.is-disabled#{$self}--bubble {
+          background: chip-bubble-background(map-get($background, 'disabled'));
+        }
+
+        &.is-disabled #{$self}-bubble {
+          background: map-get($background, 'disabled');
+          color: map-get($color, 'disabled');
+        }
+      }
+    }
+  }
+
+  @each $label, $map in $chip-colors {
+    @if $label == 'default' {
+      @include chip-colors($map, '');
+    } @else {
+      @at-root {
+        &--#{$label} {
+          @include chip-colors($map, $self);
+        }
+
+        @if map-has_key($map, 'alias') {
+          $alias: map-get($map, 'alias');
+
+          &--#{$alias} {
+            @include chip-colors($map, $self);
+          }
+        }
+      }
+    }
+  }
+
+  //
+  // Special bubble colors
+  //
+
+  &-bubble,
+  &--selectable#{$self}--bubble:hover #{$self}-bubble,
+  &--selectable#{$self}--bubble:active #{$self}-bubble,
+  &--selectable#{$self}--bubble:focus #{$self}-bubble,
+  &.is-disabled#{$self}--bubble #{$self}-bubble {
+    &--success,
+    &--info,
+    &--error,
+    &--warning {
+      color: var-get('colorLight');
+    }
+
+    &--success {
+      background-color: var-get('colorSuccess');
+    }
+
+    &--info {
+      background-color: #46b4cd;
+    }
+
+    &--error {
+      background-color: var-get('colorError');
+    }
+
+    &--warning {
+      background-color: #ffc94d;
+    }
+  }
+}

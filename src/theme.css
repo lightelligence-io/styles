@@ -113,12 +113,9 @@ a.i-sidebar-list-item:hover b {
 }
 
 .theme-content-element-description h1 {
-  /*padding: 15px 0;*/
-  /*margin-bottom: 0;*/
 }
 
 .theme-content-element-description h2 {
-  /*padding: 15px 0;*/
   font-weight: 600;
 }
 
@@ -269,7 +266,7 @@ a.i-sidebar-list-item:hover b {
  * ~~~~~~~
  */
 
- .demo-title {
+.demo-title {
   height: 30px;
 }
 
