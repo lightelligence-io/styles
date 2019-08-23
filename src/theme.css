@@ -113,12 +113,9 @@ a.i-sidebar-list-item:hover b {
 }
 
 .theme-content-element-description h1 {
-  /*padding: 15px 0;*/
-  /*margin-bottom: 0;*/
 }
 
 .theme-content-element-description h2 {
-  /*padding: 15px 0;*/
   font-weight: 600;
 }
 
@@ -262,4 +259,102 @@ a.i-sidebar-list-item:hover b {
 
 .i-example [data-src='data-cards-modifiers-small.html'] {
   max-width: 500px;
+}
+
+/**
+ *  Chips
+ * ~~~~~~~
+ */
+
+.demo-title {
+  height: 30px;
+}
+
+.demo-subtitle {
+  height: 124px;
+}
+
+.demo-spacer {
+  height: 170px;
+}
+
+.demo-spacer {
+  display: block;
+}
+
+.demo-spacer--small {
+  height: 20px;
+  display: block;
+}
+
+.demo-label {
+  font-family: 'Overpass Mono', serif;
+  font-size: 12px;
+  color: #000;
+  letter-spacing: 0;
+  line-height: 18px;
+  height: 50px;
+  display: flex;
+  vertical-align: middle;
+  text-transform: uppercase;
+  align-items: center;
+  position: relative;
+  padding-left: 30px;
+}
+
+.demo-label:after,
+.demo-label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.demo-label:before {
+  border-left: 1px solid #979797;
+  top: 0;
+  bottom: 0;
+}
+
+.demo-label:after {
+  border-top: 1px solid #979797;
+  height: 0;
+  top: 25px;
+  width: 18px;
+}
+
+.demo-label:first-child:before {
+  top: 25px;
+}
+
+.demo-label:last-child:before {
+  bottom: 25px;
+}
+
+.demo-content {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.demo-title {
+  font-family: 'PT Sans', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 0;
+  line-height: 28px;
+  text-align: left;
+  padding-left: 10px;
+  display: block;
+}
+
+.demo-subtitle {
+  font-family: 'PT Sans', serif;
+  font-size: 16px;
+  color: #000;
+  letter-spacing: 0;
+  line-height: 24px;
+  padding-top: 16px;
+  padding-left: 10px;
 }
