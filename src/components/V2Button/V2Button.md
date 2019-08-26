@@ -156,7 +156,7 @@ Contrasting levels of emphasis help the user to differentiate between important 
         </div>
       </div>
       <div class="olt-Grid-item olt-Grid-item--3">
-        <div class="demo-title">Tertiary / Active</div>
+        <div class="demo-title">Tertiary / Action</div>
         <div class="demo-subtitle">
           Recurring actions (Text, Primary)
         </div>
@@ -347,7 +347,7 @@ Contrasting levels of emphasis help the user to differentiate between important 
         </div>
       </div>
       <div class="olt-Grid-item olt-Grid-item--3">
-        <div class="demo-title">Tertiary / Active</div>
+        <div class="demo-title">Tertiary / Action</div>
         <div class="demo-subtitle">
           Recurring actions (Text, Primary)
         </div>
