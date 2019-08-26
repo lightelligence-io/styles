@@ -392,13 +392,13 @@
   }
 
   @function button-get-bg-value($base, $state, $theme) {
-    $val: get-nested-value(concat($base, $theme 'bg' $state));
+    $val: get-nested-value(join($base, $theme 'bg' $state));
 
     @if ($val) {
       @return $val;
     }
 
-    @return get-nested-value(concat($base, $theme 'bg' 'normal'));
+    @return get-nested-value(join($base, $theme 'bg' 'normal'));
   }
 
   @function button-get-bg-with-fallback($base, $state, $theme) {
@@ -414,14 +414,13 @@
   }
 
   @function button-get-font-value($base, $state, $theme) {
-    $first: get-nested-value(concat($base, $theme 'font' $state));
+    $val: get-nested-value(join($base, $theme 'font' $state));
 
-    @if ($first) {
-      @return $first;
+    @if ($val) {
+      @return $val;
     }
-    $second: get-nested-value(concat($base, $theme 'font' 'normal'));
 
-    @return $second;
+    @return get-nested-value(join($base, $theme 'font' 'normal'));
   }
 
   @function button-get-font-with-fallback($base, $state, $theme) {
@@ -437,19 +436,18 @@
   }
 
   @function button-get-border-value($base, $state, $theme) {
-    $first: get-nested-value(concat($base, $theme 'border' $state));
+    $val: get-nested-value(join($base, $theme 'border' $state));
 
-    @if ($first) {
-      @return $first;
+    @if ($val) {
+      @return $val;
     }
-    $first: get-nested-value(concat($base, $theme 'bg' $state));
+    $val: get-nested-value(join($base, $theme 'bg' $state));
 
-    @if ($first) {
-      @return $first;
+    @if ($val) {
+      @return $val;
     }
-    $first: get-nested-value(concat($base, $theme 'bg' 'normal'));
 
-    @return $first;
+    @return get-nested-value(join($base, $theme 'bg' 'normal'));
   }
 
   @function button-get-border-with-fallback($base, $state, $theme) {

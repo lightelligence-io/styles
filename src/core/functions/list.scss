@@ -29,20 +29,3 @@
 
   @return $result;
 }
-
-/**
- * Concatenates `$list` and `$append_list`.
- *
- * Example:
- * `concat(a b, c d) => a b c d`
- *
- **/
-@function concat($list, $append_list) {
-  @if (length($append_list) == 0) {
-    @return $list;
-  }
-  $first: nth($append_list, 1);
-  $tail: remove-nth($append_list, 1);
-
-  @return concat(append($list, $first), $tail);
-}
