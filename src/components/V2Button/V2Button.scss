@@ -496,24 +496,8 @@
     &:disabled {
       user-select: none;
       cursor: default;
-      background:
-        button-get-bg-with-fallback(
-          $emphasis 'disabled',
-          'normal',
-          $theme
-        );
-      border-color:
-        button-get-border-with-fallback(
-          $emphasis 'disabled',
-          'normal',
-          $theme
-        );
-      color:
-        button-get-font-with-fallback(
-          $emphasis 'disabled',
-          'normal',
-          $theme
-        );
+
+      @include button-set-state-defaults($self, $emphasis, $theme, 'disabled', 'normal');
     }
     $types-base: ('default' 'destructive' 'confirmative');
     $types: if(
