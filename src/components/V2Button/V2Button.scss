@@ -1,7 +1,6 @@
 .V2Button {
 
   $button-colors: (
-    'focus': #46b4cd,
     'primary': (
       'default': (
         'light': (
@@ -9,7 +8,6 @@
             'normal': var-get('colorPrimary'),
             'hover': #ff944d,
             'press': #cf5509,
-            'focus': var-get('colorPrimary'),
             'progress': var-get('colorPrimary'),
             'disabled': var-get('gray100'),
           ),
@@ -30,7 +28,6 @@
             'normal': var-get('colorError'),
             'hover': #fd8a85,
             'press': #cc4a49,
-            'focus': var-get('colorError'),
             'progress': #fd8a85,
           ),
           'font': (
@@ -45,7 +42,6 @@
             'normal': var-get('colorSuccess'),
             'hover': #4dd25e,
             'press': #039b1e,
-            'focus': var-get('colorSuccess'),
             'progress': #4dd25e,
           ),
           'font': (
@@ -80,7 +76,6 @@
             'normal': var-get("colorLight"),
             'hover': var-get('colorSecondary'),
             'press': #3d4156,
-            'focus': var-get("colorLight"),
             'progress': var-get('colorSecondary'),
           ),
           'border': (
@@ -90,7 +85,6 @@
             'normal': var-get('colorSecondary'),
             'hover': var-get("colorLight"),
             'press': var-get("colorLight"),
-            'focus': var-get('colorSecondary'),
             'progress': var-get("colorLight"),
           ),
         ),
@@ -99,18 +93,15 @@
             'normal': #000,
             'hover': var-get("colorLight"),
             'press': #b7b8c0,
-            'focus': #b7b8c0,
             'progress': var-get("colorLight"),
           ),
           'border': (
             'normal': var-get("colorLight"),
-            'focus': var-get("colorLight"),
           ),
           'font': (
             'normal': var-get("colorLight"),
             'hover': var-get('colorSecondary'),
             'press': var-get('colorSecondary'),
-            'focus': var-get("colorLight"),
             'progress': var-get('colorSecondary'),
           ),
         ),
@@ -121,19 +112,16 @@
             'normal': var-get("colorLight"),
             'hover': var-get('colorSuccess'),
             'press': #049c1e,
-            'focus': var-get("colorLight"),
             'progress': var-get('colorSuccess'),
           ),
           'font': (
             'normal': var-get('colorSuccess'),
             'hover': var-get("colorLight"),
             'press': var-get("colorLight"),
-            'focus': var-get('colorSuccess'),
             'progress': var-get("colorLight"),
           ),
           'border': (
             'normal': var-get('colorSuccess'),
-            'focus': var-get('colorSuccess'),
           ),
         ),
         'dark': (
@@ -141,19 +129,16 @@
             'normal': var-get('colorDark'),
             'hover': var-get('colorSuccess'),
             'press': #049c1e,
-            'focus': var-get('colorDark'),
             'progress': var-get('colorSuccess'),
           ),
           'font': (
             'normal': var-get('colorSuccess'),
             'hover': var-get("colorLight"),
             'press': var-get("colorLight"),
-            'focus': var-get('colorSuccess'),
             'progress': var-get("colorLight"),
           ),
           'border': (
             'normal': var-get('colorSuccess'),
-            'focus': var-get('colorSuccess'),
           ),
         ),
       ),
@@ -163,12 +148,10 @@
             'normal': var-get("colorLight"),
             'hover': var-get('colorError'),
             'press': #cc4a49,
-            'focus': var-get("colorLight"),
             'progress': var-get('colorError'),
           ),
           'border': (
             'normal': var-get('colorError'),
-            'focus': var-get('colorError'),
           ),
           'font': (
             'normal': var-get('colorError'),
@@ -181,12 +164,10 @@
             'normal': var-get('colorDark'),
             'hover': var-get('colorError'),
             'press': #cc4a49,
-            'focus': var-get('colorDark'),
             'progress': var-get('colorError'),
           ),
           'border': (
             'normal': var-get('colorError'),
-            'focus': var-get('colorError'),
           ),
           'font': (
             'normal': var-get('colorError'),
@@ -227,7 +208,6 @@
             'normal': transparent,
             'hover': #ffefe5,
             'press': #ffd1b2,
-            'focus': transparent,
             'progress': transparent,
           ),
           'border': (
@@ -242,7 +222,6 @@
             'normal': transparent,
             'hover': #4d1f00,
             'press': #803300,
-            'focus': transparent,
             'progress': transparent,
           ),
           'border': (
@@ -259,7 +238,6 @@
             'normal': transparent,
             'hover': #f6f7f9,
             'press': #ccf2d1,
-            'focus': transparent,
             'progress': transparent,
           ),
           'border': (
@@ -274,7 +252,6 @@
             'normal': transparent,
             'hover': #2f2f30,
             'press': #013908,
-            'focus': transparent,
             'progress': transparent,
           ),
           'border': (
@@ -291,7 +268,6 @@
             'normal': transparent,
             'hover': #f6f7f9,
             'press': #ffdedc,
-            'focus': transparent,
             'progress': transparent,
           ),
           'border': (
@@ -306,7 +282,6 @@
             'normal': transparent,
             'hover': #2f2f30,
             'press': #4c1b19,
-            'focus': transparent,
             'progress': transparent,
           ),
           'border': (
@@ -323,7 +298,6 @@
             'normal': transparent,
             'hover': #f6f7f9,
             'press': #e4e4e5,
-            'focus': transparent,
             'progress': transparent,
           ),
           'border': (
@@ -338,7 +312,6 @@
             'normal': transparent,
             'hover': #2f2f30,
             'press': #434344,
-            'focus': transparent,
             'progress': transparent,
           ),
           'border': (
@@ -488,24 +461,6 @@
     &:not(:disabled) {
       @include button-set-state-defaults($self, $emphasis, $theme, $type, 'normal');
 
-      // TODO discuss with team-ui if we want to have the blue outlines for the
-      // focus state.
-
-      /*
-      &:focus {
-        &:after {
-          content: '';
-          position: absolute;
-          width: calc(100% + 8px);
-          height: calc(100% + 8px);
-          border-radius: $olt-button-border-radius;
-          border-style: solid;
-          border-color: map-get($button-colors, 'focus');
-          border-width: 2px;
-        }
-      }
-      */
-
       &:hover {
         @include button-set-state-defaults($self, $emphasis, $theme, $type, 'hover');
       }
@@ -577,13 +532,11 @@
   $self: &;
 
   position: relative;
-  // background-color: $button-background;
   background: none;
   min-height: 36px;
   border-style: solid;
   vertical-align: middle;
   line-height: $button-line-height;
-  // border-color: $button-border-color;
   border-width: $button-border-width;
   border-radius: $olt-button-border-radius;
   display: inline-flex;
@@ -594,19 +547,9 @@
   font-size: $button-font-size;
   cursor: pointer;
   transition: all 300ms;
-  // min-width: 120px;
   -webkit-appearance: none;
   color: $button-color;
   padding: $button-padding-y $button-padding-x;
-
-  // reset focus state
-  &.is-active,
-  &:focus {
-    outline-width: 0;
-    // safari fix, without setting this from auto to solid a blue outline is shown
-    // even if outline-width is set to 0
-    outline-style: solid;
-  }
 
   $emphases: ('primary' 'secondary' 'tertiary');
   // set default if no other emphasis is set
