@@ -1,5 +1,4 @@
 .V2Button {
-
   $button-colors: (
     'primary': (
       'default': (
@@ -13,7 +12,7 @@
           ),
           'border': (),
           'font': (
-            'normal': var-get("colorLight"),
+            'normal': var-get('colorLight'),
           ),
         ),
         'dark': (
@@ -31,7 +30,7 @@
             'progress': #fd8a85,
           ),
           'font': (
-            'normal': var-get("colorLight"),
+            'normal': var-get('colorLight'),
           ),
         ),
         'dark': (),
@@ -45,7 +44,7 @@
             'progress': #4dd25e,
           ),
           'font': (
-            'normal': var-get("colorLight"),
+            'normal': var-get('colorLight'),
           ),
         ),
         'dark': (),
@@ -73,7 +72,7 @@
       'default': (
         'light': (
           'bg': (
-            'normal': var-get("colorLight"),
+            'normal': var-get('colorLight'),
             'hover': var-get('colorSecondary'),
             'press': #3d4156,
             'progress': var-get('colorSecondary'),
@@ -83,23 +82,23 @@
           ),
           'font': (
             'normal': var-get('colorSecondary'),
-            'hover': var-get("colorLight"),
-            'press': var-get("colorLight"),
-            'progress': var-get("colorLight"),
+            'hover': var-get('colorLight'),
+            'press': var-get('colorLight'),
+            'progress': var-get('colorLight'),
           ),
         ),
         'dark': (
           'bg': (
-            'normal': #000,
-            'hover': var-get("colorLight"),
+            'normal': var-get('colorDark'),
+            'hover': var-get('colorLight'),
             'press': #b7b8c0,
-            'progress': var-get("colorLight"),
+            'progress': var-get('colorLight'),
           ),
           'border': (
-            'normal': var-get("colorLight"),
+            'normal': var-get('colorLight'),
           ),
           'font': (
-            'normal': var-get("colorLight"),
+            'normal': var-get('colorLight'),
             'hover': var-get('colorSecondary'),
             'press': var-get('colorSecondary'),
             'progress': var-get('colorSecondary'),
@@ -109,16 +108,16 @@
       'confirmative': (
         'light': (
           'bg': (
-            'normal': var-get("colorLight"),
+            'normal': var-get('colorLight'),
             'hover': var-get('colorSuccess'),
             'press': #049c1e,
             'progress': var-get('colorSuccess'),
           ),
           'font': (
             'normal': var-get('colorSuccess'),
-            'hover': var-get("colorLight"),
-            'press': var-get("colorLight"),
-            'progress': var-get("colorLight"),
+            'hover': var-get('colorLight'),
+            'press': var-get('colorLight'),
+            'progress': var-get('colorLight'),
           ),
           'border': (
             'normal': var-get('colorSuccess'),
@@ -133,9 +132,9 @@
           ),
           'font': (
             'normal': var-get('colorSuccess'),
-            'hover': var-get("colorLight"),
-            'press': var-get("colorLight"),
-            'progress': var-get("colorLight"),
+            'hover': var-get('colorLight'),
+            'press': var-get('colorLight'),
+            'progress': var-get('colorLight'),
           ),
           'border': (
             'normal': var-get('colorSuccess'),
@@ -145,7 +144,7 @@
       'destructive': (
         'light': (
           'bg': (
-            'normal': var-get("colorLight"),
+            'normal': var-get('colorLight'),
             'hover': var-get('colorError'),
             'press': #cc4a49,
             'progress': var-get('colorError'),
@@ -155,8 +154,8 @@
           ),
           'font': (
             'normal': var-get('colorError'),
-            'hover': var-get("colorLight"),
-            'press': var-get("colorLight"),
+            'hover': var-get('colorLight'),
+            'press': var-get('colorLight'),
           ),
         ),
         'dark': (
@@ -171,15 +170,15 @@
           ),
           'font': (
             'normal': var-get('colorError'),
-            'hover': var-get("colorLight"),
-            'press': var-get("colorLight"),
+            'hover': var-get('colorLight'),
+            'press': var-get('colorLight'),
           ),
         ),
       ),
       'disabled': (
         'light': (
           'bg': (
-            'normal': var-get("colorLight"),
+            'normal': var-get('colorLight'),
           ),
           'border': (
             'normal': #d0d1d3,
@@ -446,7 +445,11 @@
   }
 
   @mixin button-set-state-defaults($self, $emphasis, $theme, $type, $state) {
-    $borderColor: button-get-border-with-fallback($emphasis $type, $state, $theme);
+    $borderColor: button-get-border-with-fallback(
+      $emphasis $type,
+      $state,
+      $theme
+    );
 
     @if ($theme == 'dark') {
       box-shadow: 0 0 0.5px 0 $borderColor, 0 0 0.5px $borderColor;
@@ -459,14 +462,32 @@
 
   @mixin button-type($self, $emphasis, $theme, $type) {
     &:not(:disabled) {
-      @include button-set-state-defaults($self, $emphasis, $theme, $type, 'normal');
+      @include button-set-state-defaults(
+        $self,
+        $emphasis,
+        $theme,
+        $type,
+        'normal'
+      );
 
       &:hover {
-        @include button-set-state-defaults($self, $emphasis, $theme, $type, 'hover');
+        @include button-set-state-defaults(
+          $self,
+          $emphasis,
+          $theme,
+          $type,
+          'hover'
+        );
       }
 
       &:active {
-        @include button-set-state-defaults($self, $emphasis, $theme, $type, 'press');
+        @include button-set-state-defaults(
+          $self,
+          $emphasis,
+          $theme,
+          $type,
+          'press'
+        );
       }
     }
   }
@@ -475,9 +496,24 @@
     &:disabled {
       user-select: none;
       cursor: default;
-      background: button-get-bg-with-fallback($emphasis 'disabled', 'normal', $theme);
-      border-color: button-get-border-with-fallback($emphasis 'disabled', 'normal', $theme);
-      color: button-get-font-with-fallback($emphasis 'disabled', 'normal', $theme);
+      background:
+        button-get-bg-with-fallback(
+          $emphasis 'disabled',
+          'normal',
+          $theme
+        );
+      border-color:
+        button-get-border-with-fallback(
+          $emphasis 'disabled',
+          'normal',
+          $theme
+        );
+      color:
+        button-get-font-with-fallback(
+          $emphasis 'disabled',
+          'normal',
+          $theme
+        );
     }
     $types-base: ('default' 'destructive' 'confirmative');
     $types: if(
