@@ -274,8 +274,16 @@ a.i-sidebar-list-item:hover b {
   height: 124px;
 }
 
+.demo-subtitle-large {
+  height: 195px;
+}
+
 .demo-spacer {
   height: 170px;
+}
+
+.demo-spacer-large {
+  height: 245px;
 }
 
 .demo-spacer {
