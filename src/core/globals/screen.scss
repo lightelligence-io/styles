@@ -1,19 +1,3 @@
-// Screen
-$v1-prefix: 'olt-';
-
-$screen-style: kebabCase;
-
-$v1-breakpoints: (
-  xs: var-get-value(breakpoint xs),
-  sm: var-get-value(breakpoint sm),
-  md: var-get-value(breakpoint md),
-  lg: var-get-value(breakpoint lg),
-  xl: var-get-value(breakpoint xl),
-);
-
-// Breakpoints
-@include screen-set($v1-breakpoints, $v1-prefix, $screen-style);
-
 
 $v2-breakpoints: (
   xs: 0,
@@ -42,3 +26,20 @@ $v2-prefix: 'olt-v2-';
     @content;
   }
 }
+
+// Screen
+$v1-prefix: 'olt-';
+
+$screen-style: kebabCase;
+
+$v1-breakpoints: (
+  xs: var-get-value(breakpoint xs),
+  sm: var-get-value(breakpoint sm),
+  md: var-get-value(breakpoint md),
+  lg: var-get-value(breakpoint lg),
+  xl: var-get-value(breakpoint xl),
+);
+
+// Breakpoints
+@include screen-set($v1-breakpoints, $v1-prefix, $screen-style);
+
