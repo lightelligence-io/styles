@@ -20,7 +20,7 @@
   }
 
   // Columns
-  @each $breakpoint in map-keys($v2-breakpoints) {
+  @each $breakpoint in map-keys(screen-get-v2()) {
     $infix: screen-infix-v2($breakpoint);
 
     @include screen-up-v2($breakpoint) {
@@ -40,7 +40,7 @@
   }
 
   // Offsets
-  @each $breakpoint in map-keys($v2-breakpoints) {
+  @each $breakpoint in map-keys(screen-get-v2()) {
     $infix: screen-infix-v2($breakpoint);
 
     @include screen-up-v2($breakpoint) {
