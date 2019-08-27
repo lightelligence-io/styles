@@ -1,14 +1,44 @@
 // Screen
-$screen-prefix: 'olt-';
+$v1-prefix: 'olt-';
+
 $screen-style: kebabCase;
 
-// Breakpoints
-@include screen-set(
-  (
-    xs: var-get-value(breakpoint xs),
-    sm: var-get-value(breakpoint sm),
-    md: var-get-value(breakpoint md),
-    lg: var-get-value(breakpoint lg),
-    xl: var-get-value(breakpoint xl),
-  )
+$v1-breakpoints: (
+  xs: var-get-value(breakpoint xs),
+  sm: var-get-value(breakpoint sm),
+  md: var-get-value(breakpoint md),
+  lg: var-get-value(breakpoint lg),
+  xl: var-get-value(breakpoint xl),
 );
+
+// Breakpoints
+@include screen-set($v1-breakpoints, $v1-prefix, $screen-style);
+
+
+$v2-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+$v2-prefix: 'olt-v2-';
+
+@include screen-set($v2-breakpoints, $v2-prefix, $screen-style);
+
+@mixin screen-up-v2($name) {
+  @include screen-up($name, $v2-prefix, $screen-style, $v2-breakpoints) {
+    @content;
+  }
+}
+
+@function screen-infix-v2($name) {
+  @return screen-infix($name, $v2-breakpoints);
+}
+
+@mixin screen-down-v2($name) {
+  @include screen-down($name, $v2-prefix, $screen-style, $v2-breakpoints) {
+    @content;
+  }
+}
