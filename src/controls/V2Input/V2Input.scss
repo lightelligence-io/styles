@@ -4,7 +4,7 @@
   font-size: 16px;
   line-height: 32px;
   font-weight: normal;
-  padding: 0 16px;
+  padding: 20px 16px 0;
   border: 0;
   border-bottom: 1px solid #a7a8aa;
   border-radius: 4px 4px 0px 0px;
@@ -12,14 +12,17 @@
 
   &:-moz-placeholder {
     color: #a7a8aa;
+    opacity: 0;
   }
 
   &::-moz-placeholder {
     color: #a7a8aa;
+    opacity: 0;
   }
 
   &::-webkit-input-placeholder {
     color: #a7a8aa;
+    opacity: 0;
   }
 
   &:disabled {
@@ -43,6 +46,18 @@
     outline: none;
     border-color: var-get('colorPrimary');
     box-shadow: 0 1px var-get('colorPrimary');
+
+    &:-moz-placeholder {
+      opacity: 1;
+    }
+
+    &::-moz-placeholder {
+      opacity: 1;
+    }
+
+    &::-webkit-input-placeholder {
+      opacity: 1;
+    }
   }
 
   &--block {
