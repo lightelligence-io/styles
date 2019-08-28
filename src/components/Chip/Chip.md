@@ -439,7 +439,7 @@ Each _Chip_ can have an icon rendered on the left or on the right side by adding
 ### Bubble
 
 Each _Chip_ can have an additional bubble rendered on the top right side by
-adding `--bubble` modifier and a descendant `-bubble` component inside the
+adding `--withBubble` modifier and a descendant `-bubble` component inside the
 _Chip_.
 
 ```bubbles.html
