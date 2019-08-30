@@ -1,22 +1,25 @@
 .Grid {
   $self: &;
 
+  $grid-gutter: var-get('containerPadding');
+  $grid-columns: 12;
+
   display: flex;
   flex-wrap: wrap;
-  margin-right: calc(-1 * #{$olt-grid-gutter} / 2);
-  margin-left: calc(-1 * #{$olt-grid-gutter} / 2);
-  margin-top: calc(-1 * #{$olt-grid-gutter});
+  margin-right: calc(-1 * #{$grid-gutter} / 2);
+  margin-left: calc(-1 * #{$grid-gutter} / 2);
+  margin-top: calc(-1 * #{$grid-gutter});
 
   &-item {
     position: relative;
     width: 100%;
     min-height: 1px; // Prevent columns from collapsing when empty
-    margin-top: $olt-grid-gutter;
+    margin-top: $grid-gutter;
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
-    padding-right: calc(#{$olt-grid-gutter} / 2);
-    padding-left: calc(#{$olt-grid-gutter} / 2);
+    padding-right: calc(#{$grid-gutter} / 2);
+    padding-left: calc(#{$grid-gutter} / 2);
   }
 
   // Columns
@@ -30,10 +33,10 @@
         max-width: none;
       }
 
-      @for $size from 1 through $olt-grid-columns {
+      @for $size from 1 through $grid-columns {
         #{$self}-item--#{$infix}#{$size} {
-          flex: 0 0 percentage($size / $olt-grid-columns);
-          max-width: percentage($size / $olt-grid-columns);
+          flex: 0 0 percentage($size / $grid-columns);
+          max-width: percentage($size / $grid-columns);
         }
       }
     }
@@ -44,9 +47,9 @@
     $infix: screen-infix($breakpoint);
 
     @include screen-up($breakpoint) {
-      @for $size from 1 through $olt-grid-columns {
+      @for $size from 1 through $grid-columns {
         #{$self}-item--#{$infix}offset#{$size} {
-          $num: $size / $olt-grid-columns;
+          $num: $size / $grid-columns;
 
           margin-left: if($num == 0, 0, percentage($num));
         }
