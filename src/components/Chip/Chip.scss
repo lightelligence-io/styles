@@ -127,12 +127,7 @@ $chip-colors: (
 .Chip {
   $self: &;
 
-  @at-root {
-    button#{$self} {
-      border: none;
-    }
-  }
-
+  border: none;
   display: inline-flex;
   white-space: nowrap;
   vertical-align: middle;
