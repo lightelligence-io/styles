@@ -1,0 +1,45 @@
+.V2Select {
+  @extend %v2Control;
+
+  @mixin selectBackgroundGradient ($color: gray) {
+    // use floats because of ugly google-chrome subpixel rendering
+    // 50.01 instead of 50% looks nicer in chrome.
+    // https://stackoverflow.com/questions/51850356/chrome-linear-gradient-bugs-when-dealing-with-subpixels
+    background-image:
+      linear-gradient(45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%),
+      linear-gradient(-45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%);
+  }
+
+  margin: 0;
+  box-sizing: border-box;
+  appearance: none;
+  cursor: pointer;
+
+  @include selectBackgroundGradient();
+
+  background-position:
+    calc(100% - 21px) calc(1em + 9px),
+    calc(100% - 16px) calc(1em + 9px),
+    calc(100% - 2.5em) 0;
+  background-size:
+    6px 6px,
+    6px 6px,
+    1px 0;
+  background-repeat: no-repeat;
+
+  &:not(.is-readonly):disabled,
+  &:not(.is-readonly).is-disabled {
+    color: $olt-control-disabled-color;
+    cursor: not-allowed;
+    border-bottom: dotted $olt-control-border-width $olt-control-disabled-color;
+
+    @include selectBackgroundGradient($olt-control-disabled-color);
+  }
+
+  &.is-readonly {
+    cursor: default;
+    color: currentColor;
+
+    @include selectBackgroundGradient($olt-control-disabled-color);
+  }
+}

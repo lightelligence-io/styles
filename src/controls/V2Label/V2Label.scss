@@ -1,15 +1,5 @@
 .V2Label {
-  position: relative;
-  display: block;
-  padding: 0;
-  margin-bottom: var-get('spacing1');
-  font-size: 16px;
-  font-weight: normal;
-  letter-spacing: 0px;
-  color: #a7a8aa;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: $olt-control-spacer;
+  @extend %v2ControlWrapper;
 
   &-text {
     position: absolute;
@@ -22,13 +12,62 @@
     left: 16px;
   }
 
-  .has-value &-text,
-  input:focus + &-text {
+  .has-value &-text {
     top: 0;
     transform: translateY(0) scale(0.6875);
   }
 
-  input:focus + &-text {
+  input:focus ~ &-text,
+  select:focus ~ &-text {
+    top: 0;
+    transform: translateY(0) scale(0.6875);
     color: var-get('colorPrimary');
+  }
+
+  &.has-error &-text {
+    color: var-get('colorError');
+  }
+
+  &-footer {
+    font-size: 11px;
+    letter-spacing: 0.2px;
+    margin-top: var-get('spacing1');
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-error {
+    visibility: hidden;
+  }
+
+  &.has-error &-error {
+    color: var-get('colorError');
+    visibility: visible;
+  }
+
+  &-icon {
+    position: absolute;
+    font-size: 12px;
+    right: 16px;
+    top: 16px;
+    display: block;
+    color: #343a40;
+  }
+
+  input:disabled ~ &-text,
+  select:disabled ~ &-text,
+  input:disabled ~ &-icon,
+  select:disabled ~ &-icon {
+    color: #d0d1d3;
+  }
+
+  input:focus ~ &-icon,
+  select:focus ~ &-icon {
+    color: var-get('colorPrimary');
+  }
+
+  &.has-error &-icon {
+    color: var-get('colorError');
   }
 }

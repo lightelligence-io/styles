@@ -1,0 +1,43 @@
+%v2ControlWrapper {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin-bottom: var-get('spacing1');
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0px;
+  color: #a7a8aa;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $olt-control-spacer;
+
+  &.has-error input,
+  &.has-error select {
+    border-color: var-get('colorError');
+  }
+}
+
+%v2Control {
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: normal;
+  padding: 20px 16px 0;
+  border: 0;
+  min-height: 48px;
+  border-bottom: 1px solid #a7a8aa;
+  border-radius: 4px 4px 0px 0px;
+  background: #f5f6f8;
+  color: #343a40;
+
+  &:disabled {
+    color: #d0d1d3;
+    border-color: #d0d1d3;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var-get('colorPrimary');
+    box-shadow: 0 1px var-get('colorPrimary');
+  }
+}
