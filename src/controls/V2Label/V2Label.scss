@@ -69,6 +69,11 @@
     color: var-get('colorPrimary');
   }
 
+  &-count {
+    flex-grow: 1;
+    text-align: right;
+  }
+
   &-hint {
     padding-left: 24px;
 
@@ -99,6 +104,8 @@
   select:disabled ~ &-text,
   input:disabled ~ &-icon,
   select:disabled ~ &-icon,
+  input:disabled ~ * &-count,
+  select:disabled ~ * &-count,
   input:disabled ~ * &-hint,
   select:disabled ~ * &-hint {
     color: map-get($theme-light-colors, label-disabled);
@@ -123,6 +130,8 @@
   .Theme-dark & select:disabled ~ &-text,
   .Theme-dark & input:disabled ~ &-icon,
   .Theme-dark & select:disabled ~ &-icon,
+  .Theme-dark & input:disabled ~ * &-count,
+  .Theme-dark & select:disabled ~ * &-count,
   .Theme-dark & input:disabled ~ * &-hint,
   .Theme-dark & select:disabled ~ * &-hint {
     color: map-get($theme-dark-colors, label-disabled);

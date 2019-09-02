@@ -5,50 +5,327 @@ category: Controls
 
 ## Description
 
-An *Input* component is always text input field. It occupies the `olt-V2Input*`
-class names and can be used with any `type=`
-[HTML attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
-that render a box for entering text.
+Input is used with a wrapped `<label>` element that contain
+`<input />`. It occupies `olt-V2Input*` class names.
 
-Most common types are :
+---
 
-- `type=text` for text input fields
-- `type=password` for password input fields
-- `type=email` for email input fields
+<div class="olt-Grid olt-u-marginTop4 olt-u-marginBottom6">
+  <div class="olt-Grid-item olt-Grid-item--3">
+    <div class="demo-spacer-small"></div>
+    <div>
+      <div class="demo-input-label">
+        Empty
+      </div>
+      <div class="demo-input-label">
+        Filled
+      </div>
+      <div class="demo-input-label">
+        Disabled
+      </div>
+      <div class="demo-input-label">
+        Icon
+      </div>
+      <div class="demo-input-label">
+        Count
+      </div>
+      <div class="demo-input-label">
+        Error
+      </div>
+      <div class="demo-input-label">
+        Hint
+      </div>
+    </div>
+  </div>
+  <div class="olt-Grid-item olt-Grid-item--9">
+    <div class="olt-Grid">
+      <div class="olt-Grid-item olt-Grid-item--5">
+        <div class="demo-title">Light Theme</div>
+        <div class="demo-subtitle-small"></div>
+        <div class="olt-Card">
+          <div class="olt-Card-content">
+            <div class="demo-input-content">
+              <label class="olt-V2Label">
+                <input class="olt-V2Input" type="text" placeholder="Your data" />
+                <div class="olt-V2Label-text">Enter your data</div>
+              </label>
+            </div>
+            <div class="demo-input-content">
+              <label class="olt-V2Label has-value">
+                <input class="olt-V2Input" type="text" value="Lorem ipsum" />
+                <div class="olt-V2Label-text">Enter your data</div>
+              </label>
+            </div>
+            <div class="demo-input-content">
+              <label class="olt-V2Label has-value">
+                <input class="olt-V2Input" type="text" value="Lorem ipsum" disabled />
+                <div class="olt-V2Label-text">Enter your data</div>
+              </label>
+            </div>
+            <div class="demo-input-content">
+              <label class="olt-V2Label has-value">
+                <input class="olt-V2Input" type="text" value="Lorem ipsum" />
+                <div class="olt-V2Label-text">Enter your data</div>
+                <div class="olt-V2Label-icon">
+                  <i class="olt-Icon" data-icon="edit"></i>
+                </div>
+              </label>
+            </div>
+            <div class="demo-input-content">
+              <label class="olt-V2Label has-value">
+                <input class="olt-V2Input" type="text" value="Lorem ipsum" />
+                <div class="olt-V2Label-text">Enter your data</div>
+                <div class="olt-V2Label-footer">
+                  <span class="olt-V2Label-count">
+                    11/150
+                  </span>
+                </div>
+              </label>
+            </div>
+            <div class="demo-input-content">
+              <label class="olt-V2Label has-value has-error">
+                <input class="olt-V2Input" type="text" value="Lorem ipsum" />
+                <div class="olt-V2Label-text">Enter your data</div>
+                <div class="olt-V2Label-footer">
+                  <span class="olt-V2Label-error">
+                    Not a valid input
+                  </span>
+                  <span class="olt-V2Label-count">
+                    11/150
+                  </span>
+                </div>
+              </label>
+            </div>
+            <div class="demo-input-content">
+              <label class="olt-V2Label has-value">
+                <input class="olt-V2Input" type="text" value="Lorem ipsum" />
+                <div class="olt-V2Label-text">Enter your data</div>
+                <div class="olt-V2Label-footer">
+                  <span class="olt-V2Label-hint">
+                    This input is required
+                  </span>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="olt-Grid-item olt-Grid-item--5">
+        <div class="demo-title">Dark Theme</div>
+        <div class="demo-subtitle-small"></div>
+        <div class="olt-Card olt-Card--dark olt-Theme-dark">
+          <div class="olt-Card-content">
+            <div class="demo-input-content">
+              <label class="olt-V2Label">
+                <input class="olt-V2Input" type="text" placeholder="Your data" />
+                <div class="olt-V2Label-text">Enter your data</div>
+              </label>
+            </div>
+            <div class="demo-input-content">
+              <label class="olt-V2Label has-value">
+                <input class="olt-V2Input" type="text" value="Lorem ipsum" />
+                <div class="olt-V2Label-text">Enter your data</div>
+              </label>
+            </div>
+            <div class="demo-input-content">
+              <label class="olt-V2Label has-value">
+                <input class="olt-V2Input" type="text" value="Lorem ipsum" disabled />
+                <div class="olt-V2Label-text">Enter your data</div>
+              </label>
+            </div>
+            <div class="demo-input-content">
+              <label class="olt-V2Label has-value">
+                <input class="olt-V2Input" type="text" value="Lorem ipsum" />
+                <div class="olt-V2Label-text">Enter your data</div>
+                <div class="olt-V2Label-icon">
+                  <i class="olt-Icon" data-icon="edit"></i>
+                </div>
+              </label>
+            </div>
+            <div class="demo-input-content">
+              <label class="olt-V2Label has-value">
+                <input class="olt-V2Input" type="text" value="Lorem ipsum" />
+                <div class="olt-V2Label-text">Enter your data</div>
+                <div class="olt-V2Label-footer">
+                  <span class="olt-V2Label-count">
+                    11/150
+                  </span>
+                </div>
+              </label>
+            </div>
+            <div class="demo-input-content">
+              <label class="olt-V2Label has-value has-error">
+                <input class="olt-V2Input" type="text" value="Lorem ipsum" />
+                <div class="olt-V2Label-text">Enter your data</div>
+                <div class="olt-V2Label-footer">
+                  <span class="olt-V2Label-error">
+                    Not a valid input
+                  </span>
+                  <span class="olt-V2Label-count">
+                    11/150
+                  </span>
+                </div>
+              </label>
+            </div>
+            <div class="demo-input-content">
+              <label class="olt-V2Label has-value">
+                <input class="olt-V2Input" type="text" value="Lorem ipsum" />
+                <div class="olt-V2Label-text">Enter your data</div>
+                <div class="olt-V2Label-footer">
+                  <span class="olt-V2Label-hint">
+                    This input is required
+                  </span>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-```input.html
-<input type="text" class="olt-V2Input" placeholder="Username"/>
+---
+
+```example.html
+<label class="olt-V2Label">
+  <input class="olt-V2Input" type="text" placeholder="Your data" />
+  <div class="olt-V2Label-text">Enter your data</div>
+</label>
 ```
 
-## Modifiers
+## Disabled state
 
-### Render as block element
-
-By default the *Input* will not change the `display` property of the `input`
-tag, which will render the inputs `inline`. There is a `--block` modifier that
-can be used if you want to render several inputs one below the other, without
-introducing additional markup.
-
-```block.html
-<input style="margin-bottom: 10px;" type="text" class="olt-V2Input olt-V2Input--block" placeholder="Username"/>
-<input style="margin-bottom: 10px;" type="email" class="olt-V2Input olt-V2Input--block" placeholder="E-mail"/>
-<input style="margin-bottom: 10px;" type="password" class="olt-V2Input olt-V2Input--block" placeholder="Password"/>
-```
-
-## States
-
-### Disabled state
-
-Any input can be disabled via `disabled` HTML attribute.
+The input field can be disabled. The styles of the label
+and additional elements will change accordingly.
 
 ```disabled.html
-<input type="email" class="olt-V2Input" disabled placeholder="Disabled input" />
+<label class="olt-V2Label">
+  <input class="olt-V2Input" type="text" placeholder="Your data" disabled />
+  <div class="olt-V2Label-text">Enter your data</div>
+</label>
+<label class="olt-V2Label has-value">
+  <input class="olt-V2Input" type="text" value="Lorem ipsum" disabled />
+  <div class="olt-V2Label-text">Enter your data</div>
+</label>
 ```
 
-### Error state
+## With Icon
 
-The input can have an error state with `is-error` state class name.
+The input can render an icon on its right side. It has different
+colors when the input is empty, contains a value or is disabled.
+
+```icons.html
+<label class="olt-V2Label>
+  <input class="olt-V2Input" type="text" />
+  <div class="olt-V2Label-text">Enter your data</div>
+  <div class="olt-V2Label-icon">
+    <i class="olt-Icon" data-icon="edit"></i>
+  </div>
+</label>
+<label class="olt-V2Label has-value">
+  <input class="olt-V2Input" type="text" value="Lorem ipsum" />
+  <div class="olt-V2Label-text">Enter your data</div>
+  <div class="olt-V2Label-icon">
+    <i class="olt-Icon" data-icon="edit"></i>
+  </div>
+</label>
+<label class="olt-V2Label has-value">
+  <input class="olt-V2Input" type="text" value="Lorem ipsum" disabled />
+  <div class="olt-V2Label-text">Enter your data</div>
+  <div class="olt-V2Label-icon">
+    <i class="olt-Icon" data-icon="edit"></i>
+  </div>
+</label>
+```
+
+## With Count
+
+For inputs that are limited to a certain amount of characters
+you can render that information for better user experience.
+
+```count.html
+<label class="olt-V2Label has-value">
+  <input class="olt-V2Input" type="text" value="Lorem ipsum" />
+  <div class="olt-V2Label-text">Enter your data</div>
+  <div class="olt-V2Label-footer">
+    <span class="olt-V2Label-count">
+      11/150
+    </span>
+  </div>
+</label>
+<label class="olt-V2Label has-value">
+  <input class="olt-V2Input" type="text" value="Lorem ipsum" disabled />
+  <div class="olt-V2Label-text">Enter your data</div>
+  <div class="olt-V2Label-footer">
+    <span class="olt-V2Label-count">
+      11/150
+    </span>
+  </div>
+</label>
+```
+
+## With Error
+
+If the user input is invalid the error can be indicated by adding
+the `has-error` class to the label. The color of the input and label
+change. The error messsage can be displayed below the input.
 
 ```error.html
-<input type="email" class="olt-V2Input is-error" value="invalid-mail@" />
+<label class="olt-V2Label has-value has-error">
+  <input class="olt-V2Input" type="text" value="Lorem ipsum" />
+  <div class="olt-V2Label-text">Enter your data</div>
+  <div class="olt-V2Label-footer">
+    <span class="olt-V2Label-error">
+      Not a valid input
+    </span>
+  </div>
+</label>
+<label class="olt-V2Label has-value has-error">
+  <input class="olt-V2Input" type="text" value="Lorem ipsum" />
+  <div class="olt-V2Label-text">Enter your data</div>
+  <div class="olt-V2Label-icon">
+    <i class="olt-Icon" data-icon="edit"></i>
+  </div>
+  <div class="olt-V2Label-footer">
+    <span class="olt-V2Label-error">
+      Not a valid input
+    </span>
+    <span class="olt-V2Label-count">
+      11/150
+    </span>
+  </div>
+</label>
+```
+
+## With Hint
+
+If the user input is validated a hint can be shown below the input
+for better user experience.
+
+```hint.html
+<label class="olt-V2Label has-value">
+  <input class="olt-V2Input" type="text" value="Lorem ipsum" />
+  <div class="olt-V2Label-text">Enter your data</div>
+  <div class="olt-V2Label-footer">
+    <span class="olt-V2Label-hint">
+      This input is required
+    </span>
+  </div>
+</label>
+<label class="olt-V2Label has-value">
+  <input class="olt-V2Input" type="text" value="Lorem ipsum" />
+  <div class="olt-V2Label-text">Enter your data</div>
+  <div class="olt-V2Label-icon">
+    <i class="olt-Icon" data-icon="edit"></i>
+  </div>
+  <div class="olt-V2Label-footer">
+    <span class="olt-V2Label-hint">
+      This input is required
+    </span>
+    <span class="olt-V2Label-count">
+      11/150
+    </span>
+  </div>
+</label>
 ```
