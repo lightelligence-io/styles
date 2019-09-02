@@ -127,6 +127,7 @@ $chip-colors: (
 .Chip {
   $self: &;
 
+  border: none;
   display: inline-flex;
   white-space: nowrap;
   vertical-align: middle;
@@ -182,7 +183,7 @@ $chip-colors: (
   // Bubble
   //
 
-  &--bubble {
+  &--withBubble {
     padding-right: 13px;
     margin-right: 8px;
   }
@@ -240,7 +241,7 @@ $chip-colors: (
     }
 
     @at-root {
-      &#{$selector}--bubble {
+      &#{$selector}--withBubble {
         background: chip-bubble-background(map-get($background, 'normal'));
       }
 
@@ -259,7 +260,7 @@ $chip-colors: (
           }
         }
 
-        &#{$selector}--selectable#{$self}--bubble {
+        &#{$selector}--selectable#{$self}--withBubble {
           &:hover {
             background: chip-bubble-background(map-get($background, 'hover'));
 
@@ -292,7 +293,7 @@ $chip-colors: (
           color: map-get($color, 'disabled');
         }
 
-        &.is-disabled#{$self}--bubble {
+        &.is-disabled#{$self}--withBubble {
           background: chip-bubble-background(map-get($background, 'disabled'));
         }
 
@@ -329,10 +330,10 @@ $chip-colors: (
   //
 
   &-bubble,
-  &--selectable#{$self}--bubble:hover #{$self}-bubble,
-  &--selectable#{$self}--bubble:active #{$self}-bubble,
-  &--selectable#{$self}--bubble:focus #{$self}-bubble,
-  &.is-disabled#{$self}--bubble #{$self}-bubble {
+  &--selectable#{$self}--withBubble:hover #{$self}-bubble,
+  &--selectable#{$self}--withBubble:active #{$self}-bubble,
+  &--selectable#{$self}--withBubble:focus #{$self}-bubble,
+  &.is-disabled#{$self}--withBubble #{$self}-bubble {
     &--success,
     &--info,
     &--error,
