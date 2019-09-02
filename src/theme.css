@@ -278,12 +278,20 @@ a.i-sidebar-list-item:hover b {
   height: 195px;
 }
 
+.demo-subtitle-small {
+  height: 20px;
+}
+
 .demo-spacer {
   height: 170px;
 }
 
 .demo-spacer-large {
   height: 245px;
+}
+
+.demo-spacer-small {
+  height: 66px;
 }
 
 .demo-spacer {

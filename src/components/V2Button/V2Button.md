@@ -205,7 +205,7 @@ Contrasting levels of emphasis help the user to differentiate between important 
 </div>
 
 
-### Dark Theme (default)
+### Dark Theme
 
 <div class="olt-Grid olt-u-marginTop4 olt-u-marginBottom6">
   <div class="olt-Grid-item olt-Grid-item--3">
