@@ -12,8 +12,7 @@
 
   &-text {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 11px;
     transform-origin: left center;
     pointer-events: none;
     cursor: text;
@@ -23,14 +22,14 @@
 
   .has-value &-text {
     top: -1px;
-    transform: translateY(0) scale(0.6875);
+    transform: scale(0.6875);
     letter-spacing: 0.2px;
   }
 
   input:focus ~ &-text,
   select:focus ~ &-text {
     top: -1px;
-    transform: translateY(0) scale(0.6875);
+    transform: scale(0.6875);
     color: var-get('colorPrimary');
     letter-spacing: 0.2px;
   }
@@ -42,8 +41,8 @@
   &-footer {
     font-size: 11px;
     letter-spacing: 0.2px;
-    margin-top: 3px;
-    padding: 0 16px;
+    margin: 3px 16px 0;
+    position: relative;
     display: flex;
     justify-content: space-between;
   }
@@ -70,6 +69,19 @@
     color: var-get('colorPrimary');
   }
 
+  &-hint {
+    padding-left: 24px;
+
+    &:before {
+      @include icon-font-material();
+      content: 'info_outline';
+      position: absolute;
+      left: -1px;
+      top: -5px;
+      font-size: 18px;
+    }
+  }
+
 
   $theme-light-colors: map-get($v2-control-colors, light);
 
@@ -86,7 +98,9 @@
   input:disabled ~ &-text,
   select:disabled ~ &-text,
   input:disabled ~ &-icon,
-  select:disabled ~ &-icon {
+  select:disabled ~ &-icon,
+  input:disabled ~ * &-hint,
+  select:disabled ~ * &-hint {
     color: map-get($theme-light-colors, label-disabled);
   }
 
@@ -108,7 +122,9 @@
   .Theme-dark & input:disabled ~ &-text,
   .Theme-dark & select:disabled ~ &-text,
   .Theme-dark & input:disabled ~ &-icon,
-  .Theme-dark & select:disabled ~ &-icon {
+  .Theme-dark & select:disabled ~ &-icon,
+  .Theme-dark & input:disabled ~ * &-hint,
+  .Theme-dark & select:disabled ~ * &-hint {
     color: map-get($theme-dark-colors, label-disabled);
   }
 }
