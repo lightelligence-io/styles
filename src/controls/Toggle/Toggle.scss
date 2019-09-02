@@ -1,31 +1,52 @@
-
-
-
 .Toggle {
   $knob-size: 20px;
   $track-height: 14px;
   $knob-overlap: 5px;
   $toggle-colors: (
-    disabled:(
-      active: (
-        knob: #ffa365,
-        track: #ffd0b3,
+    light: (
+      disabled:(
+        checked: (
+          knob: #ffa365,
+          track: #ffd0b3,
+        ),
+        unchecked: (
+          knob: var-get('gray100'),
+          track: var-get('gray200'),
+        ),
       ),
-      inactive: (
-        knob: var-get('gray100'),
-        track: var-get('gray200'),
+      default: (
+        checked: (
+          knob: var-get('colorPrimary'),
+          track: #ffa366,
+        ),
+        unchecked: (
+          knob: var-get('colorLight'),
+          track: var-get('gray500'),
+        ),
       ),
     ),
-    default: (
-      active: (
-        knob: var-get('colorPrimary'),
-        track: #ffa366,
+    dark: (
+      disabled:(
+        checked: (
+          knob: #6d331a,
+          track: #552a1e,
+        ),
+        unchecked: (
+          knob: #6d7080,
+          track: #55586a,
+        ),
       ),
-      inactive: (
-        knob: var-get('colorLight'),
-        track: var-get('gray500'),
+      default: (
+        checked: (
+          knob: var-get('colorPrimary'),
+          track: #ffa366,
+        ),
+        unchecked: (
+          knob: var-get('colorLight'),
+          track: var-get('gray500'),
+        ),
       ),
-    ),
+    )
   );
   $self: &;
 
@@ -36,27 +57,29 @@
     display: inline-flex;
   }
 
+  &:not(&--inline) + &:not(&--inline) {
+    margin-top: 4px;
+  }
+
   &-input {
     display: none;
   }
 
-  &-input:checked + &-ui &-knob {
+  &-input:checked ~ &-button &-knob {
     left: calc(100% - #{$knob-size - $knob-overlap});
   }
 
-  &-ui,
+  &-button,
   &-label {
     cursor: pointer;
   }
 
-  &-input:disabled {
-    &-ui,
-    &-label {
-      cursor: disabled;
-    }
+  &-input:disabled ~ &-button,
+  &-input:disabled ~ &-label {
+    cursor: not-allowed;
   }
 
-  &-ui {
+  &-button {
     display: inline-block;
     position: relative;
     width: 34px;
@@ -88,33 +111,49 @@
   }
 
   @mixin setColors ($self, $colors) {
-    &:checked + #{$self}-ui #{$self}-knob {
-      background-color: map-get(map-get($colors, 'active'), 'knob');
+    &:checked + #{$self}-button #{$self}-knob {
+      background-color: map-get(map-get($colors, 'checked'), 'knob');
     }
 
-    &:checked + #{$self}-ui #{$self}-track {
-      background-color: map-get(map-get($colors, 'active'), 'track');
+    &:checked + #{$self}-button #{$self}-track {
+      background-color: map-get(map-get($colors, 'checked'), 'track');
     }
 
-    & + #{$self}-ui #{$self}-knob {
-      background-color: map-get(map-get($colors, 'inactive'), 'knob');
+    & + #{$self}-button #{$self}-knob {
+      background-color: map-get(map-get($colors, 'unchecked'), 'knob');
     }
 
-    & + #{$self}-ui #{$self}-track {
-      background-color: map-get(map-get($colors, 'inactive'), 'track');
+    & + #{$self}-button #{$self}-track {
+      background-color: map-get(map-get($colors, 'unchecked'), 'track');
     }
   }
 
+  $theme-light: map-get($toggle-colors, 'light');
+  $theme-dark: map-get($toggle-colors, 'dark');
+
   #{$self}-input {
-    @include setColors($self, map-get($toggle-colors, 'default'));
+    @include setColors($self, map-get($theme-light, 'default'));
   }
 
   #{$self}-input:disabled {
-    @include setColors($self, map-get($toggle-colors, 'disabled'));
+    @include setColors($self, map-get($theme-light, 'disabled'));
+  }
+
+
+  .Theme-dark & #{$self}-input {
+    @include setColors($self, map-get($theme-dark, 'default'));
+  }
+
+  .Theme-dark & #{$self}-input:disabled {
+    @include setColors($self, map-get($theme-dark, 'disabled'));
+  }
+
+  #{$self}-input:disabled ~ &-label {
+    opacity: 0.3;
   }
 
   &-label {
-    margin-left: 5px;
+    margin-left: 8px;
     cursor: pointer;
     display: inline-block;
     position: relative;
