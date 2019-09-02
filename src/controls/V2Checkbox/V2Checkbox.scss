@@ -1,0 +1,61 @@
+/**
+  * All colors
+  */
+$v2-checkbox-colors: (
+  light: (
+    default: #343a40,
+    checked: #f60,
+    disabled: #a7a8aa,
+  ),
+  dark: (
+    default: #fff,
+    checked: #f60,
+    disabled: #55586a,
+  ),
+);
+
+.V2Checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  & + & {
+    margin-top: 4px;
+  }
+
+  input {
+    display: none;
+  }
+
+  &-button {
+    height: 18px;
+    width: 18px;
+    min-width: 18px;
+    background: currentColor;
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+
+    $border-width: 11%;
+    $offset-border: 100% - $border-width;
+
+    clip-path:
+      polygon(
+        0% 0%,
+        0% 100%,
+        $border-width 100%,
+        $border-width $border-width,
+        $offset-border $border-width,
+        $offset-border $offset-border,
+        $border-width $offset-border,
+        $border-width 100%,
+        100% 100%,
+        100% 0%
+      );
+  }
+
+  &-label {
+    margin: 0 11px;
+    cursor: pointer;
+  }
+}
