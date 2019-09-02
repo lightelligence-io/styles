@@ -81,7 +81,7 @@ used with `<label>` elements and occupies `olt-V2Label*` class names.
 </label>
 
 
-<div class="theme--dark">
+<div class="olt-Theme-dark" style="padding: 20px;">
   <label class="olt-V2Label">
     <input class="olt-V2Input" type="text" placeholder="john_doe" />
     <div class="olt-V2Label-text">Username</div>

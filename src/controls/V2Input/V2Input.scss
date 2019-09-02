@@ -1,46 +1,39 @@
 .V2Input {
   @extend %v2Control;
 
-  &:-moz-placeholder {
-    color: #a7a8aa;
-    opacity: 0;
-  }
-
-  &::-moz-placeholder {
-    color: #a7a8aa;
-    opacity: 0;
-  }
-
-  &::-webkit-input-placeholder {
-    color: #a7a8aa;
-    opacity: 0;
-  }
-
-  &:disabled {
+  @mixin placeholder ($color, $opacity) {
     &:-moz-placeholder {
-      color: #d0d1d3;
+      color: $color;
+      opacity: $opacity;
     }
 
     &::-moz-placeholder {
-      color: #d0d1d3;
+      color: $color;
+      opacity: $opacity;
     }
 
     &::-webkit-input-placeholder {
-      color: #d0d1d3;
+      color: $color;
+      opacity: $opacity;
     }
   }
+
+  $theme-light-colors: map-get($v2-control-colors, light);
+
+  @include placeholder(map-get($theme-light-colors, label-default), 0);
 
   &:focus {
-    &:-moz-placeholder {
-      opacity: 1;
-    }
+    @include placeholder(map-get($theme-light-colors, label-default), 1);
+  }
 
-    &::-moz-placeholder {
-      opacity: 1;
-    }
 
-    &::-webkit-input-placeholder {
-      opacity: 1;
-    }
+  $theme-dark-colors: map-get($v2-control-colors, dark);
+
+  .Theme-dark & {
+    @include placeholder(map-get($theme-dark-colors, label-default), 0);
+  }
+
+  .Theme-dark & &:focus {
+    @include placeholder(map-get($theme-dark-colors, label-default), 1);
   }
 }
