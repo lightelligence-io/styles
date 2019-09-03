@@ -33,3 +33,15 @@ State of the art
 #v0.8.1
 
 - support Modal with type warning
+
+#v0.9.0
+
+- add V2Button component
+- add Chips component
+- Internal cleanup and small refactoring
+
+#v0.10.0
+ 
+- add V2Grid and V2Container components
+- add V2Radio component
+- Chip modifer `olt-Chip--bubble` renamed to `olt-Chip--withBubble` to avoid name clash in generated js
