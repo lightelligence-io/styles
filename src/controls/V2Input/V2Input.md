@@ -258,7 +258,7 @@ The input can render an icon on its right side. It has different
 colors when the input is empty, contains a value or is disabled.
 
 ```icons.html
-<label class="olt-V2Label>
+<label class="olt-V2Label">
   <input class="olt-V2Input" type="text" />
   <span class="olt-V2Label-text">Enter your data</span>
   <div class="olt-V2Label-icon">

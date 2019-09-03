@@ -72,7 +72,7 @@ $v2-control-colors: (
     background-color: map-get($theme-dark-colors, background-default);
   }
 
-  .Theme-dark :not(.has-error) &:not(:focus) {
+  .Theme-dark :not(.has-error) &:not(:focus):not(:disabled) {
     border-color: map-get($theme-dark-colors, border-default);
   }
 
