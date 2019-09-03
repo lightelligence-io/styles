@@ -1,6 +1,7 @@
 .V2Label {
   position: relative;
   display: block;
+  width: 100%;
   padding: 0;
   margin-bottom: var-get('spacing1');
   font-size: 16px;
@@ -48,25 +49,12 @@
   }
 
   &-error {
-    visibility: hidden;
+    display: none;
   }
 
   &.has-error &-error {
     color: var-get('colorError');
-    visibility: visible;
-  }
-
-  &-icon {
-    position: absolute;
-    font-size: 12px;
-    right: 16px;
-    top: 11px;
     display: block;
-  }
-
-  &:not(.has-error) input:focus ~ &-icon,
-  &:not(.has-error) select:focus ~ &-icon {
-    color: var-get('colorPrimary');
   }
 
   &-count {
@@ -87,6 +75,22 @@
     }
   }
 
+  &-icon {
+    position: absolute;
+    font-size: 12px;
+    right: 16px;
+    top: 11px;
+    display: block;
+  }
+
+  &:not(.has-error) input:focus ~ &-icon,
+  &:not(.has-error) select:focus ~ &-icon {
+    color: var-get('colorPrimary');
+  }
+
+  //
+  // Light theme colors
+  //
 
   $theme-light-colors: map-get($v2-control-colors, light);
 
@@ -116,6 +120,9 @@
     color: map-get($theme-light-colors, label-disabled);
   }
 
+  //
+  // Dark theme colors
+  //
 
   $theme-dark-colors: map-get($v2-control-colors, dark);
 

@@ -46,6 +46,10 @@ $v2-control-colors: (
     box-shadow: inset 0 -1px var-get('colorError');
   }
 
+  //
+  // Light theme colors
+  //
+
   $theme-light-colors: map-get($v2-control-colors, light);
 
   color: map-get($theme-light-colors, input-default);
@@ -56,6 +60,10 @@ $v2-control-colors: (
     color: map-get($theme-light-colors, input-disabled);
     border-color: map-get($theme-light-colors, border-disabled);
   }
+
+  //
+  // Dark theme colors
+  //
 
   $theme-dark-colors: map-get($v2-control-colors, dark);
 
