@@ -35,41 +35,29 @@ Toggle is used with a wrapped `<label>` element that contain
            <div class="olt-Card-content">
              <div class="demo-content">
               <label class="olt-Toggle">
-                <input class="olt-Toggle-input" type="checkbox" checked>
-                <div class="olt-Toggle-button">
-                  <div class="olt-Toggle-track"></div>
-                  <div class="olt-Toggle-knob"></div>
-                </div>
+                <input type="checkbox" checked>
+                <div class="olt-Toggle-button"></div>
                 <div class="olt-Toggle-label">Select Option</div>
               </label>
              </div>
              <div class="demo-content">
                <label class="olt-Toggle">
-                <input class="olt-Toggle-input" type="checkbox" disabled checked>
-                <div class="olt-Toggle-button">
-                  <div class="olt-Toggle-track"></div>
-                  <div class="olt-Toggle-knob"></div>
-                </div>
+                <input type="checkbox" disabled checked>
+                <div class="olt-Toggle-button"></div>
                 <div class="olt-Toggle-label">Select Option</div>
               </label>
              </div>
              <div class="demo-content">
                <label class="olt-Toggle olt-Toggle--secondary">
-                <input class="olt-Toggle-input" type="checkbox">
-                <div class="olt-Toggle-button">
-                  <div class="olt-Toggle-track"></div>
-                  <div class="olt-Toggle-knob"></div>
-                </div>
+                <input type="checkbox">
+                <div class="olt-Toggle-button"></div>
                 <div class="olt-Toggle-label">Select Option</div>
               </label>
              </div>
              <div class="demo-content">
                <label class="olt-Toggle olt-Toggle--secondary">
-                <input class="olt-Toggle-input" type="checkbox" disabled>
-                <div class="olt-Toggle-button">
-                  <div class="olt-Toggle-track"></div>
-                  <div class="olt-Toggle-knob"></div>
-                </div>
+                <input type="checkbox" disabled>
+                <div class="olt-Toggle-button"></div>
                 <div class="olt-Toggle-label">Select Option</div>
               </label>
              </div>
@@ -83,41 +71,29 @@ Toggle is used with a wrapped `<label>` element that contain
            <div class="olt-Card-content">
              <div class="demo-content">
               <label class="olt-Toggle">
-                <input class="olt-Toggle-input" type="checkbox" checked>
-                <div class="olt-Toggle-button">
-                  <div class="olt-Toggle-track"></div>
-                  <div class="olt-Toggle-knob"></div>
-                </div>
+                <input type="checkbox" checked>
+                <div class="olt-Toggle-button"></div>
                 <div class="olt-Toggle-label">Select Option</div>
               </label>
              </div>
              <div class="demo-content">
                <label class="olt-Toggle">
-                <input class="olt-Toggle-input" type="checkbox" disabled checked>
-                <div class="olt-Toggle-button">
-                  <div class="olt-Toggle-track"></div>
-                  <div class="olt-Toggle-knob"></div>
-                </div>
+                <input type="checkbox" disabled checked>
+                <div class="olt-Toggle-button"></div>
                 <div class="olt-Toggle-label">Select Option</div>
               </label>
              </div>
              <div class="demo-content">
                <label class="olt-Toggle olt-Toggle--secondary">
-                <input class="olt-Toggle-input" type="checkbox">
-                <div class="olt-Toggle-button">
-                  <div class="olt-Toggle-track"></div>
-                  <div class="olt-Toggle-knob"></div>
-                </div>
+                <input type="checkbox">
+                <div class="olt-Toggle-button"></div>
                 <div class="olt-Toggle-label">Select Option</div>
               </label>
              </div>
              <div class="demo-content">
                <label class="olt-Toggle olt-Toggle--secondary">
-                <input class="olt-Toggle-input" type="checkbox" disabled>
-                <div class="olt-Toggle-button">
-                  <div class="olt-Toggle-track"></div>
-                  <div class="olt-Toggle-knob"></div>
-                </div>
+                <input type="checkbox" disabled>
+                <div class="olt-Toggle-button"></div>
                 <div class="olt-Toggle-label">Select Option</div>
               </label>
              </div>
@@ -135,35 +111,23 @@ apply `disable`, `checked` attributes directly to the input field
 
 ```states.html
 <label class="olt-Toggle">
-  <input class="olt-Toggle-input" type="checkbox">
-  <div class="olt-Toggle-button">
-    <div class="olt-Toggle-track"></div>
-    <div class="olt-Toggle-knob"></div>
-  </div>
+  <input type="checkbox">
+  <div class="olt-Toggle-button"></div>
   <div class="olt-Toggle-label">Select Option</div>
 </label>
 <label class="olt-Toggle">
-  <input class="olt-Toggle-input" type="checkbox" disabled>
-  <div class="olt-Toggle-button">
-    <div class="olt-Toggle-track"></div>
-    <div class="olt-Toggle-knob"></div>
-  </div>
+  <input type="checkbox" disabled>
+  <div class="olt-Toggle-button"></div>
   <div class="olt-Toggle-label">Select Option</div>
 </label>
 <label class="olt-Toggle">
-  <input class="olt-Toggle-input" type="checkbox" checked>
-  <div class="olt-Toggle-button">
-    <div class="olt-Toggle-track"></div>
-    <div class="olt-Toggle-knob"></div>
-  </div>
+  <input type="checkbox" checked>
+  <div class="olt-Toggle-button"></div>
   <div class="olt-Toggle-label">Select Option</div>
 </label>
 <label class="olt-Toggle">
-  <input class="olt-Toggle-input" type="checkbox" disabled checked>
-  <div class="olt-Toggle-button">
-    <div class="olt-Toggle-track"></div>
-    <div class="olt-Toggle-knob"></div>
-  </div>
+  <input type="checkbox" disabled checked>
+  <div class="olt-Toggle-button"></div>
   <div class="olt-Toggle-label">Select Option</div>
 </label>
 ```
@@ -174,19 +138,13 @@ The display mode can be set to `inline-flex` instead of `flex` with the `--inlin
 
 ```inline.html
 <label class="olt-Toggle olt-Toggle--inline">
-  <input class="olt-Toggle-input" type="checkbox" checked>
-  <div class="olt-Toggle-button">
-    <div class="olt-Toggle-track"></div>
-    <div class="olt-Toggle-knob"></div>
-  </div>
+  <input type="checkbox" checked>
+  <div class="olt-Toggle-button"></div>
   <div class="olt-Toggle-label">Select Option</div>
 </label>
 <label class="olt-Toggle olt-Toggle--inline">
-  <input class="olt-Toggle-input" type="checkbox" disabled checked>
-  <div class="olt-Toggle-button">
-    <div class="olt-Toggle-track"></div>
-    <div class="olt-Toggle-knob"></div>
-  </div>
+  <input type="checkbox" disabled checked>
+  <div class="olt-Toggle-button"></div>
   <div class="olt-Toggle-label">Select Option</div>
 </label>
 ```

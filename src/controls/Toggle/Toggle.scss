@@ -57,15 +57,19 @@
     display: inline-flex;
   }
 
-  &:not(&--inline) + &:not(&--inline) {
+  & + & {
     margin-top: 4px;
   }
 
-  &-input {
+  &--inline + &--inline {
+    margin-top: 0;
+  }
+
+  input {
     display: none;
   }
 
-  &-input:checked ~ &-button &-knob {
+  input:checked ~ &-button:after {
     left: calc(100% - #{$knob-size - $knob-overlap});
   }
 
@@ -74,8 +78,8 @@
     cursor: pointer;
   }
 
-  &-input:disabled ~ &-button,
-  &-input:disabled ~ &-label {
+  input:disabled ~ &-button,
+  input:disabled ~ &-label {
     cursor: not-allowed;
   }
 
@@ -88,7 +92,8 @@
     margin-right: $knob-overlap; // to equalize the knot overlap
   }
 
-  &-knob {
+  &-button:after {
+    content: '';
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
     transition:
       all var-get('transitionDuration')
@@ -101,7 +106,8 @@
     border-radius: 50%;
   }
 
-  &-track {
+  &-button:before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -111,19 +117,19 @@
   }
 
   @mixin setColors ($self, $colors) {
-    &:checked + #{$self}-button #{$self}-knob {
+    &:checked + #{$self}-button:after {
       background-color: map-get(map-get($colors, 'checked'), 'knob');
     }
 
-    &:checked + #{$self}-button #{$self}-track {
+    &:checked + #{$self}-button:before {
       background-color: map-get(map-get($colors, 'checked'), 'track');
     }
 
-    & + #{$self}-button #{$self}-knob {
+    & + #{$self}-button:after {
       background-color: map-get(map-get($colors, 'unchecked'), 'knob');
     }
 
-    & + #{$self}-button #{$self}-track {
+    & + #{$self}-button:before {
       background-color: map-get(map-get($colors, 'unchecked'), 'track');
     }
   }
@@ -131,24 +137,24 @@
   $theme-light: map-get($toggle-colors, 'light');
   $theme-dark: map-get($toggle-colors, 'dark');
 
-  #{$self}-input {
+  input {
     @include setColors($self, map-get($theme-light, 'default'));
   }
 
-  #{$self}-input:disabled {
+  input:disabled {
     @include setColors($self, map-get($theme-light, 'disabled'));
   }
 
 
-  .Theme-dark & #{$self}-input {
+  .Theme-dark & input {
     @include setColors($self, map-get($theme-dark, 'default'));
   }
 
-  .Theme-dark & #{$self}-input:disabled {
+  .Theme-dark & input:disabled {
     @include setColors($self, map-get($theme-dark, 'disabled'));
   }
 
-  #{$self}-input:disabled ~ &-label {
+  input:disabled ~ &-label {
     opacity: 0.3;
   }
 
