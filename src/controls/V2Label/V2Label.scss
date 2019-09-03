@@ -100,6 +100,11 @@
     color: map-get($theme-light-colors, input-default);
   }
 
+  input:required ~ &-text:after,
+  select:required ~ &-text:after {
+    content: '*';
+  }
+
   input:disabled ~ &-text,
   select:disabled ~ &-text,
   input:disabled ~ &-icon,

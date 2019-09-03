@@ -24,6 +24,9 @@ Input is used with a wrapped `<label>` element that contain
         Disabled
       </div>
       <div class="demo-input-label">
+        Required
+      </div>
+      <div class="demo-input-label">
         Icon
       </div>
       <div class="demo-input-label">
@@ -59,6 +62,12 @@ Input is used with a wrapped `<label>` element that contain
             <div class="demo-input-content">
               <label class="olt-V2Label has-value">
                 <input class="olt-V2Input" type="text" value="Lorem ipsum" disabled />
+                <div class="olt-V2Label-text">Enter your data</div>
+              </label>
+            </div>
+            <div class="demo-input-content">
+              <label class="olt-V2Label has-value">
+                <input class="olt-V2Input" type="text" value="Lorem ipsum" required />
                 <div class="olt-V2Label-text">Enter your data</div>
               </label>
             </div>
@@ -135,6 +144,12 @@ Input is used with a wrapped `<label>` element that contain
             </div>
             <div class="demo-input-content">
               <label class="olt-V2Label has-value">
+                <input class="olt-V2Input" type="text" value="Lorem ipsum" required />
+                <div class="olt-V2Label-text">Enter your data</div>
+              </label>
+            </div>
+            <div class="demo-input-content">
+              <label class="olt-V2Label has-value">
                 <input class="olt-V2Input" type="text" value="Lorem ipsum" />
                 <div class="olt-V2Label-text">Enter your data</div>
                 <div class="olt-V2Label-icon">
@@ -194,7 +209,7 @@ Input is used with a wrapped `<label>` element that contain
 </label>
 ```
 
-## Disabled state
+## Disabled
 
 The input field can be disabled. The styles of the label
 and additional elements will change accordingly.
@@ -210,7 +225,22 @@ and additional elements will change accordingly.
 </label>
 ```
 
-## With Icon
+## Required
+
+Setting the input element as required appends `*` to the label.
+
+```required.html
+<label class="olt-V2Label">
+  <input class="olt-V2Input" type="text" required />
+  <div class="olt-V2Label-text">Enter your data</div>
+</label>
+<label class="olt-V2Label has-value">
+  <input class="olt-V2Input" type="text" value="Lorem ipsum" required />
+  <div class="olt-V2Label-text">Enter your data</div>
+</label>
+```
+
+## Icon
 
 The input can render an icon on its right side. It has different
 colors when the input is empty, contains a value or is disabled.
@@ -239,7 +269,7 @@ colors when the input is empty, contains a value or is disabled.
 </label>
 ```
 
-## With Count
+## Count
 
 For inputs that are limited to a certain amount of characters
 you can render that information for better user experience.
@@ -265,7 +295,7 @@ you can render that information for better user experience.
 </label>
 ```
 
-## With Error
+## Error
 
 If the user input is invalid the error can be indicated by adding
 the `has-error` class to the label. The color of the input and label
@@ -298,7 +328,7 @@ change. The error messsage can be displayed below the input.
 </label>
 ```
 
-## With Hint
+## Hint
 
 If the user input is validated a hint can be shown below the input
 for better user experience.
