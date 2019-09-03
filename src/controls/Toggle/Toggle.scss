@@ -167,4 +167,14 @@
     line-height: $olt-checkbox-label-line-height;
     user-select: none;
   }
+
+  &--reverse &-label {
+    order: 1;
+    margin-left: 0;
+    margin-right: 8px;
+  }
+
+  &--reverse &-button {
+    order: 2;
+  }
 }
