@@ -50,31 +50,31 @@ Input is used with a wrapped `<label>` element that contain
             <div class="demo-input-content">
               <label class="olt-V2Label">
                 <input class="olt-V2Input" type="text" placeholder="Your data" />
-                <div class="olt-V2Label-text">Enter your data</div>
+                <span class="olt-V2Label-text">Enter your data</span>
               </label>
             </div>
             <div class="demo-input-content">
               <label class="olt-V2Label has-value">
                 <input class="olt-V2Input" type="text" value="Lorem ipsum" />
-                <div class="olt-V2Label-text">Enter your data</div>
+                <span class="olt-V2Label-text">Enter your data</span>
               </label>
             </div>
             <div class="demo-input-content">
               <label class="olt-V2Label has-value">
                 <input class="olt-V2Input" type="text" value="Lorem ipsum" disabled />
-                <div class="olt-V2Label-text">Enter your data</div>
+                <span class="olt-V2Label-text">Enter your data</span>
               </label>
             </div>
             <div class="demo-input-content">
               <label class="olt-V2Label has-value">
                 <input class="olt-V2Input" type="text" value="Lorem ipsum" required />
-                <div class="olt-V2Label-text">Enter your data</div>
+                <span class="olt-V2Label-text">Enter your data</span>
               </label>
             </div>
             <div class="demo-input-content">
               <label class="olt-V2Label has-value">
                 <input class="olt-V2Input" type="text" value="Lorem ipsum" />
-                <div class="olt-V2Label-text">Enter your data</div>
+                <span class="olt-V2Label-text">Enter your data</span>
                 <div class="olt-V2Label-icon">
                   <i class="olt-Icon" data-icon="edit"></i>
                 </div>
@@ -83,7 +83,7 @@ Input is used with a wrapped `<label>` element that contain
             <div class="demo-input-content">
               <label class="olt-V2Label has-value">
                 <input class="olt-V2Input" type="text" value="Lorem ipsum" />
-                <div class="olt-V2Label-text">Enter your data</div>
+                <span class="olt-V2Label-text">Enter your data</span>
                 <div class="olt-V2Label-footer">
                   <span class="olt-V2Label-count">
                     11/150
@@ -94,7 +94,7 @@ Input is used with a wrapped `<label>` element that contain
             <div class="demo-input-content">
               <label class="olt-V2Label has-value has-error">
                 <input class="olt-V2Input" type="text" value="Lorem ipsum" />
-                <div class="olt-V2Label-text">Enter your data</div>
+                <span class="olt-V2Label-text">Enter your data</span>
                 <div class="olt-V2Label-footer">
                   <span class="olt-V2Label-error">
                     Not a valid input
@@ -108,7 +108,7 @@ Input is used with a wrapped `<label>` element that contain
             <div class="demo-input-content">
               <label class="olt-V2Label has-value">
                 <input class="olt-V2Input" type="text" value="Lorem ipsum" />
-                <div class="olt-V2Label-text">Enter your data</div>
+                <span class="olt-V2Label-text">Enter your data</span>
                 <div class="olt-V2Label-footer">
                   <span class="olt-V2Label-hint">
                     This input is required
@@ -127,31 +127,31 @@ Input is used with a wrapped `<label>` element that contain
             <div class="demo-input-content">
               <label class="olt-V2Label">
                 <input class="olt-V2Input" type="text" placeholder="Your data" />
-                <div class="olt-V2Label-text">Enter your data</div>
+                <span class="olt-V2Label-text">Enter your data</span>
               </label>
             </div>
             <div class="demo-input-content">
               <label class="olt-V2Label has-value">
                 <input class="olt-V2Input" type="text" value="Lorem ipsum" />
-                <div class="olt-V2Label-text">Enter your data</div>
+                <span class="olt-V2Label-text">Enter your data</span>
               </label>
             </div>
             <div class="demo-input-content">
               <label class="olt-V2Label has-value">
                 <input class="olt-V2Input" type="text" value="Lorem ipsum" disabled />
-                <div class="olt-V2Label-text">Enter your data</div>
+                <span class="olt-V2Label-text">Enter your data</span>
               </label>
             </div>
             <div class="demo-input-content">
               <label class="olt-V2Label has-value">
                 <input class="olt-V2Input" type="text" value="Lorem ipsum" required />
-                <div class="olt-V2Label-text">Enter your data</div>
+                <span class="olt-V2Label-text">Enter your data</span>
               </label>
             </div>
             <div class="demo-input-content">
               <label class="olt-V2Label has-value">
                 <input class="olt-V2Input" type="text" value="Lorem ipsum" />
-                <div class="olt-V2Label-text">Enter your data</div>
+                <span class="olt-V2Label-text">Enter your data</span>
                 <div class="olt-V2Label-icon">
                   <i class="olt-Icon" data-icon="edit"></i>
                 </div>
@@ -160,7 +160,7 @@ Input is used with a wrapped `<label>` element that contain
             <div class="demo-input-content">
               <label class="olt-V2Label has-value">
                 <input class="olt-V2Input" type="text" value="Lorem ipsum" />
-                <div class="olt-V2Label-text">Enter your data</div>
+                <span class="olt-V2Label-text">Enter your data</span>
                 <div class="olt-V2Label-footer">
                   <span class="olt-V2Label-count">
                     11/150
@@ -171,7 +171,7 @@ Input is used with a wrapped `<label>` element that contain
             <div class="demo-input-content">
               <label class="olt-V2Label has-value has-error">
                 <input class="olt-V2Input" type="text" value="Lorem ipsum" />
-                <div class="olt-V2Label-text">Enter your data</div>
+                <span class="olt-V2Label-text">Enter your data</span>
                 <div class="olt-V2Label-footer">
                   <span class="olt-V2Label-error">
                     Not a valid input
@@ -185,7 +185,7 @@ Input is used with a wrapped `<label>` element that contain
             <div class="demo-input-content">
               <label class="olt-V2Label has-value">
                 <input class="olt-V2Input" type="text" value="Lorem ipsum" />
-                <div class="olt-V2Label-text">Enter your data</div>
+                <span class="olt-V2Label-text">Enter your data</span>
                 <div class="olt-V2Label-footer">
                   <span class="olt-V2Label-hint">
                     This input is required
@@ -205,7 +205,19 @@ Input is used with a wrapped `<label>` element that contain
 ```example.html
 <label class="olt-V2Label">
   <input class="olt-V2Input" type="text" placeholder="Your data" />
-  <div class="olt-V2Label-text">Enter your data</div>
+  <span class="olt-V2Label-text">Enter your data</span>
+</label>
+```
+
+## Filled
+
+When the input contains a value the `has-value` class has to be
+added to the input `label`.
+
+```filled.html
+<label class="olt-V2Label has-value">
+  <input class="olt-V2Input" type="text" value="Lorem ipsum" />
+  <span class="olt-V2Label-text">Enter your data</span>
 </label>
 ```
 
@@ -217,11 +229,11 @@ and additional elements will change accordingly.
 ```disabled.html
 <label class="olt-V2Label">
   <input class="olt-V2Input" type="text" placeholder="Your data" disabled />
-  <div class="olt-V2Label-text">Enter your data</div>
+  <span class="olt-V2Label-text">Enter your data</span>
 </label>
 <label class="olt-V2Label has-value">
   <input class="olt-V2Input" type="text" value="Lorem ipsum" disabled />
-  <div class="olt-V2Label-text">Enter your data</div>
+  <span class="olt-V2Label-text">Enter your data</span>
 </label>
 ```
 
@@ -232,11 +244,11 @@ Setting the input element as required appends `*` to the label.
 ```required.html
 <label class="olt-V2Label">
   <input class="olt-V2Input" type="text" required />
-  <div class="olt-V2Label-text">Enter your data</div>
+  <span class="olt-V2Label-text">Enter your data</span>
 </label>
 <label class="olt-V2Label has-value">
   <input class="olt-V2Input" type="text" value="Lorem ipsum" required />
-  <div class="olt-V2Label-text">Enter your data</div>
+  <span class="olt-V2Label-text">Enter your data</span>
 </label>
 ```
 
@@ -248,21 +260,21 @@ colors when the input is empty, contains a value or is disabled.
 ```icons.html
 <label class="olt-V2Label>
   <input class="olt-V2Input" type="text" />
-  <div class="olt-V2Label-text">Enter your data</div>
+  <span class="olt-V2Label-text">Enter your data</span>
   <div class="olt-V2Label-icon">
     <i class="olt-Icon" data-icon="edit"></i>
   </div>
 </label>
 <label class="olt-V2Label has-value">
   <input class="olt-V2Input" type="text" value="Lorem ipsum" />
-  <div class="olt-V2Label-text">Enter your data</div>
+  <span class="olt-V2Label-text">Enter your data</span>
   <div class="olt-V2Label-icon">
     <i class="olt-Icon" data-icon="edit"></i>
   </div>
 </label>
 <label class="olt-V2Label has-value">
   <input class="olt-V2Input" type="text" value="Lorem ipsum" disabled />
-  <div class="olt-V2Label-text">Enter your data</div>
+  <span class="olt-V2Label-text">Enter your data</span>
   <div class="olt-V2Label-icon">
     <i class="olt-Icon" data-icon="edit"></i>
   </div>
@@ -277,7 +289,7 @@ you can render that information for better user experience.
 ```count.html
 <label class="olt-V2Label has-value">
   <input class="olt-V2Input" type="text" value="Lorem ipsum" />
-  <div class="olt-V2Label-text">Enter your data</div>
+  <span class="olt-V2Label-text">Enter your data</span>
   <div class="olt-V2Label-footer">
     <span class="olt-V2Label-count">
       11/150
@@ -286,7 +298,7 @@ you can render that information for better user experience.
 </label>
 <label class="olt-V2Label has-value">
   <input class="olt-V2Input" type="text" value="Lorem ipsum" disabled />
-  <div class="olt-V2Label-text">Enter your data</div>
+  <span class="olt-V2Label-text">Enter your data</span>
   <div class="olt-V2Label-footer">
     <span class="olt-V2Label-count">
       11/150
@@ -304,7 +316,7 @@ change. The error messsage can be displayed below the input.
 ```error.html
 <label class="olt-V2Label has-value has-error">
   <input class="olt-V2Input" type="text" value="Lorem ipsum" />
-  <div class="olt-V2Label-text">Enter your data</div>
+  <span class="olt-V2Label-text">Enter your data</span>
   <div class="olt-V2Label-footer">
     <span class="olt-V2Label-error">
       Not a valid input
@@ -313,7 +325,7 @@ change. The error messsage can be displayed below the input.
 </label>
 <label class="olt-V2Label has-value has-error">
   <input class="olt-V2Input" type="text" value="Lorem ipsum" />
-  <div class="olt-V2Label-text">Enter your data</div>
+  <span class="olt-V2Label-text">Enter your data</span>
   <div class="olt-V2Label-icon">
     <i class="olt-Icon" data-icon="edit"></i>
   </div>
@@ -336,7 +348,7 @@ for better user experience.
 ```hint.html
 <label class="olt-V2Label has-value">
   <input class="olt-V2Input" type="text" value="Lorem ipsum" />
-  <div class="olt-V2Label-text">Enter your data</div>
+  <span class="olt-V2Label-text">Enter your data</span>
   <div class="olt-V2Label-footer">
     <span class="olt-V2Label-hint">
       This input is required
@@ -345,7 +357,7 @@ for better user experience.
 </label>
 <label class="olt-V2Label has-value">
   <input class="olt-V2Input" type="text" value="Lorem ipsum" />
-  <div class="olt-V2Label-text">Enter your data</div>
+  <span class="olt-V2Label-text">Enter your data</span>
   <div class="olt-V2Label-icon">
     <i class="olt-Icon" data-icon="edit"></i>
   </div>

@@ -21,7 +21,7 @@
     left: 16px;
   }
 
-  .has-value &-text {
+  &.has-value &-text {
     top: -1px;
     transform: scale(0.6875);
     letter-spacing: 0.2px;
@@ -100,7 +100,7 @@
     color: map-get($theme-light-colors, label-default);
   }
 
-  .has-value &-icon {
+  &.has-value &-icon {
     color: map-get($theme-light-colors, input-default);
   }
 
@@ -134,7 +134,7 @@
     color: map-get($theme-dark-colors, label-default);
   }
 
-  .Theme-dark .has-value &-icon {
+  .Theme-dark &.has-value &-icon {
     color: map-get($theme-dark-colors, input-default);
   }
 
