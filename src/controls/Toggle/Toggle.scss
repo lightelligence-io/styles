@@ -168,13 +168,13 @@
     user-select: none;
   }
 
-  &--reverse &-label {
+  &--reversed &-label {
     order: 1;
     margin-left: 0;
     margin-right: 8px;
   }
 
-  &--reverse &-button {
+  &--reversed &-button {
     order: 2;
   }
 }

@@ -149,17 +149,17 @@ The display mode can be set to `inline-flex` instead of `flex` with the `--inlin
 </label>
 ```
 
-## Reverse
+## Reversed display order
 
-To display the label to the left of the toggle use `--reverse`.
+To display the label on the left of the toggle button use `--reversed`.
 
 ```reverse.html
-<label class="olt-Toggle olt-Toggle--reverse">
+<label class="olt-Toggle olt-Toggle--reversed">
   <input type="checkbox" checked>
   <div class="olt-Toggle-button"></div>
   <div class="olt-Toggle-label">Select Option</div>
 </label>
-<label class="olt-Toggle olt-Toggle--reverse">
+<label class="olt-Toggle olt-Toggle--reversed">
   <input type="checkbox" disabled checked>
   <div class="olt-Toggle-button"></div>
   <div class="olt-Toggle-label">Select Option</div>
