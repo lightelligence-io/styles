@@ -23,7 +23,8 @@
     left: 16px;
   }
 
-  &.has-value &-text {
+  &.has-value &-text,
+  &:not(&--floating) &-text {
     top: -1px;
     transform: scale(0.6875);
     letter-spacing: 0.2px;

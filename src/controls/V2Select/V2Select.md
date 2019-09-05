@@ -18,7 +18,10 @@ Select is used with a wrapped `<label>` element that contain
         Empty
       </div>
       <div class="demo-input-label">
-        Filled
+        Floating
+      </div>
+      <div class="demo-input-label">
+        Selected
       </div>
       <div class="demo-input-label">
         Disabled
@@ -53,7 +56,18 @@ Select is used with a wrapped `<label>` element that contain
               </label>
             </div>
             <div class="demo-input-content">
-              <label class="olt-V2Label has-value">
+              <label class="olt-V2Label olt-V2Label--floating">
+                <select class="olt-V2Select">
+                  <option hidden></option>
+                  <option value="LoremIpsum">Lorem Ipsum</option>
+                  <option value="DolorSitAmet">Dolor Sit Amet</option>
+                  <option value="EtVersus">Et Versus</option>
+                </select>
+                <span class="olt-V2Label-text">Select an option</span>
+              </label>
+            </div>
+            <div class="demo-input-content">
+              <label class="olt-V2Label">
                 <select class="olt-V2Select">
                   <option hidden></option>
                   <option value="LoremIpsum" selected>Lorem Ipsum</option>
@@ -64,7 +78,7 @@ Select is used with a wrapped `<label>` element that contain
               </label>
             </div>
             <div class="demo-input-content">
-              <label class="olt-V2Label has-value">
+              <label class="olt-V2Label">
                 <select class="olt-V2Select" disabled>
                   <option hidden></option>
                   <option value="LoremIpsum" selected>Lorem Ipsum</option>
@@ -75,7 +89,7 @@ Select is used with a wrapped `<label>` element that contain
               </label>
             </div>
             <div class="demo-input-content">
-              <label class="olt-V2Label has-value">
+              <label class="olt-V2Label">
                 <select class="olt-V2Select" required>
                   <option hidden></option>
                   <option value="LoremIpsum" selected>Lorem Ipsum</option>
@@ -86,7 +100,7 @@ Select is used with a wrapped `<label>` element that contain
               </label>
             </div>
             <div class="demo-input-content">
-              <label class="olt-V2Label has-value has-error">
+              <label class="olt-V2Label has-error">
                 <select class="olt-V2Select">
                   <option hidden></option>
                   <option value="LoremIpsum" selected>Lorem Ipsum</option>
@@ -102,7 +116,7 @@ Select is used with a wrapped `<label>` element that contain
               </label>
             </div>
             <div class="demo-input-content">
-              <label class="olt-V2Label has-value">
+              <label class="olt-V2Label">
                 <select class="olt-V2Select">
                   <option hidden></option>
                   <option value="LoremIpsum" selected>Lorem Ipsum</option>
@@ -137,8 +151,9 @@ Select is used with a wrapped `<label>` element that contain
               </label>
             </div>
             <div class="demo-input-content">
-              <label class="olt-V2Label has-value">
+              <label class="olt-V2Label olt-V2Label--floating">
                 <select class="olt-V2Select">
+                  <option hidden></option>
                   <option value="LoremIpsum">Lorem Ipsum</option>
                   <option value="DolorSitAmet">Dolor Sit Amet</option>
                   <option value="EtVersus">Et Versus</option>
@@ -147,7 +162,18 @@ Select is used with a wrapped `<label>` element that contain
               </label>
             </div>
             <div class="demo-input-content">
-              <label class="olt-V2Label has-value">
+              <label class="olt-V2Label">
+                <select class="olt-V2Select">
+                  <option hidden></option>
+                  <option value="LoremIpsum" selected>Lorem Ipsum</option>
+                  <option value="DolorSitAmet">Dolor Sit Amet</option>
+                  <option value="EtVersus">Et Versus</option>
+                </select>
+                <span class="olt-V2Label-text">Select an option</span>
+              </label>
+            </div>
+            <div class="demo-input-content">
+              <label class="olt-V2Label">
                 <select class="olt-V2Select" disabled>
                   <option hidden></option>
                   <option value="LoremIpsum" selected>Lorem Ipsum</option>
@@ -158,7 +184,7 @@ Select is used with a wrapped `<label>` element that contain
               </label>
             </div>
             <div class="demo-input-content">
-              <label class="olt-V2Label has-value">
+              <label class="olt-V2Label">
                 <select class="olt-V2Select" required>
                   <option hidden></option>
                   <option value="LoremIpsum" selected>Lorem Ipsum</option>
@@ -169,7 +195,7 @@ Select is used with a wrapped `<label>` element that contain
               </label>
             </div>
             <div class="demo-input-content">
-              <label class="olt-V2Label has-value has-error">
+              <label class="olt-V2Label has-error">
                 <select class="olt-V2Select">
                   <option hidden></option>
                   <option value="LoremIpsum" selected>Lorem Ipsum</option>
@@ -185,7 +211,7 @@ Select is used with a wrapped `<label>` element that contain
               </label>
             </div>
             <div class="demo-input-content">
-              <label class="olt-V2Label has-value">
+              <label class="olt-V2Label">
                 <select class="olt-V2Select">
                   <option hidden></option>
                   <option value="LoremIpsum" selected>Lorem Ipsum</option>
@@ -221,13 +247,25 @@ Select is used with a wrapped `<label>` element that contain
 </label>
 ```
 
-## Selected
+## Floating
 
-When an option has been selected the `has-value` class has to be
-added to the select `label`.
+By default the input label is not floating meaning even without an
+input value or without focus the label stays on top of the input.
+`olt-V2Label--floating` class has to be added to the input `label`.
+When the input contains a value the `has-value` class has to be set
+additionally in order to move the label text on top of the input.
 
-```selected.html
-<label class="olt-V2Label has-value">
+```floating.html
+<label class="olt-V2Label olt-V2Label--floating">
+  <select class="olt-V2Select">
+    <option hidden></option>
+    <option value="LoremIpsum">Lorem Ipsum</option>
+    <option value="DolorSitAmet">Dolor Sit Amet</option>
+    <option value="EtVersus">Et Versus</option>
+  </select>
+  <span class="olt-V2Label-text">Select an option</span>
+</label>
+<label class="olt-V2Label olt-V2Label--floating has-value">
   <select class="olt-V2Select">
     <option hidden></option>
     <option value="LoremIpsum" selected>Lorem Ipsum</option>
@@ -253,7 +291,7 @@ and additional elements will change accordingly.
   </select>
   <span class="olt-V2Label-text">Select an option</span>
 </label>
-<label class="olt-V2Label has-value">
+<label class="olt-V2Label">
   <select class="olt-V2Select" disabled>
     <option hidden></option>
     <option value="LoremIpsum" selected>Lorem Ipsum</option>
@@ -278,7 +316,7 @@ Setting the select element as required appends `*` to the label.
   </select>
   <span class="olt-V2Label-text">Select an option</span>
 </label>
-<label class="olt-V2Label has-value">
+<label class="olt-V2Label">
   <select class="olt-V2Select" required>
     <option hidden></option>
     <option value="LoremIpsum" selected>Lorem Ipsum</option>

@@ -27,6 +27,26 @@ to use *Label* together with input elements.
 </label>
 ```
 
+## Floating
+
+By default the label is not floating meaning even without an
+input value or without focus the label stays on top of the input.
+To have a floating label the `olt-V2Label--floating` class has to
+be added to the `label` element. When the input contains a value
+the `has-value` class has to be set additionally in order to move
+the label text on top of the input.
+
+```floating.html
+<label class="olt-V2Label olt-V2Label--floating">
+  <input class="olt-V2Input" type="text" placeholder="Your data" />
+  <span class="olt-V2Label-text">Enter your data</span>
+</label>
+<label class="olt-V2Label olt-V2Label--floating has-value">
+  <input class="olt-V2Input" type="text" value="Lorem ipsum" />
+  <span class="olt-V2Label-text">Enter your data</span>
+</label>
+```
+
 ## has-value
 
 When an input element contains a value the `has-value` class has to be
