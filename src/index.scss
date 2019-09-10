@@ -20,6 +20,7 @@
 @import './content/Headline/Headline.scss';
 @import './content/Table/Table.scss';
 @import './content/Link/Link.scss';
+@import './content/Theme/Theme.scss';
 
 // Controls
 @import './controls/Label/Label.scss';
@@ -32,6 +33,9 @@
 @import './controls/Toggle/Toggle.scss';
 @import './controls/V2Checkbox/V2Checkbox.scss';
 @import './controls/V2Radio/V2Radio.scss';
+@import './controls/V2Label/V2Label.scss';
+@import './controls/V2Input/V2Input.scss';
+@import './controls/V2Select/V2Select.scss';
 
 // Components
 @import './components/Icon/Icon.scss';

@@ -1,0 +1,157 @@
+.V2Label {
+  $self: &;
+
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: var-get('spacing1');
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $olt-control-spacer;
+
+  &-text {
+    position: absolute;
+    top: 11px;
+    transform-origin: left center;
+    pointer-events: none;
+    cursor: text;
+    transition: all 200ms;
+    left: 16px;
+  }
+
+  &.has-value &-text,
+  &:not(&--floating) &-text {
+    top: -1px;
+    transform: scale(0.6875);
+    letter-spacing: 0.2px;
+  }
+
+  input:focus ~ &-text,
+  select:focus ~ &-text {
+    top: -1px;
+    transform: scale(0.6875);
+    color: var-get('colorPrimary');
+    letter-spacing: 0.2px;
+  }
+
+  &.has-error &-text {
+    color: var-get('colorError');
+  }
+
+  &-footer {
+    font-size: 11px;
+    letter-spacing: 0.2px;
+    margin: 3px 16px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-error {
+    display: none;
+  }
+
+  &.has-error &-error {
+    color: var-get('colorError');
+    display: block;
+  }
+
+  &-count {
+    flex-grow: 1;
+    text-align: right;
+  }
+
+  &-hint {
+    padding-left: 24px;
+
+    &:before {
+      @include icon-font-material();
+
+      content: 'info_outline';
+      position: absolute;
+      left: -1px;
+      top: -5px;
+      font-size: 18px;
+    }
+  }
+
+  &-icon {
+    position: absolute;
+    font-size: 12px;
+    right: 16px;
+    top: 11px;
+    display: block;
+  }
+
+  &:not(.has-error) input:focus ~ &-icon,
+  &:not(.has-error) select:focus ~ &-icon {
+    color: var-get('colorPrimary');
+  }
+
+  //
+  // Light theme colors
+  //
+
+  $theme-light-colors: map-get($v2-control-colors, light);
+
+  color: map-get($theme-light-colors, label-default);
+
+  &-icon {
+    color: map-get($theme-light-colors, label-default);
+  }
+
+  &.has-value &-icon {
+    color: map-get($theme-light-colors, input-default);
+  }
+
+  input:required ~ &-text:after,
+  select:required ~ &-text:after {
+    content: '*';
+  }
+
+  input:disabled,
+  select:disabled,
+  &.has-value input:disabled,
+  &.has-value select:disabled {
+    ~ #{$self}-text,
+    ~ #{$self}-icon,
+    ~ * #{$self}-count,
+    ~ * #{$self}-hint {
+      color: map-get($theme-light-colors, label-disabled);
+    }
+  }
+
+  //
+  // Dark theme colors
+  //
+
+  $theme-dark-colors: map-get($v2-control-colors, dark);
+
+  .Theme-dark & {
+    color: map-get($theme-dark-colors, label-default);
+  }
+
+  .Theme-dark &-icon {
+    color: map-get($theme-dark-colors, label-default);
+  }
+
+  .Theme-dark &.has-value &-icon {
+    color: map-get($theme-dark-colors, input-default);
+  }
+
+  .Theme-dark & input:disabled,
+  .Theme-dark & select:disabled,
+  .Theme-dark &.has-value input:disabled,
+  .Theme-dark &.has-value select:disabled {
+    ~ #{$self}-text,
+    ~ #{$self}-icon,
+    ~ * #{$self}-count,
+    ~ * #{$self}-hint {
+      color: map-get($theme-dark-colors, label-disabled);
+    }
+  }
+}

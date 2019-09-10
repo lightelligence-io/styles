@@ -303,7 +303,8 @@ a.i-sidebar-list-item:hover b {
   display: block;
 }
 
-.demo-label {
+.demo-label,
+.demo-input-label {
   font-family: 'Overpass Mono', serif;
   font-size: 12px;
   color: #000;
@@ -318,39 +319,64 @@ a.i-sidebar-list-item:hover b {
   padding-left: 30px;
 }
 
+.demo-input-label {
+  height: 90px;
+}
+
 .demo-label:after,
-.demo-label:before {
+.demo-label:before,
+.demo-input-label:after,
+.demo-input-label:before {
   content: '';
   position: absolute;
   left: 0;
 }
 
-.demo-label:before {
+.demo-label:before,
+.demo-input-label:before {
   border-left: 1px solid #979797;
   top: 0;
   bottom: 0;
 }
 
-.demo-label:after {
+.demo-label:after,
+.demo-input-label:after {
   border-top: 1px solid #979797;
   height: 0;
   top: 25px;
   width: 18px;
 }
 
+.demo-input-label:after {
+  top: 45px;
+}
+
 .demo-label:first-child:before {
   top: 25px;
+}
+
+.demo-input-label:first-child:before {
+  top: 45px;
 }
 
 .demo-label:last-child:before {
   bottom: 25px;
 }
 
-.demo-content {
+.demo-input-label:last-child:before {
+  bottom: 45px;
+}
+
+.demo-content,
+.demo-input-content {
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.demo-input-content {
+  height: 90px;
 }
 
 .demo-title {
