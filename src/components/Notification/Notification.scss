@@ -1,0 +1,166 @@
+@keyframes olt-notification-animation-open {
+  0% {
+    transform: translateY(100%);
+    visibility: hidden;
+  }
+
+  1% {
+    visibility: visible;
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes olt-notification-animation-close {
+  0% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+
+  99% {
+    visibility: visible;
+  }
+
+  100% {
+    visibility: hidden;
+    transform: translateY(100%);
+  }
+}
+
+
+.Notification {
+  $notification-border-radius: var-get('borderRadius');
+  $notification-backdrop: rgba(255, 255, 255, 0.7);
+  $notification-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  $notification-padding-x: 1.5rem;
+  $notification-padding-y: 1.5rem;
+  $notification-content-padding-x: var-get('spacing3');
+  $notification-content-padding-y: var-get('spacing3');
+  $notification-background: var-get('colorLight');
+  $notification-height: 75px;
+  $notification-width: 320px;
+  $notification-transition-duration: 0.2s;
+  $notification-transition-timing-function: ease-in;
+  $self: &;
+
+  width: 0;
+  height: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  font-family: var-get('fontFamilyBase');
+
+  // @include contextual-colors();
+
+  &-dialog {
+    background: $notification-background;
+    // animation-name: olt-notification-animation-close;
+    // animation-duration: 400ms;
+    // animation-fill-mode: forwards;
+    border: 1px solid rgb(255, 0, 0);
+    width: 100%;
+  }
+
+  &-header {
+    display: flex;
+    padding: 0;
+    width: 100%;
+    justify-content: flex-start;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+
+    &:before {
+      @include icon-font-material;
+
+      content: '';
+      align-items: flex-start;
+      font-size: 19px; // icon size
+      vertical-align: middle;
+      line-height: 19px;
+      padding-right: 20px;
+    }
+  }
+
+  &-content {
+    width: 0;
+    height: 0;
+    padding: 0;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid rgb(38, 0, 255);
+  }
+
+  &-close {
+    @extend .Button;
+
+    @extend .Button[data-icon];
+
+    &:before {
+      content: 'close';
+    }
+
+    position: absolute;
+    align-self: flex-end;
+    margin: 0;
+    color: #666;
+    right: 0;
+    top: 0;
+    z-index: $olt-z-index-notification-close;
+  }
+
+
+  &-dialog &-close {
+    @extend .Button--outline;
+  }
+
+  &.is-open {
+    position: fixed;
+    bottom: 8px;
+    margin-bottom: 8px;
+    right: 16px;
+    width: $notification-width;
+    height: $notification-height;
+
+    // width: 250px;
+    // min-width: 250px;
+    // height: 64px;
+    // min-height: 64px;
+    // animation-name: olt-notification-animation-open;
+    // animation-duration: 400ms;
+    // animation-fill-mode: forwards;
+    padding-top: $notification-content-padding-y;
+    padding-bottom: $notification-content-padding-y;
+    padding-left: $notification-content-padding-x;
+    padding-right: $notification-content-padding-x;
+    z-index: $olt-z-index-notification;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid rgb(0, 0, 0);
+  }
+
+  &--error &-header:before,
+  &--error &-header {
+    content: 'error_outline';
+    color: var-get('colorError');
+  }
+
+  &--info &-header:before,
+  &--info &-header {
+    content: 'info_outline';
+    color: var-get('colorInfo');
+  }
+
+  &--warning &-header:before,
+  &--warning &-header {
+    content: 'info_outline';
+    color: var-get('colorWarning');
+  }
+
+  &--success &-header:before,
+  &--success &-header {
+    content: 'done';
+    color: var-get('colorSuccess');
+  }
+}
