@@ -29,6 +29,13 @@
   }
 }
 
+.Notifications {
+  position: fixed;
+  bottom: 0.75rem;
+  right: 1.5rem;
+  z-index: $olt-z-index-notification-close;
+}
+
 .Notification {
   $notification-border-radius: 4px; // var-get('borderRadius');
   $notification-backdrop: rgba(255, 255, 255, 0.7);
@@ -40,24 +47,33 @@
   $notification-background: var-get('colorLight');
   $notification-height: 75px;
   $notification-width: 320px;
+  $dialog-width: 250px;
   $notification-transition-duration: 0.2s;
   $notification-transition-timing-function: ease-in;
   $self: &;
 
+  opacity: 0;
   width: 0;
   height: 0;
-  opacity: 0;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   font-family: var-get('fontFamilyBase');
   background: $notification-background;
   border-radius: $notification-border-radius;
+  padding-left: $notification-content-padding-x;
+  padding-right: $notification-content-padding-x;
+  z-index: $olt-z-index-notification;
+  box-shadow: $notification-box-shadow;
+  display: flex;
+  flex-wrap: wrap;
+  transition: opacity $notification-transition-duration $notification-transition-timing-function;
+
 
   &-dialog {
     // animation-name: olt-notification-animation-close;
     // animation-duration: 400ms;
     // animation-fill-mode: forwards;
-    width: 100%;
+    width: $dialog-width; // TODO: icon width
   }
 
   &-header {
@@ -65,6 +81,7 @@
     width: 100%;
     vertical-align: middle;
     font-weight: bold;
+    overflow: hidden;
 
     &:before {
       @include icon-font-material;
@@ -79,8 +96,8 @@
 
   &-content {
     padding: 0;
-    padding-right: 38px; // TODO: close icon size + padding
     padding-left: 31px; // TODO: icon size + icon padding
+    overflow: hidden;
   }
 
   &-close {
@@ -92,38 +109,25 @@
       content: 'close';
     }
 
-    position: absolute;
     color: #666;
     background-color: $notification-background;
     border-color: $notification-background;
-    right: 0;
-    top: 0;
     z-index: $olt-z-index-notification-close;
   }
 
-  &-dialog &-close {
-    @extend .Button--outline;
-  }
-
   &.is-open {
-    position: fixed;
-    bottom: $notification-padding-y;
-    margin-bottom: $notification-padding-y;
-    right: $notification-padding-x;
+    opacity: 1;
     width: $notification-width;
     height: auto;
     min-height: $notification-height;
+    transition: transform $notification-transition-duration $notification-transition-timing-function;
+    margin-bottom: $notification-padding-y;
+    padding-top: $notification-content-padding-y;
+    padding-bottom: $notification-content-padding-y;
+
     // animation-name: olt-notification-animation-open;
     // animation-duration: 400ms;
     // animation-fill-mode: forwards;
-    padding-top: $notification-content-padding-y;
-    padding-bottom: $notification-content-padding-y;
-    padding-left: $notification-content-padding-x;
-    padding-right: $notification-content-padding-x;
-    z-index: $olt-z-index-notification;
-    display: flex;
-    flex-wrap: wrap;
-    box-shadow: $notification-box-shadow;
   }
 
   &--error &-header:before,
@@ -167,27 +171,17 @@
     //   display: none;
     // }
 
-    #{$self}.is-open,
-    *[data-toggle='notification']:checked + label + #{$self} {
+    *[data-toggle='notification']:checked + label + div > #{$self} {
       opacity: 1;
-      position: fixed;
-      bottom: $notification-padding-y;
-      margin-bottom: $notification-padding-y;
-      right: $notification-padding-x;
       width: $notification-width;
       height: auto;
       min-height: $notification-height;
       // animation-name: olt-notification-animation-open;
       // animation-duration: 400ms;
       // animation-fill-mode: forwards;
+      margin-bottom: $notification-padding-y;
       padding-top: $notification-content-padding-y;
       padding-bottom: $notification-content-padding-y;
-      padding-left: $notification-content-padding-x;
-      padding-right: $notification-content-padding-x;
-      z-index: $olt-z-index-notification;
-      display: flex;
-      flex-wrap: wrap;
-      box-shadow: $notification-box-shadow;
     }
   }
 }

@@ -15,39 +15,43 @@ can be displayed to the user. It occupies the `olt-Notification*` class names.
  </div>
 </div>
 
-<div class="olt-Notification olt-Notification--success" data-notification-target="notification-demo-1">
-    <div class="olt-Notification-dialog">
-        <label class="olt-Notification-close" for="notification-demo-1"></label>
-        <header class="olt-Notification-header">This is a Notification</header>
-        <div class="olt-Notification-content">
-            <p>Everything went well.</p>
-        </div>
-    </div>
-</div>
-<div class="olt-Notification olt-Notification--error" data-notification-target="notification-demo-2">
-    <label class="olt-Notification-close" for="notification-demo-2"></label>
-    <div class="olt-Notification-dialog">
-        <header class="olt-Notification-header">An Error Occurred</header>
-        <div class="olt-Notification-content">
-            <p>Everything went well ... and more. This is a long text to see how the notification grows, when the text gets longer ... and it looks good!</p>
-        </div>
-    </div>
-</div>
-
-<div class="olt-Card olt-u-padding5">
-  <div class="olt-u-marginAuto">
-    <input data-toggle="notification" id="demo-3" type="checkbox">
-    <label class="olt-Button" id="button-demo-3" for="notification-demo-3"></label>
-    <div class="olt-Notification olt-Notification--success" data-notification-trigger="notification-demo-3">
+<div class="olt-Notifications">
+    <div class="olt-Notification olt-Notification--success" data-notification-target="notification-demo-1">
         <div class="olt-Notification-dialog">
-            <label class="olt-Notification-close" for="notification-demo-3"></label>
             <header class="olt-Notification-header">This is a Notification</header>
             <div class="olt-Notification-content">
                 <p>Everything went well.</p>
             </div>
         </div>
+        <label class="olt-Notification-close" for="notification-demo-1"></label>
     </div>
-  </div>
+    <div class="olt-Notification olt-Notification--error" data-notification-target="notification-demo-2">
+        <div class="olt-Notification-dialog">
+            <header class="olt-Notification-header">An Error Occurred</header>
+            <div class="olt-Notification-content">
+                <p>Everything went well ... and more. This is a long text to see how the notification grows, when the text gets longer ... and it looks good!</p>
+            </div>
+        </div>
+        <label class="olt-Notification-close" for="notification-demo-2"></label>
+    </div>
+</div>
+
+<div class="olt-Card olt-u-padding5">
+    <div class="olt-u-marginAuto">
+        <input data-toggle="notification" id="demo-3" type="checkbox">
+        <label class="olt-Button" id="button-demo-3" for="notification-demo-3"></label>
+        <div class="olt-Notifications">
+            <div class="olt-Notification olt-Notification--success" data-notification-trigger="notification-demo-3">
+                <div class="olt-Notification-dialog">
+                    <header class="olt-Notification-header">This is a Notification</header>
+                    <div class="olt-Notification-content">
+                        <p>Everything went well.</p>
+                    </div>
+                </div>
+                <label class="olt-Notification-close" for="notification-demo-3"></label>
+            </div>
+        </div>
+    </div>
 </div>
 
 ```html
