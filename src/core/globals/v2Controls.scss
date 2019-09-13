@@ -23,12 +23,13 @@ $v2-control-colors: (
   font-family: var-get('fontFamilyBase');
   vertical-align: middle;
   font-size: 16px;
-  line-height: 32px;
+  line-height: 24px;
+  letter-spacing: 0.17px;
   font-weight: normal;
-  padding: 10px 16px 0;
+  margin-top: 17px;
+  padding: 0px 16px 6px;
   border: 0;
-  height: 48px;
-  border-radius: 4px 4px 0 0;
+  background-color: transparent;
 
   &:focus {
     outline: none;
@@ -54,7 +55,6 @@ $v2-control-colors: (
 
   color: map-get($theme-light-colors, input-default);
   border-bottom: 1px solid map-get($theme-light-colors, border-default);
-  background-color: map-get($theme-light-colors, background-default);
 
   &:disabled {
     color: map-get($theme-light-colors, input-disabled);
@@ -69,7 +69,6 @@ $v2-control-colors: (
 
   .Theme-dark & {
     color: map-get($theme-dark-colors, input-default);
-    background-color: map-get($theme-dark-colors, background-default);
   }
 
   .Theme-dark :not(.has-error) &:not(:focus):not(:disabled) {

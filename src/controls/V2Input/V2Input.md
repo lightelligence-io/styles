@@ -12,7 +12,7 @@ Input is used with a wrapped `<label>` element that contain
 
 <div class="olt-Grid olt-u-marginTop4 olt-u-marginBottom6">
   <div class="olt-Grid-item olt-Grid-item--3">
-    <div class="demo-spacer-small"></div>
+    <div class="demo-input-spacer"></div>
     <div>
       <div class="demo-input-label">
         Empty
