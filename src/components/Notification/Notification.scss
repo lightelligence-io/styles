@@ -29,13 +29,12 @@
   }
 }
 
-
 .Notification {
-  $notification-border-radius: var-get('borderRadius');
+  $notification-border-radius: 4px; // var-get('borderRadius');
   $notification-backdrop: rgba(255, 255, 255, 0.7);
-  $notification-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  $notification-box-shadow: 0 2px 6px 0 rgba(13, 18, 44, 0.2);
   $notification-padding-x: 1.5rem;
-  $notification-padding-y: 1.5rem;
+  $notification-padding-y: 0.75rem;
   $notification-content-padding-x: var-get('spacing3');
   $notification-content-padding-y: var-get('spacing3');
   $notification-background: var-get('colorLight');
@@ -47,27 +46,23 @@
 
   width: 0;
   height: 0;
+  opacity: 0;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   font-family: var-get('fontFamilyBase');
-
-  // @include contextual-colors();
+  background: $notification-background;
+  border-radius: $notification-border-radius;
 
   &-dialog {
-    background: $notification-background;
     // animation-name: olt-notification-animation-close;
     // animation-duration: 400ms;
     // animation-fill-mode: forwards;
-    border: 1px solid rgb(255, 0, 0);
     width: 100%;
   }
 
   &-header {
-    display: flex;
     padding: 0;
     width: 100%;
-    justify-content: flex-start;
-    text-align: center;
     vertical-align: middle;
     font-weight: bold;
 
@@ -78,18 +73,14 @@
       align-items: flex-start;
       font-size: 19px; // icon size
       vertical-align: middle;
-      line-height: 19px;
-      padding-right: 20px;
+      padding-right: 12px;
     }
   }
 
   &-content {
-    width: 0;
-    height: 0;
     padding: 0;
-    justify-content: center;
-    text-align: center;
-    border: 2px solid rgb(38, 0, 255);
+    padding-right: 38px; // TODO: close icon size + padding
+    padding-left: 31px; // TODO: icon size + icon padding
   }
 
   &-close {
@@ -102,14 +93,13 @@
     }
 
     position: absolute;
-    align-self: flex-end;
-    margin: 0;
     color: #666;
+    background-color: $notification-background;
+    border-color: $notification-background;
     right: 0;
     top: 0;
     z-index: $olt-z-index-notification-close;
   }
-
 
   &-dialog &-close {
     @extend .Button--outline;
@@ -117,16 +107,12 @@
 
   &.is-open {
     position: fixed;
-    bottom: 8px;
-    margin-bottom: 8px;
-    right: 16px;
+    bottom: $notification-padding-y;
+    margin-bottom: $notification-padding-y;
+    right: $notification-padding-x;
     width: $notification-width;
-    height: $notification-height;
-
-    // width: 250px;
-    // min-width: 250px;
-    // height: 64px;
-    // min-height: 64px;
+    height: auto;
+    min-height: $notification-height;
     // animation-name: olt-notification-animation-open;
     // animation-duration: 400ms;
     // animation-fill-mode: forwards;
@@ -137,7 +123,7 @@
     z-index: $olt-z-index-notification;
     display: flex;
     flex-wrap: wrap;
-    border: 2px solid rgb(0, 0, 0);
+    box-shadow: $notification-box-shadow;
   }
 
   &--error &-header:before,
@@ -162,5 +148,46 @@
   &--success &-header {
     content: 'done';
     color: var-get('colorSuccess');
+  }
+
+  @at-root {
+    *[data-toggle='notification'] {
+      display: none;
+    }
+
+    *[data-toggle='notification'] + label:after {
+      content: 'open';
+    }
+
+    *[data-toggle='notification']:checked + label:after {
+      content: 'close';
+    }
+
+    // *[data-toggle='notification']:checked + label {
+    //   display: none;
+    // }
+
+    #{$self}.is-open,
+    *[data-toggle='notification']:checked + label + #{$self} {
+      opacity: 1;
+      position: fixed;
+      bottom: $notification-padding-y;
+      margin-bottom: $notification-padding-y;
+      right: $notification-padding-x;
+      width: $notification-width;
+      height: auto;
+      min-height: $notification-height;
+      // animation-name: olt-notification-animation-open;
+      // animation-duration: 400ms;
+      // animation-fill-mode: forwards;
+      padding-top: $notification-content-padding-y;
+      padding-bottom: $notification-content-padding-y;
+      padding-left: $notification-content-padding-x;
+      padding-right: $notification-content-padding-x;
+      z-index: $olt-z-index-notification;
+      display: flex;
+      flex-wrap: wrap;
+      box-shadow: $notification-box-shadow;
+    }
   }
 }
