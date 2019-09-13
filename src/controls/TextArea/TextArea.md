@@ -12,7 +12,7 @@ Input is used with a wrapped `<label>` element that contain
 
 <div class="olt-Grid olt-u-marginTop4 olt-u-marginBottom6">
   <div class="olt-Grid-item olt-Grid-item--3">
-    <div class="demo-spacer-small"></div>
+    <div class="demo-input-spacer"></div>
     <div>
       <div class="demo-input-label">
         Empty
@@ -28,9 +28,6 @@ Input is used with a wrapped `<label>` element that contain
       </div>
       <div class="demo-input-label">
         Required
-      </div>
-      <div class="demo-input-label">
-        Icon
       </div>
       <div class="demo-input-label">
         Count
@@ -78,15 +75,6 @@ Input is used with a wrapped `<label>` element that contain
               <label class="olt-V2Label">
                 <textarea class="olt-TextArea" required>Lorem ipsum</textarea>
                 <span class="olt-V2Label-text">Enter your data</span>
-              </label>
-            </div>
-            <div class="demo-input-content">
-              <label class="olt-V2Label">
-                <textarea class="olt-TextArea">Lorem ipsum</textarea>
-                <span class="olt-V2Label-text">Enter your data</span>
-                <div class="olt-V2Label-icon">
-                  <i class="olt-Icon" data-icon="edit"></i>
-                </div>
               </label>
             </div>
             <div class="demo-input-content">
@@ -161,15 +149,6 @@ Input is used with a wrapped `<label>` element that contain
               <label class="olt-V2Label">
                 <textarea class="olt-TextArea" required>Lorem ipsum</textarea>
                 <span class="olt-V2Label-text">Enter your data</span>
-              </label>
-            </div>
-            <div class="demo-input-content">
-              <label class="olt-V2Label">
-                <textarea class="olt-TextArea">Lorem ipsum</textarea>
-                <span class="olt-V2Label-text">Enter your data</span>
-                <div class="olt-V2Label-icon">
-                  <i class="olt-Icon" data-icon="edit"></i>
-                </div>
               </label>
             </div>
             <div class="demo-input-content">
@@ -272,35 +251,6 @@ Setting the input element as required appends `*` to the label.
 <label class="olt-V2Label">
   <textarea class="olt-TextArea" required>Lorem ipsum</textarea>
   <span class="olt-V2Label-text">Enter your data</span>
-</label>
-```
-
-## Icon
-
-The input can render an icon on its right side. It has different
-colors when the input is empty, contains a value or is disabled.
-
-```icons.html
-<label class="olt-V2Label">
-  <textarea class="olt-TextArea"></textarea>
-  <span class="olt-V2Label-text">Enter your data</span>
-  <div class="olt-V2Label-icon">
-    <i class="olt-Icon" data-icon="edit"></i>
-  </div>
-</label>
-<label class="olt-V2Label">
-  <textarea class="olt-TextArea">Lorem ipsum</textarea>
-  <span class="olt-V2Label-text">Enter your data</span>
-  <div class="olt-V2Label-icon">
-    <i class="olt-Icon" data-icon="edit"></i>
-  </div>
-</label>
-<label class="olt-V2Label">
-  <textarea class="olt-TextArea" disabled>Lorem ipsum</textarea>
-  <span class="olt-V2Label-text">Enter your data</span>
-  <div class="olt-V2Label-icon">
-    <i class="olt-Icon" data-icon="edit"></i>
-  </div>
 </label>
 ```
 

@@ -1,5 +1,7 @@
 .TextArea {
   @extend .V2Input;
 
-  padding: 17px 16px 23px;
+  height: 31px;
+  min-height: 31px;
+  padding: 0px 16px;
 }
