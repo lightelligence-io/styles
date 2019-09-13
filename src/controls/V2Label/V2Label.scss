@@ -5,13 +5,12 @@
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: var-get('spacing1');
+  margin-bottom: var-get('spacing3');
   font-size: 16px;
   font-weight: normal;
   letter-spacing: 0;
   display: flex;
   flex-direction: column;
-  margin-bottom: $olt-control-spacer;
 
   &-text {
     position: absolute;
@@ -31,6 +30,7 @@
   }
 
   input:focus ~ &-text,
+  textarea:focus ~ &-text,
   select:focus ~ &-text {
     top: -1px;
     transform: scale(0.6875);
@@ -87,8 +87,7 @@
     display: block;
   }
 
-  &:not(.has-error) input:focus ~ &-icon,
-  &:not(.has-error) select:focus ~ &-icon {
+  &:not(.has-error) input:focus ~ &-icon {
     color: var-get('colorPrimary');
   }
 
@@ -109,13 +108,16 @@
   }
 
   input:required ~ &-text:after,
+  textarea:required ~ &-text:after,
   select:required ~ &-text:after {
     content: '*';
   }
 
   input:disabled,
+  textarea:disabled,
   select:disabled,
   &.has-value input:disabled,
+  &.has-value textarea:disabled,
   &.has-value select:disabled {
     ~ #{$self}-text,
     ~ #{$self}-icon,
@@ -144,8 +146,10 @@
   }
 
   .Theme-dark & input:disabled,
+  .Theme-dark & textarea:disabled,
   .Theme-dark & select:disabled,
   .Theme-dark &.has-value input:disabled,
+  .Theme-dark &.has-value textarea:disabled,
   .Theme-dark &.has-value select:disabled {
     ~ #{$self}-text,
     ~ #{$self}-icon,
