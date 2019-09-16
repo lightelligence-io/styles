@@ -23,7 +23,8 @@
     1px 0;
   background-repeat: no-repeat;
 
-  &:focus {
+  &:focus,
+  .Theme-dark &:focus {
     @include chevronDown(var-get('colorPrimary'));
   }
 
