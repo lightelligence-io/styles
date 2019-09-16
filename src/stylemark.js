@@ -34,3 +34,19 @@ window.addEventListener('load', () => {
       });
     });
 });
+
+showNotifications = () => {
+  const notificationsList = [
+    ...document.querySelector('div.olt-Notifications').children,
+  ].reverse();
+  console.log('notificationsList', notificationsList);
+  notificationsList.forEach((notification, index) => {
+    console.log('notification', notification, index);
+    setTimeout(() => {
+      notification.classList.add('is-open');
+    }, 1000 * index);
+    setTimeout(() => {
+      notification.classList.remove('is-open');
+    }, 3000 + 1000 * index);
+  });
+};

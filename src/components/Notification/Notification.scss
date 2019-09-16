@@ -29,7 +29,6 @@ $notification-padding-y-mobile: 8px - $notification-spacing-y;
   $notification-close-color: #666;
   $dialog-width: calc(#{$notification-width - $notification-padding-x} - #{$notification-content-padding-x} - #{$notification-close-size});
   $notification-transition-duration: 0.2s;
-  $notification-transition-timing-function: ease-in;
   $notification-header-padding: 12px;
   $notification-icon-size: 18px;
   $self: &;
@@ -38,7 +37,6 @@ $notification-padding-y-mobile: 8px - $notification-spacing-y;
   width: 0;
   height: 0;
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
   font-family: var-get('fontFamilyBase');
   background: $notification-background;
   border-radius: $notification-border-radius;
@@ -48,8 +46,19 @@ $notification-padding-y-mobile: 8px - $notification-spacing-y;
   box-shadow: $notification-box-shadow;
   display: flex;
   flex-wrap: wrap;
-  transition: opacity $notification-transition-duration $notification-transition-timing-function;
+  transition-property: opacity;
+  transition-timing-function: ease-in;
+  transition: 0.2s;
 
+  &.is-open {
+    opacity: 1;
+    width: $notification-width;
+    height: auto;
+    transition: opacity $notification-transition-duration ease-in;
+    margin-bottom: $notification-spacing-y;
+    padding-top: $notification-content-padding-y;
+    padding-bottom: $notification-content-padding-y;
+  }
 
   &-dialog {
     width: $dialog-width;
@@ -123,31 +132,6 @@ $notification-padding-y-mobile: 8px - $notification-spacing-y;
   &--success &-header {
     content: 'check_circle';
     color: var-get('colorSuccess');
-  }
-
-  @at-root {
-    *[data-toggle='notification'] {
-      display: none;
-    }
-
-    *[data-toggle='notification'] + label:after {
-      content: 'open';
-    }
-
-    *[data-toggle='notification']:checked + label:after {
-      content: 'close';
-    }
-
-    &.is-open,
-    *[data-toggle='notification']:checked + label + div > #{$self} {
-      opacity: 1;
-      width: $notification-width;
-      height: auto;
-      transition: opacity $notification-transition-duration $notification-transition-timing-function;
-      margin-bottom: $notification-spacing-y;
-      padding-top: $notification-content-padding-y;
-      padding-bottom: $notification-content-padding-y;
-    }
   }
 
   @media (max-width: map-get($olt-v2-breakpoints, sm)) {
