@@ -294,6 +294,10 @@ a.i-sidebar-list-item:hover b {
   height: 66px;
 }
 
+.demo-input-spacer {
+  height: 50px;
+}
+
 .demo-spacer {
   display: block;
 }
