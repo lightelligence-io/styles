@@ -11,28 +11,70 @@ can be displayed to the user. It occupies the `olt-Notification*` class names.
 <div class="olt-Card olt-u-padding5">
   <div class="olt-u-marginAuto">
     <button class="olt-Button" data-notification-trigger="notification-demo-1">Demo</button>
-    <button class="olt-Button" data-notification-trigger="notification-demo-2">Error Demo</button>
  </div>
 </div>
+
+## Notification Types
+
+The *Notifications* can be rendered with the following types:
+
+```types.html
+    <div class="olt-Notification olt-Notification--info is-open">
+        <div class="olt-Notification-dialog">
+            <header class="olt-Notification-header">Info Notification</header>
+            <div class="olt-Notification-content">
+                Everything went well.
+            </div>
+        </div>
+        <label class="olt-Notification-close"></label>
+    </div>
+    <div class="olt-Notification olt-Notification--success is-open">
+        <div class="olt-Notification-dialog">
+            <header class="olt-Notification-header">Success Notification</header>
+            <div class="olt-Notification-content">
+                It was a great success.
+            </div>
+        </div>
+        <label class="olt-Notification-close"></label>
+    </div>
+    <div class="olt-Notification olt-Notification--warning is-open">
+        <div class="olt-Notification-dialog">
+            <header class="olt-Notification-header">Warning Notification</header>
+            <div class="olt-Notification-content">
+                I am warning you!
+            </div>
+        </div>
+        <label class="olt-Notification-close"></label>
+    </div>
+    <div class="olt-Notification olt-Notification--error is-open">
+        <div class="olt-Notification-dialog">
+            <header class="olt-Notification-header">Error Notification</header>
+            <div class="olt-Notification-content">
+                Houston we have a problem.
+            </div>
+        </div>
+        <label class="olt-Notification-close"></label>
+    </div>
+```
 
 <div class="olt-Notifications">
     <div class="olt-Notification olt-Notification--success" data-notification-target="notification-demo-1">
         <div class="olt-Notification-dialog">
             <header class="olt-Notification-header">This is a Notification</header>
             <div class="olt-Notification-content">
-                <p>Everything went well.</p>
+                Everything went well.
             </div>
         </div>
         <label class="olt-Notification-close" for="notification-demo-1"></label>
     </div>
-    <div class="olt-Notification olt-Notification--error" data-notification-target="notification-demo-2">
+    <div class="olt-Notification olt-Notification--error" data-notification-target="notification-demo-1">
         <div class="olt-Notification-dialog">
             <header class="olt-Notification-header">An Error Occurred</header>
             <div class="olt-Notification-content">
-                <p>Everything went well ... and more. This is a long text to see how the notification grows, when the text gets longer ... and it looks good!</p>
+                Everything went well ... and more. This is a long text to see how the notification grows, when the text gets longer ... and it looks good!
             </div>
         </div>
-        <label class="olt-Notification-close" for="notification-demo-2"></label>
+        <label class="olt-Notification-close" for="notification-demo-1"></label>
     </div>
 </div>
 
@@ -45,7 +87,7 @@ can be displayed to the user. It occupies the `olt-Notification*` class names.
                 <div class="olt-Notification-dialog">
                     <header class="olt-Notification-header">This is a Notification</header>
                     <div class="olt-Notification-content">
-                        <p>Everything went well.</p>
+                        Everything went well.
                     </div>
                 </div>
                 <label class="olt-Notification-close" for="notification-demo-3"></label>

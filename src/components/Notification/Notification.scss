@@ -1,55 +1,37 @@
-@keyframes olt-notification-animation-open {
-  0% {
-    transform: translateY(100%);
-    visibility: hidden;
-  }
-
-  1% {
-    visibility: visible;
-  }
-
-  100% {
-    transform: translateY(0%);
-  }
-}
-
-@keyframes olt-notification-animation-close {
-  0% {
-    transform: translateY(0%);
-    visibility: visible;
-  }
-
-  99% {
-    visibility: visible;
-  }
-
-  100% {
-    visibility: hidden;
-    transform: translateY(100%);
-  }
-}
+$notification-padding-x: 16px;
+$notification-spacing-y: 8px;
+$notification-padding-y: 16px - $notification-spacing-y;
+$notification-padding-x-mobile: 8px;
+$notification-padding-y-mobile: 8px - $notification-spacing-y;
 
 .Notifications {
   position: fixed;
-  bottom: 0.75rem;
-  right: 1.5rem;
+  bottom: $notification-padding-y;
+  right: $notification-padding-x;
   z-index: $olt-z-index-notification-close;
+
+  @media (max-width: map-get($olt-v2-breakpoints, sm)) {
+    bottom: $notification-padding-y-mobile;
+    right: $notification-padding-x-mobile;
+  }
 }
 
 .Notification {
   $notification-border-radius: 4px; // var-get('borderRadius');
   $notification-backdrop: rgba(255, 255, 255, 0.7);
   $notification-box-shadow: 0 2px 6px 0 rgba(13, 18, 44, 0.2);
-  $notification-padding-x: 1.5rem;
-  $notification-padding-y: 0.75rem;
   $notification-content-padding-x: var-get('spacing3');
   $notification-content-padding-y: var-get('spacing3');
   $notification-background: var-get('colorLight');
-  $notification-height: 75px;
   $notification-width: 320px;
-  $dialog-width: 250px;
+  $notification-close-size: 16px;
+  $notification-close-margin-top: 6px;
+  $notification-close-color: #666;
+  $dialog-width: calc(#{$notification-width - $notification-padding-x} - #{$notification-content-padding-x} - #{$notification-close-size});
   $notification-transition-duration: 0.2s;
   $notification-transition-timing-function: ease-in;
+  $notification-header-padding: 12px;
+  $notification-icon-size: 18px;
   $self: &;
 
   opacity: 0;
@@ -70,10 +52,7 @@
 
 
   &-dialog {
-    // animation-name: olt-notification-animation-close;
-    // animation-duration: 400ms;
-    // animation-fill-mode: forwards;
-    width: $dialog-width; // TODO: icon width
+    width: $dialog-width;
   }
 
   &-header {
@@ -82,21 +61,24 @@
     vertical-align: middle;
     font-weight: bold;
     overflow: hidden;
+    white-space: nowrap;
+    padding-right: $notification-header-padding;
 
     &:before {
       @include icon-font-material;
 
       content: '';
       align-items: flex-start;
-      font-size: 19px; // icon size
+      font-size: $notification-icon-size;
       vertical-align: middle;
-      padding-right: 12px;
+      padding-right: $notification-header-padding;
     }
   }
 
   &-content {
+    margin: 0;
     padding: 0;
-    padding-left: 31px; // TODO: icon size + icon padding
+    padding-left: $notification-icon-size + $notification-header-padding;
     overflow: hidden;
   }
 
@@ -109,48 +91,37 @@
       content: 'close';
     }
 
-    color: #666;
+    color: $notification-close-color;
     background-color: $notification-background;
+    height: $notification-close-size;
+    width: $notification-close-size;
+    min-width: $notification-close-size;
+    margin-top: $notification-close-margin-top;
     border-color: $notification-background;
     z-index: $olt-z-index-notification-close;
   }
 
-  &.is-open {
-    opacity: 1;
-    width: $notification-width;
-    height: auto;
-    min-height: $notification-height;
-    transition: transform $notification-transition-duration $notification-transition-timing-function;
-    margin-bottom: $notification-padding-y;
-    padding-top: $notification-content-padding-y;
-    padding-bottom: $notification-content-padding-y;
-
-    // animation-name: olt-notification-animation-open;
-    // animation-duration: 400ms;
-    // animation-fill-mode: forwards;
-  }
-
   &--error &-header:before,
   &--error &-header {
-    content: 'error_outline';
+    content: 'error';
     color: var-get('colorError');
   }
 
   &--info &-header:before,
   &--info &-header {
-    content: 'info_outline';
+    content: 'info';
     color: var-get('colorInfo');
   }
 
   &--warning &-header:before,
   &--warning &-header {
-    content: 'info_outline';
+    content: 'error';
     color: var-get('colorWarning');
   }
 
   &--success &-header:before,
   &--success &-header {
-    content: 'done';
+    content: 'check_circle';
     color: var-get('colorSuccess');
   }
 
@@ -167,21 +138,21 @@
       content: 'close';
     }
 
-    // *[data-toggle='notification']:checked + label {
-    //   display: none;
-    // }
-
+    &.is-open,
     *[data-toggle='notification']:checked + label + div > #{$self} {
       opacity: 1;
       width: $notification-width;
       height: auto;
-      min-height: $notification-height;
-      // animation-name: olt-notification-animation-open;
-      // animation-duration: 400ms;
-      // animation-fill-mode: forwards;
-      margin-bottom: $notification-padding-y;
+      transition: opacity $notification-transition-duration $notification-transition-timing-function;
+      margin-bottom: $notification-spacing-y;
       padding-top: $notification-content-padding-y;
       padding-bottom: $notification-content-padding-y;
+    }
+  }
+
+  @media (max-width: map-get($olt-v2-breakpoints, sm)) {
+    &-content {
+      display: none;
     }
   }
 }

@@ -29,7 +29,7 @@ window.addEventListener('load', () => {
             targetEl.classList.add('is-open');
             setTimeout(() => {
               targetEl.classList.remove('is-open');
-            }, 10000);
+            }, 5000);
           });
       });
     });
