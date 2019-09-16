@@ -10,13 +10,12 @@
       linear-gradient(-45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%);
   }
 
-  margin: 0;
   box-sizing: border-box;
   appearance: none;
   cursor: pointer;
   background-position:
-    calc(100% - 24px) calc(1em + 5px),
-    calc(100% - 18px) calc(1em + 5px),
+    calc(100% - 24px) 4px,
+    calc(100% - 18px) 4px,
     calc(100% - 2.5em) 0;
   background-size:
     6px 6px,
