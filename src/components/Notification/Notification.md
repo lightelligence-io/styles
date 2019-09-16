@@ -78,24 +78,6 @@ The *Notifications* can be rendered with the following types:
     </div>
 ```
 
-<div class="olt-Card olt-u-padding5">
-    <div class="olt-u-marginAuto">
-        <input data-toggle="notification" id="demo-3" type="checkbox">
-        <label class="olt-Button" id="button-demo-3" for="notification-demo-3"></label>
-        <div class="olt-Notifications">
-            <div class="olt-Notification olt-Notification--success" data-notification-trigger="notification-demo-3">
-                <div class="olt-Notification-dialog">
-                    <header class="olt-Notification-header">This is a Notification</header>
-                    <div class="olt-Notification-content">
-                        Everything went well.
-                    </div>
-                </div>
-                <label class="olt-Notification-close" for="notification-demo-3"></label>
-            </div>
-        </div>
-    </div>
-</div>
-
 ```html
 <div class="olt-Notification olt-Notification--success">
     Hello world!
