@@ -15,33 +15,31 @@ window.addEventListener('load', () => {
         });
     });
   });
+
   /**
-   * Adds a delay closing for a notification
+   * Adds closing functionality for a notification
    */
   document
-    .querySelectorAll('[data-notification-trigger]')
-    .forEach((triggerEl) => {
-      triggerEl.addEventListener('click', () => {
-        const name = triggerEl.getAttribute('data-notification-trigger');
-        document
-          .querySelectorAll(`[data-notification-target="${name}"]`)
-          .forEach((targetEl) => {
-            targetEl.classList.add('is-open');
-            setTimeout(() => {
-              targetEl.classList.remove('is-open');
-            }, 5000);
-          });
-      });
+    .querySelectorAll('div.olt-Notification')
+    .forEach((notificationEl) => {
+      const closeEl = notificationEl.querySelector(
+        'label.olt-Notification-close',
+      );
+      if (closeEl)
+        closeEl.addEventListener('click', () => {
+          notificationEl.classList.remove('is-open');
+        });
     });
 });
 
+/**
+ * Adds demo functionality to show stack of notifications
+ */
 showNotifications = () => {
   const notificationsList = [
     ...document.querySelector('div.olt-Notifications').children,
   ].reverse();
-  console.log('notificationsList', notificationsList);
   notificationsList.forEach((notification, index) => {
-    console.log('notification', notification, index);
     setTimeout(() => {
       notification.classList.add('is-open');
     }, 1000 * index);

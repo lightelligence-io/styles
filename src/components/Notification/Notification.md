@@ -5,8 +5,10 @@ category: Component
 
 ## Description
 
-The *Notification* is used to show a message on the bottom of the screen which
-can be displayed to the user. It occupies the `olt-Notification*` class names.
+The *Notification* is used to show a message on the bottom of the screen. 
+It occupies the `olt-Notifications` and `olt-Notification*` class names, with `olt-Notifications` being the conatiner element holding the stack of notifications. 
+
+On larger screens notifications are placed on the bottom right, on small devices only the header is displayed bottom-centered with full width. Notifications can stack up if they are not closed manually within a very short time. A notification that is not closed manually fades out automatically after a short time.
 
 <div class="olt-Card olt-u-padding5">
   <div class="olt-u-marginAuto">
@@ -15,15 +17,6 @@ can be displayed to the user. It occupies the `olt-Notification*` class names.
 </div>
 
 <div class="olt-Notifications">
-    <div class="olt-Notification olt-Notification--success">
-        <div class="olt-Notification-dialog">
-            <header class="olt-Notification-header">This is a Notification</header>
-            <div class="olt-Notification-content">
-                Everything went well.
-            </div>
-        </div>
-        <label class="olt-Notification-close"></label>
-    </div>
     <div class="olt-Notification olt-Notification--error">
         <div class="olt-Notification-dialog">
             <header class="olt-Notification-header">An Error Occurred</header>
@@ -33,13 +26,40 @@ can be displayed to the user. It occupies the `olt-Notification*` class names.
         </div>
         <label class="olt-Notification-close"></label>
     </div>
+    <div class="olt-Notification olt-Notification--success">
+        <div class="olt-Notification-dialog">
+            <header class="olt-Notification-header">This is a Notification</header>
+            <div class="olt-Notification-content">
+                Everything went well.
+            </div>
+        </div>
+        <label class="olt-Notification-close"></label>
+    </div>
 </div>
+
 
 ## Notification Types
 
-The *Notifications* can be rendered with the following types:
+Like the modals the notifications got different color themes for various use cases. Depending on the use case a fitting color and icon is used.
+
+- Info - e.g. new information became available
+- Success - e.g. an action has successfully been completed
+- Warning - e.g. something has not been configured correctly
+- Error - e.g. communication has been interrupted
+
+Respectively, we support the following modifiers :
+
+- `olt-Notification--info`
+- `olt-Notification--success`
+- `olt-Notification--warning`
+- `olt-Notification--error`
+
+These different types will look as follows:
 
 ```types.html
+<!-- style="position: relative;" has only been added to make this example work in iframe. 
+DON'T USE IN PRODUCTION!! -->
+<div class="olt-Notifications" style="position: relative;">
     <div class="olt-Notification olt-Notification--info is-open">
         <div class="olt-Notification-dialog">
             <header class="olt-Notification-header">Info Notification</header>
@@ -76,12 +96,31 @@ The *Notifications* can be rendered with the following types:
         </div>
         <label class="olt-Notification-close"></label>
     </div>
+</div>
 ```
 
 ```html
-<div class="olt-Notification olt-Notification--success">
-    Hello world!
+<div class="olt-Notifications">
+    <div class="olt-Notification olt-Notification--info">
+        <div class="olt-Notification-dialog">
+            <header class="olt-Notification-header">Info Notification</header>
+            <div class="olt-Notification-content">
+                Everything went well.
+            </div>
+        </div>
+        <label class="olt-Notification-close"></label>
+    </div>
+    <div class="olt-Notification olt-Notification--error">
+        <div class="olt-Notification-dialog">
+            <header class="olt-Notification-header">Error Notification</header>
+            <div class="olt-Notification-content">
+                Nothing went well.
+            </div>
+        </div>
+        <label class="olt-Notification-close"></label>
+    </div>
 </div>
+
 ```
 
 ## States
@@ -91,68 +130,64 @@ state class at the main element. It will then animate into the bottom of the
 page.
 
 ```html
-<div class="olt-Notification olt-Notification--success is-open">
-    Hello world!
+<div class="olt-Notifications">
+    <div class="olt-Notification olt-Notification--info is-open">
+        <div class="olt-Notification-dialog">
+            <header class="olt-Notification-header">Info Notification</header>
+            <div class="olt-Notification-content">
+                Everything went well.
+            </div>
+        </div>
+        <label class="olt-Notification-close"></label>
+    </div>
+    <div class="olt-Notification olt-Notification--error is-open">
+        <div class="olt-Notification-dialog">
+            <header class="olt-Notification-header">Error Notification</header>
+            <div class="olt-Notification-content">
+                Nothing went well.
+            </div>
+        </div>
+        <label class="olt-Notification-close"></label>
+    </div>
 </div>
 ```
 
-## Colors
+## Related Javascript
 
-The *Notification* can be rendered with 
-[any of our conceptual colors](/#concepts-colors) :
+The following JS snippet is used to show, hide and close notifications for the demo in this guide.
 
-<div class="olt-Card olt-u-padding5">
-  <div class="olt-u-marginAuto olt-u-padding1">
-     <button class="olt-Button olt-Button--primary" data-notification-trigger="demo-2">Primary</button>
-  </div>
-  <div class="olt-u-marginAuto olt-u-padding1">
-     <button class="olt-Button olt-Button--secondary" data-notification-trigger="demo-3">Secondary</button>
-  </div>
-  <div class="olt-u-marginAuto olt-u-padding1">
-     <button class="olt-Button olt-Button--info" data-notification-trigger="demo-4">Info</button>
-  </div>
-  <div class="olt-u-marginAuto olt-u-padding1">
-     <button class="olt-Button olt-Button--error" data-notification-trigger="demo-5">Error</button>
-  </div>
-  <div class="olt-u-marginAuto olt-u-padding1">
-     <button class="olt-Button olt-Button--success" data-notification-trigger="demo-6">Success</button>
-  </div>
-  <div class="olt-u-marginAuto olt-u-padding1">
-     <button class="olt-Button olt-Button--dark" data-notification-trigger="demo-7">Dark</button>
-  </div>
-  <div class="olt-u-marginAuto olt-u-padding1">
-     <button class="olt-Button" data-notification-trigger="demo-8">White</button>
-  </div>
-</div>
-<div class="olt-Notification olt-Notification--primary" data-notification-target="demo-2">
-    Hello world!
-</div>
-<div class="olt-Notification olt-Notification--secondary" data-notification-target="demo-3">
-    Hello world!
-</div>
-<div class="olt-Notification olt-Notification--info" data-notification-target="demo-4">
-    Hello world!
-</div>
-<div class="olt-Notification olt-Notification--error" data-notification-target="demo-5">
-    Hello world!
-</div>
-<div class="olt-Notification olt-Notification--success" data-notification-target="demo-6">
-    Hello world!
-</div>
-<div class="olt-Notification olt-Notification--dark" data-notification-target="demo-7">
-    Hello world!
-</div>
-<div class="olt-Notification olt-Notification--light" data-notification-target="demo-8">
-    Hello world!
-</div>
+```show_and_hide.js
+<script>
+  /**
+   * Add closing functionality for a notification
+   */
+  window.addEventListener('load', () => {
+    document
+      .querySelectorAll('div.olt-Notification')
+      .forEach((notificationEl) => {
+        const closeEl = notificationEl.querySelector('label.olt-Notification-close');
+        if (closeEl) closeEl.addEventListener('click', () => {
+          notificationEl.classList.remove('is-open');
+        });
+      });
+  });
 
-```html
-<div class="olt-Notification olt-Notification--primary">Hello world!</div>
-<div class="olt-Notification olt-Notification--secondary">Hello world!</div>
-<div class="olt-Notification olt-Notification--info">Hello world!</div>
-<div class="olt-Notification olt-Notification--error">Hello world!</div>
-<div class="olt-Notification olt-Notification--success">Hello world!</div>
-<div class="olt-Notification olt-Notification--dark">Hello world!</div>
-<div class="olt-Notification olt-Notification--light">Hello world!</div>
+
+  /**
+   * Adds demo functionality to show stack of notifications
+   */
+  showNotifications = () => {
+    const notificationsList = [
+      ...document.querySelector('div.olt-Notifications').children,
+    ].reverse();
+    notificationsList.forEach((notification, index) => {
+      setTimeout(() => {
+        notification.classList.add('is-open');
+      }, 1000 * index);
+      setTimeout(() => {
+        notification.classList.remove('is-open');
+      }, 3000 + 1000 * index);
+    });
+  };
+</script>
 ```
-
