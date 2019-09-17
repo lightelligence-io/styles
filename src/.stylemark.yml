@@ -3,7 +3,7 @@ assets:
   - "dist"
 
 theme:
-  logo: "./src/theme-logo.png"
+  logo: "./src/assets/theme-logo.png"
   css:
     - "./dist/index.css"
     - "./src/theme.css"

@@ -12,8 +12,8 @@ component occupies `olt-Icon*` class names and can be used with `<i>` element.
 Per default, icons adjust to current color and font-size.
 
 ```example.html
-<i class="olt-Icon" data-icon="close"></i>
-<i class="olt-Icon" data-icon="chevron_left"></i>
+<i class="olt-Icon olt-Icon--action-cart"></i>
+<i class="olt-Icon olt-Icon--action-copy"></i>
 <i class="olt-Icon" data-icon="chevron_right"></i>
 <i class="olt-Icon" data-icon="check"></i>
 <i class="olt-Icon" data-icon="directions_walk"></i>
