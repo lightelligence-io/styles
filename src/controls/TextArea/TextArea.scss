@@ -1,0 +1,8 @@
+.TextArea {
+  @extend .V2Input;
+
+  height: 31px;
+  min-height: 31px;
+  min-width: 100%;
+  padding: 0 16px;
+}
