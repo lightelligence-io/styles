@@ -51,7 +51,3 @@ State of the art
 - add V2Input, V2Label, V2Select components
 - add Toggle component
 - add V2Checkbox component
-
-#v0.12.0
- 
-- add Notification component
