@@ -294,7 +294,8 @@ a.i-sidebar-list-item:hover b {
   height: 66px;
 }
 
-.demo-input-spacer {
+.demo-input-spacer,
+.demo-textarea-spacer {
   height: 50px;
 }
 
@@ -308,7 +309,8 @@ a.i-sidebar-list-item:hover b {
 }
 
 .demo-label,
-.demo-input-label {
+.demo-input-label,
+.demo-textarea-label {
   font-family: 'Overpass Mono', serif;
   font-size: 12px;
   color: #000;
@@ -327,24 +329,32 @@ a.i-sidebar-list-item:hover b {
   height: 90px;
 }
 
+.demo-textarea-label {
+  height: 140px;
+}
+
 .demo-label:after,
 .demo-label:before,
 .demo-input-label:after,
-.demo-input-label:before {
+.demo-input-label:before,
+.demo-textarea-label:after,
+.demo-textarea-label:before {
   content: '';
   position: absolute;
   left: 0;
 }
 
 .demo-label:before,
-.demo-input-label:before {
+.demo-input-label:before,
+.demo-textarea-label:before {
   border-left: 1px solid #979797;
   top: 0;
   bottom: 0;
 }
 
 .demo-label:after,
-.demo-input-label:after {
+.demo-input-label:after,
+.demo-textarea-label:after {
   border-top: 1px solid #979797;
   height: 0;
   top: 25px;
@@ -355,12 +365,20 @@ a.i-sidebar-list-item:hover b {
   top: 45px;
 }
 
+.demo-textarea-label:after {
+  top: 70px;
+}
+
 .demo-label:first-child:before {
   top: 25px;
 }
 
 .demo-input-label:first-child:before {
   top: 45px;
+}
+
+.demo-textarea-label:first-child:before {
+  top: 70px;
 }
 
 .demo-label:last-child:before {
@@ -371,8 +389,13 @@ a.i-sidebar-list-item:hover b {
   bottom: 45px;
 }
 
+.demo-textarea-label:last-child:before {
+  bottom: 70px;
+}
+
 .demo-content,
-.demo-input-content {
+.demo-input-content,
+.demo-textarea-content {
   height: 50px;
   display: flex;
   align-items: center;
@@ -381,6 +404,10 @@ a.i-sidebar-list-item:hover b {
 
 .demo-input-content {
   height: 90px;
+}
+
+.demo-textarea-content {
+  height: 140px;
 }
 
 .demo-title {
