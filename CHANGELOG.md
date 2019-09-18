@@ -41,13 +41,17 @@ State of the art
 - Internal cleanup and small refactoring
 
 #v0.10.0
- 
+
 - add V2Grid and V2Container components
 - add V2Radio component
 - Chip modifer `olt-Chip--bubble` renamed to `olt-Chip--withBubble` to avoid name clash in generated js
 
 #v0.11.0
- 
+
 - add V2Input, V2Label, V2Select components
 - add Toggle component
 - add V2Checkbox component
+
+#v0.12.0
+
+- add TextArea components
