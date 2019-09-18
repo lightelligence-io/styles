@@ -61,9 +61,9 @@ Respectively, we support the following modifiers :
 These different types will look as follows:
 
 ```types.html
-<!-- style="position: relative;" has only been added to make this example work in iframe. 
+<!-- style="..." has only been added to make this example work in iframe. 
 DON'T USE IN PRODUCTION!! -->
-<div class="olt-NotificationContainer" style="position: relative;">
+<div class="olt-NotificationContainer" style="position: relative; margin: 10px;">
     <div class="olt-Notification olt-Notification--info is-open">
         <div class="olt-Notification-dialog">
             <header class="olt-Notification-header">Info Notification</header>
