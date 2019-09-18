@@ -12,30 +12,30 @@ Input is used with a wrapped `<label>` element that contain
 
 <div class="olt-Grid olt-u-marginTop4 olt-u-marginBottom6">
   <div class="olt-Grid-item olt-Grid-item--3">
-    <div class="demo-input-spacer"></div>
+    <div class="demo-textarea-spacer"></div>
     <div>
-      <div class="demo-input-label">
+      <div class="demo-textarea-label">
         Empty
       </div>
-      <div class="demo-input-label">
+      <div class="demo-textarea-label">
         Floating
       </div>
-      <div class="demo-input-label">
+      <div class="demo-textarea-label">
         Filled
       </div>
-      <div class="demo-input-label">
+      <div class="demo-textarea-label">
         Disabled
       </div>
-      <div class="demo-input-label">
+      <div class="demo-textarea-label">
         Required
       </div>
-      <div class="demo-input-label">
+      <div class="demo-textarea-label">
         Count
       </div>
-      <div class="demo-input-label">
+      <div class="demo-textarea-label">
         Error
       </div>
-      <div class="demo-input-label">
+      <div class="demo-textarea-label">
         Hint
       </div>
     </div>
@@ -47,37 +47,37 @@ Input is used with a wrapped `<label>` element that contain
         <div class="demo-subtitle-small"></div>
         <div class="olt-Card">
           <div class="olt-Card-content">
-            <div class="demo-input-content">
+            <div class="demo-textarea-content">
               <label class="olt-V2Label">
                 <textarea class="olt-TextArea" placeholder="Your data"></textarea>
                 <span class="olt-V2Label-text">Enter your data</span>
               </label>
             </div>
-            <div class="demo-input-content">
+            <div class="demo-textarea-content">
               <label class="olt-V2Label olt-V2Label--floating">
                 <textarea class="olt-TextArea" placeholder="Your data"></textarea>
                 <span class="olt-V2Label-text">Enter your data</span>
               </label>
             </div>
-            <div class="demo-input-content">
+            <div class="demo-textarea-content">
               <label class="olt-V2Label">
                 <textarea class="olt-TextArea">Lorem ipsum</textarea>
                 <span class="olt-V2Label-text">Enter your data</span>
               </label>
             </div>
-            <div class="demo-input-content">
+            <div class="demo-textarea-content">
               <label class="olt-V2Label">
                 <textarea class="olt-TextArea" disabled>Lorem ipsum</textarea>
                 <span class="olt-V2Label-text">Enter your data</span>
               </label>
             </div>
-            <div class="demo-input-content">
+            <div class="demo-textarea-content">
               <label class="olt-V2Label">
                 <textarea class="olt-TextArea" required>Lorem ipsum</textarea>
                 <span class="olt-V2Label-text">Enter your data</span>
               </label>
             </div>
-            <div class="demo-input-content">
+            <div class="demo-textarea-content">
               <label class="olt-V2Label">
                 <textarea class="olt-TextArea">Lorem ipsum</textarea>
                 <span class="olt-V2Label-text">Enter your data</span>
@@ -88,7 +88,7 @@ Input is used with a wrapped `<label>` element that contain
                 </div>
               </label>
             </div>
-            <div class="demo-input-content">
+            <div class="demo-textarea-content">
               <label class="olt-V2Label has-error">
                 <textarea class="olt-TextArea">Lorem ipsum</textarea>
                 <span class="olt-V2Label-text">Enter your data</span>
@@ -102,7 +102,7 @@ Input is used with a wrapped `<label>` element that contain
                 </div>
               </label>
             </div>
-            <div class="demo-input-content">
+            <div class="demo-textarea-content">
               <label class="olt-V2Label">
                 <textarea class="olt-TextArea">Lorem ipsum</textarea>
                 <span class="olt-V2Label-text">Enter your data</span>
@@ -121,37 +121,37 @@ Input is used with a wrapped `<label>` element that contain
         <div class="demo-subtitle-small"></div>
         <div class="olt-Card olt-Card--dark olt-Theme-dark">
           <div class="olt-Card-content">
-            <div class="demo-input-content">
+            <div class="demo-textarea-content">
               <label class="olt-V2Label">
                 <textarea class="olt-TextArea" placeholder="Your data"></textarea>
                 <span class="olt-V2Label-text">Enter your data</span>
               </label>
             </div>
-            <div class="demo-input-content">
+            <div class="demo-textarea-content">
               <label class="olt-V2Label olt-V2Label--floating">
                 <textarea class="olt-TextArea" placeholder="Your data" disabled></textarea>
                 <span class="olt-V2Label-text">Enter your data</span>
               </label>
             </div>
-            <div class="demo-input-content">
+            <div class="demo-textarea-content">
               <label class="olt-V2Label">
                 <textarea class="olt-TextArea">Lorem ipsum</textarea>
                 <span class="olt-V2Label-text">Enter your data</span>
               </label>
             </div>
-            <div class="demo-input-content">
+            <div class="demo-textarea-content">
               <label class="olt-V2Label">
                 <textarea class="olt-TextArea" disabled>Lorem ipsum</textarea>
                 <span class="olt-V2Label-text">Enter your data</span>
               </label>
             </div>
-            <div class="demo-input-content">
+            <div class="demo-textarea-content">
               <label class="olt-V2Label">
                 <textarea class="olt-TextArea" required>Lorem ipsum</textarea>
                 <span class="olt-V2Label-text">Enter your data</span>
               </label>
             </div>
-            <div class="demo-input-content">
+            <div class="demo-textarea-content">
               <label class="olt-V2Label">
                 <textarea class="olt-TextArea">Lorem ipsum</textarea>
                 <span class="olt-V2Label-text">Enter your data</span>
@@ -162,7 +162,7 @@ Input is used with a wrapped `<label>` element that contain
                 </div>
               </label>
             </div>
-            <div class="demo-input-content">
+            <div class="demo-textarea-content">
               <label class="olt-V2Label has-error">
                 <textarea class="olt-TextArea">Lorem ipsum</textarea>
                 <span class="olt-V2Label-text">Enter your data</span>
@@ -176,7 +176,7 @@ Input is used with a wrapped `<label>` element that contain
                 </div>
               </label>
             </div>
-            <div class="demo-input-content">
+            <div class="demo-textarea-content">
               <label class="olt-V2Label">
                 <textarea class="olt-TextArea">Lorem ipsum</textarea>
                 <span class="olt-V2Label-text">Enter your data</span>
@@ -296,21 +296,6 @@ change. The error messsage can be displayed below the input.
     </span>
   </div>
 </label>
-<label class="olt-V2Label has-error">
-  <textarea class="olt-TextArea">Lorem ipsum</textarea>
-  <span class="olt-V2Label-text">Enter your data</span>
-  <div class="olt-V2Label-icon">
-    <i class="olt-Icon" data-icon="edit"></i>
-  </div>
-  <div class="olt-V2Label-footer">
-    <span class="olt-V2Label-error">
-      Not a valid input
-    </span>
-    <span class="olt-V2Label-count">
-      11/150
-    </span>
-  </div>
-</label>
 ```
 
 ## Hint
@@ -325,21 +310,6 @@ for better user experience.
   <div class="olt-V2Label-footer">
     <span class="olt-V2Label-hint">
       This input is required
-    </span>
-  </div>
-</label>
-<label class="olt-V2Label">
-  <textarea class="olt-TextArea">Lorem ipsum</textarea>
-  <span class="olt-V2Label-text">Enter your data</span>
-  <div class="olt-V2Label-icon">
-    <i class="olt-Icon" data-icon="edit"></i>
-  </div>
-  <div class="olt-V2Label-footer">
-    <span class="olt-V2Label-hint">
-      This input is required
-    </span>
-    <span class="olt-V2Label-count">
-      11/150
     </span>
   </div>
 </label>
