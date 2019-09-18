@@ -23,7 +23,7 @@ window.addEventListener('load', () => {
     .querySelectorAll('div.olt-Notification')
     .forEach((notificationEl) => {
       const closeEl = notificationEl.querySelector(
-        'label.olt-Notification-close',
+        'button.olt-Notification-close',
       );
       if (closeEl)
         closeEl.addEventListener('click', () => {
@@ -37,7 +37,7 @@ window.addEventListener('load', () => {
  */
 showNotifications = () => {
   const notificationsList = [
-    ...document.querySelector('div.olt-Notifications').children,
+    ...document.querySelector('div.olt-NotificationContainer').children,
   ].reverse();
   notificationsList.forEach((notification, index) => {
     setTimeout(() => {

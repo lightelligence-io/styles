@@ -6,7 +6,7 @@ category: Component
 ## Description
 
 The *Notification* is used to show a message on the bottom of the screen. 
-It occupies the `olt-Notifications` and `olt-Notification*` class names, with `olt-Notifications` being the conatiner element holding the stack of notifications. 
+It occupies the `olt-NotificationContainer` and `olt-Notification*` class names, with `olt-NotificationContainer` being the conatiner element holding the stack of notifications. 
 
 On larger screens notifications are placed on the bottom right, on small devices only the header is displayed bottom-centered with full width. Notifications can stack up if they are not closed manually within a very short time. A notification that is not closed manually fades out automatically after a short time.
 
@@ -16,7 +16,7 @@ On larger screens notifications are placed on the bottom right, on small devices
  </div>
 </div>
 
-<div class="olt-Notifications">
+<div class="olt-NotificationContainer">
     <div class="olt-Notification olt-Notification--error">
         <div class="olt-Notification-dialog">
             <header class="olt-Notification-header">An Error Occurred</header>
@@ -24,7 +24,9 @@ On larger screens notifications are placed on the bottom right, on small devices
                 Everything went well ... and more. This is a long text to see how the notification grows, when the text gets longer ... and it looks good!
             </div>
         </div>
-        <label class="olt-Notification-close"></label>
+        <button class="olt-Notification-close">
+            <i class="olt-Icon" data-icon="close"></i>
+        </button>
     </div>
     <div class="olt-Notification olt-Notification--success">
         <div class="olt-Notification-dialog">
@@ -33,7 +35,9 @@ On larger screens notifications are placed on the bottom right, on small devices
                 Everything went well.
             </div>
         </div>
-        <label class="olt-Notification-close"></label>
+        <button class="olt-Notification-close">
+            <i class="olt-Icon" data-icon="close"></i>
+        </button>
     </div>
 </div>
 
@@ -59,7 +63,7 @@ These different types will look as follows:
 ```types.html
 <!-- style="position: relative;" has only been added to make this example work in iframe. 
 DON'T USE IN PRODUCTION!! -->
-<div class="olt-Notifications" style="position: relative;">
+<div class="olt-NotificationContainer" style="position: relative;">
     <div class="olt-Notification olt-Notification--info is-open">
         <div class="olt-Notification-dialog">
             <header class="olt-Notification-header">Info Notification</header>
@@ -67,7 +71,9 @@ DON'T USE IN PRODUCTION!! -->
                 Everything went well.
             </div>
         </div>
-        <label class="olt-Notification-close"></label>
+        <button class="olt-Notification-close">
+            <i class="olt-Icon" data-icon="close"></i>
+        </button>
     </div>
     <div class="olt-Notification olt-Notification--success is-open">
         <div class="olt-Notification-dialog">
@@ -76,7 +82,9 @@ DON'T USE IN PRODUCTION!! -->
                 It was a great success.
             </div>
         </div>
-        <label class="olt-Notification-close"></label>
+        <button class="olt-Notification-close">
+            <i class="olt-Icon" data-icon="close"></i>
+        </button>
     </div>
     <div class="olt-Notification olt-Notification--warning is-open">
         <div class="olt-Notification-dialog">
@@ -85,7 +93,9 @@ DON'T USE IN PRODUCTION!! -->
                 I am warning you!
             </div>
         </div>
-        <label class="olt-Notification-close"></label>
+        <button class="olt-Notification-close">
+            <i class="olt-Icon" data-icon="close"></i>
+        </button>
     </div>
     <div class="olt-Notification olt-Notification--error is-open">
         <div class="olt-Notification-dialog">
@@ -94,13 +104,15 @@ DON'T USE IN PRODUCTION!! -->
                 Houston we have a problem.
             </div>
         </div>
-        <label class="olt-Notification-close"></label>
+        <button class="olt-Notification-close">
+            <i class="olt-Icon" data-icon="close"></i>
+        </button>
     </div>
 </div>
 ```
 
 ```html
-<div class="olt-Notifications">
+<div class="olt-NotificationContainer">
     <div class="olt-Notification olt-Notification--info">
         <div class="olt-Notification-dialog">
             <header class="olt-Notification-header">Info Notification</header>
@@ -108,7 +120,9 @@ DON'T USE IN PRODUCTION!! -->
                 Everything went well.
             </div>
         </div>
-        <label class="olt-Notification-close"></label>
+        <button class="olt-Notification-close">
+            <i class="olt-Icon" data-icon="close"></i>
+        </button>
     </div>
     <div class="olt-Notification olt-Notification--error">
         <div class="olt-Notification-dialog">
@@ -117,7 +131,9 @@ DON'T USE IN PRODUCTION!! -->
                 Nothing went well.
             </div>
         </div>
-        <label class="olt-Notification-close"></label>
+        <button class="olt-Notification-close">
+            <i class="olt-Icon" data-icon="close"></i>
+        </button>
     </div>
 </div>
 
@@ -130,7 +146,7 @@ state class at the main element. It will then animate into the bottom of the
 page.
 
 ```html
-<div class="olt-Notifications">
+<div class="olt-NotificationContainer">
     <div class="olt-Notification olt-Notification--info is-open">
         <div class="olt-Notification-dialog">
             <header class="olt-Notification-header">Info Notification</header>
@@ -138,7 +154,7 @@ page.
                 Everything went well.
             </div>
         </div>
-        <label class="olt-Notification-close"></label>
+        <button class="olt-Notification-close" />
     </div>
     <div class="olt-Notification olt-Notification--error is-open">
         <div class="olt-Notification-dialog">
@@ -147,7 +163,7 @@ page.
                 Nothing went well.
             </div>
         </div>
-        <label class="olt-Notification-close"></label>
+        <button class="olt-Notification-close" />
     </div>
 </div>
 ```
@@ -178,7 +194,7 @@ The following JS snippet is used to show, hide and close notifications for the d
    */
   showNotifications = () => {
     const notificationsList = [
-      ...document.querySelector('div.olt-Notifications').children,
+      ...document.querySelector('div.olt-NotificationContainer').children,
     ].reverse();
     notificationsList.forEach((notification, index) => {
       setTimeout(() => {

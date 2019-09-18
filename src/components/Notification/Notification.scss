@@ -1,6 +1,6 @@
 $notification-spacing-y: 8px;
 
-.Notifications {
+.NotificationContainer {
   $notification-padding-x: 16px;
   $notification-padding-y: 16px - $notification-spacing-y;
   $notification-padding-x-mobile: 8px;
@@ -32,7 +32,6 @@ $notification-spacing-y: 8px;
   $notification-content-padding-y: var-get('spacing3');
   $notification-background: var-get('colorLight');
   $notification-close-size: 16px;
-  $notification-close-margin-top: 6px;
   $notification-close-color: #666;
   $notification-dialog-width: calc(#{$notification-width} - #{$notification-close-size});
   $notification-transition-duration: 0.2s;
@@ -97,22 +96,18 @@ $notification-spacing-y: 8px;
   }
 
   &-close {
-    @extend .Button;
-
-    @extend .Button[data-icon];
-
-    &:before {
-      content: 'close';
-    }
-
     color: $notification-close-color;
     background-color: $notification-background;
     height: $notification-close-size;
     width: $notification-close-size;
-    min-width: $notification-close-size;
-    margin-top: $notification-close-margin-top;
-    border-color: $notification-background;
+    border: none;
+    padding: 0;
+    font-size: $notification-icon-size*2/3; // icons are set to 150% font size
     z-index: $olt-z-index-notification-close;
+
+    &:focus {
+      outline: 0;
+    }
   }
 
   &--error &-header:before,
