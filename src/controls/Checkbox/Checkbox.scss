@@ -24,7 +24,7 @@
       }
 
       &:after {
-        @include icon-font-material;
+        @include icon-font-olt;
 
         content: 'check';
         position: absolute;

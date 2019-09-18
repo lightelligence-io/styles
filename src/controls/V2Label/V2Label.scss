@@ -74,7 +74,7 @@
     padding-left: 24px;
 
     &:before {
-      @include icon-font-material();
+      @include icon-font-olt;
 
       content: 'info_outline';
       position: absolute;

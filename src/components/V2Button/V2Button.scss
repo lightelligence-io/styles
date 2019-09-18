@@ -586,7 +586,7 @@
   &[data-icon-left],
   &[data-icon-right] {
     &:before {
-      @include icon-font-material;
+      @include icon-font-olt;
 
       font-size: 120%;
     }

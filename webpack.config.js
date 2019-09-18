@@ -107,7 +107,6 @@ module.exports = {
       },
       {
         test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-        exclude: context,
         use: [
           {
             loader: 'file-loader',
