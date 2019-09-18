@@ -5,7 +5,7 @@ category: Controls
 
 ## Description
 
-Input is used with a wrapped `<label>` element that contain
+Input is used with a wrapped `<label>` element that contains
 `<textarea />`. It occupies `olt-TextArea*` class names.
 
 ---
