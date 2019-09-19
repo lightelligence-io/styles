@@ -24,7 +24,7 @@ On larger screens notifications are placed on the bottom right, on small devices
                 Everything went well ... and more. This is a long text to see how the notification grows, when the text gets longer ... and it looks good!
             </div>
         </div>
-        <button class="olt-Notification-close">
+        <button type='button' class="olt-Notification-close">
             <i class="olt-Icon" data-icon="close"></i>
         </button>
     </div>
@@ -35,7 +35,7 @@ On larger screens notifications are placed on the bottom right, on small devices
                 Everything went well.
             </div>
         </div>
-        <button class="olt-Notification-close">
+        <button type='button' class="olt-Notification-close">
             <i class="olt-Icon" data-icon="close"></i>
         </button>
     </div>
@@ -71,7 +71,7 @@ DON'T USE IN PRODUCTION!! -->
                 Everything went well.
             </div>
         </div>
-        <button class="olt-Notification-close">
+        <button type='button' class="olt-Notification-close">
             <i class="olt-Icon" data-icon="close"></i>
         </button>
     </div>
@@ -82,7 +82,7 @@ DON'T USE IN PRODUCTION!! -->
                 It was a great success.
             </div>
         </div>
-        <button class="olt-Notification-close">
+        <button type='button' class="olt-Notification-close">
             <i class="olt-Icon" data-icon="close"></i>
         </button>
     </div>
@@ -93,7 +93,7 @@ DON'T USE IN PRODUCTION!! -->
                 I am warning you!
             </div>
         </div>
-        <button class="olt-Notification-close">
+        <button type='button' class="olt-Notification-close">
             <i class="olt-Icon" data-icon="close"></i>
         </button>
     </div>
@@ -104,7 +104,7 @@ DON'T USE IN PRODUCTION!! -->
                 Houston we have a problem.
             </div>
         </div>
-        <button class="olt-Notification-close">
+        <button type='button' class="olt-Notification-close">
             <i class="olt-Icon" data-icon="close"></i>
         </button>
     </div>
@@ -120,7 +120,7 @@ DON'T USE IN PRODUCTION!! -->
                 Everything went well.
             </div>
         </div>
-        <button class="olt-Notification-close">
+        <button type='button' class="olt-Notification-close">
             <i class="olt-Icon" data-icon="close"></i>
         </button>
     </div>
@@ -131,7 +131,7 @@ DON'T USE IN PRODUCTION!! -->
                 Nothing went well.
             </div>
         </div>
-        <button class="olt-Notification-close">
+        <button type='button' class="olt-Notification-close">
             <i class="olt-Icon" data-icon="close"></i>
         </button>
     </div>
@@ -154,7 +154,7 @@ page.
                 Everything went well.
             </div>
         </div>
-        <button class="olt-Notification-close" />
+        <button type='button' class="olt-Notification-close" />
     </div>
     <div class="olt-Notification olt-Notification--error is-open">
         <div class="olt-Notification-dialog">
@@ -163,7 +163,7 @@ page.
                 Nothing went well.
             </div>
         </div>
-        <button class="olt-Notification-close" />
+        <button type='button' class="olt-Notification-close" />
     </div>
 </div>
 ```

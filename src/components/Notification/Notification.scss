@@ -53,6 +53,10 @@ $notification-spacing-y: 8px;
   flex-wrap: wrap;
   transition: all $notification-transition-duration ease-out;
 
+  &:focus {
+    outline: none;
+  }
+
   &.is-open {
     opacity: 1;
     width: $notification-width;
@@ -116,7 +120,7 @@ $notification-spacing-y: 8px;
     font-size: $notification-icon-size*2/3; // icons are set to 150% font size
 
     &:focus {
-      outline: 0;
+      outline: none;
     }
   }
 
