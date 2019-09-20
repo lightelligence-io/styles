@@ -18,6 +18,10 @@
     transition: all ease 0.2s;
     padding: 0 var-get('spacing1');
     text-decoration: none;
+    width: auto;
+    order: 1;
+    margin-right: 0.2rem;
+    margin-top: 0;
 
     @include screen-up(md) {
       font-size: $olt-tabs-font-size-lg-up;
@@ -38,52 +42,19 @@
       border-bottom: solid 1px transparent;
     }
 
-    @include screen-down(md) {
-      order: initial;
-      width: 100%;
-      margin-right: 0;
-      margin-top: 0.2rem;
+    &.is-active {
+      color: var-get('colorPrimary');
+
+      &:after {
+        border-color: currentColor;
+      }
     }
-  }
 
-  &--navigation &-header {
-    width: auto;
-    order: 1;
-    margin-right: 0.2rem;
-    margin-top: 0;
-  }
-
-  &-content {
-    order: 99;
-    flex-grow: 1;
-    width: 100%;
-    display: none;
-    padding: 0 var-get('spacing1');
-
-    @include screen-down(md) {
-      order: initial;
-    }
-  }
-
-  &-header + &-content {
-    margin-top: var-get('spacing3');
-  }
-
-  input[type="radio"] {
-    display: none;
-  }
-
-  &-header.is-active,
-  input[type="radio"]:checked + &-header {
-    color: var-get('colorPrimary');
-
-    &:after {
-      border-color: currentColor;
-    }
-  }
-
-  &-content.is-active,
-  input[type="radio"]:checked + &-header + &-content {
-    display: block;
+    // @include screen-down(md) {
+    //   order: initial;
+    //   width: 100%;
+    //   margin-right: 0;
+    //   margin-top: 0.2rem;
+    // }
   }
 }
