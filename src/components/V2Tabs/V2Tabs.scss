@@ -1,5 +1,4 @@
 .V2Tabs {
-
   $tab-height: 36px;
   $tab-border-radius: 4px;
   $tab-active-bg-color: #0d122c;
@@ -70,17 +69,6 @@
       background: $tab-active-bg-color;
       color: $tab-active-text-color;
     }
-
-    // @include screen-up(md) {
-    //   font-size: $olt-tabs-font-size-lg-up;
-    // }
-
-    // @include screen-down(md) {
-    //   order: initial;
-    //   width: 100%;
-    //   margin-right: 0;
-    //   margin-top: 0.2rem;
-    // }
   }
 
   @media (max-width: map-get($olt-v2-breakpoints, sm)) {
@@ -92,7 +80,7 @@
       position: absolute;
       right: 0;
       height: $tab-height;
-      width: 50px;
+      width: 30px;
       content: "";
       background:
         linear-gradient(
@@ -100,7 +88,7 @@
           rgb(255, 255, 255) 0%,
           rgba(255, 255, 255, 0) 100%
         );
-      pointer-events: none; /* so the text is still selectable */
+      pointer-events: none; /* so the button is still clickable */
     }
   }
 }
