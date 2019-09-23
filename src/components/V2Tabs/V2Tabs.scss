@@ -12,6 +12,7 @@
   $tab-margin-y: 4px;
   $tab-bar-padding: 0;
   $tab-bar-height: $tab-height + $tab-bar-padding*2 + $tab-margin-y;
+  $tab-bar-gradient-width: 50px;
 
   display: flex;
   margin: 0;
@@ -71,16 +72,12 @@
     }
   }
 
-  @media (max-width: map-get($olt-v2-breakpoints, sm)) {
-    justify-content: flex-start;
-    overflow: scroll;
-    white-space: nowrap;
-
+  &.has-gradient-right {
     &:after {
       position: absolute;
       right: 0;
       height: $tab-height;
-      width: 30px;
+      width: $tab-bar-gradient-width;
       content: "";
       background:
         linear-gradient(
@@ -88,7 +85,30 @@
           rgb(255, 255, 255) 0%,
           rgba(255, 255, 255, 0) 100%
         );
-      pointer-events: none; /* so the button is still clickable */
+      pointer-events: none;
     }
+  }
+
+  &.has-gradient-left {
+    &:before {
+      position: absolute;
+      left: 0;
+      height: $tab-height;
+      width: $tab-bar-gradient-width;
+      content: "";
+      background:
+        linear-gradient(
+          to right,
+          rgb(255, 255, 255) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      pointer-events: none;
+    }
+  }
+
+  @media (max-width: map-get($olt-v2-breakpoints, sm)) {
+    justify-content: flex-start;
+    overflow: scroll;
+    white-space: nowrap;
   }
 }
