@@ -87,8 +87,7 @@
     // }
   }
 
-  &--icon,
-  &[data-icon] {
+  &--icon {
     @extend .Icon;
 
     &:before {
@@ -98,7 +97,6 @@
 
   &--icon,
   &--count,
-  &[data-icon],
   &[data-count] {
     padding: 0;
     display: inline-flex;
