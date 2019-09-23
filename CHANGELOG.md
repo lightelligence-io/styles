@@ -55,3 +55,7 @@ State of the art
 #v0.12.0
 
 - add TextArea components
+
+#v0.12.1
+
+- fix: remove bottom border radius on input elements
