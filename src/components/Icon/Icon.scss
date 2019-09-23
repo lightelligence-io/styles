@@ -54,9 +54,9 @@
   &-action-favorite-default#{&}--small:before { content: "\e91b"; }
   &-action-favorite-default:before { content: "\e91c"; }
   &-action-favorite-default#{&}--large:before { content: "\e91d"; }
-  &-action-favorite-filled#{&}--small-copy:before { content: "\e91e"; }
-  &-action-favorite-filled-copy:before { content: "\e91f"; }
-  &-action-favorite-filled#{&}--large-copy:before { content: "\e920"; }
+  &-action-favorite-filled#{&}--small:before { content: "\e91e"; }
+  &-action-favorite-filled:before { content: "\e91f"; }
+  &-action-favorite-filled#{&}--large:before { content: "\e920"; }
   &-action-fill#{&}--small:before { content: "\e921"; }
   &-action-fill:before { content: "\e922"; }
   &-action-fill#{&}--large:before { content: "\e923"; }
@@ -124,7 +124,7 @@
 
   &-data-brightness:before { content: "\e95f"; }
   &-data-brightness#{&}--large:before { content: "\e960"; }
-  &-data-document#{&}--small-copy:before { content: "\e961"; }
+  &-data-document#{&}--small:before { content: "\e961"; }
   &-data-document:before { content: "\e962"; }
   &-data-document#{&}--large:before { content: "\e963"; }
   &-data-emission:before { content: "\e964"; }

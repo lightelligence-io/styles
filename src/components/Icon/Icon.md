@@ -5,13 +5,10 @@ category: Component
 
 ## Description
 
-The *Icon* component is an interface for 
-the official OLT Icons. This
+The *Icon* component is an interface for the official OLT Icons. This
 component occupies `olt-Icon*` class names and can be used with `<i>` element.
 
-Per default, icons adjust to current color and font-size.
-
-<div class="olt-DataCards olt-DataCards--useFlexLayout">
+<div class="olt-DataCards olt-DataCards--useFlexLayout olt-u-marginBottom3">
   <div class="olt-DataCards-frame">
     <div class="olt-DataCards-head">
       <div class="olt-DataCards-headItem olt-DataCards--tableCellWidth10">
@@ -23,6 +20,7 @@ Per default, icons adjust to current color and font-size.
     </div>
   </div>
   <div class="olt-DataCards-body">
+    <!-- Action -->
     <div class="olt-DataCards-card">
       <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth10">
         <div class="olt-DataCards-content">
@@ -73,10 +71,6 @@ Per default, icons adjust to current color and font-size.
             <span>action-favorite-default</span>
           </div>
           <div class="demo-icon">
-            <i class="olt-Icon olt-Icon-action-favorite-filled-copy" title="action-favorite-filled-copy"></i>
-            <span>action-favorite-filled-copy</span>
-          </div>
-          <div class="demo-icon">
             <i class="olt-Icon olt-Icon-action-fill" title="action-fill"></i>
             <span>action-fill</span>
           </div>
@@ -97,10 +91,6 @@ Per default, icons adjust to current color and font-size.
             <span>action-remove-circle</span>
           </div>
           <div class="demo-icon">
-            <i class="olt-Icon olt-Icon-action-remove-filled" title="action-remove-filled"></i>
-            <span>action-remove-filled</span>
-          </div>
-          <div class="demo-icon">
             <i class="olt-Icon olt-Icon-action-save" title="action-save"></i>
             <span>action-save</span>
           </div>
@@ -119,6 +109,7 @@ Per default, icons adjust to current color and font-size.
         </div>
       </div>
     </div>
+    <!-- Arrows -->
     <div class="olt-DataCards-card">
       <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth10">
         <div class="olt-DataCards-content">
@@ -171,216 +162,366 @@ Per default, icons adjust to current color and font-size.
         </div>
       </div>
     </div>
+    <!-- Data -->
+    <div class="olt-DataCards-card">
+      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth10">
+        <div class="olt-DataCards-content">
+          Data
+        </div>
+      </div>
+      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth90">
+        <div class="olt-DataCards-title">Icons</div>
+        <div class="olt-DataCards-content">
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-data-brightness" title="data-brightness"></i>
+            <span>data-brightness</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-data-document" title="data-document"></i>
+            <span>data-document</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-data-emission" title="data-emission"></i>
+            <span>data-emission</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-data-humidity" title="data-humidity"></i>
+            <span>data-humidity</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-data-lifetime" title="data-lifetime"></i>
+            <span>data-lifetime</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-data-light" title="data-light"></i>
+            <span>data-light</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-data-live" title="data-live"></i>
+            <span>data-live</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-data-power" title="data-power"></i>
+            <span>data-power</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-data-savings" title="data-savings"></i>
+            <span>data-savings</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-data-temperature" title="data-temperature"></i>
+            <span>data-temperature</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sensor -->
+    <div class="olt-DataCards-card">
+      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth10">
+        <div class="olt-DataCards-content">
+          Sensor
+        </div>
+      </div>
+      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth90">
+        <div class="olt-DataCards-title">Icons</div>
+        <div class="olt-DataCards-content">
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-devices-device" title="devices-device"></i>
+            <span>devices-device</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-devices-led" title="devices-led"></i>
+            <span>devices-led</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-devices-sensor" title="devices-sensor"></i>
+            <span>devices-sensor</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Feedback -->
+    <div class="olt-DataCards-card">
+      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth10">
+        <div class="olt-DataCards-content">
+          Feedback
+        </div>
+      </div>
+      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth90">
+        <div class="olt-DataCards-title">Icons</div>
+        <div class="olt-DataCards-content">
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-feedback-check-circle" title="feedback-check-circle"></i>
+            <span>feedback-check-circle</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-feedback-check-default" title="feedback-check-default"></i>
+            <span>feedback-check-default</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-feedback-help-circle" title="feedback-help-circle"></i>
+            <span>feedback-help-circle</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-feedback-info-circle" title="feedback-info-circle"></i>
+            <span>feedback-info-circle</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-feedback-notification-active" title="feedback-notification-active"></i>
+            <span>feedback-notification-active</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-feedback-notification-default" title="feedback-notification-default"></i>
+            <span>feedback-notification-default</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-feedback-report-failure" title="feedback-report-failure"></i>
+            <span>feedback-report-failure</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-feedback-report-success" title="feedback-report-success"></i>
+            <span>feedback-report-success</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-feedback-restricted" title="feedback-restricted"></i>
+            <span>feedback-restricted</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-feedback-warning-critical-circle" title="feedback-warning-critical-circle"></i>
+            <span>feedback-warning-critical-circle</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-feedback-warning-low-circle" title="feedback-warning-low-circle"></i>
+            <span>feedback-warning-low-circle</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-feedback-warning-medium-circle" title="feedback-warning-medium-circle"></i>
+            <span>feedback-warning-medium-circle</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Actions / Feedback filled -->
+    <div class="olt-DataCards-card">
+      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth10">
+        <div class="olt-DataCards-content">
+          Actions / Feedback filled
+        </div>
+      </div>
+      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth90">
+        <div class="olt-DataCards-title">Icons</div>
+        <div class="olt-DataCards-content">
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-action-favorite-filled" title="action-favorite-filled"></i>
+            <span>action-favorite-filled</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-action-remove-filled" title="action-remove-filled"></i>
+            <span>action-remove-filled</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-feedback-check-filled" title="feedback-check-filled"></i>
+            <span>feedback-check-filled</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-feedback-help-filled" title="feedback-help-filled"></i>
+            <span>feedback-help-filled</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-feedback-info-filled" title="feedback-info-filled"></i>
+            <span>feedback-info-filled</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-feedback-warning-critical-filled" title="feedback-warning-critical-filled"></i>
+            <span>feedback-warning-critical-filled</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-feedback-warning-low-filled" title="feedback-warning-low-filled"></i>
+            <span>feedback-warning-low-filled</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-feedback-warning-medium-filled" title="feedback-warning-medium-filled"></i>
+            <span>feedback-warning-medium-filled</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Linking -->
+    <div class="olt-DataCards-card">
+      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth10">
+        <div class="olt-DataCards-content">
+          Linking
+        </div>
+      </div>
+      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth90">
+        <div class="olt-DataCards-title">Icons</div>
+        <div class="olt-DataCards-content">
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-link-attachment" title="link-attachment"></i>
+            <span>link-attachment</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-link-external" title="link-external"></i>
+            <span>link-external</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-link-redirect" title="link-redirect"></i>
+            <span>link-redirect</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Location / Date -->
+    <div class="olt-DataCards-card">
+      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth10">
+        <div class="olt-DataCards-content">
+          Location / Date
+        </div>
+      </div>
+      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth90">
+        <div class="olt-DataCards-title">Icons</div>
+        <div class="olt-DataCards-content">
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-location" title="location"></i>
+            <span>location</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-time-calendar" title="time-calendar"></i>
+            <span>time-calendar</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-time-clock" title="time-clock"></i>
+            <span>time-clock</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-time-hourglass" title="time-hourglass"></i>
+            <span>time-hourglass</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Navigation -->
+    <div class="olt-DataCards-card">
+      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth10">
+        <div class="olt-DataCards-content">
+          Navigation
+        </div>
+      </div>
+      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth90">
+        <div class="olt-DataCards-title">Icons</div>
+        <div class="olt-DataCards-content">
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-navigation-close" title="navigation-close"></i>
+            <span>navigation-close</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-navigation-filter" title="navigation-filter"></i>
+            <span>navigation-filter</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-navigation-handle" title="navigation-handle"></i>
+            <span>navigation-handle</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-navigation-menu" title="navigation-menu"></i>
+            <span>navigation-menu</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-navigation-more" title="navigation-more"></i>
+            <span>navigation-more</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Security -->
+    <div class="olt-DataCards-card">
+      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth10">
+        <div class="olt-DataCards-content">
+          Security
+        </div>
+      </div>
+      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth90">
+        <div class="olt-DataCards-title">Icons</div>
+        <div class="olt-DataCards-content">
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-security-locked" title="security-locked"></i>
+            <span>security-locked</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-security-unlocked" title="security-unlocked"></i>
+            <span>security-unlocked</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-security-visibility" title="security-visibility"></i>
+            <span>security-visibility</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-security-visibility-hidden" title="security-visibility-hidden"></i>
+            <span>security-visibility-hidden</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Users -->
+    <div class="olt-DataCards-card">
+      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth10">
+        <div class="olt-DataCards-content">
+          Users
+        </div>
+      </div>
+      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth90">
+        <div class="olt-DataCards-title">Icons</div>
+        <div class="olt-DataCards-content">
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-user-add" title="user-add"></i>
+            <span>user-add</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-user-default" title="user-default"></i>
+            <span>user-default</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-user-filled" title="user-filled"></i>
+            <span>user-filled</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Zoom -->
+    <div class="olt-DataCards-card">
+      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth10">
+        <div class="olt-DataCards-content">
+          Zoom
+        </div>
+      </div>
+      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth90">
+        <div class="olt-DataCards-title">Icons</div>
+        <div class="olt-DataCards-content">
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-zoom-in" title="zoom-in"></i>
+            <span>zoom-in</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-zoom-out" title="zoom-out"></i>
+            <span>zoom-out</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-zoom-resize" title="zoom-resize"></i>
+            <span>zoom-resize</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
+Per default, icons adjust to current color and font-size.
 
-TODO
-```html
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-bullet-big" title="bullet-big"></i>
-  <span>bullet-big</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-bullet-small" title="bullet-small"></i>
-  <span>bullet-small</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-data-brightness" title="data-brightness"></i>
-  <span>data-brightness</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-data-document" title="data-document"></i>
-  <span>data-document</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-data-emission" title="data-emission"></i>
-  <span>data-emission</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-data-humidity" title="data-humidity"></i>
-  <span>data-humidity</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-data-lifetime" title="data-lifetime"></i>
-  <span>data-lifetime</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-data-light" title="data-light"></i>
-  <span>data-light</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-data-live" title="data-live"></i>
-  <span>data-live</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-data-power" title="data-power"></i>
-  <span>data-power</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-data-savings" title="data-savings"></i>
-  <span>data-savings</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-data-temperature" title="data-temperature"></i>
-  <span>data-temperature</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-devices-device" title="devices-device"></i>
-  <span>devices-device</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-devices-led" title="devices-led"></i>
-  <span>devices-led</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-devices-sensor" title="devices-sensor"></i>
-  <span>devices-sensor</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-feedback-check-circle" title="feedback-check-circle"></i>
-  <span>feedback-check-circle</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-feedback-check-default" title="feedback-check-default"></i>
-  <span>feedback-check-default</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-feedback-check-filled" title="feedback-check-filled"></i>
-  <span>feedback-check-filled</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-feedback-help-circle" title="feedback-help-circle"></i>
-  <span>feedback-help-circle</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-feedback-help-filled" title="feedback-help-filled"></i>
-  <span>feedback-help-filled</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-feedback-info-circle" title="feedback-info-circle"></i>
-  <span>feedback-info-circle</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-feedback-info-filled" title="feedback-info-filled"></i>
-  <span>feedback-info-filled</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-feedback-notification-active" title="feedback-notification-active"></i>
-  <span>feedback-notification-active</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-feedback-notification-default" title="feedback-notification-default"></i>
-  <span>feedback-notification-default</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-feedback-report-failure" title="feedback-report-failure"></i>
-  <span>feedback-report-failure</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-feedback-report-success" title="feedback-report-success"></i>
-  <span>feedback-report-success</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-feedback-restricted" title="feedback-restricted"></i>
-  <span>feedback-restricted</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-feedback-warning-critical-circle" title="feedback-warning-critical-circle"></i>
-  <span>feedback-warning-critical-circle</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-feedback-warning-critical-filled" title="feedback-warning-critical-filled"></i>
-  <span>feedback-warning-critical-filled</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-feedback-warning-low-circle" title="feedback-warning-low-circle"></i>
-  <span>feedback-warning-low-circle</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-feedback-warning-low-filled" title="feedback-warning-low-filled"></i>
-  <span>feedback-warning-low-filled</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-feedback-warning-medium-circle" title="feedback-warning-medium-circle"></i>
-  <span>feedback-warning-medium-circle</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-feedback-warning-medium-filled" title="feedback-warning-medium-filled"></i>
-  <span>feedback-warning-medium-filled</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-link-attachment" title="link-attachment"></i>
-  <span>link-attachment</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-link-external" title="link-external"></i>
-  <span>link-external</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-link-redirect" title="link-redirect"></i>
-  <span>link-redirect</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-location" title="location"></i>
-  <span>location</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-navigation-close" title="navigation-close"></i>
-  <span>navigation-close</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-security-locked" title="security-locked"></i>
-  <span>security-locked</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-security-unlocked" title="security-unlocked"></i>
-  <span>security-unlocked</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-security-visibility" title="security-visibility"></i>
-  <span>security-visibility</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-security-visibility-hidden" title="security-visibility-hidden"></i>
-  <span>security-visibility-hidden</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-time-calendar" title="time-calendar"></i>
-  <span>time-calendar</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-time-clock" title="time-clock"></i>
-  <span>time-clock</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-time-hourglass" title="time-hourglass"></i>
-  <span>time-hourglass</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-user-add" title="user-add"></i>
-  <span>user-add</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-user-default" title="user-default"></i>
-  <span>user-default</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-user-filled" title="user-filled"></i>
-  <span>user-filled</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-zoom-in" title="zoom-in"></i>
-  <span>zoom-in</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-zoom-out" title="zoom-out"></i>
-  <span>zoom-out</span>
-</div>
-<div class="demo-icon">
-  <i class="olt-Icon olt-Icon-zoom-resize" title="zoom-resize"></i>
-  <span>zoom-resize</span>
-</div>
+```icons.html
+<i class="olt-Icon olt-Icon-security-locked"></i>
+<i class="olt-Icon olt-Icon-time-calendar"></i>
+<i class="olt-Icon olt-Icon-user-add"></i>
+<i class="olt-Icon olt-Icon-zoom-in"></i>
 ```
 
 ## Colors

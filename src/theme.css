@@ -420,3 +420,9 @@ a.i-sidebar-list-item:hover b {
   text-overflow: ellipsis;
   margin-top: 10px;
 }
+
+.demo-icon:hover span,
+.demo-icon:active span,
+.demo-icon:focus span {
+  white-space: normal;
+}
