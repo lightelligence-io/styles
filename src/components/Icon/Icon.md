@@ -414,7 +414,7 @@ component occupies `olt-Icon*` class names and can be used with `<i>` element.
             <i class="olt-Icon olt-Icon-navigation-close" title="navigation-close"></i>
             <span>navigation-close</span>
           </div>
-          <div class="demo-icon">
+         <!--<div class="demo-icon">
             <i class="olt-Icon olt-Icon-navigation-filter" title="navigation-filter"></i>
             <span>navigation-filter</span>
           </div>
@@ -429,7 +429,7 @@ component occupies `olt-Icon*` class names and can be used with `<i>` element.
           <div class="demo-icon">
             <i class="olt-Icon olt-Icon-navigation-more" title="navigation-more"></i>
             <span>navigation-more</span>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>
@@ -515,46 +515,133 @@ component occupies `olt-Icon*` class names and can be used with `<i>` element.
   </div>
 </div>
 
-Per default, icons adjust to current color and font-size.
+Per default, icons adjust to current color and font-size:
 
 ```icons.html
 <i class="olt-Icon olt-Icon-security-locked"></i>
-<i class="olt-Icon olt-Icon-time-calendar"></i>
-<i class="olt-Icon olt-Icon-user-add"></i>
-<i class="olt-Icon olt-Icon-zoom-in"></i>
+<i class="olt-Icon olt-Icon-time-calendar olt-u-colorInfo"></i>
+<i class="olt-Icon olt-Icon-user-add olt-u-fontSizeLarge olt-u-colorPrimary"></i>
+<i class="olt-Icon olt-Icon-zoom-in olt-u-fontSizeXLarge"></i>
 ```
 
 ## Colors
 
-The *Icon* can be rendered with 
-[any of our conceptual colors](/#concepts-colors) :
+### General
 
-```colors.html
-<i class="olt-Icon olt-Icon--primary" data-icon="grade"></i>
-<i class="olt-Icon olt-Icon--secondary" data-icon="grade"></i>
-<i class="olt-Icon olt-Icon--error" data-icon="error"></i>
-<i class="olt-Icon olt-Icon--success" data-icon="done"></i>
-<i class="olt-Icon olt-Icon--info" data-icon="info"></i>
-<i class="olt-Icon olt-Icon--dark" data-icon="grade"></i>
+Interactive icons should be used with the primary color. 
+For decorative and non-interactive icons (e.g. input fields) the default is gray 500.
+
+```colors-general.html
+<div class="olt-Grid olt-u-alignItemsCenter">
+  <div class="olt-Grid-item olt-Grid-item--3">
+    <b>primary</b><br>
+    interactive icons
+  </div>
+  <div class="olt-Grid-item olt-Grid-item--9">
+    <i class="olt-Icon olt-Icon--primary olt-Icon-zoom-in"></i>
+    <i class="olt-Icon olt-Icon--primary olt-Icon-zoom-out"></i>
+    <i class="olt-Icon olt-Icon--primary olt-Icon-zoom-resize"></i>
+  </div>
+  <div class="olt-Grid-item olt-Grid-item--3">
+    <b>gray 500</b><br>
+    used for decorations
+  </div>
+  <div class="olt-Grid-item olt-Grid-item--9">
+    <i class="olt-Icon olt-u-colorGray500 olt-Icon-data-emission"></i>
+            <i class="olt-Icon olt-u-colorGray500 olt-Icon-data-humidity"></i>
+            <i class="olt-Icon olt-u-colorGray500 olt-Icon-data-power"></i>
+  </div>
+</div>
+```
+
+### Feedback
+
+The new *Icon* set has filled and outline icons for feedback. 
+Three different versions indicate the importance of the warning. 
+Depending on the use case the icon color changes - info / warning / error.
+To assign a color to the icon, use the `olt-Icon--*` classes as listed below.
+If the icon is placed on a matching background color it has to be white.
+
+* <span class="olt-u-colorInfo">Circle - low:</span> `olt-Icon--info` 
+* <span class="olt-u-colorWarning">Triangle - medium:</span> `olt-Icon--warning`
+* <span class="olt-u-colorError">Rhomb - critical:</span> `olt-Icon--error`
+* <span class="olt-u-colorSuccess">Circle - success:</span> `olt-Icon--success` 
+
+```colors-feedback.html
+<i class="olt-Icon olt-Icon--info olt-Icon-feedback-help-circle"></i>
+<i class="olt-Icon olt-Icon--info olt-Icon-feedback-info-circle"></i>
+<i class="olt-Icon olt-Icon--warning olt-Icon-feedback-warning-low-circle"></i>
+<i class="olt-Icon olt-Icon--warning olt-Icon-feedback-warning-medium-circle"></i>
+<i class="olt-Icon olt-Icon--error olt-Icon-feedback-warning-critical-circle"></i>
+<i class="olt-Icon olt-Icon--success olt-Icon-feedback-check-circle"></i>
+<br/><br/>
+<i class="olt-Icon olt-Icon--info olt-Icon-feedback-help-filled"></i>
+<i class="olt-Icon olt-Icon--info olt-Icon-feedback-info-filled"></i>
+<i class="olt-Icon olt-Icon--warning olt-Icon-feedback-warning-low-filled"></i>
+<i class="olt-Icon olt-Icon--warning olt-Icon-feedback-warning-medium-filled"></i>
+<i class="olt-Icon olt-Icon--error olt-Icon-feedback-warning-critical-filled"></i>
+<i class="olt-Icon olt-Icon--success olt-Icon-feedback-check-filled"></i>
 ```
 
 ## Sizes
 
-To change the size of the *Icon* you can use the size modifiers. For *Icon*
-the modifiers are : 
+The Icons exist in three different sizes - **24 x 24 / 16 x 16 / 12 x 12**. 
+Depending on the use case the correct icon has to be used. 
 
-- `small`
-- `medium`
-- `large`
+* `olt-Icon--large`: **24 x 24** - icons that are used for decoration and standalone
+* `olt-Icon--medium`: **16 x 16** - for input fields and sometimes for decoration, standalone and the edit action button
+* `olt-Icon--small`: **12 x 12** - exclusively for buttons - primary, secondary and tertiary
 
-```sizes.html
-<i class="olt-Icon olt-Icon--small" data-icon="done"></i>
-<i class="olt-Icon olt-Icon--medium" data-icon="done"></i>
-<i class="olt-Icon olt-Icon--large" data-icon="done"></i>
-```
+<table class="olt-Table">
+  <thead class="olt-Table-head">
+    <tr class="olt-Table-row">
+      <th class="olt-Table-header">large (24 x 24)</th>
+      <th class="olt-Table-header">medium (16 x 16)</th>
+      <th class="olt-Table-header">small (12 x 12)</th>
+    </tr>
+  </thead>
+  <tbody class="olt-Table-body">
+    <tr class="olt-Table-row">
+      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-feedback-notification-default olt-Icon--large"></i></td>
+      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-feedback-notification-default olt-Icon--medium"></i></td>
+      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-feedback-notification-default olt-Icon--small"></i></td>
+    </tr>
+    <tr class="olt-Table-row">
+      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-action-delete olt-Icon--large"></i></td>
+      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-action-delete olt-Icon--medium"></i></td>
+      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-action-delete olt-Icon--small"></i></td>
+    </tr>
+    <tr class="olt-Table-row">
+      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-action-edit olt-Icon--large"></i></td>
+      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-action-edit olt-Icon--medium"></i></td>
+      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-action-edit olt-Icon--small"></i></td>
+    </tr>
+    <tr class="olt-Table-row">
+      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-action-save olt-Icon--large"></i></td>
+      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-action-save olt-Icon--medium"></i></td>
+      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-action-save olt-Icon--small"></i></td>
+    </tr>
+    <tr class="olt-Table-row">
+      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-time-calendar olt-Icon--large"></i></td>
+      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-time-calendar olt-Icon--medium"></i></td>
+      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-time-calendar olt-Icon--small"></i></td>
+    </tr>
+    <tr class="olt-Table-row">
+      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-devices-device olt-Icon--large"></i></td>
+      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-devices-device olt-Icon--medium"></i></td>
+      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-devices-device olt-Icon--small"></i></td>
+    </tr>
+    <tr class="olt-Table-row">
+      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-feedback-report-success olt-Icon--large"></i></td>
+      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-feedback-report-success olt-Icon--medium"></i></td>
+      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-feedback-report-success olt-Icon--small"></i></td>
+    </tr>
+  </tbody>
+</table>
 
-You can also change the size of the icon with the 
-[Font Size utility classes](/#font-size). You can use : 
+You can also change the size of the icon with the [Font Size utility classes](/#font-size). 
+This will resize the icon but without making any adjustments to account
+for smaller or bigger sizes. You can use: 
 
 - `olt-u-fontSizeXxSmall`
 - `olt-u-fontSizeXSmall`
@@ -565,11 +652,11 @@ You can also change the size of the icon with the
 - `olt-u-fontSizeXxLarge`
 
 ```font-size.html
-<i class="olt-Icon olt-u-fontSizeXxSmall" data-icon="done"></i>
-<i class="olt-Icon olt-u-fontSizeXSmall" data-icon="done"></i>
-<i class="olt-Icon olt-u-fontSizeSmall" data-icon="done"></i>
-<i class="olt-Icon olt-u-fontSizeMedium" data-icon="done"></i>
-<i class="olt-Icon olt-u-fontSizeLarge" data-icon="done"></i>
-<i class="olt-Icon olt-u-fontSizeXLarge" data-icon="done"></i>
-<i class="olt-Icon olt-u-fontSizeXxLarge" data-icon="done"></i>
+<i class="olt-Icon olt-Icon-feedback-notification-default olt-u-fontSizeXxSmall"></i>
+<i class="olt-Icon olt-Icon-feedback-notification-default olt-u-fontSizeXSmall"></i>
+<i class="olt-Icon olt-Icon-feedback-notification-default olt-u-fontSizeSmall"></i>
+<i class="olt-Icon olt-Icon-feedback-notification-default olt-u-fontSizeMedium"></i>
+<i class="olt-Icon olt-Icon-feedback-notification-default olt-u-fontSizeLarge"></i>
+<i class="olt-Icon olt-Icon-feedback-notification-default olt-u-fontSizeXLarge"></i>
+<i class="olt-Icon olt-Icon-feedback-notification-default olt-u-fontSizeXxLarge"></i>
 ```
