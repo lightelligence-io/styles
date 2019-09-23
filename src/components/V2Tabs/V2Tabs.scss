@@ -32,8 +32,8 @@
     height: $tab-height;
     width: auto;
     border: 0;
-    background: $tab-inactive-bg-color; // ToDo: use variable (#0d122c)
-    border-radius: $tab-border-radius; // ToDo: use variable
+    background: $tab-inactive-bg-color;
+    border-radius: $tab-border-radius;
     color: $tab-inactive-text-color;
     appearance: none;
     display: block;
@@ -51,13 +51,13 @@
 
     &:focus {
       outline: none;
-      background: $tab-hover-bg-color;// ToDo: use variable (#0d122c)
+      background: $tab-hover-bg-color;
       color: $tab-hover-text-color;
     }
 
     &:hover {
       outline: none;
-      background: $tab-hover-bg-color;// ToDo: use variable (#0d122c)
+      background: $tab-hover-bg-color;
       color: $tab-hover-text-color;
     }
 
