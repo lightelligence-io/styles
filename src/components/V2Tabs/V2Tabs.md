@@ -11,7 +11,7 @@ category: Component
 - `olt-V2Tabs-link` - The tab link
 
 The *V2Tabs* are centered on large screens and right aligned on small screens.
-The active tab via decorated via `is-active` state class name.
+The active tab is decorated via `is-active` state class name.
 
 ```newnavigation.html
 <div class="olt-V2Tabs">
