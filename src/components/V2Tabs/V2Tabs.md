@@ -20,18 +20,41 @@ The active tab is decorated via `is-active` state class name.
   <a class="olt-V2Tabs-link">Link Three</a>
   <a class="olt-V2Tabs-link">Link Four</a>
   <a class="olt-V2Tabs-link">Link Five</a>
+  <a class="olt-V2Tabs-link">Link Five</a>
+  <a class="olt-V2Tabs-link">Link Five</a>
+  <a class="olt-V2Tabs-link">Link Five</a>
+  <a class="olt-V2Tabs-link">Link Five</a>
 </div>
 ```
 
-To add a gradient to show that there are more elements available, use `has-gradient-left` and `has-gradient-right` state class name. The gradient overlay on either side is used to indicate that more content is available outside of the visible area.
+Use the --forceScroll modifier to ensure the menu does not overflow, but scrolls whenever it is too large for the screen.
 
-```newnavigationgradient.html
-<div class="olt-V2Tabs">
+```newnavigationforce.html
+<div class="olt-V2Tabs--forceScroll">
   <a class="olt-V2Tabs-link is-active">Link One</a>
   <a class="olt-V2Tabs-link">Link Two</a>
   <a class="olt-V2Tabs-link">Link Three</a>
   <a class="olt-V2Tabs-link">Link Four</a>
   <a class="olt-V2Tabs-link">Link Five</a>
+  <a class="olt-V2Tabs-link">Link Six</a>
+  <a class="olt-V2Tabs-link">Link Seven</a>
+  <a class="olt-V2Tabs-link">Link Eight</a>
+  <a class="olt-V2Tabs-link">Link Nine</a>
+  <a class="olt-V2Tabs-link">Link Ten</a>
+</div>
+```
+
+To add a gradient to show that there are more elements available, use `has-gradient-left` and `has-gradient-right` state class name. The gradient overlay on either side is used to indicate that more content is available outside of the visible area. note: you need a relatively positions container around the navigation for this.
+
+```newnavigationgradient.html
+<div style="position: relative">
+  <div class="olt-V2Tabs">
+    <a class="olt-V2Tabs-link is-active">Link One</a>
+    <a class="olt-V2Tabs-link">Link Two</a>
+    <a class="olt-V2Tabs-link">Link Three</a>
+    <a class="olt-V2Tabs-link">Link Four</a>
+    <a class="olt-V2Tabs-link">Link Five</a>
+  </div>
 </div>
 ```
 

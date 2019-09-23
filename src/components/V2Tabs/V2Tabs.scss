@@ -12,7 +12,8 @@
   $tab-margin-y: 4px;
   $tab-bar-padding: 0;
   $tab-bar-height: $tab-height + $tab-bar-padding*2 + $tab-margin-y;
-  $tab-bar-gradient-width: 50px;
+  $tab-bar-gradient-width: 30px;
+  $self: &;
 
   display: flex;
   margin: 0;
@@ -21,6 +22,7 @@
   justify-content: center;
   padding: $tab-bar-padding;
   height: $tab-bar-height;
+  white-space: nowrap;
 
   &:before {
     display: flex;
@@ -48,6 +50,7 @@
     align-items: center;
     justify-content: center;
     transition: all ease 0.2s;
+    white-space: nowrap;
 
     &:focus {
       outline: none;
@@ -106,9 +109,15 @@
     }
   }
 
+  &--forceScroll {
+    @extend #{$self} !optional;
+
+    justify-content: flex-start;
+    overflow: scroll;
+  }
+
   @media (max-width: map-get($olt-v2-breakpoints, sm)) {
     justify-content: flex-start;
     overflow: scroll;
-    white-space: nowrap;
   }
 }
