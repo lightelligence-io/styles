@@ -76,12 +76,11 @@
     &:before {
       @include icon-font-olt;
 
-      @include .Icon-feedback-info-circle:before;
+      @extend .Icon-feedback-info-circle:before;
 
       position: absolute;
-      left: -1px;
-      top: -5px;
-      font-size: 18px;
+      left: 0;
+      font-size: 16px;
     }
   }
 
@@ -89,7 +88,7 @@
     position: absolute;
     font-size: 12px;
     right: 16px;
-    top: 11px;
+    top: 14px;
     display: block;
   }
 
