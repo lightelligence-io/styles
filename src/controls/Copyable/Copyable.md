@@ -12,10 +12,3 @@ category: Controls
   I can easily copy this to the clipboard
 </div>
 ```
-
-```clipboardproximity.html
-<div class="olt-Copyable">
-  <span style="padding: 4px">I can easily copy this to the clipboard<span>
-</div>
-<p> test </p>
-```

@@ -12,22 +12,6 @@
     }
   }
 
-  // &:hover {
-  //   &>* {
-  //     &:hover {
-  //       #{$self} {
-  //         border: 1px solid green;
-  //         background: rgb(227, 228, 229);
-  //       }
-  //     }
-  //     border: 1px solid pink;
-  //     background: rgb(227, 228, 229);
-  //   }
-  //   &:after {
-  //     color: var-get('primary');
-  //   }
-  // }
-
   &:after {
     @include icon-font-material;
 
@@ -36,37 +20,4 @@
     content: 'filter_none';
     color: var-get('gray500');
   }
-
-  // &:before {
-  //   // padding: 15px;
-  //   top: -15px;
-  //   bottom: -30px;
-  //   left: -15px;
-  //   right: 15px;
-  //   position: absolute;
-  //   background: red;
-  //   z-index: 0;
-  //   // pointer-events: none;
-  //   content: '';
-
-  // &:hover {
-  //   pointer-events: none;
-  //   border: 1px solid blue;
-
-  //   &>* {
-  //     border: 1px solid pink;
-  //   }
-  //   &>#{$self}>* {
-  //     border: 1px solid green;
-  //     // background: rgb(227, 228, 229);
-  //   }
-  // }
-  // }
-
-  // &--proximity {
-  //   @extend #{$self} !optional;
-  //   &>* {
-  //     background: rgb(227, 228, 229);
-  //   }
-  // }
 }
