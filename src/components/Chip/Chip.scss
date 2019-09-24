@@ -159,23 +159,23 @@ $chip-colors: (
     display: inline-flex;
     vertical-align: middle;
     font-size: 14px;
+    line-height: 18px;
   }
 
-  &[data-icon-left] {
+  &-icon-left {
     padding-left: 8px;
 
     &:before {
-      margin-right: 1px;
-      content: attr(data-icon-left);
+      margin-right: 2px;
     }
   }
 
-  &[data-icon-right] {
-    padding-right: 8px;
+  &-icon-right {
+    padding-right: 24px;
 
-    &:after {
-      margin-left: 1px;
-      content: attr(data-icon-right);
+    &:before {
+      position: absolute;
+      right: 8px;
     }
   }
 
@@ -201,7 +201,7 @@ $chip-colors: (
     width: 17px;
     height: 17px;
 
-    &[data-icon] {
+    &-icon {
       &:before {
         @include icon-font-olt;
 
@@ -209,7 +209,6 @@ $chip-colors: (
         vertical-align: middle;
         font-size: 11px;
         font-weight: 900;
-        content: attr(data-icon);
       }
     }
   }
