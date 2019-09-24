@@ -417,7 +417,7 @@ modifier which will make them selectable
 ### Icons
 
 Each _Chip_ can have an icon rendered on the left or on the right side by adding
-`data-icon-left` or `data-icon-right` attribute to the component's class names.
+`olt-Chip-icon-left` or `olt-Chip-icon-right` and the desired Icon class to the component's classes.
 
 ```icons.html
 <span class="olt-Chip olt-Chip-icon-left olt-Icon-action-add-default olt-Icon--small">Default</span>
@@ -469,8 +469,8 @@ _Chip_.
 </span>
 ```
 
-The _Chip_'s bubble can also be an icon by adding `data-icon` to the bubble
-element.
+The _Chip_'s bubble can also be an icon by adding `olt-Chip-bubble-icon` 
+and the desired icon class to the bubble element.
 
 ```bubble-icons.html
 <span class="olt-Chip olt-Chip--withBubble">

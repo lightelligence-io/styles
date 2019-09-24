@@ -76,7 +76,8 @@
     &:before {
       @include icon-font-olt;
 
-      content: 'info_outline';
+      @include .Icon-feedback-info-circle:before;
+
       position: absolute;
       left: -1px;
       top: -5px;
