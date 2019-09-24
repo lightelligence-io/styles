@@ -5,7 +5,7 @@ category: Controls
 
 ## Description
 
-*Copyable* is occupies `olt-Copyable*` class names and adds a copy-to-clipboard icon to any element
+*Copyable* occupies `olt-Copyable*` class names and adds a copy-to-clipboard icon to any element
 
 ```clipboard.html
 <div class="olt-Copyable">
