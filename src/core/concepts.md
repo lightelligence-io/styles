@@ -68,14 +68,14 @@ We support a set of *Contextual Colors*
 
 | Color                                                                            | Name            | Utility Class          |
 |:--------------------------------------------------------------------------------:|:----------------|:-----------------------|
-| <button data-icon="" class="olt-Button olt-Button--primary"></button>            | Primary         | `olt-u-colorPrimary`   |
-| <button data-icon="" class="olt-Button olt-Button--secondary"></button>          | Secondary       | `olt-u-colorSecondary` |
-| <button data-icon="" class="olt-Button olt-Button--info"></button>               | Info            | `olt-u-colorInfo`      |
-| <button data-icon="" class="olt-Button olt-Button--warning"></button>            | Warning         | `olt-u-colorWarning`   | 
-| <button data-icon="" class="olt-Button olt-Button--error"></button>              | Error           | `olt-u-colorError`     | 
-| <button data-icon="" class="olt-Button olt-Button--success"></button>            | Success         | `olt-u-colorSuccess`   | 
-| <button data-icon="" class="olt-Button olt-Button--light olt-u-border"></button> | Light ( White ) | `olt-u-colorLight`     | 
-| <button data-icon="" class="olt-Button olt-Button--dark"></button>               | Dark            | `olt-u-colorDark`      | 
+| <button class="olt-Button olt-Button--icon olt-Button--primary"></button>            | Primary         | `olt-u-colorPrimary`   |
+| <button class="olt-Button olt-Button--icon olt-Button--secondary"></button>          | Secondary       | `olt-u-colorSecondary` |
+| <button class="olt-Button olt-Button--icon olt-Button--info"></button>               | Info            | `olt-u-colorInfo`      |
+| <button class="olt-Button olt-Button--icon olt-Button--warning"></button>            | Warning         | `olt-u-colorWarning`   | 
+| <button class="olt-Button olt-Button--icon olt-Button--error"></button>              | Error           | `olt-u-colorError`     | 
+| <button class="olt-Button olt-Button--icon olt-Button--success"></button>            | Success         | `olt-u-colorSuccess`   | 
+| <button class="olt-Button olt-Button--icon olt-Button--light olt-u-border"></button> | Light ( White ) | `olt-u-colorLight`     | 
+| <button class="olt-Button olt-Button--icon olt-Button--dark"></button>               | Dark            | `olt-u-colorDark`      | 
 
 ## Customization
 

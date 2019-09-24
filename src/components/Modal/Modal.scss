@@ -130,7 +130,7 @@
   &-close {
     @extend .Button;
 
-    @extend .Button[data-icon];
+    @extend .Button--icon;
 
     &:before {
       content: 'close';

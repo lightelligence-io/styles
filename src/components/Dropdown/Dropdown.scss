@@ -54,7 +54,8 @@
     &:after {
       @extend .Icon:before;
 
-      content: 'chevron_right';
+      @extend .Icon-arrows-chevron-right.Icon--small:before;
+
       display: inline-block;
       vertical-align: middle;
       transition: transform $dropdown-transition-duration $dropdown-transition-timing-function;
