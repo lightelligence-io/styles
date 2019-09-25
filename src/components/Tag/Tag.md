@@ -45,33 +45,33 @@ The *Tag* cen be rendered as a *Outline* style.
 
 ### Tags with icons
 
-Additional icon can be added to the tag by adding `data-icon` attribute on
+Additional icon can be added to the tag by adding a `olt-Tag-icon` class to
 the tag element or nesting an [Icon](/#icon) component inside.
 
 ```icons.html
-<span class="olt-Tag" data-icon="settings">Tag</span>
+<span class="olt-Tag olt-Tag-icon olt-Icon-action-settings">Tag</span>
 <span class="olt-Tag">
-  <i class="olt-Tag-icon olt-Icon" data-icon="ac_unit"></i> Tag
+  <i class="olt-Tag-icon olt-Icon olt-Icon-data-temperature"></i> Tag
 </span>
 <br /><br />
-<span class="olt-Tag olt-Tag--primary" data-icon="settings">Primary</span>
-<span class="olt-Tag olt-Tag--secondary" data-icon="settings">Secondary</span>
-<span class="olt-Tag olt-Tag--info" data-icon="settings">Info</span>
-<span class="olt-Tag olt-Tag--error" data-icon="settings">Error</span>
-<span class="olt-Tag olt-Tag--success" data-icon="settings">Success</span>
-<span class="olt-Tag olt-Tag--dark" data-icon="settings">Dark</span>
-<span class="olt-Tag olt-Tag--white" data-icon="settings">White</span>
+<span class="olt-Tag olt-Tag--primary olt-Tag-icon olt-Icon-action-settings">Primary</span>
+<span class="olt-Tag olt-Tag--secondary olt-Tag-icon olt-Icon-action-settings">Secondary</span>
+<span class="olt-Tag olt-Tag--info olt-Tag-icon olt-Icon-action-settings">Info</span>
+<span class="olt-Tag olt-Tag--error olt-Tag-icon olt-Icon-action-settings">Error</span>
+<span class="olt-Tag olt-Tag--success olt-Tag-icon olt-Icon-action-settings">Success</span>
+<span class="olt-Tag olt-Tag--dark olt-Tag-icon olt-Icon-action-settings">Dark</span>
+<span class="olt-Tag olt-Tag--white olt-Tag-icon olt-Icon-action-settings">White</span>
 ```
 
 ### Tags with close icon
 
-There is a special `data-close` attribute, which simply adds a close icon
+There is a special `olt-Tag-close` class, which simply adds a close icon
 to the tag, but instead of adding it to the left side of the tag it will be
 added to the right.
 
 ```close-icons.html
-<span class="olt-Tag" data-close>Tag</span>
-<span class="olt-Tag" data-icon="close">Tag</span>
+<span class="olt-Tag olt-Tag-close" data-close>Tag</span>
+<span class="olt-Tag olt-Tag-icon olt-Icon-navigation-close olt-Icon--small">Tag</span>
 ```
 
 ### Selectable Tags
@@ -82,11 +82,11 @@ used safely with `<button>` elements, as well as `<a>` tags. They can also be
 combined with `--outline` modifier
 
 ```selectable.html
-<button class="olt-Tag" data-icon="grade">Tag</button>
+<button class="olt-Tag olt-Tag-icon olt-Icon-action-favorite-filled">Tag</button>
 <a class="olt-Tag" href="#">Tag</a>
-<span class="olt-Tag olt-Tag--selectable">Tag <i class="olt-Tag-icon olt-Icon" data-icon="close"></i></span>
-<span class="olt-Tag olt-Tag--selectable olt-Tag--primary">Tag <i class="olt-Tag-icon olt-Icon" data-icon="close"></i></span>
-<span class="olt-Tag olt-Tag--selectable olt-Tag--secondary">Tag <i class="olt-Tag-icon olt-Icon" data-icon="close"></i></span>
+<span class="olt-Tag olt-Tag--selectable">Tag <i class="olt-Tag-icon olt-Icon olt-Icon-navigation-close olt-Icon--small"></i></span>
+<span class="olt-Tag olt-Tag--selectable olt-Tag--primary">Tag <i class="olt-Tag-icon olt-Icon olt-Icon-navigation-close olt-Icon--small"></i></span>
+<span class="olt-Tag olt-Tag--selectable olt-Tag--secondary">Tag <i class="olt-Tag-icon olt-Icon olt-Icon-navigation-close olt-Icon--small"></i></span>
 <br /><br />
 <span class="olt-Tag olt-Tag--selectable olt-Tag--primary">Primary</span>
 <span class="olt-Tag olt-Tag--selectable olt-Tag--secondary">Secondary</span>
