@@ -6,6 +6,9 @@ const { decamelize, pascalize } = require('humps');
 
 const mode = process.env.NODE_ENV || 'development';
 const context = path.resolve(__dirname, 'src');
+const PACKAGE = require('./package.json');
+const banner = PACKAGE.version
+console.log(PACKAGE.version);
 
 module.exports = {
   mode,
@@ -17,6 +20,9 @@ module.exports = {
     filename: 'main.js',
   },
   module: {
+    plugins: [
+      new webpack.BannerPlugin(banner)
+    ],    
     rules: [
       {
         test: /\.scss$/,

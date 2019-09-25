@@ -16,3 +16,7 @@ window.addEventListener('load', () => {
     });
   });
 });
+
+var sidebarHeader = document.querySelector('.theme-sidebar-header');
+console.log(sidebarHeader)
+sidebarHeader.setAttribute('data-after', 'anything');

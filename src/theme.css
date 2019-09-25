@@ -29,6 +29,13 @@
   font-family: 'PT Sans', serif;
   font-weight: 600;
   font-size: 16px;
+
+}
+.theme-sidebar-header:after {
+  content:attr(data-after);
+  color: black;
+  font-weight: 400;
+  font-size: 12px;
 }
 
 .theme-sidebar-search {
