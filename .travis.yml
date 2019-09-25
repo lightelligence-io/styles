@@ -13,6 +13,11 @@ before_deploy:
   - source ./scripts/tag-commit.sh
 
 deploy:
+  - provider: script
+    script: bash scripts/test.sh
+    on:
+      branch: master|alpha
+
   - provider: releases
     api_key: $GITHUB_ACCESS_TOKEN
     tag_name: $TRAVIS_TAG
