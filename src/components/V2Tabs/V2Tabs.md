@@ -20,10 +20,6 @@ The active tab is decorated via `is-active` state class name.
   <a class="olt-V2Tabs-link">Link Three</a>
   <a class="olt-V2Tabs-link">Link Four</a>
   <a class="olt-V2Tabs-link">Link Five</a>
-  <a class="olt-V2Tabs-link">Link Five</a>
-  <a class="olt-V2Tabs-link">Link Five</a>
-  <a class="olt-V2Tabs-link">Link Five</a>
-  <a class="olt-V2Tabs-link">Link Five</a>
 </div>
 ```
 
@@ -65,17 +61,8 @@ if (overflows) tabs.classList.add("has-gradient-right");
 
 tabs.addEventListener('scroll', () => {
   var hasScrolledLeft = tabs.scrollLeft > 0;
-  if (hasScrolledLeft) {
-    tabs.classList.add("has-gradient-left");
-  } else {
-    tabs.classList.remove("has-gradient-left");
-  }
-
-  var canScrollRight = tabs.scrollWidth-tabs.scrollLeft-tabs.clientWidth > 0;        
-  if (canScrollRight) {
-    tabs.classList.add("has-gradient-right");
-  } else {
-    tabs.classList.remove("has-gradient-right");
-  }
+  tabs.classList.toggle("has-gradient-left", hasScrolledLeft);
+  var canScrollRight = tabs.scrollWidth-tabs.scrollLeft-tabs.clientWidth > 0; 
+  tabs.classList.toggle("has-gradient-right", canScrollRight);
 });
 ```
