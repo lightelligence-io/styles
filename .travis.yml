@@ -11,7 +11,7 @@ script:
 
 before_deploy:
   - source ./scripts/tag-commit.sh
-  - source ./scripts/pages-for-tag.sh
+  - source ./scripts/pages-for-alpha-branch.sh
 
 deploy:
   - provider: releases
