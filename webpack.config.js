@@ -16,7 +16,7 @@ module.exports = {
     publicPath: '/',
     filename: 'main.js',
   },
-  module: {   
+  module: {
     rules: [
       {
         test: /\.scss$/,
