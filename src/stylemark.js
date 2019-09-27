@@ -18,5 +18,8 @@ window.addEventListener('load', () => {
 });
 
 var sidebarHeader = document.querySelector('.theme-sidebar-header');
-console.log(sidebarHeader)
-sidebarHeader.setAttribute('data-after', 'anything');
+fetch('version.txt')
+  .then((response) =>
+    response.status === 200 ? response.text() : 'unknown version',
+  )
+  .then((text) => sidebarHeader.setAttribute('data-after', text));
