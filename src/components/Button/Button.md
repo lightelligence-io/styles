@@ -44,14 +44,14 @@ into a border, instead of a background.
 
 ## Icon
 
-Make use of `data-icon` attribute in order to apply an icon to a button. Please 
+Make use of the `olt-Button--icon` class in order to apply an icon to a button. Please 
 note that this doesn't work with inputs of button type.
 
 ```icon.html
-<a data-icon="close" class="olt-Button"></a>
-<a data-icon="close" class="olt-Button olt-Button--outline"></a>
-<button data-icon="close" class="olt-Button olt-Button--primary"></button>
-<button data-icon="close" class="olt-Button olt-Button--primary olt-Button--outline"></button>
+<a class="olt-Button olt-Button--icon olt-Icon-navigation-close olt-Icon--small"></a>
+<a class="olt-Button olt-Button--outline olt-Button--icon olt-Icon-navigation-close olt-Icon--small"></a>
+<button class="olt-Button olt-Button--primary olt-Button--icon olt-Icon-navigation-close olt-Icon--small"></button>
+<button class="olt-Button olt-Button--primary olt-Button--outline olt-Button--icon olt-Icon-navigation-close olt-Icon--small"></button>
 ```
 
 ## States

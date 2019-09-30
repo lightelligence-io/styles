@@ -191,7 +191,7 @@ body > div.olt-Frame .olt-u-overflowXAuto {
           <p class="olt-Paragraph olt-u-fontMono olt-u-fontSizeXxSmall">0123456789</p>
         </td>
         <td class="olt-Table-data olt-u-fontMono">
-          <i class="olt-Icon olt-u-textPrimary" data-icon="exit_to_app"></i> <span class="olt-u-fontSizeXSmall">Gateway</span>
+          <i class="olt-Icon olt-u-textPrimary olt-Icon-link-external olt-Icon--large"></i> <span class="olt-u-fontSizeXSmall">Gateway</span>
         </td>
         <td class="olt-Table-data olt-u-textPrimary olt-u-fontSizeSmall">DEV2S</td>
         <td class="olt-Table-data">

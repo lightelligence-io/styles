@@ -74,13 +74,13 @@
     padding-left: 24px;
 
     &:before {
-      @include icon-font-material();
+      @include icon-font-olt;
 
-      content: 'info_outline';
+      @extend .Icon-feedback-info-circle:before;
+
       position: absolute;
-      left: -1px;
-      top: -5px;
-      font-size: 18px;
+      left: 0;
+      font-size: 16px;
     }
   }
 
@@ -88,7 +88,7 @@
     position: absolute;
     font-size: 12px;
     right: 16px;
-    top: 11px;
+    top: 14px;
     display: block;
   }
 

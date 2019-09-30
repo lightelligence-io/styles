@@ -85,7 +85,7 @@ Input is used with a wrapped `<label>` element that contain
                 <input class="olt-V2Input" type="text" value="Lorem ipsum" />
                 <span class="olt-V2Label-text">Enter your data</span>
                 <div class="olt-V2Label-icon">
-                  <i class="olt-Icon" data-icon="edit"></i>
+                  <i class="olt-Icon olt-Icon-action-edit"></i>
                 </div>
               </label>
             </div>
@@ -168,7 +168,7 @@ Input is used with a wrapped `<label>` element that contain
                 <input class="olt-V2Input" type="text" value="Lorem ipsum" />
                 <span class="olt-V2Label-text">Enter your data</span>
                 <div class="olt-V2Label-icon">
-                  <i class="olt-Icon" data-icon="edit"></i>
+                  <i class="olt-Icon olt-Icon-action-edit"></i>
                 </div>
               </label>
             </div>
@@ -285,21 +285,21 @@ colors when the input is empty, contains a value or is disabled.
   <input class="olt-V2Input" type="text" />
   <span class="olt-V2Label-text">Enter your data</span>
   <div class="olt-V2Label-icon">
-    <i class="olt-Icon" data-icon="edit"></i>
+    <i class="olt-Icon olt-Icon-action-edit"></i>
   </div>
 </label>
 <label class="olt-V2Label">
   <input class="olt-V2Input" type="text" value="Lorem ipsum" />
   <span class="olt-V2Label-text">Enter your data</span>
   <div class="olt-V2Label-icon">
-    <i class="olt-Icon" data-icon="edit"></i>
+    <i class="olt-Icon olt-Icon-action-edit"></i>
   </div>
 </label>
 <label class="olt-V2Label">
   <input class="olt-V2Input" type="text" value="Lorem ipsum" disabled />
   <span class="olt-V2Label-text">Enter your data</span>
   <div class="olt-V2Label-icon">
-    <i class="olt-Icon" data-icon="edit"></i>
+    <i class="olt-Icon olt-Icon-action-edit"></i>
   </div>
 </label>
 ```
@@ -350,7 +350,7 @@ change. The error messsage can be displayed below the input.
   <input class="olt-V2Input" type="text" value="Lorem ipsum" />
   <span class="olt-V2Label-text">Enter your data</span>
   <div class="olt-V2Label-icon">
-    <i class="olt-Icon" data-icon="edit"></i>
+    <i class="olt-Icon olt-Icon-action-edit"></i>
   </div>
   <div class="olt-V2Label-footer">
     <span class="olt-V2Label-error">
@@ -382,7 +382,7 @@ for better user experience.
   <input class="olt-V2Input" type="text" value="Lorem ipsum" />
   <span class="olt-V2Label-text">Enter your data</span>
   <div class="olt-V2Label-icon">
-    <i class="olt-Icon" data-icon="edit"></i>
+    <i class="olt-Icon olt-Icon-action-edit"></i>
   </div>
   <div class="olt-V2Label-footer">
     <span class="olt-V2Label-hint">

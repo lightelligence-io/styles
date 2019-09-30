@@ -22,7 +22,6 @@
   border-style: solid;
   border-color: $tag-border-color;
   border-width: $tag-border-width;
-  border-radius: $tag-border-radius;
   color: $tag-color;
   text-decoration: none;
   vertical-align: middle;
@@ -67,31 +66,27 @@
     }
   }
 
-  &[data-icon],
-  &[data-close] {
+  &-icon,
+  &-close {
     vertical-align: middle;
 
     &:after,
     &:before {
+      @extend .Icon:before;
+
       display: inline-flex;
       font-size: initial;
       vertical-align: text-top;
     }
+  }
 
-    &[data-icon] {
-      &:before {
-        @extend .Icon:before;
+  &-close {
+    &:after {
+      @extend .Icon:before;
 
-        content: attr(data-icon);
-      }
-    }
+      @extend .Icon-navigation-close.Icon--small:before;
 
-    &[data-close] {
-      &:after {
-        @extend .Icon:before;
-
-        content: 'close';
-      }
+      margin-left: 2px;
     }
   }
 
@@ -102,6 +97,7 @@
     &:before {
       font-size: initial;
       vertical-align: text-top;
+      margin-right: 2px;
     }
   }
 }

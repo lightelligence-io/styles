@@ -37,7 +37,7 @@ body > div.olt-Frame { min-height: 400px; }
     <ul class="olt-Navbar-menu olt-Menu">
       <li class="olt-Dropdown">
         <button class="olt-Dropdown-label" data-toggle="dropdown" tabindex="1" >
-          <i class="olt-Icon olt-u-displayNone olt-u-xl-displayInline" data-icon="person"></i>
+          <i class="olt-Icon olt-u-displayNone olt-u-xl-displayInline olt-Icon-user-default"></i>
           <span class="olt-u-xl-displayNone">Account</span>
           <span tabindex="-1"></span>
         </button>
