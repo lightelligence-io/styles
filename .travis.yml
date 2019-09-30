@@ -51,6 +51,7 @@ deploy:
     email: 'support@lightelligence.io'
     api_key: $NPM_TOKEN_PUBLISH
     skip_cleanup: true
+    tag: alpha
     on:
       branch: alpha
       repo: lightelligence-io/styles
