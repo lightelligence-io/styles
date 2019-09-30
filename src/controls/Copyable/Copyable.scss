@@ -1,0 +1,30 @@
+.Copyable {
+  $self: &;
+
+  display: inline-flex;
+  flex-direction: row;
+  appearance: none;
+  border: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background: rgb(227, 228, 229);
+    outline: none;
+
+    &:after {
+      color: var-get('primary');
+    }
+  }
+
+  &:after {
+    @include icon-font-material;
+
+    padding-left: 8px;
+    align-self: center;
+    content: 'filter_none';
+    color: var-get('gray500');
+  }
+}
