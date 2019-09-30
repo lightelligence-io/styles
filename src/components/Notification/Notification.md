@@ -5,8 +5,8 @@ category: Component
 
 ## Description
 
-The *Notification* is used to show a message on the bottom of the screen. 
-It occupies the `olt-NotificationContainer` and `olt-Notification*` class names, with `olt-NotificationContainer` being the conatiner element holding the stack of notifications. 
+The *Notification* is used to show a message on the bottom of the screen.
+It occupies the `olt-NotificationContainer` and `olt-Notification*` class names, with `olt-NotificationContainer` being the conatiner element holding the stack of notifications.
 
 On larger screens notifications are placed on the bottom right, on small devices only the header is displayed bottom-centered with full width. Notifications can stack up if they are not closed manually within a very short time. A notification that is not closed manually fades out automatically after a short time.
 
@@ -25,7 +25,7 @@ On larger screens notifications are placed on the bottom right, on small devices
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon" data-icon="close"></i>
+            <i class="olt-Icon olt-Icon-navigation-close"></i>
         </button>
     </div>
     <div class="olt-Notification olt-Notification--success">
@@ -36,7 +36,7 @@ On larger screens notifications are placed on the bottom right, on small devices
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon" data-icon="close"></i>
+            <i class="olt-Icon olt-Icon-navigation-close"></i>
         </button>
     </div>
 </div>
@@ -61,7 +61,7 @@ Respectively, we support the following modifiers :
 These different types will look as follows:
 
 ```types.html
-<!-- style="..." has only been added to make this example work in iframe. 
+<!-- style="..." has only been added to make this example work in iframe.
 DON'T USE IN PRODUCTION!! -->
 <div class="olt-NotificationContainer" style="position: relative; margin: 10px;">
     <div class="olt-Notification olt-Notification--info is-open">
@@ -72,7 +72,7 @@ DON'T USE IN PRODUCTION!! -->
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon" data-icon="close"></i>
+            <i class="olt-Icon olt-Icon-navigation-close"></i>
         </button>
     </div>
     <div class="olt-Notification olt-Notification--success is-open">
@@ -83,7 +83,7 @@ DON'T USE IN PRODUCTION!! -->
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon" data-icon="close"></i>
+            <i class="olt-Icon olt-Icon-navigation-close"></i>
         </button>
     </div>
     <div class="olt-Notification olt-Notification--warning is-open">
@@ -94,7 +94,7 @@ DON'T USE IN PRODUCTION!! -->
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon" data-icon="close"></i>
+            <i class="olt-Icon olt-Icon-navigation-close"></i>
         </button>
     </div>
     <div class="olt-Notification olt-Notification--error is-open">
@@ -105,7 +105,7 @@ DON'T USE IN PRODUCTION!! -->
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon" data-icon="close"></i>
+            <i class="olt-Icon olt-Icon-navigation-close"></i>
         </button>
     </div>
 </div>
@@ -121,7 +121,7 @@ DON'T USE IN PRODUCTION!! -->
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon" data-icon="close"></i>
+            <i class="olt-Icon olt-Icon-navigation-close"></i>
         </button>
     </div>
     <div class="olt-Notification olt-Notification--error">
@@ -132,7 +132,7 @@ DON'T USE IN PRODUCTION!! -->
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon" data-icon="close"></i>
+            <i class="olt-Icon olt-Icon-navigation-close"></i>
         </button>
     </div>
 </div>
@@ -141,7 +141,7 @@ DON'T USE IN PRODUCTION!! -->
 
 ## States
 
-A *Notification* is hidden by default. It can be rendered by adding `is-open` 
+A *Notification* is hidden by default. It can be rendered by adding `is-open`
 state class at the main element. It will then animate into the bottom of the
 page.
 

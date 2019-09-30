@@ -32,9 +32,10 @@ $notification-spacing-y: 8px;
   $notification-content-padding-y: var-get('spacing3');
   $notification-background: var-get('colorLight');
   $notification-header-height: 20px;
-  $notification-close-size: $notification-header-height;
+  $notification-close-size: 16px;
+  $notification-close-margin: 3px;
   $notification-close-color: #666;
-  $notification-dialog-width: calc(#{$notification-width} - #{$notification-close-size});
+  $notification-dialog-width: calc(#{$notification-width} - #{$notification-close-size} - #{$notification-close-margin});
   $notification-transition-duration: 0.2s;
   $notification-header-padding: 16px;
   $notification-icon-size: 24px;
@@ -86,9 +87,8 @@ $notification-spacing-y: 8px;
     letter-spacing: 0.6px;
 
     &:before {
-      @include icon-font-material;
+      @extend .Icon:before;
 
-      content: '';
       align-items: flex-start;
       font-size: $notification-icon-size;
       vertical-align: middle;
@@ -105,7 +105,6 @@ $notification-spacing-y: 8px;
     font-weight: normal;
     letter-spacing: 0;
     line-height: 18px;
-    padding-top: 2px;
   }
 
   &-close {
@@ -115,7 +114,8 @@ $notification-spacing-y: 8px;
     width: $notification-close-size;
     border: none;
     margin: 0;
-    margin-top: -2px;
+    margin-top: -1px;
+    margin-left: $notification-close-margin;
     padding: 0;
     font-size: $notification-icon-size*2/3; // icons are set to 150% font size
 
@@ -126,25 +126,29 @@ $notification-spacing-y: 8px;
 
   &--error &-header:before,
   &--error &-header {
-    content: 'error';
+    @extend .Icon-feedback-warning-critical-circle.Icon--large;
+
     color: var-get('colorError');
   }
 
   &--info &-header:before,
   &--info &-header {
-    content: 'info';
+    @extend .Icon-feedback-info-circle.Icon--large;
+
     color: var-get('colorInfo');
   }
 
   &--warning &-header:before,
   &--warning &-header {
-    content: 'error';
+    @extend .Icon-feedback-warning-medium-circle.Icon--large;
+
     color: var-get('colorWarning');
   }
 
   &--success &-header:before,
   &--success &-header {
-    content: 'check_circle';
+    @extend .Icon-feedback-check-circle.Icon--large;
+
     color: var-get('colorSuccess');
   }
 
