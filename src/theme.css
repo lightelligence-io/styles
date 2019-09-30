@@ -26,7 +26,7 @@
 
 .theme-sidebar-header {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 .theme-sidebar-header-title {
@@ -35,6 +35,7 @@
   font-weight: 600;
   font-size: 16px;
   white-space: nowrap;
+  line-height: 1.8;
 }
 
 .theme-sidebar-header-title:after {
