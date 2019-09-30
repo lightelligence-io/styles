@@ -63,5 +63,4 @@ deploy:
     target_branch: gh-pages
     on:
       branch: alpha
-      condition: '$TRAVIS_COMMIT_MESSAGE =~ ^release*'
 
