@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
   });
 });
 
-var sidebarHeader = document.querySelector('.theme-sidebar-header');
+var sidebarHeader = document.querySelector('.theme-sidebar-header-title');
 fetch('version.txt')
   .then((response) =>
     response.status === 200 ? response.text() : 'unknown version',

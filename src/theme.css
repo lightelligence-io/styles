@@ -24,18 +24,26 @@
   border-radius: 100%;
 }
 
+.theme-sidebar-header {
+  display: flex;
+  align-items: flex-end;
+}
+
 .theme-sidebar-header-title {
   color: black;
   font-family: 'PT Sans', serif;
   font-weight: 600;
   font-size: 16px;
-
+  white-space: nowrap;
 }
-.theme-sidebar-header:after {
-  content:attr(data-after);
+
+.theme-sidebar-header-title:after {
+  display: block;
+  content: attr(data-after);
   color: black;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 10px;
+  line-height: 1;
 }
 
 .theme-sidebar-search {
