@@ -15,12 +15,14 @@
     outline: none;
 
     &:after {
-      color: var-get('primary');
+      color: var-get('colorPrimary');
     }
   }
 
   &:after {
-    @include icon-font-material;
+    @extend .Icon:before;
+
+    @extend .Icon-action-duplicate.Icon--large:before;
 
     padding-left: 8px;
     align-self: center;
