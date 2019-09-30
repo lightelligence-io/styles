@@ -89,10 +89,6 @@
 
   &--icon {
     @extend .Icon;
-
-    &:before {
-      font-size: 150%;
-    }
   }
 
   &--icon,

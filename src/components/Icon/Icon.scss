@@ -1,5 +1,4 @@
 .Icon {
-  $icon-font-size: 150%;
   $icon-sizes: (
     small: 6pt,
     medium: 8pt,
@@ -13,7 +12,6 @@
     @include icon-font-olt;
 
     content: '';
-    font-size: $icon-font-size;
   }
 
   @include contextual-colors(('color'));
