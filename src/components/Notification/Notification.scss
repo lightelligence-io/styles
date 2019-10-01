@@ -90,7 +90,6 @@ $notification-spacing-y: 8px;
       @extend .Icon:before;
 
       align-items: flex-start;
-      font-size: $notification-icon-size;
       vertical-align: middle;
       padding-right: $notification-header-padding;
     }
@@ -114,41 +113,59 @@ $notification-spacing-y: 8px;
     width: $notification-close-size;
     border: none;
     margin: 0;
-    margin-top: -1px;
     margin-left: $notification-close-margin;
     padding: 0;
-    font-size: $notification-icon-size*2/3; // icons are set to 150% font size
 
     &:focus {
       outline: none;
     }
   }
 
-  &--error &-header:before,
-  &--error &-header {
+  &--error &-header:before {
     @extend .Icon-feedback-warning-critical-circle.Icon--large;
 
+    @extend .Icon--large;
+
+    @extend .Icon--error;
+  }
+
+  &--error &-header {
     color: var-get('colorError');
   }
 
-  &--info &-header:before,
-  &--info &-header {
+  &--info &-header:before {
     @extend .Icon-feedback-info-circle.Icon--large;
 
+    @extend .Icon--large;
+
+    @extend .Icon--info;
+  }
+
+  &--info &-header {
     color: var-get('colorInfo');
   }
 
-  &--warning &-header:before,
-  &--warning &-header {
+  &--warning &-header:before {
     @extend .Icon-feedback-warning-medium-circle.Icon--large;
 
+    @extend .Icon--large;
+
+    @extend .Icon--warning;
+  }
+
+  &--warning &-header {
     color: var-get('colorWarning');
   }
 
-  &--success &-header:before,
-  &--success &-header {
+  &--success &-header:before {
     @extend .Icon-feedback-check-circle.Icon--large;
 
+    @extend .Icon--large;
+
+    @extend .Icon--success;
+  }
+
+  &--success &-header {
     color: var-get('colorSuccess');
   }
 

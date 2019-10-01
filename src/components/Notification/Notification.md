@@ -25,7 +25,7 @@ On larger screens notifications are placed on the bottom right, on small devices
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon olt-Icon-navigation-close"></i>
+            <i class="olt-Icon olt-Icon--medium olt-Icon-navigation-close"></i>
         </button>
     </div>
     <div class="olt-Notification olt-Notification--success">
@@ -36,7 +36,7 @@ On larger screens notifications are placed on the bottom right, on small devices
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon olt-Icon-navigation-close"></i>
+            <i class="olt-Icon olt-Icon--medium olt-Icon-navigation-close"></i>
         </button>
     </div>
 </div>
@@ -72,7 +72,7 @@ DON'T USE IN PRODUCTION!! -->
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon olt-Icon-navigation-close"></i>
+            <i class="olt-Icon olt-Icon--medium olt-Icon-navigation-close"></i>
         </button>
     </div>
     <div class="olt-Notification olt-Notification--success is-open">
@@ -83,7 +83,7 @@ DON'T USE IN PRODUCTION!! -->
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon olt-Icon-navigation-close"></i>
+            <i class="olt-Icon olt-Icon--medium olt-Icon-navigation-close"></i>
         </button>
     </div>
     <div class="olt-Notification olt-Notification--warning is-open">
@@ -94,7 +94,7 @@ DON'T USE IN PRODUCTION!! -->
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon olt-Icon-navigation-close"></i>
+            <i class="olt-Icon olt-Icon--medium olt-Icon-navigation-close"></i>
         </button>
     </div>
     <div class="olt-Notification olt-Notification--error is-open">
@@ -105,7 +105,7 @@ DON'T USE IN PRODUCTION!! -->
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon olt-Icon-navigation-close"></i>
+            <i class="olt-Icon olt-Icon--medium olt-Icon-navigation-close"></i>
         </button>
     </div>
 </div>
@@ -121,7 +121,7 @@ DON'T USE IN PRODUCTION!! -->
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon olt-Icon-navigation-close"></i>
+            <i class="olt-Icon olt-Icon--medium olt-Icon-navigation-close"></i>
         </button>
     </div>
     <div class="olt-Notification olt-Notification--error">
@@ -132,7 +132,7 @@ DON'T USE IN PRODUCTION!! -->
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon olt-Icon-navigation-close"></i>
+            <i class="olt-Icon olt-Icon--medium olt-Icon-navigation-close"></i>
         </button>
     </div>
 </div>
