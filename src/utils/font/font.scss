@@ -1,3 +1,92 @@
+
+.u {
+  &-H500 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32px;
+    font-family: PTSans-Bold;
+
+    @media (max-width: map-get($olt-v2-breakpoints, lg)) {
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    @media (max-width: map-get($olt-v2-breakpoints, sm)) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &-H400 {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 24px;
+    font-family: PTSans-Bold;
+
+    @media (max-width: map-get($olt-v2-breakpoints, sm)) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+
+  &-H300 {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 18px;
+    font-family: PTSans-Bold;
+  }
+
+  &-H200 {
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 20px;
+    font-family: PTSans-Bold;
+  }
+
+  &-H100 {
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 20px;
+    font-family: PTSans-Bold;
+    text-transform: uppercase;
+  }
+
+  &-content {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: PTSans;
+  }
+
+  &-description {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    font-family: PTSans;
+  }
+
+  &-support {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    font-family: PTSans;
+  }
+
+  &-code {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    font-family: 'Courier New', Courier, monospace;
+
+    @media (max-width: map-get($olt-v2-breakpoints, sm)) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
+
+// deprecated ... to remove!!
+
 @each $breakpoint in map-keys(screen-get()) {
   $infix: screen-infix($breakpoint);
 
