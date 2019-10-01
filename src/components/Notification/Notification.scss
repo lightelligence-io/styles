@@ -34,7 +34,7 @@ $notification-spacing-y: 8px;
   $notification-header-height: 20px;
   $notification-close-size: 16px;
   $notification-close-margin: 3px;
-  $notification-close-color: #666;
+  $notification-close-color: var-get('gray400');
   $notification-dialog-width: calc(#{$notification-width} - #{$notification-close-size} - #{$notification-close-margin});
   $notification-transition-duration: 0.2s;
   $notification-header-padding: 16px;
