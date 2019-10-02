@@ -24,9 +24,10 @@
       }
 
       &:after {
-        @include icon-font-olt;
+        @extend .Icon:before;
 
-        content: 'check';
+        @extend .Icon-feedback-check-default.Icon--large:before;
+
         position: absolute;
         top: 1.5px;
         left: 1.5px;
@@ -38,7 +39,7 @@
 
     &:checked + #{$self}--indeterminate#{$self}-label:after,
     &:indeterminate + #{$self}-label:after {
-      content: 'remove';
+      @extend .Icon-feedback-check-default.Icon--large:before;
     }
 
     &:disabled + #{$self}-label {
