@@ -1,0 +1,123 @@
+.V2Tabs {
+  $tab-height: 36px;
+  $tab-border-radius: 4px;
+  $tab-active-bg-color: #0d122c;
+  $tab-active-text-color: var-get('colorLight');
+  $tab-inactive-bg-color: var-get('colorLight');
+  $tab-inactive-text-color: #0d122c;
+  $tab-hover-bg-color: rgb(233, 236, 239);
+  $tab-hover-text-color: #0d122c;
+  $tab-padding: 8px 16px 10px 16px;
+  $tab-margin-x: 4px;
+  $tab-margin-y: 4px;
+  $tab-bar-padding: 0;
+  $tab-bar-height: $tab-height + $tab-bar-padding*2 + $tab-margin-y;
+  $tab-bar-gradient-width: 30px;
+  $self: &;
+
+  display: flex;
+  margin: 0;
+  border: 0;
+  align-items: center;
+  justify-content: center;
+  padding: $tab-bar-padding;
+  height: $tab-bar-height;
+  white-space: nowrap;
+
+  &:before {
+    display: flex;
+    align-items: flex-start;
+    overflow-x: scroll;
+  }
+
+  &-link {
+    height: $tab-height;
+    width: auto;
+    border: 0;
+    background: $tab-inactive-bg-color;
+    border-radius: $tab-border-radius;
+    color: $tab-inactive-text-color;
+    appearance: none;
+    display: block;
+    cursor: pointer;
+    line-height: $olt-tabs-line-height;
+    text-decoration: none;
+    padding: $tab-padding;
+    margin-right: $tab-margin-x;
+    margin-left: $tab-margin-x;
+    margin-top: $tab-margin-y;
+    margin-bottom: $tab-margin-y;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.2s;
+    white-space: nowrap;
+
+    &:focus {
+      outline: none;
+      background: $tab-hover-bg-color;
+      color: $tab-hover-text-color;
+    }
+
+    &:hover {
+      outline: none;
+      background: $tab-hover-bg-color;
+      color: $tab-hover-text-color;
+    }
+
+    &:visited {
+      color: inherit;
+    }
+
+    &.is-active {
+      color: var-get('colorLight');
+      background: $tab-active-bg-color;
+      color: $tab-active-text-color;
+    }
+  }
+
+  &.has-gradient-right {
+    &:after {
+      position: absolute;
+      right: 0;
+      height: $tab-height;
+      width: $tab-bar-gradient-width;
+      content: "";
+      background:
+        linear-gradient(
+          to left,
+          rgb(255, 255, 255) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      pointer-events: none;
+    }
+  }
+
+  &.has-gradient-left {
+    &:before {
+      position: absolute;
+      left: 0;
+      height: $tab-height;
+      width: $tab-bar-gradient-width;
+      content: "";
+      background:
+        linear-gradient(
+          to right,
+          rgb(255, 255, 255) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      pointer-events: none;
+    }
+  }
+
+  &--forceScroll {
+    @extend #{$self} !optional;
+
+    justify-content: flex-start;
+    overflow: scroll;
+  }
+
+  @media (max-width: map-get($olt-v2-breakpoints, sm)) {
+    justify-content: flex-start;
+    overflow: scroll;
+  }
+}
