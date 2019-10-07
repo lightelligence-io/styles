@@ -17,7 +17,7 @@ if [[ $TRAVIS_BRANCH == alpha ]]; then
   echo 'done.'
 fi
 
-# checkout current gh-poages branch and add new files
+# checkout current gh-poages branch and add new docs
 echo 'creating gh-pages folder ...'
 mkdir gh-pages
 echo 'checking out gh-pages branch ...'
