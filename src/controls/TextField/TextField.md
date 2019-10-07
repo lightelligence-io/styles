@@ -121,14 +121,14 @@ text field.
 
 ### With icon
 
-You can adding an icon to the text field, which will be rendered on the right
+You can add an icon to the text field, which will be rendered on the right
 side of the input itself. Combine that with [Icon](/#icon) inside a nested
 element containing `olt-TextField-icon`.
 
 ```icon.html
 <div class="olt-TextField">
   <div class="olt-TextField-icon">
-    <i class="olt-Icon olt-Icon--error" data-icon="error"></i>
+    <i class="olt-Icon olt-Icon--error olt-Icon-feedback-warning-low-filled"></i>
   </div>
   <label class="olt-Label olt-TextField-label">Username</label>
   <input class="olt-Input olt-TextField-input is-error" value="bill"/>

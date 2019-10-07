@@ -583,24 +583,22 @@
     }
   }
 
-  &[data-icon-left],
-  &[data-icon-right] {
+  &-icon-left,
+  &-icon-right {
     &:before {
-      @include icon-font-material;
-
-      font-size: 120%;
+      @include icon-font-olt;
     }
   }
 
-  &[data-icon-left]:before {
-    content: attr(data-icon-left);
+  &-icon-left:before {
+    margin-right: 2px;
   }
 
-  &[data-icon-right] {
+  &-icon-right {
     flex-direction: row-reverse;
 
     &:before {
-      content: attr(data-icon-right);
+      margin-left: 2px;
     }
   }
 }

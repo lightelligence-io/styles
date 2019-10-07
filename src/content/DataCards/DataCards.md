@@ -680,8 +680,8 @@ In this case they are applied to the `content` of the `cardItem`.
       <div class="olt-DataCards-headItem">Name / ID</div>
       <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Floor</div>
       <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Room</div>
-      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Temperature&nbsp;<i class="olt-Icon olt-Icon--dark" data-icon="keyboard_arrow_up"></i></div>
-      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Occupancy&nbsp;<i class="olt-Icon olt-Icon--dark" data-icon="keyboard_arrow_down"></i></div>
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Temperature&nbsp;<i class="olt-Icon olt-Icon--dark olt-Icon-arrows-chevron-up olt-Icon--small"></i></div>
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Occupancy&nbsp;<i class="olt-Icon olt-Icon--dark olt-Icon-arrows-chevron-down olt-Icon--small"></i></div>
       <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Last Motion</div>
       <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Power</div>
       <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Brightness</div>

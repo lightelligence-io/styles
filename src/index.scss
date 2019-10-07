@@ -27,6 +27,7 @@
 @import './controls/Input/Input.scss';
 @import './controls/Radio/Radio.scss';
 @import './controls/Select/Select.scss';
+@import './controls/Copyable/Copyable.scss';
 @import './controls/FormField/FormField.scss';
 @import './controls/TextField/TextField.scss';
 @import './controls/TextArea/TextArea.scss';
@@ -48,12 +49,14 @@
 @import './components/Menu/Menu.scss';
 @import './components/Dropdown/Dropdown.scss';
 @import './components/Tabs/Tabs.scss';
+@import './components/V2Tabs/V2Tabs.scss';
 @import './components/Stepper/Stepper.scss';
 @import './components/Tooltip/Tooltip.scss';
 @import './components/Modal/Modal.scss';
 @import './components/Navbar/Navbar.scss';
 @import './components/Tag/Tag.scss';
 @import './components/Snackbar/Snackbar.scss';
+@import './components/Notification/Notification.scss';
 @import './components/Chip/Chip.scss';
 
 // Utilities

@@ -87,18 +87,12 @@
     // }
   }
 
-  &--icon,
-  &[data-icon] {
+  &--icon {
     @extend .Icon;
-
-    &:before {
-      font-size: 150%;
-    }
   }
 
   &--icon,
   &--count,
-  &[data-icon],
   &[data-count] {
     padding: 0;
     display: inline-flex;

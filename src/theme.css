@@ -447,3 +447,25 @@ a.i-sidebar-list-item:hover b {
   padding-top: 16px;
   padding-left: 10px;
 }
+
+.demo-icon {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+  width: 100px;
+}
+
+.demo-icon span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 10px;
+}
+
+.demo-icon:hover span,
+.demo-icon:active span,
+.demo-icon:focus span {
+  white-space: normal;
+}

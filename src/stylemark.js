@@ -15,8 +15,43 @@ window.addEventListener('load', () => {
         });
     });
   });
+
+  /**
+   * Adds closing functionality for a notification
+   */
+  document
+    .querySelectorAll('div.olt-Notification')
+    .forEach((notificationEl) => {
+      const closeEl = notificationEl.querySelector(
+        'button.olt-Notification-close',
+      );
+      if (closeEl)
+        closeEl.addEventListener('click', () => {
+          notificationEl.classList.remove('is-open');
+        });
+    });
 });
 
+/**
+ * Adds demo functionality to show stack of notifications
+ */
+showNotifications = () => {
+  const notificationsList = [
+    ...document.querySelector('div.olt-NotificationContainer').children,
+  ].reverse();
+  notificationsList.forEach((notification, index) => {
+    setTimeout(() => {
+      notification.classList.add('is-open');
+    }, 1000 * index);
+    setTimeout(() => {
+      notification.classList.remove('is-open');
+    }, 3000 + 1000 * index);
+  });
+};
+
+/**
+ * Load version.txt and show the version in the sidebar
+ */
 var sidebarHeader = document.querySelector('.theme-sidebar-header-title');
 fetch('version.txt')
   .then((response) =>

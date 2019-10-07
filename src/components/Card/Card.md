@@ -54,7 +54,7 @@ for drop down menu or additional context actions.
       Description
     </h6>
     <div class="olt-Card-action">
-      <i class="olt-Icon" data-icon="more_vert"></i>
+      <i class="olt-Icon olt-Icon-navigation-more olt-Icon--large"></i>
     </div>
   </div>
 </div>
@@ -75,7 +75,7 @@ provided.
       Description
     </h6>
     <div class="olt-Card-action">
-      <i class="olt-Icon" data-icon="more_vert"></i>
+      <i class="olt-Icon olt-Icon-navigation-more olt-Icon--large"></i>
     </div>
   </div>
   <div class="olt-Card-content">
