@@ -547,9 +547,9 @@ For decorative and non-interactive icons (e.g. input fields) the default is gray
     used for decorations
   </div>
   <div class="olt-Grid-item olt-Grid-item--9">
-    <i class="olt-Icon olt-Icon-data-emission"></i>
-    <i class="olt-Icon olt-Icon-data-humidity"></i>
-    <i class="olt-Icon olt-Icon-data-power"></i>
+    <i class="olt-Icon olt-u-colorGray500 olt-Icon-data-emission"></i>
+    <i class="olt-Icon olt-u-colorGray500 olt-Icon-data-humidity"></i>
+    <i class="olt-Icon olt-u-colorGray500 olt-Icon-data-power"></i>
   </div>
 </div>
 ```
