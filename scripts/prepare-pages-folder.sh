@@ -21,7 +21,7 @@ fi
 echo 'creating gh-pages folder ...'
 mkdir gh-pages
 echo 'checking out gh-pages branch ...'
-# git clone -b gh-pages --single-branch https://github.com/lightelligence-io/styles.git gh-pages
+git clone -b gh-pages --single-branch https://github.com/$TRAVIS_REPO_SLUG gh-pages
 echo 'adding new documents ...'
 cp -r docs/* gh-pages
 echo 'done.'
