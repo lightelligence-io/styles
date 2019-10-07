@@ -528,7 +528,7 @@ Per default, icons adjust to current color and font-size:
 
 ### General
 
-Interactive icons should be used with the primary color. 
+Interactive icons should be used with the primary color.
 For decorative and non-interactive icons (e.g. input fields) the default is gray 500.
 
 ```colors-general.html
@@ -548,24 +548,24 @@ For decorative and non-interactive icons (e.g. input fields) the default is gray
   </div>
   <div class="olt-Grid-item olt-Grid-item--9">
     <i class="olt-Icon olt-u-colorGray500 olt-Icon-data-emission"></i>
-            <i class="olt-Icon olt-u-colorGray500 olt-Icon-data-humidity"></i>
-            <i class="olt-Icon olt-u-colorGray500 olt-Icon-data-power"></i>
+    <i class="olt-Icon olt-u-colorGray500 olt-Icon-data-humidity"></i>
+    <i class="olt-Icon olt-u-colorGray500 olt-Icon-data-power"></i>
   </div>
 </div>
 ```
 
 ### Feedback
 
-The new *Icon* set has filled and outline icons for feedback. 
-Three different versions indicate the importance of the warning. 
+The new *Icon* set has filled and outline icons for feedback.
+Three different versions indicate the importance of the warning.
 Depending on the use case the icon color changes - info / warning / error.
 To assign a color to the icon, use the `olt-Icon--*` classes as listed below.
 If the icon is placed on a matching background color it has to be white.
 
-* <span class="olt-u-colorInfo">Circle - low:</span> `olt-Icon--info` 
+* <span class="olt-u-colorInfo">Circle - low:</span> `olt-Icon--info`
 * <span class="olt-u-colorWarning">Triangle - medium:</span> `olt-Icon--warning`
 * <span class="olt-u-colorError">Rhomb - critical:</span> `olt-Icon--error`
-* <span class="olt-u-colorSuccess">Circle - success:</span> `olt-Icon--success` 
+* <span class="olt-u-colorSuccess">Circle - success:</span> `olt-Icon--success`
 
 ```colors-feedback.html
 <i class="olt-Icon olt-Icon--info olt-Icon-feedback-help-circle"></i>
@@ -585,8 +585,8 @@ If the icon is placed on a matching background color it has to be white.
 
 ## Sizes
 
-The Icons exist in three different sizes - **24 x 24 / 16 x 16 / 12 x 12**. 
-Depending on the use case the correct icon has to be used. 
+The Icons exist in three different sizes - **24 x 24 / 16 x 16 / 12 x 12**.
+Depending on the use case the correct icon has to be used.
 
 * `olt-Icon--large`: **24 x 24** - icons that are used for decoration and standalone
 * `olt-Icon--medium`: **16 x 16** - for input fields and sometimes for decoration, standalone and the edit action button
@@ -639,9 +639,9 @@ Depending on the use case the correct icon has to be used.
   </tbody>
 </table>
 
-You can also change the size of the icon with the [Font Size utility classes](/#font-size). 
+You can also change the size of the icon with the [Font Size utility classes](/#font-size).
 This will resize the icon but without making any adjustments to account
-for smaller or bigger sizes. You can use: 
+for smaller or bigger sizes. You can use:
 
 - `olt-u-fontSizeXxSmall`
 - `olt-u-fontSizeXSmall`

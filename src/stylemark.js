@@ -48,3 +48,13 @@ showNotifications = () => {
     }, 3000 + 1000 * index);
   });
 };
+
+/**
+ * Load version.txt and show the version in the sidebar
+ */
+var sidebarHeader = document.querySelector('.theme-sidebar-header-title');
+fetch('version.txt')
+  .then((response) =>
+    response.status === 200 ? response.text() : 'unknown version',
+  )
+  .then((text) => sidebarHeader.setAttribute('data-after', text));

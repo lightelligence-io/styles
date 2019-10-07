@@ -24,11 +24,27 @@
   border-radius: 100%;
 }
 
+.theme-sidebar-header {
+  display: flex;
+  align-items: flex-start;
+}
+
 .theme-sidebar-header-title {
   color: black;
   font-family: 'PT Sans', serif;
   font-weight: 600;
   font-size: 16px;
+  white-space: nowrap;
+  line-height: 1.8;
+}
+
+.theme-sidebar-header-title:after {
+  display: block;
+  content: attr(data-after);
+  color: black;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1;
 }
 
 .theme-sidebar-search {

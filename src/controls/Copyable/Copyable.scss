@@ -5,6 +5,7 @@
   flex-direction: row;
   appearance: none;
   border: 0;
+  border-radius: 4px;
 
   &:focus {
     outline: none;
@@ -26,7 +27,6 @@
 
     padding-left: 8px;
     align-self: center;
-    content: 'filter_none';
     color: var-get('gray500');
   }
 }

@@ -133,7 +133,9 @@
     @extend .Button--icon;
 
     &:before {
-      content: 'close';
+      @extend .Icon:before;
+
+      @extend .Icon-navigation-close;
     }
 
     align-self: flex-end;
@@ -160,22 +162,26 @@
   }
 
   &--error &-dialog:before {
-    content: 'error_outline';
+    @extend .Icon-feedback-warning-low-circle;
+
     background: var-get('colorError');
   }
 
   &--info &-dialog:before {
-    content: 'info_outline';
+    @extend .Icon-feedback-info-circle;
+
     background: var-get('colorInfo');
   }
 
   &--warning &-dialog:before {
-    content: 'info_outline';
+    @extend .Icon-feedback-warning-low-circle;
+
     background: var-get('colorWarning');
   }
 
   &--success &-dialog:before {
-    content: 'done';
+    @extend .Icon-feedback-check-circle;
+
     background: var-get('colorSuccess');
   }
 

@@ -154,8 +154,6 @@ $chip-colors: (
 
   &:before,
   &:after {
-    @include icon-font-olt;
-
     display: inline-flex;
     vertical-align: middle;
     line-height: 18px;
