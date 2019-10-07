@@ -59,3 +59,19 @@ State of the art
 #v0.12.1
 
 - fix: remove bottom border radius on input elements
+
+#v1.0.0-alpha.1
+
+- Feature: New Icons (BREAKING CHANGE!)
+
+- Feature: Notifications
+
+- Feature: New Tabs
+
+- Feature: Copy to Clipboard
+
+- Feature: New Font Specifications
+
+- Chore: Show Version Number in Documentation
+
+- Chore: Deploy Alpha Documentation to GitHub Pages
