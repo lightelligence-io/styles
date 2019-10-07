@@ -51,6 +51,7 @@ $v2-checkbox-colors: (
 
   $checked-background-path: 'M16 0H2C.9 0 0 .9 0 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zM7 14L2 9.192l1.4-1.346L7 11.308 14.6 4 16 5.346 7 14z';
   $default-background-path: 'M16 2v14H2V2h14zm0-2H2C.9 0 0 .9 0 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z';
+  $indetermined-background-path: ' M2 8H16V10H2z M16 0H2C.9 0 0 .9 0 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zM7';
 
   position: relative;
   display: flex;
@@ -184,6 +185,16 @@ $v2-checkbox-colors: (
     @include checkbox-background(
       map-get($theme-dark-background, disabled),
       $checked-background-path
+    );
+  }
+
+  //
+  // indetermined
+  //
+  &--indetermined ~ &-button:after {
+    @include checkbox-background(
+      map-get($theme-dark-background, disabled),
+      $indetermined-background-path
     );
   }
 }
