@@ -1,6 +1,7 @@
 #!/bin/bash
 
 VERSION=$(node -p "require('./package.json').version")
+
 if [[ $TRAVIS_COMMIT_MESSAGE =~ ^release ]]; then
   echo -n 'release commit: creating release docs ... '
   mkdir -p docs/releases/$VERSION
@@ -16,4 +17,7 @@ if [[ $TRAVIS_BRANCH == alpha ]]; then
   echo 'done.'
 fi
 
-
+# checkout current gh-pages branch and add new files
+mkdir gh-pages
+git --work-tree=./gh-pages checkout origin/gh-pages -- .
+cp -r docs/* gh-pages

@@ -11,7 +11,7 @@ script:
 
 before_deploy:
   - source ./scripts/tag-commit.sh
-  - source ./scripts/pages-for-alpha-branch.sh
+  - source ./scripts/prepare-pages-folder.sh
 
 deploy:
   - provider: releases
@@ -32,10 +32,9 @@ deploy:
       condition: '$TRAVIS_COMMIT_MESSAGE =~ ^release*'
 
   - provider: pages
-    local_dir: docs
+    local_dir: gh-pages
     skip_cleanup: true
     github_token: $GITHUB_ACCESS_TOKEN
-    keep_history: true
     target_branch: gh-pages
     on:
       branch: master
@@ -59,10 +58,9 @@ deploy:
       condition: '$TRAVIS_COMMIT_MESSAGE =~ ^release*'
 
   - provider: pages
-    local_dir: docs
+    local_dir: gh-pages
     skip_cleanup: true
     github_token: $GITHUB_ACCESS_TOKEN
-    keep_history: true
     target_branch: gh-pages
     on:
       branch: alpha
