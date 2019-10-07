@@ -113,3 +113,10 @@ getCurrentVersion().then((currentVersion) => {
   addCurrentVersion(currentVersion);
   addVersionDropdown(currentVersion);
 });
+
+var sidebarHeader = document.querySelector('.theme-sidebar-header-title');
+fetch('version.txt')
+  .then((response) =>
+    response.status === 200 ? response.text() : 'unknown version',
+  )
+  .then((text) => sidebarHeader.setAttribute('data-after', text));
