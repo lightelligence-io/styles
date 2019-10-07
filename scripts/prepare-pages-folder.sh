@@ -17,7 +17,11 @@ if [[ $TRAVIS_BRANCH == alpha ]]; then
   echo 'done.'
 fi
 
-# checkout current gh-pages branch and add new files
+# checkout current gh-poages branch and add
+echo 'creating gh-pages folder ...'
 mkdir gh-pages
-git --work-tree=./gh-pages checkout origin/gh-pages -- .
+echo 'checking out gh-pages branch ...'
+git clone -b gh-pages --single-branch git@github.com:lightelligence-io/styles.git gh-pages
+echo 'adding new documents ...'
 cp -r docs/* gh-pages
+echo 'done.'
