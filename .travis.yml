@@ -34,6 +34,7 @@ deploy:
     local_dir: docs
     skip_cleanup: true
     github_token: $GITHUB_ACCESS_TOKEN
+    keep_history: true
     target_branch: gh-pages
     on:
       branch: master
