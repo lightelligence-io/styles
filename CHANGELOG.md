@@ -63,15 +63,12 @@ State of the art
 #v1.0.0-alpha.1
 
 - Feature: New Icons (BREAKING CHANGE!)
-
+  - We removed the material icons and use CSS classes instead of data attributes now.
 - Feature: Notifications
-
 - Feature: New Tabs
-
 - Feature: Copy to Clipboard
-
 - Feature: New Font Specifications
-
+  - All old font declarations are deprecated now and will be removed in an upcoming version.
+  - This will be a breaking change.
 - Chore: Show Version Number in Documentation
-
 - Chore: Deploy Alpha Documentation to GitHub Pages
