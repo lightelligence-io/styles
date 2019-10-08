@@ -1,6 +1,6 @@
 {
   "name": "@lightelligence/styles",
-  "version": "0.12.1-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "The UI-Framework of the lightelligence-platform.",
   "license": "MIT",
   "main": "dist/index.js",
@@ -24,7 +24,7 @@
   ],
   "scripts": {
     "clean": "rm -rf dist && rm -rf docs",
-    "write-version":  "./scripts/write-version-file.sh", 
+    "write-version":  "./scripts/write-version-file.sh",
     "build": "npm run clean && cross-env NODE_ENV=production webpack --mode=production && npm run write-version",
     "start": "rm -rf docs && npm run write-version && node scripts/start.js",
     "build:docs": "stylemark -i \"./src\" -o \"./docs\" && touch ./docs/.nojekyll && npm run write-version",
