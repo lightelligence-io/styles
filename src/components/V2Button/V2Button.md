@@ -6,7 +6,7 @@ category: Component
 
 ## Description
 
-V2-Buttons can be used with `<button>`, `<a>`, and `<input type="button">` 
+V2-Buttons can be used with `<button>`, `<a>`, and `<input type="button">`
 elements and occupy the `olt-V2Button*` class names.
 
 
@@ -60,19 +60,19 @@ Contrasting levels of emphasis help the user to differentiate between important 
         <div class="olt-Card">
           <div class="olt-Card-content">
             <div class="demo-content">
-              <button 
+              <button
                 class="olt-V2Button">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="olt-V2Button olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="olt-V2Button olt-V2Button-icon-right olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 disabled
                 class="olt-V2Button">Label</button>
             </div>
@@ -87,30 +87,30 @@ Contrasting levels of emphasis help the user to differentiate between important 
         <div class="olt-Card">
           <div class="olt-Card-content">
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
+                    olt-V2Button
                     olt-V2Button--secondary">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
+                    olt-V2Button
                     olt-V2Button--secondary
                      olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
+                    olt-V2Button
                     olt-V2Button--secondary
                      olt-V2Button-icon-right olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 disabled
                 class="
-                    olt-V2Button 
+                    olt-V2Button
                     olt-V2Button--secondary">Label</button>
             </div>
           </div>
@@ -124,29 +124,29 @@ Contrasting levels of emphasis help the user to differentiate between important 
         <div class="olt-Card">
           <div class="olt-Card-content">
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
+                    olt-V2Button
                     olt-V2Button--tertiary">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="olt-V2Button olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--tertiary
                     olt-V2Button-icon-right olt-Icon-action-add-default olt-Icon--small
                     ">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 disabled
                 class="
-                    olt-V2Button 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--tertiary
                     ">Label</button>
             </div>
           </div>
@@ -160,38 +160,38 @@ Contrasting levels of emphasis help the user to differentiate between important 
         <div class="olt-Card">
           <div class="olt-Card-content">
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--action 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--action
+                    olt-V2Button--tertiary
                     ">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--action 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--action
+                    olt-V2Button--tertiary
                     olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small
                     ">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--action 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--action
+                    olt-V2Button--tertiary
                      olt-V2Button-icon-right olt-Icon-action-add-default olt-Icon--small
                     ">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 disabled
                 class="
-                    olt-V2Button 
-                    olt-V2Button--action 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--action
+                    olt-V2Button--tertiary
                     ">Label</button>
             </div>
           </div>
@@ -232,30 +232,30 @@ Contrasting levels of emphasis help the user to differentiate between important 
         <div class="olt-Card olt-Card--dark">
           <div class="olt-Card-content">
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
+                    olt-V2Button
                     olt-V2Button--dark">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
+                    olt-V2Button
                     olt-V2Button--dark
                     olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
+                    olt-V2Button
                     olt-V2Button--dark
                     olt-V2Button-icon-right olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 disabled
                 class="
-                    olt-V2Button 
+                    olt-V2Button
                     olt-V2Button--dark">Label</button>
             </div>
           </div>
@@ -269,34 +269,34 @@ Contrasting levels of emphasis help the user to differentiate between important 
         <div class="olt-Card olt-Card--dark">
           <div class="olt-Card-content">
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--secondary 
+                    olt-V2Button
+                    olt-V2Button--secondary
                     olt-V2Button--dark">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--secondary 
+                    olt-V2Button
+                    olt-V2Button--secondary
                     olt-V2Button--dark
                     olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--secondary 
+                    olt-V2Button
+                    olt-V2Button--secondary
                     olt-V2Button--dark
                     olt-V2Button-icon-right olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 disabled
                 class="
-                    olt-V2Button 
-                    olt-V2Button--secondary 
+                    olt-V2Button
+                    olt-V2Button--secondary
                     olt-V2Button--dark">Label</button>
             </div>
           </div>
@@ -310,34 +310,34 @@ Contrasting levels of emphasis help the user to differentiate between important 
         <div class="olt-Card olt-Card--dark">
           <div class="olt-Card-content">
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--tertiary
                     olt-V2Button--dark">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--tertiary
                     olt-V2Button--dark
                     olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--tertiary
                     olt-V2Button--dark
                     olt-V2Button-icon-right olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 disabled
                 class="
-                    olt-V2Button 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--tertiary
                     olt-V2Button--dark">Label</button>
             </div>
           </div>
@@ -351,38 +351,38 @@ Contrasting levels of emphasis help the user to differentiate between important 
         <div class="olt-Card olt-Card--dark">
           <div class="olt-Card-content">
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--action 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--action
+                    olt-V2Button--tertiary
                     olt-V2Button--dark">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--action 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--action
+                    olt-V2Button--tertiary
                     olt-V2Button--dark
                      olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--action 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--action
+                    olt-V2Button--tertiary
                     olt-V2Button--dark
                     olt-V2Button-icon-right olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 disabled
                 class="
-                    olt-V2Button 
-                    olt-V2Button--action 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--action
+                    olt-V2Button--tertiary
                     olt-V2Button--dark">Label</button>
             </div>
           </div>
@@ -435,25 +435,25 @@ Buttons for destructive actions are available with three levels of emphasis and 
         <div class="olt-Card">
           <div class="olt-Card-content">
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
+                    olt-V2Button
                     olt-V2Button--destructive">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
+                    olt-V2Button
                     olt-V2Button--destructive
                     olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 disabled
                 class="
-                    olt-V2Button 
+                    olt-V2Button
                     olt-V2Button--destructive">Label</button>
             </div>
           </div>
@@ -467,28 +467,28 @@ Buttons for destructive actions are available with three levels of emphasis and 
         <div class="olt-Card">
           <div class="olt-Card-content">
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--destructive 
+                    olt-V2Button
+                    olt-V2Button--destructive
                     olt-V2Button--secondary">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--destructive 
+                    olt-V2Button
+                    olt-V2Button--destructive
                     olt-V2Button--secondary
                     olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 disabled
                 class="
-                    olt-V2Button 
-                    olt-V2Button--destructive 
+                    olt-V2Button
+                    olt-V2Button--destructive
                     olt-V2Button--secondary">Label</button>
             </div>
           </div>
@@ -502,35 +502,35 @@ Buttons for destructive actions are available with three levels of emphasis and 
         <div class="olt-Card">
           <div class="olt-Card-content">
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--destructive 
+                    olt-V2Button
+                    olt-V2Button--destructive
                     olt-V2Button--tertiary">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--destructive 
+                    olt-V2Button
+                    olt-V2Button--destructive
                     olt-V2Button--tertiary
                     olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--destructive 
+                    olt-V2Button
+                    olt-V2Button--destructive
                     olt-V2Button--tertiary
                     olt-V2Button-icon-right olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 disabled
                 class="
-                    olt-V2Button 
-                    olt-V2Button--destructive 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--destructive
+                    olt-V2Button--tertiary
                     olt-V2Button--dark">Label</button>
             </div>
           </div>
@@ -570,28 +570,28 @@ Buttons for destructive actions are available with three levels of emphasis and 
         <div class="olt-Card olt-Card--dark">
           <div class="olt-Card-content">
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--destructive 
+                    olt-V2Button
+                    olt-V2Button--destructive
                     olt-V2Button--dark">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--destructive 
+                    olt-V2Button
+                    olt-V2Button--destructive
                     olt-V2Button--dark
                     olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 disabled
                 class="
-                    olt-V2Button 
-                    olt-V2Button--destructive 
+                    olt-V2Button
+                    olt-V2Button--destructive
                     olt-V2Button--dark">Label</button>
             </div>
           </div>
@@ -605,31 +605,31 @@ Buttons for destructive actions are available with three levels of emphasis and 
         <div class="olt-Card olt-Card--dark">
           <div class="olt-Card-content">
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--destructive 
-                    olt-V2Button--secondary 
+                    olt-V2Button
+                    olt-V2Button--destructive
+                    olt-V2Button--secondary
                     olt-V2Button--dark">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--destructive 
-                    olt-V2Button--secondary 
+                    olt-V2Button
+                    olt-V2Button--destructive
+                    olt-V2Button--secondary
                     olt-V2Button--dark
                     olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 disabled
                 class="
-                    olt-V2Button 
-                    olt-V2Button--destructive 
-                    olt-V2Button--secondary 
+                    olt-V2Button
+                    olt-V2Button--destructive
+                    olt-V2Button--secondary
                     olt-V2Button--dark">Label</button>
             </div>
           </div>
@@ -643,38 +643,38 @@ Buttons for destructive actions are available with three levels of emphasis and 
         <div class="olt-Card olt-Card--dark">
           <div class="olt-Card-content">
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--destructive 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--destructive
+                    olt-V2Button--tertiary
                     olt-V2Button--dark">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--destructive 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--destructive
+                    olt-V2Button--tertiary
                     olt-V2Button--dark
                     olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--destructive 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--destructive
+                    olt-V2Button--tertiary
                     olt-V2Button--dark
                     olt-V2Button-icon-right olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 disabled
                 class="
-                    olt-V2Button 
-                    olt-V2Button--destructive 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--destructive
+                    olt-V2Button--tertiary
                     olt-V2Button--dark">Label</button>
             </div>
           </div>
@@ -724,25 +724,25 @@ Buttons for confirmative actions are available with three levels of emphasis and
         <div class="olt-Card">
           <div class="olt-Card-content">
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
+                    olt-V2Button
                     olt-V2Button--confirmative">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
+                    olt-V2Button
                     olt-V2Button--confirmative
                     olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 disabled
                 class="
-                    olt-V2Button 
+                    olt-V2Button
                     olt-V2Button--confirmative">Label</button>
             </div>
           </div>
@@ -756,28 +756,28 @@ Buttons for confirmative actions are available with three levels of emphasis and
         <div class="olt-Card">
           <div class="olt-Card-content">
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--confirmative 
+                    olt-V2Button
+                    olt-V2Button--confirmative
                     olt-V2Button--secondary">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--confirmative 
+                    olt-V2Button
+                    olt-V2Button--confirmative
                     olt-V2Button--secondary
                     olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 disabled
                 class="
-                    olt-V2Button 
-                    olt-V2Button--confirmative 
+                    olt-V2Button
+                    olt-V2Button--confirmative
                     olt-V2Button--secondary">Label</button>
             </div>
           </div>
@@ -791,35 +791,35 @@ Buttons for confirmative actions are available with three levels of emphasis and
         <div class="olt-Card">
           <div class="olt-Card-content">
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--confirmative 
+                    olt-V2Button
+                    olt-V2Button--confirmative
                     olt-V2Button--tertiary">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--confirmative 
+                    olt-V2Button
+                    olt-V2Button--confirmative
                     olt-V2Button--tertiary
                     olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--confirmative 
+                    olt-V2Button
+                    olt-V2Button--confirmative
                     olt-V2Button--tertiary
                     olt-V2Button-icon-right olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 disabled
                 class="
-                    olt-V2Button 
-                    olt-V2Button--confirmative 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--confirmative
+                    olt-V2Button--tertiary
                     olt-V2Button--dark">Label</button>
             </div>
           </div>
@@ -859,28 +859,28 @@ Buttons for confirmative actions are available with three levels of emphasis and
         <div class="olt-Card olt-Card--dark">
           <div class="olt-Card-content">
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--confirmative 
+                    olt-V2Button
+                    olt-V2Button--confirmative
                     olt-V2Button--dark">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--confirmative 
+                    olt-V2Button
+                    olt-V2Button--confirmative
                     olt-V2Button--dark
                     olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 disabled
                 class="
-                    olt-V2Button 
-                    olt-V2Button--confirmative 
+                    olt-V2Button
+                    olt-V2Button--confirmative
                     olt-V2Button--dark">Label</button>
             </div>
           </div>
@@ -894,31 +894,31 @@ Buttons for confirmative actions are available with three levels of emphasis and
         <div class="olt-Card olt-Card--dark">
           <div class="olt-Card-content">
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--confirmative 
-                    olt-V2Button--secondary 
+                    olt-V2Button
+                    olt-V2Button--confirmative
+                    olt-V2Button--secondary
                     olt-V2Button--dark">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--confirmative 
-                    olt-V2Button--secondary 
+                    olt-V2Button
+                    olt-V2Button--confirmative
+                    olt-V2Button--secondary
                     olt-V2Button--dark
                     olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 disabled
                 class="
-                    olt-V2Button 
-                    olt-V2Button--confirmative 
-                    olt-V2Button--secondary 
+                    olt-V2Button
+                    olt-V2Button--confirmative
+                    olt-V2Button--secondary
                     olt-V2Button--dark">Label</button>
             </div>
           </div>
@@ -932,38 +932,38 @@ Buttons for confirmative actions are available with three levels of emphasis and
         <div class="olt-Card olt-Card--dark">
           <div class="olt-Card-content">
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--confirmative 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--confirmative
+                    olt-V2Button--tertiary
                     olt-V2Button--dark">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--confirmative 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--confirmative
+                    olt-V2Button--tertiary
                     olt-V2Button--dark
                     olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 class="
-                    olt-V2Button 
-                    olt-V2Button--confirmative 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--confirmative
+                    olt-V2Button--tertiary
                     olt-V2Button--dark
                     olt-V2Button-icon-right olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
-              <button 
+              <button
                 disabled
                 class="
-                    olt-V2Button 
-                    olt-V2Button--confirmative 
-                    olt-V2Button--tertiary 
+                    olt-V2Button
+                    olt-V2Button--confirmative
+                    olt-V2Button--tertiary
                     olt-V2Button--dark">Label</button>
             </div>
           </div>
@@ -1029,4 +1029,13 @@ To show decorations inside a button, use the `olt-V2Button-icon-left` and `olt-V
 <button class="olt-V2Button olt-V2Button--secondary olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Default</button>
 <button class="olt-V2Button olt-V2Button--secondary olt-V2Button-icon-right olt-Icon-action-add-default olt-Icon--small">Default</button>
 <button class="olt-V2Button olt-V2Button--tertiary olt-V2Button-icon-right olt-Icon-action-add-default olt-Icon--small">Default</button>
+```
+
+## Pagination
+
+The pagination use-case is an exeption from the above button rules and uses the `olt-V2Button--pagination-prev` and `olt-V2Button--pagination-next` modifiers. This will show an icon on the left or right of the label and render the button as secondary. It also reduces the horizontal padding around the text by 50%.
+
+```pagination.html
+<button class="olt-V2Button olt-V2Button--pagination-prev">prev</button>
+<button class="olt-V2Button olt-V2Button--pagination-next">next</button>
 ```
