@@ -585,9 +585,9 @@
     flex-direction: row-reverse;
 
     &:before {
-      @extend .Icon-arrows-chevron-right.Icon--small;
-
       @extend .Icon;
+
+      @extend .Icon-arrows-chevron-right.Icon--small;
 
       margin-left: 4px;
     }
@@ -599,9 +599,9 @@
     padding: $button-padding-y $pagination-button-padding-x;
 
     &:before {
-      @extend .Icon-arrows-chevron-left.Icon--small;
-
       @extend .Icon;
+
+      @extend .Icon-arrows-chevron-left.Icon--small;
 
       margin-right: 4px;
     }
