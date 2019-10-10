@@ -374,7 +374,7 @@ for better user experience.
 
 ## Pagination
 
-The pagination use-case is an exeption from the above button rules and uses the `olt-V2Select--pagination` modifier. This will show a border around the element.
+The pagination use-case is an exception from the above button rules and uses the `olt-V2Select--pagination` modifier. This will show a border around the element.
 
 ```pagination.html
 <select class="olt-V2Select olt-V2Select--pagination">
