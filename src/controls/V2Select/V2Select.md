@@ -371,3 +371,15 @@ for better user experience.
   </div>
 </label>
 ```
+
+## Pagination
+
+The pagination use-case is an exception from the above button rules and uses the `olt-V2Select--pagination` modifier. This will show a border around the element.
+
+```pagination.html
+<select class="olt-V2Select olt-V2Select--pagination">
+  <option hidden></option>
+  <option value="10">10</option>
+  <option value="30">30</option>
+</select>
+```

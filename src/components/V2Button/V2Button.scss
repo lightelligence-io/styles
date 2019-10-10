@@ -532,7 +532,8 @@
     }
   }
 
-  $button-padding-x: 1rem;
+  $button-padding-x: 32px;
+  $pagination-button-padding-x: 16px;
   $button-padding-y: 0;
   $button-border-color: var-get('borderColor');
   $button-background: var-get('borderColor');
@@ -571,10 +572,39 @@
   color: $button-color;
   padding: $button-padding-y $button-padding-x;
 
-  $emphases: ('primary' 'secondary' 'tertiary');
+  $emphases: ('primary' 'secondary' 'tertiary' 'pagination-next' 'pagination-prev');
   // set default if no other emphasis is set
   &#{not-any-selector($emphases, $self)} {
     @include button-emphasis($self, 'primary');
+  }
+
+  &--pagination-next {
+    @include button-emphasis($self, 'secondary');
+
+    padding: $button-padding-y $pagination-button-padding-x;
+    flex-direction: row-reverse;
+
+    &:before {
+      @extend .Icon;
+
+      @extend .Icon-arrows-chevron-right.Icon--small;
+
+      margin-left: 4px;
+    }
+  }
+
+  &--pagination-prev {
+    @include button-emphasis($self, 'secondary');
+
+    padding: $button-padding-y $pagination-button-padding-x;
+
+    &:before {
+      @extend .Icon;
+
+      @extend .Icon-arrows-chevron-left.Icon--small;
+
+      margin-right: 4px;
+    }
   }
 
   @each $emphasis in $emphases {
