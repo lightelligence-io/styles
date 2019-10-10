@@ -1,0 +1,294 @@
+.V2Modal {
+  $modal-border-radius: var-get('borderRadius');
+  $modal-backdrop: rgba(255, 255, 255, 0.7);
+  $modal-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  $modal-padding-x: 1.5rem;
+  $modal-padding-y: 1.5rem;
+  $modal-content-padding-x: 0;
+  $modal-content-padding-y: var-get('spacing3');
+  $modal-background: var-get('colorLight');
+  $modal-dialog-width: 440px;
+  $modal-transition-duration: 0.2s;
+  $modal-transition-timing-function: ease-in;
+  $self: &;
+
+  height: 0;
+  width: 0;
+  opacity: 0;
+  overflow: auto;
+  transition: opacity $modal-transition-duration $modal-transition-timing-function;
+  background: $modal-backdrop;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  overscroll-behavior: contain;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: $olt-z-index-modal;
+  display: flex;
+  clip: rect(0, 0, 0, 0);
+  font-family: var-get('fontFamilyBase');
+
+  &-dialog {
+    background: $modal-background;
+    width: $modal-dialog-width;
+    max-width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition: transform $modal-transition-duration $modal-transition-timing-function;
+    transform: translateY(100%);
+    z-index: $olt-z-index-modal-dialog;
+    //pointer-events: auto;
+    cursor: auto;
+    //box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6);
+
+    &:before {
+      @include icon-font-olt;
+
+      content: '';
+      height: 112px;
+      width: 64px;
+      border-radius: 0 0 32px 32px;
+      justify-content: center;
+      align-items: flex-end;
+      color: white;
+      font-size: 50px; // icon size
+      vertical-align: middle;
+      line-height: 64px;
+      margin-bottom: -20px;
+      display: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &-header {
+    display: flex;
+    padding: $modal-padding-y $modal-padding-x 0 $modal-padding-x;
+    padding-bottom: 0;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+
+    &:only-child {
+      padding-bottom: $modal-padding-y;
+    }
+  }
+
+  &-content {
+    width: 0;
+    height: 0;
+    padding: $modal-padding-y $modal-padding-x 0 $modal-padding-x;
+    justify-content: center;
+    text-align: center;
+
+    &:last-child {
+      padding-bottom: $modal-padding-y;
+    }
+  }
+
+  &-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: $modal-content-padding-y $modal-padding-x $modal-padding-y $modal-padding-x;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  &-content .Container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &-header + &-content {
+    padding-top: 0;
+  }
+
+  &-title {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin: 0;
+    font-size: $olt-modal-title-font-size;
+    line-height: $olt-modal-title-line-height;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  &-close {
+    @extend .Button;
+
+    @extend .Button--icon;
+
+    &:before {
+      @extend .Icon:before;
+
+      @extend .Icon-navigation-close;
+    }
+
+    align-self: flex-end;
+    margin: 0;
+    color: #666;
+    position: fixed; // TODO: Get it of the overflow stuff
+    right: var-get('spacing3');
+    top: var-get('spacing3');
+    z-index: $olt-z-index-modal-close;
+  }
+
+  &-dialog &-close {
+    @extend .Button--outline;
+  }
+
+  &--error:not(&--fullscreen) &-dialog,
+  &--success:not(&--fullscreen) &-dialog,
+  &--info:not(&--fullscreen) &-dialog,
+  &--warning:not(&--fullscreen) &-dialog {
+    &:before {
+      display: flex;
+      margin-bottom: -20px;
+    }
+  }
+
+  &--error &-dialog:before {
+    @extend .Icon-feedback-warning-low-circle;
+
+    background: var-get('colorError');
+  }
+
+  &--info &-dialog:before {
+    @extend .Icon-feedback-info-circle;
+
+    background: var-get('colorInfo');
+  }
+
+  &--warning &-dialog:before {
+    @extend .Icon-feedback-warning-low-circle;
+
+    background: var-get('colorWarning');
+  }
+
+  &--success &-dialog:before {
+    @extend .Icon-feedback-check-circle;
+
+    background: var-get('colorSuccess');
+  }
+
+  &--fullscreen {
+    background: white;
+  }
+
+  &--fullscreen &-content,
+  &--fullscreen &-header,
+  &--fullscreen &-title {
+    justify-content: initial;
+    align-items: initial;
+    text-align: initial;
+  }
+
+  &--fullscreen &-footer {
+    text-align: initial;
+  }
+
+  &--fullscreen &-dialog {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: transparent;
+    box-shadow: none;
+    flex-wrap: unset;
+  }
+
+  &--fullscreen &-close {
+    display: inline-flex;
+  }
+
+  &--center &-content,
+  &--center &-header,
+  &--center &-footer {
+    text-align: center;
+  }
+
+  &--center &-content,
+  &--center &-header {
+    justify-content: center;
+  }
+
+  @at-root {
+    *[data-toggle='modal'] {
+      display: none;
+    }
+
+    *[data-toggle='modal']:checked + label {
+    }
+
+    #{$self}.is-open,
+    *[data-toggle='modal']:checked + label + #{$self} {
+      width: 100vw;
+      height: 100vh;
+      opacity: 1;
+      clip: auto;
+
+      #{$self}-dialog {
+        transform: translateY(0);
+      }
+
+      #{$self}-content {
+        width: 100%;
+      }
+
+      &#{$self}--fullscreen #{$self}-dialog {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    &.is-open &-dialog {
+      transform: translateY(0);
+    }
+
+    &.is-open &-dialog &-close {
+      color: #666;
+      position: absolute;
+      right: var-get('spacing3');
+      top: var-get('spacing3');
+      background: #fff;
+      font-size: 16px; // icon size
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+
+  // FIXME: Prevent nesting of elements
+  // Make sure that nested elements won't break anything
+  &-content &-footer,
+  &-content &-header {
+    padding: 0;
+  }
+
+  &-content &-header {
+    padding-bottom: 1.25rem;
+  }
+
+  &-content &-footer {
+    padding-top: 1.25rem;
+  }
+
+  &:not(#{$self}--fullscreen) #{$self}-content {
+    height: auto;
+  }
+}
