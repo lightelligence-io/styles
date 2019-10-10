@@ -1033,7 +1033,7 @@ To show decorations inside a button, use the `olt-V2Button-icon-left` and `olt-V
 
 ## Pagination
 
-The pagination use-case is an exeption from the above button rules and uses the `olt-V2Button--pagination-prev` and `olt-V2Button--pagination-next` modifiers. This will show an icon on the left or right of the label and render the button as secondary. It also reduces the horizontal padding around the text by 50%.
+The pagination use-case is an exception from the above button rules and uses the `olt-V2Button--pagination-prev` and `olt-V2Button--pagination-next` modifiers. This will show an icon on the left or right side of the label and render the button as secondary. It also reduces the horizontal padding around the text by 50%.
 
 ```pagination.html
 <button class="olt-V2Button olt-V2Button--pagination-prev">prev</button>
