@@ -58,25 +58,25 @@ We support the following modifiers :
 - `olt-V2Modal--info`
 - `olt-V2Modal--success`
 
-### Error modal
+### Critical modal
 
-Use the error *V2Modal* whenever you want to communicate an error state to the
+Use the critical *V2Modal* whenever you want to communicate an critical or error state to the
 user.
 
 <div class="olt-Card olt-u-padding5">
   <div class="olt-u-marginAuto">
     <input data-toggle="v2modal" id="demo-2" type="checkbox">
     <label class="olt-V2Button" for="v-2-modal-demo-2">Open</label>
-    <div class="olt-V2Modal olt-V2Modal--error">
+    <div class="olt-V2Modal olt-V2Modal--critical">
       <div class="olt-V2Modal-dialog">
         <header class="olt-V2Modal-header">
-          Oh no! An error occurred
+          Oh no! This is critical!
         </header>
         <div class="olt-V2Modal-content">
           <p>You should really check the configuration</p>
         </div>
         <div class="olt-V2Modal-footer">
-          <label class="olt-V2Button olt-V2Button--outline" for="v-2-modal-demo-2">Yes, show me</label>
+          <label class="olt-V2Button olt-V2Button--destructive" for="v-2-modal-demo-2">Yes, show me</label>
         </div>
       </div>
     </div>
@@ -86,16 +86,16 @@ user.
 ```html
 <input data-toggle="v2modal" id="v2modal-toggle-2" type="checkbox">
 <label class="olt-V2Button" for="v-2-modal-toggle-2">Open</label>
-<div class="olt-V2Modal olt-V2Modal--error">
+<div class="olt-V2Modal olt-V2Modal--critical">
   <div class="olt-V2Modal-dialog">
     <header class="olt-V2Modal-header">
-      Oh no! An error occurred
+      Oh no! This is critical!
     </header>
     <div class="olt-V2Modal-content">
       <p>You should really check the configuration</p>
     </div>
     <div class="olt-V2Modal-footer">
-      <label class="olt-V2Button olt-V2Button--outline" for="v-2-modal-toggle-2">Yes, show me</label>
+      <label class="olt-V2Button olt-V2Button--destructive" for="v-2-modal-toggle-2">Yes, show me</label>
     </div>
   </div>
 </div>
@@ -162,7 +162,7 @@ should be provided to the user.
           <p>You should really check the configuration</p>
         </div>
         <div class="olt-V2Modal-footer">
-          <label class="olt-V2Button olt-V2Button--info" for="v-2-modal-demo-4">Yes, show me</label>
+          <label class="olt-V2Button" for="v-2-modal-demo-4">Yes, show me</label>
         </div>
       </div>
     </div>
@@ -181,7 +181,7 @@ should be provided to the user.
       <p>You should really check the configuration</p>
     </div>
     <div class="olt-V2Modal-footer">
-      <label class="olt-V2Button olt-V2Button--info" for="v-2-modal-toggle-4">Yes, show me</label>
+      <label class="olt-V2Button" for="v-2-modal-toggle-4">Yes, show me</label>
     </div>
   </div>
 </div>
@@ -204,7 +204,7 @@ Use the success *V2Modal* when the actions of the user are successful.
           <p>Your configuration was approved</p>
         </div>
         <div class="olt-V2Modal-footer">
-          <label class="olt-V2Button olt-V2Button--success" for="v-2-modal-demo-5">Yes, show me</label>
+          <label class="olt-V2Button olt-V2Button--confirmative" for="v-2-modal-demo-5">Yes, show me</label>
         </div>
       </div>
     </div>
@@ -223,7 +223,7 @@ Use the success *V2Modal* when the actions of the user are successful.
       <p>Your configuration was approved.</p>
     </div>
     <div class="olt-V2Modal-footer">
-      <label class="olt-V2Button olt-V2Button--success" for="v-2-modal-toggle-6">Yes, show me</label>
+      <label class="olt-V2Button olt-V2Button--confirmative" for="v-2-modal-toggle-6">Yes, show me</label>
     </div>
   </div>
 </div>
@@ -273,7 +273,7 @@ Use the success *V2Modal* when the actions of the user are successful.
 
 ## Custom Header Modals
 
-In rare occasions the icon and background color of the header can be individually changed. Use with care!
+In rare occasions the icon and background color of the header can be individually changed. If you use the `--custom` modifier with the `olt-V2Modal-header` element, you **have to** provide an icon as in the examples below. *Use with care!*
 
 <div class="olt-Card olt-u-padding5">
   <div class="olt-u-marginAuto">
@@ -282,7 +282,7 @@ In rare occasions the icon and background color of the header can be individuall
     <div class="olt-V2Modal">
       <div class="olt-V2Modal-dialog">
     <header class="olt-V2Modal-header olt-V2Modal-header--custom olt-u-backgroundColorGray500">
-          <i class="olt-Icon olt-Icon-security-visibility" title="user-add"></i>
+          <i class="olt-Icon olt-Icon-security-visibility"></i>
           Oh yes! Success!
         </header>
         <div class="olt-V2Modal-content">
@@ -302,7 +302,7 @@ In rare occasions the icon and background color of the header can be individuall
 <div class="olt-V2Modal olt-V2Modal--action">
   <div class="olt-V2Modal-dialog">
     <header class="olt-V2Modal-header olt-V2Modal-header--custom olt-u-backgroundColorGray500">
-      <i class="olt-Icon olt-Icon-security-visibility" title="user-add"></i>
+      <i class="olt-Icon olt-Icon-security-visibility"></i>
         Oh yes! Success!
     </header>
     <div class="olt-V2Modal-content">
@@ -317,7 +317,7 @@ In rare occasions the icon and background color of the header can be individuall
 
 ### Custom Header Icons
 
-The icon can be changed while keeping the remaining styles. Also use with care!
+The icon can be changed while keeping the remaining styles. *Also use with care!*
 
 <div class="olt-Card olt-u-padding5">
   <div class="olt-u-marginAuto">
@@ -325,15 +325,15 @@ The icon can be changed while keeping the remaining styles. Also use with care!
     <label class="olt-V2Button" for="v-2-modal-demo-8">Open</label>
     <div class="olt-V2Modal olt-V2Modal--action">
       <div class="olt-V2Modal-dialog">
-    <header class="olt-V2Modal-header olt-V2Modal-header--custom">
-          <i class="olt-Icon olt-Icon-security-visibility" title="user-add"></i>
+        <header class="olt-V2Modal-header olt-V2Modal-header--custom">
+          <i class="olt-Icon olt-Icon-security-visibility"></i>
           Action!
         </header>
         <div class="olt-V2Modal-content">
           <p>... but watch out!</p>
         </div>
         <div class="olt-V2Modal-footer">
-          <label class="olt-V2Button olt-V2Button--success" for="v-2-modal-demo-8">I'll be careful</label>
+          <label class="olt-V2Button olt-V2Button--action" for="v-2-modal-demo-8">I'll be careful</label>
         </div>
       </div>
     </div>
@@ -343,17 +343,17 @@ The icon can be changed while keeping the remaining styles. Also use with care!
 ```html
 <input data-toggle="v2modal" id="v2modal-toggle-8" type="checkbox">
 <label class="olt-V2Button" for="v-2-modal-toggle-8">Open</label>
-<div class="olt-V2Modal">
+<div class="olt-V2Modal olt-V2Modal--action">
   <div class="olt-V2Modal-dialog">
     <header class="olt-V2Modal-header olt-V2Modal-header--custom">
-      <i class="olt-Icon olt-Icon-security-visibility" title="user-add"></i>
+      <i class="olt-Icon olt-Icon-security-visibility"></i>
         Action!
     </header>
     <div class="olt-V2Modal-content">
       <p>... but watch out!</p>
     </div>
     <div class="olt-V2Modal-footer">
-      <label class="olt-V2Button olt-V2Button--success" for="v-2-modal-demo-8">I'll be careful</label>
+      <label class="olt-V2Button olt-V2Button--action" for="v-2-modal-demo-8">I'll be careful</label>
     </div>
   </div>
 </div>
@@ -375,7 +375,12 @@ There is an additional wide *V2Modal* which takes more space when rendered.
         <div class="olt-V2Modal-content">
             <p>This is wide modal, it can accommodate more content than the smaller modal.</p>
             <p>You can add more complex content like forms, etc.</p>
+            <p>It will scroll the content if needed.</p>
             <p>It will also not shrink on mobile devices.</p>
+            <p><br/><br/></p>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         </div>
         <footer class="olt-V2Modal-footer">

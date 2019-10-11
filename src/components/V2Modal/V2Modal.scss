@@ -6,6 +6,7 @@
   $modal-padding-y: 24px;
   $modal-content-padding: 24px;
   $modal-footer-padding-top: 16px;
+  $modal-footer-button-padding: 8px;
 
   $modal-headline-color: var-get('colorLight');
   $modal-icon-padding-right: 16px;
@@ -17,6 +18,16 @@
   $modal-transition-duration: 0.2s;
   $modal-transition-timing-function: ease-in;
   $self: &;
+
+  @function not-any-selector($modifiers, $self) {
+    $res: '';
+
+    @each $m in $modifiers {
+      $res: '#{$res}:not(#{$self}--#{$m})';
+    }
+
+    @return $res;
+  }
 
   position: fixed;
   left: 0;
@@ -37,18 +48,22 @@
   z-index: $olt-z-index-modal;
   display: flex;
   clip: rect(0, 0, 0, 0);
+  pointer-events: all;
+
 
   &-dialog {
-    background: $modal-background;
+    max-height: 90%;
     width: $modal-dialog-width;
+    background: $modal-background;
     padding: 0;
     display: flex;
-    justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: flex-start;
     flex-wrap: wrap;
     transition: transform $modal-transition-duration $modal-transition-timing-function;
     transform: translateY(100%);
     z-index: $olt-z-index-modal-dialog;
+    overflow: auto;
     //pointer-events: auto;
     cursor: auto;
     border-radius: $modal-border-radius;
@@ -77,12 +92,10 @@
 
     @extend .Icon--large;
 
-    @extend .Icon-feedback-check-filled.Icon--large;
-
     padding-right: $modal-icon-padding-right;
   }
 
-  &--error &-header {
+  &--critical &-header {
     background: var-get('colorError');
 
     &:before {
@@ -118,34 +131,50 @@
     background: var-get('colorPrimary');
 
     &:before {
-      @extend .Icon-action-favorite-filled.Icon--large;
+      @extend .Icon-action-settings.Icon--large;
     }
   }
 
-  &-header--custom:before {
-    border: 1px solid red;
-    content: '';
+  $types: ('critical' 'info' 'warning' 'success' 'action');
 
-    & > i {
-      padding-right: $modal-icon-padding-right;
-    }
+  &#{not-any-selector($types, $self)} &-header:before {
+    @extend .Icon-feedback-check-filled.Icon--large;
+  }
+
+  // remove icon for -header--custom modifier
+  &-header--custom:before {
+    content: '' !important;
+  }
+
+  &-header--custom > i {
+    padding-right: $modal-icon-padding-right;
   }
 
   &-content {
     padding: $modal-content-padding;
     justify-content: center;
     text-align: left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    flex-direction: column;
+    flex: 1;
   }
 
   &-footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-top: $modal-footer-padding-top;
-    padding-right: $modal-content-padding;
+    padding: #{$modal-content-padding - $modal-footer-button-padding};
     padding-bottom: $modal-content-padding;
+    padding-top: $modal-footer-padding-top;
     justify-content: flex-end;
     width: 100%;
+
+    & > * {
+      margin-left: $modal-footer-button-padding;
+      margin-right: $modal-footer-button-padding;
+    }
   }
 
   &--wide &-dialog {
