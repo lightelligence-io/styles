@@ -207,37 +207,4 @@
       }
     }
   }
-
-  // @media (max-width: 400px) {
-  //   &.is-open &-dialog {
-  //     transform: translateY(0);
-  //   }
-
-  //   &.is-open &-dialog &-close {
-  //     color: #666;
-  //     position: absolute;
-  //     right: var-get('spacing3');
-  //     top: var-get('spacing3');
-  //     background: #fff;
-  //     font-size: 16px; // icon size
-  //     font-weight: bold;
-  //     text-align: center;
-  //     cursor: pointer;
-  //   }
-  // }
-
-  // FIXME: Prevent nesting of elements
-  // Make sure that nested elements won't break anything
-  // &-content &-footer,
-  // &-content &-header {
-  //   padding: 0;
-  // }
-
-  // &-content &-header {
-  //   padding-bottom: 1.25rem;
-  // }
-
-  // &-content &-footer {
-  //   padding-top: 1.25rem;
-  // }
 }
