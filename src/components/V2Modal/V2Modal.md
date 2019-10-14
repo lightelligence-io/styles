@@ -5,7 +5,7 @@ category: Component
 
 ## Description
 
-V2Modals are used with `<div>` elements and render a popup in full-screen mode.
+V2Modals are used with `<div>` elements and render a popup.
 
 <div class="olt-Card olt-u-padding5">
   <div class="olt-u-marginAuto">
@@ -57,11 +57,12 @@ We support the following modifiers :
 - `olt-V2Modal--warning`
 - `olt-V2Modal--info`
 - `olt-V2Modal--success`
+- `olt-V2Modal--action`
 
 ### Critical modal
 
 Use the critical *V2Modal* whenever you want to communicate an critical or error state to the
-user.
+user. Especially when proceeding will likely lead to an undesired outcome for the user that he is probably not aware of. E.g.: Deleting a role will lead to users being deleted from the tenant because they have no role afterward.
 
 <div class="olt-Card olt-u-padding5">
   <div class="olt-u-marginAuto">
@@ -103,8 +104,8 @@ user.
 
 ### Warning modal
 
-The warning *V2Modal* can be used whenever an additional critical information
-should be provided to the user.
+The warning *V2Modal* is used when needing to show information critical in preventing errors.
+e.g.: 15 of your devices have not responded, check your device management.
 
 <div class="olt-Card olt-u-padding5">
   <div class="olt-u-marginAuto">
@@ -147,7 +148,8 @@ should be provided to the user.
 ### Info modal
 
 The info *V2Modal* can be used whenever an additional non-critical information
-should be provided to the user.
+should be provided to the user. The info will not have negative results no matter the users choice.
+e.g.: You have been invited to a tenant, accept or decline.
 
 <div class="olt-Card olt-u-padding5">
   <div class="olt-u-marginAuto">
@@ -189,7 +191,7 @@ should be provided to the user.
 
 ### Success modal
 
-Use the success *V2Modal* when the actions of the user are successful.
+Use the success *V2Modal* to communicate a success message the user has to be made aware of.
 
 <div class="olt-Card olt-u-padding5">
   <div class="olt-u-marginAuto">
@@ -231,7 +233,8 @@ Use the success *V2Modal* when the actions of the user are successful.
 
 ### Action modal
 
-Use the success *V2Modal* when the actions of the user are successful.
+Use the action *V2Modal* for changes that demand active user input.
+e.g.: Edit the description of a tenant.
 
 <div class="olt-Card olt-u-padding5">
   <div class="olt-u-marginAuto">
