@@ -5,7 +5,7 @@ category: Component
 
 ## Description
 
-You can use the *Card* component to wrap content inside a card-like block. This 
+You can use the *Card* component to wrap content inside a card-like block. This
 component occupies `olt-Card*` class names.
 
 The card can be a `div`, `button` or an `a` element, which makes it suitable
@@ -62,7 +62,7 @@ for drop down menu or additional context actions.
 
 ### Card with *title*, *description*, *content* and *context icon*
 
-Any *Card* can contain additional content inside `.olt-Card-content` if 
+Any *Card* can contain additional content inside `.olt-Card-content` if
 provided.
 
 ```content.html
@@ -107,7 +107,7 @@ body > div.olt-Frame { min-height: 280px; }
 
 ## Colors
 
-The *Cards* can be rendered with 
+The *Cards* can be rendered with
 [any of our conceptual colors](/#concepts-colors) :
 
 ```colors.css hidden
@@ -166,4 +166,29 @@ body > div.olt-Frame { padding: 50px; margin: auto; }
     Content
   </div>
 </button>
+```
+
+## Editable Card
+
+By adding `olt-Card--editable` you can make a card "editable", which will
+add an additional edit button at the top right corner as well as `:hover` and `:active` states to it.
+
+```editable.css hidden
+body > div.olt-Frame { padding: 50px; margin: auto; }
+```
+
+```editable.html
+<div class="olt-Card olt-Card--editable">
+  <div class="olt-Card-header">
+    <h4 class="olt-Card-title">Title</h4>
+    <div class="olt-Card-description">Description</div>
+    <div class="olt-Card-editaction">
+      <div class="olt-Card-editlabel">Edit</div>
+      <i class="olt-Card-editicon"></i>
+    </div>
+  </div>
+  <div class="olt-Card-content">
+    Content
+  </div>
+</div>
 ```
