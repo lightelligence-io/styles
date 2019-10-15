@@ -1,0 +1,190 @@
+.ActionButton {
+  $hover-bg-colors: (
+    'default': var-get('gray100'),
+    'primary': #ff944d,
+    'confirmative': #4dd25e,
+    'destructive': #fd8a85,
+  );
+
+  @function not-any-selector($modifiers, $self) {
+    $res: '';
+
+    @each $m in $modifiers {
+      $res: '#{$res}:not(#{$self}--#{$m})';
+    }
+
+    @return $res;
+  }
+
+  @mixin hover-bg-color($self) {
+    $types: ('default' 'primary' 'confirmative' 'destructive');
+
+    &#{not-any-selector($types, $self)} {
+      background-color: map-get($hover-bg-colors, 'default');
+    }
+
+    @each $type in $types {
+      @debug "divider offset: #{$self}--#{$type}";
+
+      &#{$self}--#{$type} {
+        background-color: map-get($hover-bg-colors, $type);
+      }
+    }
+  }
+
+  @mixin proximity-bg-color($self) {
+    $types: ('default' 'primary' 'confirmative' 'destructive');
+
+    &#{not-any-selector($types, $self)}:before {
+      background-color: map-get($hover-bg-colors, 'default');
+    }
+
+    @each $type in $types {
+      @debug "divider offset: #{$self}--#{$type}";
+
+      &#{$self}--#{$type}:before {
+        background-color: map-get($hover-bg-colors, $type);
+      }
+    }
+  }
+
+
+  $button-padding-x: 16px;
+  $card-edit-icon-size: 36px;
+  $self: &;
+
+  position: relative;
+  background: none;
+  height: 36px;
+  border-style: solid;
+  vertical-align: middle;
+  border-width: 0;
+  border-radius: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 100ms;
+  color: var-get('gray800');
+  // $backgroundcolor: var-get('gray100');
+  padding: 0;
+
+  @extend .u-description;
+
+  &-action-label {
+    opacity: 0;
+    padding: 0 $button-padding-x;
+    transition: opacity 300ms;
+  }
+
+  &--primary {
+    color: var-get('colorPrimary');
+  }
+
+  &--confirmative {
+    color: var-get('colorSuccess');
+  }
+
+  &--destructive {
+    color: var-get('colorError');
+  }
+
+  &--fixed {
+    #{$self}-action-label {
+      opacity: 1;
+    }
+  }
+
+  &--standalone {
+    #{$self}-action-label {
+      display: none;
+    }
+  }
+
+  &--proximity {
+    @include proximity-bg-color($self);
+
+    #{$self}-action-label {
+      opacity: 1;
+    }
+  }
+
+  &--proximity-area {
+    &:hover {
+      & > #{$self} {
+        @include proximity-bg-color($self);
+      }
+
+      & > #{$self} > #{$self}-action-label {
+        opacity: 1;
+      }
+    }
+  }
+
+  &--base {
+    @include hover-bg-color($self);
+
+    #{$self}-action-label {
+      opacity: 1;
+    }
+  }
+
+  &-icon,
+  &-icon-left,
+  &-icon-right {
+    &:before {
+      @extend .Icon;
+
+      @extend .Icon--medium;
+
+      border-radius: 2.5rem;
+      height: $card-edit-icon-size;
+      width: $card-edit-icon-size;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+    }
+  }
+
+  &-icon-left {
+    &:before {
+      margin-right: 8px;
+      transition: margin-right 100ms;
+    }
+
+    #{$self}-action-label {
+      padding-left: 0;
+    }
+  }
+
+  &-icon-right {
+    flex-direction: row-reverse;
+
+    &:before {
+      margin-left: 8px;
+      transition: margin-left 100ms;
+    }
+
+    #{$self}-action-label {
+      padding-right: 0;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    @include hover-bg-color($self);
+
+    outline: none;
+
+    #{$self}-action-label {
+      opacity: 1;
+    }
+
+    &:before {
+      margin: 0;
+      transition: margin 100ms;
+    }
+  }
+}

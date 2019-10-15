@@ -627,6 +627,7 @@
     padding-right: #{$button-padding-x - $icon-size-for-calculation};
   }
 
+  &-icon,
   &-icon-left,
   &-icon-right {
     &:before {
