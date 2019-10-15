@@ -1,9 +1,10 @@
 .ActionButton {
   $hover-bg-colors: (
+    // TODO: how to use var-get('colorPrimary'), var-get('colorSuccess'), var-get('colorError') with lighten
     'default': var-get('gray100'),
-    'primary': #ff944d,
-    'confirmative': #4dd25e,
-    'destructive': #fd8a85,
+    'primary': #ff66001a,
+    'confirmative': #02bf1b1a,
+    'destructive': #fd59521a,
   );
 
   @function not-any-selector($modifiers, $self) {
@@ -66,9 +67,8 @@
   white-space: nowrap;
   text-decoration: none;
   cursor: pointer;
-  transition: all $action-button-transition-time;
+  transition: opacity $action-button-transition-time;
   color: var-get('gray800');
-  // $backgroundcolor: var-get('gray100');
   padding: 0;
 
   @extend .u-description;
@@ -128,9 +128,6 @@
 
     #{$self}-action-label {
       opacity: 1;
-    }
-
-    &:before {
       margin-left: 0 !important;
       margin-right: 0 !important;
     }
@@ -154,12 +151,9 @@
   }
 
   &-icon-left {
-    &:before {
-      margin-right: $action-button-icon-spacing;
-      transition: margin-right $action-button-transition-time;
-    }
-
     #{$self}-action-label {
+      margin-left: $action-button-icon-spacing;
+      transition: margin-left $action-button-transition-time;
       padding-left: 0;
     }
   }
@@ -167,12 +161,9 @@
   &-icon-right {
     flex-direction: row-reverse;
 
-    &:before {
-      margin-left: $action-button-icon-spacing;
-      transition: margin-left $action-button-transition-time;
-    }
-
     #{$self}-action-label {
+      margin-right: $action-button-icon-spacing;
+      transition: margin-right $action-button-transition-time;
       padding-right: 0;
     }
   }
@@ -185,11 +176,33 @@
 
     #{$self}-action-label {
       opacity: 1;
+      margin: 0;
+      transition: margin $action-button-transition-time;
     }
 
     &:before {
+      background-color: transparent !important;
+    }
+  }
+
+  @media (max-width: map-get($olt-v2-breakpoints, sm)) {
+    @include hover-bg-color($self);
+
+    #{$self}-action-label {
+      display: none;
+      opacity: 1;
       margin: 0;
-      transition: margin $action-button-transition-time;
+    }
+
+    &--fixed {
+      #{$self}-action-label {
+        opacity: 1;
+        display: unset !important;
+      }
+    }
+
+    &:before {
+      background-color: transparent !important;
     }
   }
 }
