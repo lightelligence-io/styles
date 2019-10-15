@@ -163,6 +163,8 @@ $chip-colors: (
     padding-left: 8px;
 
     &:before {
+      @extend .Icon;
+
       margin-right: 2px;
     }
   }
@@ -171,6 +173,8 @@ $chip-colors: (
     padding-right: 24px;
 
     &:before {
+      @extend .Icon;
+
       position: absolute;
       right: 8px;
     }
@@ -200,7 +204,7 @@ $chip-colors: (
 
     &-icon {
       &:before {
-        @include icon-font-olt;
+        @extend .Icon;
 
         display: inline-flex;
         vertical-align: middle;
