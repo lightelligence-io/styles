@@ -24,8 +24,6 @@
     }
 
     @each $type in $types {
-      @debug "divider offset: #{$self}--#{$type}";
-
       &#{$self}--#{$type} {
         background-color: map-get($hover-bg-colors, $type);
       }
@@ -40,8 +38,6 @@
     }
 
     @each $type in $types {
-      @debug "divider offset: #{$self}--#{$type}";
-
       &#{$self}--#{$type}:before {
         background-color: map-get($hover-bg-colors, $type);
       }
@@ -49,8 +45,12 @@
   }
 
 
-  $button-padding-x: 16px;
-  $card-edit-icon-size: 36px;
+  $action-button-padding-x: 16px;
+  $action-button-edit-icon-size: 36px;
+  $action-button-icon-spacing: 8px;
+  $action-button-border-radius: 2.5rem;
+  $action-button-transition-time: 100ms;
+  $action-button-label-transition-time: 300ms;
   $self: &;
 
   position: relative;
@@ -59,14 +59,14 @@
   border-style: solid;
   vertical-align: middle;
   border-width: 0;
-  border-radius: 2.5rem;
+  border-radius: $action-button-border-radius;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   white-space: nowrap;
   text-decoration: none;
   cursor: pointer;
-  transition: all 100ms;
+  transition: all $action-button-transition-time;
   color: var-get('gray800');
   // $backgroundcolor: var-get('gray100');
   padding: 0;
@@ -75,8 +75,8 @@
 
   &-action-label {
     opacity: 0;
-    padding: 0 $button-padding-x;
-    transition: opacity 300ms;
+    padding: 0 $action-button-padding-x;
+    transition: opacity $action-button-label-transition-time;
   }
 
   &--primary {
@@ -129,6 +129,11 @@
     #{$self}-action-label {
       opacity: 1;
     }
+
+    &:before {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
   }
 
   &-icon,
@@ -139,9 +144,9 @@
 
       @extend .Icon--medium;
 
-      border-radius: 2.5rem;
-      height: $card-edit-icon-size;
-      width: $card-edit-icon-size;
+      border-radius: $action-button-border-radius;
+      height: $action-button-edit-icon-size;
+      width: $action-button-edit-icon-size;
       align-items: center;
       justify-content: center;
       align-self: center;
@@ -150,8 +155,8 @@
 
   &-icon-left {
     &:before {
-      margin-right: 8px;
-      transition: margin-right 100ms;
+      margin-right: $action-button-icon-spacing;
+      transition: margin-right $action-button-transition-time;
     }
 
     #{$self}-action-label {
@@ -163,8 +168,8 @@
     flex-direction: row-reverse;
 
     &:before {
-      margin-left: 8px;
-      transition: margin-left 100ms;
+      margin-left: $action-button-icon-spacing;
+      transition: margin-left $action-button-transition-time;
     }
 
     #{$self}-action-label {
@@ -184,7 +189,7 @@
 
     &:before {
       margin: 0;
-      transition: margin 100ms;
+      transition: margin $action-button-transition-time;
     }
   }
 }
