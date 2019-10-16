@@ -178,13 +178,14 @@ body > div.olt-Frame { padding: 50px; margin: auto; }
 ```
 
 ```editable.html
-<div class="olt-Card olt-Card--editable">
+<div class="olt-Card olt-Card--editable olt-ActionButton--proximity-area">
   <div class="olt-Card-header">
     <h4 class="olt-Card-title">Title</h4>
     <div class="olt-Card-description">Description</div>
-    <div class="olt-Card-editaction">
-      <div class="olt-Card-editlabel">Edit</div>
-      <i class="olt-Card-editicon"></i>
+    <div class="olt-Card-action">
+      <button class="olt-ActionButton olt-ActionButton--primary olt-ActionButton-icon-right olt-Icon-action-edit">
+        <div class="olt-ActionButton-label">Edit</div>
+      </button>
     </div>
   </div>
   <div class="olt-Card-content">

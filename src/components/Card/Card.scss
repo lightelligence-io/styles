@@ -70,7 +70,6 @@
     color: var-get('gray600');
   }
 
-  &-editaction,
   &-action {
     display: inline-block;
     margin-left: auto;
@@ -79,48 +78,6 @@
     float: right;
     grid-row-start: 1;
     grid-row-end: 3;
-  }
-
-  &-editaction {
-    @extend .u-support;
-
-    display: flex;
-    border-radius: 2.5rem;
-    height: $card-edit-icon-size;
-    padding: 0;
-    padding-left: 16px;
-
-    &:hover {
-      background-color: var-get('gray100');
-
-      #{$self}-editicon {
-        margin-left: 0;
-        transition: margin-left 100ms;
-      }
-    }
-  }
-
-  &-editlabel {
-    visibility: hidden;
-    align-self: center;
-  }
-
-  &-editicon {
-    @extend .Icon;
-
-    @extend .Icon--medium;
-
-    @extend .Icon-action-edit;
-
-    color: var-get('gray800');
-    border-radius: 2.5rem;
-    height: $card-edit-icon-size;
-    width: $card-edit-icon-size;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    margin-left: 8px;
-    transition: margin-left 100ms;
   }
 
   &-image {

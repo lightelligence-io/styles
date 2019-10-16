@@ -98,12 +98,13 @@
 
   &--proximity-area {
     &:hover {
-      & > #{$self} {
+      & #{$self} {
         @include icon-bg-color($self, ':before');
       }
 
-      & > #{$self} > #{$self}-label {
+      & #{$self} > #{$self}-label {
         opacity: 1;
+        transition: opacity $action-button-label-transition-time;
       }
     }
   }
