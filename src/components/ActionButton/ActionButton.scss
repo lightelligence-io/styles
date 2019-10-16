@@ -6,31 +6,6 @@
     'confirmative': #02bf1b1a,
     'destructive': #fd59521a,
   );
-
-  @function not-any-selector($modifiers, $self) {
-    $res: '';
-
-    @each $m in $modifiers {
-      $res: '#{$res}:not(#{$self}--#{$m})';
-    }
-
-    @return $res;
-  }
-
-  @mixin icon-bg-color($self, $pseudo) {
-    $types: ('default' 'primary' 'confirmative' 'destructive');
-
-    &#{not-any-selector($types, $self)}#{$pseudo} {
-      background-color: map-get($icon-bg-colors, 'default');
-    }
-
-    @each $type in $types {
-      &#{$self}--#{$type}#{$pseudo} {
-        background-color: map-get($icon-bg-colors, $type);
-      }
-    }
-  }
-
   $action-button-padding-x: 16px;
   $action-button-edit-icon-size: 36px;
   $action-button-icon-spacing: 4px;
@@ -64,8 +39,6 @@
     transition: opacity $action-button-label-transition-time;
   }
 
-  @include icon-bg-color($self, ':after');
-
   &:after {
     content: '';
     opacity: 0;
@@ -75,18 +48,31 @@
     width: 36px;
     height: 36px;
     border-radius: 18px;
+    background-color: map-get($icon-bg-colors, 'default');
   }
 
   &--primary {
     color: var-get('colorPrimary');
+
+    &:after {
+      background-color: map-get($icon-bg-colors, 'primary');
+    }
   }
 
   &--confirmative {
     color: var-get('colorSuccess');
+
+    &:after {
+      background-color: map-get($icon-bg-colors, 'confirmative');
+    }
   }
 
   &--destructive {
     color: var-get('colorError');
+
+    &:after {
+      background-color: map-get($icon-bg-colors, 'destructive');
+    }
   }
 
   &--fixed {
@@ -102,7 +88,9 @@
   }
 
   &--proximity {
-    @include icon-bg-color($self, ':before');
+    &:after {
+      opacity: 1;
+    }
 
     #{$self}-label {
       opacity: 1;
@@ -122,7 +110,9 @@
   }
 
   &--base {
-    @include icon-bg-color($self, '');
+    &:after {
+      opacity: 1;
+    }
 
     #{$self}-label {
       opacity: 1;
@@ -191,8 +181,6 @@
   }
 
   @media (max-width: map-get($olt-v2-breakpoints, sm)) {
-    @include icon-bg-color($self, '');
-
     #{$self}-label {
       display: none;
       opacity: 1;
@@ -205,8 +193,9 @@
       }
     }
 
-    &:before {
-      background-color: transparent !important;
+    &:after {
+      opacity: 1;
+      width: 100%;
     }
   }
 }
