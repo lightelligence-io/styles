@@ -168,17 +168,17 @@ body > div.olt-Frame { padding: 50px; margin: auto; }
 </button>
 ```
 
-## Editable Card
+## Edit Card
 
-By adding `olt-Card--editable` you can make a card "editable", which will
+By adding `olt-Card--edit` you can make a card "edit", which will
 add an additional edit button at the top right corner as well as `:hover` and `:active` states to it.
 
-```editable.css hidden
+```edit.css hidden
 body > div.olt-Frame { padding: 50px; margin: auto; }
 ```
 
-```editable.html
-<div class="olt-Card olt-Card--editable olt-ActionButton--proximity-area">
+```edit.html
+<div class="olt-Card olt-Card--edit olt-ActionButton--proximity-area">
   <div class="olt-Card-header">
     <h4 class="olt-Card-title">Title</h4>
     <div class="olt-Card-description">Description</div>
