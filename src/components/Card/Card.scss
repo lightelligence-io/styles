@@ -114,14 +114,6 @@
 
     &:hover {
       box-shadow: $card-hover-box-shadow;
-
-      #{$self}-editicon {
-        background-color: var-get('gray100');
-      }
-
-      #{$self}-editlabel {
-        visibility: visible;
-      }
     }
 
     &:active {
