@@ -58,7 +58,7 @@
 
   @extend .u-description;
 
-  &-action-label {
+  &-label {
     opacity: 0;
     padding: 0 $action-button-padding-x;
     transition: opacity $action-button-label-transition-time;
@@ -77,13 +77,13 @@
   }
 
   &--fixed {
-    #{$self}-action-label {
+    #{$self}-label {
       opacity: 1;
     }
   }
 
   &--standalone {
-    #{$self}-action-label {
+    #{$self}-label {
       display: none;
     }
   }
@@ -91,7 +91,7 @@
   &--proximity {
     @include icon-bg-color($self, ':before');
 
-    #{$self}-action-label {
+    #{$self}-label {
       opacity: 1;
     }
   }
@@ -102,7 +102,7 @@
         @include icon-bg-color($self, ':before');
       }
 
-      & > #{$self} > #{$self}-action-label {
+      & > #{$self} > #{$self}-label {
         opacity: 1;
       }
     }
@@ -111,7 +111,7 @@
   &--base {
     @include icon-bg-color($self, '');
 
-    #{$self}-action-label {
+    #{$self}-label {
       opacity: 1;
       margin-left: 0 !important;
       margin-right: 0 !important;
@@ -136,7 +136,7 @@
   }
 
   &-icon-left {
-    #{$self}-action-label {
+    #{$self}-label {
       margin-left: $action-button-icon-spacing;
       transition: margin-left $action-button-transition-time;
       padding-left: 0;
@@ -146,7 +146,7 @@
   &-icon-right {
     flex-direction: row-reverse;
 
-    #{$self}-action-label {
+    #{$self}-label {
       margin-right: $action-button-icon-spacing;
       transition: margin-right $action-button-transition-time;
       padding-right: 0;
@@ -159,7 +159,7 @@
 
     outline: none;
 
-    #{$self}-action-label {
+    #{$self}-label {
       opacity: 1;
       margin: 0;
       transition: margin $action-button-transition-time;
@@ -173,14 +173,14 @@
   @media (max-width: map-get($olt-v2-breakpoints, sm)) {
     @include icon-bg-color($self, '');
 
-    #{$self}-action-label {
+    #{$self}-label {
       display: none;
       opacity: 1;
       margin: 0;
     }
 
     &--fixed {
-      #{$self}-action-label {
+      #{$self}-label {
         opacity: 1;
         display: unset !important;
       }

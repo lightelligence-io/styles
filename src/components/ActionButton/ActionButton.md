@@ -64,7 +64,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton-icon-left olt-Icon-action-edit">
-                  <div class="olt-ActionButton-action-label">
+                  <div class="olt-ActionButton-label">
                     Label
                   </div>
                 </button>
@@ -72,7 +72,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton-icon-left olt-Icon-action-edit olt-ActionButton--proximity">
-                  <div class="olt-ActionButton-action-label">
+                  <div class="olt-ActionButton-label">
                     Label
                   </div>
                 </button>
@@ -80,7 +80,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton-icon-left olt-Icon-action-edit olt-ActionButton--fixed">
-                  <div class="olt-ActionButton-action-label">
+                  <div class="olt-ActionButton-label">
                     Label
                   </div>
                 </button>
@@ -88,7 +88,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton-icon-left olt-Icon-action-edit olt-ActionButton--standalone">
-                  <div class="olt-ActionButton-action-label">
+                  <div class="olt-ActionButton-label">
                     Label
                   </div>
                 </button>
@@ -96,7 +96,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton-icon-left olt-Icon-action-edit olt-ActionButton--standalone olt-ActionButton--base">
-                  <div class="olt-ActionButton-action-label">
+                  <div class="olt-ActionButton-label">
                     Label
                   </div>
                 </button>
@@ -104,7 +104,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton-icon-right olt-Icon-action-edit">
-                  <div class="olt-ActionButton-action-label">
+                  <div class="olt-ActionButton-label">
                     Label
                   </div>
                 </button>
@@ -124,7 +124,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton--primary olt-ActionButton-icon-left olt-Icon-action-add-circle">
-                  <div class="olt-ActionButton-action-label">
+                  <div class="olt-ActionButton-label">
                     Label
                   </div>
                 </button>
@@ -132,7 +132,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton--primary olt-ActionButton-icon-left olt-Icon-action-add-circle olt-ActionButton--proximity">
-                  <div class="olt-ActionButton-action-label">
+                  <div class="olt-ActionButton-label">
                     Label
                   </div>
                 </button>
@@ -140,7 +140,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton--primary olt-ActionButton-icon-left olt-Icon-action-add-circle olt-ActionButton--fixed">
-                  <div class="olt-ActionButton-action-label">
+                  <div class="olt-ActionButton-label">
                     Label
                   </div>
                 </button>
@@ -148,7 +148,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton--primary olt-ActionButton-icon-left olt-Icon-action-add-circle olt-ActionButton--standalone">
-                  <div class="olt-ActionButton-action-label">
+                  <div class="olt-ActionButton-label">
                     Label
                   </div>
                 </button>
@@ -156,7 +156,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton--primary olt-ActionButton-icon-left olt-Icon-action-add-circle olt-ActionButton--standalone olt-ActionButton--base">
-                  <div class="olt-ActionButton-action-label">
+                  <div class="olt-ActionButton-label">
                     Label
                   </div>
                 </button>
@@ -164,7 +164,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton--primary olt-ActionButton-icon-right olt-Icon-action-add-circle">
-                <div class="olt-ActionButton-action-label">
+                <div class="olt-ActionButton-label">
                   Label
                 </div>
               </button>
@@ -184,7 +184,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton--destructive olt-ActionButton-icon-left olt-Icon-action-remove-circle">
-                  <div class="olt-ActionButton-action-label">
+                  <div class="olt-ActionButton-label">
                     Label
                   </div>
                 </button>
@@ -192,7 +192,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton--destructive olt-ActionButton-icon-left olt-Icon-action-remove-circle olt-ActionButton--proximity">
-                  <div class="olt-ActionButton-action-label">
+                  <div class="olt-ActionButton-label">
                     Label
                   </div>
                 </button>
@@ -200,7 +200,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton--destructive olt-ActionButton-icon-left olt-Icon-action-remove-circle olt-ActionButton--fixed">
-                  <div class="olt-ActionButton-action-label">
+                  <div class="olt-ActionButton-label">
                     Label
                   </div>
                 </button>
@@ -208,7 +208,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton--destructive olt-ActionButton-icon-left olt-Icon-action-remove-circle olt-ActionButton--standalone">
-                  <div class="olt-ActionButton-action-label">
+                  <div class="olt-ActionButton-label">
                     Label
                   </div>
                 </button>
@@ -216,7 +216,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton--destructive olt-ActionButton-icon-left olt-Icon-action-remove-circle olt-ActionButton--standalone olt-ActionButton--base">
-                  <div class="olt-ActionButton-action-label">
+                  <div class="olt-ActionButton-label">
                     Label
                   </div>
                 </button>
@@ -224,7 +224,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton--destructive olt-ActionButton-icon-right olt-Icon-action-add-circle">
-                <div class="olt-ActionButton-action-label">
+                <div class="olt-ActionButton-label">
                   Label
                 </div>
               </button>
@@ -244,7 +244,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton--confirmative olt-ActionButton-icon-left olt-Icon-action-refresh">
-                  <div class="olt-ActionButton-action-label">
+                  <div class="olt-ActionButton-label">
                     Label
                   </div>
                 </button>
@@ -252,7 +252,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton--confirmative olt-ActionButton-icon-left olt-Icon-action-refresh olt-ActionButton--proximity">
-                  <div class="olt-ActionButton-action-label">
+                  <div class="olt-ActionButton-label">
                     Label
                   </div>
                 </button>
@@ -260,7 +260,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton--confirmative olt-ActionButton-icon-left olt-Icon-action-refresh olt-ActionButton--fixed">
-                  <div class="olt-ActionButton-action-label">
+                  <div class="olt-ActionButton-label">
                     Label
                   </div>
                 </button>
@@ -268,7 +268,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton--confirmative olt-ActionButton-icon-left olt-Icon-action-refresh olt-ActionButton--standalone">
-                  <div class="olt-ActionButton-action-label">
+                  <div class="olt-ActionButton-label">
                     Label
                   </div>
                 </button>
@@ -276,7 +276,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton--confirmative olt-ActionButton-icon-left olt-Icon-action-refresh olt-ActionButton--standalone olt-ActionButton--base">
-                  <div class="olt-ActionButton-action-label">
+                  <div class="olt-ActionButton-label">
                     Label
                   </div>
                 </button>
@@ -284,7 +284,7 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton--confirmative olt-ActionButton-icon-right olt-Icon-action-refresh">
-                <div class="olt-ActionButton-action-label">
+                <div class="olt-ActionButton-label">
                   Label
                 </div>
               </button>
@@ -302,12 +302,12 @@ On Tablet and Mobile Devices the action button is always displayed as the "Stand
 ```example.html
 <div class="olt-ActionButton--proximity-area" style="padding: 20px">
 <button class="olt-ActionButton olt-ActionButton--primary olt-ActionButton-icon-left olt-Icon-action-edit">
-  <div class="olt-ActionButton-action-label">Edit</div>
+  <div class="olt-ActionButton-label">Edit</div>
 </button>
 </div>
 <div class="olt-ActionButton--proximity-area" style="padding: 20px">
 <button class="olt-ActionButton olt-ActionButton--fixed olt-ActionButton--primary olt-ActionButton-icon-left olt-Icon-action-edit">
-  <div class="olt-ActionButton-action-label">Edit (fixed label)</div>
+  <div class="olt-ActionButton-label">Edit (fixed label)</div>
 </button>
 </div>
 ```
