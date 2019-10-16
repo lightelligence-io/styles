@@ -61,7 +61,7 @@
   &-label {
     opacity: 0;
     padding: 0 $action-button-padding-x;
-    transition: opacity $action-button-label-transition-time;
+    transition: opacity $action-button-label-transition-time !important;
   }
 
   &--primary {
