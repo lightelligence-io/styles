@@ -8,7 +8,7 @@ category: Component
 
 V2-Buttons can be used with `<button>` and `<a>` elements and occupy the `olt-ActionButton*` class names.
 
-The Action Button consists of three three state, depending on the cursor's distance to the click-area:
+The Action Button consists of three states, depending on the cursor's distance to the click-area:
 
 - Default: The label is hidden and only the icon is displayed
 - Approximation: If the cursor is over a containing element (or near the button) the icon's base and the label appear
@@ -297,7 +297,7 @@ Additional modifiers:
 </div>
 
 
-On Tablet and Mobile Devices the action button is always displayed as the "Standalone with Base" variant to increase and show the click-area. If the standalone version cannot satisfactory represent the action it can be assisted with the label ("Fixed Label") depending on the context
+On Tablet and Mobile Devices the action button is always displayed as the "Standalone with Base" variant to increase and show the click-area. If the standalone version cannot properly represent the action it should be used together with the label ("Fixed Label") depending on the context.
 
 ```example.html
 <div class="olt-ActionButton--proximity-area" style="padding: 20px">
