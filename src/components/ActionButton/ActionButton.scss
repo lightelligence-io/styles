@@ -1,0 +1,193 @@
+.ActionButton {
+  $icon-bg-colors: (
+    // TODO: how to use var-get('colorPrimary'), var-get('colorSuccess'), var-get('colorError') with lighten
+    'default': var-get('gray100'),
+    'primary': #ff66001a,
+    'confirmative': #02bf1b1a,
+    'destructive': #fd59521a,
+  );
+
+  @function not-any-selector($modifiers, $self) {
+    $res: '';
+
+    @each $m in $modifiers {
+      $res: '#{$res}:not(#{$self}--#{$m})';
+    }
+
+    @return $res;
+  }
+
+  @mixin icon-bg-color($self, $before) {
+    $types: ('default' 'primary' 'confirmative' 'destructive');
+
+    &#{not-any-selector($types, $self)}#{$before} {
+      background-color: map-get($icon-bg-colors, 'default');
+    }
+
+    @each $type in $types {
+      &#{$self}--#{$type}#{$before} {
+        background-color: map-get($icon-bg-colors, $type);
+      }
+    }
+  }
+
+  $action-button-padding-x: 16px;
+  $action-button-edit-icon-size: 36px;
+  $action-button-icon-spacing: 8px;
+  $action-button-border-radius: 2.5rem;
+  $action-button-transition-time: 100ms;
+  $action-button-label-transition-time: 300ms;
+  $self: &;
+
+  position: relative;
+  background: none;
+  height: 36px;
+  border-style: solid;
+  vertical-align: middle;
+  border-width: 0;
+  border-radius: $action-button-border-radius;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity $action-button-transition-time;
+  color: var-get('gray800');
+  padding: 0;
+
+  @extend .u-description;
+
+  &-label {
+    opacity: 0;
+    padding: 0 $action-button-padding-x;
+    transition: opacity $action-button-label-transition-time;
+  }
+
+  &--primary {
+    color: var-get('colorPrimary');
+  }
+
+  &--confirmative {
+    color: var-get('colorSuccess');
+  }
+
+  &--destructive {
+    color: var-get('colorError');
+  }
+
+  &--fixed {
+    #{$self}-label {
+      opacity: 1;
+    }
+  }
+
+  &--standalone {
+    #{$self}-label {
+      display: none;
+    }
+  }
+
+  &--proximity {
+    @include icon-bg-color($self, ':before');
+
+    #{$self}-label {
+      opacity: 1;
+    }
+  }
+
+  &--proximity-area {
+    &:hover {
+      & > #{$self} {
+        @include icon-bg-color($self, ':before');
+      }
+
+      & > #{$self} > #{$self}-label {
+        opacity: 1;
+      }
+    }
+  }
+
+  &--base {
+    @include icon-bg-color($self, '');
+
+    #{$self}-label {
+      opacity: 1;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+
+  &-icon,
+  &-icon-left,
+  &-icon-right {
+    &:before {
+      @extend .Icon;
+
+      @extend .Icon--medium;
+
+      border-radius: $action-button-border-radius;
+      height: $action-button-edit-icon-size;
+      width: $action-button-edit-icon-size;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+    }
+  }
+
+  &-icon-left {
+    #{$self}-label {
+      margin-left: $action-button-icon-spacing;
+      transition: margin-left $action-button-transition-time;
+      padding-left: 0;
+    }
+  }
+
+  &-icon-right {
+    flex-direction: row-reverse;
+
+    #{$self}-label {
+      margin-right: $action-button-icon-spacing;
+      transition: margin-right $action-button-transition-time;
+      padding-right: 0;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    @include icon-bg-color($self, '');
+
+    outline: none;
+
+    #{$self}-label {
+      opacity: 1;
+      margin: 0;
+      transition: margin $action-button-transition-time;
+    }
+
+    &:before {
+      background-color: transparent !important;
+    }
+  }
+
+  @media (max-width: map-get($olt-v2-breakpoints, sm)) {
+    @include icon-bg-color($self, '');
+
+    #{$self}-label {
+      display: none;
+      opacity: 1;
+      margin: 0;
+    }
+
+    &--fixed {
+      #{$self}-label {
+        opacity: 1;
+        display: unset !important;
+      }
+    }
+
+    &:before {
+      background-color: transparent !important;
+    }
+  }
+}

@@ -470,6 +470,7 @@
         'normal'
       );
 
+      &:focus,
       &:hover {
         @include button-set-state-defaults(
           $self,
@@ -478,6 +479,8 @@
           $type,
           'hover'
         );
+
+        outline: none;
       }
 
       &:active {
@@ -532,7 +535,7 @@
     }
   }
 
-  $button-padding-x: 32px;
+  $button-padding-x: 50px;
   $pagination-button-padding-x: 16px;
   $button-padding-y: 0;
   $button-border-color: var-get('borderColor');
@@ -550,11 +553,12 @@
     #fff,
     $button-pending-opacity
   ); // TODO: Hardcode button-pending-color for the sake of css variables
+  $icon-size-for-calculation: 12px;
   $self: &;
 
   position: relative;
   background: none;
-  min-height: 36px;
+  height: 36px;
   border-style: solid;
   vertical-align: middle;
   line-height: $button-line-height;
@@ -613,22 +617,33 @@
     }
   }
 
+  &-icon-left {
+    padding-left: #{$button-padding-x - $icon-size-for-calculation};
+    padding-right: #{$button-padding-x + 2px - $icon-size-for-calculation};
+  }
+
+  &-icon-right {
+    padding-left: #{$button-padding-x + 2px - $icon-size-for-calculation};
+    padding-right: #{$button-padding-x - $icon-size-for-calculation};
+  }
+
+  &-icon,
   &-icon-left,
   &-icon-right {
     &:before {
-      @include icon-font-olt;
+      @extend .Icon;
     }
   }
 
   &-icon-left:before {
-    margin-right: 2px;
+    margin-right: 8px;
   }
 
   &-icon-right {
     flex-direction: row-reverse;
 
     &:before {
-      margin-left: 2px;
+      margin-left: 8px;
     }
   }
 }
