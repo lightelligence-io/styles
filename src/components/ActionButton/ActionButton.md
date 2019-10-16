@@ -16,8 +16,6 @@ The Action Button consists of three three state, depending on the cursor's dista
 
 Use `--default`, `--primary`, `--destructive` and `--confirmative` modifiers to define the type of the button and set its respective color.
 
-### Light Theme (default)
-
 <div class="olt-Grid olt-u-marginTop4 olt-u-marginBottom6">
   <div class="olt-Grid-item olt-Grid-item--3">
     <div class="demo-spacer--small" style="height: 45px;"></div>
