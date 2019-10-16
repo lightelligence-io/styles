@@ -1,41 +1,16 @@
 .ActionButton {
   $icon-bg-colors: (
-    // TODO: how to use var-get('colorPrimary'), var-get('colorSuccess'), var-get('colorError') with lighten
-    'default': var-get('gray100'),
+    // TODO: how to use var-get('colorPrimary'), var-get('colorSuccess'), var-get('colorError'), var-get('gray100'), with lighten
+    'default': #0000001a,
     'primary': #ff66001a,
     'confirmative': #02bf1b1a,
     'destructive': #fd59521a,
   );
-
-  @function not-any-selector($modifiers, $self) {
-    $res: '';
-
-    @each $m in $modifiers {
-      $res: '#{$res}:not(#{$self}--#{$m})';
-    }
-
-    @return $res;
-  }
-
-  @mixin icon-bg-color($self, $before) {
-    $types: ('default' 'primary' 'confirmative' 'destructive');
-
-    &#{not-any-selector($types, $self)}#{$before} {
-      background-color: map-get($icon-bg-colors, 'default');
-    }
-
-    @each $type in $types {
-      &#{$self}--#{$type}#{$before} {
-        background-color: map-get($icon-bg-colors, $type);
-      }
-    }
-  }
-
   $action-button-padding-x: 16px;
   $action-button-edit-icon-size: 36px;
-  $action-button-icon-spacing: 8px;
+  $action-button-icon-spacing: 4px;
   $action-button-border-radius: 2.5rem;
-  $action-button-transition-time: 100ms;
+  $action-button-transition-time: 200ms;
   $action-button-label-transition-time: 300ms;
   $self: &;
 
@@ -64,16 +39,40 @@
     transition: opacity $action-button-label-transition-time !important;
   }
 
+  &:after {
+    content: '';
+    opacity: 0;
+    transition: width $action-button-label-transition-time;
+    position: absolute;
+    z-index: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: map-get($icon-bg-colors, 'default');
+  }
+
   &--primary {
     color: var-get('colorPrimary');
+
+    &:after {
+      background-color: map-get($icon-bg-colors, 'primary');
+    }
   }
 
   &--confirmative {
     color: var-get('colorSuccess');
+
+    &:after {
+      background-color: map-get($icon-bg-colors, 'confirmative');
+    }
   }
 
   &--destructive {
     color: var-get('colorError');
+
+    &:after {
+      background-color: map-get($icon-bg-colors, 'destructive');
+    }
   }
 
   &--fixed {
@@ -89,7 +88,9 @@
   }
 
   &--proximity {
-    @include icon-bg-color($self, ':before');
+    &:after {
+      opacity: 1;
+    }
 
     #{$self}-label {
       opacity: 1;
@@ -98,8 +99,8 @@
 
   &--proximity-area {
     &:hover {
-      & #{$self} {
-        @include icon-bg-color($self, ':before');
+      & #{$self}:after {
+        opacity: 1;
       }
 
       & #{$self} > #{$self}-label {
@@ -110,7 +111,9 @@
   }
 
   &--base {
-    @include icon-bg-color($self, '');
+    &:after {
+      opacity: 1;
+    }
 
     #{$self}-label {
       opacity: 1;
@@ -139,8 +142,11 @@
   &-icon-left {
     #{$self}-label {
       margin-left: $action-button-icon-spacing;
-      transition: margin-left $action-button-transition-time;
       padding-left: 0;
+    }
+
+    &:after {
+      left: 0;
     }
   }
 
@@ -149,21 +155,25 @@
 
     #{$self}-label {
       margin-right: $action-button-icon-spacing;
-      transition: margin-right $action-button-transition-time;
       padding-right: 0;
+    }
+
+    &:after {
+      right: 0;
     }
   }
 
   &:focus,
   &:hover {
-    @include icon-bg-color($self, '');
-
     outline: none;
 
     #{$self}-label {
       opacity: 1;
-      margin: 0;
-      transition: margin $action-button-transition-time !important;
+    }
+
+    &:after {
+      opacity: 1;
+      width: 100%;
     }
 
     &:before {
@@ -172,12 +182,9 @@
   }
 
   @media (max-width: map-get($olt-v2-breakpoints, sm)) {
-    @include icon-bg-color($self, '');
-
     #{$self}-label {
       display: none;
       opacity: 1;
-      margin: 0;
     }
 
     &--fixed {
@@ -187,8 +194,9 @@
       }
     }
 
-    &:before {
-      background-color: transparent !important;
+    &:after {
+      opacity: 1;
+      width: 100%;
     }
   }
 }
