@@ -16,6 +16,13 @@ The Action Button consists of three three state, depending on the cursor's dista
 
 Use `--default`, `--primary`, `--destructive` and `--confirmative` modifiers to define the type of the button and set its respective color.
 
+Additional modifiers:
+- `--fixed` ensures that the label is always shown
+- `--standalone` hides the label
+- `--base` always shows the base (hover effect)
+- `--proximity` show the icon base (proximity effect)
+- `--proximity-area` define a surrounding element as proximity area to apply the proximity effect when the mouse approaches the button
+
 <div class="olt-Grid olt-u-marginTop4 olt-u-marginBottom6">
   <div class="olt-Grid-item olt-Grid-item--3">
     <div class="demo-spacer--small" style="height: 45px;"></div>
