@@ -163,7 +163,7 @@
     #{$self}-label {
       opacity: 1;
       margin: 0;
-      transition: margin $action-button-transition-time;
+      transition: margin $action-button-transition-time !important;
     }
 
     &:before {
