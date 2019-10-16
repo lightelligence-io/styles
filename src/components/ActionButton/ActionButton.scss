@@ -1,7 +1,7 @@
 .ActionButton {
   $icon-bg-colors: (
-    // TODO: how to use var-get('colorPrimary'), var-get('colorSuccess'), var-get('colorError') with lighten
-    'default': var-get('gray100'),
+    // TODO: how to use var-get('colorPrimary'), var-get('colorSuccess'), var-get('colorError'), var-get('gray100'), with lighten
+    'default': #0000001a,
     'primary': #ff66001a,
     'confirmative': #02bf1b1a,
     'destructive': #fd59521a,
@@ -17,15 +17,15 @@
     @return $res;
   }
 
-  @mixin icon-bg-color($self, $before) {
+  @mixin icon-bg-color($self, $pseudo) {
     $types: ('default' 'primary' 'confirmative' 'destructive');
 
-    &#{not-any-selector($types, $self)}#{$before} {
+    &#{not-any-selector($types, $self)}#{$pseudo} {
       background-color: map-get($icon-bg-colors, 'default');
     }
 
     @each $type in $types {
-      &#{$self}--#{$type}#{$before} {
+      &#{$self}--#{$type}#{$pseudo} {
         background-color: map-get($icon-bg-colors, $type);
       }
     }
@@ -33,9 +33,9 @@
 
   $action-button-padding-x: 16px;
   $action-button-edit-icon-size: 36px;
-  $action-button-icon-spacing: 8px;
+  $action-button-icon-spacing: 4px;
   $action-button-border-radius: 2.5rem;
-  $action-button-transition-time: 100ms;
+  $action-button-transition-time: 200ms;
   $action-button-label-transition-time: 300ms;
   $self: &;
 
@@ -62,6 +62,19 @@
     opacity: 0;
     padding: 0 $action-button-padding-x;
     transition: opacity $action-button-label-transition-time;
+  }
+
+  @include icon-bg-color($self, ':after');
+
+  &:after {
+    content: '';
+    opacity: 0;
+    transition: width $action-button-label-transition-time;
+    position: absolute;
+    z-index: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
   }
 
   &--primary {
@@ -98,11 +111,11 @@
 
   &--proximity-area {
     &:hover {
-      & > #{$self} {
-        @include icon-bg-color($self, ':before');
+      & #{$self}:after {
+        opacity: 1;
       }
 
-      & > #{$self} > #{$self}-label {
+      & #{$self} > #{$self}-label {
         opacity: 1;
       }
     }
@@ -138,8 +151,11 @@
   &-icon-left {
     #{$self}-label {
       margin-left: $action-button-icon-spacing;
-      transition: margin-left $action-button-transition-time;
       padding-left: 0;
+    }
+
+    &:after {
+      left: 0;
     }
   }
 
@@ -148,21 +164,25 @@
 
     #{$self}-label {
       margin-right: $action-button-icon-spacing;
-      transition: margin-right $action-button-transition-time;
       padding-right: 0;
+    }
+
+    &:after {
+      right: 0;
     }
   }
 
   &:focus,
   &:hover {
-    @include icon-bg-color($self, '');
-
     outline: none;
 
     #{$self}-label {
       opacity: 1;
-      margin: 0;
-      transition: margin $action-button-transition-time;
+    }
+
+    &:after {
+      opacity: 1;
+      width: 100%;
     }
 
     &:before {
@@ -176,7 +196,6 @@
     #{$self}-label {
       display: none;
       opacity: 1;
-      margin: 0;
     }
 
     &--fixed {
