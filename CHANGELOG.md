@@ -62,4 +62,9 @@
 - Chore: Deploy Alpha Documentation to GitHub Pages
 
 #v1.0.0-alpha.2
-- Feature: Pagination-specific Buttons and Select
+- Feature: added Pagination-specific Buttons and Select Control
+- Feature: added new Action Button
+- Feature: added new Edit Cards
+- Fix: V2Button Styling
+- Fix: Chips Icons
+- Chore: Updated Dependencies
