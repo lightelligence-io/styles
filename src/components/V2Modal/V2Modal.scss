@@ -1,0 +1,210 @@
+.V2Modal {
+  $modal-border-radius: 4px;
+  $modal-backdrop: rgba(0, 0, 0, 0.7);
+  $modal-backdrop-filter: blur(8px);
+  $modal-padding-x: 8px;
+  $modal-padding-y: 24px;
+  $modal-content-padding: 24px;
+  $modal-footer-padding-top: 16px;
+  $modal-footer-button-padding: 8px;
+
+  $modal-headline-color: var-get('colorLight');
+  $modal-icon-padding-right: 16px;
+
+  $modal-background: var-get('colorLight');
+  $modal-dialog-width: 400px;
+  $modal-dialog-width-mobile: 343px;
+  $modal-dialog-width-wide: 590px;
+  $modal-transition-duration: 0.2s;
+  $modal-transition-timing-function: ease-in;
+  $self: &;
+
+  @function not-any-selector($modifiers, $self) {
+    $res: '';
+
+    @each $m in $modifiers {
+      $res: '#{$res}:not(#{$self}--#{$m})';
+    }
+
+    @return $res;
+  }
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  transition: opacity $modal-transition-duration $modal-transition-timing-function;
+  background: $modal-backdrop;
+  backdrop-filter: $modal-backdrop-filter;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overscroll-behavior: contain;
+  z-index: $olt-z-index-modal;
+  display: flex;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: all;
+
+
+  &-dialog {
+    max-height: 90%;
+    width: $modal-dialog-width;
+    background: $modal-background;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    transition: transform $modal-transition-duration $modal-transition-timing-function;
+    transform: translateY(100%);
+    z-index: $olt-z-index-modal-dialog;
+    overflow: auto;
+    //pointer-events: auto;
+    cursor: auto;
+    border-radius: $modal-border-radius;
+
+    @media (max-width: map-get($olt-v2-breakpoints, sm)) {
+      width: $modal-dialog-width-mobile;
+    }
+  }
+
+  &-header {
+    @extend .u-H400;
+
+    display: flex;
+    padding: $modal-padding-x $modal-padding-y;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    color: $modal-headline-color;
+    border-top-left-radius: $modal-border-radius;
+    border-top-right-radius: $modal-border-radius;
+    background: var-get('colorSuccess');
+  }
+
+  &-header:not(&-header--custom):before {
+    @extend .Icon;
+
+    @extend .Icon--large;
+
+    padding-right: $modal-icon-padding-right;
+  }
+
+  &--critical &-header {
+    background: var-get('colorError');
+
+    &:before {
+      @extend .Icon-feedback-warning-critical-filled.Icon--large;
+    }
+  }
+
+  &--info &-header {
+    background: var-get('colorInfo');
+
+    &:before {
+      @extend .Icon-feedback-info-filled.Icon--large;
+    }
+  }
+
+  &--warning &-header {
+    background: var-get('colorWarning');
+
+    &:before {
+      @extend .Icon-feedback-warning-medium-filled.Icon--large;
+    }
+  }
+
+  &--success &-header {
+    background: var-get('colorSuccess');
+
+    &:before {
+      @extend .Icon-feedback-check-filled.Icon--large;
+    }
+  }
+
+  &--action &-header {
+    background: var-get('colorPrimary');
+
+    &:before {
+      @extend .Icon-action-settings.Icon--large;
+    }
+  }
+
+  $types: ('critical' 'info' 'warning' 'success' 'action');
+
+  &#{not-any-selector($types, $self)} &-header:before {
+    @extend .Icon-feedback-check-filled.Icon--large;
+  }
+
+  // remove icon for -header--custom modifier
+  &-header--custom:before {
+    content: '' !important;
+  }
+
+  &-header--custom > i {
+    padding-right: $modal-icon-padding-right;
+  }
+
+  &-content {
+    padding: $modal-content-padding;
+    justify-content: center;
+    text-align: left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  &-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: #{$modal-content-padding - $modal-footer-button-padding};
+    padding-bottom: $modal-content-padding;
+    padding-top: $modal-footer-padding-top;
+    justify-content: flex-end;
+    width: 100%;
+
+    & > * {
+      margin-left: $modal-footer-button-padding;
+      margin-right: $modal-footer-button-padding;
+    }
+  }
+
+  &--wide &-dialog {
+    width: $modal-dialog-width-wide;
+  }
+
+  @at-root {
+    *[data-toggle='v2modal'] {
+      display: none;
+    }
+
+    #{$self}.is-open,
+    *[data-toggle='v2modal']:checked + label + #{$self} {
+      width: 100vw;
+      height: 100vh;
+      opacity: 1;
+      clip: auto;
+
+      #{$self}-dialog {
+        transform: translateY(0);
+      }
+
+      #{$self}-content {
+        width: 100%;
+      }
+
+      &#{$self}--fullscreen #{$self}-dialog {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
