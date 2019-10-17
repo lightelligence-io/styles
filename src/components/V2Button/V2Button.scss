@@ -624,6 +624,10 @@
     background: var-get('gray100');
     border-color: var-get('gray100');
 
+    &:before {
+      @extend .Icon;
+    }
+
     &:hover {
       background: var-get('gray300');
       border-color: var-get('gray300');
@@ -646,7 +650,6 @@
     padding-right: #{$button-padding-x - $icon-size-for-calculation};
   }
 
-  &-icon,
   &-icon-left,
   &-icon-right {
     &:before {
