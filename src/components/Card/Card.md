@@ -183,7 +183,7 @@ body > div.olt-Frame { padding: 50px; margin: auto; }
     <h4 class="olt-Card-title">Title</h4>
     <div class="olt-Card-description">Description</div>
     <div class="olt-Card-action">
-      <button class="olt-ActionButton olt-ActionButton--primary olt-ActionButton-icon-right olt-Icon-action-edit">
+      <button class="olt-ActionButton olt-ActionButton-icon-right olt-Icon-action-edit">
         <div class="olt-ActionButton-label">Edit</div>
       </button>
     </div>
