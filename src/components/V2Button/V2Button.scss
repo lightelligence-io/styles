@@ -535,7 +535,7 @@
     }
   }
 
-  $button-padding-x: 50px;
+  $button-padding-x: 32px;
   $pagination-button-padding-x: 16px;
   $button-padding-y: 0;
   $button-border-color: var-get('borderColor');
@@ -559,9 +559,10 @@
   position: relative;
   background: none;
   height: 36px;
+  min-height: 36px;
+  max-height: 36px;
   border-style: solid;
   vertical-align: middle;
-  line-height: $button-line-height;
   border-width: $button-border-width;
   border-radius: $olt-button-border-radius;
   display: inline-flex;
@@ -569,17 +570,21 @@
   justify-content: center;
   white-space: nowrap;
   text-decoration: none;
-  font-size: $button-font-size;
   cursor: pointer;
   transition: all 300ms;
   -webkit-appearance: none;
   color: $button-color;
   padding: $button-padding-y $button-padding-x;
 
-  $emphases: ('primary' 'secondary' 'tertiary' 'pagination-next' 'pagination-prev');
+  $emphases: ('primary' 'secondary' 'tertiary' 'pagination-next' 'pagination-prev' 'icon');
   // set default if no other emphasis is set
   &#{not-any-selector($emphases, $self)} {
     @include button-emphasis($self, 'primary');
+  }
+
+  &:not(#{$self}--icon) {
+    font-size: $button-font-size;
+    line-height: $button-line-height;
   }
 
   &--pagination-next {
@@ -608,6 +613,20 @@
       @extend .Icon-arrows-chevron-left.Icon--small;
 
       margin-right: 4px;
+    }
+  }
+
+  &--icon {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    color: var-get('colorDark');
+    background: var-get('gray100');
+    border-color: var-get('gray100');
+
+    &:hover {
+      background: var-get('gray300');
+      border-color: var-get('gray300');
     }
   }
 
