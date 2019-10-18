@@ -1033,7 +1033,7 @@ To show decorations inside a button, use the `olt-V2Button-icon-left` and `olt-V
 
 ## Icon only
 
-To create a button with an icon only, use the `olt-V2Button--icon` modifier. The `olt-V2Button--icon` modifier will render a round icon button.
+To create a button with an icon only, use the `olt-V2Button--icon` modifier. This will render a round icon button.
 
 ```icononly.html
 <button class="olt-V2Button olt-V2Button--icon-default olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small"></button>
