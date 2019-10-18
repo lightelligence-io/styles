@@ -67,6 +67,36 @@
           ),
         ),
       ),
+      'icon-default': (
+        'light': (
+          'bg': (
+            'normal': var-get('gray100'),
+            'hover': var-get('gray300'),
+            'press': var-get('gray300'),
+            'progress': var-get('gray100'),
+          ),
+          'border': (
+            'normal': var-get('gray100'),
+          ),
+          'font': (
+            'normal': var-get('colorDark'),
+          ),
+        ),
+        'dark': (
+          'bg': (
+            'normal': var-get('gray100'),
+            'hover':  var-get('gray300'),
+            'press':  var-get('gray300'),
+            'progress': var-get('gray100'),
+          ),
+          'border': (
+            'normal':  var-get('gray100'),
+          ),
+          'font': (
+            'normal': var-get('colorDark'),
+          ),
+        ),
+      ),
     ),
     'secondary': (
       'default': (
@@ -502,7 +532,7 @@
 
       @include button-set-state-defaults($self, $emphasis, $theme, 'disabled', 'normal');
     }
-    $types-base: ('default' 'destructive' 'confirmative');
+    $types-base: ('default' 'destructive' 'confirmative' 'icon-default');
     $types: if(
       $emphasis == 'tertiary',
       append($types-base, 'action'),
@@ -576,10 +606,17 @@
   color: $button-color;
   padding: $button-padding-y $button-padding-x;
 
-  $emphases: ('primary' 'secondary' 'tertiary' 'pagination-next' 'pagination-prev' 'icon');
+  $emphases: ('primary' 'secondary' 'tertiary' 'pagination-next' 'pagination-prev');
   // set default if no other emphasis is set
+  // set primary also for icon-default as icon-default is defined as base-type of primary only
   &#{not-any-selector($emphases, $self)} {
     @include button-emphasis($self, 'primary');
+  }
+
+  @each $emphasis in $emphases {
+    &#{$self}--#{$emphasis} {
+      @include button-emphasis($self, $emphasis);
+    }
   }
 
   &:not(#{$self}--icon) {
@@ -620,23 +657,9 @@
     width: 36px;
     height: 36px;
     padding: 0;
-    color: var-get('colorDark');
-    background: var-get('gray100');
-    border-color: var-get('gray100');
 
     &:before {
       @extend .Icon;
-    }
-
-    &:hover {
-      background: var-get('gray300');
-      border-color: var-get('gray300');
-    }
-  }
-
-  @each $emphasis in $emphases {
-    &#{$self}--#{$emphasis} {
-      @include button-emphasis($self, $emphasis);
     }
   }
 

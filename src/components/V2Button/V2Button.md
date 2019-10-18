@@ -1036,10 +1036,12 @@ To show decorations inside a button, use the `olt-V2Button-icon-left` and `olt-V
 To create a button with an icon only, use the `olt-V2Button--icon` modifier. The `olt-V2Button--icon` modifier will render a round icon button.
 
 ```icononly.html
-<button class="olt-V2Button olt-V2Button-icon-only olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small"></button>
-<button class="olt-V2Button olt-V2Button--primary olt-V2Button-icon-only olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small"></button>
-<button class="olt-V2Button olt-V2Button--secondary olt-V2Button-icon-only  olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small"></button>
-<button class="olt-V2Button olt-V2Button--tertiary olt-V2Button-icon-only olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small"></button>
+<button class="olt-V2Button olt-V2Button--icon-default olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small"></button>
+<button class="olt-V2Button olt-V2Button--primary olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small"></button>
+<button class="olt-V2Button olt-V2Button--secondary  olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small"></button>
+<button class="olt-V2Button olt-V2Button--tertiary olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small"></button>
+<button class="olt-V2Button olt-V2Button--confirmative olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small"></button>
+<button class="olt-V2Button olt-V2Button--destructive olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small"></button>
 ```
 
 ## Pagination
