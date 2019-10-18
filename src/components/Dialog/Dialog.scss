@@ -134,6 +134,10 @@
       height: 100vh;
       opacity: 1;
       clip: auto;
+
+      #{$self}-window {
+        min-width: 448px;
+      }
     }
   }
 }
