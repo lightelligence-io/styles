@@ -14,13 +14,13 @@
   $dialog-transition-duration: 0.2s;
   $dialog-transition-timing-function: ease-in;
 
-  $dialog-max-widths: (
+  $dialog-widths: (
     sm: 100%,
     md: 100%,
     lg: 100%,
     xl: 95%,
   );
-  $dialog-max-heights: (
+  $dialog-heights: (
     sm: 100%,
     md: 100%,
     lg: 100%,
@@ -58,17 +58,28 @@
     overflow: auto;
     cursor: auto;
 
-    @each $breakpoint, $dialog-max-width in $dialog-max-widths {
-      @include screen-up($breakpoint) {
-        max-width: $dialog-max-width;
-      }
+    @media (max-width: map-get($olt-v2-breakpoints, lg)) {
+      min-width: map-get($dialog-widths, sm);
+      min-height: map-get($dialog-heights, sm);
     }
 
-    @each $breakpoint, $dialog-max-height in $dialog-max-heights {
-      @include screen-up($breakpoint) {
-        max-height: $dialog-max-height;
-      }
+    @media (max-width: map-get($olt-v2-breakpoints, lg)) {
+      max-width: map-get($dialog-widths, xl);
+      max-height: map-get($dialog-heights, xl);
     }
+
+
+    // @each $breakpoint, $dialog-max-width in $dialog-max-widths {
+    //   @include screen-up($breakpoint) {
+    //     max-width: $dialog-max-width;
+    //   }
+    // }
+
+    // @each $breakpoint, $dialog-max-height in $dialog-max-heights {
+    //   @include screen-up($breakpoint) {
+    //     max-height: $dialog-max-height;
+    //   }
+    // }
   }
 
   &-close {
