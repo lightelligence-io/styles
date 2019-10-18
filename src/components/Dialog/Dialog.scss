@@ -74,6 +74,7 @@
   &-close {
     @extend
       .V2Button,
+      .V2Button--icon-default,
       .V2Button--icon,
       .Icon--small,
       .Icon-navigation-close;
