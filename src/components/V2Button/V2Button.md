@@ -1033,16 +1033,16 @@ To show decorations inside a button, use the `olt-V2Button-icon-left` and `olt-V
 
 ## Icon only
 
-To create a button with an icon only, use the `olt-V2Button--icon` modifier. This will render a round icon button.
+To create a button with an icon only, use the `olt-V2Button--icon` modifier. This will render a round icon button. Use `olt-V2Button--icon-default` to render the icon in the default style for icon buttons. Otherwise it will be rendered as primary button. All button modifiers can be used.
 
 ```icononly.html
-<button class="olt-V2Button olt-V2Button--icon-default olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small"></button>
-<button class="olt-V2Button olt-V2Button--primary olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small"></button>
-<button class="olt-V2Button olt-V2Button--secondary olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small"></button>
-<button class="olt-V2Button olt-V2Button--tertiary olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small"></button>
-<button class="olt-V2Button olt-V2Button--confirmative olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small"></button>
-<button class="olt-V2Button olt-V2Button--destructive olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small"></button>
-<button class="olt-V2Button olt-V2Button--action olt-V2Button--tertiary olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small"></button>
+<button class="olt-V2Button olt-V2Button--icon-default olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small" />
+<button class="olt-V2Button olt-V2Button--primary olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small" />
+<button class="olt-V2Button olt-V2Button--secondary olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small" />
+<button class="olt-V2Button olt-V2Button--tertiary olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small" />
+<button class="olt-V2Button olt-V2Button--confirmative olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small" />
+<button class="olt-V2Button olt-V2Button--destructive olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small" />
+<button class="olt-V2Button olt-V2Button--action olt-V2Button--tertiary olt-V2Button--icon olt-Icon-action-add-default olt-Icon--small" />
 ```
 
 ## Pagination
