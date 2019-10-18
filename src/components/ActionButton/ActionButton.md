@@ -131,6 +131,22 @@ Additional modifiers:
                   </div>
                 </button>
             </div>
+            <div class="demo-content">
+              <button
+                class="olt-ActionButton olt-ActionButton--fixed olt-ActionButton--base olt-ActionButton-icon-right olt-Icon-action-edit">
+                  <div class="olt-ActionButton-label">
+                    Label
+                  </div>
+                </button>
+            </div>
+            <div class="demo-content">
+              <button
+                class="olt-ActionButton olt-ActionButton--proximity olt-ActionButton-icon-right olt-Icon-action-edit">
+                  <div class="olt-ActionButton-label">
+                    Label
+                  </div>
+                </button>
+            </div>
           </div>
         </div>
       </div>
@@ -202,6 +218,22 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton--proximity olt-ActionButton--primary olt-ActionButton-icon-right olt-Icon-add-outline">
+                <div class="olt-ActionButton-label">
+                  Label
+                </div>
+              </button>
+            </div>
+            <div class="demo-content">
+              <button
+                class="olt-ActionButton olt-ActionButton--fixed olt-ActionButton--base olt-ActionButton--primary olt-ActionButton-icon-right olt-Icon-action-add-circle">
+                <div class="olt-ActionButton-label">
+                  Label
+                </div>
+              </button>
+            </div>
+            <div class="demo-content">
+              <button
+                class="olt-ActionButton olt-ActionButton--proximity olt-ActionButton--primary olt-ActionButton-icon-right olt-Icon-action-add-circle">
                 <div class="olt-ActionButton-label">
                   Label
                 </div>
@@ -283,6 +315,22 @@ Additional modifiers:
                 </div>
               </button>
             </div>
+            <div class="demo-content">
+              <button
+                class="olt-ActionButton olt-ActionButton--fixed olt-ActionButton--base olt-ActionButton--destructive olt-ActionButton-icon-right olt-Icon-action-add-circle">
+                <div class="olt-ActionButton-label">
+                  Label
+                </div>
+              </button>
+            </div>
+            <div class="demo-content">
+              <button
+                class="olt-ActionButton olt-ActionButton--proximity olt-ActionButton--destructive olt-ActionButton-icon-right olt-Icon-action-add-circle">
+                <div class="olt-ActionButton-label">
+                  Label
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -354,6 +402,22 @@ Additional modifiers:
             <div class="demo-content">
               <button
                 class="olt-ActionButton olt-ActionButton--proximity olt-ActionButton--confirmative olt-ActionButton-icon-right olt-Icon-refresh">
+                <div class="olt-ActionButton-label">
+                  Label
+                </div>
+              </button>
+            </div>
+            <div class="demo-content">
+              <button
+                class="olt-ActionButton olt-ActionButton--fixed olt-ActionButton--base olt-ActionButton--confirmative olt-ActionButton-icon-right olt-Icon-action-refresh">
+                <div class="olt-ActionButton-label">
+                  Label
+                </div>
+              </button>
+            </div>
+            <div class="demo-content">
+              <button
+                class="olt-ActionButton olt-ActionButton--proximity olt-ActionButton--confirmative olt-ActionButton-icon-right olt-Icon-action-refresh">
                 <div class="olt-ActionButton-label">
                   Label
                 </div>
