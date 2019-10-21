@@ -70,5 +70,5 @@
 - Chore: Updated Dependencies
 
 #v1.0.0-alpha.3
-- Feature: Icon Modifiers for V2Button
+- Feature: Disabled Action Button
 - Feature: Dialog Layout
