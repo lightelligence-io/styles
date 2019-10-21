@@ -52,6 +52,9 @@
   &-window {
     display: flex;
     flex-direction: column;
+    min-width: 448px;
+    max-width: map-get($dialog-widths, xl);
+    max-height: map-get($dialog-heights, xl);
     padding: $dialog-window-padding;
     border-radius: $dialog-border-radius;
     background: var-get('colorLight');
@@ -62,18 +65,13 @@
       min-width: map-get($dialog-widths, sm);
       min-height: map-get($dialog-heights, sm);
     }
-
-    @media (max-width: map-get($olt-v2-breakpoints, lg)) {
-      max-width: map-get($dialog-widths, xl);
-      max-height: map-get($dialog-heights, xl);
-    }
   }
 
   &-close {
     @extend
-      .V2Button,
-      .V2Button--icon-default,
-      .V2Button--icon,
+      .ActionButton,
+      .ActionButton--standalone,
+      .ActionButton-icon,
       .Icon--small,
       .Icon-navigation-close;
 
@@ -134,10 +132,6 @@
       height: 100vh;
       opacity: 1;
       clip: auto;
-
-      #{$self}-window {
-        min-width: 448px;
-      }
     }
   }
 }
