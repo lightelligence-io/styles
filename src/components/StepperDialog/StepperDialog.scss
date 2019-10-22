@@ -1,0 +1,154 @@
+.StepperDialog {
+  $dialog-border-radius: 4px;
+  $dialog-padding-x: 8px;
+  $dialog-margin-x: 12px;
+  $dialog-backdrop: rgba(0, 0, 0, 0.7);
+  $dialog-backdrop-filter: blur(8px);
+
+  $dialog-window-padding: 32px;
+  $dialog-content-padding: 32px;
+  $dialog-title-padding-bottom: 8px;
+  $dialog-footer-padding-top: 32px;
+  $dialog-footer-button-padding: 8px;
+  $dialog-description-padding-bottom: 32px;
+  $dialog-transition-duration: 0.2s;
+  $dialog-transition-timing-function: ease-in;
+
+  $dialog-widths: (
+    sm: 100%,
+    md: 100%,
+    lg: 100%,
+    xl: 95%,
+  );
+  $dialog-heights: (
+    sm: 100%,
+    md: 100%,
+    lg: 100%,
+    xl: 95%,
+  );
+  $self: &;
+
+  @extend .Dialog;
+
+  &-window {
+    @extend .Dialog-window;
+
+    flex-direction: row;
+    padding: 0;
+  }
+
+  &-stepper {
+    @extend .Dialog-window;
+
+    padding-top: 68px; // TODO: dialog padding + close height
+    min-width: 248px;
+    max-width: map-get($dialog-widths, xl);
+    max-height: 100%;
+  }
+
+  &-stepper-header {
+    @extend .u-content;
+
+    text-transform: uppercase;
+    padding-bottom: 24px;
+  }
+
+  &-stepper-step {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    padding: 16px;
+    align-items: center;
+
+    &:before {
+      @extend
+        .Icon,
+        .Icon-empty;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: 1px solid var-get('gray300');
+      margin-right: 16px;
+      align-self: center;
+      margin-left: 8px;
+    }
+
+    &--done {
+      &:before {
+        @extend
+          .Icon-feedback-check-default;
+
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid var-get('gray300');
+        margin-left: 0;
+        color: var-get('colorSuccess');
+      }
+    }
+
+    &--current {
+      &:before {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 3px solid var-get('colorPrimary');
+        margin-left: 0;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 44px; // TODO: calculate (36+8 ?)
+      left: 28px; // TODO: calculate (36-8?)
+      height: 24px;
+      border-right: 1px solid var-get('gray300');
+      margin-left: 0;
+    }
+
+    &--last {
+      &:after {
+        height: 0;
+      }
+    }
+  }
+
+  &-content {
+    @extend .Dialog-window;
+
+    min-width: 448px;
+    max-width: map-get($dialog-widths, xl);
+    max-height: 100%;
+  }
+
+  &-proceed {
+    @extend
+      .V2Button,
+      .V2Button--primary;
+  }
+
+  &-back {
+    @extend
+      .V2Button,
+      .V2Button--tertiary;
+  }
+
+  @at-root {
+    *[data-toggle='stepperdialog'] {
+      display: none;
+    }
+
+    #{$self}, //.is-open,
+    *[data-toggle='stepperdialog']:checked + label + #{$self} {
+      width: 100vw;
+      height: 100vh;
+      opacity: 1;
+      clip: auto;
+    }
+  }
+}
