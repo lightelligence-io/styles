@@ -21,7 +21,7 @@ The dialog changes to full screen on mobile and tablet devices.
           <div class="olt-StepperDialog-stepper-step olt-StepperDialog-stepper-step--current">Create Device</div>
           <div class="olt-StepperDialog-stepper-step">Add Info</div>
           <div class="olt-StepperDialog-stepper-step">Define Parameters</div>
-          <div class="olt-StepperDialog-stepper-step olt-StepperDialog-stepper-step--last">Set up monitioring</div>
+          <div class="olt-StepperDialog-stepper-step olt-StepperDialog-stepper-step--last">Set up monitoring</div>
         </div>
         <div class="olt-StepperDialog-content">
           <label class="olt-Dialog-close" for="stepper-dialog-demo-1"></label>
