@@ -17,6 +17,7 @@ The dialog changes to full screen on mobile and tablet devices.
       <div class="olt-StepperDialog-window">
         <div class="olt-StepperDialog-stepper">
           <div class="olt-StepperDialog-stepper-header">Create Device Type Category</div>
+          <div class="olt-StepperDialog-stepper-counter">2/5</div>
           <div class="olt-StepperDialog-stepper-step olt-StepperDialog-stepper-step--done">Select Type</div>
           <div class="olt-StepperDialog-stepper-step olt-StepperDialog-stepper-step--current">Create Device</div>
           <div class="olt-StepperDialog-stepper-step">Add Info</div>

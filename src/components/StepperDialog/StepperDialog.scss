@@ -43,6 +43,10 @@
 
     flex-direction: row;
     padding: 0;
+
+    @media (max-width: map-get($olt-v2-breakpoints, lg)) {
+      flex-direction: column;
+    }
   }
 
   &-stepper {
@@ -55,6 +59,17 @@
     background-color: var-get('gray200');
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
+
+    @media (max-width: map-get($olt-v2-breakpoints, lg)) {
+      background-color: var-get('colorLight');
+      min-width: 100%;
+      min-height: 20px;
+      padding: 0;
+      align-content: center;
+      align-items: center;
+      position: absolute;
+      top: 56px; // TODO: dialog padding (32) + close media margin (16) + close height (36) /2 - this.height /2
+    }
   }
 
   &-stepper-header {
@@ -64,6 +79,25 @@
     padding: $stepper-step-padding;
     padding-top: 0;
     padding-bottom: 24px;
+
+    @media (max-width: map-get($olt-v2-breakpoints, lg)) {
+      padding: 0;
+    }
+  }
+
+  &-stepper-counter {
+    @extend .u-H100;
+
+    text-transform: uppercase;
+    position: absolute;
+    left: 64px;
+    display: none;
+
+    @media (max-width: map-get($olt-v2-breakpoints, lg)) {
+      padding: 0;
+      display: unset;
+      position: absolute;
+    }
   }
 
   &-stepper-step {
@@ -133,6 +167,10 @@
         height: 0;
       }
     }
+
+    @media (max-width: map-get($olt-v2-breakpoints, lg)) {
+      display: none;
+    }
   }
 
   &-content {
@@ -141,6 +179,14 @@
     min-width: 448px;
     max-width: map-get($dialog-widths, xl);
     max-height: 100%;
+    flex: 1;
+
+    & > .Dialog-close {
+      @media (max-width: map-get($olt-v2-breakpoints, lg)) {
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+    }
   }
 
   &-proceed {
