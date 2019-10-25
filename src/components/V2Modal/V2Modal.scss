@@ -16,8 +16,8 @@
   $modal-dialog-width: 400px;
   $modal-dialog-width-mobile: 343px;
   $modal-dialog-width-wide: 590px;
-  $modal-transition-duration: 0.2s;
-  $modal-transition-timing-function: ease-in;
+  $modal-transition-duration: 0.5s;
+  $modal-transition-timing-function: ease;
   $self: &;
 
   @function not-any-selector($modifiers, $self) {
@@ -30,13 +30,14 @@
     @return $res;
   }
 
+  display: flex;
   position: fixed;
   left: 0;
   top: 0;
-  height: 0;
-  width: 0;
+  height: 100vh;
+  width: 100vw;
   opacity: 0;
-  transition: opacity $modal-transition-duration $modal-transition-timing-function;
+  transition: all $modal-transition-duration $modal-transition-timing-function;
   background: $modal-backdrop;
   backdrop-filter: $modal-backdrop-filter;
   overflow: auto;
@@ -47,9 +48,8 @@
   align-items: center;
   overscroll-behavior: contain;
   z-index: $olt-z-index-modal;
-  display: flex;
-  clip: rect(0, 0, 0, 0);
-  pointer-events: all;
+  // clip: rect(0, 0, 0, 0);
+  pointer-events: none;
 
 
   &-dialog {
@@ -62,12 +62,12 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     transition: transform $modal-transition-duration $modal-transition-timing-function;
-    transform: translateY(100%);
+    transform: translateY(150%);
     z-index: $olt-z-index-modal-dialog;
     overflow: auto;
-    //pointer-events: auto;
     cursor: auto;
     border-radius: $modal-border-radius;
+    pointer-events: none;
 
     @media (max-width: map-get($olt-v2-breakpoints, sm)) {
       width: $modal-dialog-width-mobile;
@@ -195,10 +195,12 @@
       width: 100vw;
       height: 100vh;
       opacity: 1;
-      clip: auto;
+      display: flex;
+      // clip: auto;
 
       #{$self}-dialog {
         transform: translateY(0);
+        pointer-events: all;
       }
 
       #{$self}-content {
