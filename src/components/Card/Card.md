@@ -123,7 +123,7 @@ The *Cards* can be rendered with
 [any of our conceptual colors](/#concepts-colors) :
 
 ```colors.css hidden
-body > div.olt-Frame { display: flex; background-color: lightgrey; padding: 5px }
+body > div.olt-Frame { display: flex; }
 ```
 
 ```colors.html
@@ -182,7 +182,7 @@ body > div.olt-Frame { padding: 20px; margin: auto; background-color: lightgrey;
 
 ## Edit Card
 
-By adding `olt-Card--edit` you can make a card "edit", which will
+By adding `olt-Card--edit` you can make a card "editable", which will
 add an additional edit button at the top right corner as well as `:hover` and `:active` states to it.
 
 ```edit.css hidden
@@ -199,6 +199,26 @@ body > div.olt-Frame { padding: 20px; margin: auto; background-color: lightgrey;
         <div class="olt-ActionButton-label">Edit</div>
       </button>
     </div>
+  </div>
+  <div class="olt-Card-content">
+    Content
+  </div>
+</div>
+```
+
+## Popup Card
+
+By adding `olt-Card--popup` you can create a card looking like a popup menu (used for filters). This will add a shaddow to it.
+
+```popup.css hidden
+body > div.olt-Frame { padding: 20px; }
+```
+
+```popup.html
+<div class="olt-Card olt-Card--popup">
+  <div class="olt-Card-header">
+    <h4 class="olt-Card-title">Title</h4>
+    <div class="olt-Card-description">Description</div>
   </div>
   <div class="olt-Card-content">
     Content
