@@ -68,3 +68,7 @@
 - Fix: V2Button Styling
 - Fix: Chips Icons
 - Chore: Updated Dependencies
+
+#v1.0.0-alpha.3
+- Feature: Disabled Action Button
+- Feature: Dialog Layout

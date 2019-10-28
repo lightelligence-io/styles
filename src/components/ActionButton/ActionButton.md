@@ -370,14 +370,52 @@ Additional modifiers:
 On Tablet and Mobile Devices the action button is always displayed as the "Standalone with Base" variant to increase and show the click-area. If the standalone version cannot properly represent the action it should be used together with the label ("Fixed Label") depending on the context.
 
 ```example.html
-<div class="olt-ActionButton--proximity-area" style="padding: 20px">
+<div class="olt-ActionButton--proximity-area" style="padding: 20px; border: 1px dotted lightgrey">
 <button class="olt-ActionButton olt-ActionButton--primary olt-ActionButton-icon-left olt-Icon-action-edit">
   <div class="olt-ActionButton-label">Edit</div>
 </button>
 </div>
-<div class="olt-ActionButton--proximity-area" style="padding: 20px">
+<div class="olt-ActionButton--proximity-area" style="padding: 20px; border: 1px dotted lightgrey">
 <button class="olt-ActionButton olt-ActionButton--fixed olt-ActionButton--primary olt-ActionButton-icon-left olt-Icon-action-edit">
   <div class="olt-ActionButton-label">Edit (fixed label)</div>
 </button>
+</div>
+```
+
+## Disabled
+The button can be disabled using the `--disabled` modifier. This overrides any colors being set through other modifiers.
+
+```disabled.html
+<div class="demo-content">
+  <button
+    class="olt-ActionButton olt-ActionButton-icon-left olt-Icon-action-edit olt-ActionButton--disabled">
+      <div class="olt-ActionButton-label">
+        Label
+      </div>
+    </button>
+</div>
+<div class="demo-content">
+  <button
+    class="olt-ActionButton olt-ActionButton--fixed olt-ActionButton-icon-left olt-Icon-action-edit olt-ActionButton--disabled">
+      <div class="olt-ActionButton-label">
+        Label
+      </div>
+    </button>
+</div>
+<div class="demo-content">
+  <button
+    class="olt-ActionButton olt-ActionButton-icon-left olt-Icon-action-edit olt-ActionButton--disabled olt-ActionButton--base">
+      <div class="olt-ActionButton-label">
+        Label
+      </div>
+    </button>
+</div>
+<div class="demo-content">
+  <button
+    class="olt-ActionButton olt-ActionButton-icon-left olt-Icon-action-edit olt-ActionButton--disabled olt-ActionButton--standalone olt-ActionButton--base">
+      <div class="olt-ActionButton-label">
+        Label
+      </div>
+    </button>
 </div>
 ```

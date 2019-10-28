@@ -131,7 +131,7 @@ Contrasting levels of emphasis help the user to differentiate between important 
             </div>
             <div class="demo-content">
               <button
-                class="olt-V2Button olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Label</button>
+                class="olt-V2Button olt-V2Button--tertiary olt-V2Button-icon-left olt-Icon-action-add-default olt-Icon--small">Label</button>
             </div>
             <div class="demo-content">
               <button
