@@ -535,7 +535,7 @@
     }
   }
 
-  $button-padding-x: 50px;
+  $button-padding-x: 32px;
   $pagination-button-padding-x: 16px;
   $button-padding-y: 0;
   $button-border-color: var-get('borderColor');
@@ -559,9 +559,10 @@
   position: relative;
   background: none;
   height: 36px;
+  min-height: 36px;
+  max-height: 36px;
   border-style: solid;
   vertical-align: middle;
-  line-height: $button-line-height;
   border-width: $button-border-width;
   border-radius: $olt-button-border-radius;
   display: inline-flex;
@@ -569,7 +570,6 @@
   justify-content: center;
   white-space: nowrap;
   text-decoration: none;
-  font-size: $button-font-size;
   cursor: pointer;
   transition: all 300ms;
   -webkit-appearance: none;
@@ -580,6 +580,12 @@
   // set default if no other emphasis is set
   &#{not-any-selector($emphases, $self)} {
     @include button-emphasis($self, 'primary');
+  }
+
+  @each $emphasis in $emphases {
+    &#{$self}--#{$emphasis} {
+      @include button-emphasis($self, $emphasis);
+    }
   }
 
   &--pagination-next {
@@ -611,12 +617,6 @@
     }
   }
 
-  @each $emphasis in $emphases {
-    &#{$self}--#{$emphasis} {
-      @include button-emphasis($self, $emphasis);
-    }
-  }
-
   &-icon-left {
     padding-left: #{$button-padding-x - $icon-size-for-calculation};
     padding-right: #{$button-padding-x + 2px - $icon-size-for-calculation};
@@ -627,7 +627,6 @@
     padding-right: #{$button-padding-x - $icon-size-for-calculation};
   }
 
-  &-icon,
   &-icon-left,
   &-icon-right {
     &:before {
