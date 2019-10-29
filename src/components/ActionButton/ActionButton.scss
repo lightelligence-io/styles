@@ -5,6 +5,7 @@
     'primary': #ff66001a,
     'confirmative': #02bf1b1a,
     'destructive': #fd59521a,
+    'disabled': #a7a8aa1a,
   );
   $action-button-padding-x: 16px;
   $action-button-edit-icon-size: 36px;
@@ -75,6 +76,14 @@
     }
   }
 
+  &--disabled {
+    color: var-get('gray500');
+
+    &:after {
+      background-color: map-get($icon-bg-colors, 'disabled');
+    }
+  }
+
   &--fixed {
     #{$self}-label {
       opacity: 1;
@@ -99,7 +108,7 @@
 
   &--proximity-area {
     &:hover {
-      & #{$self}:after {
+      & #{$self}:not(#{$self}--disabled):after {
         opacity: 1;
       }
 
@@ -180,7 +189,18 @@
     }
   }
 
-  @media (max-width: map-get($olt-v2-breakpoints, sm)) {
+  &--disabled {
+    &:focus,
+    &:hover {
+      cursor: default;
+
+      &:not(#{$self}--base):after {
+        opacity: 0;
+      }
+    }
+  }
+
+  @media (hover: none) {
     #{$self}-label {
       display: none;
       opacity: 1;

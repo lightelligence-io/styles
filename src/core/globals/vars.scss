@@ -65,6 +65,7 @@ $olt-headline-font-weight: var-get('fontWeightHeading');
 $olt-link-color: var-get('colorPrimary');
 $olt-link-hover-contrast: var-get('linkHoverContrast');
 
+$olt-z-index-dialog: 800;
 $olt-z-index-modal: 1002;
 $olt-z-index-modal-close: 1003;
 $olt-z-index-modal-dialog: 999;
