@@ -1,0 +1,45 @@
+.Filter {
+
+  $self: &;
+
+  @extend
+    .V2Button,
+    .V2Button--secondary,
+    .V2Button-icon-right,
+    .Icon-arrows-chevron-down;
+
+  &--active {
+    @extend .V2Button--dark;
+  }
+
+  &:hover {
+    border: 1px solid red;
+  }
+
+  &--withBubble {
+    background:
+      radial-gradient(
+        circle at top right,
+        transparent,
+        transparent 10.5px,
+        var-get('colorDark') 11.5px,
+        var-get('colorDark')
+      );
+  }
+
+  &-bubble {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-weight: var-get('fontWeightBold');
+    font-size: 8px;
+    letter-spacing: 0;
+    line-height: 16px;
+    border-radius: 100%;
+    text-align: center;
+    width: 17px;
+    height: 17px;
+    color: #d0d1d3;
+    background: var-get('colorDark');
+  }
+}
