@@ -104,6 +104,8 @@
 
   &--popup {
     box-shadow: $card-hover-box-shadow;
+    position: absolute;
+    z-index: 1;
   }
 
   &--edit,
