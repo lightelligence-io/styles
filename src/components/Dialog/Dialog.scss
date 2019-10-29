@@ -111,6 +111,7 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     padding: #{$dialog-content-padding - $dialog-footer-button-padding};
+    padding-bottom: $dialog-content-padding;
     padding-top: $dialog-footer-padding-top;
     width: 100%;
 
