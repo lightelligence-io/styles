@@ -5,7 +5,7 @@ category: Component
 
 ## Description
 
-*Dialog* occupies `olt-Dialog*` class names. It provides a modal dialog to show any kind of content and is also utilized for dynamic lists and steppers.
+*StepperDialog* occupies `olt-StepperDialog*` class names. It provides a modal dialog to show any kind of content and is also utilized for dynamic lists and steppers.
 
 The dialog changes to full screen on mobile and tablet devices.
 
