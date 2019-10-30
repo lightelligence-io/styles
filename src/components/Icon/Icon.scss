@@ -25,8 +25,8 @@
   &-empty#{&}--small:before { content: ""; }
   &-empty:before { content: ""; }
   &-empty#{&}--large:before { content: ""; }
-  &-action-add-circle#{&}--small:before { content: "\a900"; }
-  &-action-add-circle:before { content: "\a901"; }
+  &-action-add-circle#{&}--small:before { content: "\e900"; }
+  &-action-add-circle:before { content: "\e901"; }
   &-action-add-circle#{&}--large:before { content: "\e902"; }
   &-action-add-default#{&}--small:before { content: "\e903"; }
   &-action-add-default:before { content: "\e904"; }
