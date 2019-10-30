@@ -208,7 +208,7 @@ body > div.olt-Frame { padding: 20px; margin: auto; background-color: lightgrey;
 
 ## Popup Card
 
-By adding `olt-Card--popup` you can create a card looking like a popup menu (used for filters). This will add a shaddow to it.
+By adding `olt-Card--popup` you can create a card looking like a popup menu (used for filters). This will add a shadow to it.
 
 ```popup.css hidden
 body > div.olt-Frame { padding: 20px; }
