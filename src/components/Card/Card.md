@@ -11,6 +11,10 @@ component occupies `olt-Card*` class names.
 The card can be a `div`, `button` or an `a` element, which makes it suitable
 for actions on click, hover, etc.
 
+```basic.css hidden
+body > div.olt-Frame { background-color: lightgrey; padding: 5px }
+```
+
 ```basic.html
 <div class="olt-Card">
   <div class="olt-Card-header">
@@ -44,6 +48,10 @@ for actions on click, hover, etc.
 A *Card* can be additionally rendered with context icon on the top right, used
 for drop down menu or additional context actions.
 
+```context.css hidden
+body > div.olt-Frame { background-color: lightgrey; padding: 5px }
+```
+
 ```context.html
 <div class="olt-Card">
   <div class="olt-Card-header">
@@ -64,6 +72,10 @@ for drop down menu or additional context actions.
 
 Any *Card* can contain additional content inside `.olt-Card-content` if
 provided.
+
+```content.css hidden
+body > div.olt-Frame { background-color: lightgrey; padding: 5px }
+```
 
 ```content.html
 <div class="olt-Card">
@@ -90,7 +102,7 @@ A *Card* can also have an image with an `img` tag and `olt-Card-image` class
 name.
 
 ```image.css hidden
-body > div.olt-Frame { min-height: 280px; }
+body > div.olt-Frame { min-height: 280px; background-color: lightgrey; padding: 5px }
 ```
 
 ```image.html
@@ -153,7 +165,7 @@ By adding `olt-Card--selectable` you can make a card "selectable", which will
 add additional `:hover` and `:active` states to it.
 
 ```buttons.css hidden
-body > div.olt-Frame { padding: 50px; margin: auto; }
+body > div.olt-Frame { padding: 20px; margin: auto; background-color: lightgrey; }
 ```
 
 ```buttons.html
@@ -170,11 +182,11 @@ body > div.olt-Frame { padding: 50px; margin: auto; }
 
 ## Edit Card
 
-By adding `olt-Card--edit` you can make a card "edit", which will
+By adding `olt-Card--edit` you can make a card "editable", which will
 add an additional edit button at the top right corner as well as `:hover` and `:active` states to it.
 
 ```edit.css hidden
-body > div.olt-Frame { padding: 50px; margin: auto; }
+body > div.olt-Frame { padding: 20px; margin: auto; background-color: lightgrey; }
 ```
 
 ```edit.html
@@ -183,10 +195,30 @@ body > div.olt-Frame { padding: 50px; margin: auto; }
     <h4 class="olt-Card-title">Title</h4>
     <div class="olt-Card-description">Description</div>
     <div class="olt-Card-action">
-      <button class="olt-ActionButton olt-ActionButton-icon-right olt-Icon-action-edit">
+      <button class="olt-ActionButton olt-ActionButton--primary olt-ActionButton-icon-right olt-Icon-action-edit">
         <div class="olt-ActionButton-label">Edit</div>
       </button>
     </div>
+  </div>
+  <div class="olt-Card-content">
+    Content
+  </div>
+</div>
+```
+
+## Popup Card
+
+By adding `olt-Card--popup` you can create a card looking like a popup menu (used for filters). This will add a shadow to it.
+
+```popup.css hidden
+body > div.olt-Frame { padding: 20px; }
+```
+
+```popup.html
+<div class="olt-Card olt-Card--popup">
+  <div class="olt-Card-header">
+    <h4 class="olt-Card-title">Title</h4>
+    <div class="olt-Card-description">Description</div>
   </div>
   <div class="olt-Card-content">
     Content

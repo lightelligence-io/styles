@@ -4,12 +4,10 @@
   $card-padding-y: 1rem !default;
   $card-border-radius: 0.25rem !default;
   $card-hover-box-shadow: 0 8px 16px 0 rgba(13, 18, 44, 0.2);
-  $border-color: var-get('gray300');
   $card-edit-icon-size: 36px;
 
   $self: &;
 
-  border: 1px solid $border-color;
   border-radius: $card-border-radius;
   text-align: left;
   transition: box-shadow 150ms;
@@ -102,6 +100,12 @@
   &-icon {
     margin-left: auto;
     vertical-align: baseline;
+  }
+
+  &--popup {
+    box-shadow: $card-hover-box-shadow;
+    position: absolute;
+    z-index: 1;
   }
 
   &--edit,
