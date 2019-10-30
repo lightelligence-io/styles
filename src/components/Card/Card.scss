@@ -113,6 +113,12 @@
     vertical-align: baseline;
   }
 
+  &--popup {
+    box-shadow: $card-hover-box-shadow;
+    position: absolute;
+    z-index: 1;
+  }
+
   &--edit,
   &--selectable {
     cursor: pointer;
