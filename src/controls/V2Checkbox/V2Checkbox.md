@@ -24,6 +24,9 @@ Checkbox is used with a wrapped `<label>` element that contain
          Indetermined
        </div>
        <div class="demo-label">
+         Indetermined Active
+       </div>
+       <div class="demo-label">
          Indetermined Disabled
        </div>
        <div class="demo-label">
@@ -56,31 +59,38 @@ Checkbox is used with a wrapped `<label>` element that contain
                </label>
              </div>
              <div class="demo-content">
-               <label class="olt-V2Checkbox--indetermined">
-                 <input type="checkbox" indetermined />
+               <label class="olt-V2Checkbox">
+                 <input type="checkbox" class="olt-V2Checkbox--indetermined" />
                  <span class="olt-V2Checkbox-button"></span>
                  <span class="olt-V2Checkbox-label">Option 3</span>
                </label>
              </div>
              <div class="demo-content">
-               <label class="olt-V2Checkbox--indetermined">
-                 <input type="checkbox" indetermined disabled />
+               <label class="olt-V2Checkbox">
+                 <input type="checkbox" class="olt-V2Checkbox--indetermined" checked />
                  <span class="olt-V2Checkbox-button"></span>
                  <span class="olt-V2Checkbox-label">Option 4</span>
                </label>
              </div>
              <div class="demo-content">
                <label class="olt-V2Checkbox">
-                 <input type="checkbox"/>
+                 <input type="checkbox" class="olt-V2Checkbox--indetermined" disabled />
                  <span class="olt-V2Checkbox-button"></span>
                  <span class="olt-V2Checkbox-label">Option 5</span>
                </label>
              </div>
              <div class="demo-content">
                <label class="olt-V2Checkbox">
-                 <input type="checkbox" disabled />
+                 <input type="checkbox"/>
                  <span class="olt-V2Checkbox-button"></span>
                  <span class="olt-V2Checkbox-label">Option 6</span>
+               </label>
+             </div>
+             <div class="demo-content">
+               <label class="olt-V2Checkbox">
+                 <input type="checkbox" disabled />
+                 <span class="olt-V2Checkbox-button"></span>
+                 <span class="olt-V2Checkbox-label">Option 7</span>
                </label>
              </div>
            </div>
@@ -106,31 +116,38 @@ Checkbox is used with a wrapped `<label>` element that contain
                </label>
              </div>
              <div class="demo-content">
-               <label class="olt-V2Checkbox--indetermined">
-                 <input type="checkbox" indetermined />
+               <label class="olt-V2Checkbox">
+                 <input type="checkbox" class="olt-V2Checkbox--indetermined" />
                  <span class="olt-V2Checkbox-button"></span>
                  <span class="olt-V2Checkbox-label">Option 3</span>
                </label>
              </div>
              <div class="demo-content">
-               <label class="olt-V2Checkbox--indetermined">
-                 <input type="checkbox" indetermined disabled />
+               <label class="olt-V2Checkbox">
+                 <input type="checkbox" class="olt-V2Checkbox--indetermined" checked />
                  <span class="olt-V2Checkbox-button"></span>
                  <span class="olt-V2Checkbox-label">Option 4</span>
                </label>
              </div>
              <div class="demo-content">
                <label class="olt-V2Checkbox">
-                 <input type="checkbox"/>
+                 <input type="checkbox" class="olt-V2Checkbox--indetermined" disabled />
                  <span class="olt-V2Checkbox-button"></span>
                  <span class="olt-V2Checkbox-label">Option 5</span>
                </label>
              </div>
              <div class="demo-content">
                <label class="olt-V2Checkbox">
-                 <input type="checkbox" disabled />
+                 <input type="checkbox"/>
                  <span class="olt-V2Checkbox-button"></span>
                  <span class="olt-V2Checkbox-label">Option 6</span>
+               </label>
+             </div>
+             <div class="demo-content">
+               <label class="olt-V2Checkbox">
+                 <input type="checkbox" disabled />
+                 <span class="olt-V2Checkbox-button"></span>
+                 <span class="olt-V2Checkbox-label">Option 7</span>
                </label>
              </div>
            </div>

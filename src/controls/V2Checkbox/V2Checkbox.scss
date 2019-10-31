@@ -30,6 +30,7 @@ $v2-checkbox-colors: (
   $checkbox-size: 18;
   $checkbox-width: $checkbox-size * 1px;
   $checkbox-height: $checkbox-size * 1px;
+  $self: &;
 
   @mixin checkbox-background($fill, $path) {
     @include svg(
@@ -120,6 +121,13 @@ $v2-checkbox-colors: (
     );
   }
 
+  &--indetermined ~ &-button:after {
+    @include checkbox-background(
+      map-get($theme-light-background, default),
+      $indetermined-background-path
+    );
+  }
+
   input:checked ~ &-button:after {
     @include checkbox-background(
       map-get($theme-light-background, checked),
@@ -142,6 +150,20 @@ $v2-checkbox-colors: (
     @include checkbox-background(
       map-get($theme-light-background, disabled),
       $checked-background-path
+    );
+  }
+
+  &--indetermined:checked ~ &-button:after {
+    @include checkbox-background(
+      map-get($theme-light-background, checked),
+      $indetermined-background-path
+    );
+  }
+
+  &--indetermined:disabled ~ &-button:after {
+    @include checkbox-background(
+      map-get($theme-light-background, disabled),
+      $indetermined-background-path
     );
   }
 
@@ -181,6 +203,13 @@ $v2-checkbox-colors: (
     );
   }
 
+  .Theme-dark & &--indetermined ~ &-button:after {
+    @include checkbox-background(
+      map-get($theme-dark-background, default),
+      $indetermined-background-path
+    );
+  }
+
   .Theme-dark & input:checked:disabled ~ &-button:after {
     @include checkbox-background(
       map-get($theme-dark-background, disabled),
@@ -188,10 +217,14 @@ $v2-checkbox-colors: (
     );
   }
 
-  //
-  // indetermined
-  //
-  &--indetermined ~ &-button:after {
+  .Theme-dark & &--indetermined:checked ~ &-button:after {
+    @include checkbox-background(
+      map-get($theme-dark-background, checked),
+      $indetermined-background-path
+    );
+  }
+
+  .Theme-dark & &--indetermined:disabled ~ &-button:after {
     @include checkbox-background(
       map-get($theme-dark-background, disabled),
       $indetermined-background-path
