@@ -84,7 +84,7 @@
     &:after {
       @extend .Icon:before;
 
-      @extend .Icon-navigation-close.Icon--small:before;
+      @extend .Icon-close.Icon--small:before;
 
       margin-left: 2px;
     }

@@ -48,10 +48,10 @@ Make use of the `olt-Button--icon` class in order to apply an icon to a button. 
 note that this doesn't work with inputs of button type.
 
 ```icon.html
-<a class="olt-Button olt-Button--icon olt-Icon-navigation-close olt-Icon--small"></a>
-<a class="olt-Button olt-Button--outline olt-Button--icon olt-Icon-navigation-close olt-Icon--small"></a>
-<button class="olt-Button olt-Button--primary olt-Button--icon olt-Icon-navigation-close olt-Icon--small"></button>
-<button class="olt-Button olt-Button--primary olt-Button--outline olt-Button--icon olt-Icon-navigation-close olt-Icon--small"></button>
+<a class="olt-Button olt-Button--icon olt-Icon-close olt-Icon--small"></a>
+<a class="olt-Button olt-Button--outline olt-Button--icon olt-Icon-close olt-Icon--small"></a>
+<button class="olt-Button olt-Button--primary olt-Button--icon olt-Icon-close olt-Icon--small"></button>
+<button class="olt-Button olt-Button--primary olt-Button--outline olt-Button--icon olt-Icon-close olt-Icon--small"></button>
 ```
 
 ## States

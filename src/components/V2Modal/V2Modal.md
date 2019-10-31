@@ -285,7 +285,7 @@ In rare occasions the icon and background color of the header can be individuall
     <div class="olt-V2Modal">
       <div class="olt-V2Modal-dialog">
     <header class="olt-V2Modal-header olt-V2Modal-header--custom olt-u-backgroundColorGray500">
-          <i class="olt-Icon olt-Icon-security-visibility"></i>
+          <i class="olt-Icon olt-Icon-visibility"></i>
           Oh yes! Success!
         </header>
         <div class="olt-V2Modal-content">
@@ -305,7 +305,7 @@ In rare occasions the icon and background color of the header can be individuall
 <div class="olt-V2Modal olt-V2Modal--action">
   <div class="olt-V2Modal-dialog">
     <header class="olt-V2Modal-header olt-V2Modal-header--custom olt-u-backgroundColorGray500">
-      <i class="olt-Icon olt-Icon-security-visibility"></i>
+      <i class="olt-Icon olt-Icon-visibility"></i>
         Oh yes! Success!
     </header>
     <div class="olt-V2Modal-content">
@@ -329,7 +329,7 @@ The icon can be changed while keeping the remaining styles. *Also use with care!
     <div class="olt-V2Modal olt-V2Modal--action">
       <div class="olt-V2Modal-dialog">
         <header class="olt-V2Modal-header olt-V2Modal-header--custom">
-          <i class="olt-Icon olt-Icon-security-visibility"></i>
+          <i class="olt-Icon olt-Icon-visibility"></i>
           Action!
         </header>
         <div class="olt-V2Modal-content">
@@ -349,7 +349,7 @@ The icon can be changed while keeping the remaining styles. *Also use with care!
 <div class="olt-V2Modal olt-V2Modal--action">
   <div class="olt-V2Modal-dialog">
     <header class="olt-V2Modal-header olt-V2Modal-header--custom">
-      <i class="olt-Icon olt-Icon-security-visibility"></i>
+      <i class="olt-Icon olt-Icon-visibility"></i>
         Action!
     </header>
     <div class="olt-V2Modal-content">
