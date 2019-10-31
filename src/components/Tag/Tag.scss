@@ -72,19 +72,17 @@
 
     &:after,
     &:before {
-      @extend .Icon:before;
-
       display: inline-flex;
-      font-size: initial;
       vertical-align: text-top;
     }
   }
 
   &-close {
     &:after {
-      @extend .Icon:before;
-
-      @extend .Icon-close.Icon--small:before;
+      @extend
+        .Icon:before,
+        .Icon--small,
+        .Icon-close.Icon--small:before;
 
       margin-left: 2px;
     }
@@ -95,7 +93,10 @@
     vertical-align: middle;
 
     &:before {
-      font-size: initial;
+      @extend
+        .Icon,
+        .Icon--small;
+
       vertical-align: text-top;
       margin-right: 2px;
     }
