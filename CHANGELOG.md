@@ -73,3 +73,4 @@
 - Feature: Disabled Action Button
 - Feature: Dialog Layout
 - Feature: Stepper Dialog
+- Fix: Design Fixes for Card, ActionButton and V2Modal
