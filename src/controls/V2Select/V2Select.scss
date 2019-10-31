@@ -1,4 +1,6 @@
 .V2Select {
+  $chevron-size: 6px;
+
   @extend %v2Control;
 
   @mixin chevronDown ($color) {
@@ -14,12 +16,12 @@
   appearance: none;
   cursor: pointer;
   background-position:
-    calc(100% - 24px) 4px,
+    calc(100% - #{18px+$chevron-size}) 4px,
     calc(100% - 18px) 4px,
     calc(100% - 2.5em) 0;
   background-size:
-    6px 6px,
-    6px 6px,
+    $chevron-size $chevron-size,
+    $chevron-size $chevron-size,
     1px 0;
   background-repeat: no-repeat;
 
@@ -34,6 +36,36 @@
 
   & option {
     color: initial;
+  }
+
+  &--pagination {
+    $pagination-chevron-size: 6px;
+    $color: var-get('colorSecondary');
+    $padding-y: 8px;
+    $padding-x: 16px;
+    $chevron-padding-x: 16px;
+
+    @extend .u-description;
+
+    border: 1px solid;
+    border-color: var-get('colorSecondary');
+    border-radius: $olt-button-border-radius;
+    margin-top: 0;
+    padding: $padding-y #{($padding-x+$pagination-chevron-size+$chevron-padding-x)-2px} $padding-y $padding-x;
+    background-image:
+      linear-gradient(45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%),
+      linear-gradient(-45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%);
+    background-position:
+      calc(100% - #{$padding-x+$pagination-chevron-size}),
+      calc(100% - #{$padding-x});
+
+    &:focus {
+      box-shadow: none;
+      border-color: var-get('colorSecondary');
+      background-image:
+        linear-gradient(45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%),
+        linear-gradient(-45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%);
+    }
   }
 
   //
