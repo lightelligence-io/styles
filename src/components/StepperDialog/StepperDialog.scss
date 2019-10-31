@@ -4,6 +4,7 @@
   $dialog-margin-x: 12px;
   $dialog-backdrop: rgba(0, 0, 0, 0.7);
   $dialog-backdrop-filter: blur(8px);
+  $dialog-min-size: 448px;
 
   $dialog-window-padding: 32px;
   $dialog-content-padding: 32px;
@@ -52,6 +53,7 @@
     min-width: 248px;
     max-width: map-get($dialog-widths, xl);
     max-height: 100%;
+    margin: 0;
     background-color: var-get('gray200');
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
@@ -153,7 +155,7 @@
   &-content {
     @extend .Dialog-window;
 
-    min-width: 448px;
+    min-width: $dialog-min-size;
     max-width: map-get($dialog-widths, xl);
     max-height: 100%;
     flex: 1;
@@ -179,7 +181,7 @@
     #{$self}-stepper {
       background-color: var-get('colorLight');
       width: 100%;
-      min-width: 448px;
+      min-width: $dialog-min-size;
       max-width: map-get($dialog-widths, lg);
       min-height: 42px;
       padding: 0;
@@ -187,6 +189,10 @@
       align-items: center;
       position: absolute;
       top: 45px; // TODO: dialog padding (32) + close media margin (16) + close height (36) /2 - this.height /2
+
+      @media (max-width: $dialog-min-size) {
+        min-width: 100%;
+      }
     }
 
     #{$self}-stepper-header {
@@ -203,6 +209,7 @@
 
     #{$self}-content {
       max-width: map-get($dialog-widths, lg);
+      min-width: 100%;
 
       & > .Dialog-close {
         margin-top: 16px;
