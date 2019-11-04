@@ -52,7 +52,7 @@ $v2-checkbox-colors: (
 
   $checked-background-path: 'M16 0H2C.9 0 0 .9 0 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zM7 14L2 9.192l1.4-1.346L7 11.308 14.6 4 16 5.346 7 14z';
   $default-background-path: 'M16 2v14H2V2h14zm0-2H2C.9 0 0 .9 0 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z';
-  $indetermined-background-path: ' M2 8H16V10H2z M16 0H2C.9 0 0 .9 0 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zM7';
+  $indeterminate-background-path: ' M2 8H16V10H2z M16 0H2C.9 0 0 .9 0 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zM7';
 
   position: relative;
   display: flex;
@@ -130,10 +130,11 @@ $v2-checkbox-colors: (
     );
   }
 
-  &--indetermined ~ &-button:after {
+  input:indeterminate ~ &-button:after,
+  &--indeterminate ~ &-button:after {
     @include checkbox-background(
-      map-get($theme-light-background, default),
-      $indetermined-background-path
+      map-get($theme-light-background, checked),
+      $indeterminate-background-path
     );
   }
 
@@ -162,17 +163,11 @@ $v2-checkbox-colors: (
     );
   }
 
-  &--indetermined:checked ~ &-button:after {
-    @include checkbox-background(
-      map-get($theme-light-background, checked),
-      $indetermined-background-path
-    );
-  }
-
-  &--indetermined:disabled ~ &-button:after {
+  input:disabled:indeterminate ~ &-button:after,
+  &--indeterminate:disabled ~ &-button:after {
     @include checkbox-background(
       map-get($theme-light-background, disabled),
-      $indetermined-background-path
+      $indeterminate-background-path
     );
   }
 
@@ -212,10 +207,11 @@ $v2-checkbox-colors: (
     );
   }
 
-  .Theme-dark & &--indetermined ~ &-button:after {
+  .Theme-dark & input:indeterminate ~ &-button:after,
+  .Theme-dark & &--indeterminate ~ &-button:after {
     @include checkbox-background(
-      map-get($theme-dark-background, default),
-      $indetermined-background-path
+      map-get($theme-dark-background, checked),
+      $indeterminate-background-path
     );
   }
 
@@ -226,17 +222,11 @@ $v2-checkbox-colors: (
     );
   }
 
-  .Theme-dark & &--indetermined:checked ~ &-button:after {
-    @include checkbox-background(
-      map-get($theme-dark-background, checked),
-      $indetermined-background-path
-    );
-  }
-
-  .Theme-dark & &--indetermined:disabled ~ &-button:after {
+  .Theme-dark & input:disabled:indeterminate ~ &-button:after,
+  .Theme-dark & &--indeterminate:disabled ~ &-button:after {
     @include checkbox-background(
       map-get($theme-dark-background, disabled),
-      $indetermined-background-path
+      $indeterminate-background-path
     );
   }
 }
