@@ -39,6 +39,8 @@
     padding: $card-padding-y $card-padding-x;
     width: 100%;
     display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: min-content 1fr;
     grid-gap: calc(var(--spacer) / 4);
   }
 
