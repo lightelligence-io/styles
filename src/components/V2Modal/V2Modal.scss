@@ -103,7 +103,7 @@
     background: var-get('colorError');
 
     &:before {
-      @extend .Icon-feedback-warning-critical-filled.Icon--large;
+      @extend .Icon-warning-critical-filled.Icon--large;
     }
   }
 
@@ -111,7 +111,7 @@
     background: var-get('colorInfo');
 
     &:before {
-      @extend .Icon-feedback-info-filled.Icon--large;
+      @extend .Icon-info-filled.Icon--large;
     }
   }
 
@@ -119,7 +119,7 @@
     background: var-get('colorWarning');
 
     &:before {
-      @extend .Icon-feedback-warning-medium-filled.Icon--large;
+      @extend .Icon-warning-medium-filled.Icon--large;
     }
   }
 
@@ -127,7 +127,7 @@
     background: var-get('colorSuccess');
 
     &:before {
-      @extend .Icon-feedback-check-filled.Icon--large;
+      @extend .Icon-check-filled.Icon--large;
     }
   }
 
@@ -135,14 +135,14 @@
     background: var-get('colorPrimary');
 
     &:before {
-      @extend .Icon-action-settings.Icon--large;
+      @extend .Icon-settings.Icon--large;
     }
   }
 
   $types: ('critical' 'info' 'warning' 'success' 'action');
 
   &#{not-any-selector($types, $self)} &-header:before {
-    @extend .Icon-feedback-check-filled.Icon--large;
+    @extend .Icon-check-filled.Icon--large;
   }
 
   // remove icon for -header--custom modifier

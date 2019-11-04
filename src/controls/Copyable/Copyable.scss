@@ -23,7 +23,7 @@
   &:after {
     @extend .Icon:before;
 
-    @extend .Icon-action-duplicate.Icon--large:before;
+    @extend .Icon-duplicate.Icon--large:before;
 
     padding-left: 8px;
     align-self: center;
