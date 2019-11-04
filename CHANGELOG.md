@@ -74,3 +74,6 @@
 - Feature: Dialog Layout
 - Feature: Stepper Dialog
 - Fix: Design Fixes for Card, ActionButton and V2Modal
+
+#v1.0.0-alpha.4
+- Chore: Update Icons
