@@ -80,3 +80,10 @@
 
 #v1.0.0-alpha.4
 - Chore: Update Icons
+
+#v1.0.0-alpha.5
+- Feature: indeterminate option for V2Checkbox
+- Fix: Card border and Notification styles
+- Fix: Handlebars Vulnerability
+- Chore: Package Update
+
