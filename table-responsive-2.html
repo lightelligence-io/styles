@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+
+	<head>
+		<style>
+					body > div.olt-Frame { 
+    max-width: 400px;
+    resize: both;
+}
+body > div.olt-Frame .olt-u-overflowXAuto {
+    resize: horizontal;
+    border: 2px solid #ff6600;
+    padding: 20px;
+}
+		</style>
+
+		<style>
+			html, body {
+				min-height: 0 !important;
+				height: auto !important;
+			}
+		</style>
+
+		<script>
+			function findAndHandleStylemarkBlocks(languages, handler) {
+				var blocks = getStylemarkBlocks(languages);
+				handleStylemarkBlocks(blocks, handler);
+			}
+
+			function getStylemarkBlocks(languages) {
+				languages = typeof languages === 'string' ? [languages] : languages;
+
+				var selectors = [];
+
+				for (var i = 0; i < languages.length; i++) {
+					selectors.push('script[data-language="' + languages[i] + '"]');
+				}
+
+				var selector = selectors.join(',');
+				var scripts = document.querySelectorAll(selector);
+				var blocks = [];
+
+				for (var i = 0, length = scripts.length; i < length; i++) {
+					if (scripts[i].innerText) {
+						blocks.push(scripts[i].innerText);
+					}
+				}
+
+				return blocks;
+			}
+
+			function handleStylemarkBlocks(blocks, handler) {
+				for (var i = 0, length = blocks.length; i < length; i++) {
+					handler(blocks[i], i);
+				}
+			}
+		</script>
+
+			<link rel="stylesheet" href="./dist/index.css">
+
+		
+	</head>
+
+	<body>					<div class='olt-Frame'><div class="olt-u-overflowXAuto">
+  <table class="olt-Table olt-Table--selectable olt-Table--justify">
+    <thead class="olt-Table-head">
+      <tr class="olt-Table-row">
+        <th class="olt-Table-header">Firstname</th>
+        <th class="olt-Table-header">Type</th>
+        <th class="olt-Table-header">Firmware</th>
+        <th class="olt-Table-header">Tags</th>
+        <th class="olt-Table-header">Status</th>
+      </tr>
+    </thead>
+    <tbody class="olt-Table-body">
+      <tr class="olt-Table-row">
+        <td class="olt-Table-data">
+          <h5 class="olt-Headline--6 olt-u-textPrimary">Gateway XXX</h5>
+          <p class="olt-Paragraph olt-u-fontMono olt-u-fontSizeXxSmall">0123456789</p>
+        </td>
+        <td class="olt-Table-data olt-u-fontMono">
+          <i class="olt-Icon olt-u-textPrimary" data-icon="exit_to_app"></i> <span class="olt-u-fontSizeXSmall">Gateway</span>
+        </td>
+        <td class="olt-Table-data olt-u-textPrimary olt-u-fontSizeSmall">DEV2S</td>
+        <td class="olt-Table-data">
+          <span class="olt-Tag olt-Tag--secondary olt-Tag--outline">Tag 1</span>
+          <span class="olt-Tag olt-Tag--secondary olt-Tag--outline">Tag 2</span>
+        </td>
+        <td class="olt-Table-data ">
+          <span class="olt-u-textSuccess">●</span> Online
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div></div>
+			<script type="text/x-stylemark" data-language="css">body > div.olt-Frame { 
+    max-width: 400px;
+    resize: both;
+}
+body > div.olt-Frame .olt-u-overflowXAuto {
+    resize: horizontal;
+    border: 2px solid #ff6600;
+    padding: 20px;
+}</script>
+			<script type="text/x-stylemark" data-language="html"><div class="olt-u-overflowXAuto">
+  <table class="olt-Table olt-Table--selectable olt-Table--justify">
+    <thead class="olt-Table-head">
+      <tr class="olt-Table-row">
+        <th class="olt-Table-header">Firstname</th>
+        <th class="olt-Table-header">Type</th>
+        <th class="olt-Table-header">Firmware</th>
+        <th class="olt-Table-header">Tags</th>
+        <th class="olt-Table-header">Status</th>
+      </tr>
+    </thead>
+    <tbody class="olt-Table-body">
+      <tr class="olt-Table-row">
+        <td class="olt-Table-data">
+          <h5 class="olt-Headline--6 olt-u-textPrimary">Gateway XXX</h5>
+          <p class="olt-Paragraph olt-u-fontMono olt-u-fontSizeXxSmall">0123456789</p>
+        </td>
+        <td class="olt-Table-data olt-u-fontMono">
+          <i class="olt-Icon olt-u-textPrimary" data-icon="exit_to_app"></i> <span class="olt-u-fontSizeXSmall">Gateway</span>
+        </td>
+        <td class="olt-Table-data olt-u-textPrimary olt-u-fontSizeSmall">DEV2S</td>
+        <td class="olt-Table-data">
+          <span class="olt-Tag olt-Tag--secondary olt-Tag--outline">Tag 1</span>
+          <span class="olt-Tag olt-Tag--secondary olt-Tag--outline">Tag 2</span>
+        </td>
+        <td class="olt-Table-data ">
+          <span class="olt-u-textSuccess">●</span> Online
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div></script>
+
+		<!--
+			Vanilla JS
+		-->
+
+		<script>
+			findAndHandleStylemarkBlocks('js', function(block) {
+				eval(block);
+			});
+		</script>
+
+		<!--
+			AngularJS
+		-->
+
+		<script>
+			(function(angular) {
+
+				if (!angular) {
+					return;
+				}
+
+				findAndHandleStylemarkBlocks('angularjs', function(block, index) {
+					var moduleElem = document.querySelector('[ng-app]');
+					var module;
+
+					if (moduleElem) {
+						// Uses an existing module
+						module = angular.module(moduleElem.getAttribute('ng-app'));
+					}
+					else {
+						// Creates a new module
+						module = angular.module('stylemark-table-responsive-2', []);
+					}
+
+					module.controller('stylemark-table-responsive-2-' + index, function($scope) {
+						$scope.$eval(block);
+					});
+				});
+			})(window.angular);
+		</script>
+
+		<!--
+			React / JSX
+		-->
+
+		<script>
+			(function(ReactDOM) {
+
+				if (!ReactDOM) {
+					return;
+				}
+
+				findAndHandleStylemarkBlocks('jsx', function(block, index) {
+					var rootNode = document.querySelectorAll('.stylemark-react-root')[index];
+					var Component = eval(block);
+					ReactDOM.render(Component, rootNode);
+				});
+			})(window.ReactDOM);
+		</script>
+
+		<!--
+			Ember
+		-->
+
+		<script>
+			(function(Ember) {
+
+				if (!Ember) {
+					return;
+				}
+
+				findAndHandleStylemarkBlocks(['handlebars', 'hbs'], function(block, index) {
+					var render = function() {
+						var app = window.noop
+						var container = app.__container__;
+						var renderer = container.lookup('renderer:-dom');
+						var template = Ember.HTMLBars.compile(block);
+
+						var jsBlocks = getStylemarkBlocks('js');
+						var jsBlock = jsBlocks && jsBlocks[0] ? jsBlocks[0] : '{}';
+						var context;
+						eval('context = ' + jsBlock);
+
+						// Credit:
+						// http://stackoverflow.com/questions/27950413/render-ember-js-hbs-template-to-a-string#answer-35625858
+						var compile = function(container, template, context) {
+							return new Ember.RSVP.Promise(function(resolve) {
+								Ember.Component.extend(Ember.merge({
+									style: 'display:none;',
+									layout: template,
+									container: container,
+									renderer: renderer,
+
+									init: function() {
+										this._super.apply(this, arguments);
+										Ember.setOwner(this, container);
+									},
+
+									didRender: function() {
+										var elem = this.$();
+										resolve(elem);
+										this.destroy();
+									}
+								}, context))
+									.create()
+									.append();
+
+							});
+						};
+
+						compile(container, template, context).then(function(elem) {
+							var node = document.querySelectorAll('.stylemark-ember-root')[index];
+							jQuery(node).append(elem);
+						});
+					};
+
+					var isReady = function() {
+						return window.noop
+							&& window.noop.__container__;
+					};
+
+					var checkReady = function() {
+						if (isReady()) {
+							render();
+						}
+						else {
+							setTimeout(checkReady, 20);
+						}
+					};
+
+					checkReady();
+				});
+
+			})(window.Ember);
+		</script>
+
+		<script src="_stylemark/js/vendor/iframeResizer.contentWindow.min.js"></script>
+	</body>
+</html>
