@@ -53,6 +53,10 @@
 	</head>
 
 	<body>			<script type="text/x-stylemark" data-language="js"><script>
+
+  /**
+   * Adds closing functionality for a notification
+   */
   /**
    * Add closing functionality for a notification
    */
@@ -60,13 +64,17 @@
     document
       .querySelectorAll('div.olt-Notification')
       .forEach((notificationEl) => {
-        const closeEl = notificationEl.querySelector('label.olt-Notification-close');
-        if (closeEl) closeEl.addEventListener('click', () => {
-          notificationEl.classList.remove('is-open');
-        });
+        const closeEl = notificationEl.querySelector(
+          'button.olt-Notification-close',
+        );
+        if (closeEl) {
+          closeEl.addEventListener('click', () => {
+            notificationEl.classList.remove('is-open');
+            notificationEl.style.display = 'none';
+          });
+        }
       });
   });
-
 
   /**
    * Adds demo functionality to show stack of notifications
@@ -76,10 +84,12 @@
       ...document.querySelector('div.olt-NotificationContainer').children,
     ].reverse();
     notificationsList.forEach((notification, index) => {
+      notification.style.display = '';
       setTimeout(() => {
         notification.classList.add('is-open');
       }, 1000 * index);
       setTimeout(() => {
+        notification.style.display = 'none';
         notification.classList.remove('is-open');
       }, 3000 + 1000 * index);
     });
