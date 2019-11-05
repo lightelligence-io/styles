@@ -5584,15 +5584,8 @@ page and take a look at the example below.</p>
 		<span class="theme-content-element-source-path">components/Notification/Notification.md</span>
 	</span>
 	<div class="theme-content-element-description"><div id="description" class="i-pad-top-5 i-section"><h2 class="i-pad-top-3 i-position-container"><a href="#description" class="icon-link i-section__link -heading"></a>Description</h2></div><p>The <em>Notification</em> is used to show a message on the bottom of the screen.
-It occupies the <code>olt-NotificationContainer</code> and <code>olt-Notification*</code> class names, 
-with <code>olt-NotificationContainer</code> being the container element holding the stack 
-of notifications.</p>
-<p>On larger screens notifications are placed on the bottom right, on small devices 
-only the header is displayed bottom-centered with full width. Notifications can 
-stack up if they are not closed manually within a very short time. A 
-notification that is not closed manually should hide automatically after a short 
-time. For implementing the logic behind the visibility of the Notifications 
-please use JavaScript ( check &quot;Related JavaScript&quot; section below for a demo ).</p>
+It occupies the <code>olt-NotificationContainer</code> and <code>olt-Notification*</code> class names, with <code>olt-NotificationContainer</code> being the conatiner element holding the stack of notifications.</p>
+<p>On larger screens notifications are placed on the bottom right, on small devices only the header is displayed bottom-centered with full width. Notifications can stack up if they are not closed manually within a very short time. A notification that is not closed manually fades out automatically after a short time.</p>
 <div class="olt-Card olt-u-padding5">
   <div class="olt-u-marginAuto">
     <button class="olt-Button" onclick={showNotifications()}>Demo</button>
@@ -5623,6 +5616,7 @@ please use JavaScript ( check &quot;Related JavaScript&quot; section below for a
         </button>
     </div>
 </div>
+
 
 <div id="notification-types" class="i-pad-top-5 i-section"><h2 class="i-pad-top-3 i-position-container"><a href="#notification-types" class="icon-link i-section__link -heading"></a>Notification Types</h2></div><p>Like the modals the notifications got different color themes for various use cases. Depending on the use case a fitting color and icon is used.</p>
 <ul>
@@ -5821,8 +5815,8 @@ DON&#39;T USE IN PRODUCTION!! --&gt;
 </code></pre>
 	</div>
 </div><div id="states" class="i-pad-top-5 i-section"><h2 class="i-pad-top-3 i-position-container"><a href="#states" class="icon-link i-section__link -heading"></a>States</h2></div><p>A <em>Notification</em> is hidden by default. It can be rendered by adding <code>is-open</code>
-state class at the main element. It will appear inside the 
-<em>NotificationContainer</em>, which is rendered at the bottom right of the page.</p>
+state class at the main element. It will then animate into the bottom of the
+page.</p>
 
 <div class="i-code-block">
 	<button type="button" class="i-code-block__lang "> html</button>
@@ -5874,10 +5868,6 @@ state class at the main element. It will appear inside the
 	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> js</button>
 	<div class="i-code-block__content hidden">
 		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="&lt;script&gt;
-
-  /**
-   * Adds closing functionality for a notification
-   */
   /**
    * Add closing functionality for a notification
    */
@@ -5885,17 +5875,13 @@ state class at the main element. It will appear inside the
     document
       .querySelectorAll(&#39;div.olt-Notification&#39;)
       .forEach((notificationEl) =&gt; {
-        const closeEl = notificationEl.querySelector(
-          &#39;button.olt-Notification-close&#39;,
-        );
-        if (closeEl) {
-          closeEl.addEventListener(&#39;click&#39;, () =&gt; {
-            notificationEl.classList.remove(&#39;is-open&#39;);
-            notificationEl.style.display = &#39;none&#39;;
-          });
-        }
+        const closeEl = notificationEl.querySelector(&#39;label.olt-Notification-close&#39;);
+        if (closeEl) closeEl.addEventListener(&#39;click&#39;, () =&gt; {
+          notificationEl.classList.remove(&#39;is-open&#39;);
+        });
       });
   });
+
 
   /**
    * Adds demo functionality to show stack of notifications
@@ -5905,22 +5891,16 @@ state class at the main element. It will appear inside the
       ...document.querySelector(&#39;div.olt-NotificationContainer&#39;).children,
     ].reverse();
     notificationsList.forEach((notification, index) =&gt; {
-      notification.style.display = &#39;&#39;;
       setTimeout(() =&gt; {
         notification.classList.add(&#39;is-open&#39;);
       }, 1000 * index);
       setTimeout(() =&gt; {
-        notification.style.display = &#39;none&#39;;
         notification.classList.remove(&#39;is-open&#39;);
       }, 3000 + 1000 * index);
     });
   };
 &lt;/script&gt;">Copy</button>
 		<pre class="mb-0"><code class="lang-">&lt;script&gt;
-
-  /**
-   * Adds closing functionality for a notification
-   */
   /**
    * Add closing functionality for a notification
    */
@@ -5928,17 +5908,13 @@ state class at the main element. It will appear inside the
     document
       .querySelectorAll(&#39;div.olt-Notification&#39;)
       .forEach((notificationEl) =&gt; {
-        const closeEl = notificationEl.querySelector(
-          &#39;button.olt-Notification-close&#39;,
-        );
-        if (closeEl) {
-          closeEl.addEventListener(&#39;click&#39;, () =&gt; {
-            notificationEl.classList.remove(&#39;is-open&#39;);
-            notificationEl.style.display = &#39;none&#39;;
-          });
-        }
+        const closeEl = notificationEl.querySelector(&#39;label.olt-Notification-close&#39;);
+        if (closeEl) closeEl.addEventListener(&#39;click&#39;, () =&gt; {
+          notificationEl.classList.remove(&#39;is-open&#39;);
+        });
       });
   });
+
 
   /**
    * Adds demo functionality to show stack of notifications
@@ -5948,12 +5924,10 @@ state class at the main element. It will appear inside the
       ...document.querySelector(&#39;div.olt-NotificationContainer&#39;).children,
     ].reverse();
     notificationsList.forEach((notification, index) =&gt; {
-      notification.style.display = &#39;&#39;;
       setTimeout(() =&gt; {
         notification.classList.add(&#39;is-open&#39;);
       }, 1000 * index);
       setTimeout(() =&gt; {
-        notification.style.display = &#39;none&#39;;
         notification.classList.remove(&#39;is-open&#39;);
       }, 3000 + 1000 * index);
     });
