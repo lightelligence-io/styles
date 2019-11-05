@@ -135,7 +135,7 @@
     &:before {
       @extend .Icon:before;
 
-      @extend .Icon-navigation-close;
+      @extend .Icon-close;
     }
 
     align-self: flex-end;
@@ -162,25 +162,25 @@
   }
 
   &--error &-dialog:before {
-    @extend .Icon-feedback-warning-low-circle;
+    @extend .Icon-warning-low-outline;
 
     background: var-get('colorError');
   }
 
   &--info &-dialog:before {
-    @extend .Icon-feedback-info-circle;
+    @extend .Icon-info-outline;
 
     background: var-get('colorInfo');
   }
 
   &--warning &-dialog:before {
-    @extend .Icon-feedback-warning-low-circle;
+    @extend .Icon-warning-low-outline;
 
     background: var-get('colorWarning');
   }
 
   &--success &-dialog:before {
-    @extend .Icon-feedback-check-circle;
+    @extend .Icon-check-outline;
 
     background: var-get('colorSuccess');
   }

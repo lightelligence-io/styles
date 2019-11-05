@@ -112,7 +112,7 @@
     &--done {
       &:before {
         @extend
-          .Icon-feedback-check-default;
+          .Icon-check-default;
 
         width: $stepper-circle-large-size;
         height: $stepper-circle-large-size;
