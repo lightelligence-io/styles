@@ -41,18 +41,20 @@ $notification-spacing-y: 8px;
   $notification-icon-size: 24px;
   $self: &;
 
-  opacity: 0;
-  max-height: 0;
-  overflow: auto;
   font-family: var-get('fontFamilyBase');
   background: $notification-background;
   border-radius: $notification-border-radius;
-  padding-left: $notification-content-padding-x;
+  padding-top: $notification-content-padding-y;
   padding-right: $notification-content-padding-x;
+  padding-bottom: $notification-content-padding-y;
+  padding-left: $notification-content-padding-x;
   box-shadow: $notification-box-shadow;
   display: flex;
   flex-wrap: wrap;
-  transition: all $notification-transition-duration ease-out;
+  width: $notification-width;
+  margin-bottom: $notification-spacing-y;
+  opacity: 0;
+  transition: opacity $notification-transition-duration ease-in;
 
   &:focus {
     outline: none;
@@ -60,13 +62,6 @@ $notification-spacing-y: 8px;
 
   &.is-open {
     opacity: 1;
-    width: $notification-width;
-    height: auto;
-    max-height: 100%;  // use max-height to make the animation work
-    margin-bottom: $notification-spacing-y;
-    padding-top: $notification-content-padding-y;
-    padding-bottom: $notification-content-padding-y;
-    transition: opacity $notification-transition-duration ease-in;
   }
 
   &-dialog {
@@ -118,6 +113,10 @@ $notification-spacing-y: 8px;
 
     &:focus {
       outline: none;
+    }
+
+    .Icon {
+      vertical-align: top;
     }
   }
 
