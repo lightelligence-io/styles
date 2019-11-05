@@ -1,0 +1,26 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: echo Running Scripts!!
+    - name: Run build scripts
+    - run: |
+        audit-ci --config ./audit-ci.json --moderate
+        npm run license-report
+        npm run lint
+        npm run build
+        npm run test
+        npm run build:docs
+        npm run coveralls
+    - name: Run a multi-line script
+      run: |
+        echo Add other actions to build,
+        echo test, and deploy your project.
