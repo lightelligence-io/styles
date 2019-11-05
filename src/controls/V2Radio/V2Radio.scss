@@ -19,16 +19,8 @@ $v2-radio-colors: (
   display: flex;
   align-items: center;
 
-  &--inline {
-    display: inline-flex;
-  }
-
   & + & {
     margin-top: 4px;
-  }
-
-  &--inline + &--inline {
-    margin-top: 0;
   }
 
   input {
