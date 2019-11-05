@@ -49,6 +49,9 @@
 #v0.12.1
 - fix: remove bottom border radius on input elements
 
+#v0.12.2
+- fix: vulnerabilities
+
 #v1.0.0-alpha.1
 - Feature: New Icons (BREAKING CHANGE!)
   - We removed the material icons and use CSS classes instead of data attributes now.
