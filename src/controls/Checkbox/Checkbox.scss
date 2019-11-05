@@ -26,7 +26,7 @@
       &:after {
         @extend .Icon:before;
 
-        @extend .Icon-feedback-check-default.Icon--large:before;
+        @extend .Icon-check-default.Icon--large:before;
 
         position: absolute;
         top: 1.5px;
@@ -39,7 +39,7 @@
 
     &:checked + #{$self}--indeterminate#{$self}-label:after,
     &:indeterminate + #{$self}-label:after {
-      @extend .Icon-feedback-check-default.Icon--large:before;
+      @extend .Icon-check-default.Icon--large:before;
     }
 
     &:disabled + #{$self}-label {

@@ -6,8 +6,8 @@ category: Content
 ## Description
 
 *Data Cards* component can be used to show table-like content that
-is represented as a list of cards on tablet and mobile. The component occupies 
-`olt-DataCards*` class names and must be structured with a specific layout. 
+is represented as a list of cards on tablet and mobile. The component occupies
+`olt-DataCards*` class names and must be structured with a specific layout.
 
 ```example-1.html
 <div class="olt-DataCards olt-DataCards--useFlexLayout">
@@ -186,7 +186,7 @@ is represented as a list of cards on tablet and mobile. The component occupies
 </div>
 ```
 ```example-gray.css
-body { 
+body {
   background: #E6E9ED;
   padding: 20px;
 }
@@ -269,7 +269,7 @@ In order to support more complex use cases it is possible to enable **table layo
       <div class="olt-DataCards-headItem">Is Online</div>
     </div>
     <div class="olt-DataCards-body">
-    
+
       <div class="olt-DataCards-card">
         <div class="olt-DataCards-cardItem">
           <div class="olt-DataCards-title">First Name</div>
@@ -453,7 +453,7 @@ Cards do not react to mouse events by default. To make them behave like buttons,
 </div>
 ```
 ```modifiers-selectable.css
-body { 
+body {
   background: #E6E9ED;
   padding: 20px;
 }
@@ -472,7 +472,7 @@ Normally all column widths are evenly distributed. By applying the classes `olt-
       <div class="olt-DataCards-headItem olt-DataCards--tableCellWidth25">Is Admin</div>
     </div>
     <div class="olt-DataCards-body">
-    
+
       <div class="olt-DataCards-card">
         <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth25">
           <div class="olt-DataCards-title">Name</div>
@@ -640,7 +640,7 @@ In this example we use the modifiers on cardItems:
       <div class="olt-DataCards-headItem">Is Online</div>
     </div>
     <div class="olt-DataCards-body">
-    
+
       <div class="olt-DataCards-card">
         <div class="olt-DataCards-cardItem olt-DataCards--tableOnly">
           <div class="olt-DataCards-content">
@@ -680,8 +680,8 @@ In this case they are applied to the `content` of the `cardItem`.
       <div class="olt-DataCards-headItem">Name / ID</div>
       <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Floor</div>
       <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Room</div>
-      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Temperature&nbsp;<i class="olt-Icon olt-Icon--dark olt-Icon-arrows-chevron-up olt-Icon--small"></i></div>
-      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Occupancy&nbsp;<i class="olt-Icon olt-Icon--dark olt-Icon-arrows-chevron-down olt-Icon--small"></i></div>
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Temperature&nbsp;<i class="olt-Icon olt-Icon--dark olt-Icon-chevron-up olt-Icon--small"></i></div>
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Occupancy&nbsp;<i class="olt-Icon olt-Icon--dark olt-Icon-chevron-down olt-Icon--small"></i></div>
       <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Last Motion</div>
       <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Power</div>
       <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Brightness</div>
@@ -771,7 +771,7 @@ In this case they are applied to the `content` of the `cardItem`.
   right: calc( 100% + 10px);
   margin-top:-5px;
   top:50%;
-  
+
 }
 .dot {
   display:inline-block;
@@ -841,7 +841,7 @@ By default **table layout** uses `auto` as value for the `table-layout` css prop
       <div class="olt-DataCards-headItem">Is Online</div>
     </div>
     <div class="olt-DataCards-body">
-    
+
       <div class="olt-DataCards-card">
         <div class="olt-DataCards-cardItem">
           <div class="olt-DataCards-title">First Name</div>
@@ -902,7 +902,7 @@ The **table-layout** enables additional options to control the width of card ite
       <div class="olt-DataCards-headItem olt-DataCards--tableCellMinimalWidth olt-DataCards--alignRight">Status</div>
     </div>
     <div class="olt-DataCards-body">
-    
+
       <div class="olt-DataCards-card">
         <div class="olt-DataCards-cardItem olt-DataCards--tableCellMinimalWidth">
           <div class="olt-DataCards-title">Name</div>
@@ -944,9 +944,9 @@ There is an equivalent `olt-DataCards--firstTableItem` modifier. It fixes the sa
       <div class="olt-DataCards-headItem">Is Online</div>
     </div>
     <div class="olt-DataCards-body">
-    
+
       <div class="olt-DataCards-card">
-      
+
         <div class="olt-DataCards-cardItem olt-DataCards--listOnly">
           <div class="olt-DataCards-title">Name</div>
           <div class="olt-DataCards-content">

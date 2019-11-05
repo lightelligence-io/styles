@@ -54,7 +54,7 @@
     &:after {
       @extend .Icon:before;
 
-      @extend .Icon-arrows-chevron-right.Icon--small:before;
+      @extend .Icon-chevron-right.Icon--small:before;
 
       display: inline-block;
       vertical-align: middle;

@@ -5,12 +5,12 @@ category: Controls
 
 ## Description
 
-*TextField* is used with `<div>` elements that contain a text-input and 
+*TextField* is used with `<div>` elements that contain a text-input and
 optionally a label and can be used as [FormFields](/#form-field) for text
 input elements. *TextField* occupies `olt-TextField*` class names.
 
 The `input` tag of the *TextField* must also include `olt-Input` class name,
-since it wraps the [Input](/#input) component and enhances it. The `label` tag 
+since it wraps the [Input](/#input) component and enhances it. The `label` tag
 of the *TextField* must also include `olt-Label` class name for the very same
 reasons.
 
@@ -46,7 +46,7 @@ additional information such as validation errors.
 
 ### Floating labels
 
-Enable floating labels by adding `--float` modifier and placing the label 
+Enable floating labels by adding `--float` modifier and placing the label
 *after* the input in markup. When the *TextField* contains a floating label,
 it will not display `placeholder` html attribute, until the input field is
 focused.
@@ -76,7 +76,7 @@ to the end of the label.
 
 ### Horizontal text field
 
-You can make horizontal *TextFields* by adding `--horizontal` modifier 
+You can make horizontal *TextFields* by adding `--horizontal` modifier
 class name. This will render the text inputs with the labels next to them,
 rather than stacked above them.
 
@@ -105,8 +105,8 @@ rather than stacked above them.
 ### Info Message
 
 An additional information can be added to the text field by nesting `-info`
-child element inside `-footer`. It is rendered on the right side of the 
-text field. 
+child element inside `-footer`. It is rendered on the right side of the
+text field.
 
 ```info.html
 <div class="olt-TextField">
@@ -128,7 +128,7 @@ element containing `olt-TextField-icon`.
 ```icon.html
 <div class="olt-TextField">
   <div class="olt-TextField-icon">
-    <i class="olt-Icon olt-Icon--error olt-Icon-feedback-warning-low-filled"></i>
+    <i class="olt-Icon olt-Icon--error olt-Icon-warning-low-filled"></i>
   </div>
   <label class="olt-Label olt-TextField-label">Username</label>
   <input class="olt-Input olt-TextField-input is-error" value="bill"/>

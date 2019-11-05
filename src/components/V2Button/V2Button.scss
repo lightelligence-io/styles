@@ -597,7 +597,7 @@
     &:before {
       @extend .Icon;
 
-      @extend .Icon-arrows-chevron-right.Icon--small;
+      @extend .Icon-chevron-right.Icon--small;
 
       margin-left: 4px;
     }
@@ -611,7 +611,7 @@
     &:before {
       @extend .Icon;
 
-      @extend .Icon-arrows-chevron-left.Icon--small;
+      @extend .Icon-chevron-left.Icon--small;
 
       margin-right: 4px;
     }
