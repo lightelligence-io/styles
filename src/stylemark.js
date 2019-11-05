@@ -25,10 +25,12 @@ window.addEventListener('load', () => {
       const closeEl = notificationEl.querySelector(
         'button.olt-Notification-close',
       );
-      if (closeEl)
+      if (closeEl) {
         closeEl.addEventListener('click', () => {
           notificationEl.classList.remove('is-open');
+          notificationEl.style.display = 'none';
         });
+      }
     });
 });
 
@@ -40,10 +42,12 @@ showNotifications = () => {
     ...document.querySelector('div.olt-NotificationContainer').children,
   ].reverse();
   notificationsList.forEach((notification, index) => {
+    notification.style.display = '';
     setTimeout(() => {
       notification.classList.add('is-open');
     }, 1000 * index);
     setTimeout(() => {
+      notification.style.display = 'none';
       notification.classList.remove('is-open');
     }, 3000 + 1000 * index);
   });
