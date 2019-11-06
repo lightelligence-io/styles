@@ -12,7 +12,7 @@ jobs:
     - name: Run a one-line script
       run: echo Running Scripts!!
     - name: Run build scripts
-    - run: |
+      run: |
         audit-ci --config ./audit-ci.json --moderate
         npm run license-report
         npm run lint
