@@ -19,8 +19,3 @@ jobs:
         npm run build
         npm run test
         npm run build:docs
-        npm run coveralls
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
