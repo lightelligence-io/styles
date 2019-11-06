@@ -9,7 +9,7 @@ mkdir gh-pages
 echo 'checking out gh-pages branch ...'
 git clone -b gh-pages --single-branch https://github.com/$TRAVIS_REPO_SLUG gh-pages
 
-# create release documentation in docs/releases/x.x.x
+# create release documentation and move to gh-pages/releases/x.x.x
 if [[ $TRAVIS_COMMIT_MESSAGE =~ ^release ]]; then
   echo -n 'release commit: creating release docs ... '
   rm -rf gh-pages/releases/$VERSION
@@ -18,7 +18,7 @@ if [[ $TRAVIS_COMMIT_MESSAGE =~ ^release ]]; then
   echo 'done.'
 fi
 
-# create alpha documentation in docs/alpha
+# create alpha documentation and move it to gh-pages/alpha
 if [[ $TRAVIS_BRANCH == alpha ]]; then
   echo -n 'branch alpha: creating alpha docs ... '
   rm -rf gh-pages/alpha
@@ -27,7 +27,7 @@ if [[ $TRAVIS_BRANCH == alpha ]]; then
   echo 'done.'
 fi
 
-# create alpha documentation in docs/master
+# create master documentation and move it to gh-pages/master
 if [[ $TRAVIS_BRANCH == master ]]; then
   echo -n 'branch master: creating master docs ... '
   rm -rf gh-pages/master
