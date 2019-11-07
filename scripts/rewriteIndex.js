@@ -1,5 +1,6 @@
-const versionsFile = 'gh-pages/versions.json';
+const fs = require('fs');
 const indexFile = 'gh-pages/index.html';
+const version = require('../package.json').version;
 
 const indexSrc = (latestVersion) =>
   `
@@ -19,17 +20,4 @@ const indexSrc = (latestVersion) =>
   </html>
 `;
 
-const fs = require('fs');
-const version = require('../package.json').version;
-
-let versions;
-try {
-  versions = JSON.parse(fs.readFileSync(versionsFile, 'utf8'));
-} catch {
-  versions = [];
-}
-
-const versionExists = versions.includes(version);
-const newVersions = !versionExists ? versions.concat(version) : versions;
-fs.writeFileSync(versionsFile, JSON.stringify(newVersions));
 fs.writeFileSync(indexFile, indexSrc(version));
