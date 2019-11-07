@@ -1,10 +1,12 @@
-@function color-contrast($n, $threshold: 0.5) {
-  $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000);
-  $light-color: round((red(#fff) * 299) + (green(#fff) * 587) + (blue(#fff) * 114) / 1000);
-
-  @if abs($color-brightness) < $light-color * $threshold {
-    @return $light-color;
-  } @else {
-    @return false;
-  }
+@function color-opacity-on-black($color, $alpha) {
+  @return color-opacity-on-color($color, $alpha, #000);
 }
+
+@function color-opacity-on-white($color, $alpha) {
+  @return color-opacity-on-color($color, $alpha, #fff);
+}
+
+@function color-opacity-on-color($color, $alpha, $second-color) {
+  @return mix(opacify(rgba($color, $alpha), 1), $second-color, $alpha * 100%);
+}
+

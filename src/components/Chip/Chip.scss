@@ -20,54 +20,54 @@ $chip-colors: (
     selectable: true,
     disableable: true,
     bubble-color: (
-      normal: #495057,
+      normal: $olt-v2-darkColor,
     ),
     color: (
-      normal: var-get('colorDark'),
-      disabled: #a7a8aa,
+      normal: $olt-v2-darkColor,
+      disabled: $olt-v2-gray500Color,
     ),
     background: (
-      normal: var-get('gray200'),
-      hover: #f3f5f6,
-      press: #babcbf,
-      focus: #e9ecef,
-      disabled: #f3f5f7,
+      normal: $olt-v2-gray200Color,
+      hover: $olt-v2-gray200Color-50,
+      press: $olt-v2-gray200Color--80,
+      focus: $olt-v2-gray200Color-50,
+      disabled: $olt-v2-gray100Color
     ),
   ),
   dark: (
     selectable: true,
     disableable: true,
     bubble-color: (
-      normal: #d0d1d3,
+      normal: $olt-v2-lightColor,
     ),
     color: (
-      normal: var-get('colorLight'),
-      disabled: #a7a8aa,
+      normal: $olt-v2-lightColor,
+      disabled: $olt-v2-gray500Color,
     ),
     background: (
-      normal: var-get('colorDark'),
-      hover: #5b5b5b,
-      press: #c5c5c5,
-      focus: var-get('colorDark'),
-      disabled: #f3f5f7,
+      normal: $olt-v2-darkColor,
+      hover: $olt-v2-darkColor-60,
+      press: $olt-v2-darkColor-20,
+      focus: $olt-v2-darkColor-60,
+      disabled: $olt-v2-gray100Color
     ),
   ),
   light: (
     selectable: true,
     disableable: true,
     bubble-color: (
-      normal: var-get('colorDark'),
+      normal: #495057,
     ),
     color: (
-      normal: var-get('colorDark'),
+      normal: $olt-v2-darkColor,
       disabled: var-get('gray600'),
     ),
     background: (
-      normal: var-get('colorLight'),
-      hover: #b2b2b2,
-      press: #666,
-      focus: var-get('colorLight'),
-      disabled: #a7a8aa,
+      normal: $olt-v2-lightColor,
+      hover: $olt-v2-lightColor--70,
+      press: $olt-v2-lightColor--40,
+      focus: $olt-v2-lightColor--70,
+      disabled: $olt-v2-gray500Color
     ),
   ),
   primary: (
@@ -75,51 +75,51 @@ $chip-colors: (
     disableable: true,
     alias: 'active',
     bubble-color: (
-      normal: #f60,
+      normal: var(--olt-v2-primaryColor),
     ),
     color: (
-      normal: #f60,
-      disabled: #a7a8aa,
+      normal: var(--olt-v2-primaryColor),
+      disabled: $olt-v2-gray500Color,
     ),
     background: (
-      normal: #ffe0cc,
-      hover: #ffc299,
-      press: #ffa366,
-      focus: #ffe0cc,
-      disabled: #f5f6f8,
+      normal: var(--olt-v2-primaryColor-20),
+      hover: var(--olt-v2-primaryColor-40),
+      press: var(--olt-v2-primaryColor-60),
+      focus: var(--olt-v2-primaryColor-40),
+      disabled: $olt-v2-gray100Color
     ),
   ),
   error: (
     bubble-color: (
-      normal: var-get('colorError'),
+      normal: $olt-v2-errorColor,
     ),
     color: (
-      normal: var-get('colorError'),
+      normal: $olt-v2-errorColor,
     ),
     background: (
-      normal: #ffdedc,
+      normal: $olt-v2-errorColor-20,
     ),
   ),
   success: (
     bubble-color: (
-      normal: #00bf1a,
+      normal: $olt-v2-successColor,
     ),
     color: (
-      normal: #00bf1a,
+      normal: $olt-v2-successColor,
     ),
     background: (
-      normal: #d9f5dd,
+      normal: $olt-v2-successColor-15,
     ),
   ),
   info: (
     bubble-color: (
-      normal: #46b4cd,
+      normal: $olt-v2-infoColor,
     ),
     color: (
-      normal: #46b4cd,
+      normal: $olt-v2-infoColor,
     ),
     background: (
-      normal: #daf0f5,
+      normal: $olt-v2-infoColor-20,
     ),
   ),
 );

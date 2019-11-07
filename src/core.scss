@@ -11,9 +11,12 @@
 @import './core/functions/string';
 @import './core/functions/list';
 @import './core/functions/vars';
+@import './core/functions/color';
 
 // Theme
 @import './theme.yml';
+@import './core/theme/scss-variables';
+@import './core/theme/css-properties';
 
 // Globals
 @import './core/globals/vars';

@@ -1,0 +1,57 @@
+/**
+ * List of shared scss variables
+ */
+
+$olt-v2-primaryColor: #f60;
+$olt-v2-primaryColor-20: color-opacity-on-white($olt-v2-primaryColor, 0.2);
+$olt-v2-primaryColor-40: color-opacity-on-white($olt-v2-primaryColor, 0.4);
+$olt-v2-primaryColor-60: color-opacity-on-white($olt-v2-primaryColor, 0.6);
+
+$olt-v2-secondaryColor: #0d122c;
+$olt-v2-secondaryColor-20: color-opacity-on-white($olt-v2-secondaryColor, 0.2);
+$olt-v2-secondaryColor-40: color-opacity-on-white($olt-v2-secondaryColor, 0.4);
+$olt-v2-secondaryColor-60: color-opacity-on-white($olt-v2-secondaryColor, 0.6);
+
+$olt-v2-errorColor: #fd5952;
+$olt-v2-errorColor-15: color-opacity-on-white($olt-v2-errorColor, 0.15);
+$olt-v2-errorColor-20: color-opacity-on-white($olt-v2-errorColor, 0.2);
+$olt-v2-errorColor-40: color-opacity-on-white($olt-v2-errorColor, 0.4);
+$olt-v2-errorColor-60: color-opacity-on-white($olt-v2-errorColor, 0.6);
+
+$olt-v2-successColor: #02bf1b;
+$olt-v2-successColor-15: color-opacity-on-white($olt-v2-successColor, 0.15);
+$olt-v2-successColor-20: color-opacity-on-white($olt-v2-successColor, 0.2);
+$olt-v2-successColor-40: color-opacity-on-white($olt-v2-successColor, 0.4);
+$olt-v2-successColor-60: color-opacity-on-white($olt-v2-successColor, 0.6);
+
+$olt-v2-infoColor: #46b4cd;
+$olt-v2-infoColor-15: color-opacity-on-white($olt-v2-infoColor, 0.15);
+$olt-v2-infoColor-20: color-opacity-on-white($olt-v2-infoColor, 0.2);
+$olt-v2-infoColor-40: color-opacity-on-white($olt-v2-infoColor, 0.4);
+$olt-v2-infoColor-60: color-opacity-on-white($olt-v2-infoColor, 0.6);
+
+$olt-v2-warningColor: #ffc94d;
+$olt-v2-warningColor-15: color-opacity-on-white($olt-v2-warningColor, 0.15);
+$olt-v2-warningColor-20: color-opacity-on-white($olt-v2-warningColor, 0.2);
+$olt-v2-warningColor-40: color-opacity-on-white($olt-v2-warningColor, 0.4);
+$olt-v2-warningColor-60: color-opacity-on-white($olt-v2-warningColor, 0.6);
+
+$olt-v2-gray100Color: #f5f6f8;
+
+$olt-v2-gray200Color: #e9ecef;
+$olt-v2-gray200Color--80: color-opacity-on-black($olt-v2-gray200Color, 0.8);
+$olt-v2-gray200Color-50: color-opacity-on-white($olt-v2-gray200Color, 0.5);
+
+$olt-v2-gray400Color: #d0d1d3;
+
+$olt-v2-gray500Color: #a7a8aa;
+
+$olt-v2-darkColor: #000;
+$olt-v2-darkColor-20: color-opacity-on-white($olt-v2-darkColor, 0.2);
+$olt-v2-darkColor-60: color-opacity-on-white($olt-v2-darkColor, 0.6);
+
+$olt-v2-lightColor: #fff;
+$olt-v2-lightColor--40: color-opacity-on-black($olt-v2-lightColor, 0.4);
+$olt-v2-lightColor--70: color-opacity-on-black($olt-v2-lightColor, 0.7);
+
+// missing color : #495057
