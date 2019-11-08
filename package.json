@@ -24,12 +24,13 @@
   ],
   "scripts": {
     "clean": "rm -rf dist && rm -rf docs",
-    "build": "npm run clean && cross-env NODE_ENV=production webpack --mode=production",
-    "start": "rm -rf docs && node scripts/start.js",
-    "build:docs": "stylemark -i \"./src\" -o \"./docs\" && touch ./docs/.nojekyll",
+    "write-version": "./scripts/write-version-file.sh",
+    "build": "npm run clean && cross-env NODE_ENV=production webpack --mode=production && npm run write-version",
+    "start": "rm -rf docs && npm run write-version && node scripts/start.js",
+    "build:docs": "stylemark -i \"./src\" -o \"./docs\" && touch ./docs/.nojekyll && npm run write-version",
     "lint": "stylelint \"src/**/*.scss\" && prettier --check \"{src,scripts}/**/*.js\"",
     "lint:fix": "stylelint --fix \"src/**/*.scss\" && prettier --write \"{src,scripts}/**/*.js\"",
-    "license-report": "legally",
+    "license-report": "legally -lr",
     "test": ""
   },
   "husky": {
