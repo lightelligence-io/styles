@@ -3,8 +3,14 @@
  */
 
 $olt-v2-primaryColor: #f60;
+
+// #ffe0cc
 $olt-v2-primaryColor-20: color-opacity-on-white($olt-v2-primaryColor, 0.2);
+
+// #ffc299
 $olt-v2-primaryColor-40: color-opacity-on-white($olt-v2-primaryColor, 0.4);
+
+// #ffa366
 $olt-v2-primaryColor-60: color-opacity-on-white($olt-v2-primaryColor, 0.6);
 
 $olt-v2-secondaryColor: #0d122c;

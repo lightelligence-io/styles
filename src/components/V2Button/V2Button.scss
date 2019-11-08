@@ -4,15 +4,15 @@
       'default': (
         'light': (
           'bg': (
-            'normal': var-get('colorPrimary'),
-            'hover': #ff944d,
+            'normal': var(--olt-v2-primaryColor),
+            'hover': var(--olt-v2-primaryColor-40),
             'press': #cf5509,
-            'progress': var-get('colorPrimary'),
-            'disabled': var-get('gray100'),
+            'progress': var(--olt-v2-primaryColor),
+            'disabled': $olt-v2-gray100Color
           ),
           'border': (),
           'font': (
-            'normal': var-get('colorLight'),
+            'normal': $olt-v2-lightColor
           ),
         ),
         'dark': (
