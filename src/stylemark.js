@@ -68,7 +68,7 @@ const getCurrentVersion = () =>
   );
 
 const getAllVersions = () =>
-  fetch('/styles/versions.json').then((response) =>
+  fetch('/styles/versions_json.txt').then((response) =>
     response.status === 200 ? response.text() : '[]',
   );
 
