@@ -105,7 +105,7 @@ const insertDropdown = (versions, currentVersion) => {
 const addVersionDropdown = (currentVersion) => {
   getAllVersions().then((versionsString) => {
     const versions = JSON.parse(versionsString).sort();
-    const dropdown = insertDropdown(versions, currentVersion);
+    insertDropdown(versions, currentVersion);
   });
 };
 
