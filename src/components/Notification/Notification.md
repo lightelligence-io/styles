@@ -6,9 +6,16 @@ category: Component
 ## Description
 
 The *Notification* is used to show a message on the bottom of the screen.
-It occupies the `olt-NotificationContainer` and `olt-Notification*` class names, with `olt-NotificationContainer` being the conatiner element holding the stack of notifications.
+It occupies the `olt-NotificationContainer` and `olt-Notification*` class names, 
+with `olt-NotificationContainer` being the container element holding the stack 
+of notifications.
 
-On larger screens notifications are placed on the bottom right, on small devices only the header is displayed bottom-centered with full width. Notifications can stack up if they are not closed manually within a very short time. A notification that is not closed manually fades out automatically after a short time.
+On larger screens notifications are placed on the bottom right, on small devices 
+only the header is displayed bottom-centered with full width. Notifications can 
+stack up if they are not closed manually within a very short time. A 
+notification that is not closed manually should hide automatically after a short 
+time. For implementing the logic behind the visibility of the Notifications 
+please use JavaScript ( check "Related JavaScript" section below for a demo ).
 
 <div class="olt-Card olt-u-padding5">
   <div class="olt-u-marginAuto">
@@ -25,7 +32,7 @@ On larger screens notifications are placed on the bottom right, on small devices
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon olt-Icon--medium olt-Icon-navigation-close"></i>
+            <i class="olt-Icon olt-Icon--medium olt-Icon-close"></i>
         </button>
     </div>
     <div class="olt-Notification olt-Notification--success">
@@ -36,11 +43,10 @@ On larger screens notifications are placed on the bottom right, on small devices
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon olt-Icon--medium olt-Icon-navigation-close"></i>
+            <i class="olt-Icon olt-Icon--medium olt-Icon-close"></i>
         </button>
     </div>
 </div>
-
 
 ## Notification Types
 
@@ -72,7 +78,7 @@ DON'T USE IN PRODUCTION!! -->
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon olt-Icon--medium olt-Icon-navigation-close"></i>
+            <i class="olt-Icon olt-Icon--medium olt-Icon-close"></i>
         </button>
     </div>
     <div class="olt-Notification olt-Notification--success is-open">
@@ -83,7 +89,7 @@ DON'T USE IN PRODUCTION!! -->
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon olt-Icon--medium olt-Icon-navigation-close"></i>
+            <i class="olt-Icon olt-Icon--medium olt-Icon-close"></i>
         </button>
     </div>
     <div class="olt-Notification olt-Notification--warning is-open">
@@ -94,7 +100,7 @@ DON'T USE IN PRODUCTION!! -->
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon olt-Icon--medium olt-Icon-navigation-close"></i>
+            <i class="olt-Icon olt-Icon--medium olt-Icon-close"></i>
         </button>
     </div>
     <div class="olt-Notification olt-Notification--error is-open">
@@ -105,7 +111,7 @@ DON'T USE IN PRODUCTION!! -->
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon olt-Icon--medium olt-Icon-navigation-close"></i>
+            <i class="olt-Icon olt-Icon--medium olt-Icon-close"></i>
         </button>
     </div>
 </div>
@@ -121,7 +127,7 @@ DON'T USE IN PRODUCTION!! -->
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon olt-Icon--medium olt-Icon-navigation-close"></i>
+            <i class="olt-Icon olt-Icon--medium olt-Icon-close"></i>
         </button>
     </div>
     <div class="olt-Notification olt-Notification--error">
@@ -132,7 +138,7 @@ DON'T USE IN PRODUCTION!! -->
             </div>
         </div>
         <button type='button' class="olt-Notification-close">
-            <i class="olt-Icon olt-Icon--medium olt-Icon-navigation-close"></i>
+            <i class="olt-Icon olt-Icon--medium olt-Icon-close"></i>
         </button>
     </div>
 </div>
@@ -142,8 +148,8 @@ DON'T USE IN PRODUCTION!! -->
 ## States
 
 A *Notification* is hidden by default. It can be rendered by adding `is-open`
-state class at the main element. It will then animate into the bottom of the
-page.
+state class at the main element. It will appear inside the 
+*NotificationContainer*, which is rendered at the bottom right of the page.
 
 ```html
 <div class="olt-NotificationContainer">
@@ -174,6 +180,10 @@ The following JS snippet is used to show, hide and close notifications for the d
 
 ```show_and_hide.js
 <script>
+
+  /**
+   * Adds closing functionality for a notification
+   */
   /**
    * Add closing functionality for a notification
    */
@@ -181,13 +191,17 @@ The following JS snippet is used to show, hide and close notifications for the d
     document
       .querySelectorAll('div.olt-Notification')
       .forEach((notificationEl) => {
-        const closeEl = notificationEl.querySelector('label.olt-Notification-close');
-        if (closeEl) closeEl.addEventListener('click', () => {
-          notificationEl.classList.remove('is-open');
-        });
+        const closeEl = notificationEl.querySelector(
+          'button.olt-Notification-close',
+        );
+        if (closeEl) {
+          closeEl.addEventListener('click', () => {
+            notificationEl.classList.remove('is-open');
+            notificationEl.style.display = 'none';
+          });
+        }
       });
   });
-
 
   /**
    * Adds demo functionality to show stack of notifications
@@ -197,10 +211,12 @@ The following JS snippet is used to show, hide and close notifications for the d
       ...document.querySelector('div.olt-NotificationContainer').children,
     ].reverse();
     notificationsList.forEach((notification, index) => {
+      notification.style.display = '';
       setTimeout(() => {
         notification.classList.add('is-open');
       }, 1000 * index);
       setTimeout(() => {
+        notification.style.display = 'none';
         notification.classList.remove('is-open');
       }, 3000 + 1000 * index);
     });

@@ -49,6 +49,9 @@
 #v0.12.1
 - fix: remove bottom border radius on input elements
 
+#v0.12.2
+- fix: vulnerabilities
+
 #v1.0.0-alpha.1
 - Feature: New Icons (BREAKING CHANGE!)
   - We removed the material icons and use CSS classes instead of data attributes now.
@@ -72,3 +75,15 @@
 #v1.0.0-alpha.3
 - Feature: Disabled Action Button
 - Feature: Dialog Layout
+- Feature: Stepper Dialog
+- Fix: Design Fixes for Card, ActionButton and V2Modal
+
+#v1.0.0-alpha.4
+- Chore: Update Icons
+
+#v1.0.0-alpha.5
+- Feature: indeterminate option for V2Checkbox
+- Fix: Card border and Notification styles
+- Fix: Handlebars Vulnerability
+- Chore: Package Update
+

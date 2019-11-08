@@ -62,7 +62,7 @@ body > div.olt-Frame { background-color: lightgrey; padding: 5px }
       Description
     </h6>
     <div class="olt-Card-action">
-      <i class="olt-Icon olt-Icon-navigation-more olt-Icon--large"></i>
+      <i class="olt-Icon olt-Icon-more olt-Icon--large"></i>
     </div>
   </div>
 </div>
@@ -87,7 +87,7 @@ body > div.olt-Frame { background-color: lightgrey; padding: 5px }
       Description
     </h6>
     <div class="olt-Card-action">
-      <i class="olt-Icon olt-Icon-navigation-more olt-Icon--large"></i>
+      <i class="olt-Icon olt-Icon-more olt-Icon--large"></i>
     </div>
   </div>
   <div class="olt-Card-content">
@@ -195,7 +195,7 @@ body > div.olt-Frame { padding: 20px; margin: auto; background-color: lightgrey;
     <h4 class="olt-Card-title">Title</h4>
     <div class="olt-Card-description">Description</div>
     <div class="olt-Card-action">
-      <button class="olt-ActionButton olt-ActionButton--primary olt-ActionButton-icon-right olt-Icon-action-edit">
+      <button class="olt-ActionButton olt-ActionButton--primary olt-ActionButton-icon-right olt-Icon-edit">
         <div class="olt-ActionButton-label">Edit</div>
       </button>
     </div>
@@ -208,10 +208,10 @@ body > div.olt-Frame { padding: 20px; margin: auto; background-color: lightgrey;
 
 ## Popup Card
 
-By adding `olt-Card--popup` you can create a card looking like a popup menu (used for filters). This will add a shaddow to it.
+By adding `olt-Card--popup` you can create a card looking like a popup menu (used for filters). This will add a shadow to it.
 
 ```popup.css hidden
-body > div.olt-Frame { padding: 20px; }
+body > div.olt-Frame { min-height: 130px; }
 ```
 
 ```popup.html

@@ -1,6 +1,6 @@
 {
   "name": "@lightelligence/styles",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.5",
   "description": "The UI-Framework of the lightelligence-platform.",
   "license": "MIT",
   "main": "dist/index.js",
@@ -30,7 +30,7 @@
     "build:docs": "stylemark -i \"./src\" -o \"./docs\" && touch ./docs/.nojekyll && npm run write-version",
     "lint": "stylelint \"src/**/*.scss\" && prettier --check \"{src,scripts}/**/*.js\"",
     "lint:fix": "stylelint --fix \"src/**/*.scss\" && prettier --write \"{src,scripts}/**/*.js\"",
-    "license-report": "legally",
+    "license-report": "legally -lr",
     "test": ""
   },
   "husky": {
@@ -80,11 +80,11 @@
     }
   },
   "devDependencies": {
-    "@babel/cli": "^7.6.3",
-    "@babel/core": "^7.6.3",
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.0",
     "@babel/plugin-transform-spread": "^7.6.2",
-    "@babel/polyfill": "^7.6.0",
-    "@babel/preset-env": "^7.6.3",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.7.0",
     "audit-ci": "^2.4.0",
     "autoprefixer": "^9.6.4",
     "babel-loader": "^8.0.6",

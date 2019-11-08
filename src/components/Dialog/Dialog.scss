@@ -13,18 +13,19 @@
   $dialog-description-padding-bottom: 32px;
   $dialog-transition-duration: 0.2s;
   $dialog-transition-timing-function: ease-in;
+  $dialog-min-size: 448px;
 
   $dialog-widths: (
-    sm: 100%,
-    md: 100%,
-    lg: 100%,
-    xl: 95%,
+    sm: 100vw,
+    md: 100vw,
+    lg: 100vw,
+    xl: 95vw,
   );
   $dialog-heights: (
-    sm: 100%,
-    md: 100%,
-    lg: 100%,
-    xl: 95%,
+    sm: 100vh,
+    md: 100vh,
+    lg: 100vh,
+    xl: 95vh,
   );
   $self: &;
 
@@ -41,8 +42,6 @@
   -webkit-overflow-scrolling: touch;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   overscroll-behavior: contain;
   z-index: $olt-z-index-dialog;
   display: flex;
@@ -52,9 +51,11 @@
   &-window {
     display: flex;
     flex-direction: column;
-    min-width: 448px;
+    min-width: $dialog-min-size;
+    min-height: $dialog-min-size;
     max-width: map-get($dialog-widths, xl);
     max-height: map-get($dialog-heights, xl);
+    margin: auto;
     padding: $dialog-window-padding;
     border-radius: $dialog-border-radius;
     background: var-get('colorLight');
@@ -65,6 +66,10 @@
       min-width: map-get($dialog-widths, sm);
       min-height: map-get($dialog-heights, sm);
     }
+
+    @media (max-height: $dialog-min-size) {
+      min-height: $dialog-min-size;
+    }
   }
 
   &-close {
@@ -73,7 +78,7 @@
       .ActionButton--standalone,
       .ActionButton-icon,
       .Icon--small,
-      .Icon-navigation-close;
+      .Icon-close;
 
     align-self: flex-end;
     margin: 0;
@@ -96,6 +101,7 @@
   }
 
   &-content {
+    flex: 1;
     padding: $dialog-content-padding;
     padding-top: 0;
     padding-bottom: 0;

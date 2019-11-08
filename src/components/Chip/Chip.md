@@ -57,10 +57,10 @@ names.
               <span class="olt-Chip">Label</span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip-icon-left olt-Icon-action-add-default olt-Icon--small">Label</span>
+              <span class="olt-Chip olt-Chip-icon-left olt-Icon-add-default olt-Icon--small">Label</span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip-icon-right olt-Icon-action-add-default olt-Icon--small">Label</span>
+              <span class="olt-Chip olt-Chip-icon-right olt-Icon-add-default olt-Icon--small">Label</span>
             </div>
             <div class="demo-content">
               <span class="olt-Chip olt-Chip--withBubble">
@@ -69,7 +69,7 @@ names.
               </span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip--withBubble olt-Chip-icon-left olt-Icon-action-add-default olt-Icon--small">
+              <span class="olt-Chip olt-Chip--withBubble olt-Chip-icon-left olt-Icon-add-default olt-Icon--small">
                 Label
                 <span class="olt-Chip-bubble">42</span>
               </span>
@@ -100,10 +100,10 @@ names.
               <span class="olt-Chip olt-Chip--dark">Label</span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip--dark olt-Chip-icon-left olt-Icon-action-add-default olt-Icon--small">Label</span>
+              <span class="olt-Chip olt-Chip--dark olt-Chip-icon-left olt-Icon-add-default olt-Icon--small">Label</span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip--dark olt-Chip-icon-right olt-Icon-action-add-default olt-Icon--small">Label</span>
+              <span class="olt-Chip olt-Chip--dark olt-Chip-icon-right olt-Icon-add-default olt-Icon--small">Label</span>
             </div>
             <div class="demo-content">
               <span class="olt-Chip olt-Chip--dark olt-Chip--withBubble">
@@ -112,7 +112,7 @@ names.
               </span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip--dark olt-Chip--withBubble olt-Chip-icon-left olt-Icon-action-add-default olt-Icon--small">
+              <span class="olt-Chip olt-Chip--dark olt-Chip--withBubble olt-Chip-icon-left olt-Icon-add-default olt-Icon--small">
                 Label
                 <span class="olt-Chip-bubble">42</span>
               </span>
@@ -143,10 +143,10 @@ names.
               <span class="olt-Chip olt-Chip--light">Label</span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip--light olt-Chip-icon-left olt-Icon-action-add-default olt-Icon--small">Label</span>
+              <span class="olt-Chip olt-Chip--light olt-Chip-icon-left olt-Icon-add-default olt-Icon--small">Label</span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip--light olt-Chip-icon-right olt-Icon-action-add-default olt-Icon--small">Label</span>
+              <span class="olt-Chip olt-Chip--light olt-Chip-icon-right olt-Icon-add-default olt-Icon--small">Label</span>
             </div>
             <div class="demo-content">
               <span class="olt-Chip olt-Chip--light olt-Chip--withBubble">
@@ -155,7 +155,7 @@ names.
               </span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip--light olt-Chip--withBubble olt-Chip-icon-left olt-Icon-action-add-default olt-Icon--small">
+              <span class="olt-Chip olt-Chip--light olt-Chip--withBubble olt-Chip-icon-left olt-Icon-add-default olt-Icon--small">
                 Label
                 <span class="olt-Chip-bubble">42</span>
               </span>
@@ -186,10 +186,10 @@ names.
               <span class="olt-Chip olt-Chip--primary">Label</span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip--primary olt-Chip-icon-left olt-Icon-action-add-default olt-Icon--small">Label</span>
+              <span class="olt-Chip olt-Chip--primary olt-Chip-icon-left olt-Icon-add-default olt-Icon--small">Label</span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip--primary olt-Chip-icon-right olt-Icon-action-add-default olt-Icon--small">Label</span>
+              <span class="olt-Chip olt-Chip--primary olt-Chip-icon-right olt-Icon-add-default olt-Icon--small">Label</span>
             </div>
             <div class="demo-content">
               <span class="olt-Chip olt-Chip--primary olt-Chip--withBubble">
@@ -198,7 +198,7 @@ names.
               </span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip--primary olt-Chip--withBubble olt-Chip-icon-left olt-Icon-action-add-default olt-Icon--small">
+              <span class="olt-Chip olt-Chip--primary olt-Chip--withBubble olt-Chip-icon-left olt-Icon-add-default olt-Icon--small">
                 Label
                 <span class="olt-Chip-bubble">42</span>
               </span>
@@ -260,7 +260,7 @@ names.
               <span class="olt-Chip olt-Chip--error">Label</span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip--error olt-Chip-icon-left olt-Icon-navigation-close olt-Icon--small">Label</span>
+              <span class="olt-Chip olt-Chip--error olt-Chip-icon-left olt-Icon-close olt-Icon--small">Label</span>
             </div>
             <div class="demo-content">
               <span class="olt-Chip olt-Chip--error olt-Chip--withBubble">
@@ -269,7 +269,7 @@ names.
               </span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip--error olt-Chip--withBubble olt-Chip-icon-left olt-Icon-navigation-close olt-Icon--small">
+              <span class="olt-Chip olt-Chip--error olt-Chip--withBubble olt-Chip-icon-left olt-Icon-close olt-Icon--small">
                 Label
                 <span class="olt-Chip-bubble">42</span>
               </span>
@@ -293,7 +293,7 @@ names.
               <span class="olt-Chip olt-Chip--success">Label</span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip--success olt-Chip-icon-left olt-Icon-feedback-check-default olt-Icon--small">Label</span>
+              <span class="olt-Chip olt-Chip--success olt-Chip-icon-left olt-Icon-check-default olt-Icon--small">Label</span>
             </div>
             <div class="demo-content">
               <span class="olt-Chip olt-Chip--success olt-Chip--withBubble">
@@ -302,7 +302,7 @@ names.
               </span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip--success olt-Chip--withBubble olt-Chip-icon-left olt-Icon-feedback-check-default olt-Icon--small">
+              <span class="olt-Chip olt-Chip--success olt-Chip--withBubble olt-Chip-icon-left olt-Icon-check-default olt-Icon--small">
                 Label
                 <span class="olt-Chip-bubble">42</span>
               </span>
@@ -326,7 +326,7 @@ names.
               <span class="olt-Chip olt-Chip--info">Label</span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip--info olt-Chip-icon-left olt-Icon-feedback-info-filled olt-Icon--small">Label</span>
+              <span class="olt-Chip olt-Chip--info olt-Chip-icon-left olt-Icon-info-filled olt-Icon--small">Label</span>
             </div>
             <div class="demo-content">
               <span class="olt-Chip olt-Chip--info olt-Chip--withBubble">
@@ -335,7 +335,7 @@ names.
               </span>
             </div>
             <div class="demo-content">
-              <span class="olt-Chip olt-Chip--info olt-Chip--withBubble olt-Chip-icon-left olt-Icon-feedback-info-filled olt-Icon--small">
+              <span class="olt-Chip olt-Chip--info olt-Chip--withBubble olt-Chip-icon-left olt-Icon-info-filled olt-Icon--small">
                 Label
                 <span class="olt-Chip-bubble">42</span>
               </span>
@@ -420,20 +420,20 @@ Each _Chip_ can have an icon rendered on the left or on the right side by adding
 `olt-Chip-icon-left` or `olt-Chip-icon-right` and the desired Icon class to the component's classes.
 
 ```icons.html
-<span class="olt-Chip olt-Chip-icon-left olt-Icon-action-add-default olt-Icon--small">Default</span>
-<span class="olt-Chip olt-Chip--dark olt-Chip-icon-left olt-Icon-action-add-default olt-Icon--small">Dark</span>
-<span class="olt-Chip olt-Chip--primary olt-Chip-icon-left olt-Icon-action-add-default olt-Icon--small">Primary</span>
-<span class="olt-Chip olt-Chip--error olt-Chip-icon-left olt-Icon-action-add-default olt-Icon--small">Error</span>
-<span class="olt-Chip olt-Chip--success olt-Chip-icon-left olt-Icon-action-add-default olt-Icon--small">Success</span>
-<span class="olt-Chip olt-Chip--info olt-Chip-icon-left olt-Icon-action-add-default olt-Icon--small">Info</span>
+<span class="olt-Chip olt-Chip-icon-left olt-Icon-add-default olt-Icon--small">Default</span>
+<span class="olt-Chip olt-Chip--dark olt-Chip-icon-left olt-Icon-add-default olt-Icon--small">Dark</span>
+<span class="olt-Chip olt-Chip--primary olt-Chip-icon-left olt-Icon-add-default olt-Icon--small">Primary</span>
+<span class="olt-Chip olt-Chip--error olt-Chip-icon-left olt-Icon-add-default olt-Icon--small">Error</span>
+<span class="olt-Chip olt-Chip--success olt-Chip-icon-left olt-Icon-add-default olt-Icon--small">Success</span>
+<span class="olt-Chip olt-Chip--info olt-Chip-icon-left olt-Icon-add-default olt-Icon--small">Info</span>
 <br />
 <br />
-<span class="olt-Chip olt-Chip-icon-right olt-Icon-action-add-default olt-Icon--small">Default</span>
-<span class="olt-Chip olt-Chip--dark olt-Chip-icon-right olt-Icon-action-add-default olt-Icon--small">Dark</span>
-<span class="olt-Chip olt-Chip--primary olt-Chip-icon-right olt-Icon-action-add-default olt-Icon--small">Primary</span>
-<span class="olt-Chip olt-Chip--error olt-Chip-icon-right olt-Icon-action-add-default olt-Icon--small">Error</span>
-<span class="olt-Chip olt-Chip--success olt-Chip-icon-right olt-Icon-action-add-default olt-Icon--small">Success</span>
-<span class="olt-Chip olt-Chip--info olt-Chip-icon-right olt-Icon-action-add-default olt-Icon--small">Info</span>
+<span class="olt-Chip olt-Chip-icon-right olt-Icon-add-default olt-Icon--small">Default</span>
+<span class="olt-Chip olt-Chip--dark olt-Chip-icon-right olt-Icon-add-default olt-Icon--small">Dark</span>
+<span class="olt-Chip olt-Chip--primary olt-Chip-icon-right olt-Icon-add-default olt-Icon--small">Primary</span>
+<span class="olt-Chip olt-Chip--error olt-Chip-icon-right olt-Icon-add-default olt-Icon--small">Error</span>
+<span class="olt-Chip olt-Chip--success olt-Chip-icon-right olt-Icon-add-default olt-Icon--small">Success</span>
+<span class="olt-Chip olt-Chip--info olt-Chip-icon-right olt-Icon-add-default olt-Icon--small">Info</span>
 ```
 
 ### Bubble
@@ -469,33 +469,33 @@ _Chip_.
 </span>
 ```
 
-The _Chip_'s bubble can also be an icon by adding `olt-Chip-bubble-icon` 
+The _Chip_'s bubble can also be an icon by adding `olt-Chip-bubble-icon`
 and the desired icon class to the bubble element.
 
 ```bubble-icons.html
 <span class="olt-Chip olt-Chip--withBubble">
   Default
-  <span class="olt-Chip-bubble olt-Chip-bubble-icon olt-Icon-action-add-default olt-Icon--small"></span>
+  <span class="olt-Chip-bubble olt-Chip-bubble-icon olt-Icon-add-default olt-Icon--small"></span>
 </span>
 <span class="olt-Chip olt-Chip--dark olt-Chip--withBubble">
   Dark
-  <span class="olt-Chip-bubble olt-Chip-bubble-icon olt-Icon-action-add-default olt-Icon--small"></span>
+  <span class="olt-Chip-bubble olt-Chip-bubble-icon olt-Icon-add-default olt-Icon--small"></span>
 </span>
 <span class="olt-Chip olt-Chip--primary olt-Chip--withBubble">
   Primary
-  <span class="olt-Chip-bubble olt-Chip-bubble-icon olt-Icon-action-add-default olt-Icon--small"></span>
+  <span class="olt-Chip-bubble olt-Chip-bubble-icon olt-Icon-add-default olt-Icon--small"></span>
 </span>
 <span class="olt-Chip olt-Chip--error olt-Chip--withBubble">
   Error
-  <span class="olt-Chip-bubble olt-Chip-bubble-icon olt-Icon-action-add-default olt-Icon--small"></span>
+  <span class="olt-Chip-bubble olt-Chip-bubble-icon olt-Icon-add-default olt-Icon--small"></span>
 </span>
 <span class="olt-Chip olt-Chip--success olt-Chip--withBubble">
   Success
-  <span class="olt-Chip-bubble olt-Chip-bubble-icon olt-Icon-action-add-default olt-Icon--small"></span>
+  <span class="olt-Chip-bubble olt-Chip-bubble-icon olt-Icon-add-default olt-Icon--small"></span>
 </span>
 <span class="olt-Chip olt-Chip--info olt-Chip--withBubble">
   Info
-  <span class="olt-Chip-bubble olt-Chip-bubble-icon olt-Icon-action-add-default olt-Icon--small"></span>
+  <span class="olt-Chip-bubble olt-Chip-bubble-icon olt-Icon-add-default olt-Icon--small"></span>
 </span>
 ```
 
@@ -510,7 +510,7 @@ bubble's element. They only work with the default _Chip_.
 ```bubble-colors.html
 <span class="olt-Chip olt-Chip--withBubble">
   Info with icon
-  <span class="olt-Chip-bubble olt-Chip-bubble--info olt-Chip-bubble-icon olt-Icon-action-add-default olt-Icon--small"></span>
+  <span class="olt-Chip-bubble olt-Chip-bubble--info olt-Chip-bubble-icon olt-Icon-add-default olt-Icon--small"></span>
 </span>
 <span class="olt-Chip olt-Chip--withBubble">
   Success with counter
@@ -518,10 +518,10 @@ bubble's element. They only work with the default _Chip_.
 </span>
 <span class="olt-Chip olt-Chip--withBubble">
   Warning with icon
-  <span class="olt-Chip-bubble olt-Chip-bubble--warning olt-Chip-bubble-icon olt-Icon-action-add-default olt-Icon--small"></span>
+  <span class="olt-Chip-bubble olt-Chip-bubble--warning olt-Chip-bubble-icon olt-Icon-add-default olt-Icon--small"></span>
 </span>
 <span class="olt-Chip olt-Chip--withBubble">
   Error with icon
-  <span class="olt-Chip-bubble olt-Chip-bubble--error olt-Chip-bubble-icon olt-Icon-action-add-default olt-Icon--small"></span>
+  <span class="olt-Chip-bubble olt-Chip-bubble--error olt-Chip-bubble-icon olt-Icon-add-default olt-Icon--small"></span>
 </span>
 ```

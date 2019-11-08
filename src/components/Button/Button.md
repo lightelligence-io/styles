@@ -5,7 +5,7 @@ category: Component
 
 ## Description
 
-Buttons can be used with `<button>`, `<button>`, and `<input type="button">` 
+Buttons can be used with `<button>`, `<button>`, and `<input type="button">`
 elements and occupy the `olt-Button*` class names.
 
 ```button.html
@@ -16,7 +16,7 @@ elements and occupy the `olt-Button*` class names.
 
 ## Colors
 
-The *Buttons* can be rendered with 
+The *Buttons* can be rendered with
 [any of our conceptual colors](/#concepts-colors) :
 
 ```colors.html
@@ -30,7 +30,7 @@ The *Buttons* can be rendered with
 
 ## Outline
 
-The *Button* can also be rendered as *outline*, which turns the accent color 
+The *Button* can also be rendered as *outline*, which turns the accent color
 into a border, instead of a background.
 
 ```outline.html
@@ -44,14 +44,14 @@ into a border, instead of a background.
 
 ## Icon
 
-Make use of the `olt-Button--icon` class in order to apply an icon to a button. Please 
+Make use of the `olt-Button--icon` class in order to apply an icon to a button. Please
 note that this doesn't work with inputs of button type.
 
 ```icon.html
-<a class="olt-Button olt-Button--icon olt-Icon-navigation-close olt-Icon--small"></a>
-<a class="olt-Button olt-Button--outline olt-Button--icon olt-Icon-navigation-close olt-Icon--small"></a>
-<button class="olt-Button olt-Button--primary olt-Button--icon olt-Icon-navigation-close olt-Icon--small"></button>
-<button class="olt-Button olt-Button--primary olt-Button--outline olt-Button--icon olt-Icon-navigation-close olt-Icon--small"></button>
+<a class="olt-Button olt-Button--icon olt-Icon-close olt-Icon--small"></a>
+<a class="olt-Button olt-Button--outline olt-Button--icon olt-Icon-close olt-Icon--small"></a>
+<button class="olt-Button olt-Button--primary olt-Button--icon olt-Icon-close olt-Icon--small"></button>
+<button class="olt-Button olt-Button--primary olt-Button--outline olt-Button--icon olt-Icon-close olt-Icon--small"></button>
 ```
 
 ## States
