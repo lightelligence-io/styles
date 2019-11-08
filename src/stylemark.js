@@ -59,7 +59,7 @@ showNotifications = () => {
 
 const triggerNavigation = () => {
   const target = document.getElementById('versions_select').value;
-  window.location.href = 'releases/' + target;
+  window.location.href = '/styles/releases/' + target;
 };
 
 const getCurrentVersion = () =>
@@ -68,7 +68,7 @@ const getCurrentVersion = () =>
   );
 
 const getAllVersions = () =>
-  fetch('../versions.json').then((response) =>
+  fetch('/styles/versions.json').then((response) =>
     response.status === 200 ? response.text() : '[]',
   );
 
