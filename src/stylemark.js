@@ -59,7 +59,7 @@ showNotifications = () => {
 
 const triggerNavigation = () => {
   const target = document.getElementById('versions_select').value;
-  window.location.href = '/styles/releases/' + target;
+  window.location.href = target;
 };
 
 const getCurrentVersion = () =>
@@ -80,7 +80,7 @@ const addCurrentVersion = (version) => {
 const createOptions = (versions, currentVersion) =>
   versions.map(
     (v) =>
-      `<option value='${v}'${
+      `<option value='/styles/releases/${v}'${
         currentVersion.trim() === v.trim() ? ' selected' : ''
       }>
       ${v}
