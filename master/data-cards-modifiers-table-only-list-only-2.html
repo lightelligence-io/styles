@@ -1,0 +1,402 @@
+<!doctype html>
+<html>
+
+	<head>
+		<style>
+					.dotAndName {
+  position: relative;
+}
+.dot-abs {
+  position: absolute;
+  top: 0;
+  right: calc( 100% + 10px);
+  margin-top:-5px;
+  top:50%;
+  
+}
+.dot {
+  display:inline-block;
+  background-color: var(--olt-colorSuccess);
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+}
+		</style>
+
+		<style>
+			html, body {
+				min-height: 0 !important;
+				height: auto !important;
+			}
+		</style>
+
+		<script>
+			function findAndHandleStylemarkBlocks(languages, handler) {
+				var blocks = getStylemarkBlocks(languages);
+				handleStylemarkBlocks(blocks, handler);
+			}
+
+			function getStylemarkBlocks(languages) {
+				languages = typeof languages === 'string' ? [languages] : languages;
+
+				var selectors = [];
+
+				for (var i = 0; i < languages.length; i++) {
+					selectors.push('script[data-language="' + languages[i] + '"]');
+				}
+
+				var selector = selectors.join(',');
+				var scripts = document.querySelectorAll(selector);
+				var blocks = [];
+
+				for (var i = 0, length = scripts.length; i < length; i++) {
+					if (scripts[i].innerText) {
+						blocks.push(scripts[i].innerText);
+					}
+				}
+
+				return blocks;
+			}
+
+			function handleStylemarkBlocks(blocks, handler) {
+				for (var i = 0, length = blocks.length; i < length; i++) {
+					handler(blocks[i], i);
+				}
+			}
+		</script>
+
+			<link rel="stylesheet" href="./dist/index.css">
+
+		
+	</head>
+
+	<body>					<div class='olt-Frame'><div class="olt-DataCards olt-DataCards--useTableLayout olt-DataCards--largeCardPadding">
+  <div class="olt-DataCards-frame">
+    <div class="olt-DataCards-head">
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Status</div>
+      <div class="olt-DataCards-headItem">Name / ID</div>
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Floor</div>
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Room</div>
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Temperature&nbsp;<i class="olt-Icon olt-Icon--dark" data-icon="keyboard_arrow_up"></i></div>
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Occupancy&nbsp;<i class="olt-Icon olt-Icon--dark" data-icon="keyboard_arrow_down"></i></div>
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Last Motion</div>
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Power</div>
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Brightness</div>
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Illuminance</div>
+    </div>
+    <div class="olt-DataCards-body">
+      <div class="olt-DataCards-card">
+        <div class="olt-DataCards-cardItem olt-DataCards--tableCellMinimalWidth olt-DataCards--alignCenter">
+          <div class="olt-DataCards-content olt-DataCards--listOnly">
+            <div class="dotAndName">
+              <div class="dot dot-abs"></div>
+              <div class="olt-u-fontWeightBold olt-u-fontSizeMedium">CSJ0001J020143808857</div>
+            </div>
+            <div class="olt-u-fontMono olt-u-colorGray500">A1891</div>
+          </div>
+          <div class="olt-DataCards-content olt-DataCards--tableOnly">
+            <div class="dot"></div>
+          </div>
+        </div>
+        <div class="olt-DataCards-cardItem olt-DataCards--tableOnly">
+          <div class="olt-DataCards-content">
+            <div class="olt-u-fontWeightBold olt-u-fontSizeMedium">CSJ0001J020143808857</div>
+            <div class="olt-u-fontMono olt-u-colorGray500">A1891</div>
+          </div>
+        </div>
+        <div class="olt-DataCards-cardItem olt-DataCards--halfSize olt-DataCards--alignCenter">
+          <div class="olt-DataCards-title">Floor</div>
+          <div class="olt-DataCards-content">
+            11
+          </div>
+        </div>
+        <div class="olt-DataCards-cardItem olt-DataCards--halfSize olt-DataCards--alignCenter">
+          <div class="olt-DataCards-title">Room</div>
+          <div class="olt-DataCards-content">
+            MQQY2
+          </div>
+        </div>
+        <div class="olt-DataCards-cardItem olt-DataCards--halfSize olt-DataCards--alignCenter">
+          <div class="olt-DataCards-title">Temperature</div>
+          <div class="olt-DataCards-content">
+            92°F
+          </div>
+        </div>
+        <div class="olt-DataCards-cardItem olt-DataCards--halfSize olt-DataCards--alignCenter">
+          <div class="olt-DataCards-title">Occupancy</div>
+          <div class="olt-DataCards-content">
+            Free
+          </div>
+        </div>
+        <div class="olt-DataCards-cardItem olt-DataCards--halfSize olt-DataCards--alignCenter">
+          <div class="olt-DataCards-title">Last Motion</div>
+          <div class="olt-DataCards-content">
+            01:14:05 h
+          </div>
+        </div>
+        <div class="olt-DataCards-cardItem olt-DataCards--halfSize olt-DataCards--alignCenter">
+          <div class="olt-DataCards-title">Power</div>
+          <div class="olt-DataCards-content">
+            113.45 W
+          </div>
+        </div>
+        <div class="olt-DataCards-cardItem olt-DataCards--halfSize olt-DataCards--alignCenter">
+          <div class="olt-DataCards-title">Brightness</div>
+          <div class="olt-DataCards-content">
+            100%
+          </div>
+        </div>
+        <div class="olt-DataCards-cardItem olt-DataCards--halfSize olt-DataCards--alignCenter">
+          <div class="olt-DataCards-title">Illuminance</div>
+          <div class="olt-DataCards-content">
+            500 lux
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+			<script type="text/x-stylemark" data-language="html"><div class="olt-DataCards olt-DataCards--useTableLayout olt-DataCards--largeCardPadding">
+  <div class="olt-DataCards-frame">
+    <div class="olt-DataCards-head">
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Status</div>
+      <div class="olt-DataCards-headItem">Name / ID</div>
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Floor</div>
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Room</div>
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Temperature&nbsp;<i class="olt-Icon olt-Icon--dark" data-icon="keyboard_arrow_up"></i></div>
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Occupancy&nbsp;<i class="olt-Icon olt-Icon--dark" data-icon="keyboard_arrow_down"></i></div>
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Last Motion</div>
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Power</div>
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Brightness</div>
+      <div class="olt-DataCards-headItem olt-DataCards--alignCenter">Illuminance</div>
+    </div>
+    <div class="olt-DataCards-body">
+      <div class="olt-DataCards-card">
+        <div class="olt-DataCards-cardItem olt-DataCards--tableCellMinimalWidth olt-DataCards--alignCenter">
+          <div class="olt-DataCards-content olt-DataCards--listOnly">
+            <div class="dotAndName">
+              <div class="dot dot-abs"></div>
+              <div class="olt-u-fontWeightBold olt-u-fontSizeMedium">CSJ0001J020143808857</div>
+            </div>
+            <div class="olt-u-fontMono olt-u-colorGray500">A1891</div>
+          </div>
+          <div class="olt-DataCards-content olt-DataCards--tableOnly">
+            <div class="dot"></div>
+          </div>
+        </div>
+        <div class="olt-DataCards-cardItem olt-DataCards--tableOnly">
+          <div class="olt-DataCards-content">
+            <div class="olt-u-fontWeightBold olt-u-fontSizeMedium">CSJ0001J020143808857</div>
+            <div class="olt-u-fontMono olt-u-colorGray500">A1891</div>
+          </div>
+        </div>
+        <div class="olt-DataCards-cardItem olt-DataCards--halfSize olt-DataCards--alignCenter">
+          <div class="olt-DataCards-title">Floor</div>
+          <div class="olt-DataCards-content">
+            11
+          </div>
+        </div>
+        <div class="olt-DataCards-cardItem olt-DataCards--halfSize olt-DataCards--alignCenter">
+          <div class="olt-DataCards-title">Room</div>
+          <div class="olt-DataCards-content">
+            MQQY2
+          </div>
+        </div>
+        <div class="olt-DataCards-cardItem olt-DataCards--halfSize olt-DataCards--alignCenter">
+          <div class="olt-DataCards-title">Temperature</div>
+          <div class="olt-DataCards-content">
+            92°F
+          </div>
+        </div>
+        <div class="olt-DataCards-cardItem olt-DataCards--halfSize olt-DataCards--alignCenter">
+          <div class="olt-DataCards-title">Occupancy</div>
+          <div class="olt-DataCards-content">
+            Free
+          </div>
+        </div>
+        <div class="olt-DataCards-cardItem olt-DataCards--halfSize olt-DataCards--alignCenter">
+          <div class="olt-DataCards-title">Last Motion</div>
+          <div class="olt-DataCards-content">
+            01:14:05 h
+          </div>
+        </div>
+        <div class="olt-DataCards-cardItem olt-DataCards--halfSize olt-DataCards--alignCenter">
+          <div class="olt-DataCards-title">Power</div>
+          <div class="olt-DataCards-content">
+            113.45 W
+          </div>
+        </div>
+        <div class="olt-DataCards-cardItem olt-DataCards--halfSize olt-DataCards--alignCenter">
+          <div class="olt-DataCards-title">Brightness</div>
+          <div class="olt-DataCards-content">
+            100%
+          </div>
+        </div>
+        <div class="olt-DataCards-cardItem olt-DataCards--halfSize olt-DataCards--alignCenter">
+          <div class="olt-DataCards-title">Illuminance</div>
+          <div class="olt-DataCards-content">
+            500 lux
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></script>
+			<script type="text/x-stylemark" data-language="css">.dotAndName {
+  position: relative;
+}
+.dot-abs {
+  position: absolute;
+  top: 0;
+  right: calc( 100% + 10px);
+  margin-top:-5px;
+  top:50%;
+  
+}
+.dot {
+  display:inline-block;
+  background-color: var(--olt-colorSuccess);
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+}</script>
+
+		<!--
+			Vanilla JS
+		-->
+
+		<script>
+			findAndHandleStylemarkBlocks('js', function(block) {
+				eval(block);
+			});
+		</script>
+
+		<!--
+			AngularJS
+		-->
+
+		<script>
+			(function(angular) {
+
+				if (!angular) {
+					return;
+				}
+
+				findAndHandleStylemarkBlocks('angularjs', function(block, index) {
+					var moduleElem = document.querySelector('[ng-app]');
+					var module;
+
+					if (moduleElem) {
+						// Uses an existing module
+						module = angular.module(moduleElem.getAttribute('ng-app'));
+					}
+					else {
+						// Creates a new module
+						module = angular.module('stylemark-data-cards-modifiers-table-only-list-only-2', []);
+					}
+
+					module.controller('stylemark-data-cards-modifiers-table-only-list-only-2-' + index, function($scope) {
+						$scope.$eval(block);
+					});
+				});
+			})(window.angular);
+		</script>
+
+		<!--
+			React / JSX
+		-->
+
+		<script>
+			(function(ReactDOM) {
+
+				if (!ReactDOM) {
+					return;
+				}
+
+				findAndHandleStylemarkBlocks('jsx', function(block, index) {
+					var rootNode = document.querySelectorAll('.stylemark-react-root')[index];
+					var Component = eval(block);
+					ReactDOM.render(Component, rootNode);
+				});
+			})(window.ReactDOM);
+		</script>
+
+		<!--
+			Ember
+		-->
+
+		<script>
+			(function(Ember) {
+
+				if (!Ember) {
+					return;
+				}
+
+				findAndHandleStylemarkBlocks(['handlebars', 'hbs'], function(block, index) {
+					var render = function() {
+						var app = window.noop
+						var container = app.__container__;
+						var renderer = container.lookup('renderer:-dom');
+						var template = Ember.HTMLBars.compile(block);
+
+						var jsBlocks = getStylemarkBlocks('js');
+						var jsBlock = jsBlocks && jsBlocks[0] ? jsBlocks[0] : '{}';
+						var context;
+						eval('context = ' + jsBlock);
+
+						// Credit:
+						// http://stackoverflow.com/questions/27950413/render-ember-js-hbs-template-to-a-string#answer-35625858
+						var compile = function(container, template, context) {
+							return new Ember.RSVP.Promise(function(resolve) {
+								Ember.Component.extend(Ember.merge({
+									style: 'display:none;',
+									layout: template,
+									container: container,
+									renderer: renderer,
+
+									init: function() {
+										this._super.apply(this, arguments);
+										Ember.setOwner(this, container);
+									},
+
+									didRender: function() {
+										var elem = this.$();
+										resolve(elem);
+										this.destroy();
+									}
+								}, context))
+									.create()
+									.append();
+
+							});
+						};
+
+						compile(container, template, context).then(function(elem) {
+							var node = document.querySelectorAll('.stylemark-ember-root')[index];
+							jQuery(node).append(elem);
+						});
+					};
+
+					var isReady = function() {
+						return window.noop
+							&& window.noop.__container__;
+					};
+
+					var checkReady = function() {
+						if (isReady()) {
+							render();
+						}
+						else {
+							setTimeout(checkReady, 20);
+						}
+					};
+
+					checkReady();
+				});
+
+			})(window.Ember);
+		</script>
+
+		<script src="_stylemark/js/vendor/iframeResizer.contentWindow.min.js"></script>
+	</body>
+</html>
