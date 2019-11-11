@@ -15,12 +15,12 @@ $_custom-property-prefix: 'olt-v2-';
 $_colors: ();
 
 /**
- * Private variable for storing the shades of the colors
+ * Private variable for storing the color mixes information
  *
- * @see {set-color-shades}
- * @type {List}
+ * @see {define-color-mix}
+ * @type {Map}
  */
-$_shades: ();
+$_mixes: ();
 
 /**
  * Private variable for storing colors that are exported
@@ -28,11 +28,12 @@ $_shades: ();
 $_exported-colors: ();
 
 /**
- * Defines default shades that will be generated for each color
+ * Defines a color mix that will be generated for all colors
  *
  * @example
- *   @include set-color-shades((0.1, 0.2))
- *   @include define-color('primary', '#f60')
+ *   @include define-color-mix('white', #fff', (0.1, 0.2));
+ *   @include define-color-mix('black', #000', (0.1, 0.2));
+ *   @include define-color('primary', '#f60');
  *   @debug($_colors) => (
  *     "primary": (
  *       "color": #f60,
@@ -42,19 +43,29 @@ $_exported-colors: ();
  *   )
  *   get-color('primary', 'white', 0.2) => #ffe0cc
  *   get-color('primary', 'white', 0.6) => null
- * @param $shades {List}  All shades that will be generated
+ * @param $name   {String}  The name of the mix
+ * @param $color  {Color}   The color that will be the mix with
+ * @param $shades {List}    A list of opacity
  */
-@mixin set-color-shades($shades) {
-  $_shades: $shades !global;
+@mixin define-color-mix($name, $color, $shades) {
+  $_mixes: _set(
+    $_mixes,
+    $name,
+    (
+      'color': $color,
+      'shades': $shades,
+    )
+  ) !global;
 }
 
 /**
  * Defines a color that will be generated with all shades
  *
  * @example
- *   @include set-color-shades((0.1, 0.2))
- *   @include define-color('primary', '#f60')
- *   @include define-color('secondary', '#0d122c')
+ *   @include define-color-mix('white', #fff', (0.1, 0.2));
+ *   @include define-color-mix('black', #000', (0.1, 0.2));
+ *   @include define-color('primary', '#f60');
+ *   @include define-color('secondary', '#0d122c');
  *   @debug($_colors) => (
  *     "primary": (
  *       "color": #f60,
@@ -80,8 +91,9 @@ $_exported-colors: ();
  * Exports color with a css custom property
  *
  * @example
- *   @include set-color-shades((0.1, 0.2))
- *   @include define-color('primary', '#f60')
+ *   @include define-color-mix('white', #fff', (0.1, 0.2));
+ *   @include define-color-mix('black', #000', (0.1, 0.2));
+ *   @include define-color('primary', '#f60');
  *   @debug($_colors) => (
  *     "primary": (
  *       "color": #f60,
@@ -145,6 +157,7 @@ $_exported-colors: ();
  * instead of the actual color.
  *
  * @example
+ *   @include define-color-mix('white', #fff', (0.1, 0.2));
  *   @include define-color('primary', #f60);
  *   get-color('primary') => #f60
  *   get-color('primary', 'white', 0.20); => #ffe0cc
@@ -199,7 +212,7 @@ $_exported-colors: ();
  * the second one. It will return a map with all the mixes.
  *
  * @example
- *   color-mixes(#fff, #000) => (
+ *   color-mixes(#fff, #000, (0.15, 0.20, 0.30, 0.40, 0.50, 0.60)) => (
  *     0.15: #262626,
  *     0.20: #333333,
  *     0.30: #4d4d4d,
@@ -209,12 +222,13 @@ $_exported-colors: ();
  *   )
  * @param $first-color   {Color} The color to mix
  * @param $second-color  {Color} The color to mix on-to
+ * @param $shades        {List}  The shades to generate
  * @return {Map}
  */
-@function color-mixes($first-color, $second-color) {
+@function color-mixes($first-color, $second-color, $shades) {
   $result: ();
 
-  @each $shade in $_shades {
+  @each $shade in $shades {
     $result-color: color-opacity-on-color($first-color, $shade, $second-color);
     $result: _set($result, $shade, $result-color);
   }
@@ -250,9 +264,15 @@ $_exported-colors: ();
  * @return {Map}
  */
 @function color-shades($color) {
-  @return (
+  $result: (
     'color': $color,
-    'white': color-mixes($color, #fff),
-    'black': color-mixes($color, #000)
   );
+
+  @each $name, $configuration in $_mixes {
+    $shade-color: _get($configuration, 'color');
+    $shades: _get($configuration, 'shades');
+    $result: _set($result, $name, color-mixes($color, $shade-color, $shades));
+  }
+
+  @return $result;
 }
