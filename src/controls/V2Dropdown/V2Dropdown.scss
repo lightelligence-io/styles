@@ -23,15 +23,18 @@
   appearance: none;
   cursor: pointer;
   background-position:
-    calc(100% - #{18px+$chevron-size}) 4px,
-    calc(100% - 18px) 4px,
+    calc(100% - #{18px+$chevron-size}) #{4px + 17px},
+    calc(100% - 18px) #{4px + 17px},
     calc(100% - 2.5em) 0;
   background-size:
     $chevron-size $chevron-size,
     $chevron-size $chevron-size,
     1px 0;
   background-repeat: no-repeat;
-  min-height: 31px; // = lineheight + padding-bottom + border-bottom
+  min-height: 48px; // = lineheight + padding-bottom + border-bottom + margin-top
+  margin: 0;
+  padding-top: 17px;
+  transition: all 500ms;
 
   &:focus,
   .Theme-dark &:focus {
@@ -43,44 +46,12 @@
   }
 
   &-content {
-    display: none;
-  }
-
-  &.is-open * {
-    display: block;
-  }
-
-  &.is-open .V2Label-text {
-    position: initial;
-    margin-bottom: 24px;
-    // z-index: 1;
-  }
-
-  &.is-open {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 16px;
-    width: 100%;
-    border-radius: 4px;
-    background-position:
-      calc(100% - #{17px+$chevron-size}) 20px,
-      calc(100% - 18px) 20px,
-      calc(100% - 2.5em) 0;
-    background-size:
-      $chevron-size $chevron-size,
-      $chevron-size $chevron-size,
-      1px 0;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    border: none;
-    box-shadow: 0 8px 16px 0 rgba(13, 18, 44, 0.2);
-  }
-
-  &-content {
+    // display: none;
+    height: 0;
     max-height: 130px;
     overflow: scroll;
+    transition: all 500ms;
+    padding-top: 24px;
   }
 
   //
@@ -101,12 +72,6 @@
 
   & .V2Label-text {
     color: map-get($theme-light-colors, border-default);
-  }
-
-  &.is-open {
-    @include chevronUp(map-get($theme-light-colors, border-default));
-
-    background-color: var-get('colorLight');
   }
 
   //
@@ -131,11 +96,7 @@
     @include chevronDown(map-get($theme-dark-colors, border-disabled));
   }
 
-  .Theme-dark &.is-open {
-    @include chevronUp(map-get($theme-dark-colors, border-default));
 
-    background-color: var-get('colorDark');
-  }
 
   @at-root {
     *[data-toggle='dropdown'] {
@@ -143,8 +104,40 @@
     }
 
     #{$self}.is-open,
-    *[data-toggle='dropdown']:checked + label + #{$self} {
-      display: block;
+    *[data-toggle='dropdown']:checked + label > #{$self} {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      border-radius: 4px;
+      background-position:
+        calc(100% - #{17px+$chevron-size}) 20px,
+        calc(100% - 18px) 20px,
+        calc(100% - 2.5em) 0;
+      background-size:
+        $chevron-size $chevron-size,
+        $chevron-size $chevron-size,
+        1px 0;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      border: none;
+      box-shadow: 0 8px 16px 0 rgba(13, 18, 44, 0.2);
+
+      #{$self}-content {
+        display: block;
+        height: 130px;
+        padding-top: 31px;
+      }
+
+      @include chevronUp(map-get($theme-light-colors, border-default));
+
+      background-color: var-get('colorLight');
+
+      .Theme-dark & {
+        @include chevronUp(map-get($theme-dark-colors, border-default));
+
+        background-color: var-get('colorDark');
+      }
     }
   }
 }
