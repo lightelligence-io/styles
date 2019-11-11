@@ -13,43 +13,44 @@
       linear-gradient(-45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%);
   }
 
-  @mixin chevronUp ($color) {
-    background-image:
-      linear-gradient(-45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%),
-      linear-gradient(45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%);
-  }
-
   box-sizing: border-box;
   appearance: none;
   cursor: pointer;
-  background-position:
-    calc(100% - #{18px+$chevron-size}) #{4px + 17px},
-    calc(100% - 18px) #{4px + 17px},
-    calc(100% - 2.5em) 0;
-  background-size:
-    $chevron-size $chevron-size,
-    $chevron-size $chevron-size,
-    1px 0;
-  background-repeat: no-repeat;
   min-height: 48px; // = lineheight + padding-bottom + border-bottom + margin-top
   margin: 0;
   padding-top: 17px;
   transition: all 500ms;
 
+
+  &:before {
+    background-position: 0 0, $chevron-size 0;
+    background-size:
+      $chevron-size $chevron-size,
+      $chevron-size $chevron-size,
+      1px 0;
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    height: $chevron-size;
+    width: #{2*$chevron-size};
+    top: #{4px + 17px};
+    left: calc(100% - #{26px+$chevron-size});
+    transition: all 500ms;
+  }
+
   &:focus,
-  .Theme-dark &:focus {
+  .Theme-dark &:focus &:before {
     @include chevronDown(var-get('colorPrimary'));
   }
 
-  .has-error &:focus {
+  .has-error &:focus &:before {
     @include chevronDown(var-get('colorError'));
   }
 
   &-content {
-    // display: none;
     height: 0;
     max-height: 130px;
-    overflow: scroll;
+    overflow: hidden;
     transition: all 500ms;
     padding-top: 24px;
   }
@@ -60,13 +61,15 @@
 
   $theme-light-colors: map-get($v2-control-colors, light);
 
-  @include chevronDown(map-get($theme-light-colors, border-default));
+  &:before {
+    @include chevronDown(map-get($theme-light-colors, border-default));
+  }
 
-  .has-value & {
+  .has-value &:before {
     @include chevronDown(map-get($theme-light-colors, input-default));
   }
 
-  &:disabled {
+  &:disabled &:before {
     @include chevronDown(map-get($theme-light-colors, border-disabled));
   }
 
@@ -84,15 +87,15 @@
     color: map-get($theme-light-colors, border-default);
   }
 
-  .Theme-dark & {
+  .Theme-dark &:before {
     @include chevronDown(map-get($theme-dark-colors, border-default));
   }
 
-  .Theme-dark .has-value & {
+  .Theme-dark .has-value &:before {
     @include chevronDown(map-get($theme-dark-colors, input-default));
   }
 
-  .Theme-dark &:disabled {
+  .Theme-dark &:disabled &:before {
     @include chevronDown(map-get($theme-dark-colors, border-disabled));
   }
 
@@ -110,32 +113,25 @@
       left: 0;
       width: 100%;
       border-radius: 4px;
-      background-position:
-        calc(100% - #{17px+$chevron-size}) 20px,
-        calc(100% - 18px) 20px,
-        calc(100% - 2.5em) 0;
-      background-size:
-        $chevron-size $chevron-size,
-        $chevron-size $chevron-size,
-        1px 0;
-      background-repeat: no-repeat;
       overflow: hidden;
       border: none;
       box-shadow: 0 8px 16px 0 rgba(13, 18, 44, 0.2);
+      background-color: var-get('colorLight');
+
 
       #{$self}-content {
         display: block;
         height: 130px;
-        padding-top: 31px;
+        padding-top: 0;
+        margin-top: 31px;
+        overflow: scroll;
       }
 
-      @include chevronUp(map-get($theme-light-colors, border-default));
-
-      background-color: var-get('colorLight');
+      &:before {
+        transform: rotate(180deg);
+      }
 
       .Theme-dark & {
-        @include chevronUp(map-get($theme-dark-colors, border-default));
-
         background-color: var-get('colorDark');
       }
     }
