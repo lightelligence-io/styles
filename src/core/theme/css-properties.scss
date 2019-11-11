@@ -1,11 +1,5 @@
-/**
- * List of exported css custom properties
- */
+@import '../functions/color';
 
 :root {
-  --olt-v2-primaryColor: #{$olt-v2-primaryColor};
-  --olt-v2-primaryColor-20: #{$olt-v2-primaryColor-20};
-  --olt-v2-primaryColor-40: #{$olt-v2-primaryColor-40};
-  --olt-v2-primaryColor-60: #{$olt-v2-primaryColor-60};
+  @include export-color('primary');
 }
-

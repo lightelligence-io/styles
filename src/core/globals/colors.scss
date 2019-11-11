@@ -1,0 +1,29 @@
+@import '../functions/color';
+
+/*
+ * Set the default shades that each color will have
+ */
+@include set-color-shades((0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8));
+
+/*
+ * Define the design system colors
+ */
+/* stylelint-disable at-rule-empty-line-before */
+@include define-color('primary', #f60);
+@include define-color('secondary', #0d122c);
+@include define-color('error', #fd5952);
+@include define-color('success', #02bf1b);
+@include define-color('info', #46b4cd);
+@include define-color('warning', #ffc94d);
+@include define-color('light', #fff);
+@include define-color('dark', #000);
+@include define-color('gray100', #f5f6f8);
+@include define-color('gray200', #e9ecef);
+@include define-color('gray300', #e3e4e5);
+@include define-color('gray400', #d0d1d3);
+@include define-color('gray500', #a7a8aa);
+@include define-color('gray600', #58585a);
+@include define-color('gray700', #343a40);
+@include define-color('gray800', #02bf1b);
+@include define-color('gray900', #212529);
+/* stylelint-enable at-rule-empty-line-before */

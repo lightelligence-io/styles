@@ -1,3 +1,5 @@
+@import '../../core/functions/color';
+
 /**
  * Generates a background with a clipped circle on the top right position that
  * will match the bubble's circle size
@@ -20,36 +22,36 @@ $chip-colors: (
     selectable: true,
     disableable: true,
     bubble-color: (
-      normal: $olt-v2-darkColor,
+      normal: get-color('dark'),
     ),
     color: (
-      normal: $olt-v2-darkColor,
-      disabled: $olt-v2-gray500Color,
+      normal: get-color('dark'),
+      disabled: get-color('gray500'),
     ),
     background: (
-      normal: $olt-v2-gray200Color,
-      hover: $olt-v2-gray200Color-50,
-      press: $olt-v2-gray200Color--80,
-      focus: $olt-v2-gray200Color-50,
-      disabled: $olt-v2-gray100Color
+      normal: get-color('gray200'),
+      hover: get-color('gray200', 'white', 0.5),
+      press: get-color('gray200', 'black', 0.8),
+      focus: get-color('gray200', 'white', 0.5),
+      disabled: get-color('gray100'),
     ),
   ),
   dark: (
     selectable: true,
     disableable: true,
     bubble-color: (
-      normal: $olt-v2-lightColor,
+      normal: #d0d1d3,
     ),
     color: (
-      normal: $olt-v2-lightColor,
-      disabled: $olt-v2-gray500Color,
+      normal: get-color('light'),
+      disabled: get-color('gray500'),
     ),
     background: (
-      normal: $olt-v2-darkColor,
-      hover: $olt-v2-darkColor-60,
-      press: $olt-v2-darkColor-20,
-      focus: $olt-v2-darkColor-60,
-      disabled: $olt-v2-gray100Color
+      normal: get-color('dark'),
+      hover: get-color('dark', 'white', 0.6),
+      press: get-color('dark', 'white', 0.2),
+      focus: get-color('dark', 'white', 0.6),
+      disabled: get-color('gray100'),
     ),
   ),
   light: (
@@ -59,15 +61,15 @@ $chip-colors: (
       normal: #495057,
     ),
     color: (
-      normal: $olt-v2-darkColor,
+      normal: get-color('dark'),
       disabled: var-get('gray600'),
     ),
     background: (
-      normal: $olt-v2-lightColor,
-      hover: $olt-v2-lightColor--70,
-      press: $olt-v2-lightColor--40,
-      focus: $olt-v2-lightColor--70,
-      disabled: $olt-v2-gray500Color
+      normal: get-color('light'),
+      hover: get-color('light', 'black', 0.7),
+      press: get-color('light', 'black', 0.4),
+      focus: get-color('light', 'black', 0.7),
+      disabled: get-color('gray500'),
     ),
   ),
   primary: (
@@ -75,51 +77,51 @@ $chip-colors: (
     disableable: true,
     alias: 'active',
     bubble-color: (
-      normal: var(--olt-v2-primaryColor),
+      normal: get-color('primary'),
     ),
     color: (
-      normal: var(--olt-v2-primaryColor),
-      disabled: $olt-v2-gray500Color,
+      normal: get-color('primary'),
+      disabled: get-color('gray500'),
     ),
     background: (
-      normal: var(--olt-v2-primaryColor-20),
-      hover: var(--olt-v2-primaryColor-40),
-      press: var(--olt-v2-primaryColor-60),
-      focus: var(--olt-v2-primaryColor-40),
-      disabled: $olt-v2-gray100Color
+      normal: get-color('primary', 'white', 0.2),
+      hover: get-color('primary', 'white', 0.4),
+      press: get-color('primary', 'white', 0.6),
+      focus: get-color('primary', 'white', 0.4),
+      disabled: get-color('gray100'),
     ),
   ),
   error: (
     bubble-color: (
-      normal: $olt-v2-errorColor,
+      normal: get-color('error'),
     ),
     color: (
-      normal: $olt-v2-errorColor,
+      normal: get-color('error'),
     ),
     background: (
-      normal: $olt-v2-errorColor-20,
+      normal: get-color('error', 'white', 0.2),
     ),
   ),
   success: (
     bubble-color: (
-      normal: $olt-v2-successColor,
+      normal: get-color('success'),
     ),
     color: (
-      normal: $olt-v2-successColor,
+      normal: get-color('success'),
     ),
     background: (
-      normal: $olt-v2-successColor-15,
+      normal: get-color('success', 'white', 0.15),
     ),
   ),
   info: (
     bubble-color: (
-      normal: $olt-v2-infoColor,
+      normal: get-color('info'),
     ),
     color: (
-      normal: $olt-v2-infoColor,
+      normal: get-color('info'),
     ),
     background: (
-      normal: $olt-v2-infoColor-20,
+      normal: get-color('info', 'white', 0.2),
     ),
   ),
 );

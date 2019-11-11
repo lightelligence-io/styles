@@ -15,14 +15,15 @@
 
 // Theme
 @import './theme.yml';
-@import './core/theme/scss-variables';
-@import './core/theme/css-properties';
 
 // Globals
 @import './core/globals/vars';
 @import './core/globals/screen';
 @import './core/globals/controls';
 @import './core/globals/v2Controls';
+@import './core/globals/colors';
+
+@import './core/theme/css-properties';
 
 // Mixins
 @import './core/mixins/browserHacks';

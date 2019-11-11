@@ -4,15 +4,15 @@
       'default': (
         'light': (
           'bg': (
-            'normal': var(--olt-v2-primaryColor),
-            'hover': var(--olt-v2-primaryColor-40),
+            'normal': get-color('primary'),
+            'hover': get-color('primary', 'white', 0.3),
             'press': #cf5509,
-            'progress': var(--olt-v2-primaryColor),
-            'disabled': $olt-v2-gray100Color
+            'progress': get-color('primary'),
+            'disabled': get-color('gray100'),
           ),
           'border': (),
           'font': (
-            'normal': $olt-v2-lightColor
+            'normal': get-color('light'),
           ),
         ),
         'dark': (
@@ -500,7 +500,13 @@
       user-select: none;
       cursor: default;
 
-      @include button-set-state-defaults($self, $emphasis, $theme, 'disabled', 'normal');
+      @include button-set-state-defaults(
+        $self,
+        $emphasis,
+        $theme,
+        'disabled',
+        'normal'
+      );
     }
     $types-base: ('default' 'destructive' 'confirmative');
     $types: if(
@@ -576,7 +582,9 @@
   color: $button-color;
   padding: $button-padding-y $button-padding-x;
 
-  $emphases: ('primary' 'secondary' 'tertiary' 'pagination-next' 'pagination-prev');
+  $emphases: (
+    'primary' 'secondary' 'tertiary' 'pagination-next' 'pagination-prev'
+  );
   // set default if no other emphasis is set
   &#{not-any-selector($emphases, $self)} {
     @include button-emphasis($self, 'primary');
