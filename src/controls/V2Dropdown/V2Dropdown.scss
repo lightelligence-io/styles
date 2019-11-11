@@ -31,7 +31,7 @@
     $chevron-size $chevron-size,
     1px 0;
   background-repeat: no-repeat;
-  height: 31px; // = lineheight + padding-bottom + border-bottom
+  min-height: 31px; // = lineheight + padding-bottom + border-bottom
 
   &:focus,
   .Theme-dark &:focus {
@@ -42,17 +42,28 @@
     @include chevronDown(var-get('colorError'));
   }
 
-
   &-content {
     display: none;
+  }
+
+  &.is-open * {
+    display: block;
+  }
+
+  &.is-open .V2Label-text {
+    position: initial;
+    margin-bottom: 24px;
+    // z-index: 1;
+  }
+
+  &.is-open {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    margin: 0;
     padding: 16px;
     width: 100%;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
+    border-radius: 4px;
     background-position:
       calc(100% - #{17px+$chevron-size}) 20px,
       calc(100% - 18px) 20px,
@@ -62,16 +73,14 @@
       $chevron-size $chevron-size,
       1px 0;
     background-repeat: no-repeat;
-  }
-
-  &-content .V2Label-text {
-    position: initial;
-    margin-bottom: 24px;
-  }
-
-  &.is-open &-content {
-    display: block;
+    overflow: hidden;
+    border: none;
     box-shadow: 0 8px 16px 0 rgba(13, 18, 44, 0.2);
+  }
+
+  &-content {
+    max-height: 130px;
+    overflow: scroll;
   }
 
   //
@@ -94,10 +103,10 @@
     color: map-get($theme-light-colors, border-default);
   }
 
-  &-content {
+  &.is-open {
     @include chevronUp(map-get($theme-light-colors, border-default));
 
-    background-color: map-get($theme-light-colors, background-default);
+    background-color: var-get('colorLight');
   }
 
   //
@@ -122,9 +131,20 @@
     @include chevronDown(map-get($theme-dark-colors, border-disabled));
   }
 
-  .Theme-dark &-content {
+  .Theme-dark &.is-open {
     @include chevronUp(map-get($theme-dark-colors, border-default));
 
-    background-color: map-get($theme-dark-colors, background-default);
+    background-color: var-get('colorDark');
+  }
+
+  @at-root {
+    *[data-toggle='dropdown'] {
+      display: none;
+    }
+
+    #{$self}.is-open,
+    *[data-toggle='dropdown']:checked + label + #{$self} {
+      display: block;
+    }
   }
 }

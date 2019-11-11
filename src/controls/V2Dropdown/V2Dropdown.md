@@ -8,16 +8,20 @@ category: Controls
 Dropdown is used ...
 
 ```example.html
-<label class="olt-V2Label olt-V2Label--floating">
+<input data-toggle="dropdown" id="toggle-1" type="checkbox">
+<label class="olt-V2Label olt-V2Label--floating" for="dropdown-toggle-1">
   <div class="olt-V2Dropdown">
+    <div class="olt-V2Label-text">Select an option</div>
     <div class="olt-V2Dropdown-content">
-      <div class="olt-V2Label-text">Select an option</div>
       <div>Lorem Ipsum</div>
       <div>Dolor Sit Amet</div>
-      <div>Et Versus</option>
+      <div>Et Versus</div>
+      <div>Dolor Sit Amet</div>
+      <div>Et Versus</div>
+      <div>Dolor Sit Amet</div>
+      <div>Et Versus</div>
     </div>
   </div>
-  <span class="olt-V2Label-text">Select an option</span>
 </label>
 ```
 
@@ -28,14 +32,17 @@ body > div.olt-Frame { min-height: 160px; }
 ``` openexample.html
 <label class="olt-V2Label olt-V2Label--floating">
   <div class="olt-V2Dropdown is-open">
+    <div class="olt-V2Label-text">Select an option</div>
     <div class="olt-V2Dropdown-content">
-      <div class="olt-V2Label-text">Select an option</div>
       <div>Lorem Ipsum</div>
       <div>Dolor Sit Amet</div>
-      <div>Et Versus</option>
+      <div>Et Versus</div>
+      <div>Dolor Sit Amet</div>
+      <div>Et Versus</div>
+      <div>Dolor Sit Amet</div>
+      <div>Et Versus</div>
     </div>
   </div>
-  <span class="olt-V2Label-text">Select an option</span>
 </label>
 ```
 
@@ -47,14 +54,13 @@ Dropdown is used ...
 <div class="olt-Card olt-Card--dark olt-Theme-dark">
   <label class="olt-V2Label olt-V2Label--floating">
     <div class="olt-V2Dropdown">
+      <span class="olt-V2Label-text">Select an option</span>
       <div class="olt-V2Dropdown-content">
-        <div class="olt-V2Label-text">Select an option</div>
         <div>Lorem Ipsum</div>
         <div>Dolor Sit Amet</div>
-        <div>Et Versus</option>
+        <div>Et Versus</div>
       </div>
     </div>
-    <span class="olt-V2Label-text">Select an option</span>
   </label>
 </div>
 ```
@@ -67,14 +73,17 @@ body > div.olt-Frame { min-height: 160px; }
 <div class="olt-Card olt-Card--dark olt-Theme-dark">
   <label class="olt-V2Label olt-V2Label--floating">
     <div class="olt-V2Dropdown is-open">
+      <span class="olt-V2Label-text">Select an option</span>
       <div class="olt-V2Dropdown-content">
-        <div class="olt-V2Label-text">Select an option</div>
         <div>Lorem Ipsum</div>
         <div>Dolor Sit Amet</div>
-        <div>Et Versus</option>
+        <div>Et Versus</div>
+        <div>Dolor Sit Amet</div>
+        <div>Et Versus</div>
+        <div>Dolor Sit Amet</div>
+        <div>Et Versus</div>
       </div>
     </div>
-    <span class="olt-V2Label-text">Select an option</span>
   </label>
 </div>
 ```
