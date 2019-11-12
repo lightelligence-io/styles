@@ -19,15 +19,23 @@ $v2-control-colors: (
   )
 );
 
+$v2-control-line-height: 24px;
+$v2-control-margin-top: 17px;
+$v2-control-padding-top: 0;
+$v2-control-padding-horizontal: 16px;
+$v2-control-padding-bottom: 6px;
+$v2-control-letter-spacing: 0.17px;
+$v2-control-border-bottom: 1px;
+
 %v2Control {
   font-family: var-get('fontFamilyBase');
   vertical-align: middle;
   font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.17px;
+  line-height: $v2-control-line-height;
+  letter-spacing: $v2-control-letter-spacing;
   font-weight: normal;
-  margin-top: 17px;
-  padding: 0 16px 6px;
+  margin-top: $v2-control-margin-top;
+  padding: $v2-control-padding-top $v2-control-padding-horizontal $v2-control-padding-bottom;
   border: 0;
   border-radius: 0;
   background-color: transparent;
@@ -55,7 +63,7 @@ $v2-control-colors: (
   $theme-light-colors: map-get($v2-control-colors, light);
 
   color: map-get($theme-light-colors, input-default);
-  border-bottom: 1px solid map-get($theme-light-colors, border-default);
+  border-bottom: $v2-control-border-bottom solid map-get($theme-light-colors, border-default);
 
   &:disabled {
     color: map-get($theme-light-colors, input-disabled);
