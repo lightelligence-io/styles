@@ -61,7 +61,7 @@
 
     &:focus {
       box-shadow: none;
-      border-color: get-color('colorSecondary');
+      border-color: get-color('secondary');
       background-image:
         linear-gradient(45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%),
         linear-gradient(-45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%);

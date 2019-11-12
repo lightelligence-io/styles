@@ -469,3 +469,18 @@ a.i-sidebar-list-item:hover b {
 .demo-icon:focus span {
   white-space: normal;
 }
+
+.demo-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  display: inline-block;
+}
+
+.demo-color--primary {
+  background: var(--olt-v2-primaryColor);
+}
+
+.demo-color--secondary {
+  background: var(--olt-v2-secondaryColor);
+}

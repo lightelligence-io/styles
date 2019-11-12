@@ -167,6 +167,10 @@
     user-select: none;
   }
 
+  .Theme-dark &-label {
+    color: white;
+  }
+
   &--reversed &-label {
     order: 1;
     margin-left: 0;

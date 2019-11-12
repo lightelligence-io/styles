@@ -1,6 +1,5 @@
 @import '../functions/color';
 
-//$_primary-color: #bf0cff;
 $_primary-color: #f60;
 $_secondary-color: #0d122c;
 $_default_shades: (0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8);
@@ -10,9 +9,7 @@ $_default_shades: (0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8);
  */
 /* stylelint-disable at-rule-empty-line-before */
 @include define-color-mix('white', #fff, $_default_shades);
-
 @include define-color-mix('black', #000, $_default_shades);
-
 @include define-color-mix('secondary', $_secondary-color, (0.3, 0.4, 0.8));
 /* stylelint-enable at-rule-empty-line-before */
 
@@ -21,42 +18,29 @@ $_default_shades: (0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8);
  */
 /* stylelint-disable at-rule-empty-line-before */
 @include define-color('primary', $_primary-color);
-
 @include define-color('secondary', $_secondary-color);
-
 @include define-color('error', #fd5952);
-
 @include define-color('success', #02bf1b);
-
 @include define-color('info', #46b4cd);
-
 @include define-color('warning', #ffc94d);
-
 @include define-color('light', #fff);
-
 @include define-color('dark', #000);
-
 @include define-color('gray100', #f5f6f8);
-
 @include define-color('gray200', #e9ecef);
-
 @include define-color('gray300', #e3e4e5);
-
 @include define-color('gray400', #d0d1d3);
-
 @include define-color('gray500', #a7a8aa);
-
 @include define-color('gray600', #58585a);
-
 @include define-color('gray700', #343a40);
-
 @include define-color('gray800', #2e3338);
-
 @include define-color('gray900', #212529);
 /* stylelint-enable at-rule-empty-line-before */
 
 :root {
+  /* stylelint-disable at-rule-empty-line-before */
   @include export-color('primary');
+  @include export-color('secondary');
+  /* stylelint-enable at-rule-empty-line-before */
 }
 
 
