@@ -1,27 +1,30 @@
 /**
   * All colors
+  *
+  * Note this component can't be "brandable", since we use svgs as the
+  * background for the checkbox. In this case we are forced to use
+  * `get-color-value` since we want to have the final, color and not a
+  * CSS variable reference
   */
 $v2-checkbox-colors: (
   light: (
-    default: var-get('gray800'),
-    checked: var-get('colorPrimary'),
-    disabled: var-get('gray500'),
+    default: get-color('gray800'),
+    checked: get-color('primary'),
+    disabled: get-color('gray500'),
     background: (
-      // var-get-value( 'gray' 800 ); doesn't work
-      default: map-get(var-get-value('gray'), 800),
-      checked: var-get-value('color' 'primary'),
-      // var-get-value( 'gray' 500 ); doesn't work
-      disabled: map-get(var-get-value('gray'), 500),
+      default: get-color-value('gray800'),
+      checked: get-color-value('primary'),
+      disabled: get-color-value('gray500'),
     ),
   ),
   dark: (
-    default: var-get('colorLight'),
-    checked: var-get('colorPrimary'),
-    disabled: #55586a,
+    default: get-color('light'),
+    checked: get-color('primary'),
+    disabled: get-color('secondary', 'white', 0.7),
     background: (
-      default: var-get-value('color' 'light'),
-      checked: var-get-value('color' 'primary'),
-      disabled: #55586a,
+      default: get-color-value('light'),
+      checked: get-color-value('primary'),
+      disabled: get-color-value('secondary', 'white', 0.7),
     ),
   ),
 );
@@ -58,7 +61,6 @@ $v2-checkbox-colors: (
   display: flex;
   align-items: center;
 
-
   &--inline {
     display: inline-flex;
   }
@@ -92,7 +94,7 @@ $v2-checkbox-colors: (
       width: $checkbox-width;
 
       @include checkbox-background(
-        var-get-value('color' 'primary'),
+        get-color-value('primary'),
         $default-background-path
       );
     }

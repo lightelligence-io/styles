@@ -544,9 +544,9 @@
   $button-padding-x: 32px;
   $pagination-button-padding-x: 16px;
   $button-padding-y: 0;
-  $button-border-color: var-get('borderColor');
-  $button-background: var-get('borderColor');
-  $button-border-width: 1px; // var-get('borderWidth');
+  $button-border-color: get-color('gray300');
+  $button-background: get-color('gray300');
+  $button-border-width: 1px;
   $button-color: get-color('dark');
   $button-pending-opacity: 0.4;
   $button-font-size: 14px;

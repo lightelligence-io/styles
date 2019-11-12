@@ -62,7 +62,7 @@ $chip-colors: (
     ),
     color: (
       normal: get-color('dark'),
-      disabled: var-get('gray600'),
+      disabled: get-color('gray600'),
     ),
     background: (
       normal: get-color('light'),
@@ -340,23 +340,23 @@ $chip-colors: (
     &--info,
     &--error,
     &--warning {
-      color: var-get('colorLight');
+      color: get-color('light');
     }
 
     &--success {
-      background-color: var-get('colorSuccess');
+      background-color: get-color('success');
     }
 
     &--info {
-      background-color: #46b4cd;
+      background-color: get-color('info');
     }
 
     &--error {
-      background-color: var-get('colorError');
+      background-color: get-color('error');
     }
 
     &--warning {
-      background-color: #ffc94d;
+      background-color: get-color('warning');
     }
   }
 }

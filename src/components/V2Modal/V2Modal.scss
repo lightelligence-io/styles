@@ -9,10 +9,10 @@
   $modal-footer-padding-top: 16px;
   $modal-footer-button-padding: 8px;
 
-  $modal-headline-color: var-get('colorLight');
+  $modal-headline-color: get-color('light');
   $modal-icon-padding-right: 16px;
 
-  $modal-background: var-get('colorLight');
+  $modal-background: get-color('light');
   $modal-dialog-width: 400px;
   $modal-dialog-width-mobile: 343px;
   $modal-dialog-width-wide: 590px;
@@ -51,7 +51,6 @@
   // clip: rect(0, 0, 0, 0);
   pointer-events: none;
 
-
   &-dialog {
     max-height: 90%;
     width: $modal-dialog-width;
@@ -61,7 +60,9 @@
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: wrap;
-    transition: transform $modal-transition-duration $modal-transition-timing-function;
+    transition:
+      transform $modal-transition-duration
+      $modal-transition-timing-function;
     transform: translateY(150%);
     z-index: $olt-z-index-modal-dialog;
     overflow: auto;
@@ -87,7 +88,7 @@
     color: $modal-headline-color;
     border-top-left-radius: $modal-border-radius;
     border-top-right-radius: $modal-border-radius;
-    background: var-get('colorSuccess');
+    background: get-color('success');
   }
 
   &-header:not(&-header--custom):before {
@@ -100,7 +101,7 @@
   }
 
   &--critical &-header {
-    background: var-get('colorError');
+    background: get-color('error');
 
     &:before {
       @extend .Icon-warning-critical-filled.Icon--large;
@@ -108,7 +109,7 @@
   }
 
   &--info &-header {
-    background: var-get('colorInfo');
+    background: get-color('info');
 
     &:before {
       @extend .Icon-info-filled.Icon--large;
@@ -116,7 +117,7 @@
   }
 
   &--warning &-header {
-    background: var-get('colorWarning');
+    background: get-color('warning');
 
     &:before {
       @extend .Icon-warning-medium-filled.Icon--large;
@@ -124,7 +125,7 @@
   }
 
   &--success &-header {
-    background: var-get('colorSuccess');
+    background: get-color('success');
 
     &:before {
       @extend .Icon-check-filled.Icon--large;
@@ -132,7 +133,7 @@
   }
 
   &--action &-header {
-    background: var-get('colorPrimary');
+    background: get-color('primary');
 
     &:before {
       @extend .Icon-settings.Icon--large;

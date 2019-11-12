@@ -27,11 +27,11 @@
 
   &:focus,
   .Theme-dark &:focus {
-    @include chevronDown(var-get('colorPrimary'));
+    @include chevronDown(get-color('primary'));
   }
 
   .has-error &:focus {
-    @include chevronDown(var-get('colorError'));
+    @include chevronDown(get-color('error'));
   }
 
   & option {
@@ -40,7 +40,7 @@
 
   &--pagination {
     $pagination-chevron-size: 6px;
-    $color: var-get('colorSecondary');
+    $color: get-color('secondary');
     $padding-y: 8px;
     $padding-x: 16px;
     $chevron-padding-x: 16px;
@@ -48,7 +48,7 @@
     @extend .u-description;
 
     border: 1px solid;
-    border-color: var-get('colorSecondary');
+    border-color: get-color('secondary');
     border-radius: $olt-button-border-radius;
     margin-top: 0;
     padding: $padding-y #{($padding-x+$pagination-chevron-size+$chevron-padding-x)-2px} $padding-y $padding-x;
@@ -61,7 +61,7 @@
 
     &:focus {
       box-shadow: none;
-      border-color: var-get('colorSecondary');
+      border-color: get-color('colorSecondary');
       background-image:
         linear-gradient(45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%),
         linear-gradient(-45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%);

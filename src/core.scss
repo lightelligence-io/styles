@@ -20,10 +20,8 @@
 @import './core/globals/vars';
 @import './core/globals/screen';
 @import './core/globals/controls';
-@import './core/globals/v2Controls';
 @import './core/globals/colors';
-
-@import './core/theme/css-properties';
+@import './core/globals/v2Controls';
 
 // Mixins
 @import './core/mixins/browserHacks';

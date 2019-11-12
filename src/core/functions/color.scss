@@ -151,7 +151,39 @@ $_exported-colors: ();
 }
 
 /**
- * Returns a color from the color system with additional shade and opacity.
+ * Returns a color from the color system with additional shade and opacity
+ *
+ * @example
+ *   @include define-color-mix('white', #fff', (0.1, 0.2));
+ *   @include define-color('primary', #f60);
+ *   get-color-value('primary') => #f60
+ *   get-color-value('primary', 'white', 0.20); => #ffe0cc
+ *   @include export-color('primary');
+ *   get-color-value('primary') => #f60
+ * @param $name        {String}        The color name
+ * @param $shade-name  {String} [null] The shade name
+ * @param $shade       {Number} [null] The opacity
+ * @return {Color | Null}
+ */
+@function get-color-value($name, $shade-name: null, $shade: null) {
+  $result: null;
+
+  @if $shade-name == null and $shade == null {
+    $result: _get($_colors, $name 'color');
+  } @else if $shade-name != null {
+    $result: _get($_colors, $name $shade-name $shade);
+  }
+
+  @if $result == null {
+    @warn ( "We can't find color" $name $shade-name $shade );
+  }
+
+  @return $result;
+}
+
+/**
+ * Returns a color or a variable reference if that color was exported from the
+ * color system with additional shade and opacity.
  *
  * In case the color was exported it will return the exported variable name,
  * instead of the actual color.
@@ -169,23 +201,11 @@ $_exported-colors: ();
  * @return {Color | Null}
  */
 @function get-color($name, $shade-name: null, $shade: null) {
-  $result: null;
-
   @if _contains($_exported-colors, $name) {
     @return var(#{color-to-css-property-name($name, $shade-name, $shade)});
+  } @else {
+    @return get-color-value($name, $shade-name, $shade);
   }
-
-  @if $shade-name == null and $shade == null {
-    $result: _get($_colors, $name 'color');
-  } @else if $shade-name != null {
-    $result: _get($_colors, $name $shade-name $shade);
-  }
-
-  @if $result == null {
-    @warn ( "We can't find color" $name $shade-name $shade );
-  }
-
-  @return $result;
 }
 
 /**
