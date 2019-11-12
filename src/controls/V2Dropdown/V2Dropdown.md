@@ -14,13 +14,26 @@ Dropdown is used ...
     <div class="olt-V2Dropdown">
       <div class="olt-V2Label-text">Select an option</div>
       <div class="olt-V2Dropdown-content">
-        <div>Lorem Ipsum</div>
-        <div>Dolor Sit Amet</div>
-        <div>Et Versus</div>
-        <div>Dolor Sit Amet</div>
-        <div>Et Versus</div>
-        <div>Dolor Sit Amet</div>
-        <div>Et Versus</div>
+        <ul class="olt-InputList">
+          <li class="olt-InputList-item">
+            <a class="olt-InputList-link">Lorem Ipsum</a>
+          </li>
+          <li class="olt-InputList-item">
+            <a class="olt-InputList-link">Dolor Sit Amet</a>
+          </li>
+          <li class="olt-InputList-item">
+            <a class="olt-InputList-link">Et Versus</a>
+          </li>
+          <li class="olt-InputList-item">
+            <a class="olt-InputList-link">Dolor Sit Amet</a>
+          </li>
+          <li class="olt-InputList-item">
+            <a class="olt-InputList-link">Et Versus</a>
+          </li>
+          <li class="olt-InputList-item">
+            <a class="olt-InputList-link">Lorem Ipsum</a>
+          </li>
+        </ul>
       </div>
     </div>
   </label>
@@ -38,13 +51,26 @@ Dropdown is used ...
     <div class="olt-V2Dropdown">
       <div class="olt-V2Label-text">Select an option</div>
       <div class="olt-V2Dropdown-content">
-        <div>Lorem Ipsum</div>
-        <div>Dolor Sit Amet</div>
-        <div>Et Versus</div>
-        <div>Dolor Sit Amet</div>
-        <div>Et Versus</div>
-        <div>Dolor Sit Amet</div>
-        <div>Et Versus</div>
+        <ul class="olt-InputList">
+          <li class="olt-InputList-item">
+            <a class="olt-InputList-link">Lorem Ipsum</a>
+          </li>
+          <li class="olt-InputList-item">
+            <a class="olt-InputList-link">Dolor Sit Amet</a>
+          </li>
+          <li class="olt-InputList-item">
+            <a class="olt-InputList-link">Et Versus</a>
+          </li>
+          <li class="olt-InputList-item">
+            <a class="olt-InputList-link">Dolor Sit Amet</a>
+          </li>
+          <li class="olt-InputList-item">
+            <a class="olt-InputList-link">Et Versus</a>
+          </li>
+          <li class="olt-InputList-item">
+            <a class="olt-InputList-link">Lorem Ipsum</a>
+          </li>
+        </ul>
       </div>
     </div>
   </label>
