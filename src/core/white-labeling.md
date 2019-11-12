@@ -8,19 +8,18 @@ category: Getting Started
 Lightelligence styles supports limited white labeling that can achieve the 
 effect of having a feel of your application to match different corporate styles.
 
-The white labeling feature includes changing the two major colors : 
+The white labeling feature includes changing the primary color : 
 
 | Color                                                | Name      | CSS Custom Property       |
 |:----------------------------------------------------:|:----------|:--------------------------|
 | <div class="demo-color demo-color--primary"></div>   | Primary   | `--olt-v2-colorPrimary`   |
-| <div class="demo-color demo-color--secondary"></div> | Secondary | `--olt-v2-colorSecondary` |
 
 ## Exposed custom properties
 
-The design system's colors that can be white labeled are exposed as CSS
-Custom Properties. However since there are additional shades of these colors,
-which are mainly a mix between white and dark. These colors are also exposed
-as CSS Custom Properties. 
+The design system's primary color that can be white labeled is exposed as CSS
+Custom Properties. However since there are additional shades of that color,
+which are mainly a mix between white and dark, there are also additional 
+exposed CSS Custom Properties. 
 
 All those additional shades, though, can be derived by a color calculation 
 between the Primary / Secondary and a black or white colors. See example
@@ -33,7 +32,6 @@ below on how to properly use the white labeling feature with JavaScript.
    * The two major colors that are selectable
    */
   --olt-v2-primaryColor: #f60;
-  --olt-v2-secondaryColor: #0d122c;
 
   /**
    * Color variations that are calculations based on the above colors.
@@ -59,27 +57,6 @@ below on how to properly use the white labeling feature with JavaScript.
   --olt-v2-primaryColor-secondary-30: #562b1f;
   --olt-v2-primaryColor-secondary-40: #6e341a;
   --olt-v2-primaryColor-secondary-80: #cf5509;
-  --olt-v2-secondaryColor-white-10: #e7e7ea;
-  --olt-v2-secondaryColor-white-15: #dbdbdf;
-  --olt-v2-secondaryColor-white-20: #cfd0d5;
-  --olt-v2-secondaryColor-white-30: #b6b8c0;
-  --olt-v2-secondaryColor-white-40: #9ea0ab;
-  --olt-v2-secondaryColor-white-50: #868996;
-  --olt-v2-secondaryColor-white-60: #6e7180;
-  --olt-v2-secondaryColor-white-70: #56596b;
-  --olt-v2-secondaryColor-white-80: #3d4156;
-  --olt-v2-secondaryColor-black-10: #010204;
-  --olt-v2-secondaryColor-black-15: #020307;
-  --olt-v2-secondaryColor-black-20: #030409;
-  --olt-v2-secondaryColor-black-30: #04050d;
-  --olt-v2-secondaryColor-black-40: #050712;
-  --olt-v2-secondaryColor-black-50: #070916;
-  --olt-v2-secondaryColor-black-60: #080b1a;
-  --olt-v2-secondaryColor-black-70: #090d1f;
-  --olt-v2-secondaryColor-black-80: #0a0e23;
-  --olt-v2-secondaryColor-secondary-30: #0d122c;
-  --olt-v2-secondaryColor-secondary-40: #0d122c;
-  --olt-v2-secondaryColor-secondary-80: #0d122c;
 
 }
 ```
@@ -105,66 +82,57 @@ below on how to properly use the white labeling feature with JavaScript.
 const styles = getComputedStyle(document.documentElement);
 const documentStyle = document.documentElement.style;
 const primaryPicker = document.getElementById("primaryPicker");
-const secondaryPicker = document.getElementById("secondaryPicker");
 const primaryValue = document.getElementById("primaryValue");
-const secondaryValue = document.getElementById("secondaryValue");
 const primaryProperty = '--olt-v2-primaryColor';
-const secondaryProperty = '--olt-v2-secondaryColor';
 
 const mixes = [
   { 
     name: "white",
+    color: "#fff",
     shades: [0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
   },
   { 
     name: "black",
+    color: "#000",
     shades: [0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
   },
   { 
     name: "secondary",
-    shades: [0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
+    color: "#0d122c",
+    shades: [0.3, 0.4, 0.8]
   }
 ]
 
 // We use https://www.github.com/bgrins/TinyColor to calculate the colors
 const primaryColor = tinycolor( styles.getPropertyValue( primaryProperty ) );
-const secondaryColor = tinycolor( styles.getPropertyValue( secondaryProperty ) );
 
 primaryPicker.value = primaryColor.toHexString();
-secondaryPicker.value = secondaryColor.toHexString();
 
-function updateValues( primaryColor, secondaryColor ) {
+function updateValues( primaryColor ) {
   primaryValue.style.backgroundColor = primaryColor.toHexString();
-  secondaryValue.style.backgroundColor = secondaryColor.toHexString();
 }
 
-function updateStylesheets( primaryColor, secondaryColor ) {
+function updateStylesheets( primaryColor ) {
   documentStyle.setProperty( primaryProperty, primaryColor.toHexString() );
-  documentStyle.setProperty( secondaryProperty, secondaryColor.toHexString() );
   mixes.forEach( mix => {
     const name = mix.name;
-    const color = name === "secondary" ? secondaryColor : tinycolor(name);
+    const color = mix.color;
     mix.shades.forEach( shade => {
       const mixProperty = prefix => `${prefix}-${name}-${shade * 100}`;
       const primaryMix = tinycolor.mix( color, primaryColor, shade * 100 );
-      const secondaryMix = tinycolor.mix( color, secondaryColor, shade * 100 );
       const primaryPropertyName = mixProperty( primaryProperty );
-      const secondaryPropertyName = mixProperty( secondaryProperty );
       documentStyle.setProperty( primaryPropertyName, primaryMix.toHexString() );
-      documentStyle.setProperty( secondaryPropertyName, secondaryMix.toHexString() );
     } );
   } );
 }
 
 function update() {
   const primaryColor = tinycolor( primaryPicker.value );
-  const secondaryColor = tinycolor( secondaryPicker.value );
-  updateValues( primaryColor, secondaryColor );
-  updateStylesheets( primaryColor, secondaryColor );
+  updateValues( primaryColor );
+  updateStylesheets( primaryColor );
 }
 
 primaryPicker.addEventListener('change', update);
-secondaryPicker.addEventListener('change', update);
 
 update();
 
@@ -174,7 +142,7 @@ darkModeToggle.addEventListener('change', () => {
   const isDarkMode = darkModeToggle.checked;
   console.log( isDarkMode );
   if ( isDarkMode ) {
-    card.style.backgroundColor = secondaryColor;
+    card.style.backgroundColor = "#0d122c";
     card.classList.add("olt-Theme-dark");
   } else {
     card.style.backgroundColor = "#fff";
@@ -193,13 +161,6 @@ darkModeToggle.addEventListener('change', () => {
           <input class="input--color" type="color" id="primaryPicker" />
           <div class="input--color-box" id="primaryValue"></div>
           <span class="olt-V2Label-text">Primary Color</span>
-        </label>
-      </div>
-      <div class="olt-V2Grid-item olt-V2Grid-item--4">
-        <label class="olt-V2Label">
-          <input class="input--color" type="color" id="secondaryPicker" />
-          <div class="input--color-box" id="secondaryValue"></div>
-          <span class="olt-V2Label-text">Secondary Color</span>
         </label>
       </div>
       <div class="olt-V2Grid-item olt-V2Grid-item--4">

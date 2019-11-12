@@ -39,7 +39,6 @@ $_default_shades: (0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8);
 :root {
   /* stylelint-disable at-rule-empty-line-before */
   @include export-color('primary');
-  @include export-color('secondary');
   /* stylelint-enable at-rule-empty-line-before */
 }
 
