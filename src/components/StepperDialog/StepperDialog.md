@@ -31,17 +31,17 @@ The dialog changes to full screen on mobile and tablet devices.
           <div class="olt-Dialog-title">Create the Device</div>
           <div class="olt-Dialog-description">This is the dialog description. This is the dialog description. This is the dialog description.</div>
           <div class="olt-Dialog-content">
-            <label class="olt-V2Label">
-              <input class="olt-V2Input" type="text" placeholder="Device Name" />
-              <span class="olt-V2Label-text">Name</span>
+            <label class="olt-Label">
+              <input class="olt-Input" type="text" placeholder="Device Name" />
+              <span class="olt-Label-text">Name</span>
             </label>
-            <label class="olt-V2Label">
-              <input class="olt-V2Input" type="text" placeholder="Device Location" />
-              <span class="olt-V2Label-text">Location</span>
+            <label class="olt-Label">
+              <input class="olt-Input" type="text" placeholder="Device Location" />
+              <span class="olt-Label-text">Location</span>
             </label>
-            <label class="olt-V2Label">
+            <label class="olt-Label">
               <textarea class="olt-TextArea" placeholder="Description"></textarea>
-              <span class="olt-V2Label-text">Description</span>
+              <span class="olt-Label-text">Description</span>
             </label>
           </div>
           <div class="olt-Dialog-footer">
@@ -75,17 +75,17 @@ The dialog changes to full screen on mobile and tablet devices.
       <div class="olt-Dialog-title">Create the Device</div>
       <div class="olt-Dialog-description">This is the dialog description. This is the dialog description. This is the dialog description.</div>
       <div class="olt-Dialog-content">
-        <label class="olt-V2Label">
-          <input class="olt-V2Input" type="text" placeholder="Device Name" />
-          <span class="olt-V2Label-text">Name</span>
+        <label class="olt-Label">
+          <input class="olt-Input" type="text" placeholder="Device Name" />
+          <span class="olt-Label-text">Name</span>
         </label>
-        <label class="olt-V2Label">
-          <input class="olt-V2Input" type="text" placeholder="Device Location" />
-          <span class="olt-V2Label-text">Location</span>
+        <label class="olt-Label">
+          <input class="olt-Input" type="text" placeholder="Device Location" />
+          <span class="olt-Label-text">Location</span>
         </label>
-        <label class="olt-V2Label">
+        <label class="olt-Label">
           <textarea class="olt-TextArea" placeholder="Description"></textarea>
-          <span class="olt-V2Label-text">Description</span>
+          <span class="olt-Label-text">Description</span>
         </label>
       </div>
       <div class="olt-Dialog-footer">

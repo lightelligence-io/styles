@@ -157,10 +157,10 @@ darkModeToggle.addEventListener('change', () => {
   <div class="olt-Card-content">
     <div class="olt-V2Grid">
       <div class="olt-V2Grid-item olt-V2Grid-item--4">
-        <label class="olt-V2Label">
+        <label class="olt-Label">
           <input class="input--color" type="color" id="primaryPicker" />
           <div class="input--color-box" id="primaryValue"></div>
-          <span class="olt-V2Label-text">Primary Color</span>
+          <span class="olt-Label-text">Primary Color</span>
         </label>
       </div>
       <div class="olt-V2Grid-item olt-V2Grid-item--4">
@@ -173,39 +173,39 @@ darkModeToggle.addEventListener('change', () => {
     </div>
     <div class="olt-V2Grid">
       <div class="olt-V2Grid-item olt-V2Grid-item--6">
-        <label class="olt-V2Label olt-V2Label--floating olt-V2Label--floating has-value">
-          <input class="olt-V2Input" type="text" value="My Device" />
-          <span class="olt-V2Label-text">Device Name</span>
+        <label class="olt-Label olt-Label--floating olt-Label--floating has-value">
+          <input class="olt-Input" type="text" value="My Device" />
+          <span class="olt-Label-text">Device Name</span>
         </label>
       </div>
       <div class="olt-V2Grid-item olt-V2Grid-item--6">
-        <label class="olt-V2Label olt-V2Label--floating olt-V2Label--floating has-value">
-          <input class="olt-V2Input" type="text" value="Berlin" />
-          <span class="olt-V2Label-text">Device Location</span>
+        <label class="olt-Label olt-Label--floating olt-Label--floating has-value">
+          <input class="olt-Input" type="text" value="Berlin" />
+          <span class="olt-Label-text">Device Location</span>
         </label>
       </div>
     </div>
     <div class="olt-V2Grid">
       <div class="olt-V2Grid-item olt-V2Grid-item--6">
-         <label class="olt-V2Radio">
+         <label class="olt-Radio">
            <input type="radio" value="admin" name="role"/>
-           <span class="olt-V2Radio-button"></span>
-           <span class="olt-V2Radio-label">Admin</span>
+           <span class="olt-Radio-button"></span>
+           <span class="olt-Radio-label">Admin</span>
          </label>
-         <label class="olt-V2Radio">
+         <label class="olt-Radio">
            <input type="radio" disabled value="super_admin" name="role"/>
-           <span class="olt-V2Radio-button"></span>
-           <span class="olt-V2Radio-label">Super Admin</span>
+           <span class="olt-Radio-button"></span>
+           <span class="olt-Radio-label">Super Admin</span>
          </label>
-         <label class="olt-V2Radio">
+         <label class="olt-Radio">
            <input type="radio" checked value="writer" name="role" />
-           <span class="olt-V2Radio-button"></span>
-           <span class="olt-V2Radio-label">Writer</span>
+           <span class="olt-Radio-button"></span>
+           <span class="olt-Radio-label">Writer</span>
          </label>
-         <label class="olt-V2Radio">
+         <label class="olt-Radio">
            <input type="radio" value="reader" name="role"/>
-           <span class="olt-V2Radio-button"></span>
-           <span class="olt-V2Radio-label">Reader</span>
+           <span class="olt-Radio-button"></span>
+           <span class="olt-Radio-label">Reader</span>
          </label>
       </div>
       <div class="olt-V2Grid-item olt-V2Grid-item--6">
