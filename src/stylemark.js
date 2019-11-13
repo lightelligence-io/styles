@@ -54,11 +54,62 @@ showNotifications = () => {
 };
 
 /**
- * Load version.txt and show the version in the sidebar
+ * Show the version and the version dropdown in the sidebar
  */
-var sidebarHeader = document.querySelector('.theme-sidebar-header-title');
-fetch('version.txt')
-  .then((response) =>
+
+const triggerNavigation = () => {
+  const target = document.getElementById('versions_select').value;
+  window.location.href = target;
+};
+
+const getCurrentVersion = () =>
+  fetch('version.txt').then((response) =>
     response.status === 200 ? response.text() : 'unknown version',
-  )
-  .then((text) => sidebarHeader.setAttribute('data-after', text));
+  );
+
+const getAllVersions = () =>
+  fetch('/styles/versions_json.txt').then((response) =>
+    response.status === 200 ? response.text() : '[]',
+  );
+
+const addCurrentVersion = (version) => {
+  const sidebarHeader = document.querySelector('.theme-sidebar-header-title');
+  sidebarHeader.setAttribute('data-after', version);
+};
+
+const createOptions = (versions, currentVersion) =>
+  versions.map(
+    (v) =>
+      `<option value='/styles/releases/${v}'${
+        currentVersion.trim() === v.trim() ? ' selected' : ''
+      }>
+      ${v}
+    </option>`,
+  );
+
+const insertDropdown = (versions, currentVersion) => {
+  const sidebarSearch = document.querySelector('.theme-sidebar-search');
+  const dropDown = document.createElement('div');
+  dropDown.innerHTML = `
+   <label class="olt-V2Label" style="margin-bottom: 10px">
+     <select class="olt-V2Select" id="versions_select">
+       ${createOptions(versions, currentVersion).join('')}
+     </select>
+     <span class="olt-V2Label-text">Other Versions</span>
+   </label>
+  `;
+  dropDown.onchange = triggerNavigation;
+  sidebarSearch.parentNode.insertBefore(dropDown, sidebarSearch);
+};
+
+const addVersionDropdown = (currentVersion) => {
+  getAllVersions().then((versionsString) => {
+    const versions = JSON.parse(versionsString).sort();
+    insertDropdown(versions, currentVersion);
+  });
+};
+
+getCurrentVersion().then((currentVersion) => {
+  addCurrentVersion(currentVersion);
+  addVersionDropdown(currentVersion);
+});
