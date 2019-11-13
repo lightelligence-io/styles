@@ -11,7 +11,7 @@
 
 @mixin icon-font-olt() {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'olt-all' !important;
+  font-family: 'olt-all'; // !important;
   speak: none;
   font-style: normal;
   font-weight: normal;

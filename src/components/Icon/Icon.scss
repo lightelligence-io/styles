@@ -1,3 +1,8 @@
+//
+// This file has been generated, if you want to regenerate it run
+// npm build:icons
+//
+
 .Icon {
   $icon-sizes: (
     small: 12px,
@@ -22,6 +27,12 @@
     }
   }
 
+  @each $name in ( 'account', 'add' ) {
+    &-#{$name}:before {
+      font-icon: url('../../icons/#{$name}.svg');
+    }
+  }
+
   &-empty#{&}--small:before { content: ""; }
   &-empty:before { content: ""; }
   &-empty#{&}--large:before { content: ""; }
@@ -29,6 +40,8 @@
   &-account#{&}--small:before { content: "\e900"; }
   &-account:before { content: "\e901"; }
   &-account#{&}--large:before { content: "\e902"; }
+
+  &-foo:before { font-icon: url("../../icons/account-16.svg"); }
 
   &-add-default#{&}--small:before { content: "\e903"; }
   &-add-default:before { content: "\e904"; }

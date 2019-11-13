@@ -1,5 +1,4 @@
 const path = require('path');
-const { sync: glob } = require('glob');
 const yaml = require('js-yaml');
 const template = require('es6-template-strings');
 const { decamelize, pascalize } = require('humps');
@@ -29,16 +28,9 @@ module.exports = {
               emitFile: true,
             },
           },
-          {
-            loader: 'extract-loader',
-          },
-        ].concat([
-          {
-            loader: 'css-loader',
-          },
-          {
-            loader: 'resolve-url-loader',
-          },
+          { loader: 'extract-loader' },
+          { loader: 'css-loader' },
+          { loader: 'resolve-url-loader' },
           {
             loader: 'postcss-loader',
             options: {
@@ -46,6 +38,18 @@ module.exports = {
               config: {
                 path: __dirname,
               },
+            },
+          },
+          //
+          // Since we need the "loader" object for the iconfont-webpack-plugin
+          // and that object is not provided in the postcss.config.js we
+          // have to duplicate the loader above and run it again
+          //
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: (loader) => [require('iconfont-webpack-plugin')(loader)],
             },
           },
           {
@@ -103,7 +107,7 @@ module.exports = {
               ],
             },
           },
-        ]),
+        ],
       },
       {
         test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
