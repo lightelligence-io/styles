@@ -42,7 +42,7 @@ You can use the *Filter* component to show a dropdown that opens a filter popup 
 </div>
 ```
 
-You can add any element inside the filters dropdown. The *--active* modifier identifies an active filter. The *olt-Filter-bubble* class is used to place a bubble inside the filter intended to show the number of elements being displayed after the filter is applied.
+You can add any element inside the filters dropdown. The `--active` modifier identifies an active filter. The `olt-Filter-bubble` class is used to place a bubble inside the filter intended to show the number of elements being displayed after the filter is applied.
 
 ```checkboxfilter.html
 <div class="olt-Card">

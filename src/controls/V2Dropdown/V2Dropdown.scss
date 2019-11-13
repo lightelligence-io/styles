@@ -21,12 +21,11 @@ $chevron-size: 6px;
   left: 0;
   width: 100%;
   box-sizing: border-box;
-  appearance: none;
   cursor: pointer;
   min-height: $v2-control-line-height + $v2-control-margin-top + $v2-control-padding-top + $v2-control-padding-bottom + $v2-control-border-bottom;
   margin: 0;
   padding: 0;
-  transition: all 500ms;
+  transition: all 400ms;
 
 
   &:before {
@@ -42,14 +41,14 @@ $chevron-size: 6px;
     width: #{2*$chevron-size};
     top: #{4px + $v2-control-margin-top};
     left: calc(100% - #{2px + $v2-control-padding-horizontal + 2 * $chevron-size});
-    transition: all 500ms;
+    transition: all 400ms;
   }
 
   &-content {
     max-height: 0;
     // max-height: $dropdown-content-height;
     overflow: hidden;
-    transition: all 500ms;
+    transition: all 400ms;
     margin-top: $v2-control-line-height + $v2-control-margin-top;
   }
 

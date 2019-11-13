@@ -7,6 +7,8 @@ category: Controls
 
 You can use the *Dropdown* component to show a dropdown that opens popup and displays a list of values to choose. This component occupies `olt-Dropdown*` class names.
 
+In contrast to the v2 select, the dropdown displays a content div element instead of the native `select` element.
+
 ```example.html
 <div class="olt-Card">
   <input data-toggle="dropdown" id="dropdown-toggle-1" type="checkbox">
@@ -42,7 +44,7 @@ You can use the *Dropdown* component to show a dropdown that opens popup and dis
 
 ## Dark Mode
 
-The dropdown supports dark mode by putting it inside a *Card* element with *olt-Card--dark* and *olt-Theme-dark* classes.
+The dropdown supports dark mode by putting it inside a *Card* element with `olt-Card--dark` and `olt-Theme-dark` classes.
 
 ```darkexample.html
 <div class="olt-Card olt-Card--dark olt-Theme-dark">
