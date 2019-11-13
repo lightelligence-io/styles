@@ -1,17 +1,17 @@
 .V2Tabs {
   $tab-height: 36px;
   $tab-border-radius: 4px;
-  $tab-active-bg-color: #0d122c;
-  $tab-active-text-color: var-get('colorLight');
-  $tab-inactive-bg-color: var-get('colorLight');
-  $tab-inactive-text-color: #0d122c;
+  $tab-active-bg-color: get-color('secondary');
+  $tab-active-text-color: get-color('light');
+  $tab-inactive-bg-color: get-color('light');
+  $tab-inactive-text-color: get-color('secondary');
   $tab-hover-bg-color: rgb(233, 236, 239);
-  $tab-hover-text-color: #0d122c;
+  $tab-hover-text-color: get-color('secondary');
   $tab-padding: 8px 16px 10px 16px;
   $tab-margin-x: 4px;
   $tab-margin-y: 4px;
   $tab-bar-padding: 0;
-  $tab-bar-height: $tab-height + $tab-bar-padding*2 + $tab-margin-y;
+  $tab-bar-height: $tab-height + $tab-bar-padding * 2 + $tab-margin-y;
   $tab-bar-gradient-width: 30px;
   $self: &;
 
@@ -69,7 +69,6 @@
     }
 
     &.is-active {
-      color: var-get('colorLight');
       background: $tab-active-bg-color;
       color: $tab-active-text-color;
     }
@@ -81,7 +80,7 @@
       right: 0;
       height: $tab-height;
       width: $tab-bar-gradient-width;
-      content: "";
+      content: '';
       background:
         linear-gradient(
           to left,
@@ -98,7 +97,7 @@
       left: 0;
       height: $tab-height;
       width: $tab-bar-gradient-width;
-      content: "";
+      content: '';
       background:
         linear-gradient(
           to right,
