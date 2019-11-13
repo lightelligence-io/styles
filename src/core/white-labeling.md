@@ -155,15 +155,15 @@ darkModeToggle.addEventListener('change', () => {
 ```white-labeling.html
 <div class="olt-Card" id="card">
   <div class="olt-Card-content">
-    <div class="olt-V2Grid">
-      <div class="olt-V2Grid-item olt-V2Grid-item--4">
+    <div class="olt-Grid">
+      <div class="olt-Grid-item olt-Grid-item--4">
         <label class="olt-Label">
           <input class="input--color" type="color" id="primaryPicker" />
           <div class="input--color-box" id="primaryValue"></div>
           <span class="olt-Label-text">Primary Color</span>
         </label>
       </div>
-      <div class="olt-V2Grid-item olt-V2Grid-item--4">
+      <div class="olt-Grid-item olt-Grid-item--4">
         <label class="olt-Toggle olt-Toggle--inline">
           <input type="checkbox" id="darkToggle" />
           <div class="olt-Toggle-button"></div>
@@ -171,22 +171,22 @@ darkModeToggle.addEventListener('change', () => {
         </label>
       </div>
     </div>
-    <div class="olt-V2Grid">
-      <div class="olt-V2Grid-item olt-V2Grid-item--6">
+    <div class="olt-Grid">
+      <div class="olt-Grid-item olt-Grid-item--6">
         <label class="olt-Label olt-Label--floating olt-Label--floating has-value">
           <input class="olt-Input" type="text" value="My Device" />
           <span class="olt-Label-text">Device Name</span>
         </label>
       </div>
-      <div class="olt-V2Grid-item olt-V2Grid-item--6">
+      <div class="olt-Grid-item olt-Grid-item--6">
         <label class="olt-Label olt-Label--floating olt-Label--floating has-value">
           <input class="olt-Input" type="text" value="Berlin" />
           <span class="olt-Label-text">Device Location</span>
         </label>
       </div>
     </div>
-    <div class="olt-V2Grid">
-      <div class="olt-V2Grid-item olt-V2Grid-item--6">
+    <div class="olt-Grid">
+      <div class="olt-Grid-item olt-Grid-item--6">
          <label class="olt-Radio">
            <input type="radio" value="admin" name="role"/>
            <span class="olt-Radio-button"></span>
@@ -208,19 +208,19 @@ darkModeToggle.addEventListener('change', () => {
            <span class="olt-Radio-label">Reader</span>
          </label>
       </div>
-      <div class="olt-V2Grid-item olt-V2Grid-item--6">
+      <div class="olt-Grid-item olt-Grid-item--6">
         <button class="olt-Button olt-Button-default">OK</button>
         <button class="olt-Button olt-Button-default olt-Button--tertiary olt-Button--action">Cancel</button>
       </div>
     </div>
     <br />
-    <div class="olt-V2Grid">
-      <div class="olt-V2Grid-item olt-V2Grid-item--6">
+    <div class="olt-Grid">
+      <div class="olt-Grid-item olt-Grid-item--6">
         <div class="olt-Chip olt-Chip--primary olt-Chip--selectable">Administrator</div>
         <div class="olt-Chip olt-Chip--primary olt-Chip--selectable">Writer</div>
         <div class="olt-Chip olt-Chip--primary olt-Chip--selectable">Tenant Manager</div>
       </div>
-      <div class="olt-V2Grid-item olt-V2Grid-item--6">
+      <div class="olt-Grid-item olt-Grid-item--6">
       </div>
     </div>
   </div>

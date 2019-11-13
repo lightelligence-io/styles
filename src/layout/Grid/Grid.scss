@@ -1,7 +1,6 @@
 .Grid {
   $self: &;
-
-  $grid-gutter: var-get('containerPadding');
+  $grid-gutter: 16px;
   $grid-columns: 12;
 
   display: flex;
@@ -23,10 +22,10 @@
   }
 
   // Columns
-  @each $breakpoint in map-keys(screen-get()) {
-    $infix: screen-infix($breakpoint);
+  @each $breakpoint in map-keys(screen-get-v2()) {
+    $infix: screen-infix-v2($breakpoint);
 
-    @include screen-up($breakpoint) {
+    @include screen-up-v2($breakpoint) {
       #{$self}-item--#{$infix}auto {
         flex: 0 0 auto;
         width: auto;
@@ -43,10 +42,10 @@
   }
 
   // Offsets
-  @each $breakpoint in map-keys(screen-get()) {
-    $infix: screen-infix($breakpoint);
+  @each $breakpoint in map-keys(screen-get-v2()) {
+    $infix: screen-infix-v2($breakpoint);
 
-    @include screen-up($breakpoint) {
+    @include screen-up-v2($breakpoint) {
       @for $size from 1 through $grid-columns {
         #{$self}-item--#{$infix}offset#{$size} {
           $num: $size / $grid-columns;
