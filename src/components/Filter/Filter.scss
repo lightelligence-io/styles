@@ -19,7 +19,7 @@
     position: absolute;
     top: 11px;
     right: calc(#{12px + $v2-control-padding-horizontal + 2 * $chevron-size});
-    border-radius: 24px; // code lineheight + padding
+    border-radius: 24px; // code u-Code lineheight + 2px padding
     text-align: center;
     background-color: get-color('info', 'white', 0.2);
     color: #46b4cdaa;

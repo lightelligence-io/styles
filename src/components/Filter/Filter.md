@@ -5,9 +5,7 @@ category: Component
 
 ## Description
 
-You can use the *Filter* component to show a button that opens a filter popup and displays additional attributes. This component occupies `olt-Filter*` class names.
-
-The card can be a `button` or an `a` element.
+You can use the *Filter* component to show a dropdown that opens a filter popup and displays additional attributes. This component occupies `olt-Filter*` class names.
 
 
 ```basic.html
@@ -43,6 +41,8 @@ The card can be a `button` or an `a` element.
   </label>
 </div>
 ```
+
+You can add any element inside the filters dropdown. The *--active* modifier identifies an active filter. The *olt-Filter-bubble* class is used to place a bubble inside the filter intended to show the number of elements being displayed after the filter is applied.
 
 ```checkboxfilter.html
 <div class="olt-Card">

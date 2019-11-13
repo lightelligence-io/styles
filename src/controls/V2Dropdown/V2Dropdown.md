@@ -5,7 +5,7 @@ category: Controls
 
 ## Description
 
-Dropdown is used ...
+You can use the *Dropdown* component to show a dropdown that opens popup and displays a list of values to choose. This component occupies `olt-Dropdown*` class names.
 
 ```example.html
 <div class="olt-Card">
@@ -42,7 +42,7 @@ Dropdown is used ...
 
 ## Dark Mode
 
-Dropdown is used ...
+The dropdown supports dark mode by putting it inside a *Card* element with *olt-Card--dark* and *olt-Theme-dark* classes.
 
 ```darkexample.html
 <div class="olt-Card olt-Card--dark olt-Theme-dark">
