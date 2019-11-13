@@ -2,9 +2,28 @@ const path = require('path');
 const yaml = require('js-yaml');
 const template = require('es6-template-strings');
 const { decamelize, pascalize } = require('humps');
+const fs = require('fs');
 
 const mode = process.env.NODE_ENV || 'development';
 const context = path.resolve(__dirname, 'src');
+
+/**
+ * Will construct a sass variable that will hold all icons
+ *
+ * The icon files are positioned inside `src/icons` directory
+ *
+ * @returns {string}
+ */
+function addIconsVariable() {
+  return [
+    '$icons: (',
+    fs
+      .readdirSync(path.join(context, 'icons'))
+      .map((file) => `"${file}"`)
+      .join(','),
+    ');',
+  ].join('');
+}
 
 module.exports = {
   mode,
@@ -56,6 +75,11 @@ module.exports = {
             loader: 'fast-sass-loader',
             options: {
               includePaths: [path.resolve(__dirname, 'node_modules')],
+              //
+              // Provide additional sass code as data. So far we use this only
+              // for the icons.
+              //
+              data: [addIconsVariable()].join('\n'),
               transformers: [
                 {
                   extensions: ['.yml'],

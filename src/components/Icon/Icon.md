@@ -29,10 +29,6 @@ Tip: use `olt-Icon-empty` to hide the icon and not render the `:before` element.
             <span>account</span>
           </div>
           <div class="demo-icon">
-            <i class="olt-Icon olt-Icon-foo" title="foo"></i>
-            <span>foo</span>
-          </div>
-          <div class="demo-icon">
             <i class="olt-Icon olt-Icon-add-default" title="add-default"></i>
             <span>add-default</span>
           </div>
