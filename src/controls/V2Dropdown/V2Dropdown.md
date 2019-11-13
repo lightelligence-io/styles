@@ -11,7 +11,7 @@ Dropdown is used ...
 <div class="olt-Card">
   <input data-toggle="dropdown" id="dropdown-toggle-1" type="checkbox">
   <label class="olt-V2Label olt-V2Label--floating" for="dropdown-toggle-1">
-    <div class="olt-V2Dropdown">
+    <div class="olt-V2Dropdown olt-V2Dropdown">
       <div class="olt-V2Label-text">Select an option</div>
       <div class="olt-V2Dropdown-content">
         <ul class="olt-InputList">

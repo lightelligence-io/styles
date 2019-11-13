@@ -45,15 +45,6 @@ $chevron-size: 6px;
     transition: all 500ms;
   }
 
-  &:focus,
-  .Theme-dark &:focus &:before {
-    @include chevronDown(var-get('colorPrimary'));
-  }
-
-  .has-error &:focus &:before {
-    @include chevronDown(var-get('colorError'));
-  }
-
   &-content {
     max-height: 0;
     // max-height: $dropdown-content-height;
@@ -119,7 +110,7 @@ $chevron-size: 6px;
       overflow: hidden;
       border: none;
       box-shadow: 0 8px 16px 0 rgba(13, 18, 44, 0.2);
-      background-color: var-get('colorLight');
+      background-color: get-color('light');
 
       #{$self}-content {
         display: block;
@@ -132,7 +123,7 @@ $chevron-size: 6px;
       }
 
       .Theme-dark & {
-        background-color: var-get('colorDark');
+        background-color: get-color('dark');
       }
     }
   }
