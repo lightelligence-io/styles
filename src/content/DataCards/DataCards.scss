@@ -9,7 +9,7 @@
   $card-padding-large-x: $card-padding-x * 2;
   $card-padding-large-y: $card-padding-y;
   $card-gap: $olt-dataCards-card-gap;
-  $border-color: var-get('gray300');
+  $border-color: get-color('gray300');
 
   width: 100%;
 
@@ -23,7 +23,7 @@
 
   &-card {
     transition: box-shadow 150ms;
-    background: var-get('colorLight');
+    background: get-color('light');
     border: 1px solid $border-color;
     border-radius: $border-radius;
     margin-top: $card-gap;
@@ -50,7 +50,7 @@
     }
 
     #{$self}-headItem {
-      color: var-get('gray500');
+      color: get-color('gray500');
       font-family: var-get('fontFamilyBase');
       font-size: $olt-dataCards-headItem-content-font-size;
       font-weight: bold;
@@ -84,12 +84,10 @@
     $card-gap,
     $box-shadow,
     $card-padding-x,
-    $card-padding-y,
+    $card-padding-y
   );
 
-
-
-  @include dataCardsInListMode ($self) {
+  @include dataCardsInListMode($self) {
     #{$self}-cardItem #{$self}-title {
       color: $olt-dataCards-cardItem-title-color;
       font-family: var-get('fontFamilyBase');
@@ -159,7 +157,7 @@
     }
   }
 
-  @include dataCardsInListModeSmall ($self) {
+  @include dataCardsInListModeSmall($self) {
     #{$self}-card {
       flex-basis: 100%;
 

@@ -11,7 +11,7 @@
   border-radius: $card-border-radius;
   text-align: left;
   transition: box-shadow 150ms;
-  background: var-get('colorLight');
+  background: get-color('light');
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -65,7 +65,7 @@
   }
 
   &:not(#{$self}--primary):not(#{$self}--secondary) &-description {
-    color: var-get('gray600');
+    color: get-color('gray600');
   }
 
   &-action {
