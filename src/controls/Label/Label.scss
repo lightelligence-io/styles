@@ -99,7 +99,7 @@
   // Light theme colors
   //
 
-  $theme-light-colors: map-get($v2-control-colors, light);
+  $theme-light-colors: map-get($control-colors, light);
 
   background-color: map-get($theme-light-colors, background-default);
   color: map-get($theme-light-colors, label-default);
@@ -136,7 +136,7 @@
   // Dark theme colors
   //
 
-  $theme-dark-colors: map-get($v2-control-colors, dark);
+  $theme-dark-colors: map-get($control-colors, dark);
 
   .Theme-dark & {
     background-color: map-get($theme-dark-colors, background-default);

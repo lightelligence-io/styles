@@ -1,7 +1,7 @@
 .Select {
   $chevron-size: 6px;
 
-  @extend %v2Control;
+  @extend %control;
 
   @mixin chevronDown ($color) {
     // use floats because of ugly google-chrome subpixel rendering
@@ -72,7 +72,7 @@
   // Light theme colors
   //
 
-  $theme-light-colors: map-get($v2-control-colors, light);
+  $theme-light-colors: map-get($control-colors, light);
 
   @include chevronDown(map-get($theme-light-colors, border-default));
 
@@ -88,7 +88,7 @@
   // Dark theme colors
   //
 
-  $theme-dark-colors: map-get($v2-control-colors, dark);
+  $theme-dark-colors: map-get($control-colors, dark);
 
   .Theme-dark & {
     @include chevronDown(map-get($theme-dark-colors, border-default));

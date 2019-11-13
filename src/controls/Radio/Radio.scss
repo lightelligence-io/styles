@@ -1,7 +1,7 @@
 /**
  * All colors
  */
-$v2-radio-colors: (
+$radio-colors: (
   light: (
     default: get-color('gray800'),
     checked: get-color('primary'),
@@ -73,7 +73,7 @@ $v2-radio-colors: (
   // Light theme colors
   //
 
-  $theme-light-colors: map-get($v2-radio-colors, light);
+  $theme-light-colors: map-get($radio-colors, light);
 
   &-button,
   &-label {
@@ -93,7 +93,7 @@ $v2-radio-colors: (
   // Dark theme colors
   //
 
-  $theme-dark-colors: map-get($v2-radio-colors, dark);
+  $theme-dark-colors: map-get($radio-colors, dark);
 
   .Theme-dark & &-button,
   .Theme-dark & &-label {

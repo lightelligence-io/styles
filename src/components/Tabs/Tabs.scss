@@ -115,7 +115,7 @@
     overflow: scroll;
   }
 
-  @media (max-width: map-get($olt-v2-breakpoints, sm)) {
+  @media (max-width: map-get($olt-breakpoints, sm)) {
     justify-content: flex-start;
     overflow: scroll;
   }

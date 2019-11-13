@@ -170,7 +170,7 @@
     @extend .Button, .Button--tertiary;
   }
 
-  @media (max-width: map-get($olt-v2-breakpoints, lg)) {
+  @media (max-width: map-get($olt-breakpoints, lg)) {
     #{$self}-window {
       flex-direction: column;
     }

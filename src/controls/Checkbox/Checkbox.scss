@@ -6,7 +6,7 @@
   * `get-color-value` since we want to have the final, color and not a
   * CSS variable reference
   */
-$v2-checkbox-colors: (
+$checkbox-colors: (
   light: (
     default: get-color('gray800'),
     checked: get-color('primary'),
@@ -118,7 +118,7 @@ $v2-checkbox-colors: (
   // Light theme colors
   //
 
-  $theme-light-colors: map-get($v2-checkbox-colors, light);
+  $theme-light-colors: map-get($checkbox-colors, light);
   $theme-light-background: map-get($theme-light-colors, background);
 
   &-label {
@@ -177,7 +177,7 @@ $v2-checkbox-colors: (
   // Dark theme colors
   //
 
-  $theme-dark-colors: map-get($v2-checkbox-colors, dark);
+  $theme-dark-colors: map-get($checkbox-colors, dark);
   $theme-dark-background: map-get($theme-dark-colors, background);
 
   .Theme-dark & &-label {

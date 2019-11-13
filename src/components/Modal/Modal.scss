@@ -70,7 +70,7 @@
     border-radius: $modal-border-radius;
     pointer-events: none;
 
-    @media (max-width: map-get($olt-v2-breakpoints, sm)) {
+    @media (max-width: map-get($olt-breakpoints, sm)) {
       width: $modal-dialog-width-mobile;
     }
   }

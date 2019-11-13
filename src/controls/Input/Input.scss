@@ -1,5 +1,5 @@
 .Input {
-  @extend %v2Control;
+  @extend %control;
 
   @mixin placeholder ($color, $opacity) {
     &:-moz-placeholder {
@@ -22,7 +22,7 @@
   // Light theme colors
   //
 
-  $theme-light-colors: map-get($v2-control-colors, light);
+  $theme-light-colors: map-get($control-colors, light);
 
   @include placeholder(map-get($theme-light-colors, label-default), 0);
 
@@ -34,7 +34,7 @@
   // Dark theme colors
   //
 
-  $theme-dark-colors: map-get($v2-control-colors, dark);
+  $theme-dark-colors: map-get($control-colors, dark);
 
   .Theme-dark & {
     @include placeholder(map-get($theme-dark-colors, label-default), 0);
