@@ -6,7 +6,7 @@ category: Component
 
 ## Description
 
-V2-Buttons can be used with `<button>` and `<a>` elements and occupy the `olt-ActionButton*` class names.
+ActionButtons can be used with `<button>` and `<a>` elements and occupy the `olt-ActionButton*` class names.
 
 The Action Button consists of three states, depending on the cursor's distance to the click-area:
 

@@ -5,10 +5,10 @@ category: Getting Started
 
 ## Description
 
-Lightelligence styles supports limited white labeling that can achieve the 
+Lightelligence styles supports limited white labeling that can achieve the
 effect of having a feel of your application to match different corporate styles.
 
-The white labeling feature includes changing the primary color : 
+The white labeling feature includes changing the primary color :
 
 | Color                                                | Name      | CSS Custom Property       |
 |:----------------------------------------------------:|:----------|:--------------------------|
@@ -18,10 +18,10 @@ The white labeling feature includes changing the primary color :
 
 The design system's primary color that can be white labeled is exposed as CSS
 Custom Properties. However since there are additional shades of that color,
-which are mainly a mix between white and dark, there are also additional 
-exposed CSS Custom Properties. 
+which are mainly a mix between white and dark, there are also additional
+exposed CSS Custom Properties.
 
-All those additional shades, though, can be derived by a color calculation 
+All those additional shades, though, can be derived by a color calculation
 between the Primary / Secondary and a black or white colors. See example
 below on how to properly use the white labeling feature with JavaScript.
 
@@ -86,17 +86,17 @@ const primaryValue = document.getElementById("primaryValue");
 const primaryProperty = '--olt-v2-primaryColor';
 
 const mixes = [
-  { 
+  {
     name: "white",
     color: "#fff",
     shades: [0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
   },
-  { 
+  {
     name: "black",
     color: "#000",
     shades: [0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
   },
-  { 
+  {
     name: "secondary",
     color: "#0d122c",
     shades: [0.3, 0.4, 0.8]
@@ -209,8 +209,8 @@ darkModeToggle.addEventListener('change', () => {
          </label>
       </div>
       <div class="olt-V2Grid-item olt-V2Grid-item--6">
-        <button class="olt-V2Button olt-V2Button-default">OK</button>
-        <button class="olt-V2Button olt-V2Button-default olt-V2Button--tertiary olt-V2Button--action">Cancel</button>
+        <button class="olt-Button olt-Button-default">OK</button>
+        <button class="olt-Button olt-Button-default olt-Button--tertiary olt-Button--action">Cancel</button>
       </div>
     </div>
     <br />

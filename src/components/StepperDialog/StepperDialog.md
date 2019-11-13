@@ -12,7 +12,7 @@ The dialog changes to full screen on mobile and tablet devices.
 <div class="olt-Card olt-u-padding5">
   <div class="olt-u-marginAuto">
     <input data-toggle="stepperdialog" id="demo-1" type="checkbox">
-    <label class="olt-V2Button" for="stepper-dialog-demo-1">Open</label>
+    <label class="olt-Button" for="stepper-dialog-demo-1">Open</label>
     <div class="olt-StepperDialog">
       <div class="olt-StepperDialog-window">
         <div class="olt-StepperDialog-stepper">
@@ -56,7 +56,7 @@ The dialog changes to full screen on mobile and tablet devices.
 
 ```html
 <input data-toggle="stepperdialog" id="demo-1" type="checkbox">
-<label class="olt-V2Button" for="stepper-dialog-demo-1">Open</label>
+<label class="olt-Button" for="stepper-dialog-demo-1">Open</label>
 <div class="olt-StepperDialog">
   <div class="olt-StepperDialog-window">
     <div class="olt-StepperDialog-stepper">
