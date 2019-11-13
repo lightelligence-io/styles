@@ -48,10 +48,10 @@ The card can be a `button` or an `a` element.
 <div class="olt-Card">
   <input data-toggle="dropdown" id="dropdown-toggle-1" type="checkbox">
   <label class="olt-V2Label olt-V2Label--floating" for="dropdown-toggle-1">
-    <div class="olt-V2Dropdown olt-Filter--active">
+    <div class="olt-Filter olt-Filter--active">
       <div class="olt-V2Label-text">Filter</div>
       <div class="olt-Filter-bubble">99+</div>
-      <div class="olt-V2Dropdown-content">
+      <div class="olt-Filter-content">
         <div class="olt-u-padding3">
           <label class="olt-V2Checkbox">
             <input type="checkbox" checked />
