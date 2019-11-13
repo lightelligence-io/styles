@@ -55,8 +55,8 @@ $chevron-size: 6px;
   }
 
   &-content {
-    height: 0;
-    max-height: $dropdown-content-height;
+    max-height: 0;
+    // max-height: $dropdown-content-height;
     overflow: hidden;
     transition: all 500ms;
     margin-top: $v2-control-line-height + $v2-control-margin-top;
@@ -123,7 +123,7 @@ $chevron-size: 6px;
 
       #{$self}-content {
         display: block;
-        height: $dropdown-content-height;
+        max-height: $dropdown-content-height;
         overflow: scroll;
       }
 
