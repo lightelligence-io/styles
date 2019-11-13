@@ -65,11 +65,11 @@ Contrasting levels of emphasis help the user to differentiate between important 
             </div>
             <div class="demo-content">
               <button
-                class="olt-Button olt-Button-icon-left olt-Icon-add-default olt-Icon--small">Label</button>
+                class="olt-Button olt-Button-icon-left olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
               <button
-                class="olt-Button olt-Button-icon-right olt-Icon-add-default olt-Icon--small">Label</button>
+                class="olt-Button olt-Button-icon-right olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
               <button
@@ -97,14 +97,14 @@ Contrasting levels of emphasis help the user to differentiate between important 
                 class="
                     olt-Button
                     olt-Button--secondary
-                     olt-Button-icon-left olt-Icon-add-default olt-Icon--small">Label</button>
+                     olt-Button-icon-left olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
               <button
                 class="
                     olt-Button
                     olt-Button--secondary
-                     olt-Button-icon-right olt-Icon-add-default olt-Icon--small">Label</button>
+                     olt-Button-icon-right olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
               <button
@@ -131,14 +131,14 @@ Contrasting levels of emphasis help the user to differentiate between important 
             </div>
             <div class="demo-content">
               <button
-                class="olt-Button olt-Button--tertiary olt-Button-icon-left olt-Icon-add-default olt-Icon--small">Label</button>
+                class="olt-Button olt-Button--tertiary olt-Button-icon-left olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
               <button
                 class="
                     olt-Button
                     olt-Button--tertiary
-                    olt-Button-icon-right olt-Icon-add-default olt-Icon--small
+                    olt-Button-icon-right olt-Icon-add-default
                     ">Label</button>
             </div>
             <div class="demo-content">
@@ -173,7 +173,7 @@ Contrasting levels of emphasis help the user to differentiate between important 
                     olt-Button
                     olt-Button--action
                     olt-Button--tertiary
-                    olt-Button-icon-left olt-Icon-add-default olt-Icon--small
+                    olt-Button-icon-left olt-Icon-add-default
                     ">Label</button>
             </div>
             <div class="demo-content">
@@ -182,7 +182,7 @@ Contrasting levels of emphasis help the user to differentiate between important 
                     olt-Button
                     olt-Button--action
                     olt-Button--tertiary
-                     olt-Button-icon-right olt-Icon-add-default olt-Icon--small
+                     olt-Button-icon-right olt-Icon-add-default
                     ">Label</button>
             </div>
             <div class="demo-content">
@@ -242,14 +242,14 @@ Contrasting levels of emphasis help the user to differentiate between important 
                 class="
                     olt-Button
                     olt-Button--dark
-                    olt-Button-icon-left olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-left olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
               <button
                 class="
                     olt-Button
                     olt-Button--dark
-                    olt-Button-icon-right olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-right olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
               <button
@@ -281,7 +281,7 @@ Contrasting levels of emphasis help the user to differentiate between important 
                     olt-Button
                     olt-Button--secondary
                     olt-Button--dark
-                    olt-Button-icon-left olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-left olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
               <button
@@ -289,7 +289,7 @@ Contrasting levels of emphasis help the user to differentiate between important 
                     olt-Button
                     olt-Button--secondary
                     olt-Button--dark
-                    olt-Button-icon-right olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-right olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
               <button
@@ -322,7 +322,7 @@ Contrasting levels of emphasis help the user to differentiate between important 
                     olt-Button
                     olt-Button--tertiary
                     olt-Button--dark
-                    olt-Button-icon-left olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-left olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
               <button
@@ -330,7 +330,7 @@ Contrasting levels of emphasis help the user to differentiate between important 
                     olt-Button
                     olt-Button--tertiary
                     olt-Button--dark
-                    olt-Button-icon-right olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-right olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
               <button
@@ -365,7 +365,7 @@ Contrasting levels of emphasis help the user to differentiate between important 
                     olt-Button--action
                     olt-Button--tertiary
                     olt-Button--dark
-                     olt-Button-icon-left olt-Icon-add-default olt-Icon--small">Label</button>
+                     olt-Button-icon-left olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
               <button
@@ -374,7 +374,7 @@ Contrasting levels of emphasis help the user to differentiate between important 
                     olt-Button--action
                     olt-Button--tertiary
                     olt-Button--dark
-                    olt-Button-icon-right olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-right olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
               <button
@@ -445,7 +445,7 @@ Buttons for destructive actions are available with three levels of emphasis and 
                 class="
                     olt-Button
                     olt-Button--destructive
-                    olt-Button-icon-left olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-left olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
             </div>
@@ -479,7 +479,7 @@ Buttons for destructive actions are available with three levels of emphasis and 
                     olt-Button
                     olt-Button--destructive
                     olt-Button--secondary
-                    olt-Button-icon-left olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-left olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
             </div>
@@ -514,7 +514,7 @@ Buttons for destructive actions are available with three levels of emphasis and 
                     olt-Button
                     olt-Button--destructive
                     olt-Button--tertiary
-                    olt-Button-icon-left olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-left olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
               <button
@@ -522,7 +522,7 @@ Buttons for destructive actions are available with three levels of emphasis and 
                     olt-Button
                     olt-Button--destructive
                     olt-Button--tertiary
-                    olt-Button-icon-right olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-right olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
               <button
@@ -582,7 +582,7 @@ Buttons for destructive actions are available with three levels of emphasis and 
                     olt-Button
                     olt-Button--destructive
                     olt-Button--dark
-                    olt-Button-icon-left olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-left olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
             </div>
@@ -619,7 +619,7 @@ Buttons for destructive actions are available with three levels of emphasis and 
                     olt-Button--destructive
                     olt-Button--secondary
                     olt-Button--dark
-                    olt-Button-icon-left olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-left olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
             </div>
@@ -657,7 +657,7 @@ Buttons for destructive actions are available with three levels of emphasis and 
                     olt-Button--destructive
                     olt-Button--tertiary
                     olt-Button--dark
-                    olt-Button-icon-left olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-left olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
               <button
@@ -666,7 +666,7 @@ Buttons for destructive actions are available with three levels of emphasis and 
                     olt-Button--destructive
                     olt-Button--tertiary
                     olt-Button--dark
-                    olt-Button-icon-right olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-right olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
               <button
@@ -734,7 +734,7 @@ Buttons for confirmative actions are available with three levels of emphasis and
                 class="
                     olt-Button
                     olt-Button--confirmative
-                    olt-Button-icon-left olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-left olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
             </div>
@@ -768,7 +768,7 @@ Buttons for confirmative actions are available with three levels of emphasis and
                     olt-Button
                     olt-Button--confirmative
                     olt-Button--secondary
-                    olt-Button-icon-left olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-left olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
             </div>
@@ -803,7 +803,7 @@ Buttons for confirmative actions are available with three levels of emphasis and
                     olt-Button
                     olt-Button--confirmative
                     olt-Button--tertiary
-                    olt-Button-icon-left olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-left olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
               <button
@@ -811,7 +811,7 @@ Buttons for confirmative actions are available with three levels of emphasis and
                     olt-Button
                     olt-Button--confirmative
                     olt-Button--tertiary
-                    olt-Button-icon-right olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-right olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
               <button
@@ -871,7 +871,7 @@ Buttons for confirmative actions are available with three levels of emphasis and
                     olt-Button
                     olt-Button--confirmative
                     olt-Button--dark
-                    olt-Button-icon-left olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-left olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
             </div>
@@ -908,7 +908,7 @@ Buttons for confirmative actions are available with three levels of emphasis and
                     olt-Button--confirmative
                     olt-Button--secondary
                     olt-Button--dark
-                    olt-Button-icon-left olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-left olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
             </div>
@@ -946,7 +946,7 @@ Buttons for confirmative actions are available with three levels of emphasis and
                     olt-Button--confirmative
                     olt-Button--tertiary
                     olt-Button--dark
-                    olt-Button-icon-left olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-left olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
               <button
@@ -955,7 +955,7 @@ Buttons for confirmative actions are available with three levels of emphasis and
                     olt-Button--confirmative
                     olt-Button--tertiary
                     olt-Button--dark
-                    olt-Button-icon-right olt-Icon-add-default olt-Icon--small">Label</button>
+                    olt-Button-icon-right olt-Icon-add-default">Label</button>
             </div>
             <div class="demo-content">
               <button
@@ -1024,11 +1024,11 @@ Use the `disabled` attribute to disable buttons.
 To show decorations inside a button, use the `olt-Button-icon-left` and `olt-Button-icon-right` class. This will show an icon on the left or right of the label.
 
 ```decorations.html
-<button class="olt-Button olt-Button--default olt-Button-icon-left olt-Icon-add-default olt-Icon--small">Default</button>
-<button class="olt-Button olt-Button--default olt-Button-icon-right olt-Icon-add-default olt-Icon--small">Default</button>
-<button class="olt-Button olt-Button--secondary olt-Button-icon-left olt-Icon-add-default olt-Icon--small">Default</button>
-<button class="olt-Button olt-Button--secondary olt-Button-icon-right olt-Icon-add-default olt-Icon--small">Default</button>
-<button class="olt-Button olt-Button--tertiary olt-Button-icon-right olt-Icon-add-default olt-Icon--small">Default</button>
+<button class="olt-Button olt-Button--default olt-Button-icon-left olt-Icon-add-default">Default</button>
+<button class="olt-Button olt-Button--default olt-Button-icon-right olt-Icon-add-default">Default</button>
+<button class="olt-Button olt-Button--secondary olt-Button-icon-left olt-Icon-add-default">Default</button>
+<button class="olt-Button olt-Button--secondary olt-Button-icon-right olt-Icon-add-default">Default</button>
+<button class="olt-Button olt-Button--tertiary olt-Button-icon-right olt-Icon-add-default">Default</button>
 ```
 
 ## Pagination

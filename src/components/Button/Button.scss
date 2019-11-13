@@ -542,31 +542,19 @@
   }
 
   $button-padding-x: 32px;
+  $button-height: 36px;
   $pagination-button-padding-x: 16px;
   $button-padding-y: 0;
-  $button-border-color: get-color('gray300');
-  $button-background: get-color('gray300');
   $button-border-width: 1px;
   $button-color: get-color('dark');
-  $button-pending-opacity: 0.4;
-  $button-font-size: 14px;
-  $button-line-height: 18px;
-  $button-pending-dark: rgba(
-    #000,
-    $button-pending-opacity
-  ); // TODO: Hardcode button-pending-color for the sake of css variables
-  $button-pending-light: rgba(
-    #fff,
-    $button-pending-opacity
-  ); // TODO: Hardcode button-pending-color for the sake of css variables
   $icon-size-for-calculation: 12px;
   $self: &;
 
   position: relative;
   background: none;
-  height: 36px;
-  min-height: 36px;
-  max-height: 36px;
+  height: $button-height;
+  min-height: $button-height;
+  max-height: $button-height;
   border-style: solid;
   vertical-align: middle;
   border-width: $button-border-width;
@@ -581,6 +569,8 @@
   -webkit-appearance: none;
   color: $button-color;
   padding: $button-padding-y $button-padding-x;
+
+  @extend .u-description;
 
   $emphases: (
     'primary' 'secondary' 'tertiary' 'pagination-next' 'pagination-prev'
