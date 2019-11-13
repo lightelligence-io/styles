@@ -35,9 +35,9 @@ is represented as a list of cards on tablet and mobile. The component occupies
           <div class="olt-DataCards-content">
             <div class="olt-FloatingList">
               <div class="olt-FloatingList-items">
-                <div class="olt-Tag">Developer</div>
-                <div class="olt-Tag">Writer</div>
-                <div class="olt-Tag">Tenant Manager</div>
+                <div class="olt-Chip">Developer</div>
+                <div class="olt-Chip">Writer</div>
+                <div class="olt-Chip">Tenant Manager</div>
               </div>
             </div>
           </div>
@@ -60,8 +60,8 @@ is represented as a list of cards on tablet and mobile. The component occupies
           <div class="olt-DataCards-content">
             <div class="olt-FloatingList">
               <div class="olt-FloatingList-items">
-                <div class="olt-Tag">Developer</div>
-                <div class="olt-Tag">Reader</div>
+                <div class="olt-Chip">Developer</div>
+                <div class="olt-Chip">Reader</div>
               </div>
             </div>
           </div>
@@ -84,8 +84,8 @@ is represented as a list of cards on tablet and mobile. The component occupies
           <div class="olt-DataCards-content">
             <div class="olt-FloatingList">
               <div class="olt-FloatingList-items">
-                <div class="olt-Tag">Developer</div>
-                <div class="olt-Tag">Writer</div>
+                <div class="olt-Chip">Developer</div>
+                <div class="olt-Chip">Writer</div>
               </div>
             </div>
           </div>
@@ -108,8 +108,8 @@ is represented as a list of cards on tablet and mobile. The component occupies
           <div class="olt-DataCards-content">
             <div class="olt-FloatingList">
               <div class="olt-FloatingList-items">
-                <div class="olt-Tag">Administrator</div>
-                <div class="olt-Tag">Writer</div>
+                <div class="olt-Chip">Administrator</div>
+                <div class="olt-Chip">Writer</div>
               </div>
             </div>
           </div>
@@ -148,9 +148,9 @@ is represented as a list of cards on tablet and mobile. The component occupies
           <div class="olt-DataCards-content">
             <div class="olt-FloatingList">
               <div class="olt-FloatingList-items">
-                <div class="olt-Tag">Developer</div>
-                <div class="olt-Tag">Reader</div>
-                <div class="olt-Tag">Tenant Manager</div>
+                <div class="olt-Chip">Developer</div>
+                <div class="olt-Chip">Reader</div>
+                <div class="olt-Chip">Tenant Manager</div>
               </div>
             </div>
           </div>
@@ -173,8 +173,8 @@ is represented as a list of cards on tablet and mobile. The component occupies
           <div class="olt-DataCards-content">
             <div class="olt-FloatingList">
               <div class="olt-FloatingList-items">
-                <div class="olt-Tag">Developer</div>
-                <div class="olt-Tag">Tenant Manager</div>
+                <div class="olt-Chip">Developer</div>
+                <div class="olt-Chip">Tenant Manager</div>
                 </div>
               </div>
             </div>
@@ -347,9 +347,9 @@ In order to support more complex use cases it is possible to enable **table layo
           <div class="olt-DataCards-content">
             <div class="olt-FloatingList">
               <div class="olt-FloatingList-items">
-                <div class="olt-Tag">Developer</div>
-                <div class="olt-Tag">Developer</div>
-                <div class="olt-Tag">Tenant Manager</div>
+                <div class="olt-Chip">Developer</div>
+                <div class="olt-Chip">Developer</div>
+                <div class="olt-Chip">Tenant Manager</div>
               </div>
             </div>
           </div>
@@ -372,9 +372,9 @@ In order to support more complex use cases it is possible to enable **table layo
           <div class="olt-DataCards-content">
             <div class="olt-FloatingList">
               <div class="olt-FloatingList-items">
-                <div class="olt-Tag">Developer</div>
-                <div class="olt-Tag">Developer</div>
-                <div class="olt-Tag">Tenant Manager</div>
+                <div class="olt-Chip">Developer</div>
+                <div class="olt-Chip">Developer</div>
+                <div class="olt-Chip">Tenant Manager</div>
               </div>
             </div>
           </div>
@@ -415,9 +415,9 @@ Cards do not react to mouse events by default. To make them behave like buttons,
           <div class="olt-DataCards-content">
             <div class="olt-FloatingList">
               <div class="olt-FloatingList-items">
-                <div class="olt-Tag">Developer</div>
-                <div class="olt-Tag">Developer</div>
-                <div class="olt-Tag">Tenant Manager</div>
+                <div class="olt-Chip">Developer</div>
+                <div class="olt-Chip">Developer</div>
+                <div class="olt-Chip">Tenant Manager</div>
               </div>
             </div>
           </div>
@@ -440,9 +440,9 @@ Cards do not react to mouse events by default. To make them behave like buttons,
           <div class="olt-DataCards-content">
             <div class="olt-FloatingList">
               <div class="olt-FloatingList-items">
-                <div class="olt-Tag">Developer</div>
-                <div class="olt-Tag">Developer</div>
-                <div class="olt-Tag">Tenant Manager</div>
+                <div class="olt-Chip">Developer</div>
+                <div class="olt-Chip">Developer</div>
+                <div class="olt-Chip">Tenant Manager</div>
               </div>
             </div>
           </div>

@@ -6,7 +6,7 @@ category: Content
 ## Description
 
 *Table* component must be used with `<table>` and its relatives, it occupies
-`olt-Table*` class names and must be semantically structured as 
+`olt-Table*` class names and must be semantically structured as
 [HTML table element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table).
 
 The following class names must be used corresponding to the native HTML tags :
@@ -103,12 +103,12 @@ the native `text-align: justify;` ).
 
 ## Responsive behaviour
 
-The *Table* component can be used as a responsive component, by wrapping it 
-around an element with `overflow-x: auto;`. This will make the *Table* 
+The *Table* component can be used as a responsive component, by wrapping it
+around an element with `overflow-x: auto;`. This will make the *Table*
 horizontally scrollable.
 
 ```responsive.css hidden
-body > div.olt-Frame { 
+body > div.olt-Frame {
     max-width: 340px;
 }
 body > div.olt-Frame .olt-u-overflowXAuto {
@@ -161,7 +161,7 @@ body > div.olt-Frame .olt-u-overflowXAuto {
 ```
 
 ```responsive-2.css hidden
-body > div.olt-Frame { 
+body > div.olt-Frame {
     max-width: 400px;
     resize: both;
 }
@@ -195,8 +195,8 @@ body > div.olt-Frame .olt-u-overflowXAuto {
         </td>
         <td class="olt-Table-data olt-u-textPrimary olt-u-fontSizeSmall">DEV2S</td>
         <td class="olt-Table-data">
-          <span class="olt-Tag olt-Tag--secondary olt-Tag--outline">Tag 1</span>
-          <span class="olt-Tag olt-Tag--secondary olt-Tag--outline">Tag 2</span>
+          <span class="olt-Chip olt-Chip--secondary olt-Chip--outline">Tag 1</span>
+          <span class="olt-Chip olt-Chip--secondary olt-Chip--outline">Tag 2</span>
         </td>
         <td class="olt-Table-data ">
           <span class="olt-u-textSuccess">●</span> Online
