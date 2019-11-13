@@ -13,9 +13,9 @@
 
   &-content {
     padding: 0.25rem;
-    background: var-get('colorPrimary');
+    background: get-color('primary');
     font-size: $olt-tooltip-font-size;
-    color: var-get('colorLight');
+    color: get-color('light');
     position: absolute;
     top: 0;
     left: 50%;

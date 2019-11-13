@@ -16,7 +16,7 @@
     outline: none;
 
     &:after {
-      color: var-get('colorPrimary');
+      color: get-color('primary');
     }
   }
 
@@ -27,6 +27,6 @@
 
     padding-left: 8px;
     align-self: center;
-    color: var-get('gray500');
+    color: get-color('gray500');
   }
 }

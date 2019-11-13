@@ -49,7 +49,7 @@
         left: 0;
         width: 100%;
         height: calc(100% - 2px);
-        background: var-get('colorLight');
+        background: get-color('light');
         border-top: 1px solid $border-color;
         border-bottom: 1px solid $border-color;
         border-left: none;
@@ -119,7 +119,7 @@
         &:not(#{$self}--listOnly):after {
           content: '';
           position: absolute;
-          background-color: var-get('colorLight');
+          background-color: get-color('light');
           transition: background-color 150ms;
           top: 1px;
           right: calc(100%);
