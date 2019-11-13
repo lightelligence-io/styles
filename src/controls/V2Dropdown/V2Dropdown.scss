@@ -2,6 +2,7 @@ $chevron-size: 6px;
 
 .V2Dropdown {
   $dropdown-content-height: 220px;
+  $dropdown-transition: all 200ms;
 
   $self: &;
 
@@ -25,7 +26,7 @@ $chevron-size: 6px;
   min-height: $v2-control-line-height + $v2-control-margin-top + $v2-control-padding-top + $v2-control-padding-bottom + $v2-control-border-bottom;
   margin: 0;
   padding: 0;
-  transition: all 400ms;
+  transition: $dropdown-transition;
 
 
   &:before {
@@ -41,15 +42,33 @@ $chevron-size: 6px;
     width: #{2*$chevron-size};
     top: #{4px + $v2-control-margin-top};
     left: calc(100% - #{2px + $v2-control-padding-horizontal + 2 * $chevron-size});
-    transition: all 400ms;
+    transition: $dropdown-transition;
   }
 
   &-content {
     max-height: 0;
     // max-height: $dropdown-content-height;
     overflow: hidden;
-    transition: all 400ms;
+    transition: $dropdown-transition;
     margin-top: $v2-control-line-height + $v2-control-margin-top;
+  }
+
+  &-selected-content {
+    @extend .V2Label;
+
+    position: absolute;
+    top: $v2-control-margin-top;
+    left: $v2-control-padding-horizontal;
+    margin: 0;
+    color: get-color('dark');
+    background-color: transparent;
+    transition: $dropdown-transition;
+  }
+
+  :not(.is-open) &--selected > .V2Label-text {
+    top: -1px;
+    transform: scale(0.6875);
+    letter-spacing: 0.2px;
   }
 
   //
@@ -115,6 +134,16 @@ $chevron-size: 6px;
         display: block;
         max-height: $dropdown-content-height;
         overflow: scroll;
+      }
+
+      #{$self}-selected-content {
+        opacity: 0;
+      }
+
+      &--selected > .V2Label-text {
+        top: 11px;
+        transform: scale(1);
+        letter-spacing: $v2-control-letter-spacing;
       }
 
       &:before {

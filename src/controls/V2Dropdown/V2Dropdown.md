@@ -13,7 +13,7 @@ In contrast to the v2 select, the dropdown displays a content div element instea
 <div class="olt-Card">
   <input data-toggle="dropdown" id="dropdown-toggle-1" type="checkbox">
   <label class="olt-V2Label olt-V2Label--floating" for="dropdown-toggle-1">
-    <div class="olt-V2Dropdown olt-V2Dropdown">
+    <div class="olt-V2Dropdown">
       <div class="olt-V2Label-text">Select an option</div>
       <div class="olt-V2Dropdown-content">
         <ul class="olt-InputList">
@@ -79,4 +79,40 @@ The dropdown supports dark mode by putting it inside a *Card* element with `olt-
 </div>
 ```
 
+## Selected
 
+The `olt-V2Dropdown-selected-content` and the `--selected` modifier are used when an element is selected and displayed as content in the dropdown.
+
+```exampleselected.html
+<div class="olt-Card">
+  <input data-toggle="dropdown" id="dropdown-toggle-1" type="checkbox">
+  <label class="olt-V2Label olt-V2Label--floating" for="dropdown-toggle-1">
+    <div class="olt-V2Dropdown olt-V2Dropdown--selected">
+      <div class="olt-V2Label-text">Select an option</div>
+      <div class="olt-V2Dropdown-selected-content">Lorem Ipsum</div>
+      <div class="olt-V2Dropdown-content">
+        <ul class="olt-InputList">
+          <li class="olt-InputList-item">
+            <a class="olt-InputList-link">Lorem Ipsum</a>
+          </li>
+          <li class="olt-InputList-item">
+            <a class="olt-InputList-link">Dolor Sit Amet</a>
+          </li>
+          <li class="olt-InputList-item">
+            <a class="olt-InputList-link">Et Versus</a>
+          </li>
+          <li class="olt-InputList-item">
+            <a class="olt-InputList-link">Dolor Sit Amet</a>
+          </li>
+          <li class="olt-InputList-item">
+            <a class="olt-InputList-link">Et Versus</a>
+          </li>
+          <li class="olt-InputList-item">
+            <a class="olt-InputList-link">Lorem Ipsum</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </label>
+</div>
+```
