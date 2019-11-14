@@ -4,15 +4,15 @@
       'default': (
         'light': (
           'bg': (
-            'normal': var-get('colorPrimary'),
-            'hover': #ff944d,
-            'press': #cf5509,
-            'progress': var-get('colorPrimary'),
-            'disabled': var-get('gray100'),
+            'normal': get-color('primary'),
+            'hover': get-color('primary', 'white', 0.7),
+            'press': get-color('primary', 'secondary', 0.8),
+            'progress': get-color('primary'),
+            'disabled': get-color('gray100'),
           ),
           'border': (),
           'font': (
-            'normal': var-get('colorLight'),
+            'normal': get-color('light'),
           ),
         ),
         'dark': (
@@ -24,13 +24,13 @@
       'destructive': (
         'light': (
           'bg': (
-            'normal': var-get('colorError'),
-            'hover': #fd8a85,
-            'press': #cc4a49,
-            'progress': #fd8a85,
+            'normal': get-color('error'),
+            'hover': get-color('error', 'white', 0.7),
+            'press': get-color('error', 'secondary', 0.8),
+            'progress': get-color('error'),
           ),
           'font': (
-            'normal': var-get('colorLight'),
+            'normal': get-color('light'),
           ),
         ),
         'dark': (),
@@ -38,13 +38,13 @@
       'confirmative': (
         'light': (
           'bg': (
-            'normal': var-get('colorSuccess'),
-            'hover': #4dd25e,
-            'press': #039b1e,
-            'progress': #4dd25e,
+            'normal': get-color('success'),
+            'hover': get-color('success', 'white', 0.7),
+            'press': get-color('success', 'secondary', 0.8),
+            'progress': get-color('success'),
           ),
           'font': (
-            'normal': var-get('colorLight'),
+            'normal': get-color('light'),
           ),
         ),
         'dark': (),
@@ -52,18 +52,18 @@
       'disabled': (
         'light': (
           'bg': (
-            'normal': var-get('gray100'),
+            'normal': get-color('gray100'),
           ),
           'font': (
-            'normal': var-get('gray500'),
+            'normal': get-color('gray500'),
           ),
         ),
         'dark': (
           'bg': (
-            'normal': var-get('gray800'),
+            'normal': get-color('gray700'),
           ),
           'font': (
-            'normal': var-get('gray600'),
+            'normal': get-color('gray600'),
           ),
         ),
       ),
@@ -72,130 +72,130 @@
       'default': (
         'light': (
           'bg': (
-            'normal': var-get('colorLight'),
-            'hover': var-get('colorSecondary'),
-            'press': #3d4156,
-            'progress': var-get('colorSecondary'),
+            'normal': get-color('light'),
+            'hover': get-color('secondary'),
+            'press': get-color('secondary', 'white', 0.8),
+            'progress': get-color('secondary'),
           ),
           'border': (
-            'normal': var-get('colorSecondary'),
+            'normal': get-color('secondary'),
           ),
           'font': (
-            'normal': var-get('colorSecondary'),
-            'hover': var-get('colorLight'),
-            'press': var-get('colorLight'),
-            'progress': var-get('colorLight'),
+            'normal': get-color('secondary'),
+            'hover': get-color('light'),
+            'press': get-color('light'),
+            'progress': get-color('light'),
           ),
         ),
         'dark': (
           'bg': (
-            'normal': var-get('colorDark'),
-            'hover': var-get('colorLight'),
-            'press': #b7b8c0,
-            'progress': var-get('colorLight'),
+            'normal': get-color('dark'),
+            'hover': get-color('light'),
+            'press': get-color('secondary', 'white', 0.3),
+            'progress': get-color('light'),
           ),
           'border': (
-            'normal': var-get('colorLight'),
+            'normal': get-color('light'),
           ),
           'font': (
-            'normal': var-get('colorLight'),
-            'hover': var-get('colorSecondary'),
-            'press': var-get('colorSecondary'),
-            'progress': var-get('colorSecondary'),
+            'normal': get-color('light'),
+            'hover': get-color('secondary'),
+            'press': get-color('secondary'),
+            'progress': get-color('secondary'),
           ),
         ),
       ),
       'confirmative': (
         'light': (
           'bg': (
-            'normal': var-get('colorLight'),
-            'hover': var-get('colorSuccess'),
-            'press': #049c1e,
-            'progress': var-get('colorSuccess'),
+            'normal': get-color('light'),
+            'hover': get-color('success'),
+            'press': get-color('success', 'secondary', 0.8),
+            'progress': get-color('success'),
           ),
           'font': (
-            'normal': var-get('colorSuccess'),
-            'hover': var-get('colorLight'),
-            'press': var-get('colorLight'),
-            'progress': var-get('colorLight'),
+            'normal': get-color('success'),
+            'hover': get-color('light'),
+            'press': get-color('light'),
+            'progress': get-color('light'),
           ),
           'border': (
-            'normal': var-get('colorSuccess'),
+            'normal': get-color('success'),
           ),
         ),
         'dark': (
           'bg': (
-            'normal': var-get('colorDark'),
-            'hover': var-get('colorSuccess'),
-            'press': #049c1e,
-            'progress': var-get('colorSuccess'),
+            'normal': get-color('dark'),
+            'hover': get-color('success'),
+            'press': get-color('success', 'secondary', 0.8),
+            'progress': get-color('success'),
           ),
           'font': (
-            'normal': var-get('colorSuccess'),
-            'hover': var-get('colorLight'),
-            'press': var-get('colorLight'),
-            'progress': var-get('colorLight'),
+            'normal': get-color('success'),
+            'hover': get-color('light'),
+            'press': get-color('light'),
+            'progress': get-color('light'),
           ),
           'border': (
-            'normal': var-get('colorSuccess'),
+            'normal': get-color('success'),
           ),
         ),
       ),
       'destructive': (
         'light': (
           'bg': (
-            'normal': var-get('colorLight'),
-            'hover': var-get('colorError'),
-            'press': #cc4a49,
-            'progress': var-get('colorError'),
+            'normal': get-color('light'),
+            'hover': get-color('error'),
+            'press': get-color('error', 'secondary', 0.8),
+            'progress': get-color('error'),
           ),
           'border': (
-            'normal': var-get('colorError'),
+            'normal': get-color('error'),
           ),
           'font': (
-            'normal': var-get('colorError'),
-            'hover': var-get('colorLight'),
-            'press': var-get('colorLight'),
+            'normal': get-color('error'),
+            'hover': get-color('light'),
+            'press': get-color('light'),
           ),
         ),
         'dark': (
           'bg': (
-            'normal': var-get('colorDark'),
-            'hover': var-get('colorError'),
-            'press': #cc4a49,
-            'progress': var-get('colorError'),
+            'normal': get-color('dark'),
+            'hover': get-color('error'),
+            'press': get-color('error', 'secondary', 0.8),
+            'progress': get-color('error'),
           ),
           'border': (
-            'normal': var-get('colorError'),
+            'normal': get-color('error'),
           ),
           'font': (
-            'normal': var-get('colorError'),
-            'hover': var-get('colorLight'),
-            'press': var-get('colorLight'),
+            'normal': get-color('error'),
+            'hover': get-color('light'),
+            'press': get-color('light'),
           ),
         ),
       ),
       'disabled': (
         'light': (
           'bg': (
-            'normal': var-get('colorLight'),
+            'normal': get-color('light'),
           ),
           'border': (
-            'normal': #d0d1d3,
+            'normal': get-color('gray400'),
           ),
           'font': (
-            'normal': #d0d1d3,
+            'normal': get-color('gray400'),
           ),
         ),
         'dark': (
           'bg': (
-            'normal': var-get('colorDark'),
+            'normal': get-color('dark'),
           ),
           'border': (
-            'normal': var-get('gray600'),
+            'normal': get-color('gray600'),
           ),
           'font': (
-            'normal': var-get('gray600'),
+            'normal': get-color('gray600'),
           ),
         ),
       ),
@@ -205,29 +205,29 @@
         'light': (
           'bg': (
             'normal': transparent,
-            'hover': #ffefe5,
-            'press': #ffd1b2,
+            'hover': get-color('primary', 'white', 0.1),
+            'press': get-color('primary', 'white', 0.3),
             'progress': transparent,
           ),
           'border': (
             'normal': transparent,
           ),
           'font': (
-            'normal': var-get('colorPrimary'),
+            'normal': get-color('primary'),
           ),
         ),
         'dark': (
           'bg': (
             'normal': transparent,
-            'hover': #4d1f00,
-            'press': #803300,
+            'hover': get-color('primary', 'black', 0.3),
+            'press': get-color('primary', 'black', 0.5),
             'progress': transparent,
           ),
           'border': (
             'normal': transparent,
           ),
           'font': (
-            'normal': var-get('colorPrimary'),
+            'normal': get-color('primary'),
           ),
         ),
       ),
@@ -235,29 +235,29 @@
         'light': (
           'bg': (
             'normal': transparent,
-            'hover': #f6f7f9,
-            'press': #ccf2d1,
+            'hover': get-color('success', 'white', 0.1),
+            'press': get-color('success', 'white', 0.2),
             'progress': transparent,
           ),
           'border': (
             'normal': transparent,
           ),
           'font': (
-            'normal': var-get('colorSuccess'),
+            'normal': get-color('success'),
           ),
         ),
         'dark': (
           'bg': (
             'normal': transparent,
-            'hover': #2f2f30,
-            'press': #013908,
+            'hover': get-color('success', 'black', 0.2),
+            'press': get-color('success', 'black', 0.3),
             'progress': transparent,
           ),
           'border': (
             'normal': transparent,
           ),
           'font': (
-            'normal': var-get('colorSuccess'),
+            'normal': get-color('success'),
           ),
         ),
       ),
@@ -265,29 +265,29 @@
         'light': (
           'bg': (
             'normal': transparent,
-            'hover': #f6f7f9,
-            'press': #ffdedc,
+            'hover': get-color('error', 'white', 0.1),
+            'press': get-color('error', 'white', 0.2),
             'progress': transparent,
           ),
           'border': (
             'normal': transparent,
           ),
           'font': (
-            'normal': var-get('colorError'),
+            'normal': get-color('error'),
           ),
         ),
         'dark': (
           'bg': (
             'normal': transparent,
-            'hover': #2f2f30,
-            'press': #4c1b19,
+            'hover': get-color('error', 'black', 0.2),
+            'press': get-color('error', 'black', 0.3),
             'progress': transparent,
           ),
           'border': (
             'normal': transparent,
           ),
           'font': (
-            'normal': var-get('colorError'),
+            'normal': get-color('error'),
           ),
         ),
       ),
@@ -295,29 +295,29 @@
         'light': (
           'bg': (
             'normal': transparent,
-            'hover': #f6f7f9,
-            'press': #e4e4e5,
+            'hover': get-color('gray200', 'white', 0.4),
+            'press': get-color('gray500', 'white', 0.3),
             'progress': transparent,
           ),
           'border': (
             'normal': transparent,
           ),
           'font': (
-            'normal': var-get('gray500'),
+            'normal': get-color('gray500'),
           ),
         ),
         'dark': (
           'bg': (
             'normal': transparent,
-            'hover': #2f2f30,
-            'press': #434344,
+            'hover': get-color('gray200', 'black', 0.2),
+            'press': get-color('gray500', 'black', 0.4),
             'progress': transparent,
           ),
           'border': (
             'normal': transparent,
           ),
           'font': (
-            'normal': var-get('gray500'),
+            'normal': get-color('gray500'),
           ),
         ),
       ),
@@ -327,7 +327,7 @@
             'normal': transparent,
           ),
           'font': (
-            'normal': var-get('gray300'),
+            'normal': get-color('gray300'),
           ),
         ),
         'dark': (
@@ -335,7 +335,7 @@
             'normal': transparent,
           ),
           'font': (
-            'normal': var-get('gray600'),
+            'normal': get-color('gray600'),
           ),
         ),
       ),
@@ -500,7 +500,13 @@
       user-select: none;
       cursor: default;
 
-      @include button-set-state-defaults($self, $emphasis, $theme, 'disabled', 'normal');
+      @include button-set-state-defaults(
+        $self,
+        $emphasis,
+        $theme,
+        'disabled',
+        'normal'
+      );
     }
     $types-base: ('default' 'destructive' 'confirmative');
     $types: if(
@@ -538,10 +544,10 @@
   $button-padding-x: 32px;
   $pagination-button-padding-x: 16px;
   $button-padding-y: 0;
-  $button-border-color: var-get('borderColor');
-  $button-background: var-get('borderColor');
-  $button-border-width: 1px; // var-get('borderWidth');
-  $button-color: var-get('colorDark');
+  $button-border-color: get-color('gray300');
+  $button-background: get-color('gray300');
+  $button-border-width: 1px;
+  $button-color: get-color('dark');
   $button-pending-opacity: 0.4;
   $button-font-size: 14px;
   $button-line-height: 18px;
@@ -576,7 +582,9 @@
   color: $button-color;
   padding: $button-padding-y $button-padding-x;
 
-  $emphases: ('primary' 'secondary' 'tertiary' 'pagination-next' 'pagination-prev');
+  $emphases: (
+    'primary' 'secondary' 'tertiary' 'pagination-next' 'pagination-prev'
+  );
   // set default if no other emphasis is set
   &#{not-any-selector($emphases, $self)} {
     @include button-emphasis($self, 'primary');

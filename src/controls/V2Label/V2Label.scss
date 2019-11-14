@@ -2,7 +2,6 @@
   $self: &;
 
   position: relative;
-  display: block;
   width: 100%;
   padding: 0;
   margin-bottom: 40px;
@@ -36,12 +35,12 @@
   select:focus ~ &-text {
     top: -1px;
     transform: scale(0.6875);
-    color: var-get('colorPrimary');
+    color: get-color('primary');
     letter-spacing: 0.2px;
   }
 
   &.has-error &-text {
-    color: var-get('colorError');
+    color: get-color('error');
   }
 
   &-footer {
@@ -61,7 +60,7 @@
   }
 
   &.has-error &-error {
-    color: var-get('colorError');
+    color: get-color('error');
     display: block;
   }
 
@@ -93,7 +92,7 @@
   }
 
   &:not(.has-error) input:focus ~ &-icon {
-    color: var-get('colorPrimary');
+    color: get-color('primary');
   }
 
   //

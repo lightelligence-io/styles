@@ -1,4 +1,4 @@
-@mixin make-2columns ($self) {
+@mixin make-2columns($self) {
   grid-gap: 0;
   grid-template-columns: 50% 50%;
 
@@ -23,7 +23,7 @@
   }
 }
 
-@mixin make-vertical ($self) {
+@mixin make-vertical($self) {
   grid-gap: 0;
   grid-template-columns: 100%;
 
@@ -39,7 +39,6 @@
     }
   }
 }
-
 
 .List {
   $self: &;
@@ -76,7 +75,7 @@
 
   &-term {
     grid-column: 1;
-    color: var-get('gray500');
+    color: get-color('gray500');
     margin: 0;
     padding: 0;
     display: block;

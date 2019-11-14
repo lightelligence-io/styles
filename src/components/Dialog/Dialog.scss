@@ -58,7 +58,7 @@
     margin: auto;
     padding: $dialog-window-padding;
     border-radius: $dialog-border-radius;
-    background: var-get('colorLight');
+    background: get-color('light');
     overflow: auto;
     cursor: auto;
 

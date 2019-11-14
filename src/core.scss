@@ -11,6 +11,7 @@
 @import './core/functions/string';
 @import './core/functions/list';
 @import './core/functions/vars';
+@import './core/functions/color';
 
 // Theme
 @import './theme.yml';
@@ -19,6 +20,7 @@
 @import './core/globals/vars';
 @import './core/globals/screen';
 @import './core/globals/controls';
+@import './core/globals/colors';
 @import './core/globals/v2Controls';
 
 // Mixins

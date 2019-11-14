@@ -3,14 +3,14 @@
  */
 $v2-radio-colors: (
   light: (
-    default: var-get('gray800'),
-    checked: var-get('colorPrimary'),
-    disabled: var-get('gray500'),
+    default: get-color('gray800'),
+    checked: get-color('primary'),
+    disabled: get-color('gray500'),
   ),
   dark: (
-    default: var-get('colorLight'),
-    checked: var-get('colorPrimary'),
-    disabled: #55586a,
+    default: get-color('light'),
+    checked: get-color('primary'),
+    disabled: get-color('secondary', 'white', 0.7),
   ),
 );
 

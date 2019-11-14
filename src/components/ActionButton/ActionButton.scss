@@ -1,12 +1,4 @@
 .ActionButton {
-  $icon-bg-colors: (
-    // TODO: how to use var-get('colorPrimary'), var-get('colorSuccess'), var-get('colorError'), var-get('gray100'), with lighten
-    'default': #0000001a,
-    'primary': #ff66001a,
-    'confirmative': #02bf1b1a,
-    'destructive': #fd59521a,
-    'disabled': #a7a8aa1a,
-  );
   $action-button-padding-x: 16px;
   $action-button-edit-icon-size: 36px;
   $action-button-icon-spacing: 4px;
@@ -29,7 +21,7 @@
   text-decoration: none;
   cursor: pointer;
   transition: opacity $action-button-transition-time;
-  color: var-get('gray800');
+  color: get-color('gray800');
   padding: 0;
 
   @extend .u-description;
@@ -38,6 +30,7 @@
     opacity: 0;
     padding: 0 $action-button-padding-x;
     transition: opacity $action-button-label-transition-time !important;
+    z-index: 5;
   }
 
   &:after {
@@ -49,38 +42,38 @@
     width: 36px;
     height: 36px;
     border-radius: 18px;
-    background-color: map-get($icon-bg-colors, 'default');
+    background-color: get-color('gray100');
   }
 
   &--primary {
-    color: var-get('colorPrimary');
+    color: get-color('primary');
 
     &:after {
-      background-color: map-get($icon-bg-colors, 'primary');
+      background-color: get-color('primary', 'white', 0.1);
     }
   }
 
   &--confirmative {
-    color: var-get('colorSuccess');
+    color: get-color('success');
 
     &:after {
-      background-color: map-get($icon-bg-colors, 'confirmative');
+      background-color: get-color('success', 'white', 0.1);
     }
   }
 
   &--destructive {
-    color: var-get('colorError');
+    color: get-color('error');
 
     &:after {
-      background-color: map-get($icon-bg-colors, 'destructive');
+      background-color: get-color('error', 'white', 0.1);
     }
   }
 
   &--disabled {
-    color: var-get('gray500');
+    color: get-color('gray500');
 
     &:after {
-      background-color: map-get($icon-bg-colors, 'disabled');
+      background-color: get-color('gray100');
     }
   }
 
@@ -144,6 +137,7 @@
       align-items: center;
       justify-content: center;
       align-self: center;
+      z-index: 5;
     }
   }
 
