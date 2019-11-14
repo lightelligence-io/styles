@@ -156,12 +156,12 @@
   }
 
   &-label {
+    @extend .u-content;
+
     margin-left: 8px;
     cursor: pointer;
     display: inline-block;
     position: relative;
-    font-size: 16px;
-    line-height: 24px;
     user-select: none;
   }
 
