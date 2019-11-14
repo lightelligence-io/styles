@@ -1,10 +1,4 @@
 # Container
-containerPadding: 15px
-containerMaxWidth:
-  sm: 540px
-  md: 720px
-  lg: 960px
-  xl: 1140px
 breakpoint:
   xs: 0
   sm: 576px
@@ -40,15 +34,9 @@ gray:
   700: '#495057'
   800: '#343a40'
   900: '#212529'
-# Borders
-borderRadius: 2px
-borderWidth: 1px
-borderColor: ${gray[300]}
 # Typography
 fontFamilyBase: !!str |
   'PT Sans', 'Arial'
-fontFamilyMono: !!str |
-  'Overpass Mono', 'monospace'
 fontSizeBase: 16px
 fontSize:
   xxSmall: calc(${fontSizeBase} * .65)
@@ -75,29 +63,10 @@ headingLineHeight:
   5: 2rem
   6: 1.75rem
 lineHeightBase: 1.5
-lineHeight:
-  xxSmall: calc(${lineHeightBase} * .6667)
-  xSmall: calc(${lineHeightBase} * .8333)
-  small: calc(${lineHeightBase} * .9)
-  medium: ${lineHeightBase}
-  large: calc(${lineHeightBase} * 1.3333)
-  xLarge: calc(${lineHeightBase} * 1.5333)
-  xxLarge: calc(${lineHeightBase} * 1.7333)
-  smaller: 80%
-  larger: 150%
 fontWeight:
   light: 400
   regular: 400
   bold: 700
-fontWeightMono:
-  light: 300
-  regular: 300
-  bold: 300
-fontFamilyHeading: ${fontFamilyBase}
-fontWeightHeading: ${fontWeight.bold}
-# Links
-linkColor: ${color.primary}
-linkHoverContrast: 10%
 # Spacings
 spacer: ${fontSizeBase}
 spacing:
@@ -110,6 +79,3 @@ spacing:
   6: calc(${spacer} * 3)
   7: calc(${spacer} * 4.5)
   8: calc(${spacer} * 6)
-# Transitions
-transitionDuration: 150ms
-transitionTimingFunction: ease

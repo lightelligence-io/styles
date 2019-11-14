@@ -28,8 +28,8 @@ $notification-spacing-y: 8px;
   $notification-border-radius: 4px;
   $notification-backdrop: rgba(255, 255, 255, 0.7);
   $notification-box-shadow: 0 2px 6px 0 rgba(13, 18, 44, 0.2);
-  $notification-content-padding-x: var-get('spacing3');
-  $notification-content-padding-y: var-get('spacing3');
+  $notification-content-padding-x: 16px;
+  $notification-content-padding-y: 16px;
   $notification-background: get-color('light');
   $notification-header-height: 20px;
   $notification-close-size: 16px;
@@ -92,7 +92,8 @@ $notification-spacing-y: 8px;
     @extend .u-support;
 
     margin: 0;
-    padding: 0;
+    padding: 2px;
+    padding-right: 0;
     padding-left: $notification-icon-size + $notification-header-padding;
     overflow: hidden;
   }
