@@ -73,7 +73,7 @@
     padding-left: 24px;
 
     &:before {
-      @include icon-font-olt;
+      @extend .Icon;
 
       @extend .Icon-info-outline:before;
 

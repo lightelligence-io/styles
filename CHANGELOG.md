@@ -87,3 +87,9 @@
 - Fix: Handlebars Vulnerability
 - Chore: Package Update
 
+#v1.0.0-alpha.6
+- Feature: filter component 
+- Feature: dropdown component
+- Feature: input list component
+- Feature: icon font is now generated
+- Feature: white labeling 

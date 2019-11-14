@@ -1,11 +1,29 @@
 const path = require('path');
-const { sync: glob } = require('glob');
 const yaml = require('js-yaml');
 const template = require('es6-template-strings');
 const { decamelize, pascalize } = require('humps');
+const fs = require('fs');
 
 const mode = process.env.NODE_ENV || 'development';
 const context = path.resolve(__dirname, 'src');
+
+/**
+ * Will construct a sass variable that will hold all icons
+ *
+ * The icon files are positioned inside `src/icons` directory
+ *
+ * @returns {string}
+ */
+function addIconsVariable() {
+  return [
+    '$icons: (',
+    fs
+      .readdirSync(path.join(context, 'icons'))
+      .map((file) => `"${file}"`)
+      .join(','),
+    ');',
+  ].join('');
+}
 
 module.exports = {
   mode,
@@ -29,16 +47,9 @@ module.exports = {
               emitFile: true,
             },
           },
-          {
-            loader: 'extract-loader',
-          },
-        ].concat([
-          {
-            loader: 'css-loader',
-          },
-          {
-            loader: 'resolve-url-loader',
-          },
+          { loader: 'extract-loader' },
+          { loader: 'css-loader' },
+          { loader: 'resolve-url-loader' },
           {
             loader: 'postcss-loader',
             options: {
@@ -48,10 +59,27 @@ module.exports = {
               },
             },
           },
+          //
+          // Since we need the "loader" object for the iconfont-webpack-plugin
+          // and that object is not provided in the postcss.config.js we
+          // have to duplicate the loader above and run it again
+          //
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: (loader) => [require('iconfont-webpack-plugin')(loader)],
+            },
+          },
           {
             loader: 'fast-sass-loader',
             options: {
               includePaths: [path.resolve(__dirname, 'node_modules')],
+              //
+              // Provide additional sass code as data. So far we use this only
+              // for the icons.
+              //
+              data: [addIconsVariable()].join('\n'),
               transformers: [
                 {
                   extensions: ['.yml'],
@@ -103,7 +131,7 @@ module.exports = {
               ],
             },
           },
-        ]),
+        ],
       },
       {
         test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
