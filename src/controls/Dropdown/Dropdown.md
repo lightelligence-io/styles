@@ -12,9 +12,9 @@ In contrast to the select, the dropdown displays a content div element instead o
 ```example.html
 <div class="olt-Card">
   <input data-toggle="dropdown" id="dropdown-toggle-1" type="checkbox">
-  <label class="olt-V2Label olt-V2Label--floating" for="dropdown-toggle-1">
+  <label class="olt-Label olt-Label--floating" for="dropdown-toggle-1">
     <div class="olt-Dropdown">
-      <div class="olt-V2Label-text">Select an option</div>
+      <div class="olt-Label-text">Select an option</div>
       <div class="olt-Dropdown-content">
         <ul class="olt-InputList">
           <li class="olt-InputList-item">
@@ -49,9 +49,9 @@ The dropdown supports dark mode by putting it inside a *Card* element with `olt-
 ```darkexample.html
 <div class="olt-Card olt-Card--dark olt-Theme-dark">
   <input data-toggle="dropdown" id="dropdown-toggle-2" type="checkbox">
-  <label class="olt-V2Label olt-V2Label--floating" for="dropdown-toggle-2">
+  <label class="olt-Label olt-Label--floating" for="dropdown-toggle-2">
     <div class="olt-Dropdown">
-      <div class="olt-V2Label-text">Select an option</div>
+      <div class="olt-Label-text">Select an option</div>
       <div class="olt-Dropdown-content">
         <ul class="olt-InputList">
           <li class="olt-InputList-item">
@@ -86,9 +86,9 @@ The `olt-Dropdown-selected-content` and the `--selected` modifier are used when 
 ```exampleselected.html
 <div class="olt-Card">
   <input data-toggle="dropdown" id="dropdown-toggle-1" type="checkbox">
-  <label class="olt-V2Label olt-V2Label--floating" for="dropdown-toggle-1">
+  <label class="olt-Label olt-Label--floating" for="dropdown-toggle-1">
     <div class="olt-Dropdown olt-Dropdown--selected">
-      <div class="olt-V2Label-text">Select an option</div>
+      <div class="olt-Label-text">Select an option</div>
       <div class="olt-Dropdown-selected-content">Lorem Ipsum</div>
       <div class="olt-Dropdown-content">
         <ul class="olt-InputList">
