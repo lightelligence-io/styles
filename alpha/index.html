@@ -37,6 +37,7 @@
 									<option value="chip">Chip</option>
 									<option value="dialog">Dialog</option>
 									<option value="dropdown">Dropdown</option>
+									<option value="filter">Filter</option>
 									<option value="icon">Icon</option>
 									<option value="menu">Menu</option>
 									<option value="modal">Modal</option>
@@ -58,6 +59,7 @@
 									<option value="floating-list">Floating List</option>
 									<option value="headline">Headline</option>
 									<option value="image">Image</option>
+									<option value="input-list">InputList</option>
 									<option value="link">Link</option>
 									<option value="list">List</option>
 									<option value="paragraph">Paragraph</option>
@@ -75,6 +77,7 @@
 									<option value="text-field">TextField</option>
 									<option value="toggle">Toggle</option>
 									<option value="v-2-checkbox">V2Checkbox</option>
+									<option value="v-2-dropdown">V2Dropdown</option>
 									<option value="v-2-input">V2Input</option>
 									<option value="v-2-label">V2Label</option>
 									<option value="v-2-radio">V2Radio</option>
@@ -3848,6 +3851,195 @@ bubble&#39;s element. They only work with the default <em>Chip</em>.</p>
     &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
+	</div>
+</div></div>
+</div>
+
+						<div id="filter" class="i-library theme-content-element">
+	<h1 class="display-4 theme-content-element-title">Filter</h1>
+	<span class="theme-content-element-source">
+		<span class="theme-content-element-source-label">Source:</span>
+		<span class="theme-content-element-source-path">components/Filter/Filter.md</span>
+	</span>
+	<div class="theme-content-element-description"><div id="description" class="i-pad-top-5 i-section"><h2 class="i-pad-top-3 i-position-container"><a href="#description" class="icon-link i-section__link -heading"></a>Description</h2></div><p>You can use the <em>Filter</em> component to show a dropdown that opens a filter popup and displays additional attributes. This component occupies <code>olt-Filter*</code> class names.</p>
+<div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="filter-basic.html"
+                            target="_blank"
+                            class="plain-link"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Open in a new window"
+                        >
+                            <i class="fa fa-external-link-square fa-fw"></i>
+                            Example
+                        </a>
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="filter-basic.html"
+                            data-initinview="true"
+                            data-title="Loading..." 
+                        ></div>
+                    </div>
+                </div>
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="&lt;div class=&quot;olt-Card&quot;&gt;
+  &lt;input data-toggle=&quot;dropdown&quot; id=&quot;dropdown-toggle-1&quot; type=&quot;checkbox&quot;&gt;
+  &lt;label class=&quot;olt-V2Label olt-V2Label--floating&quot; for=&quot;dropdown-toggle-1&quot;&gt;
+    &lt;div class=&quot;olt-Filter&quot;&gt;
+      &lt;div class=&quot;olt-V2Label-text&quot;&gt;Filter&lt;/div&gt;
+      &lt;div class=&quot;olt-Filter-bubble&quot;&gt;99+&lt;/div&gt;
+      &lt;div class=&quot;olt-Filter-content&quot;&gt;
+        &lt;ul class=&quot;olt-InputList&quot;&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Lorem Ipsum&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Dolor Sit Amet&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Et Versus&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Dolor Sit Amet&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Et Versus&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Lorem Ipsum&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/label&gt;
+&lt;/div&gt;">Copy</button>
+		<pre class="mb-0"><code class="lang-">&lt;div class=&quot;olt-Card&quot;&gt;
+  &lt;input data-toggle=&quot;dropdown&quot; id=&quot;dropdown-toggle-1&quot; type=&quot;checkbox&quot;&gt;
+  &lt;label class=&quot;olt-V2Label olt-V2Label--floating&quot; for=&quot;dropdown-toggle-1&quot;&gt;
+    &lt;div class=&quot;olt-Filter&quot;&gt;
+      &lt;div class=&quot;olt-V2Label-text&quot;&gt;Filter&lt;/div&gt;
+      &lt;div class=&quot;olt-Filter-bubble&quot;&gt;99+&lt;/div&gt;
+      &lt;div class=&quot;olt-Filter-content&quot;&gt;
+        &lt;ul class=&quot;olt-InputList&quot;&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Lorem Ipsum&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Dolor Sit Amet&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Et Versus&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Dolor Sit Amet&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Et Versus&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Lorem Ipsum&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+	</div>
+</div><p>You can add any element inside the filters dropdown. The <code>--active</code> modifier identifies an active filter. The <code>olt-Filter-bubble</code> class is used to place a bubble inside the filter intended to show the number of elements being displayed after the filter is applied.</p>
+<div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="filter-checkboxfilter.html"
+                            target="_blank"
+                            class="plain-link"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Open in a new window"
+                        >
+                            <i class="fa fa-external-link-square fa-fw"></i>
+                            Example
+                        </a>
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="filter-checkboxfilter.html"
+                            data-initinview="true"
+                            data-title="Loading..." 
+                        ></div>
+                    </div>
+                </div>
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="&lt;div class=&quot;olt-Card&quot;&gt;
+  &lt;input data-toggle=&quot;dropdown&quot; id=&quot;dropdown-toggle-1&quot; type=&quot;checkbox&quot;&gt;
+  &lt;label class=&quot;olt-V2Label olt-V2Label--floating&quot; for=&quot;dropdown-toggle-1&quot;&gt;
+    &lt;div class=&quot;olt-Filter olt-Filter--active&quot;&gt;
+      &lt;div class=&quot;olt-V2Label-text&quot;&gt;Filter&lt;/div&gt;
+      &lt;div class=&quot;olt-Filter-bubble&quot;&gt;99+&lt;/div&gt;
+      &lt;div class=&quot;olt-Filter-content&quot;&gt;
+        &lt;div class=&quot;olt-u-padding3&quot;&gt;
+          &lt;label class=&quot;olt-V2Checkbox&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; checked /&gt;
+            &lt;span class=&quot;olt-V2Checkbox-button&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;olt-V2Checkbox-label&quot;&gt;Option 1&lt;/span&gt;
+          &lt;/label&gt;
+          &lt;label class=&quot;olt-V2Checkbox&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; checked /&gt;
+            &lt;span class=&quot;olt-V2Checkbox-button&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;olt-V2Checkbox-label&quot;&gt;Option 2&lt;/span&gt;
+          &lt;/label&gt;
+          &lt;label class=&quot;olt-V2Checkbox&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; checked /&gt;
+            &lt;span class=&quot;olt-V2Checkbox-button&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;olt-V2Checkbox-label&quot;&gt;Option 4&lt;/span&gt;
+          &lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/label&gt;
+&lt;/div&gt;">Copy</button>
+		<pre class="mb-0"><code class="lang-">&lt;div class=&quot;olt-Card&quot;&gt;
+  &lt;input data-toggle=&quot;dropdown&quot; id=&quot;dropdown-toggle-1&quot; type=&quot;checkbox&quot;&gt;
+  &lt;label class=&quot;olt-V2Label olt-V2Label--floating&quot; for=&quot;dropdown-toggle-1&quot;&gt;
+    &lt;div class=&quot;olt-Filter olt-Filter--active&quot;&gt;
+      &lt;div class=&quot;olt-V2Label-text&quot;&gt;Filter&lt;/div&gt;
+      &lt;div class=&quot;olt-Filter-bubble&quot;&gt;99+&lt;/div&gt;
+      &lt;div class=&quot;olt-Filter-content&quot;&gt;
+        &lt;div class=&quot;olt-u-padding3&quot;&gt;
+          &lt;label class=&quot;olt-V2Checkbox&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; checked /&gt;
+            &lt;span class=&quot;olt-V2Checkbox-button&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;olt-V2Checkbox-label&quot;&gt;Option 1&lt;/span&gt;
+          &lt;/label&gt;
+          &lt;label class=&quot;olt-V2Checkbox&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; checked /&gt;
+            &lt;span class=&quot;olt-V2Checkbox-button&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;olt-V2Checkbox-label&quot;&gt;Option 2&lt;/span&gt;
+          &lt;/label&gt;
+          &lt;label class=&quot;olt-V2Checkbox&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; checked /&gt;
+            &lt;span class=&quot;olt-V2Checkbox-button&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;olt-V2Checkbox-label&quot;&gt;Option 4&lt;/span&gt;
+          &lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/label&gt;
+&lt;/div&gt;</code></pre>
 	</div>
 </div></div>
 </div>
@@ -11932,6 +12124,138 @@ and <code>height: auto</code> css styles. This gives harmony when an image is be
 </div></div>
 </div>
 
+						<div id="input-list" class="i-library theme-content-element">
+	<h1 class="display-4 theme-content-element-title">InputList</h1>
+	<span class="theme-content-element-source">
+		<span class="theme-content-element-source-label">Source:</span>
+		<span class="theme-content-element-source-path">content/InputList/InputList.md</span>
+	</span>
+	<div class="theme-content-element-description"><div id="description" class="i-pad-top-5 i-section"><h2 class="i-pad-top-3 i-position-container"><a href="#description" class="icon-link i-section__link -heading"></a>Description</h2></div><p>The <em>InputList</em> component is used to render a list element for dropdown or autocomplete elements.
+This component occupies <code>olt-InputList*</code> class names and can be used with <code>&lt;ul&gt;</code> element, with nested <code>&lt;li&gt;</code>s.</p>
+<p>A typical InputList consists of a <code>ul</code>, <code>li</code> and <code>a</code> elements nested inside :</p>
+<div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="input-list-inputlist.html"
+                            target="_blank"
+                            class="plain-link"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Open in a new window"
+                        >
+                            <i class="fa fa-external-link-square fa-fw"></i>
+                            Example
+                        </a>
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="input-list-inputlist.html"
+                            data-initinview="true"
+                            data-title="Loading..." 
+                        ></div>
+                    </div>
+                </div>
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="&lt;ul class=&quot;olt-InputList&quot;&gt;
+  &lt;li class=&quot;olt-InputList-item&quot;&gt;
+    &lt;a class=&quot;olt-InputList-link&quot;&gt;Link 1&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;olt-InputList-item&quot;&gt;
+    &lt;a class=&quot;olt-InputList-link&quot;&gt;Link 2&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;olt-InputList-item&quot;&gt;
+    &lt;a class=&quot;olt-InputList-link&quot;&gt;Link 3&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;olt-InputList-item&quot;&gt;
+    &lt;a class=&quot;olt-InputList-link&quot;&gt;Link 4&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;">Copy</button>
+		<pre class="mb-0"><code class="lang-">&lt;ul class=&quot;olt-InputList&quot;&gt;
+  &lt;li class=&quot;olt-InputList-item&quot;&gt;
+    &lt;a class=&quot;olt-InputList-link&quot;&gt;Link 1&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;olt-InputList-item&quot;&gt;
+    &lt;a class=&quot;olt-InputList-link&quot;&gt;Link 2&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;olt-InputList-item&quot;&gt;
+    &lt;a class=&quot;olt-InputList-link&quot;&gt;Link 3&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;olt-InputList-item&quot;&gt;
+    &lt;a class=&quot;olt-InputList-link&quot;&gt;Link 4&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+	</div>
+</div><div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="input-list-inputlistdark.html"
+                            target="_blank"
+                            class="plain-link"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Open in a new window"
+                        >
+                            <i class="fa fa-external-link-square fa-fw"></i>
+                            Example
+                        </a>
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="input-list-inputlistdark.html"
+                            data-initinview="true"
+                            data-title="Loading..." 
+                        ></div>
+                    </div>
+                </div>
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="&lt;div class=&quot;olt-Card olt-Card--dark olt-Theme-dark&quot;&gt;
+  &lt;ul class=&quot;olt-InputList&quot;&gt;
+    &lt;li class=&quot;olt-InputList-item&quot;&gt;
+      &lt;a class=&quot;olt-InputList-link&quot;&gt;Link 1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;olt-InputList-item&quot;&gt;
+      &lt;a class=&quot;olt-InputList-link&quot;&gt;Link 2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;olt-InputList-item&quot;&gt;
+      &lt;a class=&quot;olt-InputList-link&quot;&gt;Link 3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;olt-InputList-item&quot;&gt;
+      &lt;a class=&quot;olt-InputList-link&quot;&gt;Link 4&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;">Copy</button>
+		<pre class="mb-0"><code class="lang-">&lt;div class=&quot;olt-Card olt-Card--dark olt-Theme-dark&quot;&gt;
+  &lt;ul class=&quot;olt-InputList&quot;&gt;
+    &lt;li class=&quot;olt-InputList-item&quot;&gt;
+      &lt;a class=&quot;olt-InputList-link&quot;&gt;Link 1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;olt-InputList-item&quot;&gt;
+      &lt;a class=&quot;olt-InputList-link&quot;&gt;Link 2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;olt-InputList-item&quot;&gt;
+      &lt;a class=&quot;olt-InputList-link&quot;&gt;Link 3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;olt-InputList-item&quot;&gt;
+      &lt;a class=&quot;olt-InputList-link&quot;&gt;Link 4&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+	</div>
+</div></div>
+</div>
+
 						<div id="link" class="i-library theme-content-element">
 	<h1 class="display-4 theme-content-element-title">Link</h1>
 	<span class="theme-content-element-source">
@@ -15500,6 +15824,291 @@ parent.addEventListener( &quot;click&quot;, () =&gt; {
     &lt;input id=&quot;two&quot; type=&quot;checkbox&quot; /&gt;
     &lt;span class=&quot;olt-V2Checkbox-button&quot;&gt;&lt;/span&gt;
     &lt;span class=&quot;olt-V2Checkbox-label&quot;&gt;Child&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+	</div>
+</div></div>
+</div>
+
+						<div id="v-2-dropdown" class="i-library theme-content-element">
+	<h1 class="display-4 theme-content-element-title">V2Dropdown</h1>
+	<span class="theme-content-element-source">
+		<span class="theme-content-element-source-label">Source:</span>
+		<span class="theme-content-element-source-path">controls/V2Dropdown/V2Dropdown.md</span>
+	</span>
+	<div class="theme-content-element-description"><div id="description" class="i-pad-top-5 i-section"><h2 class="i-pad-top-3 i-position-container"><a href="#description" class="icon-link i-section__link -heading"></a>Description</h2></div><p>You can use the <em>Dropdown</em> component to show a dropdown that opens popup and displays a list of values to choose. This component occupies <code>olt-Dropdown*</code> class names.</p>
+<p>In contrast to the v2 select, the dropdown displays a content div element instead of the native <code>select</code> element.</p>
+<div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="v-2-dropdown-example.html"
+                            target="_blank"
+                            class="plain-link"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Open in a new window"
+                        >
+                            <i class="fa fa-external-link-square fa-fw"></i>
+                            Example
+                        </a>
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="v-2-dropdown-example.html"
+                            data-initinview="true"
+                            data-title="Loading..." 
+                        ></div>
+                    </div>
+                </div>
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="&lt;div class=&quot;olt-Card&quot;&gt;
+  &lt;input data-toggle=&quot;dropdown&quot; id=&quot;dropdown-toggle-1&quot; type=&quot;checkbox&quot;&gt;
+  &lt;label class=&quot;olt-V2Label olt-V2Label--floating&quot; for=&quot;dropdown-toggle-1&quot;&gt;
+    &lt;div class=&quot;olt-V2Dropdown&quot;&gt;
+      &lt;div class=&quot;olt-V2Label-text&quot;&gt;Select an option&lt;/div&gt;
+      &lt;div class=&quot;olt-V2Dropdown-content&quot;&gt;
+        &lt;ul class=&quot;olt-InputList&quot;&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Lorem Ipsum&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Dolor Sit Amet&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Et Versus&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Dolor Sit Amet&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Et Versus&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Lorem Ipsum&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/label&gt;
+&lt;/div&gt;">Copy</button>
+		<pre class="mb-0"><code class="lang-">&lt;div class=&quot;olt-Card&quot;&gt;
+  &lt;input data-toggle=&quot;dropdown&quot; id=&quot;dropdown-toggle-1&quot; type=&quot;checkbox&quot;&gt;
+  &lt;label class=&quot;olt-V2Label olt-V2Label--floating&quot; for=&quot;dropdown-toggle-1&quot;&gt;
+    &lt;div class=&quot;olt-V2Dropdown&quot;&gt;
+      &lt;div class=&quot;olt-V2Label-text&quot;&gt;Select an option&lt;/div&gt;
+      &lt;div class=&quot;olt-V2Dropdown-content&quot;&gt;
+        &lt;ul class=&quot;olt-InputList&quot;&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Lorem Ipsum&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Dolor Sit Amet&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Et Versus&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Dolor Sit Amet&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Et Versus&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Lorem Ipsum&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+	</div>
+</div><div id="dark-mode" class="i-pad-top-5 i-section"><h2 class="i-pad-top-3 i-position-container"><a href="#dark-mode" class="icon-link i-section__link -heading"></a>Dark Mode</h2></div><p>The dropdown supports dark mode by putting it inside a <em>Card</em> element with <code>olt-Card--dark</code> and <code>olt-Theme-dark</code> classes.</p>
+<div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="v-2-dropdown-darkexample.html"
+                            target="_blank"
+                            class="plain-link"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Open in a new window"
+                        >
+                            <i class="fa fa-external-link-square fa-fw"></i>
+                            Example
+                        </a>
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="v-2-dropdown-darkexample.html"
+                            data-initinview="true"
+                            data-title="Loading..." 
+                        ></div>
+                    </div>
+                </div>
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="&lt;div class=&quot;olt-Card olt-Card--dark olt-Theme-dark&quot;&gt;
+  &lt;input data-toggle=&quot;dropdown&quot; id=&quot;dropdown-toggle-2&quot; type=&quot;checkbox&quot;&gt;
+  &lt;label class=&quot;olt-V2Label olt-V2Label--floating&quot; for=&quot;dropdown-toggle-2&quot;&gt;
+    &lt;div class=&quot;olt-V2Dropdown&quot;&gt;
+      &lt;div class=&quot;olt-V2Label-text&quot;&gt;Select an option&lt;/div&gt;
+      &lt;div class=&quot;olt-V2Dropdown-content&quot;&gt;
+        &lt;ul class=&quot;olt-InputList&quot;&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Lorem Ipsum&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Dolor Sit Amet&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Et Versus&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Dolor Sit Amet&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Et Versus&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Lorem Ipsum&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/label&gt;
+&lt;/div&gt;">Copy</button>
+		<pre class="mb-0"><code class="lang-">&lt;div class=&quot;olt-Card olt-Card--dark olt-Theme-dark&quot;&gt;
+  &lt;input data-toggle=&quot;dropdown&quot; id=&quot;dropdown-toggle-2&quot; type=&quot;checkbox&quot;&gt;
+  &lt;label class=&quot;olt-V2Label olt-V2Label--floating&quot; for=&quot;dropdown-toggle-2&quot;&gt;
+    &lt;div class=&quot;olt-V2Dropdown&quot;&gt;
+      &lt;div class=&quot;olt-V2Label-text&quot;&gt;Select an option&lt;/div&gt;
+      &lt;div class=&quot;olt-V2Dropdown-content&quot;&gt;
+        &lt;ul class=&quot;olt-InputList&quot;&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Lorem Ipsum&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Dolor Sit Amet&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Et Versus&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Dolor Sit Amet&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Et Versus&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Lorem Ipsum&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+	</div>
+</div><div id="selected" class="i-pad-top-5 i-section"><h2 class="i-pad-top-3 i-position-container"><a href="#selected" class="icon-link i-section__link -heading"></a>Selected</h2></div><p>The <code>olt-V2Dropdown-selected-content</code> and the <code>--selected</code> modifier are used when an element is selected and displayed as content in the dropdown.</p>
+<div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="v-2-dropdown-exampleselected.html"
+                            target="_blank"
+                            class="plain-link"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Open in a new window"
+                        >
+                            <i class="fa fa-external-link-square fa-fw"></i>
+                            Example
+                        </a>
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="v-2-dropdown-exampleselected.html"
+                            data-initinview="true"
+                            data-title="Loading..." 
+                        ></div>
+                    </div>
+                </div>
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="&lt;div class=&quot;olt-Card&quot;&gt;
+  &lt;input data-toggle=&quot;dropdown&quot; id=&quot;dropdown-toggle-1&quot; type=&quot;checkbox&quot;&gt;
+  &lt;label class=&quot;olt-V2Label olt-V2Label--floating&quot; for=&quot;dropdown-toggle-1&quot;&gt;
+    &lt;div class=&quot;olt-V2Dropdown olt-V2Dropdown--selected&quot;&gt;
+      &lt;div class=&quot;olt-V2Label-text&quot;&gt;Select an option&lt;/div&gt;
+      &lt;div class=&quot;olt-V2Dropdown-selected-content&quot;&gt;Lorem Ipsum&lt;/div&gt;
+      &lt;div class=&quot;olt-V2Dropdown-content&quot;&gt;
+        &lt;ul class=&quot;olt-InputList&quot;&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Lorem Ipsum&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Dolor Sit Amet&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Et Versus&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Dolor Sit Amet&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Et Versus&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Lorem Ipsum&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/label&gt;
+&lt;/div&gt;">Copy</button>
+		<pre class="mb-0"><code class="lang-">&lt;div class=&quot;olt-Card&quot;&gt;
+  &lt;input data-toggle=&quot;dropdown&quot; id=&quot;dropdown-toggle-1&quot; type=&quot;checkbox&quot;&gt;
+  &lt;label class=&quot;olt-V2Label olt-V2Label--floating&quot; for=&quot;dropdown-toggle-1&quot;&gt;
+    &lt;div class=&quot;olt-V2Dropdown olt-V2Dropdown--selected&quot;&gt;
+      &lt;div class=&quot;olt-V2Label-text&quot;&gt;Select an option&lt;/div&gt;
+      &lt;div class=&quot;olt-V2Dropdown-selected-content&quot;&gt;Lorem Ipsum&lt;/div&gt;
+      &lt;div class=&quot;olt-V2Dropdown-content&quot;&gt;
+        &lt;ul class=&quot;olt-InputList&quot;&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Lorem Ipsum&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Dolor Sit Amet&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Et Versus&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Dolor Sit Amet&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Et Versus&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;olt-InputList-item&quot;&gt;
+            &lt;a class=&quot;olt-InputList-link&quot;&gt;Lorem Ipsum&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
   &lt;/label&gt;
 &lt;/div&gt;</code></pre>
 	</div>
@@ -21212,7 +21821,7 @@ it can be very handy :</p>
 			
 						<h5
 							class="pt-4 mb-1 theme-sidebar-category-title"
-							data-filter-value=" ActionButton  Avatar  Button  Card  Chip  Dialog  Dropdown  Icon  Menu  Modal  Navbar  Notification  Snackbar  Spinner  Stepper  StepperDialog  Tabs  Tag  Tooltip  V2Button  V2Modal  V2Tabs "
+							data-filter-value=" ActionButton  Avatar  Button  Card  Chip  Dialog  Dropdown  Filter  Icon  Menu  Modal  Navbar  Notification  Snackbar  Spinner  Stepper  StepperDialog  Tabs  Tag  Tooltip  V2Button  V2Modal  V2Tabs "
 						>
 							<a href="#category-component" class="i-sidebar-list-item">
 								<b>Component</b>
@@ -21268,6 +21877,13 @@ it can be very handy :</p>
 									data-filter-value="Dropdown"
 								>
 									<span>Dropdown</span>
+								</a>
+								<a
+									href="#filter"
+									class="i-sidebar-list-item theme-sidebar-element"
+									data-filter-value="Filter"
+								>
+									<span>Filter</span>
 								</a>
 								<a
 									href="#icon"
@@ -21381,7 +21997,7 @@ it can be very handy :</p>
 			
 						<h5
 							class="pt-4 mb-1 theme-sidebar-category-title"
-							data-filter-value=" Data Cards  Floating List  Headline  Image  Link  List  Paragraph  Table "
+							data-filter-value=" Data Cards  Floating List  Headline  Image  InputList  Link  List  Paragraph  Table "
 						>
 							<a href="#category-content" class="i-sidebar-list-item">
 								<b>Content</b>
@@ -21418,6 +22034,13 @@ it can be very handy :</p>
 									<span>Image</span>
 								</a>
 								<a
+									href="#input-list"
+									class="i-sidebar-list-item theme-sidebar-element"
+									data-filter-value="InputList"
+								>
+									<span>InputList</span>
+								</a>
+								<a
 									href="#link"
 									class="i-sidebar-list-item theme-sidebar-element"
 									data-filter-value="Link"
@@ -21452,7 +22075,7 @@ it can be very handy :</p>
 			
 						<h5
 							class="pt-4 mb-1 theme-sidebar-category-title"
-							data-filter-value=" Checkbox  Copyable  FormField  Input  Label  Radio  Select  TextArea  TextField  Toggle  V2Checkbox  V2Input  V2Label  V2Radio  V2Select "
+							data-filter-value=" Checkbox  Copyable  FormField  Input  Label  Radio  Select  TextArea  TextField  Toggle  V2Checkbox  V2Dropdown  V2Input  V2Label  V2Radio  V2Select "
 						>
 							<a href="#category-controls" class="i-sidebar-list-item">
 								<b>Controls</b>
@@ -21536,6 +22159,13 @@ it can be very handy :</p>
 									data-filter-value="V2Checkbox"
 								>
 									<span>V2Checkbox</span>
+								</a>
+								<a
+									href="#v-2-dropdown"
+									class="i-sidebar-list-item theme-sidebar-element"
+									data-filter-value="V2Dropdown"
+								>
+									<span>V2Dropdown</span>
 								</a>
 								<a
 									href="#v-2-input"
