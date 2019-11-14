@@ -52,8 +52,6 @@
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6);
 
     &:before {
-      @include icon-font-olt;
-
       content: '';
       height: 112px;
       width: 64px;
