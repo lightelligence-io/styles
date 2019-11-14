@@ -17,12 +17,12 @@
   &,
   &:link,
   &:visited {
-    color: $olt-link-color;
+    color: get-color('primary');
   }
 
   &:hover,
   &:focus {
-    filter: brightness(calc(100% - #{$olt-link-hover-contrast}));
+    filter: brightness(90%);
   }
 
   &:focus {

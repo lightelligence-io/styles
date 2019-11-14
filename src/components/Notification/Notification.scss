@@ -43,7 +43,6 @@ $notification-spacing-y: 8px;
   $notification-icon-size: 24px;
   $self: &;
 
-  font-family: var-get('fontFamilyBase');
   background: $notification-background;
   border-radius: $notification-border-radius;
   padding-top: $notification-content-padding-y;
@@ -71,17 +70,14 @@ $notification-spacing-y: 8px;
   }
 
   &-header {
+    @extend .u-H200;
+
     padding: 0;
     width: 100%;
     vertical-align: middle;
-    font-weight: bold;
     overflow: hidden;
     white-space: nowrap;
     padding-right: $notification-header-padding;
-    font-size: var-get('fontSizeSmall');
-    font-weight: bold;
-    line-height: $notification-header-height;
-    letter-spacing: 0.6px;
 
     &:before {
       @extend .Icon:before;
@@ -93,14 +89,12 @@ $notification-spacing-y: 8px;
   }
 
   &-content {
+    @extend .u-support;
+
     margin: 0;
     padding: 0;
     padding-left: $notification-icon-size + $notification-header-padding;
     overflow: hidden;
-    font-size: var-get('fontSizeXSmall');
-    font-weight: normal;
-    letter-spacing: 0;
-    line-height: 18px;
   }
 
   &-close {

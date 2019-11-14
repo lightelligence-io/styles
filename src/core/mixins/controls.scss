@@ -1,8 +1,9 @@
 @mixin control-placeholder-style($opacity: 1) {
-  font-size: $olt-control-font-size;
-  font-weight: $olt-control-font-weight;
-  color: $olt-control-placeholder;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: $get-color('gray500');
   opacity: $opacity;
+  border: 1px solid red;
 }
 
 @mixin control-placeholder($args...) {

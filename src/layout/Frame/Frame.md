@@ -5,8 +5,8 @@ category: Layout
 
 ## Description
 
-A *Frame* represents the entry point of your application. It is usually applied 
-to the `<body>` or `<html>` of the document. Use Frame to inject fonts and basic 
+A *Frame* represents the entry point of your application. It is usually applied
+to the `<body>` or `<html>` of the document. Use Frame to inject fonts and basic
 typography into your site. It is used with the `olt-Frame` class name.
 
 Styles applied by *Frame* globally :
@@ -21,19 +21,19 @@ document.querySelector("body > div.olt-Frame").classList.remove("olt-Frame");
 
 ```frame.html
 <div class="olt-Frame">
-  <h3 class="olt-Headline olt-Headline--3">Wrapped in frame</h3>
+  <h3 class="olt-u-H200">Wrapped in frame</h3>
   <p class="olt-Paragraph">This content is wrapped in a olt-Frame</p>
 </div>
 <br />
 <div>
-  <h1 class="olt-Headline olt-Headline--3">Not wrapped in frame</h3>
+  <h1 class="olt-u-H200">Not wrapped in frame</h3>
   <p class="olt-Paragraph">This content is not wrapped in a frame</p>
 </div>
 ```
 
 ## Making layout with Frame
 
-*Frame* also provides site layout building blocks : `header`, `footer`, 
+*Frame* also provides site layout building blocks : `header`, `footer`,
 `body` and `main`. Below is example layout using *Frame* component.
 
 ```frame.js hidden
