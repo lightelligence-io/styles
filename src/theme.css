@@ -480,5 +480,5 @@ a.i-sidebar-list-item:hover b {
 }
 
 .demo-color--primary {
-  background: var(--olt-v2-primaryColor);
+  background: var(--olt-primaryColor);
 }

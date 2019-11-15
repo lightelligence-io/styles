@@ -14,7 +14,7 @@ $notification-spacing-y: 8px;
   right: $notification-padding-x;
   z-index: $olt-z-index-notification;
 
-  @media (max-width: map-get($olt-v2-breakpoints, sm)) {
+  @media (max-width: map-get($olt-breakpoints, sm)) {
     width: $notification-container-width-mobile;
     bottom: $notification-padding-y-mobile;
     right: 0;
@@ -170,7 +170,7 @@ $notification-spacing-y: 8px;
     color: get-color('success');
   }
 
-  @media (max-width: map-get($olt-v2-breakpoints, sm)) {
+  @media (max-width: map-get($olt-breakpoints, sm)) {
     &-content {
       display: none;
     }

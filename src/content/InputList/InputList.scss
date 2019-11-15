@@ -4,7 +4,7 @@
   $input-list-item-padding: 8px 16px 8px;
   $self: &;
 
-  @extend %v2Control;
+  @extend %control;
 
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@
     cursor: pointer;
   }
 
-  $theme-light-colors: map-get($v2-control-colors, light);
+  $theme-light-colors: map-get($control-colors, light);
 
   //
   // Light theme colors
@@ -43,7 +43,7 @@
   // Dark theme colors
   //
 
-  $theme-dark-colors: map-get($v2-control-colors, dark);
+  $theme-dark-colors: map-get($control-colors, dark);
 
   .Theme-dark & {
     background-color: var-get('colorDark');

@@ -62,7 +62,7 @@
     overflow: auto;
     cursor: auto;
 
-    @media (max-width: map-get($olt-v2-breakpoints, lg)) {
+    @media (max-width: map-get($olt-breakpoints, lg)) {
       min-width: map-get($dialog-widths, sm);
       min-height: map-get($dialog-heights, sm);
     }

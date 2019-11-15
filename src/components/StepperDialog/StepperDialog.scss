@@ -163,14 +163,14 @@
   }
 
   &-proceed {
-    @extend .V2Button, .V2Button--primary;
+    @extend .Button, .Button--primary;
   }
 
   &-back {
-    @extend .V2Button, .V2Button--tertiary;
+    @extend .Button, .Button--tertiary;
   }
 
-  @media (max-width: map-get($olt-v2-breakpoints, lg)) {
+  @media (max-width: map-get($olt-breakpoints, lg)) {
     #{$self}-window {
       flex-direction: column;
     }

@@ -145,16 +145,6 @@ module.exports = {
           },
         ],
       },
-      {
-        test: require.resolve(
-          path.resolve(context, 'components/Navbar/lightelligence.svg'),
-        ),
-        use: [
-          {
-            loader: 'svg-url-loader',
-          },
-        ],
-      },
     ],
   },
   resolve: {

@@ -1,16 +1,16 @@
 .Filter {
-  @extend .V2Dropdown;
+  @extend .Dropdown;
 
   $bubble-size: 16px;
   $self: &;
 
 
-  &--active > .V2Label-text {
+  &--active > .Label-text {
     color: get-color('dark');
   }
 
   &-content {
-    @extend .V2Dropdown-content;
+    @extend .Dropdown-content;
   }
 
   &-bubble {
@@ -18,7 +18,7 @@
 
     position: absolute;
     top: 11px;
-    right: calc(#{12px + $v2-control-padding-horizontal + 2 * $chevron-size});
+    right: calc(#{12px + $control-padding-horizontal + 2 * $chevron-size});
     border-radius: 24px; // code u-Code lineheight + 2px padding
     text-align: center;
     background-color: get-color('info', 'white', 0.2);

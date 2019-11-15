@@ -499,52 +499,15 @@ Depending on the use case the correct icon has to be used.
 * `olt-Icon--medium`: **16 x 16** - for input fields and sometimes for decoration, standalone and the edit action button
 * `olt-Icon--small`: **12 x 12** - exclusively for buttons - primary, secondary and tertiary
 
-<table class="olt-Table">
-  <thead class="olt-Table-head">
-    <tr class="olt-Table-row">
-      <th class="olt-Table-header">large (24 x 24)</th>
-      <th class="olt-Table-header">medium (16 x 16)</th>
-      <th class="olt-Table-header">small (12 x 12)</th>
-    </tr>
-  </thead>
-  <tbody class="olt-Table-body">
-    <tr class="olt-Table-row">
-      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-notification-default olt-Icon--large"></i></td>
-      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-notification-default olt-Icon--medium"></i></td>
-      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-notification-default olt-Icon--small"></i></td>
-    </tr>
-    <tr class="olt-Table-row">
-      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-delete olt-Icon--large"></i></td>
-      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-delete olt-Icon--medium"></i></td>
-      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-delete olt-Icon--small"></i></td>
-    </tr>
-    <tr class="olt-Table-row">
-      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-edit olt-Icon--large"></i></td>
-      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-edit olt-Icon--medium"></i></td>
-      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-edit olt-Icon--small"></i></td>
-    </tr>
-    <tr class="olt-Table-row">
-      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-save olt-Icon--large"></i></td>
-      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-save olt-Icon--medium"></i></td>
-      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-save olt-Icon--small"></i></td>
-    </tr>
-    <tr class="olt-Table-row">
-      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-calendar olt-Icon--large"></i></td>
-      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-calendar olt-Icon--medium"></i></td>
-      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-calendar olt-Icon--small"></i></td>
-    </tr>
-    <tr class="olt-Table-row">
-      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-device olt-Icon--large"></i></td>
-      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-device olt-Icon--medium"></i></td>
-      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-device olt-Icon--small"></i></td>
-    </tr>
-    <tr class="olt-Table-row">
-      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-success olt-Icon--large"></i></td>
-      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-success olt-Icon--medium"></i></td>
-      <td class="olt-Table-data"><i class="olt-Icon olt-Icon-success olt-Icon--small"></i></td>
-    </tr>
-  </tbody>
-</table>
+| large (24 x 24) | medium (16 x 16)| small (12 x 12) |
+|-----------------|-----------------|-----------------|
+|<i class="olt-Icon olt-Icon-notification-default olt-Icon--large"></i> |<i class="olt-Icon olt-Icon-notification-default olt-Icon--medium"></i> |<i class="olt-Icon olt-Icon-notification-default olt-Icon--small"></i>|
+|<i class="olt-Icon olt-Icon-delete olt-Icon--large"></i> |<i class="olt-Icon olt-Icon-delete olt-Icon--medium"></i> |<i class="olt-Icon olt-Icon-delete olt-Icon--small"></i>|
+|<i class="olt-Icon olt-Icon-edit olt-Icon--large"></i> |<i class="olt-Icon olt-Icon-edit olt-Icon--medium"></i> |<i class="olt-Icon olt-Icon-edit olt-Icon--small"></i>|
+|<i class="olt-Icon olt-Icon-save olt-Icon--large"></i> |<i class="olt-Icon olt-Icon-save olt-Icon--medium"></i> |<i class="olt-Icon olt-Icon-save olt-Icon--small"></i>|
+|<i class="olt-Icon olt-Icon-calendar olt-Icon--large"></i> |<i class="olt-Icon olt-Icon-calendar olt-Icon--medium"></i> |<i class="olt-Icon olt-Icon-calendar olt-Icon--small"></i>|
+|<i class="olt-Icon olt-Icon-device olt-Icon--large"></i> |<i class="olt-Icon olt-Icon-device olt-Icon--medium"></i> |<i class="olt-Icon olt-Icon-device olt-Icon--small"></i>|
+|<i class="olt-Icon olt-Icon-success olt-Icon--large"></i> |<i class="olt-Icon olt-Icon-success olt-Icon--medium"></i> |<i class="olt-Icon olt-Icon-success olt-Icon--small"></i>|
 
 You can also change the size of the icon with the [Font Size utility classes](/#font-size).
 This will resize the icon but without making any adjustments to account

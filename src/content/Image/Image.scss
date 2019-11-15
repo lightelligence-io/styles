@@ -1,5 +1,5 @@
 .Image {
-  $image-border-radius: var-get('borderRadius');
+  $image-border-radius: 4px;
 
   &:not(#{&}--natural) {
     width: 100%;
