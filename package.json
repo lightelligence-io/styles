@@ -1,6 +1,6 @@
 {
   "name": "@lightelligence/styles",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.6",
   "description": "The UI-Framework of the lightelligence-platform.",
   "license": "MIT",
   "main": "dist/index.js",
@@ -67,6 +67,14 @@
           ]
         }
       ],
+      "property-no-unknown": [
+        true,
+        {
+          "ignoreProperties": [
+            "font-icon"
+          ]
+        }
+      ],
       "at-rule-no-unknown": null,
       "selector-pseudo-element-colon-notation": null,
       "declaration-block-no-duplicate-properties": null,
@@ -104,6 +112,7 @@
     "highlight.js": "^9.15.10",
     "humps": "^2.0.1",
     "husky": "^3.0.8",
+    "iconfont-webpack-plugin": "^4.2.1",
     "json5": "^2.1.1",
     "legally": "^3.3.7",
     "node-run-cmd": "^1.0.1",
