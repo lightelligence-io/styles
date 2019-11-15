@@ -12,7 +12,7 @@ The dialog changes to full screen on mobile and tablet devices.
 <div class="olt-Card olt-u-padding5">
   <div class="olt-u-marginAuto">
     <input data-toggle="dialog" id="demo-1" type="checkbox">
-    <label class="olt-V2Button" for="dialog-demo-1">Open</label>
+    <label class="olt-Button" for="dialog-demo-1">Open</label>
     <div class="olt-Dialog">
       <div class="olt-Dialog-window">
         <label class="olt-Dialog-close" for="dialog-demo-1"></label>
@@ -31,7 +31,7 @@ The dialog changes to full screen on mobile and tablet devices.
           </div>
         </div>
         <div class="olt-Dialog-footer">
-          <label class="olt-V2Button" for="dialog-demo-1">Finish</label>
+          <label class="olt-Button" for="dialog-demo-1">Finish</label>
         </div>
       </div>
     </div>
@@ -40,7 +40,7 @@ The dialog changes to full screen on mobile and tablet devices.
 
 ```html
 <input data-toggle="dialog" id="dialog-toggle-1" type="checkbox">
-<label class="olt-V2Button" for="dialog-toggle-1">Open</label>
+<label class="olt-Button" for="dialog-toggle-1">Open</label>
 <div class="olt-Dialog">
   <div class="olt-Dialog-window">
     <label class="olt-Dialog-close" for="dialog-toggle-1"></label>
@@ -58,7 +58,7 @@ The dialog changes to full screen on mobile and tablet devices.
         </div>
       </div>
       <div class="olt-Dialog-footer">
-        <label class="olt-V2Button" for="dialog-toggle-1">Finish</label>
+        <label class="olt-Button" for="dialog-toggle-1">Finish</label>
       </div>
     </div>
   </div>

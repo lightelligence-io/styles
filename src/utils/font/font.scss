@@ -6,12 +6,12 @@
     line-height: 32px;
     font-family: PTSans-Bold;
 
-    @media (max-width: map-get($olt-v2-breakpoints, lg)) {
+    @media (max-width: map-get($olt-breakpoints, lg)) {
       font-size: 22px;
       line-height: 26px;
     }
 
-    @media (max-width: map-get($olt-v2-breakpoints, sm)) {
+    @media (max-width: map-get($olt-breakpoints, sm)) {
       font-size: 20px;
       line-height: 24px;
     }
@@ -23,7 +23,7 @@
     line-height: 24px;
     font-family: PTSans-Bold;
 
-    @media (max-width: map-get($olt-v2-breakpoints, sm)) {
+    @media (max-width: map-get($olt-breakpoints, sm)) {
       font-size: 18px;
       line-height: 20px;
     }
@@ -78,7 +78,7 @@
     line-height: 22px;
     font-family: 'Overpass Mono', serif;
 
-    @media (max-width: map-get($olt-v2-breakpoints, sm)) {
+    @media (max-width: map-get($olt-breakpoints, sm)) {
       font-size: 12px;
       line-height: 18px;
     }

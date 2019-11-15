@@ -1,12 +1,12 @@
 $chevron-size: 6px;
 
-.V2Dropdown {
+.Dropdown {
   $dropdown-content-height: 220px;
   $dropdown-transition: all 200ms;
 
   $self: &;
 
-  @extend %v2Control;
+  @extend %control;
 
   // use floats because of ugly google-chrome subpixel rendering
   // 42.01 instead of 42% looks nicer in chrome.
@@ -23,7 +23,7 @@ $chevron-size: 6px;
   width: 100%;
   box-sizing: border-box;
   cursor: pointer;
-  min-height: $v2-control-line-height + $v2-control-margin-top + $v2-control-padding-top + $v2-control-padding-bottom + $v2-control-border-bottom;
+  min-height: $control-line-height + $control-margin-top + $control-padding-top + $control-padding-bottom + $control-border-bottom;
   margin: 0;
   padding: 0;
   transition: $dropdown-transition;
@@ -40,8 +40,8 @@ $chevron-size: 6px;
     position: absolute;
     height: $chevron-size;
     width: #{2*$chevron-size};
-    top: #{4px + $v2-control-margin-top};
-    left: calc(100% - #{2px + $v2-control-padding-horizontal + 2 * $chevron-size});
+    top: #{4px + $control-margin-top};
+    left: calc(100% - #{2px + $control-padding-horizontal + 2 * $chevron-size});
     transition: $dropdown-transition;
   }
 
@@ -50,22 +50,22 @@ $chevron-size: 6px;
     // max-height: $dropdown-content-height;
     overflow: hidden;
     transition: $dropdown-transition;
-    margin-top: $v2-control-line-height + $v2-control-margin-top;
+    margin-top: $control-line-height + $control-margin-top;
   }
 
   &-selected-content {
-    @extend .V2Label;
+    @extend .Label;
 
     position: absolute;
-    top: $v2-control-margin-top;
-    left: $v2-control-padding-horizontal;
+    top: $control-margin-top;
+    left: $control-padding-horizontal;
     margin: 0;
     color: get-color('dark');
     background-color: transparent;
     transition: $dropdown-transition;
   }
 
-  :not(.is-open) &--selected > .V2Label-text {
+  :not(.is-open) &--selected > .Label-text {
     top: -1px;
     transform: scale(0.6875);
     letter-spacing: 0.2px;
@@ -75,7 +75,7 @@ $chevron-size: 6px;
   // Light theme colors
   //
 
-  $theme-light-colors: map-get($v2-control-colors, light);
+  $theme-light-colors: map-get($control-colors, light);
 
   &:before {
     @include chevronDown(map-get($theme-light-colors, border-default));
@@ -89,7 +89,7 @@ $chevron-size: 6px;
     @include chevronDown(map-get($theme-light-colors, border-disabled));
   }
 
-  & .V2Label-text {
+  & .Label-text {
     color: map-get($theme-light-colors, border-default);
   }
 
@@ -97,9 +97,9 @@ $chevron-size: 6px;
   // Dark theme colors
   //
 
-  $theme-dark-colors: map-get($v2-control-colors, dark);
+  $theme-dark-colors: map-get($control-colors, dark);
 
-  .Theme-dark & .V2Label-text {
+  .Theme-dark & .Label-text {
     color: map-get($theme-light-colors, border-default);
   }
 
@@ -140,10 +140,10 @@ $chevron-size: 6px;
         opacity: 0;
       }
 
-      &--selected > .V2Label-text {
+      &--selected > .Label-text {
         top: 11px;
         transform: scale(1);
-        letter-spacing: $v2-control-letter-spacing;
+        letter-spacing: $control-letter-spacing;
       }
 
       &:before {

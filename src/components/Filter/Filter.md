@@ -11,9 +11,9 @@ You can use the *Filter* component to show a dropdown that opens a filter popup 
 ```basic.html
 <div class="olt-Card">
   <input data-toggle="dropdown" id="dropdown-toggle-1" type="checkbox">
-  <label class="olt-V2Label olt-V2Label--floating" for="dropdown-toggle-1">
+  <label class="olt-Label olt-Label--floating" for="dropdown-toggle-1">
     <div class="olt-Filter">
-      <div class="olt-V2Label-text">Filter</div>
+      <div class="olt-Label-text">Filter</div>
       <div class="olt-Filter-bubble">99+</div>
       <div class="olt-Filter-content">
         <ul class="olt-InputList">
@@ -47,26 +47,26 @@ You can add any element inside the filters dropdown. The `--active` modifier ide
 ```checkboxfilter.html
 <div class="olt-Card">
   <input data-toggle="dropdown" id="dropdown-toggle-1" type="checkbox">
-  <label class="olt-V2Label olt-V2Label--floating" for="dropdown-toggle-1">
+  <label class="olt-Label olt-Label--floating" for="dropdown-toggle-1">
     <div class="olt-Filter olt-Filter--active">
-      <div class="olt-V2Label-text">Filter</div>
+      <div class="olt-Label-text">Filter</div>
       <div class="olt-Filter-bubble">99+</div>
       <div class="olt-Filter-content">
         <div class="olt-u-padding3">
-          <label class="olt-V2Checkbox">
+          <label class="olt-Checkbox">
             <input type="checkbox" checked />
-            <span class="olt-V2Checkbox-button"></span>
-            <span class="olt-V2Checkbox-label">Option 1</span>
+            <span class="olt-Checkbox-button"></span>
+            <span class="olt-Checkbox-label">Option 1</span>
           </label>
-          <label class="olt-V2Checkbox">
+          <label class="olt-Checkbox">
             <input type="checkbox" checked />
-            <span class="olt-V2Checkbox-button"></span>
-            <span class="olt-V2Checkbox-label">Option 2</span>
+            <span class="olt-Checkbox-button"></span>
+            <span class="olt-Checkbox-label">Option 2</span>
           </label>
-          <label class="olt-V2Checkbox">
+          <label class="olt-Checkbox">
             <input type="checkbox" checked />
-            <span class="olt-V2Checkbox-button"></span>
-            <span class="olt-V2Checkbox-label">Option 4</span>
+            <span class="olt-Checkbox-button"></span>
+            <span class="olt-Checkbox-label">Option 4</span>
           </label>
         </div>
       </div>
