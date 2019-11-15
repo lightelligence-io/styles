@@ -1,5 +1,6 @@
 .Select {
   $chevron-size: 6px;
+  $select-border-radius: 2.5rem;
 
   @extend %control;
 
@@ -49,7 +50,7 @@
 
     border: 1px solid;
     border-color: get-color('secondary');
-    border-radius: $olt-button-border-radius;
+    border-radius: $select-border-radius;
     margin-top: 0;
     padding: $padding-y #{($padding-x+$pagination-chevron-size+$chevron-padding-x)-2px} $padding-y $padding-x;
     background-image:

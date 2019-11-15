@@ -28,8 +28,8 @@ $notification-spacing-y: 8px;
   $notification-border-radius: 4px;
   $notification-backdrop: rgba(255, 255, 255, 0.7);
   $notification-box-shadow: 0 2px 6px 0 rgba(13, 18, 44, 0.2);
-  $notification-content-padding-x: var-get('spacing3');
-  $notification-content-padding-y: var-get('spacing3');
+  $notification-content-padding-x: 16px;
+  $notification-content-padding-y: 16px;
   $notification-background: get-color('light');
   $notification-header-height: 20px;
   $notification-close-size: 16px;
@@ -43,7 +43,6 @@ $notification-spacing-y: 8px;
   $notification-icon-size: 24px;
   $self: &;
 
-  font-family: var-get('fontFamilyBase');
   background: $notification-background;
   border-radius: $notification-border-radius;
   padding-top: $notification-content-padding-y;
@@ -71,17 +70,14 @@ $notification-spacing-y: 8px;
   }
 
   &-header {
+    @extend .u-H200;
+
     padding: 0;
     width: 100%;
     vertical-align: middle;
-    font-weight: bold;
     overflow: hidden;
     white-space: nowrap;
     padding-right: $notification-header-padding;
-    font-size: var-get('fontSizeSmall');
-    font-weight: bold;
-    line-height: $notification-header-height;
-    letter-spacing: 0.6px;
 
     &:before {
       @extend .Icon:before;
@@ -93,14 +89,13 @@ $notification-spacing-y: 8px;
   }
 
   &-content {
+    @extend .u-support;
+
     margin: 0;
-    padding: 0;
+    padding: 2px;
+    padding-right: 0;
     padding-left: $notification-icon-size + $notification-header-padding;
     overflow: hidden;
-    font-size: var-get('fontSizeXSmall');
-    font-weight: normal;
-    letter-spacing: 0;
-    line-height: 18px;
   }
 
   &-close {

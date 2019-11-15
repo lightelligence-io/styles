@@ -3,12 +3,12 @@
   $box-shadow: 0 0 8px 0 rgba(13, 18, 44, 0.15);
   $self: &;
   $title-margin: 4px;
-  $card-padding-x: $olt-dataCards-card-padding-x;
+  $card-padding-x: 16px;
   $card-padding-y: $card-padding-x;
-  $card-item-gap: $olt-dataCards-card-item-gap;
+  $card-item-gap: 16px;
   $card-padding-large-x: $card-padding-x * 2;
   $card-padding-large-y: $card-padding-y;
-  $card-gap: $olt-dataCards-card-gap;
+  $card-gap: 8px;
   $border-color: get-color('gray300');
 
   width: 100%;
@@ -37,9 +37,8 @@
   }
 
   &-cardItem &-content {
-    font-family: var-get('fontFamilyBase');
-    font-weight: normal;
-    font-size: $olt-dataCards-cardItem-content-font-size;
+    @extend .u-description;
+
     word-break: break-word;
   }
 
@@ -50,10 +49,12 @@
     }
 
     #{$self}-headItem {
+      // use .u-H200, because we can't extend here
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 20px;
+      font-family: PTSans-Bold;
       color: get-color('gray500');
-      font-family: var-get('fontFamilyBase');
-      font-size: $olt-dataCards-headItem-content-font-size;
-      font-weight: bold;
       padding: $card-padding-y $card-padding-x;
       white-space: nowrap;
     }
@@ -89,11 +90,12 @@
 
   @include dataCardsInListMode($self) {
     #{$self}-cardItem #{$self}-title {
-      color: $olt-dataCards-cardItem-title-color;
-      font-family: var-get('fontFamilyBase');
-      font-size: $olt-dataCards-cardItem-title-font-size;
-      font-weight: bold;
-      line-height: $olt-dataCards-cardItem-title-line-height;
+      // use .u-H200 with 10px, because we can't extend here
+      font-size: 10px;
+      font-weight: 800;
+      line-height: 20px;
+      font-family: PTSans-Bold;
+      color: var-color('info');
       margin-bottom: $title-margin;
     }
 

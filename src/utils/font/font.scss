@@ -87,21 +87,21 @@
 
 // deprecated ... to remove!!
 
-@each $breakpoint in map-keys(screen-get()) {
-  $infix: screen-infix($breakpoint);
+// @each $breakpoint in map-keys(screen-get()) {
+//   $infix: screen-infix($breakpoint);
 
-  @include screen-up($breakpoint) {
-    .u-#{$infix}fontBase {
-      font-family: var-get('fontFamilyBase');
-    }
+//   @include screen-up($breakpoint) {
+//     .u-#{$infix}fontBase {
+//       font-family: var-get('fontFamilyBase');
+//     }
 
-    .u-#{$infix}fontMono {
-      font-family: var-get('fontFamilyMono');
-    }
+//     .u-#{$infix}fontMono {
+//       font-family: var-get('fontFamilyMono');
+//     }
 
-    // FIXME: Get rid of redundant stuff, either this or that
-    .u-#{$infix}fontInitial {
-      font-family: var-get('fontFamilyBase');
-    }
-  }
-}
+//     // FIXME: Get rid of redundant stuff, either this or that
+//     .u-#{$infix}fontInitial {
+//       font-family: var-get('fontFamilyBase');
+//     }
+//   }
+// }
