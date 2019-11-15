@@ -83,26 +83,7 @@ module.exports = {
               transformers: [
                 {
                   extensions: ['.yml'],
-                  transform: (source) => {
-                    const theme = yaml.load(source);
-                    const getters = Object.assign(
-                      {},
-                      ...Object.entries(theme).map(([prop, value]) => ({
-                        [prop]:
-                          typeof value === 'object'
-                            ? Object.assign(
-                                {},
-                                ...Object.entries(value).map(
-                                  ([key, value]) => ({
-                                    [key]: `#{var-get('${prop}${pascalize(
-                                      key,
-                                    )}')}`,
-                                  }),
-                                ),
-                              )
-                            : `#{var-get('${prop}')}`,
-                      })),
-                    );
+                  transform: () => {
                     const variables = {
                       varPrefix: 'olt-',
                       varStyle: 'camelCase',
@@ -111,19 +92,8 @@ module.exports = {
                       .map(
                         ([key, value]) => `\t$${decamelize(key)}: '${value}'`,
                       )
-                      .join(';\n')}\n:root {\n${Object.entries(theme)
-                      .map(([key, value]) => {
-                        value =
-                          typeof value === 'object'
-                            ? `(\n${Object.entries(value)
-                                .map(([key, value]) => `\t\t${key}: ${value}`)
-                                .join(',\n')}\n)`
-                            : `${value}`;
-                        value = template(value, getters);
-
-                        return `\t@include var-set('${key}', ${value})`;
-                      })
-                      .join(';\n')}}`;
+                      .join(';\n')}\n
+                      :root {}`;
 
                     return content;
                   },
