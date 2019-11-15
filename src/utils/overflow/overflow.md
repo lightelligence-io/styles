@@ -51,7 +51,7 @@ Overflow utility can be used as well with the default screen
 
 | Prefix | Example                     | Description                                                                          |
 |:------:|:----------------------------|:-------------------------------------------------------------------------------------|
-|     xs | `olt-u-xs-overflowXauto`    | Will set `overflow-x: auto` on the element when rendered on exdiva small screen       |
+|     xs | `olt-u-xs-overflowXauto`    | Will set `overflow-x: auto` on the element when rendered on extra small screen       |
 |     sm | `olt-u-sm-overflowScroll`   | Will set `overflow: scroll` on the element when rendered on a small screen           |
 |     md | `olt-u-md-overflowYVisible` | Will set `overflow-y: visible` on the element when rendered on a medium sized screen |
 |     lg | `olt-u-lg-overflowScroll`   | Will set `overflow: scroll` on the element when rendered on a large screen           |
