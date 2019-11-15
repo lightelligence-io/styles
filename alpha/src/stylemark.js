@@ -91,11 +91,11 @@ const insertDropdown = (versions, currentVersion) => {
   const sidebarSearch = document.querySelector('.theme-sidebar-search');
   const dropDown = document.createElement('div');
   dropDown.innerHTML = `
-   <label class="olt-V2Label" style="margin-bottom: 10px">
-     <select class="olt-V2Select" id="versions_select">
+   <label class="olt-Label" style="margin-bottom: 10px">
+     <select class="olt-Select" id="versions_select">
        ${createOptions(versions, currentVersion).join('')}
      </select>
-     <span class="olt-V2Label-text">Other Versions</span>
+     <span class="olt-Label-text">Other Versions</span>
    </label>
   `;
   dropDown.onchange = triggerNavigation;

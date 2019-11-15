@@ -65,15 +65,15 @@
 
 	<body>					<div class='olt-Frame'><div class="olt-Card" id="card">
   <div class="olt-Card-content">
-    <div class="olt-V2Grid">
-      <div class="olt-V2Grid-item olt-V2Grid-item--4">
-        <label class="olt-V2Label">
+    <div class="olt-Grid">
+      <div class="olt-Grid-item olt-Grid-item--4">
+        <label class="olt-Label">
           <input class="input--color" type="color" id="primaryPicker" />
           <div class="input--color-box" id="primaryValue"></div>
-          <span class="olt-V2Label-text">Primary Color</span>
+          <span class="olt-Label-text">Primary Color</span>
         </label>
       </div>
-      <div class="olt-V2Grid-item olt-V2Grid-item--4">
+      <div class="olt-Grid-item olt-Grid-item--4">
         <label class="olt-Toggle olt-Toggle--inline">
           <input type="checkbox" id="darkToggle" />
           <div class="olt-Toggle-button"></div>
@@ -81,56 +81,56 @@
         </label>
       </div>
     </div>
-    <div class="olt-V2Grid">
-      <div class="olt-V2Grid-item olt-V2Grid-item--6">
-        <label class="olt-V2Label olt-V2Label--floating olt-V2Label--floating has-value">
-          <input class="olt-V2Input" type="text" value="My Device" />
-          <span class="olt-V2Label-text">Device Name</span>
+    <div class="olt-Grid">
+      <div class="olt-Grid-item olt-Grid-item--6">
+        <label class="olt-Label olt-Label--floating olt-Label--floating has-value">
+          <input class="olt-Input" type="text" value="My Device" />
+          <span class="olt-Label-text">Device Name</span>
         </label>
       </div>
-      <div class="olt-V2Grid-item olt-V2Grid-item--6">
-        <label class="olt-V2Label olt-V2Label--floating olt-V2Label--floating has-value">
-          <input class="olt-V2Input" type="text" value="Berlin" />
-          <span class="olt-V2Label-text">Device Location</span>
+      <div class="olt-Grid-item olt-Grid-item--6">
+        <label class="olt-Label olt-Label--floating olt-Label--floating has-value">
+          <input class="olt-Input" type="text" value="Berlin" />
+          <span class="olt-Label-text">Device Location</span>
         </label>
       </div>
     </div>
-    <div class="olt-V2Grid">
-      <div class="olt-V2Grid-item olt-V2Grid-item--6">
-         <label class="olt-V2Radio">
+    <div class="olt-Grid">
+      <div class="olt-Grid-item olt-Grid-item--6">
+         <label class="olt-Radio">
            <input type="radio" value="admin" name="role"/>
-           <span class="olt-V2Radio-button"></span>
-           <span class="olt-V2Radio-label">Admin</span>
+           <span class="olt-Radio-button"></span>
+           <span class="olt-Radio-label">Admin</span>
          </label>
-         <label class="olt-V2Radio">
+         <label class="olt-Radio">
            <input type="radio" disabled value="super_admin" name="role"/>
-           <span class="olt-V2Radio-button"></span>
-           <span class="olt-V2Radio-label">Super Admin</span>
+           <span class="olt-Radio-button"></span>
+           <span class="olt-Radio-label">Super Admin</span>
          </label>
-         <label class="olt-V2Radio">
+         <label class="olt-Radio">
            <input type="radio" checked value="writer" name="role" />
-           <span class="olt-V2Radio-button"></span>
-           <span class="olt-V2Radio-label">Writer</span>
+           <span class="olt-Radio-button"></span>
+           <span class="olt-Radio-label">Writer</span>
          </label>
-         <label class="olt-V2Radio">
+         <label class="olt-Radio">
            <input type="radio" value="reader" name="role"/>
-           <span class="olt-V2Radio-button"></span>
-           <span class="olt-V2Radio-label">Reader</span>
+           <span class="olt-Radio-button"></span>
+           <span class="olt-Radio-label">Reader</span>
          </label>
       </div>
-      <div class="olt-V2Grid-item olt-V2Grid-item--6">
-        <button class="olt-V2Button olt-V2Button-default">OK</button>
-        <button class="olt-V2Button olt-V2Button-default olt-V2Button--tertiary olt-V2Button--action">Cancel</button>
+      <div class="olt-Grid-item olt-Grid-item--6">
+        <button class="olt-Button olt-Button-default">OK</button>
+        <button class="olt-Button olt-Button-default olt-Button--tertiary olt-Button--action">Cancel</button>
       </div>
     </div>
     <br />
-    <div class="olt-V2Grid">
-      <div class="olt-V2Grid-item olt-V2Grid-item--6">
+    <div class="olt-Grid">
+      <div class="olt-Grid-item olt-Grid-item--6">
         <div class="olt-Chip olt-Chip--primary olt-Chip--selectable">Administrator</div>
         <div class="olt-Chip olt-Chip--primary olt-Chip--selectable">Writer</div>
         <div class="olt-Chip olt-Chip--primary olt-Chip--selectable">Tenant Manager</div>
       </div>
-      <div class="olt-V2Grid-item olt-V2Grid-item--6">
+      <div class="olt-Grid-item olt-Grid-item--6">
       </div>
     </div>
   </div>
@@ -152,20 +152,20 @@ const styles = getComputedStyle(document.documentElement);
 const documentStyle = document.documentElement.style;
 const primaryPicker = document.getElementById("primaryPicker");
 const primaryValue = document.getElementById("primaryValue");
-const primaryProperty = '--olt-v2-primaryColor';
+const primaryProperty = '--olt-primaryColor';
 
 const mixes = [
-  { 
+  {
     name: "white",
     color: "#fff",
     shades: [0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
   },
-  { 
+  {
     name: "black",
     color: "#000",
     shades: [0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
   },
-  { 
+  {
     name: "secondary",
     color: "#0d122c",
     shades: [0.3, 0.4, 0.8]
@@ -221,15 +221,15 @@ darkModeToggle.addEventListener('change', () => {
 </script>
 			<script type="text/x-stylemark" data-language="html"><div class="olt-Card" id="card">
   <div class="olt-Card-content">
-    <div class="olt-V2Grid">
-      <div class="olt-V2Grid-item olt-V2Grid-item--4">
-        <label class="olt-V2Label">
+    <div class="olt-Grid">
+      <div class="olt-Grid-item olt-Grid-item--4">
+        <label class="olt-Label">
           <input class="input--color" type="color" id="primaryPicker" />
           <div class="input--color-box" id="primaryValue"></div>
-          <span class="olt-V2Label-text">Primary Color</span>
+          <span class="olt-Label-text">Primary Color</span>
         </label>
       </div>
-      <div class="olt-V2Grid-item olt-V2Grid-item--4">
+      <div class="olt-Grid-item olt-Grid-item--4">
         <label class="olt-Toggle olt-Toggle--inline">
           <input type="checkbox" id="darkToggle" />
           <div class="olt-Toggle-button"></div>
@@ -237,56 +237,56 @@ darkModeToggle.addEventListener('change', () => {
         </label>
       </div>
     </div>
-    <div class="olt-V2Grid">
-      <div class="olt-V2Grid-item olt-V2Grid-item--6">
-        <label class="olt-V2Label olt-V2Label--floating olt-V2Label--floating has-value">
-          <input class="olt-V2Input" type="text" value="My Device" />
-          <span class="olt-V2Label-text">Device Name</span>
+    <div class="olt-Grid">
+      <div class="olt-Grid-item olt-Grid-item--6">
+        <label class="olt-Label olt-Label--floating olt-Label--floating has-value">
+          <input class="olt-Input" type="text" value="My Device" />
+          <span class="olt-Label-text">Device Name</span>
         </label>
       </div>
-      <div class="olt-V2Grid-item olt-V2Grid-item--6">
-        <label class="olt-V2Label olt-V2Label--floating olt-V2Label--floating has-value">
-          <input class="olt-V2Input" type="text" value="Berlin" />
-          <span class="olt-V2Label-text">Device Location</span>
+      <div class="olt-Grid-item olt-Grid-item--6">
+        <label class="olt-Label olt-Label--floating olt-Label--floating has-value">
+          <input class="olt-Input" type="text" value="Berlin" />
+          <span class="olt-Label-text">Device Location</span>
         </label>
       </div>
     </div>
-    <div class="olt-V2Grid">
-      <div class="olt-V2Grid-item olt-V2Grid-item--6">
-         <label class="olt-V2Radio">
+    <div class="olt-Grid">
+      <div class="olt-Grid-item olt-Grid-item--6">
+         <label class="olt-Radio">
            <input type="radio" value="admin" name="role"/>
-           <span class="olt-V2Radio-button"></span>
-           <span class="olt-V2Radio-label">Admin</span>
+           <span class="olt-Radio-button"></span>
+           <span class="olt-Radio-label">Admin</span>
          </label>
-         <label class="olt-V2Radio">
+         <label class="olt-Radio">
            <input type="radio" disabled value="super_admin" name="role"/>
-           <span class="olt-V2Radio-button"></span>
-           <span class="olt-V2Radio-label">Super Admin</span>
+           <span class="olt-Radio-button"></span>
+           <span class="olt-Radio-label">Super Admin</span>
          </label>
-         <label class="olt-V2Radio">
+         <label class="olt-Radio">
            <input type="radio" checked value="writer" name="role" />
-           <span class="olt-V2Radio-button"></span>
-           <span class="olt-V2Radio-label">Writer</span>
+           <span class="olt-Radio-button"></span>
+           <span class="olt-Radio-label">Writer</span>
          </label>
-         <label class="olt-V2Radio">
+         <label class="olt-Radio">
            <input type="radio" value="reader" name="role"/>
-           <span class="olt-V2Radio-button"></span>
-           <span class="olt-V2Radio-label">Reader</span>
+           <span class="olt-Radio-button"></span>
+           <span class="olt-Radio-label">Reader</span>
          </label>
       </div>
-      <div class="olt-V2Grid-item olt-V2Grid-item--6">
-        <button class="olt-V2Button olt-V2Button-default">OK</button>
-        <button class="olt-V2Button olt-V2Button-default olt-V2Button--tertiary olt-V2Button--action">Cancel</button>
+      <div class="olt-Grid-item olt-Grid-item--6">
+        <button class="olt-Button olt-Button-default">OK</button>
+        <button class="olt-Button olt-Button-default olt-Button--tertiary olt-Button--action">Cancel</button>
       </div>
     </div>
     <br />
-    <div class="olt-V2Grid">
-      <div class="olt-V2Grid-item olt-V2Grid-item--6">
+    <div class="olt-Grid">
+      <div class="olt-Grid-item olt-Grid-item--6">
         <div class="olt-Chip olt-Chip--primary olt-Chip--selectable">Administrator</div>
         <div class="olt-Chip olt-Chip--primary olt-Chip--selectable">Writer</div>
         <div class="olt-Chip olt-Chip--primary olt-Chip--selectable">Tenant Manager</div>
       </div>
-      <div class="olt-V2Grid-item olt-V2Grid-item--6">
+      <div class="olt-Grid-item olt-Grid-item--6">
       </div>
     </div>
   </div>
