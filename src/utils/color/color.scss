@@ -4,9 +4,9 @@ $colors: get-colors();
   $infix: screen-infix($breakpoint);
 
   @include screen-up($breakpoint) {
-    @each $name in $colors {
+    @each $name, $value in $colors {
       .u-#{$infix}color#{string-capitalize($name)} {
-        color: get-color($name) !important;
+        color: $value !important;
       }
     }
   }

@@ -52,7 +52,7 @@ You can add any element inside the filters dropdown. The `--active` modifier ide
       <div class="olt-Label-text">Filter</div>
       <div class="olt-Filter-bubble">99+</div>
       <div class="olt-Filter-content">
-        <div class="olt-u-padding3">
+        <div class="olt-u-padding46">
           <label class="olt-Checkbox">
             <input type="checkbox" checked />
             <span class="olt-Checkbox-button"></span>

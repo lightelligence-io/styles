@@ -44,7 +44,7 @@ it can be very handy :
 |     xl | `olt-u-xl-paddingLeft4`   | Will set `padding-left: 4px;` to the element when rendered on extra large screen                          |
 
 ```responsive.html
-<section class="olt-u-padding8 olt-u-sm-padding24 olt-u-lg-padding48 olt-u-border">
+<section class="olt-u-padding8 olt-u-sm-padding24 olt-u-lg-padding24 olt-u-border">
   <p class="olt-Paragraph">Small padding on mobile</p>
   <p class="olt-Paragraph">Medium padding on tablet</p>
   <p class="olt-Paragraph">Large padding on desktop</p>

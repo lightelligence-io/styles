@@ -7,7 +7,7 @@ category: Component
 
 Modals are used with `<div>` elements and render a popup.
 
-<div class="olt-Card olt-u-padding5">
+<div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
     <input data-toggle="modal" id="demo-1" type="checkbox">
     <label class="olt-Button" for="modal-demo-1">Open</label>
@@ -64,7 +64,7 @@ We support the following modifiers :
 Use the critical *Modal* whenever you want to communicate an critical or error state to the
 user. Especially when proceeding will likely lead to an undesired outcome for the user that he is probably not aware of. E.g.: Deleting a role will lead to users being deleted from the tenant because they have no role afterward.
 
-<div class="olt-Card olt-u-padding5">
+<div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
     <input data-toggle="modal" id="demo-2" type="checkbox">
     <label class="olt-Button" for="modal-demo-2">Open</label>
@@ -107,7 +107,7 @@ user. Especially when proceeding will likely lead to an undesired outcome for th
 The warning *Modal* is used when needing to show information critical in preventing errors.
 e.g.: 15 of your devices have not responded, check your device management.
 
-<div class="olt-Card olt-u-padding5">
+<div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
     <input data-toggle="modal" id="demo-3" type="checkbox">
     <label class="olt-Button" for="modal-demo-3">Open</label>
@@ -151,7 +151,7 @@ The info *Modal* can be used whenever an additional non-critical information
 should be provided to the user. The info will not have negative results no matter the users choice.
 e.g.: You have been invited to a tenant, accept or decline.
 
-<div class="olt-Card olt-u-padding5">
+<div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
     <input data-toggle="modal" id="demo-4" type="checkbox">
     <label class="olt-Button" for="modal-demo-4">Open</label>
@@ -193,7 +193,7 @@ e.g.: You have been invited to a tenant, accept or decline.
 
 Use the success *Modal* to communicate a success message the user has to be made aware of.
 
-<div class="olt-Card olt-u-padding5">
+<div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
     <input data-toggle="modal" id="demo-5" type="checkbox">
     <label class="olt-Button" for="modal-demo-5">Open</label>
@@ -236,7 +236,7 @@ Use the success *Modal* to communicate a success message the user has to be made
 Use the action *Modal* for changes that demand active user input.
 e.g.: Edit the description of a tenant.
 
-<div class="olt-Card olt-u-padding5">
+<div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
     <input data-toggle="modal" id="demo-6" type="checkbox">
     <label class="olt-Button" for="modal-demo-6">Open</label>
@@ -278,7 +278,7 @@ e.g.: Edit the description of a tenant.
 
 In rare occasions the icon and background color of the header can be individually changed. If you use the `--custom` modifier with the `olt-Modal-header` element, you **have to** provide an icon as in the examples below. *Use with care!*
 
-<div class="olt-Card olt-u-padding5">
+<div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
     <input data-toggle="modal" id="demo-7" type="checkbox">
     <label class="olt-Button" for="modal-demo-7">Open</label>
@@ -322,7 +322,7 @@ In rare occasions the icon and background color of the header can be individuall
 
 The icon can be changed while keeping the remaining styles. *Also use with care!*
 
-<div class="olt-Card olt-u-padding5">
+<div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
     <input data-toggle="modal" id="demo-8" type="checkbox">
     <label class="olt-Button" for="modal-demo-8">Open</label>
@@ -366,7 +366,7 @@ The icon can be changed while keeping the remaining styles. *Also use with care!
 
 There is an additional wide *Modal* which takes more space when rendered.
 
-<div class="olt-Card olt-u-padding5">
+<div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
     <input data-toggle="modal" id="demo-9" type="checkbox">
     <label class="olt-Button" for="modal-demo-9">Open</label>

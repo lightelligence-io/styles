@@ -20,8 +20,6 @@
   align-items: unset;
   appearance: none;
 
-  @include contextual-colors();
-
   &[href],
   &:link {
     text-decoration: none;

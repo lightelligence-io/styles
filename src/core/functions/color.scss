@@ -299,16 +299,16 @@ $_exported-colors: ();
 
 
 /**
- * Returns all available color names
+ * Returns all available colors (name, value)
  *
- * @return {List}    A list of color names
+ * @return {List}    A list of colors (name, value)
  */
 @function get-colors() {
-  $color-names: ();
+  $colors: ();
 
   @each $name, $color in $_colors {
-    $color-names: append($color-names, $name);
+    $colors: append($colors, ($name, get-color($name)));
   }
 
-  @return $color-names;
+  @return $colors;
 }

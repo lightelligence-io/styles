@@ -20,9 +20,9 @@ $border: 1px solid get-color('gray300');
   $infix: screen-infix($breakpoint);
 
   @include screen-up($breakpoint) {
-    @each $name in $colors {
+    @each $name, $value in $colors {
       .u-#{$infix}borderColor#{string-capitalize($name)} {
-        border-color: get-color($name) !important;
+        border-color: $value !important;
       }
     }
   }
