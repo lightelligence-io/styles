@@ -296,3 +296,19 @@ $_exported-colors: ();
 
   @return $result;
 }
+
+
+/**
+ * Returns all available color names
+ *
+ * @return {List}    A list of color names
+ */
+@function get-colors() {
+  $color-names: ();
+
+  @each $name, $color in $_colors {
+    $color-names: append($color-names, $name);
+  }
+
+  @return $color-names;
+}
