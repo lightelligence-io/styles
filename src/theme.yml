@@ -68,14 +68,14 @@ fontWeight:
   regular: 400
   bold: 700
 # Spacings
-spacer: ${fontSizeBase}
-spacing:
-  0: 0
-  1: calc(${spacer} * .25)
-  2: calc(${spacer} * .5)
-  3: ${spacer}
-  4: calc(${spacer} * 1.5)
-  5: calc(${spacer} * 2)
-  6: calc(${spacer} * 3)
-  7: calc(${spacer} * 4.5)
-  8: calc(${spacer} * 6)
+# spacer: ${fontSizeBase}
+# spacing:
+#   0: 0
+#   1: calc(${spacer} * .25)
+#   2: calc(${spacer} * .5)
+#   3: ${spacer}
+#   4: calc(${spacer} * 1.5)
+#   5: calc(${spacer} * 2)
+#   6: calc(${spacer} * 3)
+#   7: calc(${spacer} * 4.5)
+#   8: calc(${spacer} * 6)
