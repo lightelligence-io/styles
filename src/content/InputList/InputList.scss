@@ -1,5 +1,5 @@
 .InputList {
-  $input-list-background: var-get('colorLight');
+  $input-list-background: get-color('light');
   $input-list-margin: 16px;
   $input-list-item-padding: 8px 16px 8px;
   $self: &;
@@ -46,7 +46,7 @@
   $theme-dark-colors: map-get($control-colors, dark);
 
   .Theme-dark & {
-    background-color: var-get('colorDark');
+    background-color: get-color('dark');
   }
 
   .Theme-dark &-link {
