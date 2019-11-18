@@ -5,6 +5,7 @@
   $card-border-radius: 0.25rem !default;
   $card-hover-box-shadow: 0 8px 16px 0 rgba(13, 18, 44, 0.2);
   $card-edit-icon-size: 36px;
+  $border-color: get-color('gray300');
 
   $self: &;
 
@@ -21,6 +22,10 @@
   appearance: none;
 
   @include contextual-colors();
+
+  & & {
+    border: 1px solid $border-color;
+  }
 
   &[href],
   &:link {
@@ -100,12 +105,6 @@
   &-icon {
     margin-left: auto;
     vertical-align: baseline;
-  }
-
-  &--popup {
-    box-shadow: $card-hover-box-shadow;
-    position: absolute;
-    z-index: 1;
   }
 
   &--edit,
