@@ -74,13 +74,13 @@
   }
 
   &-term {
+    @extend .u-H200;
+
     grid-column: 1;
     color: get-color('gray500');
     margin: 0;
     padding: 0;
     display: block;
-    font-size: $olt-list-term-font-size;
-    line-height: $olt-list-term-line-height;
   }
 
   &-term {

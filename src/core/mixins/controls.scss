@@ -1,8 +1,9 @@
 @mixin control-placeholder-style($opacity: 1) {
-  font-size: $olt-control-font-size;
-  font-weight: $olt-control-font-weight;
-  color: $olt-control-placeholder;
+  @extend .u-content;
+
+  color: $get-color('gray500');
   opacity: $opacity;
+  border: 1px solid red;
 }
 
 @mixin control-placeholder($args...) {
@@ -40,30 +41,5 @@
 
   &::-webkit-input-placeholder {
     @include control-placeholder-style($args...);
-  }
-}
-
-@mixin control() {
-  appearance: none;
-  border: 0;
-  background: transparent;
-  color: currentColor;
-}
-
-@mixin form-field-footer($self) {
-  text-align: left;
-  font-size: var-get('fontSizeSmall');
-  height: calc(#{var-get('fontSizeSmall')} * #{var-get('lineHeightSmall')});
-  margin-top: var-get('spacing1');
-  display: flex;
-  justify-content: space-between;
-
-  #{$self}-message {
-    text-align: left;
-    font-size: var-get('fontSizeSmall');
-  }
-
-  #{$self}-info {
-    margin-left: auto;
   }
 }

@@ -548,6 +548,7 @@
   $button-border-width: 1px;
   $button-color: get-color('dark');
   $icon-size-for-calculation: 12px;
+  $button-border-radius: 2.5rem;
   $self: &;
 
   position: relative;
@@ -558,7 +559,7 @@
   border-style: solid;
   vertical-align: middle;
   border-width: $button-border-width;
-  border-radius: $olt-button-border-radius;
+  border-radius: $button-border-radius;
   display: inline-flex;
   align-items: center;
   justify-content: center;

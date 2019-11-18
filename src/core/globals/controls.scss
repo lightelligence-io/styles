@@ -28,12 +28,9 @@ $control-letter-spacing: 0.17px;
 $control-border-bottom: 1px;
 
 %control {
-  font-family: var-get('fontFamilyBase');
+  @extend .u-content;
+
   vertical-align: middle;
-  font-size: 16px;
-  line-height: $control-line-height;
-  letter-spacing: $control-letter-spacing;
-  font-weight: normal;
   margin-top: $control-margin-top;
   padding: $control-padding-top $control-padding-horizontal $control-padding-bottom;
   border: 0;

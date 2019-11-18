@@ -8,8 +8,6 @@ category: Component
 The *Icon* component is an interface for the official OLT Icons. This
 component occupies `olt-Icon*` class names and can be used with `<i>` element.
 
-Tip: use `olt-Icon-empty` to hide the icon and not render the `:before` element.
-
 <div class="olt-DataCards olt-DataCards--useFlexLayout olt-u-marginBottom3">
   <div class="olt-DataCards-frame">
     <div class="olt-DataCards-head">

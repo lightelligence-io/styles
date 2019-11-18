@@ -156,12 +156,12 @@
   }
 
   &-label {
+    @extend .u-content;
+
     margin-left: 8px;
     cursor: pointer;
     display: inline-block;
     position: relative;
-    font-size: $olt-checkbox-label-font-size;
-    line-height: $olt-checkbox-label-line-height;
     user-select: none;
   }
 

@@ -12,9 +12,10 @@
   }
 
   &-content {
+    @extend .u-support;
+
     padding: 0.25rem;
     background: get-color('primary');
-    font-size: $olt-tooltip-font-size;
     color: get-color('light');
     position: absolute;
     top: 0;
@@ -29,7 +30,6 @@
     p {
       padding: 0;
       width: 10rem;
-      line-height: $olt-tooltip-line-height;
       margin: 0;
     }
 

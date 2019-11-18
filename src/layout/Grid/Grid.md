@@ -18,7 +18,7 @@ nested inside.
 body {
   margin:0;
 }
-h4.olt-Headline {
+h4.olt-u-H200 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -26,7 +26,7 @@ h4.olt-Headline {
 
 ```demo.html
 <div class="olt-Container">
-<h4 class="olt-Headline olt-Headling--4">3 column-width grid</h4>
+<h4 class="olt-u-H200">3 column-width grid</h4>
   <div class="olt-Grid">
     <div class="olt-Grid-item olt-Grid-item--3">
       <div class="olt-Card">
@@ -57,7 +57,7 @@ h4.olt-Headline {
       </div>
     </div>
   </div>
-  <h4 class="olt-Headline olt-Headling--4">6 column-width grid</h4>
+  <h4 class="olt-u-H200">6 column-width grid</h4>
   <div class="olt-Grid">
     <div class="olt-Grid-item olt-Grid-item--6">
       <div class="olt-Card">

@@ -49,16 +49,16 @@
   }
 
   &-title {
-    font-size: $olt-card-title-font-size;
-    line-height: $olt-card-title-line-height;
+    @extend .u-H400;
+
     margin: 0;
     grid-column: 1 / 2;
     grid-row: 1;
   }
 
   &-description {
-    font-size: var-get('fontSizeSmall');
-    font-weight: var-get('fontWeightRegular');
+    @extend .u-description;
+
     margin: 0;
     grid-column: 1;
     grid-row: 2 / 2;

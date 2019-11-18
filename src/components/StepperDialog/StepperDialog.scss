@@ -93,7 +93,7 @@
     align-items: center;
 
     &:before {
-      @extend .Icon, .Icon-empty;
+      @extend .Icon;
 
       display: inline-flex;
       align-items: center;
