@@ -41,7 +41,7 @@ module.exports = {
           [(key.charAt(0).toUpperCase() === key.charAt(0) ? pascalize : camelize)(key)]: value
         })));
 
-        const filename = path.resolve(dest, 'components.js');
+        const filename = path.resolve(dest, 'index.js');
         const contents = Object.entries(json).map(([ key, value ]) => `exports.${key} = '${value}';`).join('\n');
 
         fs.writeFileSync(filename, contents);
@@ -51,17 +51,5 @@ module.exports = {
     }),
     require('autoprefixer'),
     minifyEnabled && require('cssnano'),
-    () => {
-       // Create index.js
-      fs.writeFileSync(
-        path.join(dest, 'index.js'),
-`const components = require('./components.js');
-const theme = require('./theme.js');
-
-module.exports = Object.assign({}, components, { theme : theme });
-`,
-        'utf-8'
-      );
-    }
   ],
 };
