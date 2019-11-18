@@ -18,7 +18,7 @@
 - NPM package renamed to @lightelligence/styles
 
 #v0.6.0
-- added: new DataCards component
+- added: new CardTable component
 - added: FloatingList component
 - fixed: add workaround for known css calc issue and cssnano
 
@@ -88,8 +88,8 @@
 - Chore: Package Update
 
 #v1.0.0-alpha.6
-- Feature: filter component 
+- Feature: filter component
 - Feature: dropdown component
 - Feature: input list component
 - Feature: icon font is now generated
-- Feature: white labeling 
+- Feature: white labeling

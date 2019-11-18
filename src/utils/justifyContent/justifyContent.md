@@ -10,7 +10,7 @@ category: Utilities
 ## Description
 
 Justify Content utility sets `justify-content` CSS property. It can be used
-with [Flex Utility](/#flex) to create 
+with [Flex Utility](/#flex) to create
 [Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 layouts.
 
@@ -26,7 +26,7 @@ layouts.
 ```example.html
 <div class="olt-u-displayFlex olt-u-justifyContentCenter">
   <div>Justify content centered</div>
-  <div style="height: 200px" class="olt-u-border olt-u-padding3">
+  <div style="height: 200px" class="olt-u-border olt-u-padding16">
     Large item
   </div>
 </div>
@@ -34,7 +34,7 @@ layouts.
 
 ## Responsive
 
-Justify Content utility becomes very handy, when used in a combination with the 
+Justify Content utility becomes very handy, when used in a combination with the
 default screen [prefixes](/#screen) :
 
 | Prefix | Example                          | Description                                                                               |

@@ -18,7 +18,7 @@
     }
     // no margin bottom for the last two items
     &:not(:nth-last-of-type(2)):not(:last-of-type) {
-      margin-bottom: var-get('spacing2');
+      margin-bottom: 8px;
     }
   }
 }
@@ -35,7 +35,7 @@
     grid-column: 1;
     // no margin bottom for the last two items
     &:not(:last-of-type) {
-      margin-bottom: var-get('spacing2');
+      margin-bottom: 8px;
     }
   }
 }
@@ -50,11 +50,11 @@
   font: inherit;
   vertical-align: baseline;
   list-style: disc inside;
-  margin-bottom: var-get('spacing3');
+  margin-bottom: 16px;
 
   &-item {
     display: list-item;
-    margin: 0 0 var-get('spacing2');
+    margin: 0 0 8px;
     padding: 0;
     counter-increment: list-item-counter;
     word-break: break-word;
@@ -69,7 +69,7 @@
     list-style-type: none;
     display: grid;
     grid-template-columns: 120px calc(100% - 120px);
-    grid-gap: var-get('spacing2');
+    grid-gap: 8px;
     grid-auto-flow: dense;
   }
 

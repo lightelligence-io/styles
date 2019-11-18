@@ -1,8 +1,8 @@
 @mixin createFloatingList($size, $justifyEnd) {
-  margin-top: calc(-1 * #{var-get('spacing' + $size)});
+  margin-top: #{$size * -1px};
   $horizontalMargin: if($justifyEnd, 'margin-right', 'margin-left');
 
-  #{$horizontalMargin}: calc(-1 * #{var-get('spacing' + $size)});
+  #{$horizontalMargin}: #{$size * -1px};
 
   // avoid margin-collapse
   display: inline-flex;
@@ -14,8 +14,8 @@
   flex-wrap: wrap;
 
   > * {
-    margin-top: var-get('spacing' + $size);
-    #{$horizontalMargin}: var-get('spacing' + $size);
+    margin-top: $size * 1px;
+    #{$horizontalMargin}: $size * 1px;
   }
 }
 
@@ -24,21 +24,21 @@
 
   &:not(&--justifyEnd) &-items {
     // a default list
-    @include createFloatingList(1, false);
+    @include createFloatingList(4, false);
   }
 
   &--justifyEnd &-items {
     // a default list
-    @include createFloatingList(1, true);
+    @include createFloatingList(4, true);
   }
 
-  @for $size from 0 through 8 {
-    &:not(#{$self}--justifyEnd)#{$self}--gap#{$size} #{$self}-items {
-      @include createFloatingList($size, false);
+  @each $space in $olt-spaces {
+    &:not(#{$self}--justifyEnd)#{$self}--gap#{$space} #{$self}-items {
+      @include createFloatingList($space, false);
     }
 
-    #{$self}--justifyEnd#{$self}--gap#{$size} #{$self}-items {
-      @include createFloatingList($size, true);
+    #{$self}--justifyEnd#{$self}--gap#{$space} #{$self}-items {
+      @include createFloatingList($space, true);
     }
   }
 }

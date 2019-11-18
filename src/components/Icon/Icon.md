@@ -8,20 +8,20 @@ category: Component
 The *Icon* component is an interface for the official OLT Icons. This
 component occupies `olt-Icon*` class names and can be used with `<i>` element.
 
-<div class="olt-DataCards olt-DataCards--useFlexLayout olt-u-marginBottom3">
-  <div class="olt-DataCards-frame">
-    <div class="olt-DataCards-head">
-      <div class="olt-DataCards-headItem olt-DataCards--tableCellWidth90">
+<div class="olt-CardTable olt-CardTable--useFlexLayout olt-u-marginBottom3">
+  <div class="olt-CardTable-frame">
+    <div class="olt-CardTable-head">
+      <div class="olt-CardTable-headItem olt-CardTable--tableCellWidth90">
         Icons
       </div>
     </div>
   </div>
-  <div class="olt-DataCards-body">
+  <div class="olt-CardTable-body">
     <!-- Account -->
-    <div class="olt-DataCards-card">
-      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth90">
-        <div class="olt-DataCards-title">Icons</div>
-        <div class="olt-DataCards-content">
+    <div class="olt-CardTable-card">
+      <div class="olt-CardTable-cardItem olt-CardTable--tableCellWidth90">
+        <div class="olt-CardTable-title">Icons</div>
+        <div class="olt-CardTable-content">
           <div class="demo-icon">
             <i class="olt-Icon olt-Icon-account" title="account"></i>
             <span>account</span>
@@ -443,9 +443,9 @@ For decorative and non-interactive icons (e.g. input fields) the default is gray
     interactive icons
   </div>
   <div class="olt-Grid-item olt-Grid-item--9">
-    <i class="olt-Icon olt-Icon--primary olt-Icon-zoom-in"></i>
-    <i class="olt-Icon olt-Icon--primary olt-Icon-zoom-out"></i>
-    <i class="olt-Icon olt-Icon--primary olt-Icon-resize"></i>
+    <i class="olt-Icon olt-u-colorPrimary olt-Icon-zoom-in"></i>
+    <i class="olt-Icon olt-u-colorPrimary olt-Icon-zoom-out"></i>
+    <i class="olt-Icon olt-u-colorPrimary olt-Icon-resize"></i>
   </div>
   <div class="olt-Grid-item olt-Grid-item--3">
     <b>gray 500</b><br>
@@ -464,28 +464,28 @@ For decorative and non-interactive icons (e.g. input fields) the default is gray
 The new *Icon* set has filled and outline icons for feedback.
 Three different versions indicate the importance of the warning.
 Depending on the use case the icon color changes - info / warning / error.
-To assign a color to the icon, use the `olt-Icon--*` classes as listed below.
+To assign a color to the icon, use the `olt-u-color*` classes as listed below.
 If the icon is placed on a matching background color it has to be white.
 
-* <span class="olt-u-colorInfo">Circle - low:</span> `olt-Icon--info`
-* <span class="olt-u-colorWarning">Triangle - medium:</span> `olt-Icon--warning`
-* <span class="olt-u-colorError">Rhomb - critical:</span> `olt-Icon--error`
-* <span class="olt-u-colorSuccess">Circle - success:</span> `olt-Icon--success`
+* <span class="olt-u-colorInfo">Circle - low:</span> `olt-u-colorInfo`
+* <span class="olt-u-colorWarning">Triangle - medium:</span> `olt-u-colorWarning`
+* <span class="olt-u-colorError">Rhomb - critical:</span> `olt-u-colorError`
+* <span class="olt-u-colorSuccess">Circle - success:</span> `olt-u-colorSuccess`
 
 ```colors-feedback.html
-<i class="olt-Icon olt-Icon--info olt-Icon-help-outline"></i>
-<i class="olt-Icon olt-Icon--info olt-Icon-info-outline"></i>
-<i class="olt-Icon olt-Icon--warning olt-Icon-warning-low-outline"></i>
-<i class="olt-Icon olt-Icon--warning olt-Icon-warning-medium-outline"></i>
-<i class="olt-Icon olt-Icon--error olt-Icon-warning-critical-outline"></i>
-<i class="olt-Icon olt-Icon--success olt-Icon-check-outline"></i>
+<i class="olt-Icon olt-u-colorInfo olt-Icon-help-outline"></i>
+<i class="olt-Icon olt-u-colorInfo olt-Icon-info-outline"></i>
+<i class="olt-Icon olt-u-colorWarning olt-Icon-warning-low-outline"></i>
+<i class="olt-Icon olt-u-colorWarning olt-Icon-warning-medium-outline"></i>
+<i class="olt-Icon olt-u-colorError olt-Icon-warning-critical-outline"></i>
+<i class="olt-Icon olt-u-colorSuccess olt-Icon-check-outline"></i>
 <br/><br/>
-<i class="olt-Icon olt-Icon--info olt-Icon-help-filled"></i>
-<i class="olt-Icon olt-Icon--info olt-Icon-info-filled"></i>
-<i class="olt-Icon olt-Icon--warning olt-Icon-warning-low-filled"></i>
-<i class="olt-Icon olt-Icon--warning olt-Icon-warning-medium-filled"></i>
-<i class="olt-Icon olt-Icon--error olt-Icon-warning-critical-filled"></i>
-<i class="olt-Icon olt-Icon--success olt-Icon-check-filled"></i>
+<i class="olt-Icon olt-u-colorInfo olt-Icon-help-filled"></i>
+<i class="olt-Icon olt-u-colorInfo olt-Icon-info-filled"></i>
+<i class="olt-Icon olt-u-colorWarning olt-Icon-warning-low-filled"></i>
+<i class="olt-Icon olt-u-colorWarning olt-Icon-warning-medium-filled"></i>
+<i class="olt-Icon olt-u-colorError olt-Icon-warning-critical-filled"></i>
+<i class="olt-Icon olt-u-colorSuccess olt-Icon-check-filled"></i>
 ```
 
 ## Sizes

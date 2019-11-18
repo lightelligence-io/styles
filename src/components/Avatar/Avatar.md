@@ -16,16 +16,16 @@ The default avatar is primary color while size adopts to current font-size.
 
 ## Colors
 
-The *Avatar* can be rendered with 
-[any of our conceptual colors](/#concepts-colors) :
+The *Avatar* can be rendered with
+[any of the color classes](/#color) :
 
 ```colors.html
-<i class="olt-Avatar olt-Avatar--primary">1</i>
-<i class="olt-Avatar olt-Avatar--secondary">2</i>
-<i class="olt-Avatar olt-Avatar--error">E</i>
-<i class="olt-Avatar olt-Avatar--success">S</i>
-<i class="olt-Avatar olt-Avatar--info">I</i>
-<i class="olt-Avatar olt-Avatar--dark">D</i>
+<i class="olt-Avatar olt-u-colorPrimary">1</i>
+<i class="olt-Avatar olt-u-colorSecondary">2</i>
+<i class="olt-Avatar olt-u-colorError">E</i>
+<i class="olt-Avatar olt-u-colorSuccess">S</i>
+<i class="olt-Avatar olt-u-colorInfo">I</i>
+<i class="olt-Avatar olt-u-colorDark">D</i>
 ```
 
 ## Sizes

@@ -12,8 +12,6 @@
   font-weight: inherit;
   font-family: inherit;
 
-  @include contextual-colors();
-
   &,
   &:link,
   &:visited {
