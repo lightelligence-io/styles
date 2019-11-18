@@ -9,9 +9,9 @@ category: Utilities
 
 ## Description
 
-Align items utility can be used to set the `align-items` property of an 
-element. It is helpful for making custom 
-[Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) 
+Align items utility can be used to set the `align-items` property of an
+element. It is helpful for making custom
+[Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 layouts.
 
 | Class name                 | CSS properties            |
@@ -36,8 +36,8 @@ Align items can also be used with the default screen [prefixes](/#screen) :
 
 ```examples.html
 <div class="olt-u-displayFlex olt-u-alignItemsCenter">
-  <div class="olt-u-border olt-u-padding3">Small item<br />( in the middle )</div>
-  <div style="height: 150px" class="olt-u-border olt-u-padding3">
+  <div class="olt-u-border olt-u-padding16">Small item<br />( in the middle )</div>
+  <div style="height: 150px" class="olt-u-border olt-u-padding16">
     Large item
   </div>
 </div>

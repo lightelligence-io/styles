@@ -1,12 +1,12 @@
-@mixin dataCardsInTableModeWithTableLayout($self) {
-  @include dataCardsInTableMode() {
+@mixin cardTableInTableModeWithTableLayout($self) {
+  @include cardTableInTableMode() {
     &#{$self}--useTableLayout {
       @content;
     }
   }
 }
 
-@mixin dataCardsTableWidth($self) {
+@mixin cardTableTableWidth($self) {
   $collection: (5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90);
 
   @each $percent in $collection {
@@ -21,7 +21,7 @@
  * On most browsers it is not possible to add a border to a tr (table-row). This fix
  * circumvents the problem by applying the border to the table-cells instead.
  */
-@mixin dataCardsBorderTableRowFix(
+@mixin cardTableBorderTableRowFix(
   $self,
   $border-color,
   $border-radius,
@@ -92,7 +92,7 @@
  * To cover up the box-shadow from the predecessor item an after element, a white box,
  * is placed at the left side of the element.
  */
-@mixin dataCardsSafariAndIE11BoxShadowTableRowFix(
+@mixin cardTableSafariAndIE11BoxShadowTableRowFix(
   $self,
   $border-color,
   $border-radius,
@@ -145,7 +145,7 @@
  * We have to make the cover-up stripe a bit wider and move it a bit to the right to
  * hide the box shadow between the elements.
  */
-@mixin dataCardsIe11BoxShadowFix($self) {
+@mixin cardTableIe11BoxShadowFix($self) {
   &#{$self}--selectable #{$self}-card #{$self}-cardItem {
     &:not(#{$self}--listOnly):after {
       right: calc(100% - 2px);
@@ -157,7 +157,7 @@
 /*
  * This is the basic integration of data cards tables via table layout.
  */
-@mixin dataCardsTableLayoutIntegration(
+@mixin cardTableTableLayoutIntegration(
   $self,
   $border-color,
   $border-radius,
@@ -166,10 +166,10 @@
   $card-padding-x,
   $card-padding-y
 ) {
-  @include dataCardsInTableModeWithTableLayout($self) {
+  @include cardTableInTableModeWithTableLayout($self) {
     #{$self}-cardItem,
     #{$self}-headItem {
-      @include dataCardsTableWidth($self);
+      @include cardTableTableWidth($self);
     }
 
     #{$self}-frame {
@@ -224,7 +224,7 @@
       }
     }
 
-    @include dataCardsBorderTableRowFix(
+    @include cardTableBorderTableRowFix(
       $self,
       $border-color,
       $border-radius,
@@ -243,8 +243,8 @@
 
   // fixes for safari
   @include applyForSafariOnly() {
-    @include dataCardsInTableModeWithTableLayout($self) {
-      @include dataCardsSafariAndIE11BoxShadowTableRowFix(
+    @include cardTableInTableModeWithTableLayout($self) {
+      @include cardTableSafariAndIE11BoxShadowTableRowFix(
         $self,
         $border-color,
         $border-radius,
@@ -256,8 +256,8 @@
 
   // fixed for ie11
   @include applyForIeOnly() {
-    @include dataCardsInTableModeWithTableLayout($self) {
-      @include dataCardsSafariAndIE11BoxShadowTableRowFix(
+    @include cardTableInTableModeWithTableLayout($self) {
+      @include cardTableSafariAndIE11BoxShadowTableRowFix(
         $self,
         $border-color,
         $border-radius,
@@ -265,7 +265,7 @@
         $box-shadow
       );
 
-      @include dataCardsIe11BoxShadowFix($self);
+      @include cardTableIe11BoxShadowFix($self);
     }
   }
 }

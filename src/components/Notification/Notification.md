@@ -6,18 +6,18 @@ category: Component
 ## Description
 
 The *Notification* is used to show a message on the bottom of the screen.
-It occupies the `olt-NotificationContainer` and `olt-Notification*` class names, 
-with `olt-NotificationContainer` being the container element holding the stack 
+It occupies the `olt-NotificationContainer` and `olt-Notification*` class names,
+with `olt-NotificationContainer` being the container element holding the stack
 of notifications.
 
-On larger screens notifications are placed on the bottom right, on small devices 
-only the header is displayed bottom-centered with full width. Notifications can 
-stack up if they are not closed manually within a very short time. A 
-notification that is not closed manually should hide automatically after a short 
-time. For implementing the logic behind the visibility of the Notifications 
+On larger screens notifications are placed on the bottom right, on small devices
+only the header is displayed bottom-centered with full width. Notifications can
+stack up if they are not closed manually within a very short time. A
+notification that is not closed manually should hide automatically after a short
+time. For implementing the logic behind the visibility of the Notifications
 please use JavaScript ( check "Related JavaScript" section below for a demo ).
 
-<div class="olt-Card olt-u-padding5">
+<div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
     <button class="olt-Button" onclick={showNotifications()}>Demo</button>
  </div>
@@ -148,7 +148,7 @@ DON'T USE IN PRODUCTION!! -->
 ## States
 
 A *Notification* is hidden by default. It can be rendered by adding `is-open`
-state class at the main element. It will appear inside the 
+state class at the main element. It will appear inside the
 *NotificationContainer*, which is rendered at the bottom right of the page.
 
 ```html

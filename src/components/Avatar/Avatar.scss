@@ -22,9 +22,6 @@
   border: 0.2em solid currentColor;
   line-height: 100%;
 
-  // Colors
-  @include contextual-colors(('color'));
-
   // Sizes
   @each $name, $value in $avatar-sizes {
     &--#{$name} {
@@ -37,10 +34,10 @@
 
   // Presets
   &--user {
-    @extend #{$self}--primary !optional;
+    color: get-color('primary');
   }
 
   &--tenant {
-    @extend #{$self}--info !optional;
+    color: get-color('info');
   }
 }

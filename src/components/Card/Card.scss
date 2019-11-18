@@ -21,8 +21,6 @@
   align-items: unset;
   appearance: none;
 
-  @include contextual-colors();
-
   & & {
     border: 1px solid $border-color;
   }

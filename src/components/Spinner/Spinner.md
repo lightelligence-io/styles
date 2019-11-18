@@ -14,8 +14,8 @@ class names and it scales by font-size.
 
 ## Colors
 
-The *Spinner* can be rendered with 
-[any of our conceptual colors](/#concepts-colors) :
+The *Spinner* can be rendered with
+[any of our colors](/#color) :
 
 ```colors.css hidden
 body > div.olt-Frame { display: flex; }
@@ -26,39 +26,39 @@ body > div.olt-Frame { display: flex; }
 <div class="olt-Card">
   <div class="olt-Card-header">Primary</div>
   <div class="olt-Card-content olt-u-marginAuto">
-    <i class="olt-Spinner olt-Spinner--primary"></i>
+    <i class="olt-Spinner olt-u-colorPrimary"></i>
   </div>
 </div>
 <div class="olt-Card">
   <div class="olt-Card-header">Secondary</div>
   <div class="olt-Card-content olt-u-marginAuto">
-    <i class="olt-Spinner olt-Spinner--secondary"></i>
+    <i class="olt-Spinner olt-u-colorSecondary"></i>
   </div>
 </div>
 <div class="olt-Card">
   <div class="olt-Card-header">Info</div>
   <div class="olt-Card-content olt-u-marginAuto">
-    <i class="olt-Spinner olt-Spinner--info"></i>
+    <i class="olt-Spinner olt-u-colorInfo"></i>
   </div>
 </div>
 <div class="olt-Card">
   <div class="olt-Card-header">Error</div>
   <div class="olt-Card-content olt-u-marginAuto">
-    <i class="olt-Spinner olt-Spinner--error"></i>
+    <i class="olt-Spinner olt-u-colorError"></i>
   </div>
 </div>
 <div class="olt-Card">
   <div class="olt-Card-header">Success</div>
   <div class="olt-Card-content olt-u-marginAuto">
-    <i class="olt-Spinner olt-Spinner--success"></i>
+    <i class="olt-Spinner olt-u-colorSuccess"></i>
   </div>
 </div>
 ```
 
 ## Sizes
 
-The *Spinner* can be rendered in different sizes as well using the 
-[fontSize utility classes](/#util). You can use : 
+The *Spinner* can be rendered in different sizes as well using the
+[fontSize utility classes](/#util). You can use :
 
 - `olt-u-fontSizeSmall`
 - `olt-u-fontSizeMedium`

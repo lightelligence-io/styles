@@ -30,12 +30,6 @@ sit amet, consectetur
         <span>Ipsum</span>
     </div>
 </span>
-elit
-<span class="olt-Tooltip">
-    <span class="olt-u-colorSuccess">dolor</span>
-    <div class="olt-Tooltip-content olt-Tooltip-content--success">
-        <span>consectetur</span>
-    </div>
-</span>
+elit consectetur.
 ```
 
