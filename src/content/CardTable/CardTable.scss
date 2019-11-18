@@ -42,7 +42,7 @@
     word-break: break-word;
   }
 
-  @include CardTableInTableMode {
+  @include cardTableInTableMode {
     // common
     #{$self}-head {
       border: 1px solid transparent;
@@ -76,9 +76,9 @@
     }
   }
 
-  @include CardTableFlexLayoutIntegration($self);
+  @include cardTableFlexLayoutIntegration($self);
 
-  @include CardTableTableLayoutIntegration(
+  @include cardTableTableLayoutIntegration(
     $self,
     $border-color,
     $border-radius,
@@ -88,7 +88,7 @@
     $card-padding-y
   );
 
-  @include CardTableInListMode($self) {
+  @include cardTableInListMode($self) {
     #{$self}-cardItem #{$self}-title {
       // use .u-H200 with 10px, because we can't extend here
       font-size: 10px;
@@ -159,7 +159,7 @@
     }
   }
 
-  @include CardTableInListModeSmall($self) {
+  @include cardTableInListModeSmall($self) {
     #{$self}-card {
       flex-basis: 100%;
 

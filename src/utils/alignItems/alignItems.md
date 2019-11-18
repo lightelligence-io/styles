@@ -36,8 +36,8 @@ Align items can also be used with the default screen [prefixes](/#screen) :
 
 ```examples.html
 <div class="olt-u-displayFlex olt-u-alignItemsCenter">
-  <div class="olt-u-border olt-u-padding46">Small item<br />( in the middle )</div>
-  <div style="height: 150px" class="olt-u-border olt-u-padding46">
+  <div class="olt-u-border olt-u-padding16">Small item<br />( in the middle )</div>
+  <div style="height: 150px" class="olt-u-border olt-u-padding16">
     Large item
   </div>
 </div>
