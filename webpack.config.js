@@ -80,25 +80,6 @@ module.exports = {
               // for the icons.
               //
               data: [addIconsVariable()].join('\n'),
-              transformers: [
-                {
-                  extensions: ['.yml'],
-                  transform: () => {
-                    const variables = {
-                      varPrefix: 'olt-',
-                      varStyle: 'camelCase',
-                    };
-                    const content = `\n${Object.entries(variables)
-                      .map(
-                        ([key, value]) => `\t$${decamelize(key)}: '${value}'`,
-                      )
-                      .join(';\n')}\n
-                      :root {}`;
-
-                    return content;
-                  },
-                },
-              ],
             },
           },
         ],
