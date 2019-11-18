@@ -52,72 +52,74 @@
 		
 	</head>
 
-	<body>					<div class='olt-Frame'><div class="olt-DataCards olt-DataCards--useFlexLayout">
-  <div class="olt-DataCards-frame">
-    <div class="olt-DataCards-head">
-      <div class="olt-DataCards-headItem">First Name</div>
-      <div class="olt-DataCards-headItem">Last Name</div>
-      <div class="olt-DataCards-headItem">Is Online</div>
+	<body>					<div class='olt-Frame'><div class="olt-CardTable olt-CardTable--largeCardPadding">
+  <div class="olt-CardTable-frame">
+    <div class="olt-CardTable-head">
+      <div class="olt-CardTable-headItem">Name</div>
+      <div class="olt-CardTable-headItem">Last Seen</div>
+      <div class="olt-CardTable-headItem">Is Online</div>
+      <div class="olt-CardTable-headItem">Alias</div>
     </div>
-    <div class="olt-DataCards-body">
-
-      <div class="olt-DataCards-card">
-        <div class="olt-DataCards-cardItem olt-DataCards--tableOnly">
-          <div class="olt-DataCards-content">
-            Singh
-          </div>
-        </div>
-        <div class="olt-DataCards-cardItem olt-DataCards--tableOnly">
-          <div class="olt-DataCards-content">
-            Mishri
-          </div>
-        </div>
-        <div class="olt-DataCards-cardItem olt-DataCards--listOnly">
-          <div class="olt-DataCards-title">Name</div>
-          <div class="olt-DataCards-content">
+    <div class="olt-CardTable-body">
+      <div class="olt-CardTable-card">
+        <div class="olt-CardTable-cardItem">
+          <div class="olt-CardTable-content">
             Singh, Mishri
           </div>
         </div>
-        <div class="olt-DataCards-cardItem">
-          <div class="olt-DataCards-title">Is Online</div>
-          <div class="olt-DataCards-content">
+        <div class="olt-CardTable-cardItem olt-CardTable--halfSize">
+          <div class="olt-CardTable-title">Last Seen</div>
+          <div class="olt-CardTable-content">
+            5 mins ago
+          </div>
+        </div>
+        <div class="olt-CardTable-cardItem olt-CardTable--halfSize">
+          <div class="olt-CardTable-title">Is Online</div>
+          <div class="olt-CardTable-content">
             Yes
+          </div>
+        </div>
+        <div class="olt-CardTable-cardItem olt-CardTable--halfSize">
+          <div class="olt-CardTable-title">Alias</div>
+          <div class="olt-CardTable-content">
+            Singh34
           </div>
         </div>
       </div>
     </div>
   </div>
 </div></div>
-			<script type="text/x-stylemark" data-language="html"><div class="olt-DataCards olt-DataCards--useFlexLayout">
-  <div class="olt-DataCards-frame">
-    <div class="olt-DataCards-head">
-      <div class="olt-DataCards-headItem">First Name</div>
-      <div class="olt-DataCards-headItem">Last Name</div>
-      <div class="olt-DataCards-headItem">Is Online</div>
+			<script type="text/x-stylemark" data-language="html"><div class="olt-CardTable olt-CardTable--largeCardPadding">
+  <div class="olt-CardTable-frame">
+    <div class="olt-CardTable-head">
+      <div class="olt-CardTable-headItem">Name</div>
+      <div class="olt-CardTable-headItem">Last Seen</div>
+      <div class="olt-CardTable-headItem">Is Online</div>
+      <div class="olt-CardTable-headItem">Alias</div>
     </div>
-    <div class="olt-DataCards-body">
-
-      <div class="olt-DataCards-card">
-        <div class="olt-DataCards-cardItem olt-DataCards--tableOnly">
-          <div class="olt-DataCards-content">
-            Singh
-          </div>
-        </div>
-        <div class="olt-DataCards-cardItem olt-DataCards--tableOnly">
-          <div class="olt-DataCards-content">
-            Mishri
-          </div>
-        </div>
-        <div class="olt-DataCards-cardItem olt-DataCards--listOnly">
-          <div class="olt-DataCards-title">Name</div>
-          <div class="olt-DataCards-content">
+    <div class="olt-CardTable-body">
+      <div class="olt-CardTable-card">
+        <div class="olt-CardTable-cardItem">
+          <div class="olt-CardTable-content">
             Singh, Mishri
           </div>
         </div>
-        <div class="olt-DataCards-cardItem">
-          <div class="olt-DataCards-title">Is Online</div>
-          <div class="olt-DataCards-content">
+        <div class="olt-CardTable-cardItem olt-CardTable--halfSize">
+          <div class="olt-CardTable-title">Last Seen</div>
+          <div class="olt-CardTable-content">
+            5 mins ago
+          </div>
+        </div>
+        <div class="olt-CardTable-cardItem olt-CardTable--halfSize">
+          <div class="olt-CardTable-title">Is Online</div>
+          <div class="olt-CardTable-content">
             Yes
+          </div>
+        </div>
+        <div class="olt-CardTable-cardItem olt-CardTable--halfSize">
+          <div class="olt-CardTable-title">Alias</div>
+          <div class="olt-CardTable-content">
+            Singh34
           </div>
         </div>
       </div>
@@ -156,10 +158,10 @@
 					}
 					else {
 						// Creates a new module
-						module = angular.module('stylemark-data-cards-modifiers-table-only-list-only', []);
+						module = angular.module('stylemark-card-table-modifiers-large-card-padding', []);
 					}
 
-					module.controller('stylemark-data-cards-modifiers-table-only-list-only-' + index, function($scope) {
+					module.controller('stylemark-card-table-modifiers-large-card-padding-' + index, function($scope) {
 						$scope.$eval(block);
 					});
 				});
