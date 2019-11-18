@@ -17,7 +17,7 @@ The default avatar is primary color while size adopts to current font-size.
 ## Colors
 
 The *Avatar* can be rendered with
-[any of the color classes](/#colors) :
+[any of the color classes](/#color) :
 
 ```colors.html
 <i class="olt-Avatar olt-u-colorPrimary">1</i>

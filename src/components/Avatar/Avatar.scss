@@ -34,10 +34,10 @@
 
   // Presets
   &--user {
-    @extend #{$self}--primary !optional;
+    color: get-color('primary');
   }
 
   &--tenant {
-    @extend #{$self}--info !optional;
+    color: get-color('info');
   }
 }

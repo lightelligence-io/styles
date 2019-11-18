@@ -1,12 +1,12 @@
-@mixin CardTableInTableModeWithTableLayout($self) {
-  @include CardTableInTableMode() {
+@mixin cardTableInTableModeWithTableLayout($self) {
+  @include cardTableInTableMode() {
     &#{$self}--useTableLayout {
       @content;
     }
   }
 }
 
-@mixin CardTableTableWidth($self) {
+@mixin cardTableTableWidth($self) {
   $collection: (5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90);
 
   @each $percent in $collection {
@@ -21,7 +21,7 @@
  * On most browsers it is not possible to add a border to a tr (table-row). This fix
  * circumvents the problem by applying the border to the table-cells instead.
  */
-@mixin CardTableBorderTableRowFix(
+@mixin cardTableBorderTableRowFix(
   $self,
   $border-color,
   $border-radius,
@@ -86,10 +86,11 @@
   }
 }
 
+
 /*
  * This is the basic integration of data cards tables via table layout.
  */
-@mixin CardTableTableLayoutIntegration(
+@mixin cardTableTableLayoutIntegration(
   $self,
   $border-color,
   $border-radius,
@@ -98,10 +99,11 @@
   $card-padding-x,
   $card-padding-y
 ) {
-  @include CardTableInTableModeWithTableLayout($self) {
+
+  @include cardTableInTableModeWithTableLayout($self) {
     #{$self}-cardItem,
     #{$self}-headItem {
-      @include CardTableTableWidth($self);
+      @include cardTableTableWidth($self);
     }
 
     #{$self}-frame {
@@ -156,7 +158,7 @@
       }
     }
 
-    @include CardTableBorderTableRowFix(
+    @include cardTableBorderTableRowFix(
       $self,
       $border-color,
       $border-radius,
