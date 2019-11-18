@@ -99,7 +99,6 @@
   $card-padding-x,
   $card-padding-y
 ) {
-
   @include cardTableInTableModeWithTableLayout($self) {
     #{$self}-cardItem,
     #{$self}-headItem {
