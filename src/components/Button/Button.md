@@ -398,7 +398,7 @@ This set of buttons can be used to complete or terminate an action. The labels s
 
 ### Destructive Actions
 
-Buttons for destructive actions are available with three levels of emphasis and two to three varations in style. Primary and Secondary Buttons are available with a leading decoration. Tertiary Buttons can also be used with trailing decoration, since they can be part of a Cell when used in Data Cards.
+Buttons for destructive actions are available with three levels of emphasis and two to three varations in style. Primary and Secondary Buttons are available with a leading decoration. Tertiary Buttons can also be used with trailing decoration, since they can be part of a Cell when used in Card Table.
 
 #### Levels of emphasis
 - Primary (Filled)

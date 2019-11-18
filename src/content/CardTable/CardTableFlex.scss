@@ -1,5 +1,5 @@
-@mixin dataCardsInTableModeWithFlexLayout($self) {
-  @include dataCardsInTableMode() {
+@mixin CardTableInTableModeWithFlexLayout($self) {
+  @include CardTableInTableMode() {
     &#{$self}--useFlexLayout,
     &:not(#{$self}--useTableLayout) {
       @content;
@@ -7,7 +7,7 @@
   }
 }
 
-@mixin dataCardsFlexWidth($self) {
+@mixin CardTableFlexWidth($self) {
   $collection: (5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90);
 
   @each $percent in $collection {
@@ -20,8 +20,8 @@
 /*
  * This is the basic integration of data cards tables via flex layout.
  */
-@mixin dataCardsFlexLayoutIntegration($self) {
-  @include dataCardsInTableModeWithFlexLayout($self) {
+@mixin CardTableFlexLayoutIntegration($self) {
+  @include CardTableInTableModeWithFlexLayout($self) {
     #{$self}-card,
     #{$self}-head {
       display: flex;
@@ -63,7 +63,7 @@
 
     #{$self}-cardItem,
     #{$self}-headItem {
-      @include dataCardsFlexWidth($self);
+      @include CardTableFlexWidth($self);
     }
 
     #{$self}-cardItem,

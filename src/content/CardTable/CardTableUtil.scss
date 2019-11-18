@@ -1,4 +1,4 @@
-@mixin dataCardsInTableMode() {
+@mixin CardTableInTableMode() {
   &--alwaysTable {
     @content;
   }
@@ -8,7 +8,7 @@
   }
 }
 
-@mixin dataCardsInListMode($self) {
+@mixin CardTableInListMode($self) {
   &:not(#{$self}--alwaysTable) {
     @include screen-down(md) {
       @content;
@@ -16,7 +16,7 @@
   }
 }
 
-@mixin dataCardsInListModeSmall($self) {
+@mixin CardTableInListModeSmall($self) {
   &:not(#{$self}--alwaysTable) {
     @include screen-down(sm) {
       @content;

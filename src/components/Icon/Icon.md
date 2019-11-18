@@ -8,20 +8,20 @@ category: Component
 The *Icon* component is an interface for the official OLT Icons. This
 component occupies `olt-Icon*` class names and can be used with `<i>` element.
 
-<div class="olt-DataCards olt-DataCards--useFlexLayout olt-u-marginBottom3">
-  <div class="olt-DataCards-frame">
-    <div class="olt-DataCards-head">
-      <div class="olt-DataCards-headItem olt-DataCards--tableCellWidth90">
+<div class="olt-CardTable olt-CardTable--useFlexLayout olt-u-marginBottom3">
+  <div class="olt-CardTable-frame">
+    <div class="olt-CardTable-head">
+      <div class="olt-CardTable-headItem olt-CardTable--tableCellWidth90">
         Icons
       </div>
     </div>
   </div>
-  <div class="olt-DataCards-body">
+  <div class="olt-CardTable-body">
     <!-- Account -->
-    <div class="olt-DataCards-card">
-      <div class="olt-DataCards-cardItem olt-DataCards--tableCellWidth90">
-        <div class="olt-DataCards-title">Icons</div>
-        <div class="olt-DataCards-content">
+    <div class="olt-CardTable-card">
+      <div class="olt-CardTable-cardItem olt-CardTable--tableCellWidth90">
+        <div class="olt-CardTable-title">Icons</div>
+        <div class="olt-CardTable-content">
           <div class="demo-icon">
             <i class="olt-Icon olt-Icon-account" title="account"></i>
             <span>account</span>

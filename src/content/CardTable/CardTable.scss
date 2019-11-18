@@ -1,4 +1,4 @@
-.DataCards {
+.CardTable {
   $border-radius: 0.25rem !default;
   $box-shadow: 0 0 8px 0 rgba(13, 18, 44, 0.15);
   $self: &;
@@ -42,7 +42,7 @@
     word-break: break-word;
   }
 
-  @include dataCardsInTableMode {
+  @include CardTableInTableMode {
     // common
     #{$self}-head {
       border: 1px solid transparent;
@@ -76,9 +76,9 @@
     }
   }
 
-  @include dataCardsFlexLayoutIntegration($self);
+  @include CardTableFlexLayoutIntegration($self);
 
-  @include dataCardsTableLayoutIntegration(
+  @include CardTableTableLayoutIntegration(
     $self,
     $border-color,
     $border-radius,
@@ -88,7 +88,7 @@
     $card-padding-y
   );
 
-  @include dataCardsInListMode($self) {
+  @include CardTableInListMode($self) {
     #{$self}-cardItem #{$self}-title {
       // use .u-H200 with 10px, because we can't extend here
       font-size: 10px;
@@ -159,7 +159,7 @@
     }
   }
 
-  @include dataCardsInListModeSmall($self) {
+  @include CardTableInListModeSmall($self) {
     #{$self}-card {
       flex-basis: 100%;
 
