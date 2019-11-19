@@ -21,6 +21,10 @@
   align-items: unset;
   appearance: none;
 
+  &--dark {
+    background: get-color('dark');
+  }
+
   & & {
     border: 1px solid $border-color;
   }
