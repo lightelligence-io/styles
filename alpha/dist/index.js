@@ -405,6 +405,7 @@ exports.ActionButtonProximity = 'olt-ActionButton--proximity';
 exports.ActionButtonProximityArea = 'olt-ActionButton--proximity-area';
 exports.ActionButtonBase = 'olt-ActionButton--base';
 exports.Card = 'olt-Card';
+exports.CardDark = 'olt-Card--dark';
 exports.CardHeader = 'olt-Card-header';
 exports.CardContent = 'olt-Card-content';
 exports.CardTitle = 'olt-Card-title';
