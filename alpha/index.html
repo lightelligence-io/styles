@@ -3150,11 +3150,11 @@ add an additional edit button at the top right corner as well as <code>:hover</c
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 	</div>
-</div><div id="popup-card" class="i-pad-top-5 i-section"><h2 class="i-pad-top-3 i-position-container"><a href="#popup-card" class="icon-link i-section__link -heading"></a>Popup Card</h2></div><p>By adding <code>olt-Card--popup</code> you can create a card looking like a popup menu (used for filters). This will add a shadow to it.</p>
+</div><div id="nested-cards" class="i-pad-top-5 i-section"><h2 class="i-pad-top-3 i-position-container"><a href="#nested-cards" class="icon-link i-section__link -heading"></a>Nested Cards</h2></div><p>Nested Cards will be shown with a border around them.</p>
 <div class="i-example">
                     <h5 class="i-example__heading">
                         <a
-                            href="card-popup.html"
+                            href="card-nested.html"
                             target="_blank"
                             class="plain-link"
                             data-toggle="tooltip"
@@ -3169,7 +3169,7 @@ add an additional edit button at the top right corner as well as <code>:hover</c
                         <div
                             class="i-example__iframe"
                             lazyframe
-                            data-src="card-popup.html"
+                            data-src="card-nested.html"
                             data-initinview="true"
                             data-title="Loading..." 
                         ></div>
@@ -3180,22 +3180,38 @@ add an additional edit button at the top right corner as well as <code>:hover</c
 <div class="i-code-block">
 	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
 	<div class="i-code-block__content hidden">
-		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="&lt;div class=&quot;olt-Card olt-Card--popup&quot;&gt;
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="&lt;div class=&quot;olt-Card&quot;&gt;
   &lt;div class=&quot;olt-Card-header&quot;&gt;
     &lt;h4 class=&quot;olt-Card-title&quot;&gt;Title&lt;/h4&gt;
     &lt;div class=&quot;olt-Card-description&quot;&gt;Description&lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;olt-Card-content&quot;&gt;
-    Content
+    &lt;div class=&quot;olt-Card&quot;&gt;
+      &lt;div class=&quot;olt-Card-header&quot;&gt;
+        &lt;h4 class=&quot;olt-Card-title&quot;&gt;Title&lt;/h4&gt;
+        &lt;div class=&quot;olt-Card-description&quot;&gt;Description&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;olt-Card-content&quot;&gt;
+        Content
+      &lt;/div&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;">Copy</button>
-		<pre class="mb-0"><code class="lang-">&lt;div class=&quot;olt-Card olt-Card--popup&quot;&gt;
+		<pre class="mb-0"><code class="lang-">&lt;div class=&quot;olt-Card&quot;&gt;
   &lt;div class=&quot;olt-Card-header&quot;&gt;
     &lt;h4 class=&quot;olt-Card-title&quot;&gt;Title&lt;/h4&gt;
     &lt;div class=&quot;olt-Card-description&quot;&gt;Description&lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;olt-Card-content&quot;&gt;
-    Content
+    &lt;div class=&quot;olt-Card&quot;&gt;
+      &lt;div class=&quot;olt-Card-header&quot;&gt;
+        &lt;h4 class=&quot;olt-Card-title&quot;&gt;Title&lt;/h4&gt;
+        &lt;div class=&quot;olt-Card-description&quot;&gt;Description&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;olt-Card-content&quot;&gt;
+        Content
+      &lt;/div&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 	</div>

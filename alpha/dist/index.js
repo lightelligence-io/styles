@@ -415,7 +415,6 @@ exports.CardAction = 'olt-Card-action';
 exports.CardImage = 'olt-Card-image';
 exports.isDisabled = 'is-disabled';
 exports.CardIcon = 'olt-Card-icon';
-exports.CardPopup = 'olt-Card--popup';
 exports.CardEdit = 'olt-Card--edit';
 exports.CardSelectable = 'olt-Card--selectable';
 exports.Tabs = 'olt-Tabs';

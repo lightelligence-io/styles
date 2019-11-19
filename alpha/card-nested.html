@@ -53,23 +53,39 @@
 		
 	</head>
 
-	<body>					<div class='olt-Frame'><div class="olt-Card olt-Card--popup">
+	<body>					<div class='olt-Frame'><div class="olt-Card">
   <div class="olt-Card-header">
     <h4 class="olt-Card-title">Title</h4>
     <div class="olt-Card-description">Description</div>
   </div>
   <div class="olt-Card-content">
-    Content
+    <div class="olt-Card">
+      <div class="olt-Card-header">
+        <h4 class="olt-Card-title">Title</h4>
+        <div class="olt-Card-description">Description</div>
+      </div>
+      <div class="olt-Card-content">
+        Content
+      </div>
+    </div>
   </div>
 </div></div>
 			<script type="text/x-stylemark" data-language="css">body > div.olt-Frame { min-height: 130px; }</script>
-			<script type="text/x-stylemark" data-language="html"><div class="olt-Card olt-Card--popup">
+			<script type="text/x-stylemark" data-language="html"><div class="olt-Card">
   <div class="olt-Card-header">
     <h4 class="olt-Card-title">Title</h4>
     <div class="olt-Card-description">Description</div>
   </div>
   <div class="olt-Card-content">
-    Content
+    <div class="olt-Card">
+      <div class="olt-Card-header">
+        <h4 class="olt-Card-title">Title</h4>
+        <div class="olt-Card-description">Description</div>
+      </div>
+      <div class="olt-Card-content">
+        Content
+      </div>
+    </div>
   </div>
 </div></script>
 
@@ -104,10 +120,10 @@
 					}
 					else {
 						// Creates a new module
-						module = angular.module('stylemark-card-popup', []);
+						module = angular.module('stylemark-card-nested', []);
 					}
 
-					module.controller('stylemark-card-popup-' + index, function($scope) {
+					module.controller('stylemark-card-nested-' + index, function($scope) {
 						$scope.$eval(block);
 					});
 				});
