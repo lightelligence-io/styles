@@ -206,22 +206,30 @@ body > div.olt-Frame { padding: 20px; margin: auto; background-color: lightgrey;
 </div>
 ```
 
-## Popup Card
+## Nested Cards
 
-By adding `olt-Card--popup` you can create a card looking like a popup menu (used for filters). This will add a shadow to it.
+Nested Cards will be shown with a border around them.
 
-```popup.css hidden
+```nested.css hidden
 body > div.olt-Frame { min-height: 130px; }
 ```
 
-```popup.html
-<div class="olt-Card olt-Card--popup">
+```nested.html
+<div class="olt-Card">
   <div class="olt-Card-header">
     <h4 class="olt-Card-title">Title</h4>
     <div class="olt-Card-description">Description</div>
   </div>
   <div class="olt-Card-content">
-    Content
+    <div class="olt-Card">
+      <div class="olt-Card-header">
+        <h4 class="olt-Card-title">Title</h4>
+        <div class="olt-Card-description">Description</div>
+      </div>
+      <div class="olt-Card-content">
+        Content
+      </div>
+    </div>
   </div>
 </div>
 ```
