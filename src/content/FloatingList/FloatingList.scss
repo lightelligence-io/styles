@@ -41,14 +41,4 @@
       @include createFloatingList($space, true);
     }
   }
-
-  // @for $size from 0 through 8 {
-  //   &:not(#{$self}--justifyEnd)#{$self}--gap#{$size} #{$self}-items {
-  //     @include createFloatingList($size, false);
-  //   }
-
-  //   #{$self}--justifyEnd#{$self}--gap#{$size} #{$self}-items {
-  //     @include createFloatingList($size, true);
-  //   }
-  // }
 }
