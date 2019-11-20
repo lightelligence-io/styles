@@ -101,4 +101,5 @@
 - Chore: code cleanups
 
 #v1.0.0-rc.1
-Fix: dark background of cards
+- Fix: dark background of cards
+- Fix: Handlebars Vulnerability
