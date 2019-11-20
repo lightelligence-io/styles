@@ -99,3 +99,7 @@
 - Chore: Rename to replace old Components: V2Container, V2Grid, V2Button, V2Modal, V2Tab, V2Tabs, V2Checkbox, V2Radio, V2Select, V2Input
 - Chore: Rename for clarity: DataCards -> CardTable
 - Chore: code cleanups
+
+#v1.0.0-rc.1
+- Fix: dark background of cards
+- Fix: Handlebars Vulnerability
