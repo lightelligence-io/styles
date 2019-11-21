@@ -32,13 +32,14 @@ $_default_shades: (0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8);
 @include define-color('gray700', #343a40);
 @include define-color('gray800', #2e3338);
 @include define-color('gray900', #212529);
+
+@include define-simple-color('sidebar', $olt-secondary-color);
 /* stylelint-enable at-rule-empty-line-before */
 
 :root {
   /* stylelint-disable at-rule-empty-line-before */
   @include export-color('primary');
+
+  @include export-color('sidebar');
   /* stylelint-enable at-rule-empty-line-before */
 }
-
-
-

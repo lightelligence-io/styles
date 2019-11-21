@@ -15,6 +15,14 @@ $_custom-property-prefix: 'olt-';
 $_colors: ();
 
 /**
+ * Private variable for storing the simple colors
+ *
+ * @see {define-simple-color}
+ * @type {List}
+ */
+$_simple_colors: ();
+
+/**
  * Private variable for storing the color mixes information
  *
  * @see {define-color-mix}
@@ -56,6 +64,39 @@ $_exported-colors: ();
       'shades': $shades,
     )
   ) !global;
+}
+
+/**
+ * Defines a simple color that will be generated with no shades
+ *
+ * @example
+ *   @include define-color-mix('white', #fff', (0.1, 0.2));
+ *   @include define-color-mix('black', #000', (0.1, 0.2));
+ *   @include define-color('primary', '#f60');
+ *   @include define-simple-color('sidebar', '#0d122c');
+ *   @debug($_colors) => (
+ *     "primary": (
+ *       "color": #f60,
+ *       "white": (0.1: #fff0e6, 0.2: #ffe0cc),
+ *       "black": (0.1: #1a0a00, 0.2: #331400)
+ *     ),
+ *     "sidebar": (
+ *       "color": #0d122c,
+ *     )
+ *   )
+ *   get-color('sidebar') => #0d122c
+ * @param $name {String}  The name of the color to add
+ * @param $color {Color}  The color that will be added
+ */
+@mixin define-simple-color($name, $color) {
+  $_colors: _set(
+    $_colors,
+    $name,
+    (
+      'color': $color,
+    )
+  ) !global;
+  $_simple_colors: _push($_simple_colors, $name) !global;
 }
 
 /**
@@ -119,9 +160,11 @@ $_exported-colors: ();
 
   #{color-to-css-property-name($name)}: _get($color, 'color');
 
-  @each $shade-name, $shades in _omit($color, 'color') {
-    @each $shade-opacity, $value in $shades {
-      #{color-to-css-property-name($name, $shade-name, $shade-opacity)}: $value;
+  @if _contains($_simple_colors, $name) == false {
+    @each $shade-name, $shades in _omit($color, 'color') {
+      @each $shade-opacity, $value in $shades {
+        #{color-to-css-property-name($name, $shade-name, $shade-opacity)}: $value;
+      }
     }
   }
 
@@ -296,7 +339,6 @@ $_exported-colors: ();
 
   @return $result;
 }
-
 
 /**
  * Returns all available colors (name, value)
