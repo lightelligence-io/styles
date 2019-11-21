@@ -61,7 +61,7 @@ below on how to properly use the white labeling feature with JavaScript.
   /**
    * Color that are exposed as read-only.
    */
-  --olt-readonly-secondary: #0d122c;
+  --olt-readonly-secondaryColor: #0d122c;
   --olt-readonly-error: #fd5952;
   --olt-readonly-success: #02bf1b;
   --olt-readonly-info: #46b4cd;
