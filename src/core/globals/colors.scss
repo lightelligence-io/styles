@@ -37,7 +37,7 @@ $_default_shades: (0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8);
 :root {
   @include export-color('primary');
 
-  --olt-readonly-secondary: #{get-color('secondary')};
+  --olt-readonly-secondaryColor: #{get-color('secondary')};
   --olt-readonly-error: #{get-color('error')};
   --olt-readonly-success: #{get-color('success')};
   --olt-readonly-info: #{get-color('info')};
