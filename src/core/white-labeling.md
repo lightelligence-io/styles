@@ -58,6 +58,26 @@ below on how to properly use the white labeling feature with JavaScript.
   --olt-primaryColor-secondary-40: #6e341a;
   --olt-primaryColor-secondary-80: #cf5509;
 
+  /**
+   * Color that are exposed as read-only.
+   */
+  --olt-readonly-secondaryColor: #0d122c;
+  --olt-readonly-errorColor: #fd5952;
+  --olt-readonly-successColor: #02bf1b;
+  --olt-readonly-infoColor: #46b4cd;
+  --olt-readonly-warningColor: #ffc94d;
+  --olt-readonly-lightColor: #fff;
+  --olt-readonly-darkColor: #000;
+  --olt-readonly-gray100Color: #f5f6f8;
+  --olt-readonly-gray200Color: #e9ecef;
+  --olt-readonly-gray300Color: #e3e4e5;
+  --olt-readonly-gray400Color: #d0d1d3;
+  --olt-readonly-gray500Color: #a7a8aa;
+  --olt-readonly-gray600Color: #58585a;
+  --olt-readonly-gray700Color: #343a40;
+  --olt-readonly-gray800Color: #2e3338;
+  --olt-readonly-gray900Color: #212529;
+
 }
 ```
 
