@@ -68,15 +68,15 @@ below on how to properly use the white labeling feature with JavaScript.
   --olt-readonly-warningColor: #ffc94d;
   --olt-readonly-lightColor: #fff;
   --olt-readonly-darkColor: #000;
-  --olt-readonly-gray100: #f5f6f8;
-  --olt-readonly-gray200: #e9ecef;
-  --olt-readonly-gray300: #e3e4e5;
-  --olt-readonly-gray400: #d0d1d3;
-  --olt-readonly-gray500: #a7a8aa;
-  --olt-readonly-gray600: #58585a;
-  --olt-readonly-gray700: #343a40;
-  --olt-readonly-gray800: #2e3338;
-  --olt-readonly-gray900: #212529;
+  --olt-readonly-gray100Color: #f5f6f8;
+  --olt-readonly-gray200Color: #e9ecef;
+  --olt-readonly-gray300Color: #e3e4e5;
+  --olt-readonly-gray400Color: #d0d1d3;
+  --olt-readonly-gray500Color: #a7a8aa;
+  --olt-readonly-gray600Color: #58585a;
+  --olt-readonly-gray700Color: #343a40;
+  --olt-readonly-gray800Color: #2e3338;
+  --olt-readonly-gray900Color: #212529;
 
 }
 ```
