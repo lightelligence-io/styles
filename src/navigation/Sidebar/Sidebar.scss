@@ -2,9 +2,15 @@
 
 .Sidebar {
   $self: &;
-  $z-index: 100;
+  $sidebar-z-index: 100;
+  $sidebar-width: 200px;
+  $sidebar-item-default-background: rgba(255, 255, 255, 0.1);
+  $sidebar-item-active-background: rgba(255, 255, 255, 0.2);
+  $sidebar-item-mobile-active-background: get-color('gray100');
+  $sidebar-text-color: get-color('light');
+  $sidebar-mobile-text-color: get-color('gray700');
 
-  width: 200px;
+  width: $sidebar-width;
   position: fixed;
   height: 100%;
   left: 0;
@@ -14,21 +20,7 @@
   justify-content: space-between;
   display: flex;
   flex-direction: column;
-  z-index: $z-index;
-
-  @include screen-up(md) {
-    &:hover {
-      #{$self}-navigation-item.is-active,
-      #{$self}-selector.is-active {
-        background-color: rgba(255, 255, 255, 0.1);
-      }
-
-      #{$self}-navigation-item.is-active:hover,
-      #{$self}-selector.is-active:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-      }
-    }
-  }
+  z-index: $sidebar-z-index;
 
   @include screen-down(sm) {
     width: 100%;
@@ -36,7 +28,13 @@
     padding: 14px 16px;
   }
 
-  &-mobile-menu {
+  //
+  // Mobile Actions
+  //
+  // Display the close button of the main sidebar
+  //
+
+  &-mobile-actions {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -51,14 +49,9 @@
   // Navigation
   //
 
-  &-navigation {
-    width: 100%;
-  }
-
   &-navigation-item {
     @extend .u-description;
 
-    color: get-color('light');
     height: 32px;
     border-radius: 4px;
     display: flex;
@@ -67,26 +60,12 @@
     padding: 0 12px;
     transition: background-color 0.1s;
 
-    @include screen-down(sm) {
-      color: get-color('gray700');
-    }
-
     & + & {
       margin-top: 2px;
     }
 
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-
-      &:before {
-        opacity: 1;
-      }
-    }
-
     &:before {
-      @extend .Icon;
-
-      @extend .Icon--medium;
+      @extend .Icon, .Icon--medium;
 
       opacity: 0.5;
       margin-right: 8px;
@@ -96,11 +75,13 @@
         opacity: 1;
         color: get-color('gray500');
       }
+
+      &:hover {
+        opacity: 1;
+      }
     }
 
     &.is-active {
-      background-color: rgba(255, 255, 255, 0.2);
-
       &:before {
         opacity: 1;
 
@@ -111,10 +92,6 @@
 
       & + #{$self}-subnavigation {
         display: block;
-      }
-
-      @include screen-down(sm) {
-        background-color: get-color('gray100');
       }
     }
   }
@@ -132,15 +109,10 @@
   &-subnavigation-item {
     @extend .u-description;
 
-    color: get-color('light');
     display: flex;
     padding-left: 12px;
     text-decoration: none;
     border-left: 2px solid transparent;
-
-    @include screen-down(sm) {
-      color: get-color('gray700');
-    }
 
     & + & {
       margin-top: 8px;
@@ -148,11 +120,7 @@
 
     &.is-active {
       font-weight: bold;
-      border-left-color: get-color('light');
-
-      @include screen-down(sm) {
-        border-left-color: get-color('gray700');
-      }
+      border-left-color: currentColor;
     }
   }
 
@@ -177,30 +145,13 @@
   //
 
   &-selector {
-    background: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
     padding: 8px 6px;
-    color: get-color('light');
     width: 100%;
     border: none;
     text-align: left;
     cursor: pointer;
     margin: 0;
-
-    @include screen-down(sm) {
-      color: get-color('gray700');
-      background-color: get-color('gray100');
-    }
-
-    @include screen-up(md) {
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-      }
-
-      &.is-active {
-        background-color: rgba(255, 255, 255, 0.2);
-      }
-    }
 
     & + & {
       margin-top: 12px;
@@ -250,9 +201,6 @@
   //
   // Selector / Property
   //
-
-  &-selector--property {
-  }
 
   &-selector--property-title {
     @extend .u-description;
@@ -346,7 +294,7 @@
     transform: translateX(-100%);
     display: flex;
     flex-direction: column;
-    z-index: $z-index - 1;
+    z-index: $sidebar-z-index - 1;
     transition: transform 0.2s, box-shadow 0.1s;
 
     &.is-open {
@@ -359,7 +307,7 @@
       width: 100%;
       left: 0;
       box-shadow: none;
-      z-index: $z-index + 1;
+      z-index: $sidebar-z-index + 1;
 
       &.is-hidden {
         transform: translateX(+100%);
@@ -382,5 +330,69 @@
   &--secondary-header {
     background: get-color('gray100');
     padding: 23px;
+  }
+
+  //
+  // Colors
+  //
+
+  color: $sidebar-text-color;
+
+  @include screen-down(sm) {
+    color: $sidebar-mobile-text-color;
+  }
+
+  &-selector,
+  &-navigation-item,
+  &-subnavigation-item {
+    color: $sidebar-text-color;
+
+    @include screen-down(sm) {
+      color: $sidebar-mobile-text-color;
+    }
+  }
+
+  //
+  // Backgrounds
+  //
+
+  &-selector {
+    background-color: $sidebar-item-default-background;
+
+    @include screen-down(sm) {
+      background-color: $sidebar-item-mobile-active-background;
+    }
+  }
+
+  &-selector,
+  &-navigation-item {
+    &.is-active {
+      background-color: $sidebar-item-active-background;
+
+      @include screen-down(sm) {
+        background-color: $sidebar-item-mobile-active-background;
+      }
+    }
+
+    &:hover {
+      @include screen-up(md) {
+        background-color: $sidebar-item-active-background;
+      }
+    }
+  }
+
+  @include screen-up(md) {
+    // When the user hovers on the sidebar the currently active item transitions
+    // to it's default background
+    &:hover {
+      #{$self}-navigation-item.is-active,
+      #{$self}-selector.is-active {
+        background-color: $sidebar-item-default-background;
+
+        &:hover {
+          background-color: $sidebar-item-active-background;
+        }
+      }
+    }
   }
 }

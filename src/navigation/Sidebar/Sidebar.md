@@ -18,7 +18,7 @@ body {
 
 .wrapper {
   min-height: 100vh;
-  height: 500px;
+  height: 800px;
 }
 ```
 
@@ -54,7 +54,7 @@ actionItems.forEach( item => item.addEventListener('click', event => {
 <div class="olt-u-backgroundColorGray200 wrapper">
   <aside class="olt-Sidebar">
     <div class="olt-Sidebar-top">
-      <div class="olt-Sidebar-mobile-menu">
+      <div class="olt-Sidebar-mobile-actions">
          <button class="olt-ActionButton olt-ActionButton--default olt-ActionButton-icon-left olt-ActionButton--standalone olt-ActionButton--base olt-Icon-close">
          </button>
       </div>
