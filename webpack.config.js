@@ -80,55 +80,6 @@ module.exports = {
               // for the icons.
               //
               data: [addIconsVariable()].join('\n'),
-              transformers: [
-                {
-                  extensions: ['.yml'],
-                  transform: (source) => {
-                    const theme = yaml.load(source);
-                    const getters = Object.assign(
-                      {},
-                      ...Object.entries(theme).map(([prop, value]) => ({
-                        [prop]:
-                          typeof value === 'object'
-                            ? Object.assign(
-                                {},
-                                ...Object.entries(value).map(
-                                  ([key, value]) => ({
-                                    [key]: `#{var-get('${prop}${pascalize(
-                                      key,
-                                    )}')}`,
-                                  }),
-                                ),
-                              )
-                            : `#{var-get('${prop}')}`,
-                      })),
-                    );
-                    const variables = {
-                      varPrefix: 'olt-',
-                      varStyle: 'camelCase',
-                    };
-                    const content = `\n${Object.entries(variables)
-                      .map(
-                        ([key, value]) => `\t$${decamelize(key)}: '${value}'`,
-                      )
-                      .join(';\n')}\n:root {\n${Object.entries(theme)
-                      .map(([key, value]) => {
-                        value =
-                          typeof value === 'object'
-                            ? `(\n${Object.entries(value)
-                                .map(([key, value]) => `\t\t${key}: ${value}`)
-                                .join(',\n')}\n)`
-                            : `${value}`;
-                        value = template(value, getters);
-
-                        return `\t@include var-set('${key}', ${value})`;
-                      })
-                      .join(';\n')}}`;
-
-                    return content;
-                  },
-                },
-              ],
             },
           },
         ],

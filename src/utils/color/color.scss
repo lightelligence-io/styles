@@ -1,17 +1,11 @@
+$colors: get-colors();
+
 @each $breakpoint in map-keys(screen-get()) {
   $infix: screen-infix($breakpoint);
 
   @include screen-up($breakpoint) {
-    // Colors
-    @each $name, $value in var-get('color') {
+    @each $name, $value in $colors {
       .u-#{$infix}color#{string-capitalize($name)} {
-        color: $value !important;
-      }
-    }
-
-    // Grays
-    @each $name, $value in var-get('gray') {
-      .u-#{$infix}colorGray#{string-capitalize($name)} {
         color: $value !important;
       }
     }

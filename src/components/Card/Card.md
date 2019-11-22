@@ -120,38 +120,38 @@ body > div.olt-Frame { min-height: 280px; background-color: lightgrey; padding: 
 ## Colors
 
 The *Cards* can be rendered with
-[any of our conceptual colors](/#concepts-colors) :
+[any of our background colors](/#background-color) :
 
 ```colors.css hidden
 body > div.olt-Frame { display: flex; }
 ```
 
 ```colors.html
-<div class="olt-Card olt-Card--primary olt-u-marginRight2">
+<div class="olt-Card olt-u-backgroundColorPrimary olt-u-colorLight olt-u-marginRight2">
   <div class="olt-Card-header">
     <h4 class="olt-Card-title">Primary</h4>
   </div>
   <div class="olt-Card-content">Card component</div>
 </div>
-<div class="olt-Card olt-Card--secondary olt-u-marginRight2">
+<div class="olt-Card olt-u-backgroundColorSecondary olt-u-colorLight olt-u-marginRight2">
   <div class="olt-Card-header">
     <h4 class="olt-Card-title">Secondary</h4>
   </div>
   <div class="olt-Card-content">Card component</div>
 </div>
-<div class="olt-Card olt-Card--info olt-u-marginRight2">
+<div class="olt-Card olt-u-backgroundColorInfo olt-u-colorLight olt-u-marginRight2">
   <div class="olt-Card-header">
     <h4 class="olt-Card-title">Info</h4>
   </div>
   <div class="olt-Card-content">Card component</div>
 </div>
-<div class="olt-Card olt-Card--error olt-u-marginRight2">
+<div class="olt-Card olt-u-backgroundColorError olt-u-colorLight olt-u-marginRight2">
   <div class="olt-Card-header">
     <h4 class="olt-Card-title">Error</h4>
   </div>
   <div class="olt-Card-content">Card component</div>
 </div>
-<div class="olt-Card olt-Card--success">
+<div class="olt-Card olt-u-backgroundColorSuccess olt-u-colorLight">
   <div class="olt-Card-header">
     <h4 class="olt-Card-title">Success</h4>
   </div>
@@ -206,22 +206,30 @@ body > div.olt-Frame { padding: 20px; margin: auto; background-color: lightgrey;
 </div>
 ```
 
-## Popup Card
+## Nested Cards
 
-By adding `olt-Card--popup` you can create a card looking like a popup menu (used for filters). This will add a shadow to it.
+Nested Cards will be shown with a border around them.
 
-```popup.css hidden
+```nested.css hidden
 body > div.olt-Frame { min-height: 130px; }
 ```
 
-```popup.html
-<div class="olt-Card olt-Card--popup">
+```nested.html
+<div class="olt-Card">
   <div class="olt-Card-header">
     <h4 class="olt-Card-title">Title</h4>
     <div class="olt-Card-description">Description</div>
   </div>
   <div class="olt-Card-content">
-    Content
+    <div class="olt-Card">
+      <div class="olt-Card-header">
+        <h4 class="olt-Card-title">Title</h4>
+        <div class="olt-Card-description">Description</div>
+      </div>
+      <div class="olt-Card-content">
+        Content
+      </div>
+    </div>
   </div>
 </div>
 ```

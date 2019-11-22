@@ -18,7 +18,7 @@
 - NPM package renamed to @lightelligence/styles
 
 #v0.6.0
-- added: new DataCards component
+- added: new CardTable component
 - added: FloatingList component
 - fixed: add workaround for known css calc issue and cssnano
 
@@ -88,8 +88,18 @@
 - Chore: Package Update
 
 #v1.0.0-alpha.6
-- Feature: filter component 
+- Feature: filter component
 - Feature: dropdown component
 - Feature: input list component
 - Feature: icon font is now generated
-- Feature: white labeling 
+- Feature: white labeling
+
+#v1.0.0-rc.1
+- Chore: Remove Components: Dropdown, Menu, MenuItem, ModalContent, ModalFooter, Navbar, Snackbar, Stepper, Tag, Table, SelectField, TextField
+- Chore: Rename to replace old Components: V2Container, V2Grid, V2Button, V2Modal, V2Tab, V2Tabs, V2Checkbox, V2Radio, V2Select, V2Input
+- Chore: Rename for clarity: DataCards -> CardTable
+- Chore: code cleanups
+
+#v1.0.0-rc.1
+- Fix: dark background of cards
+- Fix: Handlebars Vulnerability

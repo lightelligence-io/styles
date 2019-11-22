@@ -18,8 +18,6 @@
     content: '';
   }
 
-  @include contextual-colors(('color'));
-
   // The $icon variable is defined in our `webpack.config.js`. It stores all
   // files from `/src/icons/` directory.
   @each $file in $icons {

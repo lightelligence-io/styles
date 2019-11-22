@@ -35,11 +35,11 @@ It supports all of our [conceptual colors](/#concepts-colors) :
 | `olt-u-colorGray900`   | <div class="olt-u-backgroundColorGray900 demo-circle"></div>   |
 
 ```examples.html
-<div class="olt-u-colorPrimary olt-u-padding2 olt-u-marginBottom2">Primary</div>
-<div class="olt-u-colorSecondary olt-u-padding2 olt-u-marginBottom2">Secondary</div>
-<div class="olt-u-colorInfo olt-u-padding2 olt-u-marginBottom2">Info</div>
-<div class="olt-u-colorError olt-u-padding2 olt-u-marginBottom2">Error</div>
-<div class="olt-u-colorSuccess olt-u-padding2 olt-u-marginBottom2">Success</div>
+<div class="olt-u-colorPrimary olt-u-padding8 olt-u-marginBottom2">Primary</div>
+<div class="olt-u-colorSecondary olt-u-padding8 olt-u-marginBottom2">Secondary</div>
+<div class="olt-u-colorInfo olt-u-padding8 olt-u-marginBottom2">Info</div>
+<div class="olt-u-colorError olt-u-padding8 olt-u-marginBottom2">Error</div>
+<div class="olt-u-colorSuccess olt-u-padding8 olt-u-marginBottom2">Success</div>
 ```
 
 ## Responsive
@@ -52,6 +52,6 @@ It supports all of our [conceptual colors](/#concepts-colors) :
 |     sm | `olt-u-sm-colorSecondary` | Will set secondary the color on the element when rendered on a small screen       |
 |     md | `olt-u-md-colorPrimary`   | Will set primary the color on the element when rendered on a medium sized screen  |
 |     lg | `olt-u-lg-colorError`     | Will set error the color on the element when rendered on a large screen           |
-|     xl | `olt-u-xl-colorInfo`      | Will set info the color on the element when rendered on extra large screen        | 
+|     xl | `olt-u-xl-colorInfo`      | Will set info the color on the element when rendered on extra large screen        |
 
 

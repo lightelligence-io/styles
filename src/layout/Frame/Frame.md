@@ -43,7 +43,7 @@ document.querySelector("body > div.olt-Frame").classList.remove("olt-Frame");
 ```layout.html
 <div class="olt-Frame" style="height: 400px">
   <div class="olt-Frame-body">
-    <header class="olt-Frame-header olt-u-backgroundColorDark olt-u-colorLight olt-u-textLight olt-u-padding3 olt-u-marginBottom5">
+    <header class="olt-Frame-header olt-u-backgroundColorDark olt-u-colorLight olt-u-textLight olt-u-padding16 olt-u-marginBottom5">
       A simple header
     </header>
     <main class="olt-Frame-main">
@@ -58,7 +58,7 @@ document.querySelector("body > div.olt-Frame").classList.remove("olt-Frame");
         </div>
       </div>
     </main>
-    <footer class="olt-Frame-footer olt-u-borderTop olt-u-padding3">
+    <footer class="olt-Frame-footer olt-u-borderTop olt-u-padding16">
       Footer &copy; OSRAM GmbH
     </footer>
   </div>

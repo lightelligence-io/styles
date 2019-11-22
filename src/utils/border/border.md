@@ -10,7 +10,7 @@ category: Utilities
 ## Description
 
 Border utility can be used to set `border` property of an element. It sets the
-default border width and the default border color and can be easily combined 
+default border width and the default border color and can be easily combined
 with [Border Color](/#border-color) utility.
 
 > The default border-width is `1px` and the default border color is `#e3e4e5`
@@ -29,7 +29,7 @@ with [Border Color](/#border-color) utility.
 | `olt-u-borderLeftNone`   | `border-left: none;`                |
 
 ```example.html
-<div class="olt-u-border olt-u-padding2 olt-u-marginBottom2">An element with a border</div>
+<div class="olt-u-border olt-u-padding8 olt-u-marginBottom2">An element with a border</div>
 <div style="border: 1px solid blue" class="olt-u-borderNone">An element without border</div>
 ```
 
@@ -43,5 +43,5 @@ Border can also be used with the default screen [prefixes](/#screen) :
 |     sm | `olt-u-sm-borderTop`        | Will set top border the element when rendered on a small screen          |
 |     md | `olt-u-md-borderNone`       | Will remove border of the element when rendered on a medium sized screen |
 |     lg | `olt-u-lg-borderBottomNone` | Will remove bottom border of the element when rendered on a large screen |
-|     xl | `olt-u-xl-borderLeft`       | Will set left border on the element when rendered on extra large screen  | 
+|     xl | `olt-u-xl-borderLeft`       | Will set left border on the element when rendered on extra large screen  |
 

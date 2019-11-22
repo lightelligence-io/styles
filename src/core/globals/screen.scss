@@ -43,14 +43,5 @@ $screen-style: $olt-screen-style;
   }
 }
 
-$olt-v1-breakpoints: (
-  xs: var-get-value(breakpoint xs),
-  sm: var-get-value(breakpoint sm),
-  md: var-get-value(breakpoint md),
-  lg: var-get-value(breakpoint lg),
-  xl: var-get-value(breakpoint xl),
-);
-
-// Breakpoints
-@include screen-set($olt-v1-breakpoints, $olt-v1-prefix, $olt-screen-style);
+@include screen-set($olt-breakpoints, $olt-v1-prefix, $olt-screen-style);
 

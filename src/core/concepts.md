@@ -64,7 +64,7 @@ omitting trigger elements and control state classes via Javascript.
 
 ## Colors
 
-We support a set of *Contextual Colors*
+We support a set of *Colors*
 
 | Color                                                          | Name            | Utility Class          |
 |:--------------------------------------------------------------:|:----------------|:-----------------------|

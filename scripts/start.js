@@ -1,7 +1,6 @@
 const stylemark = require('stylemark');
 const watch = require('watch');
 const args = require('yargs').argv;
-const nrc = require('node-run-cmd');
 const bs = require('browser-sync').create();
 const path = require('path');
 const fs = require('fs');
