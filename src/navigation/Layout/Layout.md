@@ -149,44 +149,112 @@ actionItems.forEach( item => item.addEventListener('click', event => {
   </aside>
    <div class="olt-Layout-overlay"></div>
    <div class="olt-Layout-body">
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
-     <div class="olt-Card">Foo</div>
+      <div class="olt-Grid">
+        <div class="olt-Grid-item olt-Grid-item--6">
+          <div class="olt-Card">
+            <div class="olt-Card-header">
+              <h4 class="olt-Card-title">
+                Devices
+              </h4>
+              <div class="olt-Card-description">
+                Overview of added Devices
+              </div>
+            </div>
+            <div class="olt-Card-content">
+              This is column 1
+              <br /><br /><br /><br /><br /><br />
+              <br /><br /><br /><br /><br /><br />
+            </div>
+          </div>
+        </div>
+        <div class="olt-Grid-item olt-Grid-item--6">
+          <div class="olt-Card">
+            <div class="olt-Card-header">
+              <h4 class="olt-Card-title">
+                Layers
+              </h4>
+              <div class="olt-Card-description">
+                Current 0 values
+              </div>
+            </div>
+            <div class="olt-Card-content">
+              This is column 2
+              <br /><br /><br /><br /><br /><br />
+              <br /><br /><br /><br /><br /><br />
+            </div>
+          </div>
+        </div>
+        <div class="olt-Grid-item olt-Grid-item--6">
+          <div class="olt-Card">
+            <div class="olt-Card-header">
+              <h4 class="olt-Card-title">
+                The connector
+              </h4>
+              <div class="olt-Card-description">
+                Additional information
+              </div>
+            </div>
+            <div class="olt-Card-content">
+              This is column 3
+              <br /><br /><br /><br /><br /><br />
+              <br /><br /><br /><br /><br /><br />
+              <br /><br /><br /><br /><br /><br />
+            </div>
+          </div>
+        </div>
+        <div class="olt-Grid-item olt-Grid-item--6">
+          <div class="olt-Card">
+            <div class="olt-Card-header">
+              <h4 class="olt-Card-title">
+                Contact
+              </h4>
+              <div class="olt-Card-description">
+                Maintenance
+              </div>
+            </div>
+            <div class="olt-Card-content">
+              This is column 4
+              <br /><br /><br /><br /><br /><br />
+              <br /><br /><br /><br /><br /><br />
+              <br /><br /><br /><br /><br /><br />
+            </div>
+          </div>
+        </div>
+        <div class="olt-Grid-item olt-Grid-item--6">
+          <div class="olt-Card">
+            <div class="olt-Card-header">
+              <h4 class="olt-Card-title">
+                Devices
+              </h4>
+              <div class="olt-Card-description">
+                Overview of added Devices
+              </div>
+            </div>
+            <div class="olt-Card-content">
+              This is column 1
+              <br /><br /><br /><br /><br /><br />
+              <br /><br /><br /><br /><br /><br />
+            </div>
+          </div>
+        </div>
+        <div class="olt-Grid-item olt-Grid-item--6">
+          <div class="olt-Card">
+            <div class="olt-Card-header">
+              <h4 class="olt-Card-title">
+                Layers
+              </h4>
+              <div class="olt-Card-description">
+                Current 0 values
+              </div>
+            </div>
+            <div class="olt-Card-content">
+              This is column 2
+              <br /><br /><br /><br /><br /><br />
+              <br /><br /><br /><br /><br /><br />
+            </div>
+          </div>
+        </div>
+      </div>
    </div>
 </div>
 ```
