@@ -38,12 +38,12 @@ $_default_shades: (0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8);
   @include export-color('primary');
 
   --olt-readonly-secondaryColor: #{get-color('secondary')};
-  --olt-readonly-error: #{get-color('error')};
-  --olt-readonly-success: #{get-color('success')};
-  --olt-readonly-info: #{get-color('info')};
-  --olt-readonly-warning: #{get-color('warning')};
-  --olt-readonly-light: #{get-color('light')};
-  --olt-readonly-dark: #{get-color('dark')};
+  --olt-readonly-errorColor: #{get-color('error')};
+  --olt-readonly-successColor: #{get-color('success')};
+  --olt-readonly-infoColor: #{get-color('info')};
+  --olt-readonly-warningColor: #{get-color('warning')};
+  --olt-readonly-lightColor: #{get-color('light')};
+  --olt-readonly-darkColor: #{get-color('dark')};
   --olt-readonly-gray100: #{get-color('gray100')};
   --olt-readonly-gray200: #{get-color('gray200')};
   --olt-readonly-gray300: #{get-color('gray300')};
