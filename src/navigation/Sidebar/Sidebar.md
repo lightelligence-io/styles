@@ -24,20 +24,40 @@ body {
 
 ```sidebar.js
 const navigationItems = [...document.querySelectorAll('[data-item]')];
-let activeItem = navigationItems.find((item) =>
-  item.classList.contains('is-active'),
-);
-navigationItems.forEach( item => item.addEventListener('click', () => {
-  activeItem.classList.remove('is-active');
+const secondaryItems = [...document.querySelectorAll('[data-name]')];
+const actionItems = [...document.querySelectorAll('[data-action]')];
+navigationItems.forEach( item => item.addEventListener('click', event => {
+  event.preventDefault();
+  const name = item.getAttribute('data-item');
+  secondaryItems.forEach( item => {
+    item.classList.remove('is-open');
+    item.classList.remove('is-hidden');
+    if ( item.getAttribute('data-name') === name ) {
+      item.classList.add('is-open');
+    }
+  } );
+  if ( item.classList.contains('is-active') ) { return; }
+  navigationItems.forEach( item => item.classList.remove('is-active') );
   item.classList.add('is-active');
-  activeItem = item;
 }));
+actionItems.forEach( item => item.addEventListener('click', event => {
+  if ( item.getAttribute('data-action') === "back" ) {
+    const activeSecondaryItem = secondaryItems
+       .find( item => item.classList.contains('is-open') );
+    activeSecondaryItem.classList.add('is-hidden');
+  }
+}));
+
 ```
 
 ```sidebar.html
 <div class="olt-u-backgroundColorGray200 wrapper">
   <aside class="olt-Sidebar">
     <div class="olt-Sidebar-top">
+      <div class="olt-Sidebar-mobile-menu">
+         <button class="olt-ActionButton olt-ActionButton--default olt-ActionButton-icon-left olt-ActionButton--standalone olt-ActionButton--base olt-Icon-close">
+         </button>
+      </div>
       <button class="olt-Sidebar-selector olt-Sidebar-selector--filter" data-item="filter">
         <div class="olt-Sidebar-selector--filter-title">Filter</div>
         <div class="olt-Sidebar-selector--filter-filters">
@@ -73,9 +93,26 @@ navigationItems.forEach( item => item.addEventListener('click', () => {
       </button>
     </div>
   </aside>
-  <aside class="olt-Sidebar--secondary is-open">
+  <aside class="olt-Sidebar--secondary" data-name="tenant">
+    <div class="olt-Sidebar--secondary-mobile-menu">
+       <button class="olt-ActionButton olt-ActionButton--default olt-ActionButton-icon-left olt-ActionButton--standalone olt-ActionButton--base olt-Icon-chevron-left" data-action="back">
+       </button>
+       <button class="olt-ActionButton olt-ActionButton--default olt-ActionButton-icon-left olt-ActionButton--standalone olt-ActionButton--base olt-Icon-close" data-action="close">
+       </button>
+    </div>
     <div class="olt-Sidebar--secondary-header">
        Tenants
+    </div>
+  </aside>
+  <aside class="olt-Sidebar--secondary" data-name="property">
+    <div class="olt-Sidebar--secondary-mobile-menu">
+       <button class="olt-ActionButton olt-ActionButton--default olt-ActionButton-icon-left olt-ActionButton--standalone olt-ActionButton--base olt-Icon-chevron-left" data-action="back">
+       </button>
+       <button class="olt-ActionButton olt-ActionButton--default olt-ActionButton-icon-left olt-ActionButton--standalone olt-ActionButton--base olt-Icon-close" data-action="close">
+       </button>
+    </div>
+    <div class="olt-Sidebar--secondary-header">
+       Property
     </div>
   </aside>
 </div>
