@@ -1,0 +1,68 @@
+@import '../../core/functions/color';
+
+.Layout {
+  $self: &;
+
+  min-height: calc(100vh - 64px);
+  background-color: get-color('gray200');
+
+  .Header {
+    z-index: 100;
+  }
+
+  .Sidebar {
+    top: 64px;
+    height: calc(100% - 64px);
+    transition: transform 0.1s;
+
+    @include screen-down(sm) {
+      top: 0;
+      height: 100%;
+      transform: translateX(-100%);
+
+      &.is-open {
+        transform: translateX(0);
+      }
+    }
+
+    &--secondary {
+      top: 64px;
+      height: calc(100% - 64px);
+
+      @include screen-down(sm) {
+        top: 0;
+        height: 100%;
+      }
+
+      &.is-open ~ #{$self}-overlay {
+        display: block;
+        opacity: 1;
+      }
+    }
+  }
+
+  &-overlay {
+    backdrop-filter: blur(10px);
+    background-color: rgba(13, 18, 44, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 80;
+    transition: opacity 0.1s;
+    opacity: 0;
+    display: none;
+  }
+
+  &-body {
+    margin-top: 64px;
+    padding: 20px;
+    margin-left: 200px;
+    min-height: 100%;
+
+    @include screen-down(sm) {
+      margin-left: 0;
+    }
+  }
+}
