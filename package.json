@@ -1,6 +1,6 @@
 {
   "name": "@lightelligence/styles",
-  "version": "1.0.0-rc.2",
+  "version": "1.0.0-rc.3",
   "description": "The UI-Framework of the lightelligence-platform.",
   "license": "MIT",
   "main": "dist/index.js",
