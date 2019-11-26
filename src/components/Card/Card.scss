@@ -72,7 +72,7 @@
   }
 
   &:not(#{$self}--primary):not(#{$self}--secondary) &-description {
-    color: get-color('gray600');
+    color: get-color('gray500');
   }
 
   &-action {
