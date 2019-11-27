@@ -100,6 +100,10 @@
 - Chore: Rename for clarity: DataCards -> CardTable
 - Chore: code cleanups
 
-#v1.0.0-rc.1
+#v1.0.0-rc.2
 - Fix: dark background of cards
 - Fix: Handlebars Vulnerability
+
+#v1.0.0-rc.3
+- Feat: navigation
+- Feat: read-only colors are exposed as css custom properties
