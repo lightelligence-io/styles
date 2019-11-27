@@ -17,7 +17,8 @@ It supports all of our [conceptual colors](/#concepts-colors) :
 
 | Class name                       | Sets background color to                                     |
 |:---------------------------------|:-------------------------------------------------------------|
-| `olt-u-backgroundColorSecondary` | <div class="olt-u-backgroundColorPrimary demo-circle"></div> |
+| `olt-u-backgroundColorPrimary`   | <div class="olt-u-backgroundColorPrimary demo-circle"></div> |
+| `olt-u-backgroundColorSecondary` | <div class="olt-u-backgroundColorSecondary demo-circle"></div>|
 | `olt-u-backgroundColorInfo`      | <div class="olt-u-backgroundColorInfo demo-circle"></div>    |
 | `olt-u-backgroundColorError`     | <div class="olt-u-backgroundColorError demo-circle"></div>   |
 | `olt-u-backgroundColorSuccess`   | <div class="olt-u-backgroundColorSuccess demo-circle"></div> |
