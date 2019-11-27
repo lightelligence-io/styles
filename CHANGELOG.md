@@ -105,5 +105,10 @@
 - Fix: Handlebars Vulnerability
 
 #v1.0.0-rc.3
-- Feat: navigation
-- Feat: read-only colors are exposed as css custom properties
+- Feature: navigation
+- Feature: read-only colors are exposed as css custom properties
+
+#v1.0.0-rc.4
+- Fix: change card description color to gray500
+- Fix: change EditCard button default color to gray
+- Fix: background color docs
