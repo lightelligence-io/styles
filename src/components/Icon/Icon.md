@@ -17,7 +17,6 @@ component occupies `olt-Icon*` class names and can be used with `<i>` element.
     </div>
   </div>
   <div class="olt-CardTable-body">
-    <!-- Account -->
     <div class="olt-CardTable-card">
       <div class="olt-CardTable-cardItem olt-CardTable--tableCellWidth90">
         <div class="olt-CardTable-title">Icons</div>
@@ -439,7 +438,7 @@ For decorative and non-interactive icons (e.g. input fields) the default is gray
 ```colors-general.html
 <div class="olt-Grid olt-u-alignItemsCenter">
   <div class="olt-Grid-item olt-Grid-item--3">
-    <b>primary</b><br>
+    <b>primary</b><br />
     interactive icons
   </div>
   <div class="olt-Grid-item olt-Grid-item--9">
@@ -448,7 +447,7 @@ For decorative and non-interactive icons (e.g. input fields) the default is gray
     <i class="olt-Icon olt-u-colorPrimary olt-Icon-resize"></i>
   </div>
   <div class="olt-Grid-item olt-Grid-item--3">
-    <b>gray 500</b><br>
+    <b>gray 500</b><br />
     used for decorations
   </div>
   <div class="olt-Grid-item olt-Grid-item--9">

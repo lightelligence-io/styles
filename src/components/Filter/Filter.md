@@ -10,7 +10,7 @@ You can use the *Filter* component to show a dropdown that opens a filter popup 
 
 ```basic.html
 <div class="olt-Card">
-  <input data-toggle="dropdown" id="dropdown-toggle-1" type="checkbox">
+  <input data-toggle="dropdown" id="dropdown-toggle-1" type="checkbox" />
   <label class="olt-Label olt-Label--floating" for="dropdown-toggle-1">
     <div class="olt-Filter">
       <div class="olt-Label-text">Filter</div>
@@ -46,7 +46,7 @@ You can add any element inside the filters dropdown. The `--active` modifier ide
 
 ```checkboxfilter.html
 <div class="olt-Card">
-  <input data-toggle="dropdown" id="dropdown-toggle-1" type="checkbox">
+  <input data-toggle="dropdown" id="dropdown-toggle-1" type="checkbox" />
   <label class="olt-Label olt-Label--floating" for="dropdown-toggle-1">
     <div class="olt-Filter olt-Filter--active">
       <div class="olt-Label-text">Filter</div>

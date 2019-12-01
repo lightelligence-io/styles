@@ -119,7 +119,7 @@ Contrasting levels of emphasis help the user to differentiate between important 
       <div class="olt-Grid-item olt-Grid-item--3">
         <div class="demo-title">Tertiary</div>
         <div class="demo-subtitle">
-          Less important actions<br>(Text, Gray 500)
+          Less important actions<br />(Text, Gray 500)
         </div>
         <div class="olt-Card">
           <div class="olt-Card-content">
@@ -305,7 +305,7 @@ Contrasting levels of emphasis help the user to differentiate between important 
       <div class="olt-Grid-item olt-Grid-item--3">
         <div class="demo-title">Tertiary</div>
         <div class="demo-subtitle">
-          Less important actions<br>(Text, Gray 500)
+          Less important actions<br />(Text, Gray 500)
         </div>
         <div class="olt-Card olt-Card--dark">
           <div class="olt-Card-content">
@@ -462,7 +462,7 @@ Buttons for destructive actions are available with three levels of emphasis and 
       <div class="olt-Grid-item olt-Grid-item--3">
         <div class="demo-title">Secondary</div>
         <div class="demo-subtitle demo-subtitle-large">
-          Destructive action as a possibility but not the only option available.<br> A warning in form of a <strong><i>Modal</i></strong> is necessary to prevent an unexpected outcome.
+          Destructive action as a possibility but not the only option available.<br /> A warning in form of a <strong><i>Modal</i></strong> is necessary to prevent an unexpected outcome.
         </div>
         <div class="olt-Card">
           <div class="olt-Card-content">
@@ -497,7 +497,7 @@ Buttons for destructive actions are available with three levels of emphasis and 
       <div class="olt-Grid-item olt-Grid-item--3">
         <div class="demo-title">Tertiary</div>
         <div class="demo-subtitle demo-subtitle-large">
-          Less important destructive actions.<br>A warning in form of a <strong><i>Modal</i></strong> is necessary to prevent an unexpected outcome.
+          Less important destructive actions.<br />A warning in form of a <strong><i>Modal</i></strong> is necessary to prevent an unexpected outcome.
         </div>
         <div class="olt-Card">
           <div class="olt-Card-content">
@@ -600,7 +600,7 @@ Buttons for destructive actions are available with three levels of emphasis and 
       <div class="olt-Grid-item olt-Grid-item--3">
         <div class="demo-title">Secondary</div>
         <div class="demo-subtitle demo-subtitle-large">
-          Destructive action as a possibility but not the only option available.<br> A warning in form of a <strong><i>Modal</i></strong> is necessary to prevent an unexpected outcome.
+          Destructive action as a possibility but not the only option available.<br /> A warning in form of a <strong><i>Modal</i></strong> is necessary to prevent an unexpected outcome.
         </div>
         <div class="olt-Card olt-Card--dark">
           <div class="olt-Card-content">
@@ -638,7 +638,7 @@ Buttons for destructive actions are available with three levels of emphasis and 
       <div class="olt-Grid-item olt-Grid-item--3">
         <div class="demo-title">Tertiary</div>
         <div class="demo-subtitle demo-subtitle-large">
-          Less important destructive actions.<br>A warning in form of a <strong><i>Modal</i></strong> is necessary to prevent an unexpected outcome.
+          Less important destructive actions.<br />A warning in form of a <strong><i>Modal</i></strong> is necessary to prevent an unexpected outcome.
         </div>
         <div class="olt-Card olt-Card--dark">
           <div class="olt-Card-content">

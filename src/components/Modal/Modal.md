@@ -9,7 +9,7 @@ Modals are used with `<div>` elements and render a popup.
 
 <div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
-    <input data-toggle="modal" id="demo-1" type="checkbox">
+    <input data-toggle="modal" id="demo-1" type="checkbox" />
     <label class="olt-Button" for="modal-demo-1">Open</label>
     <div class="olt-Modal">
       <div class="olt-Modal-dialog">
@@ -29,7 +29,7 @@ Modals are used with `<div>` elements and render a popup.
 </div>
 
 ```html
-<input data-toggle="modal" id="modal-toggle-1" type="checkbox">
+<input data-toggle="modal" id="modal-toggle-1" type="checkbox" />
 <label class="olt-Button" for="modal-toggle-1">Open</label>
 <div class="olt-Modal">
   <div class="olt-Modal-dialog">
@@ -66,7 +66,7 @@ user. Especially when proceeding will likely lead to an undesired outcome for th
 
 <div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
-    <input data-toggle="modal" id="demo-2" type="checkbox">
+    <input data-toggle="modal" id="demo-2" type="checkbox" />
     <label class="olt-Button" for="modal-demo-2">Open</label>
     <div class="olt-Modal olt-Modal--critical">
       <div class="olt-Modal-dialog">
@@ -85,7 +85,7 @@ user. Especially when proceeding will likely lead to an undesired outcome for th
 </div>
 
 ```html
-<input data-toggle="modal" id="modal-toggle-2" type="checkbox">
+<input data-toggle="modal" id="modal-toggle-2" type="checkbox" />
 <label class="olt-Button" for="modal-toggle-2">Open</label>
 <div class="olt-Modal olt-Modal--critical">
   <div class="olt-Modal-dialog">
@@ -109,7 +109,7 @@ e.g.: 15 of your devices have not responded, check your device management.
 
 <div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
-    <input data-toggle="modal" id="demo-3" type="checkbox">
+    <input data-toggle="modal" id="demo-3" type="checkbox" />
     <label class="olt-Button" for="modal-demo-3">Open</label>
     <div class="olt-Modal olt-Modal--warning">
       <div class="olt-Modal-dialog">
@@ -128,7 +128,7 @@ e.g.: 15 of your devices have not responded, check your device management.
 </div>
 
 ```html
-<input data-toggle="modal" id="modal-toggle-3" type="checkbox">
+<input data-toggle="modal" id="modal-toggle-3" type="checkbox" />
 <label class="olt-Button" for="modal-toggle-3">Open</label>
 <div class="olt-Modal olt-Modal--warning">
   <div class="olt-Modal-dialog">
@@ -153,7 +153,7 @@ e.g.: You have been invited to a tenant, accept or decline.
 
 <div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
-    <input data-toggle="modal" id="demo-4" type="checkbox">
+    <input data-toggle="modal" id="demo-4" type="checkbox" />
     <label class="olt-Button" for="modal-demo-4">Open</label>
     <div class="olt-Modal olt-Modal--info">
       <div class="olt-Modal-dialog">
@@ -172,7 +172,7 @@ e.g.: You have been invited to a tenant, accept or decline.
 </div>
 
 ```html
-<input data-toggle="modal" id="modal-toggle-4" type="checkbox">
+<input data-toggle="modal" id="modal-toggle-4" type="checkbox" />
 <label class="olt-Button" for="modal-toggle-4">Open</label>
 <div class="olt-Modal olt-Modal--info">
   <div class="olt-Modal-dialog">
@@ -195,7 +195,7 @@ Use the success *Modal* to communicate a success message the user has to be made
 
 <div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
-    <input data-toggle="modal" id="demo-5" type="checkbox">
+    <input data-toggle="modal" id="demo-5" type="checkbox" />
     <label class="olt-Button" for="modal-demo-5">Open</label>
     <div class="olt-Modal olt-Modal--success">
       <div class="olt-Modal-dialog">
@@ -214,7 +214,7 @@ Use the success *Modal* to communicate a success message the user has to be made
 </div>
 
 ```html
-<input data-toggle="modal" id="modal-toggle-5" type="checkbox">
+<input data-toggle="modal" id="modal-toggle-5" type="checkbox" />
 <label class="olt-Button" for="modal-toggle-5">Open</label>
 <div class="olt-Modal olt-Modal--success">
   <div class="olt-Modal-dialog">
@@ -238,7 +238,7 @@ e.g.: Edit the description of a tenant.
 
 <div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
-    <input data-toggle="modal" id="demo-6" type="checkbox">
+    <input data-toggle="modal" id="demo-6" type="checkbox" />
     <label class="olt-Button" for="modal-demo-6">Open</label>
     <div class="olt-Modal olt-Modal--action">
       <div class="olt-Modal-dialog">
@@ -257,7 +257,7 @@ e.g.: Edit the description of a tenant.
 </div>
 
 ```html
-<input data-toggle="modal" id="modal-toggle-6" type="checkbox">
+<input data-toggle="modal" id="modal-toggle-6" type="checkbox" />
 <label class="olt-Button" for="modal-toggle-6">Open</label>
 <div class="olt-Modal olt-Modal--action">
   <div class="olt-Modal-dialog">
@@ -280,7 +280,7 @@ In rare occasions the icon and background color of the header can be individuall
 
 <div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
-    <input data-toggle="modal" id="demo-7" type="checkbox">
+    <input data-toggle="modal" id="demo-7" type="checkbox" />
     <label class="olt-Button" for="modal-demo-7">Open</label>
     <div class="olt-Modal">
       <div class="olt-Modal-dialog">
@@ -300,7 +300,7 @@ In rare occasions the icon and background color of the header can be individuall
 </div>
 
 ```html
-<input data-toggle="modal" id="modal-toggle-7" type="checkbox">
+<input data-toggle="modal" id="modal-toggle-7" type="checkbox" />
 <label class="olt-Button" for="modal-toggle-7">Open</label>
 <div class="olt-Modal olt-Modal--action">
   <div class="olt-Modal-dialog">
@@ -324,7 +324,7 @@ The icon can be changed while keeping the remaining styles. *Also use with care!
 
 <div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
-    <input data-toggle="modal" id="demo-8" type="checkbox">
+    <input data-toggle="modal" id="demo-8" type="checkbox" />
     <label class="olt-Button" for="modal-demo-8">Open</label>
     <div class="olt-Modal olt-Modal--action">
       <div class="olt-Modal-dialog">
@@ -344,7 +344,7 @@ The icon can be changed while keeping the remaining styles. *Also use with care!
 </div>
 
 ```html
-<input data-toggle="modal" id="modal-toggle-8" type="checkbox">
+<input data-toggle="modal" id="modal-toggle-8" type="checkbox" />
 <label class="olt-Button" for="modal-toggle-8">Open</label>
 <div class="olt-Modal olt-Modal--action">
   <div class="olt-Modal-dialog">
@@ -368,7 +368,7 @@ There is an additional wide *Modal* which takes more space when rendered.
 
 <div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
-    <input data-toggle="modal" id="demo-9" type="checkbox">
+    <input data-toggle="modal" id="demo-9" type="checkbox" />
     <label class="olt-Button" for="modal-demo-9">Open</label>
     <div class="olt-Modal olt-Modal--wide">
       <div class="olt-Modal-dialog">
@@ -396,7 +396,7 @@ There is an additional wide *Modal* which takes more space when rendered.
 </div>
 
 ```html
-<input data-toggle="modal" id="modal-toggle-9" type="checkbox">
+<input data-toggle="modal" id="modal-toggle-9" type="checkbox" />
 <label class="olt-Button" for="modal-toggle-9">Open</label>
 <div class="olt-Modal olt-Modal--wide">
   <div class="olt-Modal-dialog">
