@@ -1,0 +1,19 @@
+.root {
+  margin: 15px 0 20px 0;
+  padding: 20px;
+  font-size: 12px;
+}
+
+.code {
+  padding: 0;
+  margin: 15px 0 0 0;
+}
+
+.pre {
+  padding: 20px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  font-family: 'Overpass Mono', monospace;
+}

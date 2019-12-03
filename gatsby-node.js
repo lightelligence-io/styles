@@ -33,15 +33,7 @@ function addIconsVariable() {
   ].join('');
 }
 
-exports.onCreateWebpackConfig = ({
-  stage,
-  getConfig,
-  rules,
-  loaders,
-  actions,
-}) => {
-  // console.log(rules);
-  // console.log(loaders);
+exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
       modules: [path.resolve(root, './'), path.resolve(root, './node_modules')],
@@ -52,45 +44,6 @@ exports.onCreateWebpackConfig = ({
           test: /\.scss$/,
           exclude: /node_modules/,
           use: [
-            // {
-            //   loader: 'file-loader',
-            //   options: {
-            //     name: '[name].css',
-            //     emitFile: false,
-            //   },
-            // },
-            // { loader: 'extract-loader' },
-            // { loader: 'css-loader' },
-            // { loader: 'resolve-url-loader' },
-            {
-              loader: 'postcss-loader',
-              options: {
-                ident: 'postcss',
-                plugins: [
-                  // require('postcss-custom-properties')({
-                  //   preserve: true,
-                  // }),
-                  // require('postcss-custom-media')({
-                  //   preserve: true,
-                  // }),
-                  // require('postcss-modules')({
-                  //   generateScopedName(name, filename, css) {
-                  //     if (name.startsWith('is-') || name.startsWith('has-')) {
-                  //       States are global
-                  //       return name;
-                  //     }
-                  // Otherwise we want a prefix
-                  // return prefix + name;
-                  // },
-                  // }),
-                ],
-              },
-            },
-            //
-            // Since we need the "loader" object for the iconfont-webpack-plugin
-            // and that object is not provided in the postcss.config.js we
-            // have to duplicate the loader above and run it again
-            //
             {
               loader: 'postcss-loader',
               options: {
@@ -116,7 +69,9 @@ exports.onCreateWebpackConfig = ({
                       // Otherwise we want a prefix
                       return prefix + name;
                     },
+                    getJSON() {},
                   }),
+                  require('autoprefixer'),
                 ],
               },
             },

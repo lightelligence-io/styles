@@ -1,0 +1,21 @@
+.root {
+  margin: 0;
+}
+
+.h1 {
+  margin: 10px 0;
+}
+
+.h2 {
+  margin: 8px 0;
+}
+
+.h2:not(:first-child) {
+  padding-top: 25px;
+}
+
+.h3,
+.h4,
+.h5 {
+  margin: 8px 0;
+}

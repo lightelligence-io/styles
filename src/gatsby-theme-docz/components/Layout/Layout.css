@@ -1,0 +1,16 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body > div,
+body > div > div {
+  height: 100%;
+  width: 100%;
+}
+
+.docs-layout {
+  padding-left: 80px;
+  padding-right: 80px;
+}

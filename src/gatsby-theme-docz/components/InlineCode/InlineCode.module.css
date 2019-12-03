@@ -1,0 +1,8 @@
+.root {
+  font-family: 'Overpass Mono', monospace;
+  padding: 0 5px;
+  background: #efefef;
+  line-height: 24px;
+  font-size: 14px;
+  color: #2a6b7a;
+}

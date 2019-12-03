@@ -1,0 +1,7 @@
+:global(.olt-CardTable-head) .root {
+  background: none;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100%;
+}
