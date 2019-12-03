@@ -1,10 +1,9 @@
-
 .u {
   &-H500 {
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 32px;
-    font-family: PTSans-Bold;
+    font-family: 'PT Sans', sans-serif;
 
     @media (max-width: map-get($olt-breakpoints, lg)) {
       font-size: 22px;
@@ -19,9 +18,9 @@
 
   &-H400 {
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 24px;
-    font-family: PTSans-Bold;
+    font-family: 'PT Sans', sans-serif;
 
     @media (max-width: map-get($olt-breakpoints, sm)) {
       font-size: 18px;
@@ -31,52 +30,52 @@
 
   &-H300 {
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 18px;
-    font-family: PTSans-Bold;
+    font-family: 'PT Sans', sans-serif;
   }
 
   &-H200 {
     font-size: 14px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 20px;
-    font-family: PTSans-Bold;
+    font-family: 'PT Sans', sans-serif;
   }
 
   &-H100 {
     font-size: 12px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 20px;
-    font-family: PTSans-Bold;
+    font-family: 'PT Sans', sans-serif;
     text-transform: uppercase;
   }
 
   &-content {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 24px;
-    font-family: PTSans-Regular;
+    font-family: 'PT Sans', sans-serif;
   }
 
   &-description {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 18px;
-    font-family: PTSans-Regular;
+    font-family: 'PT Sans', sans-serif;
   }
 
   &-support {
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 14px;
-    font-family: PTSans-Regular;
+    font-family: 'PT Sans', sans-serif;
   }
 
   &-code {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 22px;
-    font-family: 'Overpass Mono', serif;
+    font-family: 'Overpass Mono', monospace;
 
     @media (max-width: map-get($olt-breakpoints, sm)) {
       font-size: 12px;
