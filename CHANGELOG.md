@@ -112,3 +112,7 @@
 - Fix: change card description color to gray500
 - Fix: change EditCard button default color to gray
 - Fix: background color docs
+
+#v1.0.0-rc.5
+- Fix: fonts not properly displayed on firefox
+
