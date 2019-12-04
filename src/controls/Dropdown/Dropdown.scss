@@ -18,6 +18,7 @@ $chevron-size: 6px;
   }
 
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -140,10 +141,15 @@ $chevron-size: 6px;
         opacity: 0;
       }
 
+      & + .Label-text {
+        z-index: 1;
+      }
+
       &--selected > .Label-text {
         top: 11px;
         transform: scale(1);
         letter-spacing: $control-letter-spacing;
+        z-index: 1;
       }
 
       &:before {
