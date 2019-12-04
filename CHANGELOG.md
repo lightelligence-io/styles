@@ -116,3 +116,6 @@
 #v1.0.0-rc.5
 - Fix: fonts not properly displayed on firefox
 
+#v1.0.0-rc.6
+- Fix: table header inconsistencies
+
