@@ -59,51 +59,52 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               ident: 'postcss',
-              plugins: (loader) => [
-                require('iconfont-webpack-plugin')(loader),
-                require('postcss-custom-properties')({
-                  preserve: true,
-                }),
-                require('postcss-custom-media')({
-                  preserve: true,
-                }),
-                require('postcss-modules')({
-                  generateScopedName(name, filename, css) {
-                    if (name.startsWith('is-') || name.startsWith('has-')) {
-                      // States are global
-                      return name;
-                    }
+              plugins: (loader) =>
+                [
+                  require('iconfont-webpack-plugin')(loader),
+                  require('postcss-custom-properties')({
+                    preserve: true,
+                  }),
+                  require('postcss-custom-media')({
+                    preserve: true,
+                  }),
+                  require('postcss-modules')({
+                    generateScopedName(name, filename, css) {
+                      if (name.startsWith('is-') || name.startsWith('has-')) {
+                        // States are global
+                        return name;
+                      }
 
-                    // Otherwise we want a prefix
-                    return prefix + name;
-                  },
-                  getJSON(cssFileName, json, outputFileName) {
-                    json = Object.assign(
-                      {},
-                      ...Object.entries(json).map(([key, value]) => ({
-                        [(key.charAt(0).toUpperCase() === key.charAt(0)
-                          ? pascalize
-                          : camelize)(key)]: value,
-                      })),
-                    );
+                      // Otherwise we want a prefix
+                      return prefix + name;
+                    },
+                    getJSON(cssFileName, json, outputFileName) {
+                      json = Object.assign(
+                        {},
+                        ...Object.entries(json).map(([key, value]) => ({
+                          [(key.charAt(0).toUpperCase() === key.charAt(0)
+                            ? pascalize
+                            : camelize)(key)]: value,
+                        })),
+                      );
 
-                    const filename = path.resolve(dest, 'index.js');
-                    const contents = Object.entries(json)
-                      .map(([key, value]) => `exports.${key} = '${value}';`)
-                      .join('\n');
+                      const filename = path.resolve(dest, 'index.js');
+                      const contents = Object.entries(json)
+                        .map(([key, value]) => `exports.${key} = '${value}';`)
+                        .join('\n');
 
-                    if (!fs.existsSync(dest)) {
-                      fs.mkdirSync(dest);
-                    }
+                      if (!fs.existsSync(dest)) {
+                        fs.mkdirSync(dest);
+                      }
 
-                    fs.writeFileSync(filename, contents);
+                      fs.writeFileSync(filename, contents);
 
-                    return json;
-                  },
-                }),
-                require('autoprefixer'),
-                mode === 'production' && require('cssnano'),
-              ],
+                      return json;
+                    },
+                  }),
+                  require('autoprefixer'),
+                  mode === 'production' ? require('cssnano') : undefined,
+                ].filter((plugin) => !!plugin),
             },
           },
           {
