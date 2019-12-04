@@ -25,6 +25,10 @@
     background: get-color('secondary');
   }
 
+  .Dialog & {
+    border: 1px solid $border-color;
+  }
+
   & & {
     border: 1px solid $border-color;
   }
