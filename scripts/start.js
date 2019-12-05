@@ -42,7 +42,7 @@ const throttle = (key, cb) => {
   cbs[key] = cb;
   setTimeout(() => {
     if (cbs[key] === cb) {
-      cbs[key] === undefined;
+      cbs[key] = undefined;
       cb();
     }
   }, watchDelay);
