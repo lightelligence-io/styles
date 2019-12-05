@@ -93,3 +93,29 @@
 - Feature: input list component
 - Feature: icon font is now generated
 - Feature: white labeling
+
+#v1.0.0-rc.1
+- Chore: Remove Components: Dropdown, Menu, MenuItem, ModalContent, ModalFooter, Navbar, Snackbar, Stepper, Tag, Table, SelectField, TextField
+- Chore: Rename to replace old Components: V2Container, V2Grid, V2Button, V2Modal, V2Tab, V2Tabs, V2Checkbox, V2Radio, V2Select, V2Input
+- Chore: Rename for clarity: DataCards -> CardTable
+- Chore: code cleanups
+
+#v1.0.0-rc.2
+- Fix: dark background of cards
+- Fix: Handlebars Vulnerability
+
+#v1.0.0-rc.3
+- Feature: navigation
+- Feature: read-only colors are exposed as css custom properties
+
+#v1.0.0-rc.4
+- Fix: change card description color to gray500
+- Fix: change EditCard button default color to gray
+- Fix: background color docs
+
+#v1.0.0-rc.5
+- Fix: fonts not properly displayed on firefox
+
+#v1.0.0-rc.6
+- Fix: table header inconsistencies
+

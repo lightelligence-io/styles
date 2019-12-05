@@ -1,11 +1,16 @@
 const path = require('path');
-const yaml = require('js-yaml');
-const template = require('es6-template-strings');
-const { decamelize, pascalize } = require('humps');
 const fs = require('fs');
-
+const { camelize, pascalize } = require('humps');
 const mode = process.env.NODE_ENV || 'development';
 const context = path.resolve(__dirname, 'src');
+const dest = path.resolve(__dirname, 'dist');
+
+/**
+ * Prefix used for our class names
+ *
+ * @type {string}
+ */
+const prefix = 'olt-';
 
 /**
  * Will construct a sass variable that will hold all icons
@@ -54,21 +59,52 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               ident: 'postcss',
-              config: {
-                path: __dirname,
-              },
-            },
-          },
-          //
-          // Since we need the "loader" object for the iconfont-webpack-plugin
-          // and that object is not provided in the postcss.config.js we
-          // have to duplicate the loader above and run it again
-          //
-          {
-            loader: 'postcss-loader',
-            options: {
-              ident: 'postcss',
-              plugins: (loader) => [require('iconfont-webpack-plugin')(loader)],
+              plugins: (loader) =>
+                [
+                  require('iconfont-webpack-plugin')(loader),
+                  require('postcss-custom-properties')({
+                    preserve: true,
+                  }),
+                  require('postcss-custom-media')({
+                    preserve: true,
+                  }),
+                  require('postcss-modules')({
+                    generateScopedName(name, filename, css) {
+                      if (name.startsWith('is-') || name.startsWith('has-')) {
+                        // States are global
+                        return name;
+                      }
+
+                      // Otherwise we want a prefix
+                      return prefix + name;
+                    },
+                    getJSON(cssFileName, json, outputFileName) {
+                      json = Object.assign(
+                        {},
+                        ...Object.entries(json).map(([key, value]) => ({
+                          [(key.charAt(0).toUpperCase() === key.charAt(0)
+                            ? pascalize
+                            : camelize)(key)]: value,
+                        })),
+                      );
+
+                      const filename = path.resolve(dest, 'index.js');
+                      const contents = Object.entries(json)
+                        .map(([key, value]) => `exports.${key} = '${value}';`)
+                        .join('\n');
+
+                      if (!fs.existsSync(dest)) {
+                        fs.mkdirSync(dest);
+                      }
+
+                      fs.writeFileSync(filename, contents);
+
+                      return json;
+                    },
+                  }),
+                  require('autoprefixer'),
+                  mode === 'production' ? require('cssnano') : undefined,
+                ].filter((plugin) => !!plugin),
             },
           },
           {

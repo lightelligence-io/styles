@@ -177,7 +177,7 @@ a.i-sidebar-list-item:hover b {
 }
 
 .theme-content-element-description tr th {
-  font-family: 'Overpass Mono', serif;
+  font-family: 'Overpass Mono', monospace;
   font-weight: 400;
   border: 0;
   color: #58585a;
@@ -196,7 +196,7 @@ a.i-sidebar-list-item:hover b {
 .table {
   border: 0;
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12),
-  0 1px 2px 0 rgba(0, 0, 0, 0.24);
+    0 1px 2px 0 rgba(0, 0, 0, 0.24);
   border-radius: 0.25rem;
   text-align: left;
   transition: box-shadow 0.15s;
@@ -236,7 +236,7 @@ a.i-sidebar-list-item:hover b {
 .i-example {
   border: 0;
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12),
-  0 1px 2px 0 rgba(0, 0, 0, 0.24);
+    0 1px 2px 0 rgba(0, 0, 0, 0.24);
   border-radius: 0.25rem;
   text-align: left;
   transition: box-shadow 0.15s;
@@ -329,7 +329,7 @@ a.i-sidebar-list-item:hover b {
 .demo-label,
 .demo-input-label,
 .demo-textarea-label {
-  font-family: 'Overpass Mono', serif;
+  font-family: 'Overpass Mono', monospace;
   font-size: 12px;
   color: #000;
   letter-spacing: 0;

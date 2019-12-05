@@ -21,6 +21,14 @@
   align-items: unset;
   appearance: none;
 
+  &--dark {
+    background: get-color('secondary');
+  }
+
+  .Dialog & {
+    border: 1px solid $border-color;
+  }
+
   & & {
     border: 1px solid $border-color;
   }
@@ -68,7 +76,7 @@
   }
 
   &:not(#{$self}--primary):not(#{$self}--secondary) &-description {
-    color: get-color('gray600');
+    color: get-color('gray500');
   }
 
   &-action {
