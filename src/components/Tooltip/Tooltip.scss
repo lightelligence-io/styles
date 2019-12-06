@@ -47,8 +47,121 @@
     }
   }
 
+
+  &--primary {
+    background: get-color('primary');
+
+    &:before {
+      border-color: transparent transparent get-color('primary') transparent;
+    }
+  }
+
+  &--secondary {
+    background: get-color('secondary');
+
+    &:before {
+      border-color: transparent transparent get-color('secondary') transparent;
+    }
+  }
+
+  &--info {
+    background: get-color('info');
+
+    &:before {
+      border-color: transparent transparent get-color('info') transparent;
+    }
+  }
+
+  &--error {
+    background: get-color('error');
+
+    &:before {
+      border-color: transparent transparent get-color('error') transparent;
+    }
+  }
+
+  &--success {
+    background: get-color('success');
+
+    &:before {
+      border-color: transparent transparent get-color('success') transparent;
+    }
+  }
+
+  &--gray100 {
+    background: get-color('gray100');
+
+    &:before {
+      border-color: transparent transparent get-color('gray100') transparent;
+    }
+  }
+
+  &--gray200 {
+    background: get-color('gray200');
+
+    &:before {
+      border-color: transparent transparent get-color('gray200') transparent;
+    }
+  }
+
+  &--gray300 {
+    background: get-color('gray300');
+
+    &:before {
+      border-color: transparent transparent get-color('gray300') transparent;
+    }
+  }
+
+  &--gray400 {
+    background: get-color('gray400');
+
+    &:before {
+      border-color: transparent transparent get-color('gray400') transparent;
+    }
+  }
+
+  &--gray500 {
+    background: get-color('gray500');
+
+    &:before {
+      border-color: transparent transparent get-color('gray500') transparent;
+    }
+  }
+
+  &--gray600 {
+    background: get-color('gray600');
+
+    &:before {
+      border-color: transparent transparent get-color('gray600') transparent;
+    }
+  }
+
+  &--gray700 {
+    background: get-color('gray700');
+
+    &:before {
+      border-color: transparent transparent get-color('gray700') transparent;
+    }
+  }
+
+  &--gray800 {
+    background: get-color('gray800');
+
+    &:before {
+      border-color: transparent transparent get-color('gray800') transparent;
+    }
+  }
+
+  &--gray900 {
+    background: get-color('gray900');
+
+    &:before {
+      border-color: transparent transparent get-color('gray900') transparent;
+    }
+  }
+
+
   &--bottom {
-    // FIXME: Why is neither of these working?
     #{$self}-content {
       top: 100%;
       transform: translate(-50%, 5px);
