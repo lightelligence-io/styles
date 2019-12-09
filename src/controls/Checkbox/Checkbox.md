@@ -221,7 +221,7 @@ parent.addEventListener( "click", () => {
   <span class="olt-Checkbox-button"></span>
   <span class="olt-Checkbox-label">Parent</span>
 </label>
-<div class="olt-u-marginLeft5">
+<div class="olt-u-marginLeft8">
   <label class="olt-Checkbox">
     <input id="one" type="checkbox"/>
     <span class="olt-Checkbox-button"></span>

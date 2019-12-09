@@ -1,0 +1,16 @@
+@import '../functions/breakpoint';
+
+/*
+ * Define the design system breakpoints
+ */
+/* stylelint-disable at-rule-empty-line-before */
+@include define-breakpoint('xs', 0);
+
+@include define-breakpoint('sm', 576px);
+
+@include define-breakpoint('md', 768px);
+
+@include define-breakpoint('lg', 992px);
+
+@include define-breakpoint('xl', 1200px);
+/* stylelint-enable at-rule-empty-line-before */
