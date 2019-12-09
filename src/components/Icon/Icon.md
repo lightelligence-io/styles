@@ -303,6 +303,10 @@ component occupies `olt-Icon*` class names and can be used with `<i>` element.
             <span>redirect</span>
           </div>
           <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-redo" title="redo"></i>
+            <span>redo</span>
+          </div>
+          <div class="demo-icon">
             <i class="olt-Icon olt-Icon-refresh" title="refresh"></i>
             <span>refresh</span>
           </div>
@@ -361,6 +365,10 @@ component occupies `olt-Icon*` class names and can be used with `<i>` element.
           <div class="demo-icon">
             <i class="olt-Icon olt-Icon-temperature" title="temperature"></i>
             <span>temperature</span>
+          </div>
+          <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-undo" title="undo"></i>
+            <span>undo</span>
           </div>
           <div class="demo-icon">
             <i class="olt-Icon olt-Icon-unlocked" title="unlocked"></i>
