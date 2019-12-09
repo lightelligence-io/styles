@@ -56,4 +56,4 @@
 - chore: display release dropdown in docs
 
 #v1.0.0
-- Full release of lightelligence design system
+- 1.0.0 release of lightelligence design system
