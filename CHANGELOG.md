@@ -52,70 +52,8 @@
 #v0.12.2
 - fix: vulnerabilities
 
-#v1.0.0-alpha.1
-- Feature: New Icons (BREAKING CHANGE!)
-  - We removed the material icons and use CSS classes instead of data attributes now.
-- Feature: Notifications
-- Feature: New Tabs
-- Feature: Copy to Clipboard
-- Feature: New Font Specifications
-  - All old font declarations are deprecated now and will be removed in an upcoming version.
-  - This will be a breaking change.
-- Chore: Show Version Number in Documentation
-- Chore: Deploy Alpha Documentation to GitHub Pages
+#v0.12.3
+- chore: display release dropdown in docs
 
-#v1.0.0-alpha.2
-- Feature: added Pagination-specific Buttons and Select Control
-- Feature: added new Action Button
-- Feature: added new Edit Cards
-- Fix: V2Button Styling
-- Fix: Chips Icons
-- Chore: Updated Dependencies
-
-#v1.0.0-alpha.3
-- Feature: Disabled Action Button
-- Feature: Dialog Layout
-- Feature: Stepper Dialog
-- Fix: Design Fixes for Card, ActionButton and V2Modal
-
-#v1.0.0-alpha.4
-- Chore: Update Icons
-
-#v1.0.0-alpha.5
-- Feature: indeterminate option for V2Checkbox
-- Fix: Card border and Notification styles
-- Fix: Handlebars Vulnerability
-- Chore: Package Update
-
-#v1.0.0-alpha.6
-- Feature: filter component
-- Feature: dropdown component
-- Feature: input list component
-- Feature: icon font is now generated
-- Feature: white labeling
-
-#v1.0.0-rc.1
-- Chore: Remove Components: Dropdown, Menu, MenuItem, ModalContent, ModalFooter, Navbar, Snackbar, Stepper, Tag, Table, SelectField, TextField
-- Chore: Rename to replace old Components: V2Container, V2Grid, V2Button, V2Modal, V2Tab, V2Tabs, V2Checkbox, V2Radio, V2Select, V2Input
-- Chore: Rename for clarity: DataCards -> CardTable
-- Chore: code cleanups
-
-#v1.0.0-rc.2
-- Fix: dark background of cards
-- Fix: Handlebars Vulnerability
-
-#v1.0.0-rc.3
-- Feature: navigation
-- Feature: read-only colors are exposed as css custom properties
-
-#v1.0.0-rc.4
-- Fix: change card description color to gray500
-- Fix: change EditCard button default color to gray
-- Fix: background color docs
-
-#v1.0.0-rc.5
-- Fix: fonts not properly displayed on firefox
-
-#v1.0.0-rc.6
-- Fix: table header inconsistencies
-
+#v1.0.0
+- Full release of lightelligence design system
