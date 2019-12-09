@@ -177,7 +177,7 @@ a.i-sidebar-list-item:hover b {
 }
 
 .theme-content-element-description tr th {
-  font-family: 'Overpass Mono', serif;
+  font-family: 'Overpass Mono', monospace;
   font-weight: 400;
   border: 0;
   color: #58585a;
@@ -329,7 +329,7 @@ a.i-sidebar-list-item:hover b {
 .demo-label,
 .demo-input-label,
 .demo-textarea-label {
-  font-family: 'Overpass Mono', serif;
+  font-family: 'Overpass Mono', monospace;
   font-size: 12px;
   color: #000;
   letter-spacing: 0;
@@ -470,4 +470,15 @@ a.i-sidebar-list-item:hover b {
 .demo-icon:active span,
 .demo-icon:focus span {
   white-space: normal;
+}
+
+.demo-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  display: inline-block;
+}
+
+.demo-color--primary {
+  background: var(--olt-primaryColor);
 }

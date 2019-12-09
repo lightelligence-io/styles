@@ -52,16 +52,34 @@
 		
 	</head>
 
-	<body>					<div class='olt-Frame'><select class="olt-Select is-error">
-  <option value="LoremIpsum">Lorem Ipsum</option>
-  <option value="DolorSitAmet">Dolor Sit Amet</option>
-  <option value="EtVersus">Et Versus</option>
-</select></div>
-			<script type="text/x-stylemark" data-language="html"><select class="olt-Select is-error">
-  <option value="LoremIpsum">Lorem Ipsum</option>
-  <option value="DolorSitAmet">Dolor Sit Amet</option>
-  <option value="EtVersus">Et Versus</option>
-</select></script>
+	<body>					<div class='olt-Frame'><label class="olt-Label has-error">
+  <select class="olt-Select">
+    <option hidden></option>
+    <option value="LoremIpsum">Lorem Ipsum</option>
+    <option value="DolorSitAmet">Dolor Sit Amet</option>
+    <option value="EtVersus">Et Versus</option>
+  </select>
+  <span class="olt-Label-text">Select an option</span>
+  <div class="olt-Label-footer">
+    <span class="olt-Label-error">
+      Not a valid input
+    </span>
+  </div>
+</label></div>
+			<script type="text/x-stylemark" data-language="html"><label class="olt-Label has-error">
+  <select class="olt-Select">
+    <option hidden></option>
+    <option value="LoremIpsum">Lorem Ipsum</option>
+    <option value="DolorSitAmet">Dolor Sit Amet</option>
+    <option value="EtVersus">Et Versus</option>
+  </select>
+  <span class="olt-Label-text">Select an option</span>
+  <div class="olt-Label-footer">
+    <span class="olt-Label-error">
+      Not a valid input
+    </span>
+  </div>
+</label></script>
 
 		<!--
 			Vanilla JS
