@@ -1,0 +1,50 @@
+@import '../../core/functions/color';
+
+.Header {
+  $self: &;
+
+  position: fixed;
+  background: get-color('light');
+  box-shadow: 0 0 8px 0 rgba(13, 18, 44, 0.3);
+  height: 64px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+
+  @include screen-down(sm) {
+    justify-content: space-between;
+  }
+
+  &-body {
+    flex-grow: 1;
+
+    @include screen-down(sm) {
+      display: none;
+    }
+  }
+
+  &-left-container {
+    margin-left: 40px;
+
+    @include screen-down(sm) {
+      display: none;
+    }
+  }
+
+  &-right-container {
+    margin-left: 40px;
+
+    @include screen-down(sm) {
+      display: none;
+    }
+  }
+
+  &-mobile-menu {
+    @include screen-up(md) {
+      display: none;
+    }
+  }
+}

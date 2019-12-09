@@ -5,24 +5,23 @@ category: Component
 
 ## Description
 
-Modals are used with `<div>` elements and render a popup in full-screen mode.
+Modals are used with `<div>` elements and render a popup.
 
-<div class="olt-Card olt-u-padding5">
+<div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
     <input data-toggle="modal" id="demo-1" type="checkbox">
     <label class="olt-Button" for="modal-demo-1">Open</label>
     <div class="olt-Modal">
       <div class="olt-Modal-dialog">
-        <label class="olt-Modal-close" for="modal-demo-1"></label>
         <header class="olt-Modal-header">
-          <h5 class="olt-Modal-title Headline Headline--5">This is a modal</h5>
+          This is a modal
         </header>
         <div class="olt-Modal-content">
-          <p>You should really check the configuration</p>
+          You should really check the configuration
         </div>
         <footer class="olt-Modal-footer">
-          <label class="olt-Button olt-Button--outline" for="modal-demo-1">Cancel</label>
-          <label class="olt-Button" for="modal-demo-1">Apply</label>
+          <label class="olt-Button olt-Button--tertiary" for="modal-demo-1">Cancel</label>
+          <label class="olt-Button" for="modal-demo-1">Ok</label>
         </footer>
       </div>
     </div>
@@ -34,16 +33,15 @@ Modals are used with `<div>` elements and render a popup in full-screen mode.
 <label class="olt-Button" for="modal-toggle-1">Open</label>
 <div class="olt-Modal">
   <div class="olt-Modal-dialog">
-    <label class="olt-Modal-close" for="modal-toggle-1"></label>
     <header class="olt-Modal-header">
-      <h5 class="olt-Modal-title Headline Headline--5">This is a modal</h5>
+      This is a modal
     </header>
     <div class="olt-Modal-content">
-      <p>You should really check the configuration</p>
+      You should really check the configuration
     </div>
     <footer class="olt-Modal-footer">
-      <label class="olt-Button olt-Button--outline" for="modal-toggle-1">Cancel</label>
-      <label class="olt-Button" for="modal-toggle-1">Apply</label>
+          <label class="olt-Button olt-Button--tertiary" for="modal-demo-1">Cancel</label>
+      <label class="olt-Button" for="modal-toggle-1">Ok</label>
     </footer>
   </div>
 </div>
@@ -59,27 +57,27 @@ We support the following modifiers :
 - `olt-Modal--warning`
 - `olt-Modal--info`
 - `olt-Modal--success`
+- `olt-Modal--action`
 
-### Error modal
+### Critical modal
 
-Use the error *Modal* whenever you want to communicate an error state to the
-user.
+Use the critical *Modal* whenever you want to communicate an critical or error state to the
+user. Especially when proceeding will likely lead to an undesired outcome for the user that he is probably not aware of. E.g.: Deleting a role will lead to users being deleted from the tenant because they have no role afterward.
 
-<div class="olt-Card olt-u-padding5">
+<div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
     <input data-toggle="modal" id="demo-2" type="checkbox">
     <label class="olt-Button" for="modal-demo-2">Open</label>
-    <div class="olt-Modal olt-Modal--error">
+    <div class="olt-Modal olt-Modal--critical">
       <div class="olt-Modal-dialog">
-        <label class="olt-Modal-close" for="modal-demo-2"></label>
         <header class="olt-Modal-header">
-          <h5 class="olt-Modal-title olt-Headline olt-Headline--5">Oh no! An error occurred</h5>
+          Oh no! This is critical!
         </header>
         <div class="olt-Modal-content">
           <p>You should really check the configuration</p>
         </div>
         <div class="olt-Modal-footer">
-          <label class="olt-Button olt-Button--outline" for="modal-demo-2">Yes, show me</label>
+          <label class="olt-Button olt-Button--destructive" for="modal-demo-2">Yes, show me</label>
         </div>
       </div>
     </div>
@@ -89,17 +87,16 @@ user.
 ```html
 <input data-toggle="modal" id="modal-toggle-2" type="checkbox">
 <label class="olt-Button" for="modal-toggle-2">Open</label>
-<div class="olt-Modal olt-Modal--error">
+<div class="olt-Modal olt-Modal--critical">
   <div class="olt-Modal-dialog">
-    <label class="olt-Modal-close" for="modal-toggle-2"></label>
     <header class="olt-Modal-header">
-      <h5 class="olt-Modal-title olt-Headline olt-Headline--5">Oh no! An error occurred</h5>
+      Oh no! This is critical!
     </header>
     <div class="olt-Modal-content">
       <p>You should really check the configuration</p>
     </div>
     <div class="olt-Modal-footer">
-      <label class="olt-Button olt-Button--outline" for="modal-toggle-2">Yes, show me</label>
+      <label class="olt-Button olt-Button--destructive" for="modal-toggle-2">Yes, show me</label>
     </div>
   </div>
 </div>
@@ -107,18 +104,19 @@ user.
 
 ### Warning modal
 
-The warning *Modal* can be used whenever an additional critical information
-should be provided to the user.
+The warning *Modal* is used when needing to show information critical in preventing errors.
+e.g.: 15 of your devices have not responded, check your device management.
 
-<div class="olt-Card olt-u-padding5">
+<div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
     <input data-toggle="modal" id="demo-3" type="checkbox">
     <label class="olt-Button" for="modal-demo-3">Open</label>
     <div class="olt-Modal olt-Modal--warning">
       <div class="olt-Modal-dialog">
-        <label class="olt-Modal-close" for="modal-demo-3"></label>
+        <div class="olt-Modal-header">
+          Attention! Here's a warning for you
+        </div>
         <div class="olt-Modal-content">
-          <h5 class="olt-Modal-title Headline Headline--5">Attention! Here's a warning for you</h5>
           <p>We detected a problem in your configuration</p>
         </div>
         <div class="olt-Modal-footer">
@@ -134,9 +132,10 @@ should be provided to the user.
 <label class="olt-Button" for="modal-toggle-3">Open</label>
 <div class="olt-Modal olt-Modal--warning">
   <div class="olt-Modal-dialog">
-    <label class="olt-Modal-close" for="modal-toggle-3"></label>
+    <div class="olt-Modal-header">
+      Attention! Here's a warning for you
+    </div>
     <div class="olt-Modal-content">
-      <h5 class="olt-Modal-title Headline Headline--5">Attention! Here's a warning for you</h5>
       <p>We detected a problem in your configuration</p>
     </div>
     <div class="olt-Modal-footer">
@@ -149,21 +148,23 @@ should be provided to the user.
 ### Info modal
 
 The info *Modal* can be used whenever an additional non-critical information
-should be provided to the user.
+should be provided to the user. The info will not have negative results no matter the users choice.
+e.g.: You have been invited to a tenant, accept or decline.
 
-<div class="olt-Card olt-u-padding5">
+<div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
     <input data-toggle="modal" id="demo-4" type="checkbox">
     <label class="olt-Button" for="modal-demo-4">Open</label>
     <div class="olt-Modal olt-Modal--info">
       <div class="olt-Modal-dialog">
-        <label class="olt-Modal-close" for="modal-demo-4"></label>
+        <div class="olt-Modal-header">
+          Oh! Here's some info for you
+        </div>
         <div class="olt-Modal-content">
-          <h5 class="olt-Modal-title Headline Headline--5">Oh! Here's some info for you</h5>
           <p>You should really check the configuration</p>
         </div>
         <div class="olt-Modal-footer">
-          <label class="olt-Button olt-Button--info" for="modal-demo-4">Yes, show me</label>
+          <label class="olt-Button" for="modal-demo-4">Yes, show me</label>
         </div>
       </div>
     </div>
@@ -175,13 +176,14 @@ should be provided to the user.
 <label class="olt-Button" for="modal-toggle-4">Open</label>
 <div class="olt-Modal olt-Modal--info">
   <div class="olt-Modal-dialog">
-    <label class="olt-Modal-close" for="modal-toggle-4"></label>
+    <div class="olt-Modal-header">
+      Oh! Here's some info for you
+    </div>
     <div class="olt-Modal-content">
-      <h5 class="olt-Modal-title Headline Headline--5">Oh! Here's some info for you</h5>
       <p>You should really check the configuration</p>
     </div>
     <div class="olt-Modal-footer">
-      <label class="olt-Button olt-Button--info" for="modal-toggle-4">Yes, show me</label>
+      <label class="olt-Button" for="modal-toggle-4">Yes, show me</label>
     </div>
   </div>
 </div>
@@ -189,23 +191,22 @@ should be provided to the user.
 
 ### Success modal
 
-Use the success *Modal* when the actions of the user are successful.
+Use the success *Modal* to communicate a success message the user has to be made aware of.
 
-<div class="olt-Card olt-u-padding5">
+<div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
     <input data-toggle="modal" id="demo-5" type="checkbox">
     <label class="olt-Button" for="modal-demo-5">Open</label>
     <div class="olt-Modal olt-Modal--success">
       <div class="olt-Modal-dialog">
-        <label class="olt-Modal-close" for="modal-demo-5"></label>
         <header class="olt-Modal-header">
-          <h5 class="olt-Modal-title olt-Headline olt-Headline--5">Oh yes! Success occurred</h5>
+          Oh yes! Success!
         </header>
         <div class="olt-Modal-content">
           <p>Your configuration was approved</p>
         </div>
         <div class="olt-Modal-footer">
-          <label class="olt-Button olt-Button--success" for="modal-demo-5">Yes, show me</label>
+          <label class="olt-Button olt-Button--confirmative" for="modal-demo-5">Yes, show me</label>
         </div>
       </div>
     </div>
@@ -217,117 +218,201 @@ Use the success *Modal* when the actions of the user are successful.
 <label class="olt-Button" for="modal-toggle-5">Open</label>
 <div class="olt-Modal olt-Modal--success">
   <div class="olt-Modal-dialog">
-    <label class="olt-Modal-close" for="modal-toggle-5"></label>
     <header class="olt-Modal-header">
-      <h5 class="olt-Modal-title olt-Headline olt-Headline--5">Oh yes! Success occurred</h5>
+      Oh yes! Success!
     </header>
     <div class="olt-Modal-content">
-      <p>Your configuration was approved</p>
+      <p>Your configuration was approved.</p>
     </div>
     <div class="olt-Modal-footer">
-      <label class="olt-Button olt-Button--success" for="modal-toggle-5">Yes, show me</label>
+      <label class="olt-Button olt-Button--confirmative" for="modal-toggle-6">Yes, show me</label>
     </div>
   </div>
 </div>
 ```
 
-## Fullscreen
+### Action modal
 
-There is an additional fullscreen *Modal* which takes the space of the whole
-screen when rendered. This *Modal* can be used for various wizards in a
-combination with [Stepper](/#stepper).
+Use the action *Modal* for changes that demand active user input.
+e.g.: Edit the description of a tenant.
 
-<div class="olt-Card olt-u-padding5">
+<div class="olt-Card olt-u-padding24">
   <div class="olt-u-marginAuto">
-    <input data-toggle="modal" id="demo-5" type="checkbox">
-    <label class="olt-Button" for="modal-demo-5">Open</label>
-    <div class="olt-Modal olt-Modal--fullscreen olt-Modal--error">
+    <input data-toggle="modal" id="demo-6" type="checkbox">
+    <label class="olt-Button" for="modal-demo-6">Open</label>
+    <div class="olt-Modal olt-Modal--action">
       <div class="olt-Modal-dialog">
-        <div class="olt-Container">
-          <header class="olt-Modal-header">
-            <h2 class="olt-Modal-title olt-Headline olt-Headline--2">Tenant registration</h2>
-          </header>
-          <div class="olt-Modal-content">
-            <p class="olt-Paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-            <div class="olt-Stepper">
-              <input type="radio" name="steps" id="step-one" checked="checked"/>
-              <label for="step-one" class="olt-Stepper-header">Step One</label>
-              <div class="olt-Stepper-content">
-                <h4 class="olt-Headline olt-Headline--4">Step One Content</h4>
-                <p class="olt-Paragraph">Lorem ipsum dolor sit amet, consectetur adipisicinsg elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </div>
-              <input type="radio" name="steps" id="step-two"/>
-              <label for="step-two" class="olt-Stepper-header">Step Two</label>
-              <div class="olt-Stepper-content">
-                <h4 class="olt-Headline olt-Headline--4">Step Two Content</h4>
-                <p class="olt-Paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </div>
-              <input type="radio" name="steps" id="step-three"/>
-              <label for="step-three" class="olt-Stepper-header">Step Three</label>
-              <div class="olt-Stepper-content">
-                <h4 class="olt-Headline olt-Headline--4">Step Three Content</h4>
-                <p class="olt-Paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-              <input type="radio" name="steps" id="step-four"/>
-              <label for="step-four" class="olt-Stepper-header">Step Four</label>
-              <div class="olt-Stepper-content">
-                <h4 class="olt-Headline olt-Headline--4">Step Four Content</h4>
-                <p class="olt-Paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-            </div>
-            <label class="olt-Button olt-Button--primary" for="modal-demo-5">Close</label>
-          </div>
+        <header class="olt-Modal-header">
+          Action!!
+        </header>
+        <div class="olt-Modal-content">
+          <p>Start acting now!</p>
+        </div>
+        <div class="olt-Modal-footer">
+          <label class="olt-Button olt-Button--success" for="modal-demo-6">Action</label>
         </div>
       </div>
-      <label class="olt-Modal-close" for="modal-demo-5"></label>
     </div>
   </div>
 </div>
 
 ```html
-<input data-toggle="modal" id="modal-toggle-5" type="checkbox">
-<label class="olt-Button" for="modal-toggle-5">Open</label>
-<div class="olt-Modal olt-Modal--fullscreen olt-Modal--error">
+<input data-toggle="modal" id="modal-toggle-6" type="checkbox">
+<label class="olt-Button" for="modal-toggle-6">Open</label>
+<div class="olt-Modal olt-Modal--action">
   <div class="olt-Modal-dialog">
-    <div class="olt-Container">
-      <header class="olt-Modal-header">
-        <h2 class="olt-Modal-title olt-Headline olt-Headline--2">Tenant registration</h2>
-      </header>
-      <div class="olt-Modal-content">
-        <p class="olt-Paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-        <div class="olt-Stepper">
-          <input type="radio" name="steps" id="step-one" checked="checked"/>
-          <label for="step-one" class="olt-Stepper-header">Step One</label>
-          <div class="olt-Stepper-content">
-            <h4 class="olt-Headline olt-Headline--4">Step One Content</h4>
-            <p class="olt-Paragraph">Lorem ipsum dolor sit amet, consectetur adipisicinsg elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
+    <header class="olt-Modal-header">
+       Action!!
+    </header>
+    <div class="olt-Modal-content">
+      <p>Start acting now!</p>
+    </div>
+    <div class="olt-Modal-footer">
+      <label class="olt-Button olt-Button--success" for="modal-toggle-5">Action</label>
+    </div>
+  </div>
+</div>
+```
 
-          <input type="radio" name="steps" id="step-two"/>
-          <label for="step-two" class="olt-Stepper-header">Step Two</label>
-          <div class="olt-Stepper-content">
-            <h4 class="olt-Headline olt-Headline--4">Step Two Content</h4>
-            <p class="olt-Paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
+## Custom Header Modals
 
-          <input type="radio" name="steps" id="step-three"/>
-          <label for="step-three" class="olt-Stepper-header">Step Three</label>
-          <div class="olt-Stepper-content">
-            <h4 class="olt-Headline olt-Headline--4">Step Three Content</h4>
-            <p class="olt-Paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
+In rare occasions the icon and background color of the header can be individually changed. If you use the `--custom` modifier with the `olt-Modal-header` element, you **have to** provide an icon as in the examples below. *Use with care!*
 
-        	<input type="radio" name="steps" id="step-four"/>
-          <label for="step-four" class="olt-Stepper-header">Step Four</label>
-          <div class="olt-Stepper-content">
-            <h4 class="olt-Headline olt-Headline--4">Step Four Content</h4>
-            <p class="olt-Paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
+<div class="olt-Card olt-u-padding24">
+  <div class="olt-u-marginAuto">
+    <input data-toggle="modal" id="demo-7" type="checkbox">
+    <label class="olt-Button" for="modal-demo-7">Open</label>
+    <div class="olt-Modal">
+      <div class="olt-Modal-dialog">
+    <header class="olt-Modal-header olt-Modal-header--custom olt-u-backgroundColorGray500">
+          <i class="olt-Icon olt-Icon-visible"></i>
+          Oh yes! Success!
+        </header>
+        <div class="olt-Modal-content">
+          <p>Your configuration was approved</p>
         </div>
-        <label class="olt-Button olt-Button--primary" for="modal-toggle-5">Close</label>
+        <div class="olt-Modal-footer">
+          <label class="olt-Button olt-Button--success" for="modal-demo-7">Yes, show me</label>
+        </div>
       </div>
     </div>
   </div>
-  <label class="olt-Modal-close" for="modal-toggle-5"></label>
+</div>
+
+```html
+<input data-toggle="modal" id="modal-toggle-7" type="checkbox">
+<label class="olt-Button" for="modal-toggle-7">Open</label>
+<div class="olt-Modal olt-Modal--action">
+  <div class="olt-Modal-dialog">
+    <header class="olt-Modal-header olt-Modal-header--custom olt-u-backgroundColorGray500">
+      <i class="olt-Icon olt-Icon-visible"></i>
+        Oh yes! Success!
+    </header>
+    <div class="olt-Modal-content">
+      <p>Your configuration was approved</p>
+    </div>
+    <div class="olt-Modal-footer">
+      <label class="olt-Button olt-Button--success" for="modal-toggle-7">Yes, show me</label>
+    </div>
+  </div>
+</div>
+```
+
+### Custom Header Icons
+
+The icon can be changed while keeping the remaining styles. *Also use with care!*
+
+<div class="olt-Card olt-u-padding24">
+  <div class="olt-u-marginAuto">
+    <input data-toggle="modal" id="demo-8" type="checkbox">
+    <label class="olt-Button" for="modal-demo-8">Open</label>
+    <div class="olt-Modal olt-Modal--action">
+      <div class="olt-Modal-dialog">
+        <header class="olt-Modal-header olt-Modal-header--custom">
+          <i class="olt-Icon olt-Icon-visible"></i>
+          Action!
+        </header>
+        <div class="olt-Modal-content">
+          <p>... but watch out!</p>
+        </div>
+        <div class="olt-Modal-footer">
+          <label class="olt-Button olt-Button--action" for="modal-demo-8">I'll be careful</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+```html
+<input data-toggle="modal" id="modal-toggle-8" type="checkbox">
+<label class="olt-Button" for="modal-toggle-8">Open</label>
+<div class="olt-Modal olt-Modal--action">
+  <div class="olt-Modal-dialog">
+    <header class="olt-Modal-header olt-Modal-header--custom">
+      <i class="olt-Icon olt-Icon-visible"></i>
+        Action!
+    </header>
+    <div class="olt-Modal-content">
+      <p>... but watch out!</p>
+    </div>
+    <div class="olt-Modal-footer">
+      <label class="olt-Button olt-Button--action" for="modal-demo-8">I'll be careful</label>
+    </div>
+  </div>
+</div>
+```
+
+## Wide Modals
+
+There is an additional wide *Modal* which takes more space when rendered.
+
+<div class="olt-Card olt-u-padding24">
+  <div class="olt-u-marginAuto">
+    <input data-toggle="modal" id="demo-9" type="checkbox">
+    <label class="olt-Button" for="modal-demo-9">Open</label>
+    <div class="olt-Modal olt-Modal--wide">
+      <div class="olt-Modal-dialog">
+        <header class="olt-Modal-header">
+          This is a wide modal
+        </header>
+        <div class="olt-Modal-content">
+            <p>This is wide modal, it can accommodate more content than the smaller modal.</p>
+            <p>You can add more complex content like forms, etc.</p>
+            <p>It will scroll the content if needed.</p>
+            <p>It will also not shrink on mobile devices.</p>
+            <p><br/><br/></p>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        <footer class="olt-Modal-footer">
+          <label class="olt-Button olt-Button--tertiary" for="modal-demo-9">Cancel</label>
+          <label class="olt-Button" for="modal-demo-9">Ok</label>
+        </footer>
+      </div>
+    </div>
+  </div>
+</div>
+
+```html
+<input data-toggle="modal" id="modal-toggle-9" type="checkbox">
+<label class="olt-Button" for="modal-toggle-9">Open</label>
+<div class="olt-Modal olt-Modal--wide">
+  <div class="olt-Modal-dialog">
+    <header class="olt-Modal-header">
+      This is a wide modal
+    </header>
+    <div class="olt-Modal-content">
+      <p>This is wide modal, it can accommodate more content than the smaller modal.</p>
+      <p>You can add more complex content like forms, etc.</p>
+      <p>It will also not shrink on mobile devices.</p>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+    <footer class="olt-Modal-footer">
+          <label class="olt-Button olt-Button--tertiary" for="modal-demo-9">Cancel</label>
+      <label class="olt-Button" for="modal-toggle-9">Ok</label>
+    </footer>
+  </div>
 </div>
 ```

@@ -1,26 +1,46 @@
 .Input {
   @extend %control;
 
-  border: 0;
-  border-bottom: $olt-control-border-width solid $olt-control-border-color;
-  border-radius: 0;
+  @mixin placeholder ($color, $opacity) {
+    &:-moz-placeholder {
+      color: $color;
+      opacity: $opacity;
+    }
+
+    &::-moz-placeholder {
+      color: $color;
+      opacity: $opacity;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color;
+      opacity: $opacity;
+    }
+  }
+
+  //
+  // Light theme colors
+  //
+
+  $theme-light-colors: map-get($control-colors, light);
+
+  @include placeholder(map-get($theme-light-colors, label-default), 0);
 
   &:focus {
-    outline: none;
-    border-color: var-get('colorPrimary');
+    @include placeholder(map-get($theme-light-colors, label-default), 1);
   }
 
-  &:disabled {
-    background-color: unset;
+  //
+  // Dark theme colors
+  //
+
+  $theme-dark-colors: map-get($control-colors, dark);
+
+  .Theme-dark & {
+    @include placeholder(map-get($theme-dark-colors, label-default), 0);
   }
 
-  @include control-placeholder();
-
-  &--block {
-    display: block;
-  }
-
-  &.is-error {
-    border-color: var-get('colorError');
+  .Theme-dark & &:focus {
+    @include placeholder(map-get($theme-dark-colors, label-default), 1);
   }
 }

@@ -1,76 +1,15 @@
-// global variables that are not exposed as css-variables
-$olt-control-height: 2rem;
-$olt-control-padding-y: 0.125rem;
-$olt-control-padding-x: 0;
-$olt-control-line-height: 1.3rem;
-$olt-control-font-size: 0.9rem;
-$olt-control-font-weight: 400;
-$olt-control-disabled-color: var-get('gray300');
-$olt-control-border-width: var-get('borderWidth');
-$olt-control-border-color: var-get('borderColor');
-$olt-control-border-radius: var-get('borderRadius');
-$olt-control-placeholder: var-get('gray500');
-$olt-control-spacer: var-get('spacing3');
+$olt-spaces: 0, 1, 2, 4, 8, 16, 24, 32, 48, 72, 96;
 
-$olt-label-font-weight: 400;
-$olt-label-font-size: 0.8rem;
-$olt-label-color: var-get('gray500');
+$olt-primary-color: #f60;
+$olt-secondary-color: #0d122c;
 
-$olt-button-font-size: 1rem;
-$olt-button-line-height: 2.25rem;
-$olt-button-border-radius: 2.5rem;
+$olt-font-family-base: 'PT Sans', sans-serif;
+$olt-font-weight: 400;
+$olt-line-height: 1.5;
 
-$olt-card-title-font-size: 1.2rem;
-$olt-card-title-line-height: 1.6rem;
-
-$olt-modal-title-font-size: 20px;
-$olt-modal-title-line-height: 28px;
-
-$olt-navbar-font-size: 0.875rem;
-$olt-navbar-font-size-lg-down: 1.125rem;
-
-$olt-tabs-line-height: 1.25rem;
-$olt-tabs-font-size-lg-up: 1.25rem;
-
-$olt-tooltip-font-size: 0.75rem;
-$olt-tooltip-line-height: 0.875rem;
-
-$olt-dataCards-cardItem-content-font-size: 14px;
-$olt-dataCards-cardItem-title-font-size: 10px;
-$olt-dataCards-cardItem-title-line-height: 14px;
-$olt-dataCards-cardItem-title-color: #46b4cd;
-
-$olt-dataCards-headItem-content-font-size: 12px;
-$olt-dataCards-card-padding-x: 16px;
-$olt-dataCards-card-gap: 8px;
-$olt-dataCards-card-item-gap: 16px;
-
-$olt-list-term-font-size: var-get('fontSizeXSmall');
-$olt-list-term-line-height: 1.7;
-
-$olt-table-header-font-size: var-get('fontSizeSmall');
-
-$olt-checkbox-label-font-size: var-get('fontSizeBase');
-$olt-checkbox-label-line-height: 24px;
-
-$olt-select-font-size: 14px;
-
-$olt-tag-font-size: var-get('fontSizeSmall');
-
-$olt-menu-link-line-height: 1;
-
-$olt-headline-font-family: var-get('fontFamilyHeading');
-$olt-headline-font-weight: var-get('fontWeightHeading');
-
-$olt-link-color: var-get('colorPrimary');
-$olt-link-hover-contrast: var-get('linkHoverContrast');
-
+$olt-z-index-dialog: 800;
 $olt-z-index-modal: 1002;
 $olt-z-index-modal-close: 1003;
 $olt-z-index-modal-dialog: 999;
-$olt-z-index-snackbar: 1200;
+$olt-z-index-notification: 1300;
 $olt-z-index-tooltip: 950;
-$olt-z-index-navbar-content: 1000;
-// make sure that the backdrop is below the content,
-// having both elements (backdrop + content) on z-index 1000 causes the backdrop to be rendered above the content on firefox (not chrome)
-$olt-z-index-navbar-backdrop: $olt-z-index-navbar-content - 1;

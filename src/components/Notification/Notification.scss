@@ -1,0 +1,173 @@
+$notification-spacing-y: 8px;
+
+.NotificationContainer {
+  $notification-padding-x: 16px;
+  $notification-padding-y: 16px - $notification-spacing-y;
+  $notification-padding-x-mobile: 8px;
+  $notification-padding-y-mobile: 8px - $notification-spacing-y;
+  $notification-container-width: 320px;
+  $notification-container-width-mobile: 100%;
+
+  position: fixed;
+  width: $notification-container-width;
+  bottom: $notification-padding-y;
+  right: $notification-padding-x;
+  z-index: $olt-z-index-notification;
+
+  @media (max-width: map-get($olt-breakpoints, sm)) {
+    width: $notification-container-width-mobile;
+    bottom: $notification-padding-y-mobile;
+    right: 0;
+    padding-right: $notification-padding-x-mobile;
+    padding-left: $notification-padding-x-mobile;
+  }
+}
+
+.Notification {
+  $notification-width: 100%;
+  $notification-border-radius: 4px;
+  $notification-backdrop: rgba(255, 255, 255, 0.7);
+  $notification-box-shadow: 0 2px 6px 0 rgba(13, 18, 44, 0.2);
+  $notification-content-padding-x: 16px;
+  $notification-content-padding-y: 16px;
+  $notification-background: get-color('light');
+  $notification-header-height: 20px;
+  $notification-close-size: 16px;
+  $notification-close-margin: 3px;
+  $notification-close-color: get-color('gray400');
+  $notification-dialog-width: calc(
+    #{$notification-width} - #{$notification-close-size} - #{$notification-close-margin}
+  );
+  $notification-transition-duration: 0.2s;
+  $notification-header-padding: 16px;
+  $notification-icon-size: 24px;
+  $self: &;
+
+  background: $notification-background;
+  border-radius: $notification-border-radius;
+  padding-top: $notification-content-padding-y;
+  padding-right: $notification-content-padding-x;
+  padding-bottom: $notification-content-padding-y;
+  padding-left: $notification-content-padding-x;
+  box-shadow: $notification-box-shadow;
+  display: flex;
+  flex-wrap: wrap;
+  width: $notification-width;
+  margin-bottom: $notification-spacing-y;
+  opacity: 0;
+  transition: opacity $notification-transition-duration ease-in;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.is-open {
+    opacity: 1;
+  }
+
+  &-dialog {
+    width: $notification-dialog-width;
+  }
+
+  &-header {
+    @extend .u-H200;
+
+    padding: 0;
+    width: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-right: $notification-header-padding;
+
+    &:before {
+      @extend .Icon:before;
+
+      align-items: flex-start;
+      vertical-align: middle;
+      padding-right: $notification-header-padding;
+    }
+  }
+
+  &-content {
+    @extend .u-support;
+
+    margin: 0;
+    padding: 2px;
+    padding-right: 0;
+    padding-left: $notification-icon-size + $notification-header-padding;
+    overflow: hidden;
+  }
+
+  &-close {
+    color: $notification-close-color;
+    background-color: $notification-background;
+    height: $notification-close-size;
+    width: $notification-close-size;
+    border: none;
+    margin: 0;
+    margin-left: $notification-close-margin;
+    padding: 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    .Icon {
+      vertical-align: top;
+    }
+  }
+
+  &--error &-header:before {
+    @extend .Icon-warning-critical-outline.Icon--large;
+
+    @extend .Icon--large;
+
+    color: get-color('error');
+  }
+
+  &--error &-header {
+    color: get-color('error');
+  }
+
+  &--info &-header:before {
+    @extend .Icon-info-outline.Icon--large;
+
+    @extend .Icon--large;
+
+    color: get-color('info');
+  }
+
+  &--info &-header {
+    color: get-color('info');
+  }
+
+  &--warning &-header:before {
+    @extend .Icon-warning-medium-outline.Icon--large;
+
+    @extend .Icon--large;
+
+    color: get-color('warning');
+  }
+
+  &--warning &-header {
+    color: get-color('warning');
+  }
+
+  &--success &-header:before {
+    @extend .Icon-check-outline.Icon--large;
+
+    @extend .Icon--large;
+
+    color: get-color('success');
+  }
+
+  &--success &-header {
+    color: get-color('success');
+  }
+
+  @media (max-width: map-get($olt-breakpoints, sm)) {
+    &-content {
+      display: none;
+    }
+  }
+}

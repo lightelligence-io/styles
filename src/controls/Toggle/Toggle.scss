@@ -4,49 +4,49 @@
   $knob-overlap: 5px;
   $toggle-colors: (
     light: (
-      disabled:(
+      disabled: (
         checked: (
-          knob: #ffa365,
-          track: #ffd0b3,
+          knob: get-color('primary', 'white', 0.6),
+          track: get-color('primary', 'white', 0.3),
         ),
         unchecked: (
-          knob: var-get('gray100'),
-          track: var-get('gray200'),
+          knob: get-color('gray100'),
+          track: get-color('gray200'),
         ),
       ),
       default: (
         checked: (
-          knob: var-get('colorPrimary'),
-          track: #ffa366,
+          knob: get-color('primary'),
+          track: get-color('primary', 'white', 0.6),
         ),
         unchecked: (
-          knob: var-get('colorLight'),
-          track: var-get('gray500'),
+          knob: get-color('light'),
+          track: get-color('gray500'),
         ),
       ),
     ),
     dark: (
-      disabled:(
+      disabled: (
         checked: (
-          knob: #6d331a,
-          track: #552a1e,
+          knob: get-color('primary', 'secondary', 0.4),
+          track: get-color('primary', 'secondary', 0.3),
         ),
         unchecked: (
-          knob: #6d7080,
-          track: #55586a,
+          knob: get-color('secondary', 'white', 0.6),
+          track: get-color('secondary', 'white', 0.7),
         ),
       ),
       default: (
         checked: (
-          knob: var-get('colorPrimary'),
-          track: #ffa366,
+          knob: get-color('primary'),
+          track: get-color('primary', 'white', 0.6),
         ),
         unchecked: (
-          knob: var-get('colorLight'),
-          track: var-get('gray500'),
+          knob: get-color('light'),
+          track: get-color('gray500'),
         ),
       ),
-    )
+    ),
   );
   $self: &;
 
@@ -95,11 +95,9 @@
   &-button:after {
     content: '';
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
-    transition:
-      all var-get('transitionDuration')
-      var-get('transitionTimingFunction');
+    transition: all 150ms ease;
     position: absolute;
-    top: #{($track-height - $knob-size) * 0.5 };
+    top: #{($track-height - $knob-size) * 0.5};
     left: #{-1 * $knob-overlap};
     height: $knob-size;
     width: $knob-size;
@@ -116,7 +114,7 @@
     height: 100%;
   }
 
-  @mixin setColors ($self, $colors) {
+  @mixin setColors($self, $colors) {
     &:checked + #{$self}-button:after {
       background-color: map-get(map-get($colors, 'checked'), 'knob');
     }
@@ -145,7 +143,6 @@
     @include setColors($self, map-get($theme-light, 'disabled'));
   }
 
-
   .Theme-dark & input {
     @include setColors($self, map-get($theme-dark, 'default'));
   }
@@ -159,13 +156,17 @@
   }
 
   &-label {
+    @extend .u-content;
+
     margin-left: 8px;
     cursor: pointer;
     display: inline-block;
     position: relative;
-    font-size: $olt-checkbox-label-font-size;
-    line-height: $olt-checkbox-label-line-height;
     user-select: none;
+  }
+
+  .Theme-dark &-label {
+    color: white;
   }
 
   &--reversed &-label {

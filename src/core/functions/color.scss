@@ -1,10 +1,356 @@
-@function color-contrast($n, $threshold: 0.5) {
-  $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000);
-  $light-color: round((red(#fff) * 299) + (green(#fff) * 587) + (blue(#fff) * 114) / 1000);
+/**
+ * Prefix for all css custom properties
+ *
+ * @see {color-to-css-property-name}
+ * @type {String}
+ */
+$_custom-property-prefix: 'olt-';
 
-  @if abs($color-brightness) < $light-color * $threshold {
-    @return $light-color;
-  } @else {
-    @return false;
+/**
+ * Private variable for storing the colors and their shades
+ *
+ * @see {define-color}
+ * @type {Map}
+ */
+$_colors: ();
+
+/**
+ * Private variable for storing the simple colors
+ *
+ * @see {define-simple-color}
+ * @type {List}
+ */
+$_simple_colors: ();
+
+/**
+ * Private variable for storing the color mixes information
+ *
+ * @see {define-color-mix}
+ * @type {Map}
+ */
+$_mixes: ();
+
+/**
+ * Private variable for storing colors that are exported
+ */
+$_exported-colors: ();
+
+/**
+ * Defines a color mix that will be generated for all colors
+ *
+ * @example
+ *   @include define-color-mix('white', #fff', (0.1, 0.2));
+ *   @include define-color-mix('black', #000', (0.1, 0.2));
+ *   @include define-color('primary', '#f60');
+ *   @debug($_colors) => (
+ *     "primary": (
+ *       "color": #f60,
+ *       "white": (0.1: #fff0e6, 0.2: #ffe0cc),
+ *       "black": (0.1: #1a0a00, 0.2: #331400)
+ *     )
+ *   )
+ *   get-color('primary', 'white', 0.2) => #ffe0cc
+ *   get-color('primary', 'white', 0.6) => null
+ * @param $name   {String}  The name of the mix
+ * @param $color  {Color}   The color that will be the mix with
+ * @param $shades {List}    A list of opacity
+ */
+@mixin define-color-mix($name, $color, $shades) {
+  $_mixes: _set(
+    $_mixes,
+    $name,
+    (
+      'color': $color,
+      'shades': $shades,
+    )
+  ) !global;
+}
+
+/**
+ * Defines a simple color that will be generated with no shades
+ *
+ * @example
+ *   @include define-color-mix('white', #fff', (0.1, 0.2));
+ *   @include define-color-mix('black', #000', (0.1, 0.2));
+ *   @include define-color('primary', '#f60');
+ *   @include define-simple-color('sidebar', '#0d122c');
+ *   @debug($_colors) => (
+ *     "primary": (
+ *       "color": #f60,
+ *       "white": (0.1: #fff0e6, 0.2: #ffe0cc),
+ *       "black": (0.1: #1a0a00, 0.2: #331400)
+ *     ),
+ *     "sidebar": (
+ *       "color": #0d122c,
+ *     )
+ *   )
+ *   get-color('sidebar') => #0d122c
+ * @param $name {String}  The name of the color to add
+ * @param $color {Color}  The color that will be added
+ */
+@mixin define-simple-color($name, $color) {
+  $_colors: _set(
+    $_colors,
+    $name,
+    (
+      'color': $color,
+    )
+  ) !global;
+  $_simple_colors: _push($_simple_colors, $name) !global;
+}
+
+/**
+ * Defines a color that will be generated with all shades
+ *
+ * @example
+ *   @include define-color-mix('white', #fff', (0.1, 0.2));
+ *   @include define-color-mix('black', #000', (0.1, 0.2));
+ *   @include define-color('primary', '#f60');
+ *   @include define-color('secondary', '#0d122c');
+ *   @debug($_colors) => (
+ *     "primary": (
+ *       "color": #f60,
+ *       "white": (0.1: #fff0e6, 0.2: #ffe0cc),
+ *       "black": (0.1: #1a0a00, 0.2: #331400)
+ *     ),
+ *     "secondary": (
+ *       "color": #0d122c,
+ *       "white": (0.1: #e7e7ea, 0.2: #cfd0d5),
+ *       "black": (0.1: #010204, 0.2: #030409)
+ *     )
+ *   )
+ *   get-color('primary', 'white', 0.2) => #ffe0cc
+ *   get-color('secondary', 'black', 0.1) => #010204
+ * @param $name {String}  The name of the color to add
+ * @param $color {Color}  The color that will be added
+ */
+@mixin define-color($name, $color) {
+  $_colors: _set($_colors, $name, color-shades($color)) !global;
+}
+
+/**
+ * Exports color with a css custom property
+ *
+ * @example
+ *   @include define-color-mix('white', #fff', (0.1, 0.2));
+ *   @include define-color-mix('black', #000', (0.1, 0.2));
+ *   @include define-color('primary', '#f60');
+ *   @debug($_colors) => (
+ *     "primary": (
+ *       "color": #f60,
+ *       "white": (0.1: #fff0e6, 0.2: #ffe0cc),
+ *       "black": (0.1: #1a0a00, 0.2: #331400)
+ *     )
+ *   )
+ *   :root { @include export-color('primary'); } => :root {
+ *     --primaryColor: #f60;
+ *     --primaryColor-white-10: #fff0e6;
+ *     --primaryColor-white-20: #ffe0cc;
+ *     --primaryColor-black-10: #1a0a00;
+ *     --primaryColor-black-20: #331400;
+ *   }
+ * @param $name   {String}         The name of the color to export
+ */
+@mixin export-color($name) {
+  $color: _get($_colors, $name);
+
+  @if $color == null {
+    @warn ( "We can't find color to export", $name );
   }
+
+  #{color-to-css-property-name($name)}: _get($color, 'color');
+
+  @if _contains($_simple_colors, $name) == false {
+    @each $shade-name, $shades in _omit($color, 'color') {
+      @each $shade-opacity, $value in $shades {
+        #{color-to-css-property-name($name, $shade-name, $shade-opacity)}: $value;
+      }
+    }
+  }
+
+  $_exported-colors: _push($_exported-colors, $name) !global;
+}
+
+/**
+ * Returns the name of a css property of a color combination
+ *
+ * @example
+ *   @debug(color-to-css-property-name('primary', 'white', 0.1)) =>
+ *     --primaryColor-white-10
+ *   @debug(color-to-css-property-name('primary')) =>
+ *     --primaryColor
+ * @param $name        {String}        The color name
+ * @param $shade-name  {String} [null] The shade name
+ * @param $shade       {Number} [null] The opacity
+ */
+@function color-to-css-property-name($name, $shade-name: null, $shade: null) {
+  $result: '--#{$_custom-property-prefix}#{$name}Color';
+
+  @if $shade-name != null {
+    $result: '#{$result}-#{$shade-name}-#{$shade*100}';
+  }
+
+  @return $result;
+}
+
+/**
+ * Returns a color from the color system with additional shade and opacity
+ *
+ * @example
+ *   @include define-color-mix('white', #fff', (0.1, 0.2));
+ *   @include define-color('primary', #f60);
+ *   get-color-value('primary') => #f60
+ *   get-color-value('primary', 'white', 0.20); => #ffe0cc
+ *   @include export-color('primary');
+ *   get-color-value('primary') => #f60
+ * @param $name        {String}        The color name
+ * @param $shade-name  {String} [null] The shade name
+ * @param $shade       {Number} [null] The opacity
+ * @return {Color | Null}
+ */
+@function get-color-value($name, $shade-name: null, $shade: null) {
+  $result: null;
+
+  @if $shade-name == null and $shade == null {
+    $result: _get($_colors, $name 'color');
+  } @else if $shade-name != null {
+    $result: _get($_colors, $name $shade-name $shade);
+  }
+
+  @if $result == null {
+    @warn ( "We can't find color" $name $shade-name $shade );
+  }
+
+  @return $result;
+}
+
+/**
+ * Returns a color or a variable reference if that color was exported from the
+ * color system with additional shade and opacity.
+ *
+ * In case the color was exported it will return the exported variable name,
+ * instead of the actual color.
+ *
+ * @example
+ *   @include define-color-mix('white', #fff', (0.1, 0.2));
+ *   @include define-color('primary', #f60);
+ *   get-color('primary') => #f60
+ *   get-color('primary', 'white', 0.20); => #ffe0cc
+ *   @include export-color('primary');
+ *   get-color('primary') => var(--primaryColor);
+ * @param $name        {String}        The color name
+ * @param $shade-name  {String} [null] The shade name
+ * @param $shade       {Number} [null] The opacity
+ * @return {Color | Null}
+ */
+@function get-color($name, $shade-name: null, $shade: null) {
+  @if _contains($_exported-colors, $name) {
+    @return var(#{color-to-css-property-name($name, $shade-name, $shade)});
+  } @else {
+    @return get-color-value($name, $shade-name, $shade);
+  }
+}
+
+/**
+ * Returns the resulting color of mixing first-color with opacity against a
+ * second color
+ *
+ * @example
+ *   color-opacity-on-color(#fff, 0.2, #000) => #333333
+ * @param $first-color   {Color}  The color to mix
+ * @param $alpha         {Number} The opacity to mix
+ * @param $second-color  {Color}  The color to mix on-to
+ * @return {Color}
+ */
+@function color-opacity-on-color($first-color, $alpha, $second-color) {
+  @return mix(
+    opacify(rgba($first-color, $alpha), 1),
+    $second-color,
+    $alpha * 100%
+  );
+}
+
+/**
+ * Generates mixes of two colors by combining an opacity of the first color to
+ * the second one. It will return a map with all the mixes.
+ *
+ * @example
+ *   color-mixes(#fff, #000, (0.15, 0.20, 0.30, 0.40, 0.50, 0.60)) => (
+ *     0.15: #262626,
+ *     0.20: #333333,
+ *     0.30: #4d4d4d,
+ *     0.40: #666666,
+ *     0.50: gray,
+ *     0.60: #999999
+ *   )
+ * @param $first-color   {Color} The color to mix
+ * @param $second-color  {Color} The color to mix on-to
+ * @param $shades        {List}  The shades to generate
+ * @return {Map}
+ */
+@function color-mixes($first-color, $second-color, $shades) {
+  $result: ();
+
+  @each $shade in $shades {
+    $result-color: color-opacity-on-color($first-color, $shade, $second-color);
+    $result: _set($result, $shade, $result-color);
+  }
+
+  @return $result;
+}
+
+/**
+ * Generates all shades of a color, by combining the color with black, white
+ * and some specific custom colors, based on the Design System.
+ *
+ * @example
+ *   color-shades(#fff) => (
+ *     "color": #fff,
+ *     "white": (
+ *       0.15: white,
+ *       0.20: white,
+ *       0.30: white,
+ *       0.40: white,
+ *       0.50: white,
+ *       0.60: white,
+ *     ),
+ *     "black": (
+ *       0.15: #262626,
+ *       0.20: #333333,
+ *       0.30: #4d4d4d,
+ *       0.40: #666666,
+ *       0.50: gray,
+ *       0.60: #999999
+ *     )
+ *   )
+ * @param $color  {Color}  The color to mix
+ * @return {Map}
+ */
+@function color-shades($color) {
+  $result: (
+    'color': $color,
+  );
+
+  @each $name, $configuration in $_mixes {
+    $shade-color: _get($configuration, 'color');
+    $shades: _get($configuration, 'shades');
+    $result: _set($result, $name, color-mixes($color, $shade-color, $shades));
+  }
+
+  @return $result;
+}
+
+/**
+ * Returns all available colors (name, value)
+ *
+ * @return {List}    A list of colors (name, value)
+ */
+@function get-colors() {
+  $colors: ();
+
+  @each $name, $color in $_colors {
+    $colors: append($colors, ($name, get-color($name)));
+  }
+
+  @return $colors;
 }

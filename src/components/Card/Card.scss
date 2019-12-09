@@ -3,26 +3,35 @@
   $card-padding-x: 1.5rem !default;
   $card-padding-y: 1rem !default;
   $card-border-radius: 0.25rem !default;
-  $card-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24) !default;
+  $card-hover-box-shadow: 0 8px 16px 0 rgba(13, 18, 44, 0.2);
+  $card-edit-icon-size: 36px;
+  $border-color: get-color('gray300');
 
   $self: &;
 
-  border: 0; // reset border for buttons
-  box-shadow: $card-box-shadow;
   border-radius: $card-border-radius;
   text-align: left;
   transition: box-shadow 150ms;
-  background: var-get('colorLight');
+  background: get-color('light');
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
   position: relative;
   padding: 0;
   align-items: unset;
   appearance: none;
 
-  @include contextual-colors();
+  &--dark {
+    background: get-color('secondary');
+  }
+
+  .Dialog & {
+    border: 1px solid $border-color;
+  }
+
+  & & {
+    border: 1px solid $border-color;
+  }
 
   &[href],
   &:link {
@@ -51,23 +60,23 @@
   }
 
   &-title {
-    font-size: $olt-card-title-font-size;
-    line-height: $olt-card-title-line-height;
+    @extend .u-H400;
+
     margin: 0;
     grid-column: 1 / 2;
     grid-row: 1;
   }
 
   &-description {
-    font-size: var-get('fontSizeSmall');
-    font-weight: var-get('fontWeightRegular');
+    @extend .u-description;
+
     margin: 0;
     grid-column: 1;
     grid-row: 2 / 2;
   }
 
   &:not(#{$self}--primary):not(#{$self}--secondary) &-description {
-    color: var-get('gray600');
+    color: get-color('gray500');
   }
 
   &-action {
@@ -104,23 +113,22 @@
     vertical-align: baseline;
   }
 
+  &--edit,
   &--selectable {
     cursor: pointer;
+    border: none;
+    color: inherit;
 
     &:focus {
       outline: none;
     }
 
     &:hover {
-      box-shadow:
-        0 14px 28px 0 rgba(0, 0, 0, 0.25),
-        0 10px 10px 0 rgba(0, 0, 0, 0.22);
+      box-shadow: $card-hover-box-shadow;
     }
 
     &:active {
-      box-shadow:
-        0 3px 6px 0 rgba(0, 0, 0, 0.12),
-        0 2px 4px 0 rgba(0, 0, 0, 0.24);
+      box-shadow: none;
     }
   }
 }

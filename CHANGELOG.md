@@ -1,9 +1,9 @@
 #v0.0.1
-Alpha version of Lightelligence UI.
+- Alpha version of Lightelligence UI.
 
 
 #v0.1.0
-State of the art
+- State of the art
 
 #v0.1.1
 - Add FormField to wrap Select components and use them side by side with TextFields inside of forms
@@ -18,7 +18,7 @@ State of the art
 - NPM package renamed to @lightelligence/styles
 
 #v0.6.0
-- added: new DataCards component
+- added: new CardTable component
 - added: FloatingList component
 - fixed: add workaround for known css calc issue and cssnano
 
@@ -52,5 +52,8 @@ State of the art
 #v0.12.2
 - fix: vulnerabilities
 
-#v0.12.2
+#v0.12.3
 - chore: display release dropdown in docs
+
+#v1.0.0
+- Full release of lightelligence design system

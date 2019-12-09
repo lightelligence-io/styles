@@ -5,60 +5,64 @@ category: Component
 
 ## Description
 
-*Tabs* are similar to the [Stepper](/#stepper). It renders a tab-like navigation
-which has content for each tab.
- 
-Each tab link is a
-`<input type="radio">` under the hood, so it can work without JavaScript. The 
-*Tabs* occupies `olt-Tabs*` class names and can contain :
+*Tabs* render a tab-like navigation, with links that can point to the tab content.
 
-- `olt-Tabs-header` - The "tab" button
-- `olt-Tabs-content` - The content of the tab.
+- `olt-Tabs` - The tab bar
+- `olt-Tabs-link` - The tab link
 
-The tabs's content is only visible when the user has clicked on the tab itself.
+The *Tabs* are centered on large screens and right aligned on small screens.
+The active tab is decorated via `is-active` state class name.
 
-The *Tabs* are transformed to row toggled sections, when a small screen is
-being used to render it. You can test the functionality by reducing the screen 
-width of this page and take a look at the example below.
-
-```tabs.css hidden
-body > div.olt-Frame { min-height: 250px; }
-```
-
-```tabs.html
+```newnavigation.html
 <div class="olt-Tabs">
-  <input type="radio" name="tabs" id="tabone" checked="checked"/>
-  <label for="tabone" class="olt-Tabs-header">Devices</label>
-  <div class="olt-Tabs-content">
-    <h4 class="olt-Headline olt-Headline--4">Tab One Content</h4>
-    <p class="olt-Paragraph">Lorem ipsum dolor sit amet, consectetur adipisicinsg elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
+  <a class="olt-Tabs-link is-active">Link One</a>
+  <a class="olt-Tabs-link">Link Two</a>
+  <a class="olt-Tabs-link">Link Three</a>
+  <a class="olt-Tabs-link">Link Four</a>
+  <a class="olt-Tabs-link">Link Five</a>
+</div>
+```
 
-  <input type="radio" name="tabs" id="tabtwo"/>
-  <label for="tabtwo" class="olt-Tabs-header">Profile</label>
-  <div class="olt-Tabs-content">
-    <h4 class="olt-Headline olt-Headline--4">Tab Two Content</h4>
-    <p class="olt-Paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
+Use the --forceScroll modifier to ensure the menu does not overflow, but scrolls whenever it is too large for the screen.
 
-  <input type="radio" name="tabs" id="tabthree"/>
-  <label for="tabthree" class="olt-Tabs-header">Settings</label>
-  <div class="olt-Tabs-content">
-    <h4 class="olt-Headline olt-Headline--4">Tab Three Content</h4>
-    <p class="olt-Paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+```newnavigationforce.html
+<div class="olt-Tabs--forceScroll">
+  <a class="olt-Tabs-link is-active">Link One</a>
+  <a class="olt-Tabs-link">Link Two</a>
+  <a class="olt-Tabs-link">Link Three</a>
+  <a class="olt-Tabs-link">Link Four</a>
+  <a class="olt-Tabs-link">Link Five</a>
+  <a class="olt-Tabs-link">Link Six</a>
+  <a class="olt-Tabs-link">Link Seven</a>
+  <a class="olt-Tabs-link">Link Eight</a>
+  <a class="olt-Tabs-link">Link Nine</a>
+  <a class="olt-Tabs-link">Link Ten</a>
+</div>
+```
+
+To add a gradient to show that there are more elements available, use `has-gradient-left` and `has-gradient-right` state class name. The gradient overlay on either side is used to indicate that more content is available outside of the visible area. note: you need a relatively positions container around the navigation for this.
+
+```newnavigationgradient.html
+<div style="position: relative">
+  <div class="olt-Tabs">
+    <a class="olt-Tabs-link is-active">Link One</a>
+    <a class="olt-Tabs-link">Link Two</a>
+    <a class="olt-Tabs-link">Link Three</a>
+    <a class="olt-Tabs-link">Link Four</a>
+    <a class="olt-Tabs-link">Link Five</a>
   </div>
 </div>
 ```
 
-## Tabs as Navigation
+```newnavigationgradient.js
+const tabs = document.querySelector(".olt-Tabs")
+var overflows = tabs.scrollWidth>tabs.clientWidth;
+if (overflows) tabs.classList.add("has-gradient-right");
 
-There is also another *Tabs* usecase, when one can use it as a simple
-navigation and control the active tab via `is-active` state class name.
-
-```navigation.html
-<div class="olt-Tabs olt-Tabs--navigation">
-  <a class="olt-Tabs-header is-active">Link One</a>
-  <a class="olt-Tabs-header">Link Two</a>
-  <a class="olt-Tabs-header">Link Three</a>
-</div>
+tabs.addEventListener('scroll', () => {
+  var hasScrolledLeft = tabs.scrollLeft > 0;
+  tabs.classList.toggle("has-gradient-left", hasScrolledLeft);
+  var canScrollRight = tabs.scrollWidth-tabs.scrollLeft-tabs.clientWidth > 0;
+  tabs.classList.toggle("has-gradient-right", canScrollRight);
+});
 ```

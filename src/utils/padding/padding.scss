@@ -3,35 +3,35 @@
 
   @include screen-up($breakpoint) {
     @each $prop, $name in (padding: padding) {
-      @each $size, $value in var-get('spacing') {
+      @each $size in $olt-spaces {
         .u-#{$infix}#{$name}#{$size} {
-          #{$prop}: $value !important;
+          #{$prop}: #{$size*1px} !important;
         }
 
         .u-#{$infix}#{$name}Top#{$size} {
-          #{$prop}-top: $value !important;
+          #{$prop}-top: #{$size*1px} !important;
         }
 
         .u-#{$infix}#{$name}Bottom#{$size} {
-          #{$prop}-bottom: $value !important;
+          #{$prop}-bottom: #{$size*1px} !important;
         }
 
         .u-#{$infix}#{$name}Right#{$size} {
-          #{$prop}-right: $value !important;
+          #{$prop}-right: #{$size*1px} !important;
         }
 
         .u-#{$infix}#{$name}Left#{$size} {
-          #{$prop}-left: $value !important;
+          #{$prop}-left: #{$size*1px} !important;
         }
 
         .u-#{$infix}#{$name}Y#{$size} {
-          #{$prop}-top: $value !important;
-          #{$prop}-bottom: $value !important;
+          #{$prop}-top: #{$size*1px} !important;
+          #{$prop}-bottom: #{$size*1px} !important;
         }
 
         .u-#{$infix}#{$name}X#{$size} {
-          #{$prop}-left: $value !important;
-          #{$prop}-right: $value !important;
+          #{$prop}-left: #{$size*1px} !important;
+          #{$prop}-right: #{$size*1px} !important;
         }
       }
     }

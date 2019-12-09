@@ -1,0 +1,176 @@
+@mixin cardTableInTableModeWithTableLayout($self) {
+  @include cardTableInTableMode() {
+    &#{$self}--useTableLayout {
+      @content;
+    }
+  }
+}
+
+@mixin cardTableTableWidth($self) {
+  $collection: (5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90);
+
+  @each $percent in $collection {
+    &#{$self}--tableCellWidth#{$percent} {
+      max-width: #{$percent + '%'};
+      width: #{$percent + '%'};
+    }
+  }
+}
+
+/*
+ * On most browsers it is not possible to add a border to a tr (table-row). This fix
+ * circumvents the problem by applying the border to the table-cells instead.
+ */
+@mixin cardTableBorderTableRowFix(
+  $self,
+  $border-color,
+  $border-radius,
+  $card-gap,
+  $box-shadow
+) {
+  #{$self}-card {
+    background: none;
+    border: none;
+    position: relative;
+
+    #{$self}-cardItem {
+      // make sure the border defined in :after is relative to the card (position and z-index)
+      position: relative;
+      z-index: 0;
+      // add paddding to compensate for the border
+      padding-top: 1px;
+      padding-bottom: 1px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 2px);
+        background: get-color('light');
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        border-left: none;
+        border-right: none;
+        margin: 0;
+      }
+
+      // fix at least some cases when an invisible (listOnly) item is in front of the visible elements
+      &:first-child,
+      &#{$self}--listOnly:first-child + #{$self}-cardItem:not(#{$self}--listOnly),
+      &#{$self}--listOnly:first-child + #{$self}-cardItem#{$self}--listOnly + #{$self}-cardItem:not(#{$self}--listOnly),
+      &#{$self}--listOnly:first-child + #{$self}-cardItem#{$self}--listOnly + #{$self}-cardItem#{$self}--listOnly + #{$self}-cardItem:not(#{$self}--listOnly),
+      &#{$self}--firstTableItem {
+        padding-left: 1px; // to compensate for the border
+        &:before {
+          width: calc(100% - 1px);
+          border-top-left-radius: $border-radius;
+          border-bottom-left-radius: $border-radius;
+          border-left: 1px solid $border-color;
+        }
+      }
+
+      &:last-child,
+      &#{$self}--lastTableItem {
+        padding-right: 1px; // to compensate for the border
+        &:before {
+          width: calc(100% - 1px);
+          border-top-right-radius: $border-radius;
+          border-bottom-right-radius: $border-radius;
+          border-right: 1px solid $border-color;
+        }
+      }
+    }
+  }
+}
+
+
+/*
+ * This is the basic integration of data cards tables via table layout.
+ */
+@mixin cardTableTableLayoutIntegration(
+  $self,
+  $border-color,
+  $border-radius,
+  $card-gap,
+  $box-shadow,
+  $card-padding-x,
+  $card-padding-y
+) {
+  @include cardTableInTableModeWithTableLayout($self) {
+    #{$self}-cardItem,
+    #{$self}-headItem {
+      @include cardTableTableWidth($self);
+    }
+
+    #{$self}-frame {
+      display: table;
+      border-spacing: 0 $card-gap;
+      // this line compensates for border-spacing and the reason why we
+      // actually need the frame component
+      margin-bottom: -1 * $card-gap;
+    }
+
+    #{$self}-head {
+      display: table-header-group;
+    }
+
+    #{$self}-body {
+      display: table-row-group;
+    }
+
+    #{$self}-card {
+      display: table-row;
+    }
+
+    #{$self}-headItem {
+      display: table-cell;
+      vertical-align: middle;
+      padding: #{$card-padding-y - $card-gap} $card-padding-x;
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+    }
+
+    #{$self}-cardItem {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    #{$self}-headItem,
+    #{$self}-cardItem {
+      &#{$self}--verticalAlignBottom {
+        vertical-align: bottom;
+      }
+
+      &#{$self}--verticalAlignTop {
+        vertical-align: top;
+      }
+    }
+
+    #{$self}-cardItem,
+    #{$self}-card,
+    #{$self}-content {
+      &#{$self}--listOnly {
+        display: none;
+      }
+    }
+
+    @include cardTableBorderTableRowFix(
+      $self,
+      $border-color,
+      $border-radius,
+      $card-gap,
+      $box-shadow
+    );
+
+    &#{$self}--tableLayoutFixed #{$self}-frame {
+      table-layout: fixed;
+    }
+
+    #{$self}--tableCellMinimalWidth {
+      width: 1%;
+    }
+  }
+}

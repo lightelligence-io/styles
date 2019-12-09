@@ -1,19 +1,88 @@
-%label {
-  font-size: $olt-label-font-size;
-  font-weight: $olt-label-font-weight;
-  color: $olt-label-color;
-  padding: 0;
-  margin-bottom: var-get('spacing1');
-}
+$control-colors: (
+  light: (
+    label-default: get-color('gray500'),
+    label-disabled: get-color('gray400'),
+    input-default: get-color('gray700'),
+    input-disabled: get-color('gray400'),
+    border-default: get-color('gray500'),
+    border-disabled: get-color('gray400'),
+    background-default: get-color('gray100'),
+  ),
+  dark: (
+    label-default: rgba(255, 255, 255, 0.7),
+    label-disabled: rgba(255, 255, 255, 0.3),
+    input-default: get-color('light'),
+    input-disabled: rgba(255, 255, 255, 0.3),
+    border-default: rgba(255, 255, 255, 0.7),
+    border-disabled: rgba(255, 255, 255, 0.3),
+    background-default: rgba(245, 246, 248, 0.1),
+  ),
+);
+
+$control-line-height: 24px;
+$control-margin-top: 17px;
+$control-padding-top: 0;
+$control-padding-horizontal: 16px;
+$control-padding-bottom: 6px;
+$control-letter-spacing: 0.17px;
+$control-border-bottom: 1px;
 
 %control {
-  min-height: $olt-control-height;
+  @extend .u-content;
+
   vertical-align: middle;
+  margin-top: $control-margin-top;
+  padding: $control-padding-top $control-padding-horizontal $control-padding-bottom;
   border: 0;
-  border-bottom: $olt-control-border-width solid $olt-control-border-color;
-  border-radius: $olt-control-border-radius;
-  padding: $olt-control-padding-y $olt-control-padding-x;
-  font-size: $olt-control-font-size;
-  line-height: $olt-control-line-height;
-  font-weight: $olt-control-font-weight;
+  border-radius: 0;
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+    border-color: get-color('primary');
+    box-shadow: inset 0 -1px get-color('primary');
+  }
+
+  .has-error &,
+  .Theme-dark .has-error & {
+    border-color: get-color('error');
+  }
+
+  .has-error &:focus,
+  .Theme-dark .has-error &:focus {
+    box-shadow: inset 0 -1px get-color('error');
+  }
+
+  //
+  // Light theme colors
+  //
+
+  $theme-light-colors: map-get($control-colors, light);
+
+  color: map-get($theme-light-colors, input-default);
+  border-bottom: $control-border-bottom solid map-get($theme-light-colors, border-default);
+
+  &:disabled {
+    color: map-get($theme-light-colors, input-disabled);
+    border-color: map-get($theme-light-colors, border-disabled);
+  }
+
+  //
+  // Dark theme colors
+  //
+
+  $theme-dark-colors: map-get($control-colors, dark);
+
+  .Theme-dark & {
+    color: map-get($theme-dark-colors, input-default);
+  }
+
+  .Theme-dark :not(.has-error) &:not(:focus):not(:disabled) {
+    border-color: map-get($theme-dark-colors, border-default);
+  }
+
+  .Theme-dark &:disabled {
+    color: map-get($theme-dark-colors, input-disabled);
+    border-color: map-get($theme-dark-colors, border-disabled);
+  }
 }

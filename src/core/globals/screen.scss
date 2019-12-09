@@ -1,5 +1,5 @@
 
-$olt-v2-breakpoints: (
+$olt-breakpoints: (
   xs: 0,
   sm: 576px,
   md: 768px,
@@ -18,39 +18,30 @@ $olt-screen-style: kebabCase;
 $screen-prefix: $olt-v1-prefix;
 $screen-style: $olt-screen-style;
 
-@include screen-set($olt-v2-breakpoints, $olt-v2-prefix, $olt-screen-style);
+@include screen-set($olt-breakpoints, $olt-v2-prefix, $olt-screen-style);
 
 
 // all v2 functions pass all params explicitly and don't rely on global vars.
 
 @mixin screen-up-v2($name) {
-  @include screen-up($name, $olt-v2-prefix, $olt-screen-style, $olt-v2-breakpoints) {
+  @include screen-up($name, $olt-v2-prefix, $olt-screen-style, $olt-breakpoints) {
     @content;
   }
 }
 
 @function screen-infix-v2($name) {
-  @return screen-infix($name, $olt-v2-breakpoints);
+  @return screen-infix($name, $olt-breakpoints);
 }
 
 @function screen-get-v2() {
-  @return $olt-v2-breakpoints;
+  @return $olt-breakpoints;
 }
 
 @mixin screen-down-v2($name) {
-  @include screen-down($name, $olt-v2-prefix, $olt-screen-style, $olt-v2-breakpoints) {
+  @include screen-down($name, $olt-v2-prefix, $olt-screen-style, $olt-breakpoints) {
     @content;
   }
 }
 
-$olt-v1-breakpoints: (
-  xs: var-get-value(breakpoint xs),
-  sm: var-get-value(breakpoint sm),
-  md: var-get-value(breakpoint md),
-  lg: var-get-value(breakpoint lg),
-  xl: var-get-value(breakpoint xl),
-);
-
-// Breakpoints
-@include screen-set($olt-v1-breakpoints, $olt-v1-prefix, $olt-screen-style);
+@include screen-set($olt-breakpoints, $olt-v1-prefix, $olt-screen-style);
 

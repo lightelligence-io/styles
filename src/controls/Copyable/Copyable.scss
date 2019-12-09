@@ -1,0 +1,32 @@
+.Copyable {
+  $self: &;
+
+  display: inline-flex;
+  flex-direction: row;
+  appearance: none;
+  border: 0;
+  border-radius: 4px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background: rgb(227, 228, 229);
+    outline: none;
+
+    &:after {
+      color: get-color('primary');
+    }
+  }
+
+  &:after {
+    @extend .Icon:before;
+
+    @extend .Icon-duplicate.Icon--large:before;
+
+    padding-left: 8px;
+    align-self: center;
+    color: get-color('gray500');
+  }
+}

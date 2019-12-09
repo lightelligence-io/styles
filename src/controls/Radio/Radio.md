@@ -5,40 +5,149 @@ category: Controls
 
 ## Description
 
-Radio is used with a wrapped `<label>` element that contain 
-`<input type="radio"/>`. It occupies `olt-Radio*` class names and has styles 
-for the following native states :
+Radio is used with a wrapped `<label>` element that contain
+`<input type="radio"/>`. It occupies `olt-Radio*` class names.
 
-- `:checked`
-- `:disabled`
+---
 
-```radio.html
+<div class="olt-Grid olt-u-marginTop4 olt-u-marginBottom6">
+  <div class="olt-Grid-item olt-Grid-item--3">
+    <div class="demo-spacer-small"></div>
+    <div>
+      <div class="demo-label">
+        Active
+      </div>
+      <div class="demo-label">
+        Active Disabled
+      </div>
+      <div class="demo-label">
+        Inactive
+      </div>
+      <div class="demo-label">
+        Inactive disabled
+      </div>
+    </div>
+  </div>
+  <div class="olt-Grid-item olt-Grid-item--7">
+    <div class="olt-Grid">
+      <div class="olt-Grid-item olt-Grid-item--4">
+        <div class="demo-title">Light Theme</div>
+        <div class="demo-subtitle-small"></div>
+        <div class="olt-Card">
+          <div class="olt-Card-content">
+            <div class="demo-content">
+              <label class="olt-Radio">
+                <input type="radio" checked />
+                <span class="olt-Radio-button"></span>
+                <span class="olt-Radio-label">Select an option</span>
+              </label>
+            </div>
+            <div class="demo-content">
+              <label class="olt-Radio">
+                <input type="radio" checked disabled />
+                <span class="olt-Radio-button"></span>
+                <span class="olt-Radio-label">Select an option</span>
+              </label>
+            </div>
+            <div class="demo-content">
+              <label class="olt-Radio">
+                <input type="radio"/>
+                <span class="olt-Radio-button"></span>
+                <span class="olt-Radio-label">Select an option</span>
+              </label>
+            </div>
+            <div class="demo-content">
+              <label class="olt-Radio">
+                <input type="radio" disabled />
+                <span class="olt-Radio-button"></span>
+                <span class="olt-Radio-label">Select an option</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="olt-Grid-item olt-Grid-item--4">
+        <div class="demo-title">Dark Theme</div>
+        <div class="demo-subtitle-small"></div>
+        <div class="olt-Card olt-Card--dark olt-Theme-dark">
+          <div class="olt-Card-content">
+            <div class="demo-content">
+              <label class="olt-Radio">
+                <input type="radio" checked />
+                <span class="olt-Radio-button"></span>
+                <span class="olt-Radio-label">Select an option</span>
+              </label>
+            </div>
+            <div class="demo-content">
+              <label class="olt-Radio">
+                <input type="radio" checked disabled />
+                <span class="olt-Radio-button"></span>
+                <span class="olt-Radio-label">Select an option</span>
+              </label>
+            </div>
+            <div class="demo-content">
+              <label class="olt-Radio">
+                <input type="radio"/>
+                <span class="olt-Radio-button"></span>
+                <span class="olt-Radio-label">Select an option</span>
+              </label>
+            </div>
+            <div class="demo-content">
+              <label class="olt-Radio">
+                <input type="radio" disabled />
+                <span class="olt-Radio-button"></span>
+                <span class="olt-Radio-label">Select an option</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+```example.html
 <label class="olt-Radio">
   <input type="radio" />
   <span class="olt-Radio-button"></span>
-  <span class="olt-Radio-label">Radio button</span>
+  <span class="olt-Radio-label">Select an option</span>
 </label>
+```
+
+## HTML Input states
+
+The radio control is a native browser `input[type="radio"]` so you can apply
+`disable`, `checked` attributes directly to the input field
+
+```states.html
 <label class="olt-Radio">
-  <input type="radio" checked />
+  <input type="radio" />
   <span class="olt-Radio-button"></span>
-  <span class="olt-Radio-label">Checked radio button</span>
+  <span class="olt-Radio-label">Select an option</span>
 </label>
 <label class="olt-Radio">
   <input type="radio" disabled />
   <span class="olt-Radio-button"></span>
-  <span class="olt-Radio-label">Disabled radio button</span>
+  <span class="olt-Radio-label">Select an option</span>
+</label>
+<label class="olt-Radio">
+  <input type="radio" checked />
+  <span class="olt-Radio-button"></span>
+  <span class="olt-Radio-label">Select an option</span>
 </label>
 <label class="olt-Radio">
   <input type="radio" disabled checked />
   <span class="olt-Radio-button"></span>
-  <span class="olt-Radio-label">Disabled checked radio button</span>
+  <span class="olt-Radio-label">Select an option</span>
 </label>
 ```
 
 ## Use as radio group
 
-You can use several radios as a radio group by using the same `name` for all 
-of them as in the 
+You can use several radios as a radio group by using the same `name` for all
+of them as in the
 [HTML radio specs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio).
 
 ```radio-group.html

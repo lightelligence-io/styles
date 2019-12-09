@@ -1,0 +1,171 @@
+.CardTable {
+  $border-radius: 0.25rem !default;
+  $box-shadow: 0 0 8px 0 rgba(13, 18, 44, 0.15);
+  $self: &;
+  $title-margin: 4px;
+  $card-padding-x: 16px;
+  $card-padding-y: $card-padding-x;
+  $card-item-gap: 16px;
+  $card-padding-large-x: $card-padding-x * 2;
+  $card-padding-large-y: $card-padding-y;
+  $card-gap: 8px;
+  $border-color: get-color('gray300');
+
+  width: 100%;
+
+  &-frame {
+    width: 100%;
+  }
+
+  &-body {
+    margin-top: -1 * $card-gap;
+  }
+
+  &-card {
+    transition: box-shadow 150ms;
+    background: get-color('light');
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    margin-top: $card-gap;
+  }
+
+  &--selectable &-card {
+    &:hover {
+      cursor: pointer;
+      box-shadow: $box-shadow;
+    }
+  }
+
+  &-cardItem &-content {
+    @extend .u-description;
+
+    word-break: break-word;
+  }
+
+  @include cardTableInTableMode {
+    // common
+    #{$self}-head {
+      border: 1px solid transparent;
+    }
+
+    #{$self}-headItem {
+      // use .u-H200, because we can't extend here
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 20px;
+      font-family: 'PT Sans', sans-serif;
+      color: get-color('gray500');
+      padding: $card-padding-y $card-padding-x;
+      white-space: nowrap;
+    }
+
+    #{$self}-cardItem #{$self}-title {
+      display: none;
+    }
+
+    #{$self}--alignCenter {
+      text-align: center;
+    }
+
+    #{$self}--alignRight {
+      text-align: right;
+    }
+
+    #{$self}-cardItem #{$self}-content {
+      padding: $card-padding-y $card-padding-x;
+    }
+  }
+
+  @include cardTableFlexLayoutIntegration($self);
+
+  @include cardTableTableLayoutIntegration(
+    $self,
+    $border-color,
+    $border-radius,
+    $card-gap,
+    $box-shadow,
+    $card-padding-x,
+    $card-padding-y
+  );
+
+  @include cardTableInListMode($self) {
+    #{$self}-cardItem #{$self}-title {
+      // use .u-H200 with 10px, because we can't extend here
+      font-size: 10px;
+      font-weight: 800;
+      line-height: 20px;
+      font-family: 'PT Sans', sans-serif;
+      color: get-color('info');
+      margin-bottom: $title-margin;
+    }
+
+    #{$self}-head {
+      display: none;
+    }
+
+    #{$self}-body {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    #{$self}-card {
+      display: flex;
+      flex-direction: row;
+      align-content: flex-start;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      flex-basis: calc(50% - #{$card-gap / 2});
+      padding: $card-padding-y $card-padding-x;
+      padding-top: $card-padding-y - $card-item-gap;
+
+      &:nth-child(2n + 1) {
+        margin-right: $card-gap;
+      }
+    }
+
+    #{$self}-cardItem {
+      display: flex;
+      flex-grow: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      flex-basis: 100%;
+      padding-top: $card-item-gap;
+
+      &#{$self}--halfSize {
+        flex-basis: 50%;
+        padding-right: $card-item-gap * 0.5;
+      }
+    }
+
+    #{$self}-cardItem,
+    #{$self}-headItem,
+    #{$self}-content {
+      &#{$self}--tableOnly {
+        display: none;
+      }
+    }
+
+    #{$self}-title {
+      display: block;
+      word-break: break-word;
+    }
+
+    &#{$self}--largeCardPadding {
+      #{$self}-card {
+        padding: $card-padding-large-y $card-padding-large-x;
+        padding-top: $card-padding-large-y - $card-item-gap;
+      }
+    }
+  }
+
+  @include cardTableInListModeSmall($self) {
+    #{$self}-card {
+      flex-basis: 100%;
+
+      &:nth-child(2n + 1) {
+        margin-right: 0;
+      }
+    }
+  }
+}

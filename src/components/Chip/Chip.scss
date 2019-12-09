@@ -1,3 +1,5 @@
+@import '../../core/functions/color';
+
 /**
  * Generates a background with a clipped circle on the top right position that
  * will match the bubble's circle size
@@ -13,25 +15,25 @@
 }
 
 /**
- * All contextual colors of the chip
+ * All colors of the chip
  */
 $chip-colors: (
   default: (
     selectable: true,
     disableable: true,
     bubble-color: (
-      normal: #495057,
+      normal: get-color('dark'),
     ),
     color: (
-      normal: var-get('colorDark'),
-      disabled: #a7a8aa,
+      normal: get-color('dark'),
+      disabled: get-color('gray500'),
     ),
     background: (
-      normal: var-get('gray200'),
-      hover: #f3f5f6,
-      press: #babcbf,
-      focus: #e9ecef,
-      disabled: #f3f5f7,
+      normal: get-color('gray200'),
+      hover: get-color('gray200', 'white', 0.5),
+      press: get-color('gray200', 'black', 0.8),
+      focus: get-color('gray200', 'white', 0.5),
+      disabled: get-color('gray100'),
     ),
   ),
   dark: (
@@ -41,33 +43,33 @@ $chip-colors: (
       normal: #d0d1d3,
     ),
     color: (
-      normal: var-get('colorLight'),
-      disabled: #a7a8aa,
+      normal: get-color('light'),
+      disabled: get-color('gray500'),
     ),
     background: (
-      normal: var-get('colorDark'),
-      hover: #5b5b5b,
-      press: #c5c5c5,
-      focus: var-get('colorDark'),
-      disabled: #f3f5f7,
+      normal: get-color('dark'),
+      hover: get-color('dark', 'white', 0.6),
+      press: get-color('dark', 'white', 0.2),
+      focus: get-color('dark', 'white', 0.6),
+      disabled: get-color('gray100'),
     ),
   ),
   light: (
     selectable: true,
     disableable: true,
     bubble-color: (
-      normal: var-get('colorDark'),
+      normal: #495057,
     ),
     color: (
-      normal: var-get('colorDark'),
-      disabled: var-get('gray600'),
+      normal: get-color('dark'),
+      disabled: get-color('gray600'),
     ),
     background: (
-      normal: var-get('colorLight'),
-      hover: #b2b2b2,
-      press: #666,
-      focus: var-get('colorLight'),
-      disabled: #a7a8aa,
+      normal: get-color('light'),
+      hover: get-color('light', 'black', 0.7),
+      press: get-color('light', 'black', 0.4),
+      focus: get-color('light', 'black', 0.7),
+      disabled: get-color('gray500'),
     ),
   ),
   primary: (
@@ -75,51 +77,51 @@ $chip-colors: (
     disableable: true,
     alias: 'active',
     bubble-color: (
-      normal: #f60,
+      normal: get-color('primary'),
     ),
     color: (
-      normal: #f60,
-      disabled: #a7a8aa,
+      normal: get-color('primary'),
+      disabled: get-color('gray500'),
     ),
     background: (
-      normal: #ffe0cc,
-      hover: #ffc299,
-      press: #ffa366,
-      focus: #ffe0cc,
-      disabled: #f5f6f8,
+      normal: get-color('primary', 'white', 0.2),
+      hover: get-color('primary', 'white', 0.4),
+      press: get-color('primary', 'white', 0.6),
+      focus: get-color('primary', 'white', 0.4),
+      disabled: get-color('gray100'),
     ),
   ),
   error: (
     bubble-color: (
-      normal: var-get('colorError'),
+      normal: get-color('error'),
     ),
     color: (
-      normal: var-get('colorError'),
+      normal: get-color('error'),
     ),
     background: (
-      normal: #ffdedc,
+      normal: get-color('error', 'white', 0.2),
     ),
   ),
   success: (
     bubble-color: (
-      normal: #00bf1a,
+      normal: get-color('success'),
     ),
     color: (
-      normal: #00bf1a,
+      normal: get-color('success'),
     ),
     background: (
-      normal: #d9f5dd,
+      normal: get-color('success', 'white', 0.15),
     ),
   ),
   info: (
     bubble-color: (
-      normal: #46b4cd,
+      normal: get-color('info'),
     ),
     color: (
-      normal: #46b4cd,
+      normal: get-color('info'),
     ),
     background: (
-      normal: #daf0f5,
+      normal: get-color('info', 'white', 0.2),
     ),
   ),
 );
@@ -127,18 +129,17 @@ $chip-colors: (
 .Chip {
   $self: &;
 
+  @extend .u-support;
+
   border: none;
   display: inline-flex;
   white-space: nowrap;
   vertical-align: middle;
-  font-family: var-get('fontFamilyBase');
-  font-size: 12px;
-  letter-spacing: 0;
-  line-height: 18px;
   border-radius: 12.5px;
   background-size: cover;
-  padding: 3px 12px 4px 12px;
+  padding: 5px 12px 6px 12px;
   position: relative;
+
 
   //
   // Selectable
@@ -154,28 +155,32 @@ $chip-colors: (
 
   &:before,
   &:after {
-    @include icon-font-material;
-
-    display: inline-flex;
-    vertical-align: middle;
-    font-size: 14px;
+    font-size: 10px;
+    padding: 2px 0 2px 0;
   }
 
-  &[data-icon-left] {
-    padding-left: 8px;
+  &-icon-left {
+    padding-left: 10px;
 
     &:before {
-      margin-right: 1px;
-      content: attr(data-icon-left);
+      @extend .Icon;
+
+      @extend .Icon--small;
+
+      margin-right: 3px;
     }
   }
 
-  &[data-icon-right] {
-    padding-right: 8px;
+  &-icon-right {
+    padding-right: 22px;
 
-    &:after {
-      margin-left: 1px;
-      content: attr(data-icon-right);
+    &:before {
+      @extend .Icon;
+
+      @extend .Icon--small;
+
+      position: absolute;
+      right: 9px;
     }
   }
 
@@ -192,7 +197,7 @@ $chip-colors: (
     position: absolute;
     top: -8px;
     right: -8px;
-    font-weight: var-get('fontWeightBold');
+    font-weight: 700;
     font-size: 8px;
     letter-spacing: 0;
     line-height: 16px;
@@ -200,16 +205,16 @@ $chip-colors: (
     text-align: center;
     width: 17px;
     height: 17px;
+    padding-top: 1px;
 
-    &[data-icon] {
+    &-icon {
       &:before {
-        @include icon-font-material;
+        @extend .Icon;
 
         display: inline-flex;
         vertical-align: middle;
-        font-size: 11px;
+        font-size: 10px;
         font-weight: 900;
-        content: attr(data-icon);
       }
     }
   }
@@ -338,23 +343,23 @@ $chip-colors: (
     &--info,
     &--error,
     &--warning {
-      color: var-get('colorLight');
+      color: get-color('light');
     }
 
     &--success {
-      background-color: var-get('colorSuccess');
+      background-color: get-color('success');
     }
 
     &--info {
-      background-color: #46b4cd;
+      background-color: get-color('info');
     }
 
     &--error {
-      background-color: var-get('colorError');
+      background-color: get-color('error');
     }
 
     &--warning {
-      background-color: #ffc94d;
+      background-color: get-color('warning');
     }
   }
 }

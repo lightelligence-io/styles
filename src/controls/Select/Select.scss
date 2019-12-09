@@ -1,81 +1,105 @@
 .Select {
-  @mixin selectBackgroundGradient ($color: gray) {
-    // use floats because of ugly google-chrome subpixel rendering
-    // 50.01 instead of 50% looks nicer in chrome.
-    // https://stackoverflow.com/questions/51850356/chrome-linear-gradient-bugs-when-dealing-with-subpixels
-    background-image:
-      linear-gradient(45deg, transparent 50.01%, $color 50.01%),
-      linear-gradient(135deg, $color 50.01%, transparent 50.01%),
-      linear-gradient(to right, #ccc, #ccc);
-  }
+  $chevron-size: 6px;
+  $select-border-radius: 2.5rem;
 
   @extend %control;
 
-  font-size: $olt-select-font-size;
+  @mixin chevronDown ($color) {
+    // use floats because of ugly google-chrome subpixel rendering
+    // 42.01 instead of 42% looks nicer in chrome.
+    // https://stackoverflow.com/questions/51850356/chrome-linear-gradient-bugs-when-dealing-with-subpixels
+    background-image:
+      linear-gradient(45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%),
+      linear-gradient(-45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%);
+  }
 
-  /* styling */
-  background-color: white;
-  display: block;
-  padding: 0.25rem 1.25rem 0 0;
-
-  /* reset */
-
-  margin: 0;
   box-sizing: border-box;
   appearance: none;
   cursor: pointer;
-  border-radius: 0;
-
-  @include selectBackgroundGradient();
-
   background-position:
-    calc(100% - 10px) calc(1em + 2px),
-    calc(100% - 5px) calc(1em + 2px),
+    calc(100% - #{18px+$chevron-size}) 4px,
+    calc(100% - 18px) 4px,
     calc(100% - 2.5em) 0;
   background-size:
-    5px 5px,
-    5px 5px,
+    $chevron-size $chevron-size,
+    $chevron-size $chevron-size,
     1px 0;
   background-repeat: no-repeat;
 
-  &:focus {
-    border-bottom-color: var-get('colorPrimary') !important;
-    outline-width: 0;
+  &:focus,
+  .Theme-dark &:focus {
+    @include chevronDown(get-color('primary'));
   }
 
-  &.is-placeholder {
-    @include control-placeholder-style;
+  .has-error &:focus {
+    @include chevronDown(get-color('error'));
+  }
 
-    option {
-      color: var-get('colorDark');
+  & option {
+    color: initial;
+  }
+
+  &--pagination {
+    $pagination-chevron-size: 6px;
+    $color: get-color('secondary');
+    $padding-y: 8px;
+    $padding-x: 16px;
+    $chevron-padding-x: 16px;
+
+    @extend .u-description;
+
+    border: 1px solid;
+    border-color: get-color('secondary');
+    border-radius: $select-border-radius;
+    margin-top: 0;
+    padding: $padding-y #{($padding-x+$pagination-chevron-size+$chevron-padding-x)-2px} $padding-y $padding-x;
+    background-image:
+      linear-gradient(45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%),
+      linear-gradient(-45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%);
+    background-position:
+      calc(100% - #{$padding-x+$pagination-chevron-size}),
+      calc(100% - #{$padding-x});
+
+    &:focus {
+      box-shadow: none;
+      border-color: get-color('secondary');
+      background-image:
+        linear-gradient(45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%),
+        linear-gradient(-45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%);
     }
   }
 
-  &.is-error {
-    border-color: var-get('colorError');
+  //
+  // Light theme colors
+  //
+
+  $theme-light-colors: map-get($control-colors, light);
+
+  @include chevronDown(map-get($theme-light-colors, border-default));
+
+  .has-value & {
+    @include chevronDown(map-get($theme-light-colors, input-default));
   }
 
-  &--inline {
-    display: inline-block;
+  &:disabled {
+    @include chevronDown(map-get($theme-light-colors, border-disabled));
   }
 
-  &--fullwidth {
-    width: 100%;
+  //
+  // Dark theme colors
+  //
+
+  $theme-dark-colors: map-get($control-colors, dark);
+
+  .Theme-dark & {
+    @include chevronDown(map-get($theme-dark-colors, border-default));
   }
 
-  &:not(.is-readonly):disabled,
-  &:not(.is-readonly).is-disabled {
-    color: $olt-control-disabled-color;
-    cursor: not-allowed;
-    border-bottom: dotted $olt-control-border-width $olt-control-disabled-color;
-
-    @include selectBackgroundGradient($olt-control-disabled-color);
+  .Theme-dark .has-value & {
+    @include chevronDown(map-get($theme-dark-colors, input-default));
   }
 
-  &.is-readonly {
-    cursor: default;
-    color: currentColor;
-
-    @include selectBackgroundGradient($olt-control-disabled-color);
+  .Theme-dark &:disabled {
+    @include chevronDown(map-get($theme-dark-colors, border-disabled));
   }
 }

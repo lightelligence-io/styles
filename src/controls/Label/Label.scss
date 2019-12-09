@@ -1,6 +1,167 @@
 .Label {
-  @extend %label;
+  $self: &;
 
-  display: block;
-  vertical-align: middle;
+  @extend .u-content;
+
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px 4px 0 0;
+  min-height: 48px;
+
+  &-text {
+    position: absolute;
+    top: 11px;
+    transform-origin: left center;
+    pointer-events: none;
+    cursor: text;
+    transition: all 200ms;
+    left: 16px;
+  }
+
+  &.has-value &-text,
+  &:not(&--floating) &-text {
+    top: -1px;
+    transform: scale(0.6875);
+    letter-spacing: 0.2px;
+  }
+
+  input:focus ~ &-text,
+  textarea:focus ~ &-text,
+  select:focus ~ &-text {
+    top: -1px;
+    transform: scale(0.6875);
+    color: get-color('primary');
+    letter-spacing: 0.2px;
+  }
+
+  &.has-error &-text {
+    color: get-color('error');
+  }
+
+  &-footer {
+    position: absolute;
+    top: 100%;
+    left: 16px;
+    right: 16px;
+    margin-top: 3px;
+    font-size: 11px;
+    letter-spacing: 0.2px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 16.5px;
+  }
+
+  &-error {
+    display: none;
+  }
+
+  &.has-error &-error {
+    color: get-color('error');
+    display: block;
+  }
+
+  &-count {
+    flex-grow: 1;
+    text-align: right;
+  }
+
+  &-hint {
+    padding-left: 24px;
+
+    &:before {
+      @extend .Icon;
+
+      @extend .Icon-info-outline:before;
+
+      position: absolute;
+      left: 0;
+      font-size: 16px;
+    }
+  }
+
+  &-icon {
+    position: absolute;
+    font-size: 12px;
+    right: 16px;
+    top: 14px;
+    display: block;
+  }
+
+  &:not(.has-error) input:focus ~ &-icon {
+    color: get-color('primary');
+  }
+
+  //
+  // Light theme colors
+  //
+
+  $theme-light-colors: map-get($control-colors, light);
+
+  background-color: map-get($theme-light-colors, background-default);
+  color: map-get($theme-light-colors, label-default);
+
+  &-icon {
+    color: map-get($theme-light-colors, label-default);
+  }
+
+  &.has-value &-icon {
+    color: map-get($theme-light-colors, input-default);
+  }
+
+  input:required ~ &-text:after,
+  textarea:required ~ &-text:after,
+  select:required ~ &-text:after {
+    content: '*';
+  }
+
+  input:disabled,
+  textarea:disabled,
+  select:disabled,
+  &.has-value input:disabled,
+  &.has-value textarea:disabled,
+  &.has-value select:disabled {
+    ~ #{$self}-text,
+    ~ #{$self}-icon,
+    ~ * #{$self}-count,
+    ~ * #{$self}-hint {
+      color: map-get($theme-light-colors, label-disabled);
+    }
+  }
+
+  //
+  // Dark theme colors
+  //
+
+  $theme-dark-colors: map-get($control-colors, dark);
+
+  .Theme-dark & {
+    background-color: map-get($theme-dark-colors, background-default);
+    color: map-get($theme-dark-colors, label-default);
+  }
+
+  .Theme-dark &-icon {
+    color: map-get($theme-dark-colors, label-default);
+  }
+
+  .Theme-dark &.has-value &-icon {
+    color: map-get($theme-dark-colors, input-default);
+  }
+
+  .Theme-dark & input:disabled,
+  .Theme-dark & textarea:disabled,
+  .Theme-dark & select:disabled,
+  .Theme-dark &.has-value input:disabled,
+  .Theme-dark &.has-value textarea:disabled,
+  .Theme-dark &.has-value select:disabled {
+    ~ #{$self}-text,
+    ~ #{$self}-icon,
+    ~ * #{$self}-count,
+    ~ * #{$self}-hint {
+      color: map-get($theme-dark-colors, label-disabled);
+    }
+  }
 }

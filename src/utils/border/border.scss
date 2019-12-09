@@ -1,10 +1,13 @@
+$colors: get-colors();
+$border: 1px solid get-color('gray300');
+
 // TODO: Break lines and make pretty
 // TODO: Use existing mixins for creating utils
-.u-border { border: var-get('borderWidth') solid var-get('borderColor') !important; }
-.u-borderTop { border-top: var-get('borderWidth') solid var-get('borderColor') !important; }
-.u-borderRight { border-right: var-get('borderWidth') solid var-get('borderColor') !important; }
-.u-borderBottom { border-bottom: var-get('borderWidth') solid var-get('borderColor') !important; }
-.u-borderLeft { border-left: var-get('borderWidth') solid var-get('borderColor') !important; }
+.u-border { border: $border !important; }
+.u-borderTop { border-top: $border !important; }
+.u-borderRight { border-right: $border !important; }
+.u-borderBottom { border-bottom: $border !important; }
+.u-borderLeft { border-left: $border !important; }
 
 .u-borderNone { border: 0 !important; }
 .u-borderTopNone { border-top: 0 !important; }
@@ -17,16 +20,8 @@
   $infix: screen-infix($breakpoint);
 
   @include screen-up($breakpoint) {
-    // Colors
-    @each $name, $value in var-get('color') {
+    @each $name, $value in $colors {
       .u-#{$infix}borderColor#{string-capitalize($name)} {
-        border-color: $value !important;
-      }
-    }
-
-    // Grays
-    @each $name, $value in var-get('gray') {
-      .u-#{$infix}borderColorGray#{string-capitalize($name)} {
         border-color: $value !important;
       }
     }

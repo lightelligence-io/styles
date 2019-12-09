@@ -12,10 +12,11 @@
   }
 
   &-content {
+    @extend .u-support;
+
     padding: 0.25rem;
-    background: var-get('colorPrimary');
-    font-size: $olt-tooltip-font-size;
-    color: var-get('colorLight');
+    background: get-color('primary');
+    color: get-color('light');
     position: absolute;
     top: 0;
     left: 50%;
@@ -29,7 +30,6 @@
     p {
       padding: 0;
       width: 10rem;
-      line-height: $olt-tooltip-line-height;
       margin: 0;
     }
 
@@ -45,18 +45,22 @@
       border-width: 0 0.25rem 0.31rem 0.25rem;
       border-color: transparent transparent #f60 transparent;
     }
+  }
 
-    @include contextual-colors(('background-color', 'color'));
+  $colors: get-colors();
 
-    @include contextual-colors(('border-color'), $selector: '::before') {
-      border-left-color: transparent;
-      border-right-color: transparent;
-      border-top-color: transparent;
+  @each $name, $value in $colors {
+    &--#{$name} {
+      background: $value;
+
+      &:before {
+        border-color: transparent transparent $value transparent;
+      }
     }
   }
 
+
   &--bottom {
-    // FIXME: Why is neither of these working?
     #{$self}-content {
       top: 100%;
       transform: translate(-50%, 5px);

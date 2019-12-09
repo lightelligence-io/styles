@@ -1,7 +1,6 @@
 const stylemark = require('stylemark');
 const watch = require('watch');
 const args = require('yargs').argv;
-const nrc = require('node-run-cmd');
 const bs = require('browser-sync').create();
 const path = require('path');
 const fs = require('fs');
@@ -43,7 +42,7 @@ const throttle = (key, cb) => {
   cbs[key] = cb;
   setTimeout(() => {
     if (cbs[key] === cb) {
-      cbs[key] === undefined;
+      cbs[key] = undefined;
       cb();
     }
   }, watchDelay);

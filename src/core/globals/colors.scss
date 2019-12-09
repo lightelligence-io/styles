@@ -1,0 +1,61 @@
+@import '../functions/color';
+
+$_default_shades: (0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8);
+
+/*
+ * Define the design system mixes
+ */
+/* stylelint-disable at-rule-empty-line-before */
+@include define-color-mix('white', #fff, $_default_shades);
+@include define-color-mix('black', #000, $_default_shades);
+@include define-color-mix('secondary', $olt-secondary-color, (0.3, 0.4, 0.8));
+/* stylelint-enable at-rule-empty-line-before */
+
+/*
+ * Define the design system colors
+ */
+/* stylelint-disable at-rule-empty-line-before */
+@include define-color('primary', $olt-primary-color);
+@include define-color('secondary', $olt-secondary-color);
+@include define-color('error', #fd5952);
+@include define-color('success', #02bf1b);
+@include define-color('info', #46b4cd);
+@include define-color('warning', #ffc94d);
+@include define-color('light', #fff);
+@include define-color('dark', #000);
+@include define-color('gray100', #f5f6f8);
+@include define-color('gray200', #e9ecef);
+@include define-color('gray300', #e3e4e5);
+@include define-color('gray400', #d0d1d3);
+@include define-color('gray500', #a7a8aa);
+@include define-color('gray600', #58585a);
+@include define-color('gray700', #343a40);
+@include define-color('gray800', #2e3338);
+@include define-color('gray900', #212529);
+
+@include define-simple-color('sidebar', $olt-secondary-color);
+/* stylelint-enable at-rule-empty-line-before */
+
+:root {
+  /* stylelint-disable at-rule-empty-line-before */
+  @include export-color('primary');
+  @include export-color('sidebar');
+  /* stylelint-enable at-rule-empty-line-before */
+
+  --olt-readonly-secondaryColor: #{get-color('secondary')};
+  --olt-readonly-errorColor: #{get-color('error')};
+  --olt-readonly-successColor: #{get-color('success')};
+  --olt-readonly-infoColor: #{get-color('info')};
+  --olt-readonly-warningColor: #{get-color('warning')};
+  --olt-readonly-lightColor: #{get-color('light')};
+  --olt-readonly-darkColor: #{get-color('dark')};
+  --olt-readonly-gray100Color: #{get-color('gray100')};
+  --olt-readonly-gray200Color: #{get-color('gray200')};
+  --olt-readonly-gray300Color: #{get-color('gray300')};
+  --olt-readonly-gray400Color: #{get-color('gray400')};
+  --olt-readonly-gray500Color: #{get-color('gray500')};
+  --olt-readonly-gray600Color: #{get-color('gray600')};
+  --olt-readonly-gray700Color: #{get-color('gray700')};
+  --olt-readonly-gray800Color: #{get-color('gray800')};
+  --olt-readonly-gray900Color: #{get-color('gray900')};
+}

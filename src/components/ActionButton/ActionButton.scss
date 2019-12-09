@@ -1,0 +1,215 @@
+.ActionButton {
+  $action-button-padding-x: 16px;
+  $action-button-edit-icon-size: 36px;
+  $action-button-icon-spacing: 4px;
+  $action-button-border-radius: 2.5rem;
+  $action-button-transition-time: 200ms;
+  $action-button-label-transition-time: 300ms;
+  $self: &;
+
+  position: relative;
+  background: none;
+  height: 36px;
+  border-style: solid;
+  vertical-align: middle;
+  border-width: 0;
+  border-radius: $action-button-border-radius;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity $action-button-transition-time;
+  color: get-color('gray800');
+  padding: 0;
+
+  @extend .u-description;
+
+  &-label {
+    opacity: 0;
+    padding: 0 $action-button-padding-x;
+    transition: opacity $action-button-label-transition-time !important;
+    z-index: 5;
+  }
+
+  &:after {
+    content: '';
+    opacity: 0;
+    transition: width $action-button-label-transition-time;
+    position: absolute;
+    z-index: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: get-color('gray100');
+  }
+
+  &--primary {
+    color: get-color('primary');
+
+    &:after {
+      background-color: get-color('primary', 'white', 0.1);
+    }
+  }
+
+  &--confirmative {
+    color: get-color('success');
+
+    &:after {
+      background-color: get-color('success', 'white', 0.1);
+    }
+  }
+
+  &--destructive {
+    color: get-color('error');
+
+    &:after {
+      background-color: get-color('error', 'white', 0.1);
+    }
+  }
+
+  &--disabled {
+    color: get-color('gray500');
+
+    &:after {
+      background-color: get-color('gray100');
+    }
+  }
+
+  &--fixed {
+    #{$self}-label {
+      opacity: 1;
+    }
+  }
+
+  &--standalone {
+    #{$self}-label {
+      display: none;
+    }
+  }
+
+  &--proximity {
+    &:after {
+      opacity: 1;
+    }
+
+    #{$self}-label {
+      opacity: 1;
+    }
+  }
+
+  &--proximity-area {
+    &:hover {
+      & #{$self}:not(#{$self}--disabled):after {
+        opacity: 1;
+      }
+
+      & #{$self} > #{$self}-label {
+        opacity: 1;
+        transition: opacity $action-button-label-transition-time;
+      }
+    }
+  }
+
+  &--base {
+    &:after {
+      opacity: 1;
+      width: 100%;
+    }
+
+    #{$self}-label {
+      opacity: 1;
+    }
+  }
+
+  &-icon,
+  &-icon-left,
+  &-icon-right {
+    &:before {
+      @extend .Icon;
+
+      @extend .Icon--medium;
+
+      border-radius: $action-button-border-radius;
+      height: $action-button-edit-icon-size;
+      width: $action-button-edit-icon-size;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      z-index: 5;
+    }
+  }
+
+  &-icon-left {
+    #{$self}-label {
+      margin-left: $action-button-icon-spacing;
+      padding-left: 0;
+    }
+
+    &:after {
+      left: 0;
+    }
+  }
+
+  &-icon-right {
+    flex-direction: row-reverse;
+
+    #{$self}-label {
+      margin-right: $action-button-icon-spacing;
+      padding-right: 0;
+    }
+
+    &:after {
+      right: 0;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    outline: none;
+
+    #{$self}-label {
+      opacity: 1;
+    }
+
+    &:after {
+      opacity: 1;
+      width: 100%;
+    }
+
+    &:before {
+      background-color: transparent !important;
+    }
+  }
+
+  &--disabled {
+    &:focus,
+    &:hover {
+      cursor: default;
+
+      &:not(#{$self}--base):after {
+        opacity: 0;
+      }
+    }
+  }
+
+  @media (hover: none) {
+    #{$self}-label {
+      display: none;
+      opacity: 1;
+    }
+
+    &--fixed {
+      #{$self}-label {
+        opacity: 1;
+        display: unset !important;
+      }
+    }
+
+    &:after {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.InputList {
+  $input-list-background: get-color('light');
+  $input-list-margin: 16px;
+  $input-list-item-padding: 8px 16px 8px;
+  $self: &;
+
+  @extend %control;
+
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 0;
+  background-color: $input-list-background;
+
+  &-link {
+    display: block;
+    white-space: nowrap;
+    padding: $input-list-item-padding;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  $theme-light-colors: map-get($control-colors, light);
+
+  //
+  // Light theme colors
+  //
+
+  &-link {
+    &:hover,
+    &:focus {
+      background-color: map-get($theme-light-colors, background-default);
+    }
+
+    &.is-active {
+      background-color: map-get($theme-light-colors, background-default);
+    }
+  }
+
+  //
+  // Dark theme colors
+  //
+
+  $theme-dark-colors: map-get($control-colors, dark);
+
+  .Theme-dark & {
+    background-color: get-color('dark');
+  }
+
+  .Theme-dark &-link {
+    &:hover,
+    &:focus {
+      background-color: map-get($theme-dark-colors, background-default);
+    }
+
+    &.is-active {
+      background-color: map-get($theme-dark-colors, background-default);
+    }
+  }
+}

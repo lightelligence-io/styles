@@ -1,0 +1,81 @@
+@mixin cardTableInTableModeWithFlexLayout($self) {
+  @include cardTableInTableMode() {
+    &#{$self}--useFlexLayout,
+    &:not(#{$self}--useTableLayout) {
+      @content;
+    }
+  }
+}
+
+@mixin cardTableFlexWidth($self) {
+  $collection: (5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90);
+
+  @each $percent in $collection {
+    &#{$self}--tableCellWidth#{$percent} {
+      flex-basis: #{$percent + '%'};
+    }
+  }
+}
+
+/*
+ * This is the basic integration of data cards tables via flex layout.
+ */
+@mixin cardTableFlexLayoutIntegration($self) {
+  @include cardTableInTableModeWithFlexLayout($self) {
+    #{$self}-card,
+    #{$self}-head {
+      display: flex;
+      flex-direction: row;
+    }
+
+    #{$self}-headItem,
+    #{$self}-cardItem {
+      flex-grow: 1;
+      flex-basis: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    #{$self}-headItem,
+    #{$self}-cardItem {
+      &#{$self}--alignCenter {
+        flex-grow: 1;
+        justify-content: center;
+      }
+
+      &#{$self}--alignRight {
+        flex-grow: 1;
+        justify-content: flex-end;
+      }
+    }
+
+    #{$self}-headItem,
+    #{$self}-cardItem {
+      &#{$self}--verticalAlignTop {
+        align-items: flex-start;
+      }
+
+      &#{$self}--verticalAlignBottom {
+        align-items: flex-end;
+      }
+    }
+
+    #{$self}-cardItem,
+    #{$self}-headItem {
+      @include cardTableFlexWidth($self);
+    }
+
+    #{$self}-cardItem,
+    #{$self}-card,
+    #{$self}-content {
+      &#{$self}--listOnly {
+        display: none;
+      }
+    }
+
+    #{$self}-content {
+      word-break: break-word;
+    }
+  }
+}

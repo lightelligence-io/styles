@@ -1,38 +1,50 @@
 .Icon {
-  $icon-font-size: 150%;
   $icon-sizes: (
-    small: 1rem,
-    medium: 2rem,
-    large: 3rem
+    small: 12px,
+    medium: 16px,
+    large: 24px,
   ) !default;
 
   display: inline-flex;
   vertical-align: middle;
 
   &:before {
-    @include icon-font-material;
-
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
     content: '';
-    font-size: $icon-font-size;
   }
 
-  @include contextual-colors(('color'));
+  // The $icon variable is defined in our `webpack.config.js`. It stores all
+  // files from `/src/icons/` directory.
+  @each $file in $icons {
+    $suffix: '';
+    $name: str-slice($file, 1, -5);
+
+    @if _ends-with($file, '24.svg') {
+      $suffix: '#{&}--large';
+      $name: str-slice($name, 1, -4);
+    } @else if _ends-with($file, '16.svg') {
+      $suffix: '';
+      $name: str-slice($name, 1, -4);
+    } @else if _ends-with($file, '12.svg') {
+      $suffix: '#{&}--small';
+      $name: str-slice($name, 1, -4);
+    } @else {
+      @warn ( "We can't find the icon size: #{$file}");
+    }
+
+    &-#{$name}#{$suffix}:before {
+      font-icon: url('../../icons/#{$file}');
+    }
+  }
 
   @each $name, $value in $icon-sizes {
     &--#{$name} {
       font-size: $value;
-    }
-  }
-
-  // TODO check why this is defined at all ??
-  &:after {
-    font-family: 'Material Icons';
-    font-style: normal;
-  }
-
-  &[data-icon] {
-    &:before {
-      content: attr(data-icon);
     }
   }
 }

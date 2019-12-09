@@ -1,1 +1,15 @@
-@include util-make(('font-size': var-get('fontSize')));
+$fontSizeBase: 16px;
+
+$font-sizes: (
+  xxSmall: calc(#{$fontSizeBase} * 0.65),
+  xSmall: calc(#{$fontSizeBase} * 0.75),
+  small: calc(#{$fontSizeBase} * 0.8),
+  medium: #{$fontSizeBase},
+  large: calc(#{$fontSizeBase} * 1.5),
+  xLarge: calc(#{$fontSizeBase} * 1.8),
+  xxLarge: calc(#{$fontSizeBase} * 2.2),
+  smaller: 80%,
+  larger: 150%,
+);
+
+@include util-make(('font-size': $font-sizes));

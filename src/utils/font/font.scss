@@ -1,18 +1,85 @@
-@each $breakpoint in map-keys(screen-get()) {
-  $infix: screen-infix($breakpoint);
+.u {
+  &-H500 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    font-family: 'PT Sans', sans-serif;
 
-  @include screen-up($breakpoint) {
-    .u-#{$infix}fontBase {
-      font-family: var-get('fontFamilyBase');
+    @media (max-width: map-get($olt-breakpoints, lg)) {
+      font-size: 22px;
+      line-height: 26px;
     }
 
-    .u-#{$infix}fontMono {
-      font-family: var-get('fontFamilyMono');
+    @media (max-width: map-get($olt-breakpoints, sm)) {
+      font-size: 20px;
+      line-height: 24px;
     }
+  }
 
-    // FIXME: Get rid of redundant stuff, either this or that
-    .u-#{$infix}fontInitial {
-      font-family: var-get('fontFamilyBase');
+  &-H400 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    font-family: 'PT Sans', sans-serif;
+
+    @media (max-width: map-get($olt-breakpoints, sm)) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+
+  &-H300 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    font-family: 'PT Sans', sans-serif;
+  }
+
+  &-H200 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    font-family: 'PT Sans', sans-serif;
+  }
+
+  &-H100 {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+  }
+
+  &-content {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: 'PT Sans', sans-serif;
+  }
+
+  &-description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    font-family: 'PT Sans', sans-serif;
+  }
+
+  &-support {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    font-family: 'PT Sans', sans-serif;
+  }
+
+  &-code {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: 'Overpass Mono', monospace;
+
+    @media (max-width: map-get($olt-breakpoints, sm)) {
+      font-size: 12px;
+      line-height: 18px;
     }
   }
 }

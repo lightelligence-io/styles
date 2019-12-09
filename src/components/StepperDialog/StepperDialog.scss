@@ -1,0 +1,231 @@
+.StepperDialog {
+  $dialog-border-radius: 4px;
+  $dialog-padding-x: 8px;
+  $dialog-margin-x: 12px;
+  $dialog-backdrop: rgba(0, 0, 0, 0.7);
+  $dialog-backdrop-filter: blur(8px);
+  $dialog-min-size: 448px;
+
+  $dialog-window-padding: 32px;
+  $dialog-content-padding: 32px;
+  $dialog-title-padding-bottom: 8px;
+  $dialog-footer-padding-top: 32px;
+  $dialog-footer-button-padding: 8px;
+  $dialog-description-padding-bottom: 32px;
+  $dialog-transition-duration: 0.2s;
+  $dialog-transition-timing-function: ease-in;
+
+  $stepper-gray-circle: 1px solid get-color('gray400');
+  $stepper-current-circle: 2px solid get-color('primary');
+  $stepper-circle-small-size: 8px;
+  $stepper-circle-large-size: 24px;
+  $stepper-step-padding: 16px;
+  $stepper-icon-margin: 16px;
+  $stepper-line-height: 16px;
+
+  $dialog-widths: (
+    sm: 100%,
+    md: 100%,
+    lg: 100%,
+    xl: 95%,
+  );
+  $dialog-heights: (
+    sm: 100%,
+    md: 100%,
+    lg: 100%,
+    xl: 95%,
+  );
+  $self: &;
+
+  @extend .Dialog;
+
+  &-window {
+    @extend .Dialog-window;
+
+    flex-direction: row;
+    padding: 0;
+  }
+
+  &-stepper {
+    @extend .Dialog-window;
+
+    padding-top: 68px; // TODO: dialog padding + close height
+    min-width: 248px;
+    max-width: map-get($dialog-widths, xl);
+    max-height: 100%;
+    margin: 0;
+    background-color: get-color('gray200');
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  &-stepper-header {
+    @extend .u-H100;
+
+    text-transform: uppercase;
+    padding: $stepper-step-padding;
+    padding-top: 0;
+    padding-bottom: 24px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-stepper-counter {
+    @extend .u-H100;
+
+    text-transform: uppercase;
+    position: absolute;
+    left: 64px;
+    height: 42px;
+    width: 42px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-stepper-step {
+    @extend .u-support;
+
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    padding: $stepper-step-padding;
+    align-items: center;
+
+    &:before {
+      @extend .Icon;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: $stepper-circle-small-size;
+      height: $stepper-circle-small-size;
+      margin: ($stepper-circle-large-size - $stepper-circle-small-size) / 2;
+      border-radius: 50%;
+      border: $stepper-gray-circle;
+      margin-right:
+        $stepper-icon-margin +
+        ($stepper-circle-large-size - $stepper-circle-small-size) / 2;
+      align-self: center;
+    }
+
+    &--done {
+      &:before {
+        @extend .Icon-check-default;
+
+        width: $stepper-circle-large-size;
+        height: $stepper-circle-large-size;
+        border-radius: 50%;
+        border: $stepper-gray-circle;
+        margin: 0;
+        margin-right: $stepper-icon-margin;
+        color: get-color('success');
+      }
+    }
+
+    &--current {
+      &:before {
+        width: $stepper-circle-large-size;
+        height: $stepper-circle-large-size;
+        border-radius: 50%;
+        border: $stepper-current-circle;
+        margin: 0;
+        margin-right: $stepper-icon-margin;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top:
+        $stepper-circle-large-size + $stepper-step-padding * 2 -
+        $stepper-line-height / 2;
+      left: $stepper-step-padding + $stepper-circle-large-size / 2;
+      height: $stepper-line-height;
+      border-right: $stepper-gray-circle;
+      margin-left: 0;
+    }
+
+    &--last {
+      &:after {
+        height: 0;
+      }
+    }
+  }
+
+  &-content {
+    @extend .Dialog-window;
+
+    min-width: $dialog-min-size;
+    max-width: map-get($dialog-widths, xl);
+    max-height: 100%;
+    flex: 1;
+  }
+
+  &-proceed {
+    @extend .Button, .Button--primary;
+  }
+
+  &-back {
+    @extend .Button, .Button--tertiary;
+  }
+
+  @media (max-width: map-get($olt-breakpoints, lg)) {
+    #{$self}-window {
+      flex-direction: column;
+    }
+
+    #{$self}-stepper {
+      background-color: get-color('light');
+      width: 100%;
+      min-width: $dialog-min-size;
+      max-width: map-get($dialog-widths, lg);
+      min-height: 42px;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 45px; // TODO: dialog padding (32) + close media margin (16) + close height (36) /2 - this.height /2
+
+      @media (max-width: $dialog-min-size) {
+        min-width: 100%;
+      }
+    }
+
+    #{$self}-stepper-header {
+      padding: 0;
+    }
+
+    #{$self}-stepper-counter {
+      display: flex;
+    }
+
+    #{$self}-stepper-step {
+      display: none;
+    }
+
+    #{$self}-content {
+      max-width: map-get($dialog-widths, lg);
+      min-width: 100%;
+
+      & > .Dialog-close {
+        margin-top: 16px;
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  @at-root {
+    *[data-toggle='stepperdialog'] {
+      display: none;
+    }
+
+    #{$self}.is-open,
+    *[data-toggle='stepperdialog']:checked + label + #{$self} {
+      width: 100vw;
+      height: 100vh;
+      opacity: 1;
+      clip: auto;
+    }
+  }
+}

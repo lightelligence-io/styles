@@ -1,17 +1,15 @@
 .Avatar {
-  $avatar-background: var-get('colorLight');
-  $avatar-color: var-get('colorPrimary');
   $avatar-sizes: (
     small: 2rem,
     medium: 4.25rem,
-    large: 6.5rem
+    large: 6.5rem,
   );
   $self: &;
 
   width: 2em;
   height: 2em;
   font-size: 1em;
-  background-color: $avatar-background;
+  background-color: get-color('light');
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -19,13 +17,10 @@
   user-select: none;
   font-weight: bold;
   transition: box-shadow 0.2s ease-out 0s;
-  color: $avatar-color;
+  color: get-color('primary');
   font-style: normal;
   border: 0.2em solid currentColor;
   line-height: 100%;
-
-  // Colors
-  @include contextual-colors(('color'));
 
   // Sizes
   @each $name, $value in $avatar-sizes {
@@ -39,10 +34,10 @@
 
   // Presets
   &--user {
-    @extend #{$self}--primary !optional;
+    color: get-color('primary');
   }
 
   &--tenant {
-    @extend #{$self}--info !optional;
+    color: get-color('info');
   }
 }

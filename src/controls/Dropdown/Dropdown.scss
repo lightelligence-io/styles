@@ -1,0 +1,163 @@
+$chevron-size: 6px;
+
+.Dropdown {
+  $dropdown-content-height: 220px;
+  $dropdown-transition: all 200ms;
+
+  $self: &;
+
+  @extend %control;
+
+  // use floats because of ugly google-chrome subpixel rendering
+  // 42.01 instead of 42% looks nicer in chrome.
+  // https://stackoverflow.com/questions/51850356/chrome-linear-gradient-bugs-when-dealing-with-subpixels
+  @mixin chevronDown ($color) {
+    background-image:
+      linear-gradient(45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%),
+      linear-gradient(-45deg, transparent 42.01%, $color 42.01%, $color 60.01%, transparent 60.01%);
+  }
+
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  min-height: $control-line-height + $control-margin-top + $control-padding-top + $control-padding-bottom + $control-border-bottom;
+  margin: 0;
+  padding: 0;
+  transition: $dropdown-transition;
+
+
+  &:before {
+    background-position: 0 0, $chevron-size 0;
+    background-size:
+      $chevron-size $chevron-size,
+      $chevron-size $chevron-size,
+      1px 0;
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    height: $chevron-size;
+    width: #{2*$chevron-size};
+    top: #{4px + $control-margin-top};
+    left: calc(100% - #{2px + $control-padding-horizontal + 2 * $chevron-size});
+    transition: $dropdown-transition;
+  }
+
+  &-content {
+    max-height: 0;
+    // max-height: $dropdown-content-height;
+    overflow: hidden;
+    transition: $dropdown-transition;
+    margin-top: $control-line-height + $control-margin-top;
+  }
+
+  &-selected-content {
+    @extend .Label;
+
+    position: absolute;
+    top: $control-margin-top;
+    left: $control-padding-horizontal;
+    margin: 0;
+    color: get-color('dark');
+    background-color: transparent;
+    transition: $dropdown-transition;
+  }
+
+  :not(.is-open) &--selected > .Label-text {
+    top: -1px;
+    transform: scale(0.6875);
+    letter-spacing: 0.2px;
+  }
+
+  //
+  // Light theme colors
+  //
+
+  $theme-light-colors: map-get($control-colors, light);
+
+  &:before {
+    @include chevronDown(map-get($theme-light-colors, border-default));
+  }
+
+  .has-value &:before {
+    @include chevronDown(map-get($theme-light-colors, input-default));
+  }
+
+  &:disabled &:before {
+    @include chevronDown(map-get($theme-light-colors, border-disabled));
+  }
+
+  & .Label-text {
+    color: map-get($theme-light-colors, border-default);
+  }
+
+  //
+  // Dark theme colors
+  //
+
+  $theme-dark-colors: map-get($control-colors, dark);
+
+  .Theme-dark & .Label-text {
+    color: map-get($theme-light-colors, border-default);
+  }
+
+  .Theme-dark &:before {
+    @include chevronDown(map-get($theme-dark-colors, border-default));
+  }
+
+  .Theme-dark .has-value &:before {
+    @include chevronDown(map-get($theme-dark-colors, input-default));
+  }
+
+  .Theme-dark &:disabled &:before {
+    @include chevronDown(map-get($theme-dark-colors, border-disabled));
+  }
+
+
+
+  @at-root {
+    *[data-toggle='dropdown'] {
+      display: none;
+    }
+
+    #{$self}.is-open,
+    *[data-toggle='dropdown']:checked + label > #{$self} {
+      border-radius: 4px;
+      overflow: hidden;
+      border: none;
+      box-shadow: 0 8px 16px 0 rgba(13, 18, 44, 0.2);
+      background-color: get-color('light');
+
+      #{$self}-content {
+        display: block;
+        max-height: $dropdown-content-height;
+        overflow: scroll;
+      }
+
+      #{$self}-selected-content {
+        opacity: 0;
+      }
+
+      & + .Label-text {
+        z-index: 1;
+      }
+
+      &--selected > .Label-text {
+        top: 11px;
+        transform: scale(1);
+        letter-spacing: $control-letter-spacing;
+      }
+
+      &:before {
+        transform: rotate(180deg);
+      }
+
+      .Theme-dark & {
+        background-color: get-color('dark');
+      }
+    }
+  }
+}

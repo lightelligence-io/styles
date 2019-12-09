@@ -1,89 +1,122 @@
 .Tabs {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 var-get('spacing1');
+  $tab-height: 36px;
+  $tab-border-radius: 4px;
+  $tab-active-bg-color: get-color('secondary');
+  $tab-active-text-color: get-color('light');
+  $tab-inactive-bg-color: get-color('light');
+  $tab-inactive-text-color: get-color('secondary');
+  $tab-hover-bg-color: rgb(233, 236, 239);
+  $tab-hover-text-color: get-color('secondary');
+  $tab-padding: 8px 16px 10px 16px;
+  $tab-margin-x: 4px;
+  $tab-margin-y: 4px;
+  $tab-bar-padding: 0;
+  $tab-bar-height: $tab-height + $tab-bar-padding * 2 + $tab-margin-y;
+  $tab-bar-gradient-width: 30px;
+  $self: &;
 
-  &--justify {
-    justify-content: space-between;
+  display: flex;
+  margin: 0;
+  border: 0;
+  align-items: center;
+  justify-content: center;
+  padding: $tab-bar-padding;
+  height: $tab-bar-height;
+  white-space: nowrap;
+
+  &:before {
+    display: flex;
+    align-items: flex-start;
+    overflow-x: scroll;
   }
 
-  &-header {
+  &-link {
+    height: $tab-height;
+    width: auto;
     border: 0;
-    background: var-get('colorLight');
-    color: var-get('colorDark');
+    background: $tab-inactive-bg-color;
+    border-radius: $tab-border-radius;
+    color: $tab-inactive-text-color;
     appearance: none;
     display: block;
     cursor: pointer;
-    line-height: $olt-tabs-line-height;
-    transition: all ease 0.2s;
-    padding: 0 var-get('spacing1');
+    line-height: 20px;
     text-decoration: none;
-
-    @include screen-up(md) {
-      font-size: $olt-tabs-font-size-lg-up;
-    }
+    padding: $tab-padding;
+    margin-right: $tab-margin-x;
+    margin-left: $tab-margin-x;
+    margin-top: $tab-margin-y;
+    margin-bottom: $tab-margin-y;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.2s;
+    white-space: nowrap;
 
     &:focus {
       outline: none;
+      background: $tab-hover-bg-color;
+      color: $tab-hover-text-color;
+    }
+
+    &:hover {
+      outline: none;
+      background: $tab-hover-bg-color;
+      color: $tab-hover-text-color;
     }
 
     &:visited {
       color: inherit;
     }
 
+    &.is-active {
+      background: $tab-active-bg-color;
+      color: $tab-active-text-color;
+    }
+  }
+
+  &.has-gradient-right {
     &:after {
+      position: absolute;
+      right: 0;
+      height: $tab-height;
+      width: $tab-bar-gradient-width;
       content: '';
-      display: block;
-      padding: 4px 0;
-      border-bottom: solid 1px transparent;
-    }
-
-    @include screen-down(md) {
-      order: initial;
-      width: 100%;
-      margin-right: 0;
-      margin-top: 0.2rem;
+      background:
+        linear-gradient(
+          to left,
+          rgb(255, 255, 255) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      pointer-events: none;
     }
   }
 
-  &--navigation &-header {
-    width: auto;
-    order: 1;
-    margin-right: 0.2rem;
-    margin-top: 0;
-  }
-
-  &-content {
-    order: 99;
-    flex-grow: 1;
-    width: 100%;
-    display: none;
-    padding: 0 var-get('spacing1');
-
-    @include screen-down(md) {
-      order: initial;
+  &.has-gradient-left {
+    &:before {
+      position: absolute;
+      left: 0;
+      height: $tab-height;
+      width: $tab-bar-gradient-width;
+      content: '';
+      background:
+        linear-gradient(
+          to right,
+          rgb(255, 255, 255) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      pointer-events: none;
     }
   }
 
-  &-header + &-content {
-    margin-top: var-get('spacing3');
+  &--forceScroll {
+    @extend #{$self} !optional;
+
+    justify-content: flex-start;
+    overflow: scroll;
   }
 
-  input[type="radio"] {
-    display: none;
-  }
-
-  &-header.is-active,
-  input[type="radio"]:checked + &-header {
-    color: var-get('colorPrimary');
-
-    &:after {
-      border-color: currentColor;
-    }
-  }
-
-  &-content.is-active,
-  input[type="radio"]:checked + &-header + &-content {
-    display: block;
+  @media (max-width: map-get($olt-breakpoints, sm)) {
+    justify-content: flex-start;
+    overflow: scroll;
   }
 }

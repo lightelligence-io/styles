@@ -1,0 +1,13 @@
+:root {
+  @each $breakpoint, $value in $olt-breakpoints {
+    --olt-breakpoint-#{$breakpoint}: #{$value};
+  }
+}
+
+@each $breakpoint, $value in $olt-breakpoints {
+  @media (min-width: #{$value}) {
+    :root {
+      --olt-breakpoint-current: #{$breakpoint};
+    }
+  }
+}

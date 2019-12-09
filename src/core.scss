@@ -1,30 +1,20 @@
 // Vendor
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono:400,600|PT+Sans:400,700&display=swap');
 @import 'sscreen/sscreen';
-@import 'varss/varss';
-@import 'typeface-pt-sans/index.css';
-@import 'typeface-overpass-mono/index.css';
-@import 'material-design-icons-iconfont/dist/material-design-icons.css';
 @import 'sassdash/index';
 @import 'sass-svg/index';
 
 // Functions
-@import './core/functions/map';
 @import './core/functions/string';
 @import './core/functions/list';
-@import './core/functions/vars';
-
-// Theme
-@import './theme.yml';
+@import './core/functions/color';
 
 // Globals
 @import './core/globals/vars';
 @import './core/globals/screen';
+@import './core/globals/colors';
 @import './core/globals/controls';
-@import './core/globals/v2Controls';
 
 // Mixins
-@import './core/mixins/browserHacks';
 @import './core/mixins/controls';
 @import './core/mixins/util';
-@import './core/mixins/contextual';
-@import './core/mixins/icon-font';

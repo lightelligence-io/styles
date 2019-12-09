@@ -1,0 +1,25 @@
+@mixin cardTableInTableMode() {
+  &--alwaysTable {
+    @content;
+  }
+
+  @include screen-up(lg) {
+    @content;
+  }
+}
+
+@mixin cardTableInListMode($self) {
+  &:not(#{$self}--alwaysTable) {
+    @include screen-down(md) {
+      @content;
+    }
+  }
+}
+
+@mixin cardTableInListModeSmall($self) {
+  &:not(#{$self}--alwaysTable) {
+    @include screen-down(sm) {
+      @content;
+    }
+  }
+}

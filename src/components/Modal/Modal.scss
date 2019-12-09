@@ -1,222 +1,189 @@
 .Modal {
-  $modal-border-radius: var-get('borderRadius');
-  $modal-backdrop: rgba(255, 255, 255, 0.7);
-  $modal-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-  $modal-padding-x: 1.5rem;
-  $modal-padding-y: 1.5rem;
-  $modal-content-padding-x: 0;
-  $modal-content-padding-y: var-get('spacing3');
-  $modal-background: var-get('colorLight');
-  $modal-dialog-width: 440px;
-  $modal-transition-duration: 0.2s;
-  $modal-transition-timing-function: ease-in;
+  $modal-border-radius: 4px;
+  $modal-backdrop: rgba(0, 0, 0, 0.7);
+  $modal-backdrop-filter: blur(8px);
+  $modal-header-padding-top: 10px;
+  $modal-header-padding-bottom: 6px;
+  $modal-header-padding-y: 24px;
+  $modal-content-padding: 24px;
+  $modal-footer-padding-top: 16px;
+  $modal-footer-button-padding: 8px;
+
+  $modal-headline-color: get-color('light');
+  $modal-icon-padding-right: 16px;
+
+  $modal-background: get-color('light');
+  $modal-dialog-width: 400px;
+  $modal-dialog-width-mobile: 343px;
+  $modal-dialog-width-wide: 590px;
+  $modal-transition-duration: 0.5s;
+  $modal-transition-timing-function: ease;
   $self: &;
 
-  height: 0;
-  width: 0;
-  opacity: 0;
-  overflow: auto;
-  transition: opacity $modal-transition-duration $modal-transition-timing-function;
-  background: $modal-backdrop;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
+  @function not-any-selector($modifiers, $self) {
+    $res: '';
+
+    @each $m in $modifiers {
+      $res: '#{$res}:not(#{$self}--#{$m})';
+    }
+
+    @return $res;
+  }
+
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  overscroll-behavior: contain;
   position: fixed;
   left: 0;
   top: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+  transition: all $modal-transition-duration $modal-transition-timing-function;
+  background: $modal-backdrop;
+  backdrop-filter: $modal-backdrop-filter;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overscroll-behavior: contain;
   z-index: $olt-z-index-modal;
-  display: flex;
-  clip: rect(0, 0, 0, 0);
-  font-family: var-get('fontFamilyBase');
+  // clip: rect(0, 0, 0, 0);
+  pointer-events: none;
 
   &-dialog {
-    background: $modal-background;
+    max-height: 90%;
     width: $modal-dialog-width;
-    max-width: 100%;
+    background: $modal-background;
     padding: 0;
     display: flex;
-    justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    transition: transform $modal-transition-duration $modal-transition-timing-function;
-    transform: translateY(100%);
+    transition:
+      transform $modal-transition-duration
+      $modal-transition-timing-function;
+    transform: translateY(150%);
     z-index: $olt-z-index-modal-dialog;
-    //pointer-events: auto;
+    overflow: auto;
     cursor: auto;
-    //box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6);
+    border-radius: $modal-border-radius;
+    pointer-events: none;
 
-    &:before {
-      @include icon-font-material;
-
-      content: '';
-      height: 112px;
-      width: 64px;
-      border-radius: 0 0 32px 32px;
-      justify-content: center;
-      align-items: flex-end;
-      color: white;
-      font-size: 50px; // icon size
-      vertical-align: middle;
-      line-height: 64px;
-      margin-bottom: -20px;
-      display: none;
-      margin-left: auto;
-      margin-right: auto;
+    @media (max-width: map-get($olt-breakpoints, sm)) {
+      width: $modal-dialog-width-mobile;
     }
   }
 
   &-header {
-    display: flex;
-    padding: $modal-padding-y $modal-padding-x 0 $modal-padding-x;
-    padding-bottom: 0;
-    width: 100%;
-    justify-content: center;
-    text-align: center;
+    @extend .u-H400;
 
-    &:only-child {
-      padding-bottom: $modal-padding-y;
+    display: flex;
+    padding: $modal-header-padding-y;
+    padding-top: $modal-header-padding-top;
+    padding-bottom: $modal-header-padding-bottom;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    color: $modal-headline-color;
+    border-top-left-radius: $modal-border-radius;
+    border-top-right-radius: $modal-border-radius;
+    background: get-color('success');
+  }
+
+  &-header:not(&-header--custom):before {
+    @extend .Icon;
+
+    @extend .Icon--large;
+
+    padding-right: $modal-icon-padding-right;
+    margin-top: -2px;
+  }
+
+  &--critical &-header {
+    background: get-color('error');
+
+    &:before {
+      @extend .Icon-warning-critical-filled.Icon--large;
     }
   }
 
-  &-content {
-    width: 0;
-    height: 0;
-    padding: $modal-padding-y $modal-padding-x 0 $modal-padding-x;
-    justify-content: center;
-    text-align: center;
+  &--info &-header {
+    background: get-color('info');
 
-    &:last-child {
-      padding-bottom: $modal-padding-y;
+    &:before {
+      @extend .Icon-info-filled.Icon--large;
     }
+  }
+
+  &--warning &-header {
+    background: get-color('warning');
+
+    &:before {
+      @extend .Icon-warning-medium-filled.Icon--large;
+    }
+  }
+
+  &--success &-header {
+    background: get-color('success');
+
+    &:before {
+      @extend .Icon-check-filled.Icon--large;
+    }
+  }
+
+  &--action &-header {
+    background: get-color('primary');
+
+    &:before {
+      @extend .Icon-settings.Icon--large;
+    }
+  }
+
+  $types: ('critical' 'info' 'warning' 'success' 'action');
+
+  &#{not-any-selector($types, $self)} &-header:before {
+    @extend .Icon-check-filled.Icon--large;
+  }
+
+  // remove icon for -header--custom modifier
+  &-header--custom:before {
+    content: '' !important;
+  }
+
+  &-header--custom > i {
+    padding-right: $modal-icon-padding-right;
+  }
+
+  &-content {
+    padding: $modal-content-padding;
+    justify-content: center;
+    text-align: left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    flex-direction: column;
+    flex: 1;
   }
 
   &-footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: $modal-content-padding-y $modal-padding-x $modal-padding-y $modal-padding-x;
-    justify-content: space-evenly;
-    align-items: center;
+    padding: #{$modal-content-padding - $modal-footer-button-padding};
+    padding-bottom: $modal-content-padding;
+    padding-top: $modal-footer-padding-top;
+    justify-content: flex-end;
     width: 100%;
-    text-align: center;
-  }
 
-  &-content .Container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  &-header + &-content {
-    padding-top: 0;
-  }
-
-  &-title {
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    margin: 0;
-    font-size: $olt-modal-title-font-size;
-    line-height: $olt-modal-title-line-height;
-    font-weight: bold;
-    margin: 0;
-  }
-
-  &-close {
-    @extend .Button;
-
-    @extend .Button[data-icon];
-
-    &:before {
-      content: 'close';
-    }
-
-    align-self: flex-end;
-    margin: 0;
-    color: #666;
-    position: fixed; // TODO: Get it of the overflow stuff
-    right: var-get('spacing3');
-    top: var-get('spacing3');
-    z-index: $olt-z-index-modal-close;
-  }
-
-  &-dialog &-close {
-    @extend .Button--outline;
-  }
-
-  &--error:not(&--fullscreen) &-dialog,
-  &--success:not(&--fullscreen) &-dialog,
-  &--info:not(&--fullscreen) &-dialog,
-  &--warning:not(&--fullscreen) &-dialog {
-    &:before {
-      display: flex;
-      margin-bottom: -20px;
+    & > * {
+      margin-left: $modal-footer-button-padding;
+      margin-right: $modal-footer-button-padding;
     }
   }
 
-  &--error &-dialog:before {
-    content: 'error_outline';
-    background: var-get('colorError');
-  }
-
-  &--info &-dialog:before {
-    content: 'info_outline';
-    background: var-get('colorInfo');
-  }
-
-  &--warning &-dialog:before {
-    content: 'info_outline';
-    background: var-get('colorWarning');
-  }
-
-  &--success &-dialog:before {
-    content: 'done';
-    background: var-get('colorSuccess');
-  }
-
-  &--fullscreen {
-    background: white;
-  }
-
-  &--fullscreen &-content,
-  &--fullscreen &-header,
-  &--fullscreen &-title {
-    justify-content: initial;
-    align-items: initial;
-    text-align: initial;
-  }
-
-  &--fullscreen &-footer {
-    text-align: initial;
-  }
-
-  &--fullscreen &-dialog {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background: transparent;
-    box-shadow: none;
-    flex-wrap: unset;
-  }
-
-  &--fullscreen &-close {
-    display: inline-flex;
-  }
-
-  &--center &-content,
-  &--center &-header,
-  &--center &-footer {
-    text-align: center;
-  }
-
-  &--center &-content,
-  &--center &-header {
-    justify-content: center;
+  &--wide &-dialog {
+    width: $modal-dialog-width-wide;
   }
 
   @at-root {
@@ -224,18 +191,17 @@
       display: none;
     }
 
-    *[data-toggle='modal']:checked + label {
-    }
-
     #{$self}.is-open,
     *[data-toggle='modal']:checked + label + #{$self} {
       width: 100vw;
       height: 100vh;
       opacity: 1;
-      clip: auto;
+      display: flex;
+      // clip: auto;
 
       #{$self}-dialog {
         transform: translateY(0);
+        pointer-events: all;
       }
 
       #{$self}-content {
@@ -247,42 +213,5 @@
         height: 100%;
       }
     }
-  }
-
-  @media (max-width: 400px) {
-    &.is-open &-dialog {
-      transform: translateY(0);
-    }
-
-    &.is-open &-dialog &-close {
-      color: #666;
-      position: absolute;
-      right: var-get('spacing3');
-      top: var-get('spacing3');
-      background: #fff;
-      font-size: 16px; // icon size
-      font-weight: bold;
-      text-align: center;
-      cursor: pointer;
-    }
-  }
-
-  // FIXME: Prevent nesting of elements
-  // Make sure that nested elements won't break anything
-  &-content &-footer,
-  &-content &-header {
-    padding: 0;
-  }
-
-  &-content &-header {
-    padding-bottom: 1.25rem;
-  }
-
-  &-content &-footer {
-    padding-top: 1.25rem;
-  }
-
-  &:not(#{$self}--fullscreen) #{$self}-content {
-    height: auto;
   }
 }

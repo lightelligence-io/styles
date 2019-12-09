@@ -1,145 +1,647 @@
 .Button {
-  $button-padding-x: 1rem;
+  $button-colors: (
+    'primary': (
+      'default': (
+        'light': (
+          'bg': (
+            'normal': get-color('primary'),
+            'hover': get-color('primary', 'white', 0.7),
+            'press': get-color('primary', 'secondary', 0.8),
+            'progress': get-color('primary'),
+            'disabled': get-color('gray100'),
+          ),
+          'border': (),
+          'font': (
+            'normal': get-color('light'),
+          ),
+        ),
+        'dark': (
+          'bg': (),
+          'border': (),
+          'font': (),
+        ),
+      ),
+      'destructive': (
+        'light': (
+          'bg': (
+            'normal': get-color('error'),
+            'hover': get-color('error', 'white', 0.7),
+            'press': get-color('error', 'secondary', 0.8),
+            'progress': get-color('error'),
+          ),
+          'font': (
+            'normal': get-color('light'),
+          ),
+        ),
+        'dark': (),
+      ),
+      'confirmative': (
+        'light': (
+          'bg': (
+            'normal': get-color('success'),
+            'hover': get-color('success', 'white', 0.7),
+            'press': get-color('success', 'secondary', 0.8),
+            'progress': get-color('success'),
+          ),
+          'font': (
+            'normal': get-color('light'),
+          ),
+        ),
+        'dark': (),
+      ),
+      'disabled': (
+        'light': (
+          'bg': (
+            'normal': get-color('gray100'),
+          ),
+          'font': (
+            'normal': get-color('gray500'),
+          ),
+        ),
+        'dark': (
+          'bg': (
+            'normal': get-color('gray700'),
+          ),
+          'font': (
+            'normal': get-color('gray600'),
+          ),
+        ),
+      ),
+    ),
+    'secondary': (
+      'default': (
+        'light': (
+          'bg': (
+            'normal': get-color('light'),
+            'hover': get-color('secondary'),
+            'press': get-color('secondary', 'white', 0.8),
+            'progress': get-color('secondary'),
+          ),
+          'border': (
+            'normal': get-color('secondary'),
+          ),
+          'font': (
+            'normal': get-color('secondary'),
+            'hover': get-color('light'),
+            'press': get-color('light'),
+            'progress': get-color('light'),
+          ),
+        ),
+        'dark': (
+          'bg': (
+            'normal': get-color('dark'),
+            'hover': get-color('light'),
+            'press': get-color('secondary', 'white', 0.3),
+            'progress': get-color('light'),
+          ),
+          'border': (
+            'normal': get-color('light'),
+          ),
+          'font': (
+            'normal': get-color('light'),
+            'hover': get-color('secondary'),
+            'press': get-color('secondary'),
+            'progress': get-color('secondary'),
+          ),
+        ),
+      ),
+      'confirmative': (
+        'light': (
+          'bg': (
+            'normal': get-color('light'),
+            'hover': get-color('success'),
+            'press': get-color('success', 'secondary', 0.8),
+            'progress': get-color('success'),
+          ),
+          'font': (
+            'normal': get-color('success'),
+            'hover': get-color('light'),
+            'press': get-color('light'),
+            'progress': get-color('light'),
+          ),
+          'border': (
+            'normal': get-color('success'),
+          ),
+        ),
+        'dark': (
+          'bg': (
+            'normal': get-color('dark'),
+            'hover': get-color('success'),
+            'press': get-color('success', 'secondary', 0.8),
+            'progress': get-color('success'),
+          ),
+          'font': (
+            'normal': get-color('success'),
+            'hover': get-color('light'),
+            'press': get-color('light'),
+            'progress': get-color('light'),
+          ),
+          'border': (
+            'normal': get-color('success'),
+          ),
+        ),
+      ),
+      'destructive': (
+        'light': (
+          'bg': (
+            'normal': get-color('light'),
+            'hover': get-color('error'),
+            'press': get-color('error', 'secondary', 0.8),
+            'progress': get-color('error'),
+          ),
+          'border': (
+            'normal': get-color('error'),
+          ),
+          'font': (
+            'normal': get-color('error'),
+            'hover': get-color('light'),
+            'press': get-color('light'),
+          ),
+        ),
+        'dark': (
+          'bg': (
+            'normal': get-color('dark'),
+            'hover': get-color('error'),
+            'press': get-color('error', 'secondary', 0.8),
+            'progress': get-color('error'),
+          ),
+          'border': (
+            'normal': get-color('error'),
+          ),
+          'font': (
+            'normal': get-color('error'),
+            'hover': get-color('light'),
+            'press': get-color('light'),
+          ),
+        ),
+      ),
+      'disabled': (
+        'light': (
+          'bg': (
+            'normal': get-color('light'),
+          ),
+          'border': (
+            'normal': get-color('gray400'),
+          ),
+          'font': (
+            'normal': get-color('gray400'),
+          ),
+        ),
+        'dark': (
+          'bg': (
+            'normal': get-color('dark'),
+          ),
+          'border': (
+            'normal': get-color('gray600'),
+          ),
+          'font': (
+            'normal': get-color('gray600'),
+          ),
+        ),
+      ),
+    ),
+    'tertiary': (
+      'action': (
+        'light': (
+          'bg': (
+            'normal': transparent,
+            'hover': get-color('primary', 'white', 0.1),
+            'press': get-color('primary', 'white', 0.3),
+            'progress': transparent,
+          ),
+          'border': (
+            'normal': transparent,
+          ),
+          'font': (
+            'normal': get-color('primary'),
+          ),
+        ),
+        'dark': (
+          'bg': (
+            'normal': transparent,
+            'hover': get-color('primary', 'black', 0.3),
+            'press': get-color('primary', 'black', 0.5),
+            'progress': transparent,
+          ),
+          'border': (
+            'normal': transparent,
+          ),
+          'font': (
+            'normal': get-color('primary'),
+          ),
+        ),
+      ),
+      'confirmative': (
+        'light': (
+          'bg': (
+            'normal': transparent,
+            'hover': get-color('success', 'white', 0.1),
+            'press': get-color('success', 'white', 0.2),
+            'progress': transparent,
+          ),
+          'border': (
+            'normal': transparent,
+          ),
+          'font': (
+            'normal': get-color('success'),
+          ),
+        ),
+        'dark': (
+          'bg': (
+            'normal': transparent,
+            'hover': get-color('success', 'black', 0.2),
+            'press': get-color('success', 'black', 0.3),
+            'progress': transparent,
+          ),
+          'border': (
+            'normal': transparent,
+          ),
+          'font': (
+            'normal': get-color('success'),
+          ),
+        ),
+      ),
+      'destructive': (
+        'light': (
+          'bg': (
+            'normal': transparent,
+            'hover': get-color('error', 'white', 0.1),
+            'press': get-color('error', 'white', 0.2),
+            'progress': transparent,
+          ),
+          'border': (
+            'normal': transparent,
+          ),
+          'font': (
+            'normal': get-color('error'),
+          ),
+        ),
+        'dark': (
+          'bg': (
+            'normal': transparent,
+            'hover': get-color('error', 'black', 0.2),
+            'press': get-color('error', 'black', 0.3),
+            'progress': transparent,
+          ),
+          'border': (
+            'normal': transparent,
+          ),
+          'font': (
+            'normal': get-color('error'),
+          ),
+        ),
+      ),
+      'default': (
+        'light': (
+          'bg': (
+            'normal': transparent,
+            'hover': get-color('gray200', 'white', 0.4),
+            'press': get-color('gray500', 'white', 0.3),
+            'progress': transparent,
+          ),
+          'border': (
+            'normal': transparent,
+          ),
+          'font': (
+            'normal': get-color('gray500'),
+          ),
+        ),
+        'dark': (
+          'bg': (
+            'normal': transparent,
+            'hover': get-color('gray200', 'black', 0.2),
+            'press': get-color('gray500', 'black', 0.4),
+            'progress': transparent,
+          ),
+          'border': (
+            'normal': transparent,
+          ),
+          'font': (
+            'normal': get-color('gray500'),
+          ),
+        ),
+      ),
+      'disabled': (
+        'light': (
+          'bg': (
+            'normal': transparent,
+          ),
+          'font': (
+            'normal': get-color('gray300'),
+          ),
+        ),
+        'dark': (
+          'bg': (
+            'normal': transparent,
+          ),
+          'font': (
+            'normal': get-color('gray600'),
+          ),
+        ),
+      ),
+    ),
+  );
+
+  /**
+  * Returns the nested value specified by `$path` inside of `$object`.
+  * `get-nested-value(a b, (a: (b: 1))) => 1`
+  *
+  **/
+  @function get-nested-value($path, $object: $button-colors) {
+    @if not $object {
+      @return $object;
+    }
+
+    @if length($path) == 0 {
+      @return $object;
+    }
+
+    $p: nth($path, 1);
+    $tail: remove-nth($path, 1);
+    $next: map-get($object, $p);
+
+    @return get-nested-value($tail, $next);
+  }
+
+  @function button-get-bg-value($base, $state, $theme) {
+    $val: get-nested-value(join($base, $theme 'bg' $state));
+
+    @if ($val) {
+      @return $val;
+    }
+
+    @return get-nested-value(join($base, $theme 'bg' 'normal'));
+  }
+
+  @function button-get-bg-with-fallback($base, $state, $theme) {
+    @if $theme == 'dark' {
+      $val: button-get-bg-value($base, $state, 'dark');
+
+      @if ($val) {
+        @return $val;
+      }
+    }
+
+    @return button-get-bg-value($base, $state, 'light');
+  }
+
+  @function button-get-font-value($base, $state, $theme) {
+    $val: get-nested-value(join($base, $theme 'font' $state));
+
+    @if ($val) {
+      @return $val;
+    }
+
+    @return get-nested-value(join($base, $theme 'font' 'normal'));
+  }
+
+  @function button-get-font-with-fallback($base, $state, $theme) {
+    @if $theme == 'dark' {
+      $val: button-get-font-value($base, $state, 'dark');
+
+      @if ($val) {
+        @return $val;
+      }
+    }
+
+    @return button-get-font-value($base, $state, 'light');
+  }
+
+  @function button-get-border-value($base, $state, $theme) {
+    $val: get-nested-value(join($base, $theme 'border' $state));
+
+    @if ($val) {
+      @return $val;
+    }
+    $val: get-nested-value(join($base, $theme 'bg' $state));
+
+    @if ($val) {
+      @return $val;
+    }
+
+    @return get-nested-value(join($base, $theme 'bg' 'normal'));
+  }
+
+  @function button-get-border-with-fallback($base, $state, $theme) {
+    @if $theme == 'dark' {
+      $val: button-get-border-value($base, $state, 'dark');
+
+      @if ($val) {
+        @return $val;
+      }
+    }
+
+    @return button-get-border-value($base, $state, 'light');
+  }
+
+  @function not-any-selector($modifiers, $self) {
+    $res: '';
+
+    @each $m in $modifiers {
+      $res: '#{$res}:not(#{$self}--#{$m})';
+    }
+
+    @return $res;
+  }
+
+  @mixin button-set-state-defaults($self, $emphasis, $theme, $type, $state) {
+    $borderColor: button-get-border-with-fallback(
+      $emphasis $type,
+      $state,
+      $theme
+    );
+
+    @if ($theme == 'dark') {
+      box-shadow: 0 0 0.5px 0 $borderColor, 0 0 0.5px $borderColor;
+    }
+
+    background: button-get-bg-with-fallback($emphasis $type, $state, $theme);
+    border-color: $borderColor;
+    color: button-get-font-with-fallback($emphasis $type, $state, $theme);
+  }
+
+  @mixin button-type($self, $emphasis, $theme, $type) {
+    &:not(:disabled) {
+      @include button-set-state-defaults(
+        $self,
+        $emphasis,
+        $theme,
+        $type,
+        'normal'
+      );
+
+      &:focus,
+      &:hover {
+        @include button-set-state-defaults(
+          $self,
+          $emphasis,
+          $theme,
+          $type,
+          'hover'
+        );
+
+        outline: none;
+      }
+
+      &:active {
+        @include button-set-state-defaults(
+          $self,
+          $emphasis,
+          $theme,
+          $type,
+          'press'
+        );
+      }
+    }
+  }
+
+  @mixin button-theme($self, $emphasis, $theme) {
+    &:disabled {
+      user-select: none;
+      cursor: default;
+
+      @include button-set-state-defaults(
+        $self,
+        $emphasis,
+        $theme,
+        'disabled',
+        'normal'
+      );
+    }
+    $types-base: ('default' 'destructive' 'confirmative');
+    $types: if(
+      $emphasis == 'tertiary',
+      append($types-base, 'action'),
+      $types-base
+    );
+
+    &#{not-any-selector($types, $self)} {
+      @include button-type($self, $emphasis, $theme, 'default');
+    }
+
+    @each $type in $types {
+      &#{$self}--#{$type} {
+        @include button-type($self, $emphasis, $theme, $type);
+      }
+    }
+  }
+
+  @mixin button-emphasis($self, $emphasis) {
+    $themes: ('light', 'dark');
+
+    // set default if no other style is set
+    &#{not-any-selector($themes, $self)} {
+      @include button-theme($self, $emphasis, 'light');
+    }
+
+    @each $theme in ('light' 'dark') {
+      &#{$self}--#{$theme} {
+        @include button-theme($self, $emphasis, $theme);
+      }
+    }
+  }
+
+  $button-padding-x: 32px;
+  $button-height: 36px;
+  $pagination-button-padding-x: 16px;
   $button-padding-y: 0;
-  $button-border-color: var-get('borderColor');
-  $button-background: var-get('borderColor');
-  $button-border-width: var-get('borderWidth');
-  $button-color: var-get('colorDark');
-  $button-pending-opacity: 0.4;
-  $button-pending-dark: rgba(#000, $button-pending-opacity); // TODO: Hardcode button-pending-color for the sake of css variables
-  $button-pending-light: rgba(#fff, $button-pending-opacity); // TODO: Hardcode button-pending-color for the sake of css variables
+  $button-border-width: 1px;
+  $button-color: get-color('dark');
+  $icon-size-for-calculation: 12px;
+  $button-border-radius: 2.5rem;
   $self: &;
 
   position: relative;
-  line-height: $olt-button-line-height;
-  background-color: $button-background;
+  background: none;
+  height: $button-height;
+  min-height: $button-height;
+  max-height: $button-height;
   border-style: solid;
-  border-color: $button-border-color;
+  vertical-align: middle;
   border-width: $button-border-width;
-  border-radius: $olt-button-border-radius;
+  border-radius: $button-border-radius;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   white-space: nowrap;
   text-decoration: none;
-  font-size: $olt-button-font-size;
   cursor: pointer;
   transition: all 300ms;
-  min-width: 120px;
   -webkit-appearance: none;
   color: $button-color;
   padding: $button-padding-y $button-padding-x;
 
-  &.is-active,
-  &:focus {
-    outline-width: 0;
-    // safari fix, without setting this from auto to solid a blue outline is shown
-    // even if outline-width is set to 0
-    outline-style: solid;
+  @extend .u-description;
+
+  $emphases: (
+    'primary' 'secondary' 'tertiary' 'pagination-next' 'pagination-prev'
+  );
+  // set default if no other emphasis is set
+  &#{not-any-selector($emphases, $self)} {
+    @include button-emphasis($self, 'primary');
   }
 
-  &:not(.is-disabled):not(:disabled):not(.is-pending) {
-    &:not(:active):not(.is-active) {
-      &:hover,
-      &:focus {
-        filter: brightness(calc(100% - #{var-get('linkHoverContrast')}));
-        text-decoration: none;
-      }
-    }
-
-    &.is-active,
-    &:focus {
-      box-shadow: 0 0.125rem 0.33rem 0 rgba(0, 0, 0, 0.12), 0 3px 6px 0 rgba(0, 0, 0, 0.24);
+  @each $emphasis in $emphases {
+    &#{$self}--#{$emphasis} {
+      @include button-emphasis($self, $emphasis);
     }
   }
 
-  &--outline {
-    background-color: var-get('colorLight');
+  &--pagination-next {
+    @include button-emphasis($self, 'secondary');
 
-    &:hover,
-    &:visited {
-      filter: none;
-    }
-  }
-
-  @include contextual-colors($selector: '#{$self}:not(.is-disabled):not(:disabled)') {
-    &.is-pending {
-      color: $button-pending-light;
-    }
-
-    &:hover {
-      color: var-get('colorLight');
-    }
-  }
-
-  @include contextual-colors(
-    ('color',
-    'border-color'),
-    $selector: '#{$self}--outline:not(:hover):not(:focus):not(:disabled):not(.is-disabled)') {
-    background-color: var-get('colorLight');
-    // TODO: Button pending context colors
-    // &.is-pending {
-    //   @each $name, $value in $context-colors {
-    //     &#{$self}--#{$name} {
-    //       color: rgba($value, $button-pending-opacity);
-    //     }
-    //   }
-    // }
-  }
-
-  &--icon,
-  &[data-icon] {
-    @extend .Icon;
+    padding: $button-padding-y $pagination-button-padding-x;
+    flex-direction: row-reverse;
 
     &:before {
-      font-size: 150%;
+      @extend .Icon;
+
+      @extend .Icon-chevron-right.Icon--small;
+
+      margin-left: 4px;
     }
   }
 
-  &--icon,
-  &--count,
-  &[data-icon],
-  &[data-count] {
-    padding: 0;
-    display: inline-flex;
-    min-width: 38px;
-    height: 38px;
+  &--pagination-prev {
+    @include button-emphasis($self, 'secondary');
 
-    &:empty {
-      padding: 0;
+    padding: $button-padding-y $pagination-button-padding-x;
+
+    &:before {
+      @extend .Icon;
+
+      @extend .Icon-chevron-left.Icon--small;
+
+      margin-right: 4px;
     }
   }
 
-  &.is-disabled,
-  &:disabled {
-    user-select: none;
-    cursor: default;
-    background-color: initial;
-    color: var-get('gray500');
-    border-style: dashed;
-    border-color: var-get('gray500');
-    filter: none;
+  &-icon-left {
+    padding-left: #{$button-padding-x - $icon-size-for-calculation};
+    padding-right: #{$button-padding-x + 2px - $icon-size-for-calculation};
+  }
 
-    &:hover {
-      color: var-get('gray500');
-      filter: none;
+  &-icon-right {
+    padding-left: #{$button-padding-x + 2px - $icon-size-for-calculation};
+    padding-right: #{$button-padding-x - $icon-size-for-calculation};
+  }
+
+  &-icon-left,
+  &-icon-right {
+    &:before {
+      @extend .Icon;
     }
   }
 
-  &.is-pending {
-    pointer-events: none;
-    color: $button-pending-dark;
+  &-icon-left:before {
+    margin-right: 8px;
+  }
 
-    &:after {
-      content: '';
+  &-icon-right {
+    flex-direction: row-reverse;
 
-      @extend %spinner;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      color: $button-color;
+    &:before {
+      margin-left: 8px;
     }
   }
 }
