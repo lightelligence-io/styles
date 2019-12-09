@@ -56,4 +56,8 @@
 - chore: display release dropdown in docs
 
 #v1.0.0
+<<<<<<< HEAD
 - Full release of lightelligence design system
+=======
+- Full release of lightelligence design system
+>>>>>>> alpha
