@@ -8,6 +8,9 @@ browserslist
 /scripts
 /.travis.yml
 /resources
+/gh-pages
+/docs
+audit-ci.json
 
 # Log files
 npm-debug.log*
