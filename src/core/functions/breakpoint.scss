@@ -14,7 +14,7 @@ $_breakpoints: ();
  * @example
  *   @include define-breakpoint('xs', 0);
  *   @include define-breakpoint('sm', 576px);
- *   @debug($_colors) => (
+ *   @debug($_breakpoints) => (
  *     "xs": 0,
  *     "sm": 576px
  *   )
@@ -27,4 +27,43 @@ $_breakpoints: ();
   $_breakpoints: _set($_breakpoints, $name, $size) !global;
 }
 
+/**
+ * Returns a breakpoint value
+ *
+ * @example
+ *   @include define-breakpoint('xs', 0);
+ *   @include define-breakpoint('sm', 576px);
+ *   get-breakpoint('xs') => 0
+ *   get-breakpoint('sm') => 576px
+ * @param $name        {String}        The breakpoint name
+ * @return {Number | Null}
+ */
+@function get-breakpoint($name) {
+  $result: _get($_breakpoints, $name);
 
+  @if $result == null {
+    @warn ("We can't find breakpoint" $name);
+  }
+
+  @return $result;
+}
+
+/**
+ * Returns all available breakpoints
+ *
+ * @example
+ *   @include define-breakpoint('xs', 0);
+ *   @include define-breakpoint('sm', 576px);
+ *   @debug( get-breakpoints() ) => (
+ *     "xs": 0,
+ *     "sm": 576px
+ *   )
+ * @return {List}
+ */
+@function get-breakpoints() {
+  @return $_breakpoints;
+}
+
+/**
+ * Breakpoint
+ */

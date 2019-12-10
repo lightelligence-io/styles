@@ -8,11 +8,13 @@
 @import './core/functions/string';
 @import './core/functions/list';
 @import './core/functions/color';
+@import './core/functions/breakpoint';
 
 // Globals
 @import './core/globals/vars';
 @import './core/globals/screen';
 @import './core/globals/colors';
+@import './core/globals/breakpoints';
 @import './core/globals/controls';
 
 // Mixins
