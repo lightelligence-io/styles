@@ -341,6 +341,7 @@ exports.IconLive = 'olt-Icon-live';
 exports.IconLocation = 'olt-Icon-location';
 exports.IconLocked = 'olt-Icon-locked';
 exports.IconLogo = 'olt-Icon-logo';
+exports.IconLogout = 'olt-Icon-logout';
 exports.IconMaintenance = 'olt-Icon-maintenance';
 exports.IconMenu = 'olt-Icon-menu';
 exports.IconMessage = 'olt-Icon-message';
