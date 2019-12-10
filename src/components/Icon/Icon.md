@@ -255,6 +255,10 @@ component occupies `olt-Icon*` class names and can be used with `<i>` element.
             <span>logo</span>
           </div>
           <div class="demo-icon">
+            <i class="olt-Icon olt-Icon-logout" title="logout"></i>
+            <span>logout</span>
+          </div>
+          <div class="demo-icon">
             <i class="olt-Icon olt-Icon-maintenance" title="maintenance"></i>
             <span>maintenance</span>
           </div>
