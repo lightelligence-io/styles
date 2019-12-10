@@ -64,5 +64,5 @@
 #v1.1.1
 - Fix: Tenant selector shrinking
 
-#next
+#v1.2.0
 - Added *Logout* icon
