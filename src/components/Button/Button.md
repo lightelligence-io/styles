@@ -1019,6 +1019,24 @@ Use the `disabled` attribute to disable buttons.
 <button class="olt-Button olt-Button--default" disabled>Default</button>
 ```
 
+## Progress
+
+Use the `progress` modifier to show the progress animation on your button.
+
+```progresstest.html
+<button class="olt-V2Button olt-V2Button--primary olt-V2Button--progress" />
+<button class="olt-V2Button olt-V2Button--secondary olt-V2Button--progress" />
+```
+
+```progress.html
+<button class="olt-V2Button olt-V2Button--primary olt-V2Button--progress" />
+<button class="olt-V2Button olt-V2Button--secondary olt-V2Button-icon-left olt-Icon-action-add-default olt-V2Button--progress" />
+<button class="olt-V2Button olt-V2Button--tertiary olt-V2Button--progress" />
+<button class="olt-V2Button olt-V2Button--confirmative olt-V2Button--progress" />
+<button class="olt-V2Button olt-V2Button--destructive olt-V2Button-icon-right olt-Icon-action-add-default olt-V2Button--progress" />
+<button class="olt-V2Button olt-V2Button--default olt-V2Button--progress" disabled ></button>
+```
+
 ## Decorations
 
 To show decorations inside a button, use the `olt-Button-icon-left` and `olt-Button-icon-right` class. This will show an icon on the left or right of the label.

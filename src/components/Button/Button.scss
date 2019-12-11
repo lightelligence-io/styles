@@ -644,4 +644,17 @@
       margin-left: 8px;
     }
   }
+
+  &--progress {
+    margin: 0;
+    padding-left: $button-padding-x;
+    padding-right: $button-padding-x;
+
+    @extend
+      .Spinner;
+
+    &:before {
+      margin: 0;
+    }
+  }
 }
