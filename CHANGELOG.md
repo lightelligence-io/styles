@@ -66,3 +66,8 @@
 
 #v1.2.0
 - Added *Logout* icon
+
+#v1.2.1
+- fix: remove transition for modal background due to slowness on 4K Monitors
+- fix: table header is now blue
+- fix: sidebar color is applied to tabs background
