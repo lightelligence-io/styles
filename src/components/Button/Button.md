@@ -1021,20 +1021,15 @@ Use the `disabled` attribute to disable buttons.
 
 ## Progress
 
-Use the `progress` modifier to show the progress animation on your button.
-
-```progresstest.html
-<button class="olt-V2Button olt-V2Button--primary olt-V2Button--progress" />
-<button class="olt-V2Button olt-V2Button--secondary olt-V2Button--progress" />
-```
+Use the `--progress` modifier to show the progress animation on your button.
 
 ```progress.html
-<button class="olt-V2Button olt-V2Button--primary olt-V2Button--progress" />
-<button class="olt-V2Button olt-V2Button--secondary olt-V2Button-icon-left olt-Icon-action-add-default olt-V2Button--progress" />
-<button class="olt-V2Button olt-V2Button--tertiary olt-V2Button--progress" />
-<button class="olt-V2Button olt-V2Button--confirmative olt-V2Button--progress" />
-<button class="olt-V2Button olt-V2Button--destructive olt-V2Button-icon-right olt-Icon-action-add-default olt-V2Button--progress" />
-<button class="olt-V2Button olt-V2Button--default olt-V2Button--progress" disabled ></button>
+<button class="olt-Button olt-Button--primary olt-Button--progress">Any Text</button>
+<button class="olt-Button olt-Button--secondary olt-Button-icon-left olt-Icon-add-default olt-Button--progress">Any Text</button>
+<button class="olt-Button olt-Button--tertiary olt-Button--progress">Any Text</button>
+<button class="olt-Button olt-Button--confirmative olt-Button--progress">Any Text</button>
+<button class="olt-Button olt-Button--destructive olt-Button-icon-right olt-Icon-add-default olt-Button--progress">Any Text</button>
+<button class="olt-Button olt-Button--default olt-Button--progress" disabled>Any Text</button>
 ```
 
 ## Decorations

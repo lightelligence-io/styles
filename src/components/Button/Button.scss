@@ -458,6 +458,10 @@
     background: button-get-bg-with-fallback($emphasis $type, $state, $theme);
     border-color: $borderColor;
     color: button-get-font-with-fallback($emphasis $type, $state, $theme);
+
+    &:after {
+      color: button-get-font-with-fallback($emphasis $type, $state, $theme);
+    }
   }
 
   @mixin button-type($self, $emphasis, $theme, $type) {
@@ -646,15 +650,13 @@
   }
 
   &--progress {
-    margin: 0;
-    padding-left: $button-padding-x;
-    padding-right: $button-padding-x;
+    color: transparent !important;
 
-    @extend
-      .Spinner;
+    &:after {
+      content: '';
+      position: absolute;
 
-    &:before {
-      margin: 0;
+      @extend %spinner;
     }
   }
 }
