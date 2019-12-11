@@ -37,7 +37,6 @@
   height: 100vh;
   width: 100vw;
   opacity: 0;
-  transition: all $modal-transition-duration $modal-transition-timing-function;
   background: $modal-backdrop;
   backdrop-filter: $modal-backdrop-filter;
   overflow: auto;
@@ -48,7 +47,6 @@
   align-items: center;
   overscroll-behavior: contain;
   z-index: $olt-z-index-modal;
-  // clip: rect(0, 0, 0, 0);
   pointer-events: none;
 
   &-dialog {
@@ -197,7 +195,6 @@
       height: 100vh;
       opacity: 1;
       display: flex;
-      // clip: auto;
 
       #{$self}-dialog {
         transform: translateY(0);
