@@ -382,6 +382,7 @@ exports.IconZoomIn = 'olt-Icon-zoom-in';
 exports.IconZoomOut = 'olt-Icon-zoom-out';
 exports.IconMedium = 'olt-Icon--medium';
 exports.Spinner = 'olt-Spinner';
+exports.ButtonProgress = 'olt-Button--progress';
 exports.ldsDualRing = 'olt-lds-dual-ring';
 exports.Avatar = 'olt-Avatar';
 exports.AvatarSmall = 'olt-Avatar--small';
