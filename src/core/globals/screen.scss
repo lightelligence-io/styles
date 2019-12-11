@@ -23,6 +23,7 @@ $screen-style: $olt-screen-style;
 
 // all v2 functions pass all params explicitly and don't rely on global vars.
 
+// min-width:
 @mixin screen-up-v2($name) {
   @include screen-up($name, $olt-v2-prefix, $olt-screen-style, $olt-breakpoints) {
     @content;
@@ -37,6 +38,7 @@ $screen-style: $olt-screen-style;
   @return $olt-breakpoints;
 }
 
+// max-width: break-point + 1
 @mixin screen-down-v2($name) {
   @include screen-down($name, $olt-v2-prefix, $olt-screen-style, $olt-breakpoints) {
     @content;

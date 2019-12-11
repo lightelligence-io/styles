@@ -1,16 +1,18 @@
+@import '../../core/functions/breakpoint';
+
 @mixin cardTableInTableMode() {
   &--alwaysTable {
     @content;
   }
 
-  @include screen-up(lg) {
+  @media (min-width: get-breakpoint(lg)) {
     @content;
   }
 }
 
 @mixin cardTableInListMode($self) {
   &:not(#{$self}--alwaysTable) {
-    @include screen-down(md) {
+    @media (max-width: get-breakpoint(lg) - 1px) {
       @content;
     }
   }
@@ -18,7 +20,7 @@
 
 @mixin cardTableInListModeSmall($self) {
   &:not(#{$self}--alwaysTable) {
-    @include screen-down(sm) {
+    @media (max-width: get-breakpoint(md) - 1px) {
       @content;
     }
   }

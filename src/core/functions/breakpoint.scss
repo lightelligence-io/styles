@@ -63,7 +63,3 @@ $_breakpoints: ();
 @function get-breakpoints() {
   @return $_breakpoints;
 }
-
-/**
- * Breakpoint
- */

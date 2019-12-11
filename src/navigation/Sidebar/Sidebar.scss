@@ -1,4 +1,5 @@
 @import '../../core/functions/color';
+@import '../../core/functions/breakpoint';
 
 .Sidebar {
   $self: &;
@@ -22,7 +23,7 @@
   flex-direction: column;
   z-index: $sidebar-z-index;
 
-  @include screen-down(sm) {
+  @media (max-width: get-breakpoint(md)) {
     width: 100%;
     background-color: get-color('light');
     padding: 14px 24px;
@@ -40,7 +41,7 @@
     align-items: flex-end;
     margin-bottom: 14px;
 
-    @include screen-up(md) {
+    @media (min-width: get-breakpoint(md)) {
       display: none;
     }
   }
@@ -71,7 +72,7 @@
       margin-right: 8px;
       transition: opacity 0.1s;
 
-      @include screen-down(sm) {
+      @media (max-width: get-breakpoint(md)) {
         opacity: 1;
         color: get-color('gray500');
       }
@@ -85,7 +86,7 @@
       &:before {
         opacity: 1;
 
-        @include screen-down(sm) {
+        @media (max-width: get-breakpoint(md)) {
           color: get-color('primary');
         }
       }
@@ -135,7 +136,7 @@
     margin: 24px 0;
     border: none;
 
-    @include screen-down(sm) {
+    @media (max-width: get-breakpoint(md)) {
       background: get-color('gray300');
     }
   }
@@ -187,7 +188,7 @@
     line-height: 100%;
     margin-right: 4px;
 
-    @include screen-down(sm) {
+    @media (max-width: get-breakpoint(md)) {
       color: get-color('primary');
     }
   }
@@ -246,7 +247,7 @@
     color: rgba(255, 255, 255, 0.6);
     line-height: 22px;
 
-    @include screen-down(sm) {
+    @media (max-width: get-breakpoint(md)) {
       color: get-color('gray700');
     }
 
@@ -302,7 +303,7 @@
       box-shadow: 0 0 8px 0 rgba(13, 18, 44, 0.3);
     }
 
-    @include screen-down(sm) {
+    @media (max-width: get-breakpoint(md)) {
       transform: translateX(+100%);
       width: 100%;
       left: 0;
@@ -322,7 +323,7 @@
     justify-content: space-between;
     margin: 14px 24px;
 
-    @include screen-up(md) {
+    @media (min-width: get-breakpoint(md)) {
       display: none;
     }
   }
@@ -338,7 +339,7 @@
 
   color: $sidebar-text-color;
 
-  @include screen-down(sm) {
+  @media (max-width: get-breakpoint(md)) {
     color: $sidebar-mobile-text-color;
   }
 
@@ -347,7 +348,7 @@
   &-subnavigation-item {
     color: $sidebar-text-color;
 
-    @include screen-down(sm) {
+    @media (max-width: get-breakpoint(md)) {
       color: $sidebar-mobile-text-color;
     }
   }
@@ -359,7 +360,7 @@
   &-selector {
     background-color: $sidebar-item-default-background;
 
-    @include screen-down(sm) {
+    @media (max-width: get-breakpoint(md)) {
       background-color: $sidebar-item-mobile-active-background;
     }
   }
@@ -369,19 +370,19 @@
     &.is-active {
       background-color: $sidebar-item-active-background;
 
-      @include screen-down(sm) {
+      @media (max-width: get-breakpoint(md)) {
         background-color: $sidebar-item-mobile-active-background;
       }
     }
 
     &:hover {
-      @include screen-up(md) {
+      @media (min-width: get-breakpoint(md)) {
         background-color: $sidebar-item-active-background;
       }
     }
   }
 
-  @include screen-up(md) {
+  @media (min-width: get-breakpoint(md)) {
     // When the user hovers on the sidebar the currently active item transitions
     // to it's default background
     &:hover {
