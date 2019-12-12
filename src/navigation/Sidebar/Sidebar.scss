@@ -187,6 +187,7 @@
     border: 1px solid currentColor;
     line-height: 100%;
     margin-right: 4px;
+    flex-shrink: 0;
 
     @media (max-width: get-breakpoint(md)) {
       color: get-color('primary');
@@ -196,6 +197,9 @@
   &-selector--tenant-name {
     @extend .u-description;
 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
     flex-grow: 1;
   }
 
