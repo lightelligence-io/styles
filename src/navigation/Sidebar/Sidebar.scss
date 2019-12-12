@@ -11,22 +11,22 @@
   $sidebar-text-color: get-color('light');
   $sidebar-mobile-text-color: get-color('gray700');
 
-  width: $sidebar-width;
   position: fixed;
   height: 100%;
   left: 0;
   top: 0;
-  background-color: get-color('sidebar');
-  padding: 18px 12px 12px 12px;
   justify-content: space-between;
   display: flex;
   flex-direction: column;
   z-index: $sidebar-z-index;
+  width: 100%;
+  background-color: get-color('light');
+  padding: 14px 24px;
 
-  @media (max-width: get-breakpoint(md)) {
-    width: 100%;
-    background-color: get-color('light');
-    padding: 14px 24px;
+  @media (min-width: get-breakpoint(md)) {
+    width: $sidebar-width;
+    background-color: get-color('sidebar');
+    padding: 18px 12px 12px 12px;
   }
 
   //
@@ -68,13 +68,14 @@
     &:before {
       @extend .Icon, .Icon--medium;
 
-      opacity: 0.5;
+      opacity: 1;
+      color: get-color('gray500');
       margin-right: 8px;
       transition: opacity 0.1s;
 
-      @media (max-width: get-breakpoint(md)) {
-        opacity: 1;
-        color: get-color('gray500');
+      @media (min-width: get-breakpoint(md)) {
+        opacity: 0.5;
+        color: inherit;
       }
 
       &:hover {
@@ -85,9 +86,10 @@
     &.is-active {
       &:before {
         opacity: 1;
+        color: get-color('primary');
 
-        @media (max-width: get-breakpoint(md)) {
-          color: get-color('primary');
+        @media (min-width: get-breakpoint(md)) {
+          color: inherit;
         }
       }
 
@@ -130,14 +132,14 @@
   //
 
   &-separator {
-    background: rgba(255, 255, 255, 0.3);
+    background: get-color('gray300');
     width: 100%;
     height: 1px;
     margin: 24px 0;
     border: none;
 
-    @media (max-width: get-breakpoint(md)) {
-      background: get-color('gray300');
+    @media (min-width: get-breakpoint(md)) {
+      background: rgba(255, 255, 255, 0.3);
     }
   }
 
@@ -183,14 +185,14 @@
     align-items: center;
     border-radius: 100%;
     user-select: none;
-    color: get-color('light');
+    color: get-color('primary');
     border: 1px solid currentColor;
     line-height: 100%;
     margin-right: 4px;
     flex-shrink: 0;
 
-    @media (max-width: get-breakpoint(md)) {
-      color: get-color('primary');
+    @media (min-width: get-breakpoint(md)) {
+      color: get-color('light');
     }
   }
 
@@ -248,11 +250,11 @@
 
     display: flex;
     align-items: center;
-    color: rgba(255, 255, 255, 0.6);
+    color: get-color('gray700');
     line-height: 22px;
 
-    @media (max-width: get-breakpoint(md)) {
-      color: get-color('gray700');
+    @media (min-width: get-breakpoint(md)) {
+      color: rgba(255, 255, 255, 0.6);
     }
 
     &:after {
@@ -292,31 +294,36 @@
     min-width: 300px;
     position: fixed;
     height: 100%;
-    left: $sidebar-width;
+    left: 0;
     top: 0;
     background-color: get-color('light');
-    box-shadow: 0 0 8px 0 rgba(13, 18, 44, 0);
-    transform: translateX(-100%);
+    transform: translateX(100%);
     display: flex;
     flex-direction: column;
-    z-index: $sidebar-z-index - 1;
+    z-index: $sidebar-z-index + 1;
     transition: transform 0.2s, box-shadow 0.1s;
+    width: 100%;
 
     &.is-open {
       transform: translateX(0);
       box-shadow: 0 0 8px 0 rgba(13, 18, 44, 0.3);
     }
 
-    @media (max-width: get-breakpoint(md)) {
-      transform: translateX(+100%);
-      width: 100%;
-      left: 0;
-      box-shadow: none;
-      z-index: $sidebar-z-index + 1;
+    @media (min-width: get-breakpoint(md)) {
+      transform: translateX(-100%);
+      width: auto;
+      left: $sidebar-width;
+      box-shadow: 0 0 8px 0 rgba(13, 18, 44, 0);
+      z-index: $sidebar-z-index - 1;
+    }
 
-      &.is-hidden {
-        transform: translateX(+100%);
-        box-shadow: 0 0 8px rgba(13, 18, 44, 0);
+    &.is-hidden {
+      transform: translateX(100%);
+      box-shadow: 0 0 8px rgba(13, 18, 44, 0);
+
+      @media (min-width: get-breakpoint(md)) {
+        transform: translateX(0);
+        box-shadow: none;
       }
     }
   }
@@ -341,19 +348,19 @@
   // Colors
   //
 
-  color: $sidebar-text-color;
+  color: $sidebar-mobile-text-color;
 
-  @media (max-width: get-breakpoint(md)) {
-    color: $sidebar-mobile-text-color;
+  @media (min-width: get-breakpoint(md)) {
+    color: $sidebar-text-color;
   }
 
   &-selector,
   &-navigation-item,
   &-subnavigation-item {
-    color: $sidebar-text-color;
+    color: $sidebar-mobile-text-color;
 
-    @media (max-width: get-breakpoint(md)) {
-      color: $sidebar-mobile-text-color;
+    @media (min-width: get-breakpoint(md)) {
+      color: $sidebar-text-color;
     }
   }
 
@@ -362,20 +369,20 @@
   //
 
   &-selector {
-    background-color: $sidebar-item-default-background;
+    background-color: $sidebar-item-mobile-active-background;
 
-    @media (max-width: get-breakpoint(md)) {
-      background-color: $sidebar-item-mobile-active-background;
+    @media (min-width: get-breakpoint(md)) {
+      background-color: $sidebar-item-default-background;
     }
   }
 
   &-selector,
   &-navigation-item {
     &.is-active {
-      background-color: $sidebar-item-active-background;
+      background-color: $sidebar-item-mobile-active-background;
 
-      @media (max-width: get-breakpoint(md)) {
-        background-color: $sidebar-item-mobile-active-background;
+      @media (min-width: get-breakpoint(md)) {
+        background-color: $sidebar-item-active-background;
       }
     }
 

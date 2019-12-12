@@ -1,4 +1,5 @@
 @import '../../core/functions/color';
+@import '../../core/functions/breakpoint';
 
 .Header {
   $self: &;
@@ -13,37 +14,36 @@
   padding: 0 24px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
-  @include screen-down(sm) {
-    justify-content: space-between;
+  @media (min-width: get-breakpoint(md)) {
+    justify-content: flex-start;
+  }
+
+  &-body,
+  &-left-container,
+  &-right-container {
+    display: none;
+
+    @media (min-width: get-breakpoint(md)) {
+      display: unset;
+    }
   }
 
   &-body {
     flex-grow: 1;
-
-    @include screen-down(sm) {
-      display: none;
-    }
   }
 
   &-left-container {
     margin-left: 40px;
-
-    @include screen-down(sm) {
-      display: none;
-    }
   }
 
   &-right-container {
     margin-left: 40px;
-
-    @include screen-down(sm) {
-      display: none;
-    }
   }
 
   &-mobile-menu {
-    @include screen-up(md) {
+    @media (min-width: get-breakpoint(md)) {
       display: none;
     }
   }

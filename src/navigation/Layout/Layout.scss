@@ -11,27 +11,28 @@
   }
 
   .Sidebar {
-    top: 64px;
-    height: calc(100% - 64px);
+    top: 0;
+    height: 100%;
     transition: transform 0.1s;
+    transform: translateX(-100%);
 
-    @include screen-down(sm) {
-      top: 0;
-      height: 100%;
-      transform: translateX(-100%);
+    @media (min-width: get-breakpoint(md)) {
+      top: 64px;
+      height: calc(100% - 64px);
+      transform: translateX(0);
+    }
 
-      &.is-open {
-        transform: translateX(0);
-      }
+    &.is-open {
+      transform: translateX(0);
     }
 
     &--secondary {
-      top: 64px;
-      height: calc(100% - 64px);
+      top: 0;
+      height: 100%;
 
-      @include screen-down(sm) {
-        top: 0;
-        height: 100%;
+      @media (min-width: get-breakpoint(md)) {
+        top: 64px;
+        height: calc(100% - 64px);
       }
 
       &.is-open ~ #{$self}-overlay {
@@ -58,11 +59,11 @@
   &-body {
     margin-top: 64px;
     padding: 20px;
-    margin-left: 200px;
     min-height: 100%;
+    margin-left: 0;
 
-    @include screen-down(sm) {
-      margin-left: 0;
+    @media (min-width: get-breakpoint(md)) {
+      margin-left: 200px;
     }
   }
 }
