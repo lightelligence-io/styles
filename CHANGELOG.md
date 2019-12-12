@@ -71,3 +71,6 @@
 - fix: remove transition for modal background due to slowness on 4K Monitors
 - fix: table header is now blue
 - fix: sidebar color is applied to tabs background
+
+#v1.3.0
+- feat: added loading state button
