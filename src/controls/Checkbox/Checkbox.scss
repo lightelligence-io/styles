@@ -71,7 +71,7 @@ $checkbox-colors: (
       height: $checkbox-height;
       width: $checkbox-width;
 
-      @extend .Icon, .Icon--small, .Icon-checkbox-unchecked:before;
+      @extend .Icon, .Icon--medium, .Icon-checkbox-unchecked:before;
     }
   }
 
@@ -103,20 +103,20 @@ $checkbox-colors: (
   &-button:after {
     color: map-get($theme-light-background, default);
 
-    @extend .Icon, .Icon--small, .Icon-checkbox-unchecked:before;
+    @extend .Icon, .Icon--medium, .Icon-checkbox-unchecked:before;
   }
 
   input:indeterminate ~ &-button:after,
   &--indeterminate ~ &-button:after {
     color: map-get($theme-light-background, checked);
 
-    @extend .Icon, .Icon--small, .Icon-checkbox-indeterminate:before;
+    @extend .Icon, .Icon--medium, .Icon-checkbox-indeterminate:before;
   }
 
   input:checked ~ &-button:after {
     color: map-get($theme-light-background, checked);
 
-    @extend .Icon, .Icon--small, .Icon-checkbox-checked:before;
+    @extend .Icon, .Icon--medium, .Icon-checkbox-checked:before;
   }
 
   input:disabled ~ &-label {
@@ -126,20 +126,20 @@ $checkbox-colors: (
   input:disabled ~ &-button:after {
     color: map-get($theme-light-background, disabled);
 
-    @extend .Icon, .Icon--small, .Icon-checkbox-unchecked:before;
+    @extend .Icon, .Icon--medium, .Icon-checkbox-unchecked:before;
   }
 
   input:checked:disabled ~ &-button:after {
     color: map-get($theme-light-background, disabled);
 
-    @extend .Icon, .Icon--small, .Icon-checkbox-checked:before;
+    @extend .Icon, .Icon--medium, .Icon-checkbox-checked:before;
   }
 
   input:disabled:indeterminate ~ &-button:after,
   &--indeterminate:disabled ~ &-button:after {
     color: map-get($theme-light-background, disabled);
 
-    @extend .Icon, .Icon--small, .Icon-checkbox-indeterminate:before;
+    @extend .Icon, .Icon--medium, .Icon-checkbox-indeterminate:before;
   }
 
   //
@@ -156,13 +156,13 @@ $checkbox-colors: (
   .Theme-dark & &-button:after {
     color: map-get($theme-dark-background, default);
 
-    @extend .Icon, .Icon--small, .Icon-checkbox-unchecked:before;
+    @extend .Icon, .Icon--medium, .Icon-checkbox-unchecked:before;
   }
 
   .Theme-dark & input:checked ~ &-button:after {
     color: map-get($theme-dark-background, checked);
 
-    @extend .Icon, .Icon--small, .Icon-checkbox-checked:before;
+    @extend .Icon, .Icon--medium, .Icon-checkbox-checked:before;
   }
 
   .Theme-dark & input:disabled ~ &-label {
@@ -172,26 +172,26 @@ $checkbox-colors: (
   .Theme-dark & input:disabled ~ &-button:after {
     color: map-get($theme-dark-background, disabled);
 
-    @extend .Icon, .Icon--small, .Icon-checkbox-unchecked:before;
+    @extend .Icon, .Icon--medium, .Icon-checkbox-unchecked:before;
   }
 
   .Theme-dark & input:indeterminate ~ &-button:after,
   .Theme-dark & &--indeterminate ~ &-button:after {
     color: map-get($theme-dark-background, checked);
 
-    @extend .Icon, .Icon--small, .Icon-checkbox-indeterminate:before;
+    @extend .Icon, .Icon--medium, .Icon-checkbox-indeterminate:before;
   }
 
   .Theme-dark & input:checked:disabled ~ &-button:after {
     color: map-get($theme-dark-background, disabled);
 
-    @extend .Icon, .Icon--small, .Icon-checkbox-checked:before;
+    @extend .Icon, .Icon--medium, .Icon-checkbox-checked:before;
   }
 
   .Theme-dark & input:disabled:indeterminate ~ &-button:after,
   .Theme-dark & &--indeterminate:disabled ~ &-button:after {
     color: map-get($theme-dark-background, disabled);
 
-    @extend .Icon, .Icon--small, .Icon-checkbox-indeterminate:before;
+    @extend .Icon, .Icon--medium, .Icon-checkbox-indeterminate:before;
   }
 }

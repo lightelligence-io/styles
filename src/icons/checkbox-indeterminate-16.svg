@@ -1,10 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
-    <g id="Input-/-Filter-/-Controls-" stroke="none" stroke-width="1" fill="none">
-        <g id="Components-/-Checkbox-/-Indetermined-/-Active-" transform="translate(-3.000000, -3.000000)">
-            <rect id="bounds" fill-rule="nonzero" x="0" y="0" width="24" height="24"></rect>
-            <path d="M19,3 C20.05,3 20.9177686,3.82004132 20.9944872,4.85130541 L21,5 L21,19 C21,20.05 20.1799587,20.9177686 19.1486946,20.9944872 L19,21 L5,21 C3.95,21 3.0822314,20.1799587 3.00551277,19.1486946 L3,19 L3,5 C3,3.95 3.82004132,3.0822314 4.85130541,3.00551277 L5,3 L19,3 Z M19,11 L5,11 L5,13 L19,13 L19,11 Z" id="Combined-Shape" fill="#000000"></path>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="18px" height="18px" viewBox="0 0 18 18" enable-background="new 0 0 18 18" xml:space="preserve">
+<path id="Combined-Shape" d="M16,0c1.052,0,1.918,0.819,1.994,1.853L18,2v14c0,1.051-0.821,1.919-1.852,1.995L16,18H2
+	c-1.05,0-1.918-0.821-1.995-1.852L0,16V2c0-1.05,0.819-1.918,1.851-1.994L2,0H16z M16,8H2v2.001h14V8z"/>
 </svg>
