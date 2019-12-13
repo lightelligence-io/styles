@@ -70,6 +70,8 @@ $checkbox-colors: (
       left: 0;
       height: $checkbox-height;
       width: $checkbox-width;
+      line-height: 1;
+      font-size: 18px;
 
       @extend .Icon, .Icon--medium, .Icon-checkbox-unchecked:before;
     }
