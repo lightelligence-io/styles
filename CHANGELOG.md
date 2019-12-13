@@ -74,3 +74,6 @@
 
 #v1.3.0
 - feat: added loading state button
+
+#v1.3.1
+- fix: checkbox is now themeable
