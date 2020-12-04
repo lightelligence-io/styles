@@ -108,7 +108,7 @@
     "fast-sass-loader": "^1.5.0",
     "file-loader": "^4.2.0",
     "glob": "^7.1.4",
-    "highlight.js": "^9.15.10",
+    "highlight.js": "^10.4.1",
     "humps": "^2.0.1",
     "husky": "^3.0.8",
     "iconfont-webpack-plugin": "^4.2.1",
