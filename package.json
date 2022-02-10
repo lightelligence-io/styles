@@ -113,7 +113,7 @@
     "husky": "^3.0.8",
     "iconfont-webpack-plugin": "^4.2.1",
     "legally": "^3.3.7",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "normalize.css": "^8.0.0",
     "postcss": "^7.0.18",
     "postcss-copy": "^7.1.0",
